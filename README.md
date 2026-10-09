@@ -8,19 +8,16 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Current priorities:
+Current research-only WIP:
 
-- The Hadamard conjecture
-- The union-closed sets conjecture
 - The graceful tree conjecture
 - New defensive digital signatures and mathematical security arguments
+- The Hadwiger–Nelson problem
+- The Ramsey number R(5,5)
+- The lonely runner conjecture
+- The Erdős–Straus conjecture
 
-Continuing at lower priority:
-
-- The Strong Exponential Time Hypothesis (SETH)
-- Unconditional existence of one-way functions
-
-These are research directions, not claims of completed solutions. The collection can grow as additional work is completed and checked.
+These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
 “GPT-6 Astra” is the owner's project label. It does not attest to runtime model identity, affiliation, or peer review. The repository title does not mean that every listed research direction is solved.
 
