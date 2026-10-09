@@ -1,0 +1,11 @@
+'N12.exists_exactly_quadratic_with_ninety_five_nonbent_components' depends on axioms: [propext, Quot.sound]
+'N12.exact_nonbent_masks' depends on axioms: [propext, Quot.sound]
+'N12.F_quadratic' depends on axioms: [propext, Quot.sound]
+'N12.F_nonaffine' depends on axioms: [propext]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=11.3362
+PEAK_RSS_KIB=786696
+ADDRESS_SPACE_LIMIT_BYTES=3221225472
+LEAN_THREADS=1
+RECURSIVE_SOURCE_FINGERPRINT=c2e347cc485e4670dada3f9c4211fd8f0c12402810097abc108f67af28e2d09b

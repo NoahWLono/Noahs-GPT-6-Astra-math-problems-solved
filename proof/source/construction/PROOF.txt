@@ -1,0 +1,56 @@
+Explicit n=12 quadratic witness, via F8 trace
+
+Work in F8=F2[a]/(a^3+a+1). Let u,v,w,z,s,t,p,q be binary
+parameters. Define an alternating 4x4 matrix K over F8 by its upper entries:
+
+K01 = u+v + a(s+t)
+K02 = u + a s + a^2 q
+K03 = w + a^2(p+q)
+K12 = z + a^2 p
+K13 = v + a s + a^2 q
+K23 = u+v + a t.
+
+Its Pfaffian is K01*K23 + K02*K13 + K03*K12. Expanding and
+using binary squares x^2=x and a^4=a^2+a gives
+
+Pf(K) = P + a R + a^2(Q+R),
+P = u+v+uv+wz,
+R = p+q+pq,
+Q = st+s+t + q(u+v) + wp + z(p+q).
+
+The elements 1,a,a^2 are F2-linearly independent. Since R=0 iff
+p=q=0, Pf(K)=0 forces p=q=0. Then Q=st+s+t, which vanishes
+iff s=t=0. The remaining condition is P=0.
+
+The expression u+v+uv is zero only at (u,v)=(0,0). Hence P=0
+has 3 solutions with u=v=0 and wz=0, and 3 solutions with
+(u,v) nonzero and w=z=1: exactly six solutions, including zero.
+Equivalently singular parameter labels are 0,4,8,13,14,15 in
+bit order u,v,w,z,s,t,p,q.
+
+For each parameter vector lambda let M_lambda be the binary alternating
+form on F8^4 obtained as (x,y) -> Tr_F8/F2(x^T K_lambda y).
+Use input basis (1,a,a^2) in each of the four coordinates. Explicitly,
+M_lambda[3i+r,3j+h] = Tr(a^(r+h) K_lambda[i,j]).
+
+The trace pairing is nondegenerate: if c != 0, choose d=c^-1,
+then Tr(cd)=Tr(1)=1. Thus the radical of M_lambda is exactly the
+kernel of K_lambda, considered over F2. In particular, M_lambda is
+nonsingular iff K_lambda is nonsingular.
+
+Let M_0,...,M_7 correspond to the eight parameter unit vectors.
+Define quadratic Boolean coordinates f_k(x) = sum_{i<j} (M_k)ij x_i x_j,
+for k=0,...,7, and f_8=f_9=f_10=f_11=0. The resulting map is
+f:F2^12 -> F2^12. The polar form of a component with mask b is
+M_(b0,...,b7), independently of b8,...,b11. A quadratic Boolean
+function is bent iff its polar form is nonsingular. Therefore there
+are 6*16=96 nonbent component masks including the zero mask, or
+95 nonzero nonbent masks. The other 4000 nonzero masks are bent.
+
+All eight binary basis forms are linearly independent (also checked by
+elimination). Algebraically, trace-form zero implies K=0 by the
+nondegenerate trace pairing; inspecting the coefficients of 1,a,a^2
+in the six displayed entries then forces all eight parameters zero.
+
+This file supplies the construction and proof only. It makes no claim
+about novelty or extension to other input dimensions.

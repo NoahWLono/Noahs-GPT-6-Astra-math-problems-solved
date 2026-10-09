@@ -1,0 +1,9 @@
+'FastWalsh.quadratic_zeroExtend' depends on axioms: [propext, Quot.sound]
+'FastWalsh.isBent_zeroExtend' depends on axioms: [propext, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=0.4026
+PEAK_RSS_KIB=423424
+ADDRESS_SPACE_LIMIT_BYTES=3221225472
+LEAN_THREADS=1
+RECURSIVE_SOURCE_FINGERPRINT=30d0e258c5d8ce13355388dc003bcc6ad5e983c6e06087acdf3d447a5d73f1bc

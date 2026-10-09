@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "modules": 26,
+  "initial_objects": "none in archive",
+  "bootstrap": "fresh official upstream dependencies and cache; isolated HOME, XDG_CACHE_HOME, git configuration",
+  "reused": "official Lean4.19 toolchain and Std only",
+  "old_project_paths": false,
+  "commands": [
+    {
+      "command": "lake update",
+      "status": 0,
+      "note": "initial audit launcher timeout (124) while downloading; rerun completed successfully using only newly downloaded files"
+    },
+    {
+      "command": "lake exe cache get",
+      "status": 0
+    },
+    {
+      "command": "lake env python3 replay.py --clean",
+      "status": 0
+    }
+  ],
+  "peak_replay_RSS_KiB": 2185000,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "package_source_changed": false,
+  "completed_utc": "2026-10-09T04:25:49Z",
+  "tested_archive_sha256": "8e7e72998dbfbe50693510a8587843a183b73010acc61e08af06a8c313d8eb8d",
+  "archive_note": "Hash identifies the pre-attribution-revision source archive tested on 2026-10-09. Current package has identical Lean proof sources and build files; report, metadata and correspondence evidence were updated.",
+  "path_sanitization": "Workspace roots in log copies replaced with <BOOTSTRAP_PROJECT> and <OFFICIAL_LEAN419>."
+}

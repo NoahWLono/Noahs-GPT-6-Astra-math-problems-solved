@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "verification_date": "2026-10-09",
+  "local_source_modules": 930,
+  "source_only_initial_tree": true,
+  "replay_result": "REQUESTED_TARGETS_COMPLETE",
+  "source_manifest_sha256": "dabb3e63c4d1a5576b1fd19e1bd348b5875660ba2d25e3ae21d1379485f174bd",
+  "main_source_sha256": "84d10536b997e10263c3c0297d4360f34bfc7651b5cc0a806e7673bd58709aff",
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "dependencies": "Lean bundled Std only; no mathlib",
+  "strongest_theorem": "N12.exists_exactly_quadratic_with_ninety_five_nonbent_components",
+  "claim": "The explicit 66-coefficient twelve-bit map has a squarefree homogeneous quadratic representation, is not affine, and its nonzero nonbent masks are precisely a duplicate-free list of length 95 under the universal actual Walsh definition.",
+  "axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "tested_environment": "Linux x86-64; build.py --clean; isolated source-only local module tree; Lean 4.19.0; one Lean thread; 3 GiB address-space cap."
+}

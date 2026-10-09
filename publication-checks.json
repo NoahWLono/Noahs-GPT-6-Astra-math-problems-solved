@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "proof_modules": 956,
+  "lean_files_including_lakefile": 957,
+  "all_lean_source_bytes_unchanged": true,
+  "full_lean_replay_repeated_at_publication": false,
+  "recorded_prior_source_only_replays": {
+    "uniform_modules": 26,
+    "concrete_modules": 930,
+    "result": "PASS"
+  },
+  "publication_finite_checks": {
+    "verify_all.py": "PASS: 4096 inputs, 256 effective masks, 1048576 Walsh coefficients, 1536 raw-sum checks; 4000 bent / 95 nonbent",
+    "family/verify_family.py": "PASS: e=1,...,6",
+    "family/verify_correspondence.py": "PASS: binary congruence, base parameters, e=1,...,6"
+  },
+  "private_data_review": "No credentials or private personal data detected; absolute replay build-directory prefix sanitized; public third-party license contact notices retained."
+}

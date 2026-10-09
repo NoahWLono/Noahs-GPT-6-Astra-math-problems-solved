@@ -1,0 +1,125 @@
+Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+BEGIN FamilyAlgebra.FamilyAlgebra 2026-10-09T03:23:33Z
+'FamilyAlgebra.zero_locus' depends on axioms: [propext, Quot.sound]
+'FamilyAlgebra.exactly_six_base_zeros' depends on axioms: [propext]
+END FamilyAlgebra.FamilyAlgebra status=0 peak_KiB=502192
+BEGIN FamilyAlgebra.FieldAlgebra 2026-10-09T03:23:34Z
+'FamilyAlgebra.field_zero_locus_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.field_zero_locus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.squared_basis_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.FieldAlgebra status=0 peak_KiB=1138596
+BEGIN FamilyAlgebra.PfaffianExpansion 2026-10-09T03:23:35Z
+'FamilyAlgebra.Pfaffian.finite_expansion' depends on axioms: [propext, Quot.sound]
+'FamilyAlgebra.Pfaffian.weighted_finite_expansion' depends on axioms: [propext, Quot.sound]
+END FamilyAlgebra.PfaffianExpansion status=0 peak_KiB=1178752
+BEGIN FamilyAlgebra.ConcretePlanes 2026-10-09T03:23:36Z
+'FamilyAlgebra.family_odd_pair' depends on axioms: [propext, Quot.sound]
+'FamilyAlgebra.lift_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.ConcretePlanes status=0 peak_KiB=1158624
+BEGIN FamilyAlgebra.CoefficientEvaluation 2026-10-09T03:23:38Z
+'FamilyAlgebra.evaluate_terms' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.CoefficientEvaluation status=0 peak_KiB=1147732
+BEGIN FamilyAlgebra.ConcreteExpansion 2026-10-09T03:23:39Z
+'FamilyAlgebra.pencil_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.ConcreteExpansion status=0 peak_KiB=1154680
+BEGIN FamilyAlgebra.ConcreteZeroLocus 2026-10-09T03:23:40Z
+'FamilyAlgebra.concrete_zero_locus_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.concrete_zero_locus' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.ConcreteZeroLocus status=0 peak_KiB=1142420
+BEGIN FamilyAlgebra.TraceCoordinates 2026-10-09T03:23:42Z
+'FamilyAlgebra.TraceCoordinates.radical_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.TraceCoordinates.transfer_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.TraceCoordinates status=0 peak_KiB=1141720
+BEGIN FamilyAlgebra.FiniteRealization 2026-10-09T03:23:43Z
+'FamilyAlgebra.realized_zero_locus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.realized_trace_radical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.realized_trace_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.FiniteRealization status=0 peak_KiB=2055852
+BEGIN FamilyAlgebra.TraceRank 2026-10-09T03:23:47Z
+'FamilyAlgebra.TraceRank.transfer_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.TraceRank.realized_trace_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.TraceRank status=0 peak_KiB=2047732
+BEGIN FamilyAlgebra.PencilInjection 2026-10-09T03:23:51Z
+'FamilyAlgebra.trace_family_parameter_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.family_parameter_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.PencilInjection status=0 peak_KiB=1156672
+BEGIN FamilyAlgebra.PfaffianKernel 2026-10-09T03:23:52Z
+'FamilyAlgebra.singular_pencil_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.pf_nonzero_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.PfaffianKernel status=0 peak_KiB=1328856
+BEGIN FamilyAlgebra.BinaryCoordinates 2026-10-09T03:23:57Z
+'FamilyAlgebra.realized_binary_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.binary_family_nondegenerate_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.binaryForm_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.BinaryCoordinates status=0 peak_KiB=2080176
+BEGIN FamilyAlgebra.ParameterData 2026-10-09T03:24:03Z
+END FamilyAlgebra.ParameterData status=0 peak_KiB=1487320
+BEGIN FamilyAlgebra.ParameterLinearity 2026-10-09T03:24:05Z
+'FamilyAlgebra.realized_fullLinearFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.linearFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.linearFamily_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.ParameterLinearity status=0 peak_KiB=2178268
+BEGIN FamilyMaskCount.MaskCount 2026-10-09T03:24:17Z
+<SOURCE_ROOT>/FamilyMaskCount/MaskCount.lean:144:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<SOURCE_ROOT>/FamilyMaskCount/MaskCount.lean:144:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<SOURCE_ROOT>/FamilyMaskCount/MaskCount.lean:144:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<SOURCE_ROOT>/FamilyMaskCount/MaskCount.lean:144:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'FamilyMaskCount.bad_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyMaskCount.nonzero_bad_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyMaskCount.MaskCount status=0 peak_KiB=1558288
+BEGIN FastWalsh 2026-10-09T03:24:20Z
+<SOURCE_ROOT>/FastWalsh.lean:17:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+<SOURCE_ROOT>/FastWalsh.lean:87:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'FastWalsh.transform_eq_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastWalsh_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastBent_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FastWalsh status=0 peak_KiB=498756
+BEGIN Quadratic 2026-10-09T03:24:21Z
+'FastWalsh.quadratic_component_correct' depends on axioms: [propext, Quot.sound]
+END Quadratic status=0 peak_KiB=429804
+BEGIN QuadraticWalshShift 2026-10-09T03:24:22Z
+'QuadraticWalshShift.quadratic_bent_certificate' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.quadraticComponent_translate' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.additive_eq_of_basis' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.coefficient_alignment_of_basis' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.quadratic_bent_of_basis_and_zero' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.walsh_shift' depends on axioms: [propext, Quot.sound]
+END QuadraticWalshShift status=0 peak_KiB=502516
+BEGIN QuadraticWalshParseval 2026-10-09T03:24:24Z
+'QuadraticWalshParseval.walsh_parseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshParseval.quadratic_bent_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+END QuadraticWalshParseval status=0 peak_KiB=454172
+BEGIN QuadraticWalshRadical 2026-10-09T03:24:24Z
+'QuadraticWalshRadical.binaryDot_detect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshRadical.quadratic_zero_coefficient_of_radical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshRadical.quadratic_not_bent_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+END QuadraticWalshRadical status=0 peak_KiB=441308
+BEGIN QuadraticWalshMatrix 2026-10-09T03:24:25Z
+'QuadraticWalshMatrix.bent_iff_polarForm_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshMatrix.bent_iff_matrix_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshMatrix.polarMatrix_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+END QuadraticWalshMatrix status=0 peak_KiB=1752588
+BEGIN FamilyAlgebra.ComponentCount 2026-10-09T03:24:28Z
+'FamilyAlgebra.nonzero_nonbent_card_of_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.ComponentCount status=0 peak_KiB=2034904
+BEGIN QuadraticWalshFamily 2026-10-09T03:24:29Z
+'QuadraticWalshFamily.family_polarForm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshFamily.family_bent_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshFamily.family_polar_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshFamily.pairCoefficient_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+END QuadraticWalshFamily status=0 peak_KiB=1710244
+BEGIN FamilyAlgebra.UniformFamily 2026-10-09T03:24:33Z
+'FamilyAlgebra.uniform_quadratic_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.uniform_nonbent_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FamilyAlgebra.uniform_twelve_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.UniformFamily status=0 peak_KiB=2053308
+BEGIN FamilyAlgebra.UniformDegree 2026-10-09T03:24:37Z
+'FamilyAlgebra.uniform_nonaffine_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+END FamilyAlgebra.UniformDegree status=0 peak_KiB=2069492
+SOURCE_ONLY_REPLAY_PASS

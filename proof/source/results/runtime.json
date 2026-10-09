@@ -1,0 +1,7 @@
+{
+  "python_version": "3.12.14",
+  "reportlab_version": "4.4.9",
+  "platform": "Linux",
+  "integer_arithmetic": "exact arbitrary-precision integers",
+  "python_verifier_dependencies": "standard library only"
+}

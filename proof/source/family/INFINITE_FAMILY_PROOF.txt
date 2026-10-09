@@ -1,0 +1,118 @@
+INDEPENDENT VERIFICATION OF THE PROPOSED n=4e FAMILY
+2026-10-09. Construction/proof only; novelty is not established.
+
+1. Binary coefficient spaces
+
+Identify Q=Alt(4,F2) with F2^6 using lex pairs 01,02,03,12,13,23.
+Write a vector as (a,b,c,d,f,g). Its Pfaffian quadratic form is
+q(a,b,c,d,f,g)=ag+bf+cd, with polar pairing
+beta(X,Y)=q(X+Y)+q(X)+q(Y).
+
+Let V be the four-dimensional subspace
+A(u,v,w,z)=(u+v,u,w,z,v,u+v).
+Then q(A)=u+v+uv+wz has exactly six zeros: three with u=v=0
+and wz=0, and three with (u,v) nonzero and w=z=1.
+Only one of these six vectors is zero. The map from (u,v,w,z)
+is injective, directly from entries b,f,c,d.
+
+Let O be spanned by bitmasks 19 and 33, and H by 12 and 22.
+In displayed coordinates:
+19=(1,1,0,0,1,0), 33=(1,0,0,0,0,1),
+12=(0,0,1,1,0,0), 22=(0,1,1,0,1,0).
+For both spaces, q of a combination with coefficients (s,t) is
+s+t+st, so each is an anisotropic binary plane.
+
+Directly, beta(A,19)=(u+v)+u+v=0 and
+beta(A,33)=(u+v)+(u+v)=0. The pairing beta is nondegenerate
+on the six-dimensional space Q, so dim O^perp=4 and V=O^perp.
+Both generators of H belong to V (labels 12 and 7 respectively),
+so H is orthogonal to O. [Here A label is u+2v+4w+8z.]
+
+2. Extension pencil
+
+Fix any integer e>=1 and E=F_(2^e). Choose alpha with degree e
+so 1,alpha,...,alpha^(e-1) is a binary basis. (For e=1 choose
+alpha=1; only alpha^0 is used.) Set X_0=A in V. For 1<=j<e,
+choose X_j in O if j is odd and in H if j is even. Define
+
+K=A+sum_(j=1)^(e-1) alpha^j X_j in Alt(4,E).
+
+The binary parameter space has dimension 4+2(e-1)=2e+2.
+It maps injectively into Alt(4,E): if K=0, coefficientwise
+independence of 1,alpha,...,alpha^(e-1) implies every X_j=0.
+
+The Pfaffian is the scalar extension of q, hence
+q(K)=sum_j alpha^(2j)q(X_j)
+     +sum_(i<j) alpha^(i+j)beta(X_i,X_j).
+
+If i+j is odd, the cross pairing vanishes. For i=0 this follows
+from V=O^perp; for positive i,j it follows from O perpendicular H.
+If i+j is even, write i+j=2k. Then i<k<j, or at least 0<=k<j
+when i=0; in either case k<j.
+
+Suppose some X_j with j>=1 is nonzero, and let m be the largest
+such index. In the expansion in 1,alpha^2,...,alpha^(2(e-1)),
+the coefficient at index m is q(X_m)=1 by anisotropy. No cross
+term can reach this index, because all their indices k are strictly
+below the larger active index, which is at most m. No diagonal term
+with index above m is nonzero. The displayed squared powers are
+linearly independent: a binary relation among them is the square
+of the same relation among 1,alpha,...,alpha^(e-1), and Frobenius
+is injective. Therefore q(K) is nonzero.
+
+Conversely, if all X_j=0 for j>=1, q(K)=q(A). We have proved
+q(K)=0 iff all extension parameters vanish and q(A)=0.
+There are exactly six singular matrices in this entire pencil.
+
+3. Trace passage and ranks
+
+View E^4 as a binary vector space of dimension n=4e. Define
+T_K(x,y)=Tr_(E/F2)(x^T K y). This is a binary alternating form.
+The finite-field trace pairing is nondegenerate. For completeness,
+Tr(z)=z+z^2+...+z^(2^(e-1)) is a nonzero polynomial of degree
+2^(e-1)<2^e, so is not identically zero on E. Since its values
+are binary, some z has trace 1. Given c != 0, d=z/c gives
+Tr(cd)=1. This works for even e as well; one must not rely on
+Tr(1)=1 outside odd-degree extensions.
+
+If Kx=0 then x lies in the radical of T_K. Conversely, if Kx
+is nonzero, use a nonzero coordinate and the nondegenerate trace
+pairing to choose y with T_K(x,y)=1. Thus the radical of T_K
+is the E-kernel of K, viewed over F2. In particular,
+rank_F2(T_K)=e*rank_E(K).
+
+The zero parameter produces rank zero. The other five singular A
+are nonzero alternating 4x4 matrices with vanishing Pfaffian, hence
+rank 2 over F2 and over E; they give binary rank 2e. Every other
+parameter gives binary rank 4e. The trace map is injective on all
+alternating E-matrices by the same trace-pairing argument, so this
+binary pencil still has parameter dimension 2e+2.
+
+4. Quadratic map and component count
+
+Choose any binary basis of E^4, and let M_0,...,M_(2e+1) be
+the binary matrices of a basis of the trace pencil. Define
+f_k(x)=sum_(a<b) (M_k)ab x_a x_b for 0<=k<2e+2,
+and append 2e-2 zero coordinates to obtain f:F2^(4e)->F2^(4e).
+The padding number is nonnegative for every e>=1, including e=1.
+
+A Boolean quadratic function is bent iff its polar form is
+nondegenerate. Exactly six effective component masks are nonbent,
+including zero. Every effective mask has 2^(2e-2) full-mask lifts.
+Consequently the number of nonzero nonbent components is
+
+6*2^(2e-2)-1 = 3*2^(2e-1)-1 = 3*2^(n/2-1)-1.
+
+Thus this construction meets that numerical target for every
+positive n divisible by four. Any assertion that this is a globally
+sharp bound depends on the separately supplied lower-bound theorem.
+No claim concerning n=2 mod 4 follows from this argument.
+
+5. Independent finite checks
+
+verify_family.py checks all 2^(2e+2) parameter vectors for e=1..6
+using finite-field multiplication reduced modulo explicitly validated
+irreducible polynomials. In every case the only singular labels are
+0,4,8,13,14,15. The corresponding nonzero nonbent counts are
+5,23,95,383,1535,6143 for n=4,8,12,16,20,24.
+The original n=12 full binary trace certificate is preserved separately.

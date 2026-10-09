@@ -1,0 +1,795 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[a4paper,margin=28mm,headheight=14pt]{geometry}
+\usepackage{microtype,booktabs,array,longtable}
+\usepackage{fancyhdr,fvextra,needspace}
+\usepackage{xcolor}
+\usepackage[unicode,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={Extremal quadratic maps in dimensions divisible by four},pdfauthor={GPT-6 Astra (project label)},pdfsubject={A uniform existence theorem and a concrete twelve-bit instance}}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\pf}{pf}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Alt}{Alt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape Extremal quadratic maps}
+\fancyhead[R]{\small GPT-6 Astra}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.3em}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true}
+\title{\bfseries Extremal quadratic maps\\in dimensions divisible by four}
+\author{GPT-6 Astra\thanks{Requested project label, not runtime model attribution or institutional affiliation.}}
+\date{Research note\quad\textperiodcentered\quad9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every positive integer $e$ and $n=4e$, we construct a homogeneous
+quadratic map $F:\F_2^n\to\F_2^n$ of degree exactly two with
+$3\cdot2^{n/2-1}-1$ nonzero nonbent Boolean components. Together with
+Deryck's cited lower bound, this proves sharpness among non-MNBC quadratic
+maps at equal dimensions divisible by four. We give the full algebraic
+proof, an explicit twelve-bit instance with $4000$ bent and $95$ nonbent
+nonzero components, all binary coefficients, and reproducibility details.
+Two independent source-only Lean replays certify the uniform existence
+result and the explicit instance. The construction is congruent to an
+established Jha--Johnson cyclic-semifield core plus a hyperbolic plane;
+novelty of the exact component-count corollary is unestablished.
+\end{abstract}
+\begingroup\small\setcounter{tocdepth}{1}\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage
+\section*{Overview and scope}
+\addcontentsline{toc}{section}{Overview and scope}
+
+
+\textbf{Verified scope.} Independent source-only Lean replays passed for both the uniform theorem and the explicit twelve-bit certificate. The underlying construction is established; novelty of the exact count consequence is unestablished.
+
+
+\subsection*{The uniform theorem}
+
+\begin{theorem}[Uniform existence]\label{thm:main}For every integer $e\ge1$ and $n=4e$, there exists a homogeneous quadratic map $F:\F_2^n\to\F_2^n$ of degree exactly two with
+
+\begin{equation}\label{eq:7}
+|N_F|=3\cdot 2^{n/2-1}-1.
+\end{equation}
+
+\end{theorem}
+
+Here $N_{F}$ is the set of nonzero masks whose Boolean component is not bent. With the cited inequality \cite{ref1}, this attains Deryck's non-MNBC lower bound for every $m=n$ divisible by four. It does not settle dimensions congruent to two modulo four. The universal lower bound itself is cited, not part of the formal development.
+
+
+\subsection*{The explicit twelve bit instance}
+
+A concrete map with eight independent quadratic coordinates and four zero coordinates has $4000$ bent and $95$ nonbent nonzero masks. In little-endian binary encoding its full nonbent set is
+
+
+\begin{equation}\label{eq:11}
+N_F=\{b\in\{1,\ldots,4095\}:b\bmod256\in S\},\qquad S=\{0,4,8,13,14,15\}.
+\end{equation}
+
+The uniform proof makes classical choices of fields and coordinates. The explicit twelve-bit polynomial has a separate checked certificate; no byte-for-byte identification with the uniformly chosen $e=3$ witness is asserted. Sections $1$ through $5$ explain the concrete construction, and Appendix~\ref{app:B} proves the family.
+
+
+\subsection*{Novelty and attribution}
+
+The underlying family is an established Jha--Johnson cyclic-semifield core plus a hyperbolic plane, identified by an explicit congruence. The exact extremal count is a short corollary; no prior publication of that consequence was located. Novelty is unestablished, and any contribution is at most a potentially new application or corollary. Appendix~\ref{app:E} gives the correspondence and sources.
+
+
+\clearpage
+
+\Needspace{9\baselineskip}\section{The explicit construction}\label{sec:explicit}
+
+Let $k = \F_{2}[\alpha ]/(\alpha ^{3}+\alpha +1)$. The cubic has no root in $\F_{2}$, hence is irreducible. Thus $k$ is a field with eight elements, with binary basis $(1,\alpha ,\alpha ^{2})$. In particular $\alpha ^{3} = \alpha +1$ and $\alpha ^{4} = \alpha ^{2}+\alpha $. Its trace is
+
+
+\begin{equation}\label{eq:18}
+\Tr(c)=c+c^2+c^4\in\F_2.
+\end{equation}
+
+For $\lambda  = (u,v,w,z,s,t,p,q) \in  \F_{2}^{8}$, define a symmetric matrix $K_{\lambda }$ over $k$ with zero diagonal and these six upper-triangular entries:
+
+
+\begin{equation}\label{eq:20}
+\begin{aligned}K_{01}&=u+v+\alpha(s+t),& K_{02}&=u+\alpha s+\alpha^2q,\\K_{03}&=w+\alpha^2(p+q),&K_{12}&=z+\alpha^2p,\\K_{13}&=v+\alpha s+\alpha^2q,&K_{23}&=u+v+\alpha t.\end{aligned}
+\end{equation}
+
+All eight parameters are binary, including when the expressions are evaluated in $k$. The parameter label is $u+2v+4w+8z+16s+32t+64p+128q$. The diagonal-zero symmetric matrix represents an alternating bilinear form in characteristic two.
+
+
+Write an input $x \in  \F_{2}^{12}$ as $(X_{0},X_{1},X_{2},X_{3}) \in  k^{4}$, where
+
+
+\begin{equation}\label{eq:23}
+X_i=x_{3i}+\alpha x_{3i+1}+\alpha^2x_{3i+2}.
+\end{equation}
+
+Let $e_{j}$ denote the jth binary parameter unit vector, with $j$ beginning at zero. Define
+
+
+\begin{equation}\label{eq:25}
+\begin{gathered} F_j(x)=\Tr\!\left(\sum_{0\le i<\ell\le3}(K_{e_j})_{i\ell}X_iX_\ell\right)\quad(0\le j<8),\\ F_8=F_9=F_{10}=F_{11}=0.\end{gathered}
+\end{equation}
+
+This is an explicit homogeneous quadratic map in the twelve binary variables: multiplication in $k$ is binary bilinear, and trace is binary linear. Appendix~\ref{app:A} gives all $66$ vector coefficients, eliminating any need to implement field arithmetic to evaluate $F$.
+
+
+\Needspace{7\baselineskip}\begin{proposition}[Independence]\label{prop:independence}The eight effective coordinate functions of $F$ are linearly independent.\end{proposition}\begin{proof}
+
+The map $\lambda  \mapsto  K_{\lambda }$ is injective. If $K_{\lambda } = 0$, the basis coefficients in $K_{02}$ force $u=s=q=0; K_{13}$ then gives $v=0; K_{12}$ gives $z=p=0; K_{03}$ gives $w=0$; and $K_{23}$ gives $t=0$. Section~\ref{sec:trace} shows that trace also preserves this injectivity. Therefore the component kernel consists exactly of the four padded output-mask directions.
+
+
+\end{proof}
+
+\Needspace{9\baselineskip}\section{The Pfaffian calculation}\label{sec:pfaffian}
+
+For an alternating four by four matrix over a field of characteristic two, set
+
+
+\begin{equation}\label{eq:31}
+\pf(K)=K_{01}K_{23}+K_{02}K_{13}+K_{03}K_{12}.
+\end{equation}
+
+Expanding the determinant gives $\operatorname{det}(K) = \operatorname{pf}(K)^{2}$: the three permutations consisting of two transpositions yield the three squared products, while the remaining nonzero determinant terms cancel in pairs. Hence $K$ is singular exactly when $\operatorname{pf}(K)=0$.
+
+
+\Needspace{4\baselineskip}\subsubsection*{An explicit expansion}
+
+Put $A=u+v$. Use $a^{2}=a$ for each binary parameter and $\alpha ^{4}=\alpha ^{2}+\alpha $. The three products are
+
+
+\begin{equation}\label{eq:35}
+\begin{aligned}K_{01}K_{23}&=A+\alpha As+\alpha^2(st+t),\\K_{02}K_{13}&=uv+\alpha As+\alpha^2(qA+s)+(\alpha^2+\alpha)q,\\K_{03}K_{12}&=wz+\alpha^2\bigl(wp+z(p+q)\bigr)+(\alpha^2+\alpha)(p+pq).\end{aligned}
+\end{equation}
+
+Adding the products cancels the $\alpha As$ terms and gives
+
+
+\begin{equation}\label{eq:37}
+\begin{aligned}\pf(K_\lambda)&=P+\alpha R+\alpha^2(Q+R),\\P&=u+v+uv+wz,\\R&=p+q+pq,\\Q&=st+s+t+q(u+v)+wp+z(p+q).\end{aligned}
+\end{equation}
+
+\Needspace{7\baselineskip}\begin{proposition}[Singular locus]\label{prop:singular}The pencil $K_\lambda$ has exactly six singular parameter values, namely $S=\{0,4,8,13,14,15\}$. Its rank distribution over $k$ is $(1,5,250)$ in ranks $(0,2,4)$.\end{proposition}\begin{proof}
+
+Linear independence of $1,\alpha ,\alpha ^{2}$ makes $\operatorname{pf}(K_{\lambda })=0$ equivalent to $P=Q=R=0$. For binary $p,q$, the expression $p+q+pq$ is zero only when $p=q=0$. With these values fixed, $Q=st+s+t$ is zero only when $s=t=0$. It remains to solve $P=0$.
+
+
+The expression $u+v+uv$ is zero at $(u,v)=(0,0)$ and one at the other three pairs. There are therefore three solutions with $u=v=0$ and $wz=0$, and three with $(u,v)\ne (0,0)$ and $w=z=1$. Their labels are exactly
+
+
+\begin{equation}\label{eq:41}
+S=\{0,4,8,13,14,15\}.
+\end{equation}
+
+An alternating form has even rank. For completeness, if its value on a pair of vectors is nonzero, rescale the pair to obtain a nonsingular alternating two-dimensional block. Subtract multiples of that pair from each remaining basis vector to split off an orthogonal complement, and continue. Thus every nonzero singular four-dimensional alternating form has rank two.
+
+
+Injectivity from Section~\ref{sec:explicit} makes label zero the only zero matrix. Consequently, among the $256$ matrices $K_{\lambda }$, one has rank zero, five have rank two, and $250$ have rank four. This classification uses no numerical search.
+
+
+\end{proof}
+
+\Needspace{9\baselineskip}\section{Trace descent and binary rank}\label{sec:trace}
+
+\Needspace{7\baselineskip}\begin{lemma}[Trace pairing]\label{lem:trace}The pairing $(c,d)\mapsto\Tr(cd)$ on $k$ is nondegenerate over $\F_2$.\end{lemma}\begin{proof}
+
+The trace is binary linear since squaring is additive in characteristic two. Also $\operatorname{Tr}(c)^{2}=\operatorname{Tr}(c)$, using $c^{8}=c$; the only roots of $T^{2}+T$ are zero and one, so its values lie in $\F_{2}$. Finally $\operatorname{Tr}(1)=1+1+1=1$.
+
+
+If $c\ne 0$, choose $d=c^{-1}$. Then $\operatorname{Tr}(cd)=\operatorname{Tr}(1)=1$. Thus the pairing $(c,d) \mapsto  \operatorname{Tr}(cd)$ is nondegenerate over $\F_{2}$. On $k^{4}$, the coordinatewise pairing has the same property: isolate any nonzero coordinate and choose its inverse in the other vector.
+
+
+\end{proof}
+
+\Needspace{7\baselineskip}\begin{proposition}[Rank descent]\label{prop:rank}The binary rank of $B_\lambda$ is three times the $k$-rank of $K_\lambda$.\end{proposition}\begin{proof}
+
+Associate to $K_{\lambda }$ the binary bilinear form
+
+
+\begin{equation}\label{eq:50}
+B_\lambda(X,Y)=\Tr(X^{\mathsf T}K_\lambda Y).
+\end{equation}
+
+If $K_{\lambda }Y=0$, then $B_{\lambda }(X,Y)=0$ for every $X$. Conversely, if $K_{\lambda }Y$ has a nonzero coordinate $c$, choose $X$ supported at that coordinate with value $c^{-1}$. Then $B_{\lambda }(X,Y)=1$, contradicting radical membership. Therefore
+
+
+\begin{equation}\label{eq:52}
+\rad_{\F_2}(B_\lambda)=\ker_k(K_\lambda)\qquad\text{as subsets of }k^4.
+\end{equation}
+
+A k-vector space of dimension $d$ has binary dimension $3d$. If $K_{\lambda }$ has $k-\operatorname{rank} r$, the binary radical has dimension $3(4-r)$, and hence
+
+
+\begin{equation}\label{eq:54}
+\rank_{\F_2}(B_\lambda)=12-3(4-r)=3r.
+\end{equation}
+
+This proves the binary rank distribution without relying on an elimination program:
+
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}\begin{tabular}{ccl}\toprule
+
+Binary rank & Number of effective masks & Effective labels \\
+\midrule
+
+$0$ & $1$ & $0$ \\
+
+$6$ & $5$ & $4, 8, 13, 14, 15$ \\
+
+$12$ & $250$ & All remaining labels \\
+
+\bottomrule\end{tabular}\end{center}
+
+\end{proof}
+
+\Needspace{4\baselineskip}\subsubsection*{The component polar form}
+
+For $b\in \F_{2}^{12}$, write $\lambda =(b_{0},\ldots ,b_{7})$ and $f_{b}(x)=\langle b,F(x)\rangle $. Linearity of trace and of $K$ in $\lambda $ gives
+
+
+\begin{equation}\label{eq:59}
+\begin{gathered}f_b(X)=\Tr\!\left(\sum_{i<\ell}(K_\lambda)_{i\ell}X_iX_\ell\right),\\ f_b(X+Y)+f_b(X)+f_b(Y)=B_\lambda(X,Y).\end{gathered}
+\end{equation}
+
+In the ordered binary basis, its polar matrix $M_{\lambda }$ has entries $M_{\lambda }[3i+r,3l+h]=\operatorname{Tr}(\alpha ^{r+h}(K_{\lambda })_{il})$. Nondegeneracy also shows $B_{\lambda }=0$ only when $K_{\lambda }=0$. Therefore no nonzero effective mask selects the zero quadratic function.
+
+
+\Needspace{9\baselineskip}\section{A self-contained Walsh argument}\label{sec:walsh}
+
+Let $V=\F_{2}^{n}$ and let $q:V\to \F_{2}$ be quadratic with $q(0)=0$. Its polar form $B(x,z)=q(x+z)+q(x)+q(z)$ is alternating bilinear. Write $R$ for its radical and $r=n-\operatorname{dim} R$ for its rank. For a frequency $a\in V$, define
+
+
+\begin{equation}\label{eq:63}
+W_q(a)=\sum_{x\in V}(-1)^{q(x)+\langle a,x\rangle}.
+\end{equation}
+
+\Needspace{7\baselineskip}\begin{theorem}[Quadratic bent criterion]\label{thm:walsh}A quadratic Boolean function is bent if and only if its polar form is nonsingular. More generally, its nonzero Walsh coefficients have magnitude $2^{n-r/2}$ and number $2^r$.\end{theorem}\begin{proof}
+
+In the product of two Walsh sums, replace the second variable by $x+z$. Bilinearity and character cancellation yield
+
+
+\begin{equation}\label{eq:66}
+\begin{aligned}W_q(a)^2&=\sum_{z\in V}(-1)^{q(z)+\langle a,z\rangle}\sum_{x\in V}(-1)^{B(x,z)}\\&=2^n\sum_{z\in R}(-1)^{q(z)+\langle a,z\rangle}.\end{aligned}
+\end{equation}
+
+Indeed, the inner sum equals $2^{n}$ for $z\in R$. Otherwise $x\mapsto B(x,z)$ is a nonzero linear functional; translation by a vector where it equals one pairs opposite signs and makes the sum zero.
+
+
+The restriction $q|_{R}$ is linear because $B$ vanishes on $R$. The remaining character sum is $|R|$ when $\langle a,\cdot \rangle $ agrees with $q$ on $R$, and zero otherwise. Every linear functional on $R$ extends to $V$. There are exactly $2^{n-\dim R}=2^{r}$ such extensions, since the annihilator of $R$ has that size. Consequently
+
+
+\begin{equation}\label{eq:69}
+W_q(a)\in\{0,\pm2^{n-r/2}\},\qquad\#\{a:W_q(a)\ne0\}=2^r.
+\end{equation}
+
+If $r=n$, every coefficient has magnitude $2^{n/2}$, so $q$ is bent. If $r<n$, some coefficient has larger magnitude and $q$ is not bent. Thus a quadratic Boolean function is bent exactly when its polar form is nonsingular.
+
+
+\end{proof}
+
+\Needspace{4\baselineskip}\subsubsection*{The signs in the spectrum}
+
+Summing $W_{q}(a)$ over a cancels every $x\ne 0$ and leaves $2^{n}(-1)^{q(0)}=2^{n}$. If $A=2^{n-r/2}$ and $N_{+},N_{-}$ count coefficients $+A,-A$, then
+
+
+\begin{equation}\label{eq:73}
+N_++N_-=2^r,\qquad A(N_+-N_-)=2^n.
+\end{equation}
+
+For $r>0$ this gives $N_{\pm }=2^{r-1}\pm 2^{r/2-1}$. There are $2^{n}-2^{r}$ zeros. The zero function has one coefficient $2^{n}$, at frequency zero, and all other coefficients zero. These identities prove every numerical spectrum in the next section.
+
+
+\Needspace{9\baselineskip}\section{Exact counts and sharpness}\label{sec:counts}
+
+Apply Sections $3$ and $4$ with $n=12$. Each effective mask selects a quadratic component of binary polar rank zero, six or twelve. The full spectrum of each component is as follows. Multiplicities in the last column count the $4096$ input frequencies.
+
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}\begin{tabular}{lccp{66mm}}\toprule
+
+Effective mask & Count & Rank & Walsh values with multiplicities \\
+\midrule
+
+$0$ & $1$ & $0$ & $0: 4095; 4096: 1$ \\
+
+$4, 8, 13, 14, 15$ & $5$ & $6$ & $-512: 28; 0: 4032; 512: 36$ \\
+
+All others & $250$ & $12$ & $-64: 2016; 64: 2080$ \\
+
+\bottomrule\end{tabular}\end{center}
+
+The four zero output coordinates make each effective mask occur for $16$ full masks. Thus $250\cdot 16=4000$ nonzero masks are bent. The six singular effective masks have $6\cdot 16=96$ preimages, one of which is the zero mask. Excluding that mask gives exactly $95$ nonzero nonbent masks.
+
+
+\begin{equation}\label{eq:79}
+4095=4000+80+15.
+\end{equation}
+
+Here the $80$ masks are $16$ copies of each of the five rank-six components. The other $15$ are nonzero masks supported entirely in the four padded positions, and they select the identically zero component. A nonzero mask selecting the zero function still belongs to $N_{F}$.
+
+
+\Needspace{4\baselineskip}\subsubsection*{The known lower bound applies}
+
+MNBC denotes attaining the maximum number of bent components, equivalently $|N_{F}|=2^{m-n/2}-1$. For $n=m=12$ this is $63$, so the witness is non-MNBC. Deryck \cite[Theorem 5.4.15, printed p. 87]{ref1} proves that a non-MNBC quadratic map satisfies
+
+
+\begin{equation}\label{eq:83}
+\begin{gathered}|N_F|\ge2^{m-n/2}+2^{m-n/2-1}-1,\\n\text{ even},\qquad n\le2m-4.\end{gathered}
+\end{equation}
+
+At $n=m=12$ the hypotheses hold and the right-hand side is $64+32-1=95$. Together with the explicit witness, this establishes sharpness at that parameter pair. The universal inequality is cited; it is not re-proved or formalized in this package.
+
+
+\Needspace{9\baselineskip}\section{A variant with independent output coordinates}\label{sec:variant}
+
+\textbf{Separate mathematical corollary.} The canonical map used for the finite certificate retains its four zero coordinates. A simple variant has twelve linearly independent coordinate functions and the same $4000/95$ component count. This corollary is not claimed to be included in the Lean certificate.
+
+
+\Needspace{7\baselineskip}\begin{corollary}[Independent outputs]\label{cor:outputs}There is a twelve-bit quadratic map with twelve linearly independent coordinate functions and exactly $95$ nonzero nonbent components.\end{corollary}\begin{proof}
+
+Keep the first eight quadratic functions and define
+
+
+\begin{equation}\label{eq:89}
+G(x)=\bigl(F_0(x),\ldots,F_7(x),x_0,x_1,x_2,x_3\bigr).
+\end{equation}
+
+Write a mask as $b=(\lambda ,\rho )$, where $\lambda \in \F_{2}^{8}$ and $\rho \in \F_{2}^{4}$. Let $L(x)=(x_{0},x_{1},x_{2},x_{3})$. The selected component becomes
+
+
+\begin{equation}\label{eq:91}
+\begin{aligned}g_b(x)&=f_b(x)+\langle\rho,L(x)\rangle,\\W_G(b,a)&=W_F(b,a+L^{\mathsf T}\rho).\end{aligned}
+\end{equation}
+
+Thus the new Walsh spectrum is only a permutation of the old frequency list. Bentness and every signed spectrum are unchanged for each mask. In particular $|N_{G}|=95$ and $G$ has $4000$ bent nonzero components.
+
+
+\Needspace{4\baselineskip}\subsubsection*{No nonzero mask selects the zero function}
+
+If $\lambda \ne 0$, the polar form of $g_{b}$ is the nonzero form $B_{\lambda }$, since adding a linear function does not change polarization. Hence $g_{b}$ cannot be identically zero. If $\lambda =0$ and $\rho \ne 0$, the component is a nonzero combination of the four independent input coordinate functions. This proves linear independence of all twelve coordinate functions of $G$.
+
+
+The $15$ nonzero masks in the former padded directions now select nonzero linear components. Such a component still has a single Walsh coefficient $+4096$ and $4095$ zeros, with the nonzero coefficient moved away from frequency zero. It remains nonbent.
+
+
+\end{proof}
+
+\Needspace{4\baselineskip}\subsubsection*{What the variant does and does not establish}
+
+The quadratic parts still span an eight-dimensional space, and their polar ranks remain exactly the same. Moreover, adding a linear map changes each derivative by a constant output vector. It therefore preserves derivative fiber sizes and cannot turn this construction into an APN map.
+
+
+For the canonical $F$, each derivative $x\mapsto F(x+a)+F(x)$ lands in a 256-element output subspace. Its $4096$ inputs force a fiber of size at least $16$. For $G$, the last four derivative coordinates are fixed by a, and the same obstruction remains. Neither variant is presented as a deployment-ready cryptographic primitive.
+
+
+The bound in \cite{ref1} does not require independent coordinate functions. This corollary nevertheless shows that the same numerical extremum can be realized without identically zero nonzero-mask components. The finite formalization targets $F$; the corollary for $G$ is established by the argument above.
+
+
+\clearpage\appendix
+
+\Needspace{9\baselineskip}\section{All binary coefficients}\label{app:A}
+
+For $x\in \F_{2}^{12}$, the encoded output is $F(x)=\oplus _{i<j,x_{i}x_{j}=1} c_{ij}$. The decimal integer $c_{ij}$ is an eight-bit vector, with bit $k$ the coefficient of $x_{i}x_{j}$ in $F_{k}$. Its top four output bits are zero. Pairs are listed lexicographically, reading down each of the three blocks.
+
+
+Each coefficient can also be recovered from the field formula: $(c_{ij})_{k}$ is the corresponding upper-triangular entry of the binary polar matrix $M_{e_{k}}$. Within a single three-bit input block the coefficients are zero.
+
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}\begin{tabular}{rrrrrr}\toprule
+
+Pair $(i,j)$ & $c_{ij}$ & Pair $(i,j)$ & $c_{ij}$ & Pair $(i,j)$ & $c_{ij}$ \\
+\midrule
+
+$(0, 1)$ & $0$ & $(2, 4)$ & $3$ & $(4, 11)$ & $130$ \\
+
+$(0, 2)$ & $0$ & $(2, 5)$ & $48$ & $(5, 6)$ & $0$ \\
+
+$(0, 3)$ & $3$ & $(2, 6)$ & $16$ & $(5, 7)$ & $72$ \\
+
+$(0, 4)$ & $0$ & $(2, 7)$ & $129$ & $(5, 8)$ & $64$ \\
+
+$(0, 5)$ & $48$ & $(2, 8)$ & $144$ & $(5, 9)$ & $16$ \\
+
+$(0, 6)$ & $1$ & $(2, 9)$ & $0$ & $(5, 10)$ & $130$ \\
+
+$(0, 7)$ & $128$ & $(2, 10)$ & $196$ & $(5, 11)$ & $144$ \\
+
+$(0, 8)$ & $16$ & $(2, 11)$ & $192$ & $(6, 7)$ & $0$ \\
+
+$(0, 9)$ & $4$ & $(3, 4)$ & $0$ & $(6, 8)$ & $0$ \\
+
+$(0, 10)$ & $192$ & $(3, 5)$ & $0$ & $(6, 9)$ & $3$ \\
+
+$(0, 11)$ & $0$ & $(3, 6)$ & $8$ & $(6, 10)$ & $0$ \\
+
+$(1, 2)$ & $0$ & $(3, 7)$ & $64$ & $(6, 11)$ & $32$ \\
+
+$(1, 3)$ & $0$ & $(3, 8)$ & $0$ & $(7, 8)$ & $0$ \\
+
+$(1, 4)$ & $48$ & $(3, 9)$ & $2$ & $(7, 9)$ & $0$ \\
+
+$(1, 5)$ & $3$ & $(3, 10)$ & $128$ & $(7, 10)$ & $32$ \\
+
+$(1, 6)$ & $128$ & $(3, 11)$ & $16$ & $(7, 11)$ & $3$ \\
+
+$(1, 7)$ & $16$ & $(4, 5)$ & $0$ & $(8, 9)$ & $32$ \\
+
+$(1, 8)$ & $129$ & $(4, 6)$ & $64$ & $(8, 10)$ & $3$ \\
+
+$(1, 9)$ & $192$ & $(4, 7)$ & $0$ & $(8, 11)$ & $32$ \\
+
+$(1, 10)$ & $0$ & $(4, 8)$ & $72$ & $(9, 10)$ & $0$ \\
+
+$(1, 11)$ & $196$ & $(4, 9)$ & $128$ & $(9, 11)$ & $0$ \\
+
+$(2, 3)$ & $48$ & $(4, 10)$ & $16$ & $(10, 11)$ & $0$ \\
+
+\bottomrule\end{tabular}\end{center}
+
+The complete output truth table uses input integer $\sum _{i=0}^{11} 2^{i}x_{i}$. Its SHA-256 below is computed over the $4096$ output bytes in that input order, not over the JSON representation.
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+ae7383fd45347cbcf32eefec5a6750434967
+dd727fe6751a388f3ba6ff72bce3
+\end{Code}
+
+\Needspace{9\baselineskip}\section{A family in dimensions divisible by four}\label{app:B}
+
+\textbf{Uniform theorem.} The construction works for every $e\ge 1$ and $n=4e$. The mathematical proof below accompanies a checked Lean existence theorem; Appendix~\ref{app:C} identifies its exact scope and classical coordinate choices. Novelty remains provisional.
+
+
+\Needspace{4\baselineskip}\subsubsection*{Two anisotropic binary planes}
+
+Identify the six-dimensional binary space $Q=\operatorname{Alt}(4,\F_{2})$ with the upper-entry vectors $(a,b,c,d,f,g)$ in pair order $01,02,03,12,13,23$. Its Pfaffian quadratic form and polar pairing are
+
+
+\begin{equation}\label{eq:110}
+q(a,b,c,d,f,g)=ag+bf+cd,\qquad\beta(X,Y)=q(X+Y)+q(X)+q(Y).
+\end{equation}
+
+Define the four-dimensional space $V$ and two binary planes $O,H$ by
+
+
+\begin{equation}\label{eq:112}
+\begin{aligned}A(u,v,w,z)&=(u+v,u,w,z,v,u+v),\\ V&=\{A(u,v,w,z):u,v,w,z\in\F_2\},\\O&=\operatorname{span}\{(1,1,0,0,1,0),(1,0,0,0,0,1)\},\\H&=\operatorname{span}\{(0,0,1,1,0,0),(0,1,1,0,1,0)\}.\end{aligned}
+\end{equation}
+
+In either ordered basis of $O$ or $H, q(s\cdot v_{1}+t\cdot v_{2})=s+t+st$. Thus $q$ equals one on each plane's three nonzero vectors. Direct substitution gives $\beta (V,O)=0$ and $\beta (H,O)=0$. Also $q(A)=u+v+uv+wz$ has the six zeros already counted in Section~\ref{sec:pfaffian}.
+
+
+\Needspace{7\baselineskip}\begin{theorem}[Uniform six-exception pencil]\label{thm:pencil}For every $e\ge1$, the construction below gives a $(2e+2)$-dimensional binary subspace of $\Alt(4,\F_{2^e})$ with exactly six singular matrices.\end{theorem}\begin{proof}
+
+Let $E=\F_{2^{e}}$ and choose $\alpha $ of degree $e$, so that $1,\alpha ,\ldots ,\alpha ^{e-1}$ is a binary basis. For $e=1$ only $1$ is used. Take $X_{0}=A\in V$; for $1\le j<e$ choose $X_{j}\in O$ when $j$ is odd and $X_{j}\in H$ when $j$ is even. Set
+
+
+\begin{equation}\label{eq:116}
+K=\sum_{j=0}^{e-1}\alpha^jX_j\in\Alt(4,E).
+\end{equation}
+
+Coefficientwise independence makes this a binary pencil of dimension $4+2(e-1)=2e+2$. Extending $q$ and $\beta $ to $E$ gives
+
+
+\begin{equation}\label{eq:118}
+q(K)=\sum_j\alpha^{2j}q(X_j)+\sum_{i<j}\alpha^{i+j}\beta(X_i,X_j).
+\end{equation}
+
+Every cross term with $i+j$ odd vanishes: its two entries lie in $O$ and either $V$ or $H$. For an even sum, write $i+j=2k$; then $i<k<j$. Thus its basis index $k$ is strictly below its larger active index $j$.
+
+
+Suppose $m\ge 1$ is the largest index with $X_{m}\ne 0$. In the basis $1,\alpha ^{2},\ldots ,\alpha ^{2(e-1)}$, the coefficient at index $m$ equals $q(X_{m})=1$; no cross term reaches it. These squared powers are independent because a relation between them is the square of the corresponding relation between $1,\alpha ,\ldots ,\alpha ^{e-1}$, and Frobenius is injective. Therefore $q(K)\ne 0$.
+
+
+Conversely, if all $X_{j}=0$ for $j\ge 1$, then $q(K)=q(A)$. Hence the entire pencil has exactly six singular matrices, regardless of $e$.
+
+
+\end{proof}
+
+\Needspace{9\baselineskip}\subsection{Trace and the general count}
+
+\Needspace{7\baselineskip}\begin{lemma}[Trace in arbitrary degree]\label{lem:generaltrace}The trace pairing on $E=\F_{2^e}$ is nondegenerate over $\F_2$ for every $e\ge1$.\end{lemma}\begin{proof}
+
+For $E=\F_{2^{e}}$, write $T(z)=z+z^{2}+\ldots +z^{2^{e-1}}$. Its values are binary because $T(z)^{2}=T(z)$. As a polynomial, $T$ is nonzero and has degree $2^{e-1}<2^{e}$. A nonzero polynomial over a field has at most its degree many roots, so $T$ is not identically zero on $E$. Therefore some $z\in E$ satisfies $T(z)=1$.
+
+
+Given $c\ne 0$, take $d=z/c$. Then $T(cd)=1$, proving the trace pairing is nondegenerate. This argument is necessary for even $e$, when $T(1)=0$ and the shortcut used specifically for $\F_{8}$ would fail.
+
+
+\end{proof}
+
+Exactly as in Section~\ref{sec:trace}, the radical of the binary form $(x,y)\mapsto T(x^{T}Ky)$ is the E-kernel of $K$ viewed over $\F_{2}$. Thus its binary rank equals $e$ times the $E-\operatorname{rank}$. The pencil therefore has one form of rank zero, five of rank $2e$, and $2^{2e+2}-6$ of rank $4e$. Trace preserves the pencil's binary dimension $2e+2$.
+
+
+\Needspace{4\baselineskip}\subsubsection*{The associated quadratic map}
+
+Choose the induced binary basis of $E^{4}$. For the $2e+2$ basis matrices $M_{k}$ of the trace pencil, take coordinate functions $f_{k}(x)=\sum _{a<b}(M_{k})_{ab}x_{a}x_{b}$. Append $2e-2$ zero coordinates. This gives $F:\F_{2}^{4e}\to \F_{2}^{4e}$, with exactly six nonbent effective masks, including zero.
+
+
+\begin{equation}\label{eq:129}
+|N_F|=6\cdot2^{2e-2}-1=3\cdot2^{2e-1}-1=3\cdot2^{n/2-1}-1.
+\end{equation}
+
+The proof of the bent criterion in Section~\ref{sec:walsh} applies unchanged. The resulting count is larger than the MNBC count $2^{2e}-1$. The cited general lower bound \cite{ref1} applies for every $e\ge 1$, so this is equality for every positive input dimension divisible by four. No assertion about $n\equiv 2$ mod $4$ follows.
+
+
+\Needspace{4\baselineskip}\subsubsection*{Finite cross checks}
+
+The included \path{family/verify_family.py} checks every parameter over explicit fields for $e=1,\ldots ,6$. It validates each field by inverses, and finds exactly the same six singular labels in each case. These finite checks illustrate the proof; they do not replace its argument for all $e$.
+
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}\begin{tabular}{rrrr}\toprule
+
+$e$ & Input bits $n$ & Effective parameters & Nonzero nonbent masks \\
+\midrule
+
+$1$ & $4$ & $16$ & $5$ \\
+
+$2$ & $8$ & $64$ & $23$ \\
+
+$3$ & $12$ & $256$ & $95$ \\
+
+$4$ & $16$ & $1024$ & $383$ \\
+
+$5$ & $20$ & $4096$ & $1535$ \\
+
+$6$ & $24$ & $16384$ & $6143$ \\
+
+\bottomrule\end{tabular}\end{center}
+
+At $e=3$, use $\alpha ^{3}+\alpha +1=0$ and the displayed $O$ and $H$ bases. Then $K=A+\alpha X_{1}+\alpha ^{2}X_{2}$ is exactly the twelve-bit pencil of Section~\ref{sec:explicit}. The $e=1$ and $e=2$ counts already have prior constructions; this appendix does not claim them as newly discovered.
+
+
+\Needspace{9\baselineskip}\section{Verification and trust boundary}\label{app:C}
+
+\Needspace{4\baselineskip}\subsubsection*{Human mathematical proof}
+
+Sections $1$ through $5$ and Appendix~\ref{app:B} give the algebraic proofs, including trace nondegeneracy and the Walsh criterion. Section~\ref{sec:variant} gives the linear-coordinate variant. These arguments can be checked without accepting generated certificates or Python results.
+
+
+\Needspace{4\baselineskip}\subsubsection*{Exhaustive executable checks}
+
+The dependency-free script \path{verify_all.py} regenerated the $66$ binary coefficients from the six field formulas and checked all $256$ field and binary ranks. It verified injectivity and the Pfaffian identity at every parameter. It also compared the binary and trace formulas at all $4096$ inputs.
+
+
+For each of the $256$ effective masks, it computed all $4096$ Walsh coefficients using exact-integer fast Walsh transforms: $1,048,576$ coefficients in total. It checked every full signed spectrum and separately recomputed $1536$ raw Walsh sums, at six frequencies per mask. The spectra and truth table agree with a separately implemented NumPy computation supplied in \path{independent/.}
+
+
+These scripts are reproducibility checks. A correct execution depends on the interpreter, implementation and assertions; it is not by itself a proof-assistant certificate.
+
+
+\Needspace{4\baselineskip}\subsubsection*{The explicit twelve bit Lean certificate}
+
+The canonical witness is the binary polynomial defined by the $66$ coefficient masks in Appendix~\ref{app:A}. The theorem \path{N12.exists_exactly_quadratic_with_ninety_five_nonbent_components} proves a valid homogeneous squarefree quadratic representation, nonaffineness, and exact membership of the nonzero nonbent masks in a duplicate-free list of length $95$. The separate exact\_nonbent\_masks theorem identifies that list for the concrete $F$.
+
+
+Bentness is the original integer Walsh sum over all $4096$ inputs, universally quantified over all $4096$ frequencies. It is not a surrogate matrix-rank predicate. A proved quadratic translation and Walsh-shift identity reduces the good-component certificates to inverse-alignment checks and one exact zero-frequency sum. Lean checks those data, the bad-component contradictions, output padding and the final count.
+
+
+An isolated source-only replay freshly compiled all $930$ local modules, including all $256$ effective component certificates, with Lean $4.19.0$ and its bundled Std library. Every module succeeded; no local object files or successful-build cache were copied into the initial replay tree. The final theorem uses only propext and Quot.sound. No custom axiom, admitted proof, native\_decide shortcut or external oracle is used.
+
+
+The number $4000$ is immediate complement arithmetic from the exact 95-mask classification. It is not a separately exported bent-cardinality theorem. The finite certificate uses the explicit binary polynomial without requiring an abstract $\F_{8}$ construction. Its equivalence to the displayed trace formula is proved mathematically and independently checked on all $4096$ inputs.
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+N12.exists_exactly_quadratic_with_ninety_five_nonbent_components
+N12.exact_nonbent_masks
+\end{Code}
+
+\Needspace{9\baselineskip}\subsection{The uniform formal theorem}
+
+The strongest uniform result is \path{FamilyAlgebra.uniform_nonaffine_quadratic}, in \path{UniformDegree.lean}. For each natural number $e$ greater than zero it produces an actual map from BitVec $(4e)$ to BitVec $(4e)$, a squarefree homogeneous quadratic representation with every coefficient index satisfying $i < j < 4e$, explicit nonaffineness, and the exact actual-Walsh nonzero nonbent component count $3\cdot 2^{2e-1}-1$.
+
+
+Its only hypothesis is $e > 0$. The development proves or instantiates checked mathlib results for field existence, power bases, the Pfaffian zero locus, trace nondegeneracy, coordinate transport, parameter linearity, correct polarization, actual Walsh bentness, and exact counting. No bridge in this chain is assumed as an unproved premise. The separate uniform\_quadratic\_family theorem also classifies every mask.
+
+
+An isolated source-only replay rebuilt all $26$ local modules with Lean $4.19.0$ and mathlib commit \path{c44e0c8ee63ca166450922a373c7409c5d26b00b}. Every module exited successfully and matched its frozen source hash. The final theorem uses only propext, Classical.choice and Quot.sound. There are no admitted proofs, custom axioms, native\_decide shortcuts or unsafe proof replacements.
+
+
+The formal degree claim is a valid squarefree degree-at-most-two representation together with a proof that the function is not affine. This is mathematically exact degree two; no separate algebraicDegree API is asserted.
+
+
+The proof uses classical choices of finite fields, generators, bases and coordinate equivalences. It is an existence theorem for every $e$, not an efficient coefficient-extraction algorithm. Its $e=3$ witness is not identified byte-for-byte with the separately certified explicit twelve-bit map.
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+FamilyAlgebra.uniform_nonaffine_quadratic
+FamilyAlgebra.uniform_quadratic_family
+FamilyAlgebra.uniform_twelve_count
+\end{Code}
+
+\Needspace{4\baselineskip}\subsubsection*{Independent boundaries}
+
+Formal verification cannot prove that a construction is historically new. Conversely, a novelty search cannot certify the mathematics. The cited general lower bound is an external mathematical dependency for the word ``extremal,'' separate from both the concrete and uniform existence/count theorems. The optional linear-coordinate corollary and the exact signed spectral multiplicities are proved mathematically in this note; they are not separate exported Lean claims.
+
+
+The requested project label ``GPT-6 Astra'' identifies this research deliverable. No claim about the underlying model runtime, human authorship, peer review, institutional endorsement or publication priority is made.
+
+
+\Needspace{9\baselineskip}\section{Reproducing and citing the result}\label{app:D}
+
+\Needspace{4\baselineskip}\subsubsection*{Minimal finite check}
+
+Use Python $3.10$ or later. From the source directory, run:
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+python3 verify_all.py
+\end{Code}
+
+No third-party package or network access is needed. The script fails on any inconsistent coefficient, rank, input value or Walsh spectrum; it writes \path{results/reproduced.json.} Expected final counts are $4000$ bent and $95$ nonbent nonzero masks. The supplied run log records a successful execution. For a separate NumPy implementation, consult \path{independent/verify.py}; its original relative paths are preserved as provenance, while \path{verify_all.py} is the portable entry point.
+
+
+To rebuild this LaTeX edition, use a standard TeX Live or MiKTeX installation with pdfLaTeX and run the command below twice from the LaTeX source directory. The separate proof package retains the original ReportLab authoring source.
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+pdflatex -interaction=nonstopmode -halt-on-error extremal_quadratic_maps.tex
+\end{Code}
+
+The LaTeX source archive includes build instructions and a frozen copy of the certificate-status metadata. Check SHA256SUMS in the separate original proof package before comparing proof files. The truth-table byte hash in Appendix~\ref{app:A} deliberately differs from the hash of its JSON file.
+
+
+\Needspace{4\baselineskip}\subsubsection*{The two Lean projects}
+
+The concrete project in \path{lean/concrete} needs Lean $4.19.0$ and bundled Std only. From that project directory, the following command freshly rebuilds all $930$ local modules. The packaged \path{independent-clean-build.log} and logs/\path{Main.log} record a successful source-only run with the final axiom output.
+
+
+Starting from the source directory:
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+cd lean/concrete
+LEAN="$(command -v lean)" python3 build.py --clean
+\end{Code}
+
+The uniform project pins Lean $4.19.0$ and the exact mathlib commit. The commands below also passed from an extracted source archive with freshly downloaded official dependencies and isolated home/cache/git settings. All $26$ local modules were rebuilt without old project or mathlib paths; only the official Lean toolchain and Std were reused. The first download run timed out; its resumed run and both subsequent commands succeeded. Evidence is included in \path{lean/uniform/bootstrap/.}
+
+
+Starting again from the source directory:
+
+
+\Needspace{3\baselineskip}
+\begin{Code}
+cd lean/uniform
+lake update
+lake exe cache get
+lake env python3 replay.py --clean
+\end{Code}
+
+\Needspace{9\baselineskip}\section{The established construction mechanism}\label{app:E}
+
+The pencil of Appendix~\ref{app:B} is explicitly congruent to a hyperbolic binary plane plus a Jha--Johnson cyclic-semifield core. Thus its underlying construction is established. The exact extremal component-count consequence was not located as a published statement; its novelty remains unestablished. The correspondence and elementary corollary are given here so this distinction is auditable.
+
+
+\Needspace{4\baselineskip}\subsubsection*{An explicit change of basis}
+
+Use the six-bit alternating-matrix encoding in Appendix~\ref{app:B}. Put $D=\operatorname{span}\{47,61\}$; direct calculation gives $V=D\oplus H$. The invertible binary matrix below acts by $M\mapsto P^{T}MP$:
+
+
+\begin{equation}\label{eq:177}
+P=\begin{pmatrix}1&1&1&0\\0&1&1&1\\1&0&1&0\\0&1&0&1\end{pmatrix}.
+\end{equation}
+
+Its columns have masks $5,11,7,10$. The images of the ordered bases are $D:(47,61)\mapsto (1,32), H:(12,22)\mapsto (18,28)$, and $O:(19,33)\mapsto (22,26)$. The latter two pairs occupy the cross block between the first and last two coordinates. In that block they are $(I,R)$ and $(J,JR)$, where
+
+
+\begin{equation}\label{eq:179}
+\begin{gathered}R=\begin{pmatrix}0&1\\1&1\end{pmatrix},\qquad J=\begin{pmatrix}1&1\\0&1\end{pmatrix},\\R^2+R+I=0,\qquad J^2=I,\qquad JR=R^2J.\end{gathered}
+\end{equation}
+
+Write $K=\operatorname{span}_{\F_{2}}\{I,R\}$, a matrix field isomorphic to $\F_{4}$, with conjugation $C\mapsto \overline C=C^{2}$. The transformed base parameters are $x=u+w+z, y=v+w+z, h_{0}=u+v+z, h_{1}=w+z$. This binary change is invertible. The full pencil consists of
+
+
+\begin{equation}\label{eq:181}
+\begin{gathered}M(x,y,B)=\begin{pmatrix}xZ&B\\B^{\mathsf T}&yZ\end{pmatrix},\qquad Z=\begin{pmatrix}0&1\\1&0\end{pmatrix},\\x,y\in\F_2,\qquad B\in S=\sum_{0\le j<e}T^jK,\qquad T=\alpha J.\end{gathered}
+\end{equation}
+
+Here $B=h_{0}I+h_{1}R+\sum _{j=1}^{e-1}\alpha ^{j}J^{j\bmod 2}(s_{j}I+t_{j}R)$. Thus this is equality of pencils after a fixed congruence, rather than a numerical resemblance.
+
+
+\Needspace{4\baselineskip}\subsubsection*{Why this is a cyclic semifield core}
+
+On $E^{2}$, the matrix field $K$ gives an e-dimensional K-vector space. $T$ is semilinear for the nontrivial automorphism of $K$ and $T^{2}=\gamma I$, with $\gamma =\alpha ^{2}$. For $e>1, \gamma $ generates $E$ over $\F_{2}$. The algebra generated by $K$ and $T$ contains $E$ and $J$ and hence all $\operatorname{Mat}_{2}(E)$, since $I,R,J,JR$ are E-linearly independent. No proper nonzero K-subspace can be T-invariant. For $e=1$, take $\alpha =\gamma =1$; irreducibility is automatic in K-dimension one.
+
+
+This is precisely the irreducible-semilinear construction recalled by Kantor and Liebler \cite[§2, p. 334]{ref5}. Its odd-e norm and power-basis presentation is also given by Johnson, Marino, Polverino and Trombetti \cite[Theorem 1(2), pp. 10--11]{ref6}. The general argument above includes even $e$; \cite{ref6} is cited only for its odd-e specialization.
+
+
+\Needspace{9\baselineskip}\subsection{The determinant fibre corollary}
+
+The following elementary refinement counts the determinant-one fibre of the established core $S$. It explains how the six singular forms, and hence the extremal component count, follow from that mechanism. This correspondence is a mathematical identification; the frozen Lean proof uses Appendix~\ref{app:B} directly and does not depend on a new citation axiom.
+
+
+\Needspace{7\baselineskip}\begin{proposition}[Determinant fibres]\label{prop:fibres}The cyclic-semifield core $S$ has exactly one matrix with determinant zero and exactly three matrices with determinant one.\end{proposition}\begin{proof}
+
+Separate the even and odd powers in $B$. With $\gamma =\alpha ^{2}$, write
+
+
+\begin{equation}\label{eq:190}
+\begin{gathered}B=h(\gamma)+To(\gamma),\\h(X)=\sum_{2j<e}C_{2j}X^j,\qquad o(X)=\sum_{2j+1<e}C_{2j+1}X^j,\qquad C_j\in K.\end{gathered}
+\end{equation}
+
+For a polynomial with coefficients in $K$, a bar means coefficientwise conjugation $C\mapsto C^{2}$; the variable $X$ is fixed. Direct two by two determinant expansion, using $JR=R^{2}J$, gives
+
+
+\begin{equation}\label{eq:192}
+\det B=f(\gamma),\qquad f(X)=h(X)\overline h(X)+Xo(X)\overline o(X)\in\F_2[X].
+\end{equation}
+
+The two products are fixed by conjugation. If $h$ is nonzero, its product with $\overline h$ has degree $2\deg h$, with leading coefficient one, since each nonzero element of $K$ has norm one to $\F_{2}$. If $o$ is nonzero, $Xo\overline o$ has odd degree $2\deg o+1$, also with leading coefficient one. These leading degrees have different parity and cannot cancel. Both are at most $e-1$.
+
+
+Since $\gamma $ has degree $e$, evaluation is injective on binary polynomials of degree less than $e$. Therefore $\operatorname{det} B=0$ forces $h=o=0$. Likewise $\operatorname{det} B=1$ forces $o=0$ and $h$ a nonzero constant. Exactly three constants in $K$ are nonzero, so
+
+
+\begin{equation}\label{eq:195}
+\#\{B\in S:\det B=0\}=1,\qquad\#\{B\in S:\det B=1\}=3.
+\end{equation}
+
+For $e=1$ the same assertion follows directly from $S=K$. For even $e$ the expression $h\overline h+Xo\overline o$ is a formal coefficientwise identity; it is not an assertion that $E$ adjoined with $K$ is a quadratic field extension. This avoids an invalid field-norm interpretation in that case.
+
+
+\end{proof}
+
+\Needspace{4\baselineskip}\subsubsection*{Adjoin the two hyperbolic directions}
+
+The block matrix displayed above has Pfaffian $xy+\operatorname{det} B$. If $B=0$, precisely the three pairs with $xy=0$ make it vanish. If $\operatorname{det} B=1$, each of the three possible $B$ has the single pair $x=y=1$. There are no other solutions because $xy$ is binary. Thus there are exactly six singular matrices, including zero.
+
+
+\begin{equation}\label{eq:199}
+6\cdot2^{2e-2}-1=3\cdot2^{2e-1}-1.
+\end{equation}
+
+Trace descent, the quadratic bent criterion and output padding give the displayed count, as in Appendix~\ref{app:B}. The count is therefore a short determinant-fibre corollary of an established core. It should not be advertised as a new underlying family. The package includes \path{family/CYCLIC_SEMIFIELD_CORRESPONDENCE.txt} and a dependency-free checker for the congruence and finite determinant fibres.
+
+
+\Needspace{9\baselineskip}\subsection{Literature and sources}
+
+Deryck's printed $p. 88$ asks for higher-dimensional equality \cite{ref1}. The mathematical and Lean results here attain the bound for equal dimensions divisible by four. The explicit correspondence above identifies the family mechanism with established cyclic-semifield machinery \cite{ref5,ref6}. A targeted search located no prior publication of this exact extremal component-count consequence. That limited negative finding does not establish priority; specialist review remains necessary. Any potentially new contribution is the application or corollary and its formal verification, not the underlying construction.
+
+
+Trace descent and rank multiplication are established \cite{ref2}. The broader geometric correspondence with additive semifield spread sets also appears in \cite[Theorem 16]{ref4}. Eight-bit numerical existence follows already from \cite[Definition 4.1 and Table 4.1]{ref3}: a final profile pair $(58,78)$ or $(58,90)$ gives a six-dimensional component space with $58$ bent functions. Padding by two output zeros yields $232$ bent and $23$ nonbent nonzero masks. No equivalence of those examples to this formula is asserted.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{ref1}Maxime Deryck. \emph{Cryptography meets Finite Geometry.} Master's thesis, Ghent University, academic year 2025--2026. Theorem 5.4.15, printed p. 87; higher-dimensional discussion, printed p. 88. \href{https://maximederyck.be/assets/Cryptography\%20meets\%20Finite\%20Geometry.pdf}{Author-hosted thesis PDF}.
+
+\bibitem{ref2}Rod Gow. \emph{Rank-related dimension bounds for subspaces of bilinear forms over finite fields.} arXiv:1703.07266v1, 21 March 2017. See the proof of Theorem 6 for trace descent. \href{https://arxiv.org/abs/1703.07266}{arXiv record}; \href{https://arxiv.org/html/1703.07266}{full text}.
+
+\bibitem{ref3}Christof Beierle, Philippe Langevin, Gregor Leander, Alexandr Polujan and Shahram Rasoolzadeh. \emph{Millions of inequivalent quadratic APN functions in eight variables.} arXiv:2508.04644v1, 6 August 2025. Definition 4.1 and Table 4.1. \href{https://arxiv.org/html/2508.04644v1}{Full text}.
+
+\bibitem{ref4}Guglielmo Lunardon. \emph{50 Years of translation structures.} Journal of Geometry 113, article 35 (2022). Section 3.3.3 and Theorem 16. DOI: 10.1007/s00022-022-00643-5. \href{https://link.springer.com/article/10.1007/s00022-022-00643-5}{Publisher full text}.
+
+\bibitem{ref5}William M. Kantor and Robert A. Liebler. \emph{Semifields arising from irreducible semilinear transformations.} Journal of the Australian Mathematical Society 85 (2008), 333--339. Section 2, printed p. 334. DOI: 10.1017/S1446788708000888. \href{https://pages.uoregon.edu/kantor/PAPERS/IrreducibleSemilinear.pdf}{Author-hosted PDF}.
+
+\bibitem{ref6}Norman L. Johnson, Giuseppe Marino, Olga Polverino and Rocco Trombetti. \emph{On a generalization of cyclic semifields.} Journal of Algebraic Combinatorics 29 (2009), 1--34. Theorem 1(2), pp. 10--11, for odd extension degree. DOI: 10.1007/s10801-007-0116-x. \href{https://emis.de/ft/43764}{Full text PDF}.
+
+\end{thebibliography}
+External sources were checked on $9$ October $2026$. Only the general bound and historical context rely on these citations; the finite construction and its proof are explicit in this note.
+
+
+\end{document}

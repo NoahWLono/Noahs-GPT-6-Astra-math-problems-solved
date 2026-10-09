@@ -1,0 +1,132 @@
+[
+  {
+    "module": "FamilyAlgebra.FamilyAlgebra",
+    "source": "FamilyAlgebra/FamilyAlgebra.lean",
+    "sha256": "e9a88bb2c34c491cc774523b62d043d42a463a48cc79ab7442864f13f5943a78"
+  },
+  {
+    "module": "FamilyAlgebra.FieldAlgebra",
+    "source": "FamilyAlgebra/FieldAlgebra.lean",
+    "sha256": "4898378efc93a4b48d59c68b8963efbbe3ef257b425a6d8a1414b0a0548beb40"
+  },
+  {
+    "module": "FamilyAlgebra.PfaffianExpansion",
+    "source": "FamilyAlgebra/PfaffianExpansion.lean",
+    "sha256": "5c80eac6544adbbf9ca7c2270edb59f511644bb10c23428bc2bd31e5ba6d94da"
+  },
+  {
+    "module": "FamilyAlgebra.ConcretePlanes",
+    "source": "FamilyAlgebra/ConcretePlanes.lean",
+    "sha256": "0a1969e9fa3253a21692ee3ac7288c6ded9939f903a2ecb69cc1891208b32158"
+  },
+  {
+    "module": "FamilyAlgebra.CoefficientEvaluation",
+    "source": "FamilyAlgebra/CoefficientEvaluation.lean",
+    "sha256": "2a63d3de0ce770005d134e54f93a290b988f58389c69617fcbed1315e03bb1ea"
+  },
+  {
+    "module": "FamilyAlgebra.ConcreteExpansion",
+    "source": "FamilyAlgebra/ConcreteExpansion.lean",
+    "sha256": "0d7ff2720d02328a86cd84b07d544886bb15c85cccc6315ccb64c6a2fb937c3d"
+  },
+  {
+    "module": "FamilyAlgebra.ConcreteZeroLocus",
+    "source": "FamilyAlgebra/ConcreteZeroLocus.lean",
+    "sha256": "54ff005b9d52af4dd5ab1bb05f21eebb4c9c8d06ca86d194759084155cd5f6cc"
+  },
+  {
+    "module": "FamilyAlgebra.TraceCoordinates",
+    "source": "FamilyAlgebra/TraceCoordinates.lean",
+    "sha256": "314436a1b27957e7b5852aaee91da3b0ecfa96ff5c8ad631d6dcfa8685c5061a"
+  },
+  {
+    "module": "FamilyAlgebra.FiniteRealization",
+    "source": "FamilyAlgebra/FiniteRealization.lean",
+    "sha256": "59c77e3bedc11bbc69ad3e604ba02452bec643b702658add43e783783df5ccf3"
+  },
+  {
+    "module": "FamilyAlgebra.TraceRank",
+    "source": "FamilyAlgebra/TraceRank.lean",
+    "sha256": "188afb89f7e598df4eb3392ebd156d395a014a64d20942af4dde47410bb2ae9a"
+  },
+  {
+    "module": "FamilyAlgebra.PencilInjection",
+    "source": "FamilyAlgebra/PencilInjection.lean",
+    "sha256": "de6dc13aa40690849f3b1e57e0c6b7653507c50f00be204e9c0c2146d8f66e9f"
+  },
+  {
+    "module": "FamilyAlgebra.PfaffianKernel",
+    "source": "FamilyAlgebra/PfaffianKernel.lean",
+    "sha256": "259e8ffda422e22fbac5aab04ed4cd4038dd7ae9ba373938461b871438d02cc7"
+  },
+  {
+    "module": "FamilyAlgebra.BinaryCoordinates",
+    "source": "FamilyAlgebra/BinaryCoordinates.lean",
+    "sha256": "55b07c4b0f5dcae0bb9895fb35541a3e70e12a7d34cb8fc5f68af138f3a31876"
+  },
+  {
+    "module": "FamilyAlgebra.ParameterData",
+    "source": "FamilyAlgebra/ParameterData.lean",
+    "sha256": "e15a4f1b26b04da0f1848bd2562bdca94a99bab6d4ca959986270de40f39d53b"
+  },
+  {
+    "module": "FamilyAlgebra.ParameterLinearity",
+    "source": "FamilyAlgebra/ParameterLinearity.lean",
+    "sha256": "913cf25551a8dab2d0ae12795635cc9e588d30f10a4a585704873377c3429920"
+  },
+  {
+    "module": "FamilyMaskCount.MaskCount",
+    "source": "FamilyMaskCount/MaskCount.lean",
+    "sha256": "fca22efe7e7a4894e492a4d4693788a6b45315867e76fdcfc5c8886c5e1d5063"
+  },
+  {
+    "module": "FastWalsh",
+    "source": "FastWalsh/FastWalsh.lean",
+    "sha256": "29b3fe8500085838297abb3e1a496f36d4c0991bbe2ab8f81f39fcd704197a2d"
+  },
+  {
+    "module": "Quadratic",
+    "source": "FastWalsh/Quadratic.lean",
+    "sha256": "7d89d5c4dabefa609ab36962f83290283d3c6844e551acda04ead02f40abb373"
+  },
+  {
+    "module": "QuadraticWalshShift",
+    "source": "QuadraticWalshShift/QuadraticWalshShift.lean",
+    "sha256": "998f74a1310348151f57bd29b6d0a28338be11ca52083625373571b547b82937"
+  },
+  {
+    "module": "QuadraticWalshParseval",
+    "source": "QuadraticWalshShift/QuadraticWalshParseval.lean",
+    "sha256": "a35a7b4a12262d62495eb802d058e6cf006187db670479b4ee2b7f6488281155"
+  },
+  {
+    "module": "QuadraticWalshRadical",
+    "source": "QuadraticWalshShift/QuadraticWalshRadical.lean",
+    "sha256": "730aeaa911cb86089bf03f5e442d424411e932fea618c73ea5329f1bc8915992"
+  },
+  {
+    "module": "QuadraticWalshMatrix",
+    "source": "QuadraticWalshShift/QuadraticWalshMatrix.lean",
+    "sha256": "0b01cbea9f070da630a48c4774f34e4f3eb2b159cbc78cac9331733fed462d29"
+  },
+  {
+    "module": "FamilyAlgebra.ComponentCount",
+    "source": "FamilyAlgebra/ComponentCount.lean",
+    "sha256": "2da28e041273d2f8f67de110f493df2455fc48b8c13f15a65a49119e7377a79e"
+  },
+  {
+    "module": "QuadraticWalshFamily",
+    "source": "QuadraticWalshShift/QuadraticWalshFamily.lean",
+    "sha256": "bf9720c5ef80f16db74d3340adbe51299a4047761438111d5e8b6733103855f9"
+  },
+  {
+    "module": "FamilyAlgebra.UniformFamily",
+    "source": "FamilyAlgebra/UniformFamily.lean",
+    "sha256": "a93488aca0b7069a2e14963e487568c256c3cf82942f980bec4a95d1e1e38be1"
+  },
+  {
+    "module": "FamilyAlgebra.UniformDegree",
+    "source": "FamilyAlgebra/UniformDegree.lean",
+    "sha256": "7d4845c465b8d72ceb7c0f56da84d20fe2379750d771eb3ebc442dd05cc921eb"
+  }
+]

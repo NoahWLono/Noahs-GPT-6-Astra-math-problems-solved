@@ -1,0 +1,13 @@
+'QuadraticWalshShift.quadratic_bent_certificate' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.quadraticComponent_translate' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.additive_eq_of_basis' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.coefficient_alignment_of_basis' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.quadratic_bent_of_basis_and_zero' depends on axioms: [propext, Quot.sound]
+'QuadraticWalshShift.walsh_shift' depends on axioms: [propext, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.9077
+PEAK_RSS_KIB=500592
+ADDRESS_SPACE_LIMIT_BYTES=3221225472
+LEAN_THREADS=1
+RECURSIVE_SOURCE_FINGERPRINT=ae47ac514cdd418d4e9bf60bffb631377af0f5c0ed62f74a898fd5aca96f669c

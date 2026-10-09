@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "verification_date": "2026-10-09",
+  "local_source_modules": 26,
+  "source_only_initial_tree": true,
+  "replay_result": "SOURCE_ONLY_REPLAY_PASS",
+  "source_manifest_sha256": "10bff4bbfe902082bbc142cccd10cb57d3dcd6af303d0c55059175437052bfe3",
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "strongest_theorem": "FamilyAlgebra.uniform_nonaffine_quadratic",
+  "hypothesis": "e > 0",
+  "claim": "An actual BitVec (4e) map has a valid squarefree homogeneous quadratic representation, is not affine, and has exactly 3 * 2^(2e-1) - 1 nonzero nonbent components under FastWalsh.IsBent.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_dependency_download_flow_tested": true,
+  "tested_environment": "Both isolated source-only replay using pinned dependencies and fresh-archive bootstrap using newly downloaded official dependencies passed. Only official Lean 4.19.0 and Std were reused for the bootstrap.",
+  "fresh_bootstrap_result": "PASS: lake update; lake exe cache get; lake env python3 replay.py --clean",
+  "fresh_bootstrap_modules": 26,
+  "fresh_bootstrap_evidence": "bootstrap/BOOTSTRAP_RESULT.json"
+}

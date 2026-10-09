@@ -1,0 +1,6 @@
+e=1, n=4, parameters=16, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=5
+e=2, n=8, parameters=64, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=23
+e=3, n=12, parameters=256, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=95
+e=4, n=16, parameters=1024, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=383
+e=5, n=20, parameters=4096, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=1535
+e=6, n=24, parameters=16384, singular=[0, 4, 8, 13, 14, 15], nonzero_nonbent=6143

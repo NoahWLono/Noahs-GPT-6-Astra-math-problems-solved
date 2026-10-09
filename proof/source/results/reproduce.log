@@ -1,0 +1,5 @@
+PASS: all 4096 inputs, 256 effective masks, 1048576 Walsh coefficients.
+PASS: 1536 raw-sum cross-checks; ranks 0:1, 6:5, 12:250.
+PASS: 4000 bent and 95 nonbent nonzero padded masks.
+Truth-table byte SHA-256: ae7383fd45347cbcf32eefec5a6750434967dd727fe6751a388f3ba6ff72bce3
+Elapsed seconds: 2.10

@@ -1,0 +1,14 @@
+FastWalsh.lean:17:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+FastWalsh.lean:87:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'FastWalsh.transform_eq_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastWalsh_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastBent_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.3076
+PEAK_RSS_KIB=487160
+ADDRESS_SPACE_LIMIT_BYTES=3221225472
+LEAN_THREADS=1
+RECURSIVE_SOURCE_FINGERPRINT=5348dfe92914344d6fe426c5131a7309f0bcc8fcbe0b678347155103a78e0b7c

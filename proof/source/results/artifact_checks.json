@@ -1,0 +1,23 @@
+{
+  "pdf_pages": 16,
+  "visual_review": "All 16 pages rendered and visually reviewed; changed pages inspected at full resolution. No clipping, overlap or missing glyphs.",
+  "font_missing_glyphs": [],
+  "concrete_lean_source_hashes_verified": 930,
+  "uniform_lean_source_hashes_verified": 26,
+  "lean_files_unchanged_from_bootstrap_tested_archive_including_lakefile": 957,
+  "bootstrap_tested_archive_sha256": "8e7e72998dbfbe50693510a8587843a183b73010acc61e08af06a8c313d8eb8d",
+  "build_runners_and_dependency_pins_unchanged": true,
+  "compiled_object_files_in_source_package": 0,
+  "successful_concrete_module_logs": 930,
+  "external_pdf_links": [
+    "https://maximederyck.be/assets/Cryptography%20meets%20Finite%20Geometry.pdf",
+    "https://arxiv.org/abs/1703.07266",
+    "https://arxiv.org/html/1703.07266",
+    "https://arxiv.org/html/2508.04644v1",
+    "https://link.springer.com/article/10.1007/s00022-022-00643-5",
+    "https://pages.uoregon.edu/kantor/PAPERS/IrreducibleSemilinear.pdf",
+    "https://emis.de/ft/43764"
+  ],
+  "pdf_sha256": "1535696865ad68bc7db18013fedb29082cbe362375444b76ec3f719bbd15979d",
+  "correspondence_finite_checks": "64 binary congruence inputs; 16 parameter transformations; all core parameters for e=1 through 6"
+}

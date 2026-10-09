@@ -1,0 +1,50 @@
+{
+  "verified": true,
+  "status": "Both independent source-only Lean replays passed",
+  "scope": "Independent source-only Lean replays passed for both the uniform theorem and the explicit twelve-bit certificate. The underlying construction is established; novelty of the exact count consequence is unestablished.",
+  "universal_lower_bound_formalized": false,
+  "novelty": "unestablished; established construction, potentially new component-count corollary",
+  "project_label": "GPT-6 Astra",
+  "label_note": "Requested project label; no claim of runtime model attribution.",
+  "as_of": "2026-10-09",
+  "uniform_verified": true,
+  "uniform_report_paragraphs": [
+    "The strongest uniform result is FamilyAlgebra.uniform_nonaffine_quadratic, in UniformDegree.lean. For each natural number e greater than zero it produces an actual map from BitVec (4e) to BitVec (4e), a squarefree homogeneous quadratic representation with every coefficient index satisfying i < j < 4e, explicit nonaffineness, and the exact actual-Walsh nonzero nonbent component count 3 * 2^(2e-1) - 1.",
+    "Its only hypothesis is e > 0. The development proves or instantiates checked mathlib results for field existence, power bases, the Pfaffian zero locus, trace nondegeneracy, coordinate transport, parameter linearity, correct polarization, actual Walsh bentness, and exact counting. No bridge in this chain is assumed as an unproved premise. The separate uniform_quadratic_family theorem also classifies every mask.",
+    "An isolated source-only replay rebuilt all 26 local modules with Lean 4.19.0 and mathlib commit c44e0c8ee63ca166450922a373c7409c5d26b00b. Every module exited successfully and matched its frozen source hash. The final theorem uses only propext, Classical.choice and Quot.sound. There are no admitted proofs, custom axioms, native_decide shortcuts or unsafe proof replacements.",
+    "The formal degree claim is a valid squarefree degree-at-most-two representation together with a proof that the function is not affine. This is mathematically exact degree two; no separate algebraicDegree API is asserted.",
+    "The proof uses classical choices of finite fields, generators, bases and coordinate equivalences. It is an existence theorem for every e, not an efficient coefficient-extraction algorithm. Its e=3 witness is not identified byte-for-byte with the separately certified explicit twelve-bit map."
+  ],
+  "uniform_theorems": [
+    "FamilyAlgebra.uniform_nonaffine_quadratic",
+    "FamilyAlgebra.uniform_quadratic_family",
+    "FamilyAlgebra.uniform_twelve_count"
+  ],
+  "uniform_reproduction": "The uniform project pins Lean 4.19.0 and the exact mathlib commit. The commands below also passed from an extracted source archive with freshly downloaded official dependencies and isolated home/cache/git settings. All 26 local modules were rebuilt without old project or mathlib paths; only the official Lean toolchain and Std were reused. The first download run timed out; its resumed run and both subsequent commands succeeded. Evidence is included in lean/uniform/bootstrap/.",
+  "uniform_command": "cd lean/uniform\nlake update\nlake exe cache get\nlake env python3 replay.py --clean",
+  "report_paragraphs": [
+    "The canonical witness is the binary polynomial defined by the 66 coefficient masks in Appendix A. The theorem N12.exists_exactly_quadratic_with_ninety_five_nonbent_components proves a valid homogeneous squarefree quadratic representation, nonaffineness, and exact membership of the nonzero nonbent masks in a duplicate-free list of length 95. The separate exact_nonbent_masks theorem identifies that list for the concrete F.",
+    "Bentness is the original integer Walsh sum over all 4096 inputs, universally quantified over all 4096 frequencies. It is not a surrogate matrix-rank predicate. A proved quadratic translation and Walsh-shift identity reduces the good-component certificates to inverse-alignment checks and one exact zero-frequency sum. Lean checks those data, the bad-component contradictions, output padding and the final count.",
+    "An isolated source-only replay freshly compiled all 930 local modules, including all 256 effective component certificates, with Lean 4.19.0 and its bundled Std library. Every module succeeded; no local object files or successful-build cache were copied into the initial replay tree. The final theorem uses only propext and Quot.sound. No custom axiom, admitted proof, native_decide shortcut or external oracle is used.",
+    "The number 4000 is immediate complement arithmetic from the exact 95-mask classification. It is not a separately exported bent-cardinality theorem. The finite certificate uses the explicit binary polynomial without requiring an abstract F8 construction. Its equivalence to the displayed trace formula is proved mathematically and independently checked on all 4096 inputs."
+  ],
+  "theorems": [
+    "N12.exists_exactly_quadratic_with_ninety_five_nonbent_components",
+    "N12.exact_nonbent_masks"
+  ],
+  "reproduction": "The concrete project in lean/concrete needs Lean 4.19.0 and bundled Std only. From that project directory, the following command freshly rebuilds all 930 local modules. The packaged independent-clean-build.log and logs/Main.log record a successful source-only run with the final axiom output.",
+  "command": "cd lean/concrete\nLEAN=\"$(command -v lean)\" python3 build.py --clean",
+  "required_lean_files": [
+    "lean/concrete/Main.lean",
+    "lean/concrete/SOURCE-MANIFEST.json",
+    "lean/concrete/independent-clean-build.log",
+    "lean/concrete/logs/Main.log",
+    "lean/concrete/verification.json",
+    "lean/uniform/FamilyAlgebra/UniformDegree.lean",
+    "lean/uniform/SOURCE_MANIFEST.json",
+    "lean/uniform/build.log",
+    "lean/uniform/verification.json"
+  ],
+  "fresh_dependency_bootstrap_verified": true,
+  "known_construction_correspondence": "Appendix E; family/CYCLIC_SEMIFIELD_CORRESPONDENCE.txt"
+}

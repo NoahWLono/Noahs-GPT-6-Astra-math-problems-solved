@@ -1,0 +1,91 @@
+{
+  "verified": true,
+  "binary_congruence_inputs": 64,
+  "base_parameter_inputs": 16,
+  "field_checks": [
+    {
+      "e": 1,
+      "core_dimension": 2,
+      "core_parameters": 4,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    },
+    {
+      "e": 2,
+      "core_dimension": 4,
+      "core_parameters": 16,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    },
+    {
+      "e": 3,
+      "core_dimension": 6,
+      "core_parameters": 64,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    },
+    {
+      "e": 4,
+      "core_dimension": 8,
+      "core_parameters": 256,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    },
+    {
+      "e": 5,
+      "core_dimension": 10,
+      "core_parameters": 1024,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    },
+    {
+      "e": 6,
+      "core_dimension": 12,
+      "core_parameters": 4096,
+      "det_zero_labels": [
+        0
+      ],
+      "det_one_labels": [
+        1,
+        2,
+        3
+      ],
+      "singular_augmented_pencil": 6
+    }
+  ]
+}
