@@ -8,8 +8,15 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-- Further quadratic APN and extremal-function questions
+Current priorities:
+
+- The Hadamard conjecture
+- The union-closed sets conjecture
+- The graceful tree conjecture
 - New defensive digital signatures and mathematical security arguments
+
+Continuing at lower priority:
+
 - The Strong Exponential Time Hypothesis (SETH)
 - Unconditional existence of one-way functions
 
