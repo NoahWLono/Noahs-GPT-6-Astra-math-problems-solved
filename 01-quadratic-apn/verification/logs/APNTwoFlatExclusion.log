@@ -1,0 +1,4 @@
+'APNRedo.apn_profile29_excluded_by_raw_two_flat_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_profile29_excluded_by_two_flat_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "APNTwoFlatExclusion", "exit": 0, "seconds": 5.322, "peak_rss_kib": 1979876, "termination": null}

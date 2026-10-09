@@ -1,0 +1,4 @@
+<LEAN_SOURCE>/WeightThirtyTwoProfiles.lean:18:45: warning: try 'simp at h0' instead of 'simpa using h0'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+AUDIT {"module": "WeightThirtyTwoProfiles", "exit": 0, "seconds": 1.507, "peak_rss_kib": 1761900, "termination": null}

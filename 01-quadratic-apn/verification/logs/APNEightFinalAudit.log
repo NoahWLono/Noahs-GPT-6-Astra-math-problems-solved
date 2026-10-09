@@ -1,0 +1,26 @@
+APNRedo.apn_degenerate_count_ne_twenty_nine : ∀ (Q : QuadraticMap APNRedo.F (APNRedo.V 8) (APNRedo.V 8)),
+  APNRedo.APN ⇑Q → (APNRedo.degenerateLabels Q).card ≠ 29
+APNRedo.apn_degenerate_count_ge_thirty_three : ∀ (Q : QuadraticMap APNRedo.F (APNRedo.V 8) (APNRedo.V 8)),
+  APNRedo.APN ⇑Q → 33 ≤ (APNRedo.degenerateLabels Q).card
+APNRedo.apn_nonBent_count_ge_thirty_three : ∀ (Q : QuadraticMap APNRedo.F (APNRedo.V 8) (APNRedo.V 8))
+  (c : APNRedo.V 8), APNRedo.APN ⇑Q → 33 ≤ (APNRedo.nonBentLabels Q c).card
+APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three : ∀ (f : APNRedo.V 8 → APNRedo.V 8),
+  (∃ B, ∀ (x y : APNRedo.V 8), APNRedo.normalizedPolar f x y = (B x) y) →
+    APNRedo.APN f → 33 ≤ (APNRedo.nonBentFunctionLabels f).card
+def APNRedo.APN.{u_1} : {E : Type u_1} → [inst : AddCommGroup E] → (E → E) → Prop :=
+fun {E} [AddCommGroup E] f =>
+  ∀ (a : E),
+    a ≠ 0 → ∀ (c x y z : E), f (x + a) + f x = c → f (y + a) + f y = c → f (z + a) + f z = c → x = y ∨ x = z ∨ y = z
+def APNRedo.normalizedPolar.{u_1} : {E : Type u_1} → [inst : AddCommGroup E] → (E → E) → E → E → E :=
+fun {E} [AddCommGroup E] f x y => f (x + y) + f x + f y + f 0
+def APNRedo.encodedFunction : (APNRedo.V 8 → APNRedo.V 8) → BitVec 8 → BitVec 8 :=
+fun f x => QuadraticWalshMatrix.decode (f (QuadraticWalshMatrix.coords x))
+def APNRedo.nonBentFunctionLabels : (APNRedo.V 8 → APNRedo.V 8) → Finset (APNRedo.V 8) :=
+fun f => {b ∈ Finset.univ.erase 0 | ¬FastWalsh.IsBent (APNRedo.encodedFunction f) (QuadraticWalshMatrix.decode b)}
+def FastWalsh.IsBent : {n m : ℕ} → (BitVec n → BitVec m) → BitVec m → Prop :=
+fun {n m} f b => ∀ (u : BitVec n), FastWalsh.walsh f b u * FastWalsh.walsh f b u = ↑(2 ^ n)
+'APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+AUDIT {"module": "APNEightFinalAudit", "exit": 0, "peak_rss_kib": 1971200, "seconds": 2.108, "termination": null, "source_sha256": "97c60573e623d89b24e1d0fd16c9ca08599e4b4f78dc8e071608be809887b9f2"}

@@ -1,0 +1,10 @@
+<LEAN_SOURCE>/SimplexLabels.lean:39:42: warning: try 'simp at hi' instead of 'simpa using hi'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+<LEAN_SOURCE>/SimplexLabels.lean:43:42: warning: try 'simp at hi' instead of 'simpa using hi'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+<LEAN_SOURCE>/SimplexLabels.lean:47:42: warning: try 'simp at hi' instead of 'simpa using hi'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+<LEAN_SOURCE>/SimplexLabels.lean:51:42: warning: try 'simp at hi' instead of 'simpa using hi'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+AUDIT {"module": "SimplexLabels", "exit": 0, "seconds": 3.413, "peak_rss_kib": 1790188, "termination": null}

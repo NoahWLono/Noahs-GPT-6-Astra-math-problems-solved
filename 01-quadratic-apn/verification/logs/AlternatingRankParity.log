@@ -1,0 +1,4 @@
+'APNRedo.alternating_rank_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.alternating_radical_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "AlternatingRankParity", "exit": 0, "seconds": 3.819, "peak_rss_kib": 1862904, "termination": null}

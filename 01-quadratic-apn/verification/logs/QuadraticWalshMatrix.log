@@ -1,0 +1,5 @@
+'QuadraticWalshMatrix.bent_iff_polarForm_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshMatrix.bent_iff_matrix_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshMatrix.polarMatrix_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticWalshMatrix", "exit": 0, "seconds": 3.213, "peak_rss_kib": 1749052, "termination": null}

@@ -1,0 +1,3 @@
+'BooleanANF.QuadraticFour.costFourPerturbations_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticFourCosetCount", "exit": 0, "seconds": 1.406, "peak_rss_kib": 1555888, "termination": null}

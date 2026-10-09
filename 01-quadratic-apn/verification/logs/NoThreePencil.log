@@ -1,0 +1,6 @@
+'NoThreePencil.alternating_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoThreePencil.pf_zero_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoThreePencil.pf_parity' depends on axioms: [propext, Quot.sound]
+'NoThreePencil.no_three_pencil' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "NoThreePencil", "exit": 0, "seconds": 6.032, "peak_rss_kib": 1764380, "termination": null}

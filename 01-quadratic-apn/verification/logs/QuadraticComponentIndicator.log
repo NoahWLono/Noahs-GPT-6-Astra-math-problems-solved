@@ -1,0 +1,5 @@
+'APNRedo.component_indicator_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.component_indicator_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.component_indicator_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticComponentIndicator", "exit": 0, "seconds": 3.111, "peak_rss_kib": 1963740, "termination": null}

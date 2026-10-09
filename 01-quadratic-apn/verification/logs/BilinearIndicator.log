@@ -1,0 +1,4 @@
+'MatchingDeterminant.degree_form_nonsingular_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MatchingDeterminant.form_indicator_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "BilinearIndicator", "exit": 0, "seconds": 2.714, "peak_rss_kib": 1941532, "termination": null}

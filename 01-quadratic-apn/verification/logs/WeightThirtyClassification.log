@@ -1,0 +1,5 @@
+'BooleanANF.normalized_quartic_two_flats' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BooleanANF.quartic_weight_thirty_two_flats' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BooleanANF.quartic_weight_thirty_nonzero_support_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "WeightThirtyClassification", "exit": 0, "seconds": 2.711, "peak_rss_kib": 1794432, "termination": null}

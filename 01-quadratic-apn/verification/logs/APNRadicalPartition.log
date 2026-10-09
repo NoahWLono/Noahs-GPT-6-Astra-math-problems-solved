@@ -1,0 +1,14 @@
+<LEAN_SOURCE>/APNRadicalPartition.lean:30:8: warning: automatically included section variable(s) unused in theorem 'APNRedo.componentPolarDual_apply':
+  [FiniteDimensional F E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional F E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/APNRadicalPartition.lean:34:0: warning: automatically included section variable(s) unused in theorem 'APNRedo.componentPolarDual_actual':
+  [FiniteDimensional F E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional F E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'APNRedo.apn_unique_nonzero_radical_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_component_radicals_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "APNRadicalPartition", "exit": 0, "seconds": 4.015, "peak_rss_kib": 1962024, "termination": null}

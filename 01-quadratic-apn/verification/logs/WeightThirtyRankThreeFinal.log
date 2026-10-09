@@ -1,0 +1,3 @@
+'BooleanANF.weight_thirty_case_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "WeightThirtyRankThreeFinal", "exit": 0, "seconds": 2.912, "peak_rss_kib": 1803880, "termination": null}

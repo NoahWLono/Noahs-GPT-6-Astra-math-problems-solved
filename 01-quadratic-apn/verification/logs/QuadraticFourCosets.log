@@ -1,0 +1,3 @@
+'BooleanANF.QuadraticFour.cost_four_iff_nonzero_coset' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticFourCosets", "exit": 0, "seconds": 6.923, "peak_rss_kib": 1666048, "termination": null}

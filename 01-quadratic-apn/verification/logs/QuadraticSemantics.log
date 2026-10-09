@@ -1,0 +1,5 @@
+'APNRedo.apn_nonBent_count_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.quadraticMapOfBilinearPolar_reconstruct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.nonBentLabels_eq_degenerateLabels' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticSemantics", "exit": 0, "seconds": 2.811, "peak_rss_kib": 1963376, "termination": null}

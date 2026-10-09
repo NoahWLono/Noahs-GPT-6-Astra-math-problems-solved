@@ -1,0 +1,4 @@
+'APNRedo.apn_coordinate_radical_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_coordinate_radicals_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "APNCoordinateLabels", "exit": 0, "seconds": 4.218, "peak_rss_kib": 1986864, "termination": null}

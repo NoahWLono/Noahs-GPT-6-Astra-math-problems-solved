@@ -1,0 +1,63 @@
+{
+  "changed_logs": [
+    "APNIncidence.log",
+    "APNPolar.log",
+    "APNRadicalPartition.log",
+    "AffineHalfRank.log",
+    "BinarySmallCodeEquality.log",
+    "BooleanANF.log",
+    "BooleanANFFibers.log",
+    "BooleanANFStabilizer.log",
+    "BooleanANFTranslation.log",
+    "CodeBasis.log",
+    "FastWalsh.log",
+    "FormNormalization.log",
+    "HalfRankAlgebra.log",
+    "MatchingDeterminant.log",
+    "MatchingPfaffian.log",
+    "NormalizedPencil.log",
+    "PfaffianLaplace2.log",
+    "QuadraticCoefficientCode.log",
+    "SimplexLabels.log",
+    "WeightThirtyRankOneRows.log",
+    "WeightThirtySupportProfile.log",
+    "WeightThirtyTwoProfiles.log",
+    "WeightThirtyTypeB.log"
+  ],
+  "source_bytes_changed": false,
+  "original_manifest_sha256": "3313f8c986edb40f36a5e2fb20afdf3c197fd67f51db2b9aa6b3ae788c55358c",
+  "original_driver_sha256": "774ff613f577985a99b7f2d7baa63406870bfa43478e7d55ac0ef7a2fadc754e",
+  "original_audit_report_sha256": "0f123dc5fcaeba54025ccec3e441887e873b9b20d5c8d72e51672dc1737e304a",
+  "portable_wrapper_smoke_test": {
+    "completed_modules": 5,
+    "stopped_during": "APNIncidence",
+    "reason": "Avoid duplicating the completed full audit; no full wrapper pass claimed",
+    "results": [
+      {
+        "module": "HalfRankAlgebra",
+        "exit": 0,
+        "seconds": 2.624
+      },
+      {
+        "module": "NormalizedPencil",
+        "exit": 0,
+        "seconds": 4.833
+      },
+      {
+        "module": "FormNormalization",
+        "exit": 0,
+        "seconds": 4.18
+      },
+      {
+        "module": "APNPolar",
+        "exit": 0,
+        "seconds": 2.723
+      },
+      {
+        "module": "APNRadicalPartition",
+        "exit": 0,
+        "seconds": 3.986
+      }
+    ]
+  }
+}

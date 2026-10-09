@@ -1,0 +1,7 @@
+<LEAN_SOURCE>/BooleanANFTranslation.lean:11:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.delta_translate':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+
+AUDIT {"module": "BooleanANFTranslation", "exit": 0, "seconds": 1.607, "peak_rss_kib": 1546212, "termination": null}

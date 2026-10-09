@@ -1,0 +1,682 @@
+[
+  {
+    "module": "HalfRankAlgebra",
+    "sha256": "f5a1c950d81c6b21005b8f2910a731035ff51d0ee28a6b90d0e6a1b106fad840",
+    "path": "HalfRankAlgebra.lean"
+  },
+  {
+    "module": "NormalizedPencil",
+    "sha256": "70b1083d2a4b014f262ed2761995370134cd5144eced76040f6fb8c090434ac8",
+    "path": "NormalizedPencil.lean"
+  },
+  {
+    "module": "FormNormalization",
+    "sha256": "0c4af9e23dff386888931a7397ded59e44d5fe82091be93a7423c5c7de398536",
+    "path": "FormNormalization.lean"
+  },
+  {
+    "module": "APNPolar",
+    "sha256": "871c6a403902ec90f70c4878a4d9a05e17568ba2dc2cbefddb080f97ca69867c",
+    "path": "APNPolar.lean"
+  },
+  {
+    "module": "APNRadicalPartition",
+    "sha256": "896256db32826c72b732e79d2019096193498ceafc14e1e5c3f34169934615a9",
+    "path": "APNRadicalPartition.lean"
+  },
+  {
+    "module": "APNIncidence",
+    "sha256": "eb5f37ccfac60af58e4ab37ec0a3afe703825ae3c04abe6688dd437a72eaa6bc",
+    "path": "APNIncidence.lean"
+  },
+  {
+    "module": "FastWalsh",
+    "sha256": "29b3fe8500085838297abb3e1a496f36d4c0991bbe2ab8f81f39fcd704197a2d",
+    "path": "FastWalsh.lean"
+  },
+  {
+    "module": "Quadratic",
+    "sha256": "7d89d5c4dabefa609ab36962f83290283d3c6844e551acda04ead02f40abb373",
+    "path": "Quadratic.lean"
+  },
+  {
+    "module": "QuadraticWalshShift",
+    "sha256": "998f74a1310348151f57bd29b6d0a28338be11ca52083625373571b547b82937",
+    "path": "QuadraticWalshShift.lean"
+  },
+  {
+    "module": "QuadraticWalshParseval",
+    "sha256": "a35a7b4a12262d62495eb802d058e6cf006187db670479b4ee2b7f6488281155",
+    "path": "QuadraticWalshParseval.lean"
+  },
+  {
+    "module": "QuadraticWalshRadical",
+    "sha256": "730aeaa911cb86089bf03f5e442d424411e932fea618c73ea5329f1bc8915992",
+    "path": "QuadraticWalshRadical.lean"
+  },
+  {
+    "module": "QuadraticWalshMatrix",
+    "sha256": "0b01cbea9f070da630a48c4774f34e4f3eb2b159cbc78cac9331733fed462d29",
+    "path": "QuadraticWalshMatrix.lean"
+  },
+  {
+    "module": "QuadraticWalshFamily",
+    "sha256": "bf9720c5ef80f16db74d3340adbe51299a4047761438111d5e8b6733103855f9",
+    "path": "QuadraticWalshFamily.lean"
+  },
+  {
+    "module": "APNCoordinateLabels",
+    "sha256": "d56128f57d5dc38832b74ba541fe839750cfce9e37ab9012ff9a7568d7c66f18",
+    "path": "APNCoordinateLabels.lean"
+  },
+  {
+    "module": "QuadraticMapWalsh",
+    "sha256": "2ab77e914dd57239e7eb34e79d2ddaf2e7946289b5ed2d12edef7ac58141c3c4",
+    "path": "QuadraticMapWalsh.lean"
+  },
+  {
+    "module": "AlternatingRankParity",
+    "sha256": "8d1bee912deb6fb33dc01d2db4d1fa71fee869fa05b4cd0849219319e968b50f",
+    "path": "AlternatingRankParity.lean"
+  },
+  {
+    "module": "APNCountCongruence",
+    "sha256": "2d28c9400255be55c86ba8f4a67c5b7645018a6a3663784d6b43e88517d36b68",
+    "path": "APNCountCongruence.lean"
+  },
+  {
+    "module": "QuadraticSemantics",
+    "sha256": "8261caa6b2ce37a1b3e4bc4679c3a708e969651f54a3ab6474eb5e0d0221c425",
+    "path": "QuadraticSemantics.lean"
+  },
+  {
+    "module": "RankFourPair",
+    "sha256": "549d432e37b47f1da2d5049001f408c2f58825b10800c6d1e34687f60511b7f9",
+    "path": "RankFourPair.lean"
+  },
+  {
+    "module": "APNProfile29",
+    "sha256": "9a4ff80a2f6d9f2458d802a9b11d65a5153bf0956b8804660ad4b6b0e2769934",
+    "path": "APNProfile29.lean"
+  },
+  {
+    "module": "FourFlatGeometry",
+    "sha256": "6b6806681a1bf4ef1ebf41be10433f13d569e54d260f1b7d3284ef50838cbc6a",
+    "path": "FourFlatGeometry.lean"
+  },
+  {
+    "module": "NoThreePencil",
+    "sha256": "527f2a54d4171a052f94ff9d5085d80a0dfe77e0957b277c1e9766bdd3e0435c",
+    "path": "NoThreePencil.lean"
+  },
+  {
+    "module": "AffineHalfRank",
+    "sha256": "ba5f39301f136609634f3a83d15a7cbc91038b9ec7bf8ed6371047b43ac70bf4",
+    "path": "AffineHalfRank.lean"
+  },
+  {
+    "module": "APNTwoFlatExclusion",
+    "sha256": "f9d8b7aff510250deed3d3a45e3c668dec2745503e0173166ba763a48108626b",
+    "path": "APNTwoFlatExclusion.lean"
+  },
+  {
+    "module": "BooleanANF",
+    "sha256": "f3c3bb70b03f24bb9637e9d2435ee0860578192e75f5641c336588db0812d666",
+    "path": "BooleanANF.lean"
+  },
+  {
+    "module": "PfaffianLaplace2",
+    "sha256": "635d7623483fd87c940d5fbc18dd636825db44a2f18b60b012bf418891312150",
+    "path": "PfaffianLaplace2.lean"
+  },
+  {
+    "module": "QuadraticIndicator.QuadraticIndicator",
+    "sha256": "1d974a279aa5bbb4e24e06cdf43049b0386a84d97fe4315c4f9fadd054814453",
+    "path": "QuadraticIndicator/QuadraticIndicator.lean"
+  },
+  {
+    "module": "PfaffianDegree",
+    "sha256": "d84c5f5f8a2c09a033bd2067e5b6147a318328dfb54d80cfd854c323f48d6fb2",
+    "path": "PfaffianDegree.lean"
+  },
+  {
+    "module": "PfaffianMatrix",
+    "sha256": "609d09ba03e1ee32ee5af49fa150e332a9fcd5ccb5f1dc455fc6a60d388f3b5b",
+    "path": "PfaffianMatrix.lean"
+  },
+  {
+    "module": "MatchingDeterminant",
+    "sha256": "f351408c43d3bf3b20245b6944788f769b1dc4b7e544f79e773612954ba1e68c",
+    "path": "MatchingDeterminant.lean"
+  },
+  {
+    "module": "MatchingPfaffian",
+    "sha256": "bc3d52356542159916f1980ad794540ec5d69f676c19e5d984d086faa896b458",
+    "path": "MatchingPfaffian.lean"
+  },
+  {
+    "module": "MatchingIndicator",
+    "sha256": "b577e4a102f95de7bcbe4718bcf9ca5946bd8f1f10e6a228a2ec2115262ee717",
+    "path": "MatchingIndicator.lean"
+  },
+  {
+    "module": "BilinearIndicator",
+    "sha256": "e3b29132948768388ad73c70a374c14f261618b8ffb93945a1cf1bc5547fa4b8",
+    "path": "BilinearIndicator.lean"
+  },
+  {
+    "module": "BooleanANFFibers",
+    "sha256": "378a0ebb2ac12f087e678d0db7539205659474de963520ead59ad977e6956aa2",
+    "path": "BooleanANFFibers.lean"
+  },
+  {
+    "module": "BooleanANFTranslation",
+    "sha256": "4aa7e1920041d8a9bf514b59319ec8071d5ba7067b8d19f44a6aace7a3e2babe",
+    "path": "BooleanANFTranslation.lean"
+  },
+  {
+    "module": "SingletonShear",
+    "sha256": "0b112b0431e4f1282508aaa91f381084900f3b2c90d61ff469749f878a55acca",
+    "path": "SingletonShear.lean"
+  },
+  {
+    "module": "BooleanANFWeight",
+    "sha256": "b3a26cb99db6389f4883ee52d4a03cece360079be4d6e7cfc6d9c019511c9876",
+    "path": "BooleanANFWeight.lean"
+  },
+  {
+    "module": "QuadraticComponentIndicator",
+    "sha256": "feb5a506c70398020dbfc8510df3e16254ae5d20478739077862e5b9f7f34255",
+    "path": "QuadraticComponentIndicator.lean"
+  },
+  {
+    "module": "BooleanANFDerivativeWeight",
+    "sha256": "1392af6236678824ba08e2cd203fb839819e01e584799799c9883bde7bdf4936",
+    "path": "BooleanANFDerivativeWeight.lean"
+  },
+  {
+    "module": "BooleanANFDescentSpec",
+    "sha256": "54aec09f910dee165dc2145b80c2ac3c5fa477fb365560b6f303060bddd8be47",
+    "path": "BooleanANFDescentSpec.lean"
+  },
+  {
+    "module": "BooleanANFSupportBounds",
+    "sha256": "007e9c1d57565c86876e9bf4317b9dbd399dba26915cb5ea43d106e965f3d2de",
+    "path": "BooleanANFSupportBounds.lean"
+  },
+  {
+    "module": "BooleanANFDescent",
+    "sha256": "4fd16741ac8a03817b01a7ef19f136a3e3f0cea133c14878913ca0bcc259a6fc",
+    "path": "BooleanANFDescent.lean"
+  },
+  {
+    "module": "BooleanANFStabilizer",
+    "sha256": "8745f5e719d75e5f39a68e0f1226950936127505a0c5aad6be1d9f117f3dc20d",
+    "path": "BooleanANFStabilizer.lean"
+  },
+  {
+    "module": "BooleanANFAffineBalance",
+    "sha256": "ef0887fef688c82d4c903e1fde638baef2ab908e8c4e7208f33925989e66f8ce",
+    "path": "BooleanANFAffineBalance.lean"
+  },
+  {
+    "module": "SingletonFiberCount",
+    "sha256": "3b1f9006d44e9cbd894b43746e3ea250e686d72bb2c1cedc21a297694727f61c",
+    "path": "SingletonFiberCount.lean"
+  },
+  {
+    "module": "BooleanANFDivisibility",
+    "sha256": "aa8493539e0c4d767659ffcf1d070aa043412b737f3af46692490708b39d6d19",
+    "path": "BooleanANFDivisibility.lean"
+  },
+  {
+    "module": "BooleanANFLowWeight",
+    "sha256": "453bdaa5a97efb003f172ac704bdd6478ba1017a6d59a35dc1f1aeecf590ad29",
+    "path": "BooleanANFLowWeight.lean"
+  },
+  {
+    "module": "BooleanANFQuadraticSix",
+    "sha256": "216d4613f576144f336ef301084b26bd47284c65521f5ac167b7d96fd0a8d089",
+    "path": "BooleanANFQuadraticSix.lean"
+  },
+  {
+    "module": "BinarySmallCode",
+    "sha256": "b946372dfa40edcbf6dec6a97629852e0abac884a0346240054f613ad2c9bb30",
+    "path": "BinarySmallCode.lean"
+  },
+  {
+    "module": "BinarySmallCodeEquality",
+    "sha256": "93f082fbc857a1665d2eb649a093cf2dfe4eccb2815e6d64532f0010ef2a2fc2",
+    "path": "BinarySmallCodeEquality.lean"
+  },
+  {
+    "module": "SingletonFlat",
+    "sha256": "b6cdb7573c39c7e40a725ee45c8b98ad6a97c8f94021dd5a03f9dceba8b5eca9",
+    "path": "SingletonFlat.lean"
+  },
+  {
+    "module": "BooleanANFLinear",
+    "sha256": "a0a2f6655ca456c258addf18d1a1bff4e26ee4c011faea78340200ed4253c274",
+    "path": "BooleanANFLinear.lean"
+  },
+  {
+    "module": "AffineSingletonNormalization",
+    "sha256": "6b5532b5f8ad0659545f87de1ebc08f71a97a7055ad3144a6117522a1b145e0e",
+    "path": "AffineSingletonNormalization.lean"
+  },
+  {
+    "module": "QuadraticFourCertificates",
+    "sha256": "6a8625dafd840c12748cf6c4d2a572c62923ab909cd63996ef8a47d17e17484e",
+    "path": "QuadraticFourCertificates.lean"
+  },
+  {
+    "module": "QuadraticFourPolynomial",
+    "sha256": "2ea4a53739e885338070c7d2ea68a1b0812fe4645458076df762525385f0f4ee",
+    "path": "QuadraticFourPolynomial.lean"
+  },
+  {
+    "module": "QuadraticFourRaw",
+    "sha256": "4e3e88b854e8c2cc066033f7f4bec4d99ce5e1aa93293e84ee5806899542b1ed",
+    "path": "QuadraticFourRaw.lean"
+  },
+  {
+    "module": "QuadraticFourBatch0",
+    "sha256": "81969e572d5ed5bdde46c864644509e9340e8cae24d36cda937cf1f2406a0d4e",
+    "path": "QuadraticFourBatch0.lean"
+  },
+  {
+    "module": "QuadraticFourBatch1",
+    "sha256": "4c082202d590a04cbb0967a3a9ed97f8d1d8c99c74b11878fc05cc594c82508d",
+    "path": "QuadraticFourBatch1.lean"
+  },
+  {
+    "module": "QuadraticFourBatch2",
+    "sha256": "455bc80977b87c57c24c630beaec080e35d59eb3113f8327d83a82ca41171a9a",
+    "path": "QuadraticFourBatch2.lean"
+  },
+  {
+    "module": "QuadraticFourBatch3",
+    "sha256": "4ebb82dbf4d84ae8e58a66d60b2ca0e18654974548d2b21467888fdb1581d2d8",
+    "path": "QuadraticFourBatch3.lean"
+  },
+  {
+    "module": "QuadraticFourBatch4",
+    "sha256": "c49d2c329e1dee0dabec9ea5ed0f13566ba689cbd2839d8aafdbce612a11b59d",
+    "path": "QuadraticFourBatch4.lean"
+  },
+  {
+    "module": "QuadraticFourBatch5",
+    "sha256": "90b93f6817af3aa566255709b65749db1d8c139368fae3d9b6aa576fd56968f7",
+    "path": "QuadraticFourBatch5.lean"
+  },
+  {
+    "module": "QuadraticFourBatch6",
+    "sha256": "c09e2d02ec7b48485161fd748964c8f2dd84f2b6318a8b54fea631c9b447313d",
+    "path": "QuadraticFourBatch6.lean"
+  },
+  {
+    "module": "QuadraticFourBatch7",
+    "sha256": "e0d1451c9c1fc8f7d239cf568ac8446ae5ef393da31d32edbec6bbe8877d401c",
+    "path": "QuadraticFourBatch7.lean"
+  },
+  {
+    "module": "QuadraticFourEnumeration",
+    "sha256": "1354f5d2e01af836a4513928109b8082428d825e19fd204004751d669bd77b62",
+    "path": "QuadraticFourEnumeration.lean"
+  },
+  {
+    "module": "QuadraticFourWeights",
+    "sha256": "21308bdb60324689377c60fd6abcfcbc08384b69f5fc67e26336a779b2979340",
+    "path": "QuadraticFourWeights.lean"
+  },
+  {
+    "module": "QuadraticCoefficientCode",
+    "sha256": "4733ff688ac66fcdc9ea1c9fb12237d8e162056b4234eab3f34f876213f8350a",
+    "path": "QuadraticCoefficientCode.lean"
+  },
+  {
+    "module": "BooleanANFAffine",
+    "sha256": "e62f91e47e91ef6a13ce1c6d53816102fec481101601a4b414095ec4d29f476d",
+    "path": "BooleanANFAffine.lean"
+  },
+  {
+    "module": "WeightThirtyModel",
+    "sha256": "53051da10721e3e390a04ce0e2d680e2339ca8642d6ff10ce1315150f20881db",
+    "path": "WeightThirtyModel.lean"
+  },
+  {
+    "module": "AffineGraphFlats",
+    "sha256": "65b3fe50bd6b866017855e5099bb9ee38033ce08be72c33ef99fa35360dc5230",
+    "path": "AffineGraphFlats.lean"
+  },
+  {
+    "module": "BinaryPatternCounts",
+    "sha256": "3f4b7f76fbc6004e362e6da828575b47109a9071204e28c3430b6390d36d0177",
+    "path": "BinaryPatternCounts.lean"
+  },
+  {
+    "module": "CoefficientPatterns",
+    "sha256": "90a7d9d0705869b5c3bc6841bfa4d737185d90b2c4c9928534144bcdec0a6c47",
+    "path": "CoefficientPatterns.lean"
+  },
+  {
+    "module": "QuadraticFourRadicalRaw",
+    "sha256": "90efebdf67184a2825ce9033c4ba63d51279465893c21c28740883cd3cf8db34",
+    "path": "QuadraticFourRadicalRaw.lean"
+  },
+  {
+    "module": "QuadraticFourPolar",
+    "sha256": "2ece061968feba5bbab565ac5fe9ca02e3ccb6027c83eafe5c5fd638cdeaaf09",
+    "path": "QuadraticFourPolar.lean"
+  },
+  {
+    "module": "QuadraticFourDegree",
+    "sha256": "7da822ef83784bd321d35ed67c755d07789fdfbca44a3e15313bd16de6996142",
+    "path": "QuadraticFourDegree.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch0",
+    "sha256": "537e0d49898ae12273fd83614eb2c810268fca0a2897e117a83a8c54c9036bbf",
+    "path": "QuadraticFourPolarBatch0.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch1",
+    "sha256": "24e13d0a525afcb6f187111b49ed4a532459195109c1b3695e9d56a723865bad",
+    "path": "QuadraticFourPolarBatch1.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch2",
+    "sha256": "50a7bc5f254a54ec0c0bbabc9317dd17fff77777f01bb43539ba83ca5e30592e",
+    "path": "QuadraticFourPolarBatch2.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch3",
+    "sha256": "da54caaf28dc9f8b9c05e58edc52f436ae3c70acba0c0d6a992154079d59dc58",
+    "path": "QuadraticFourPolarBatch3.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch4",
+    "sha256": "d14c8390ca759343a9279976bfc19d95500a052c3c6719c723fd116933f74663",
+    "path": "QuadraticFourPolarBatch4.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch5",
+    "sha256": "bb9df19dcde7ea5afaf440a9cafa095d1f2377729a2304579a56dc17947788d2",
+    "path": "QuadraticFourPolarBatch5.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch6",
+    "sha256": "5ef8860f067d76f1f560e1a53a7cf12a4c8e7fc216f9352504be09a827b938d9",
+    "path": "QuadraticFourPolarBatch6.lean"
+  },
+  {
+    "module": "QuadraticFourPolarBatch7",
+    "sha256": "2a0c84b31692e55522d1409c1933fa353eb7f7c893cb8cd98a26ae21a6c2ef5e",
+    "path": "QuadraticFourPolarBatch7.lean"
+  },
+  {
+    "module": "QuadraticFourPolarEnumeration",
+    "sha256": "4841d2a109fc314ce5fb0df07f669dbde50b70bbc5d42890e76d720ee3a6ac8f",
+    "path": "QuadraticFourPolarEnumeration.lean"
+  },
+  {
+    "module": "QuadraticFourRadicalRepresentative",
+    "sha256": "3759e8bd41a346a84e791655bb57cc63eba3e9340c69de88a521d9718ecffedc",
+    "path": "QuadraticFourRadicalRepresentative.lean"
+  },
+  {
+    "module": "QuadraticFourRadical",
+    "sha256": "1504401af8842d0432a8ecbb21ebea6574c5b2126525d2308efa02f6a37e3dd1",
+    "path": "QuadraticFourRadical.lean"
+  },
+  {
+    "module": "QuadraticFourAffine",
+    "sha256": "d66d884b2903f92b351bb172c3ba8a391101b06918663a23fe02d7dad5d2bbaa",
+    "path": "QuadraticFourAffine.lean"
+  },
+  {
+    "module": "WeightThirtyCaseZero",
+    "sha256": "837f93248377941616dcbe4aa637526ef8afb8e25e36e75bd3bf199d832f3162",
+    "path": "WeightThirtyCaseZero.lean"
+  },
+  {
+    "module": "CodeBasis",
+    "sha256": "174d6a68ce6e6ee736455715e2eec95f02a59e7f8e433a4fc6523683faeed76c",
+    "path": "CodeBasis.lean"
+  },
+  {
+    "module": "QuadraticFourAffineDifference",
+    "sha256": "e6eb6f012877069aac0d4eb5c302e4a5218da5c8098cc5ec9a4d6853a531219c",
+    "path": "QuadraticFourAffineDifference.lean"
+  },
+  {
+    "module": "CodeBasisProperties",
+    "sha256": "a77e1fe5d99727ef752db9b4694b008eff7823c158174a51c33cc1f24fafcfab",
+    "path": "CodeBasisProperties.lean"
+  },
+  {
+    "module": "QuadraticFourSupport",
+    "sha256": "dcc0ac19fac261d397b50f4363e84bf880ab262ae99b66d590cff6dcd1fbfc87",
+    "path": "QuadraticFourSupport.lean"
+  },
+  {
+    "module": "QuadraticFourPlane",
+    "sha256": "b4ba2fa8e4748c384ca7c7cc364c46250b881a4d2adfa3a3a6d8accfcd4bde8a",
+    "path": "QuadraticFourPlane.lean"
+  },
+  {
+    "module": "QuadraticFourMoments",
+    "sha256": "0104710b3807b9682d0ccc57a29e0238f31193a64ddf8c08c9a49f63519de442",
+    "path": "QuadraticFourMoments.lean"
+  },
+  {
+    "module": "WeightThirtyGraph",
+    "sha256": "2d02865fa57ebc919efd0bdc2338899ea8f0c9348e255e304bb05cb4b550eeae",
+    "path": "WeightThirtyGraph.lean"
+  },
+  {
+    "module": "QuadraticFourCosets",
+    "sha256": "e3dbe2c91395296a7884816806d5efdb382fbcaafee826ffd8e4ad47ff6614ab",
+    "path": "QuadraticFourCosets.lean"
+  },
+  {
+    "module": "QuadraticFourCosetCountRaw",
+    "sha256": "9318926c5e88d18d61f2c6a13b754f494728849533744f864783c5959d2954ca",
+    "path": "QuadraticFourCosetCountRaw.lean"
+  },
+  {
+    "module": "QuadraticFourCosetCount",
+    "sha256": "32841def2fff790ba5e22219a19e0fd2fa7b05407d3e00ec543d7fbda3c52edb",
+    "path": "QuadraticFourCosetCount.lean"
+  },
+  {
+    "module": "QuadraticFourPairRaw",
+    "sha256": "3b879a4b24dfa476b3ca6bdfde8b5d177b4d735d7b60f6e0f54b3cd52029b608",
+    "path": "QuadraticFourPairRaw.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch0",
+    "sha256": "e7aa1764dc3d1bea92e56f4a32cc63d55359ffba103fe5a1a994287300bd316f",
+    "path": "QuadraticFourPairBatch0.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch1",
+    "sha256": "14b4246648ba4b58d7410f278bfbddb32006403c4d97cf3889dd9048e28bc7fd",
+    "path": "QuadraticFourPairBatch1.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch2",
+    "sha256": "8f5736da1d841a0b7d300a32c7c41ac6eb5f501e65727dc76fb654aed4ad5978",
+    "path": "QuadraticFourPairBatch2.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch3",
+    "sha256": "d45f2df800513ead099ec5fcb6a3d13c55974b0a516be6dbc319f01eb0e8ea15",
+    "path": "QuadraticFourPairBatch3.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch4",
+    "sha256": "640e11e3bbbbce79db45c05d7d66217b8608c857dc128d69e25f0c5784c0e171",
+    "path": "QuadraticFourPairBatch4.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch5",
+    "sha256": "0705cef0be839196b64badf3720f516ae5821276a0486ebc58908d7a2072e49a",
+    "path": "QuadraticFourPairBatch5.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch6",
+    "sha256": "e8fafeec6ae0e4fd6d8877d88dfcfa91bfd02314b5cfa189cd8396db8ce4f489",
+    "path": "QuadraticFourPairBatch6.lean"
+  },
+  {
+    "module": "QuadraticFourPairBatch7",
+    "sha256": "85f91dfb2ab83535a260cc6fb1a1e73aa7205dcd21584960c8413dd099ae3217",
+    "path": "QuadraticFourPairBatch7.lean"
+  },
+  {
+    "module": "QuadraticFourPairEnumeration",
+    "sha256": "94c607b56c66759b0533d333c8785f716674834fedace84d616cfe3f07d96782",
+    "path": "QuadraticFourPairEnumeration.lean"
+  },
+  {
+    "module": "QuadraticFourPairs",
+    "sha256": "2e590c142509ee841c3863ee691b4bdb4ee07c1c570d124ff08e57701da1f911",
+    "path": "QuadraticFourPairs.lean"
+  },
+  {
+    "module": "QuadraticFourPolarRanks",
+    "sha256": "1d39d6f2da8c6aca45618c33e6e348209c5f7160b233267adba255daf61400ad",
+    "path": "QuadraticFourPolarRanks.lean"
+  },
+  {
+    "module": "QuadraticFourCostComplement",
+    "sha256": "a71c5e1cd903c24a7ef7d6c55b51a61cd2d9f9cdbeab9acb469bf2fec506d905",
+    "path": "QuadraticFourCostComplement.lean"
+  },
+  {
+    "module": "QuadraticFourAudit",
+    "sha256": "5bb3570672d61a36b6373a09f7330123b5bd50ba0e0204e99384ab56753410f7",
+    "path": "QuadraticFourAudit.lean"
+  },
+  {
+    "module": "WeightThirtyRankOneRows",
+    "sha256": "b3cfdbaa215ae1fc6f51905dad1d29efc149bdff46cd640a28c52a328972d25e",
+    "path": "WeightThirtyRankOneRows.lean"
+  },
+  {
+    "module": "WeightThirtyCaseOne",
+    "sha256": "e641f1b51100b4179b6d55978e31243f5c63e7aa63293e21e8cc667e267c4bc8",
+    "path": "WeightThirtyCaseOne.lean"
+  },
+  {
+    "module": "NormalizedCostBudget",
+    "sha256": "5f6226969192fc9eaafbc4b3eba36c075f87f7926aa47800986dda20f5507b2e",
+    "path": "NormalizedCostBudget.lean"
+  },
+  {
+    "module": "WeightThirtyTwoPatterns",
+    "sha256": "019970db4cce43b5f96bf10fe6ad3c000cae359f875540fcf49913b498236616",
+    "path": "WeightThirtyTwoPatterns.lean"
+  },
+  {
+    "module": "WeightThirtyTwoProfiles",
+    "sha256": "aecf981175a139c50b46749c1147342f0365192825ab4441faf4e29df3bc66eb",
+    "path": "WeightThirtyTwoProfiles.lean"
+  },
+  {
+    "module": "WeightThirtyTwoSix",
+    "sha256": "93c50724b80015f3b55077cf047f0d8a746c0b80175866c0c05c1b9adcade865",
+    "path": "WeightThirtyTwoSix.lean"
+  },
+  {
+    "module": "WeightThirtyTwoSeven",
+    "sha256": "db8ec03a8b2348efd9dd5341ca1e68da1debb3c415d0481395235a10c70ebd4c",
+    "path": "WeightThirtyTwoSeven.lean"
+  },
+  {
+    "module": "WeightThirtyCaseTwo",
+    "sha256": "bd15bd8505e018463540fca13bdd482f2779e00a2f749f0c48844f75b3cc1c3d",
+    "path": "WeightThirtyCaseTwo.lean"
+  },
+  {
+    "module": "SimplexLabels",
+    "sha256": "472a0f0df569f633a9468cae85e7aa023520a45c19b56247cdbf10dd8e387f5f",
+    "path": "SimplexLabels.lean"
+  },
+  {
+    "module": "SevenPointAffineCube",
+    "sha256": "6732007c1d648448395439aa3101158bed6fd36f163f696ac2ca07090a293a1e",
+    "path": "SevenPointAffineCube.lean"
+  },
+  {
+    "module": "SevenPlaneIncidence",
+    "sha256": "d128cb38fcc348c990ca965241ee21853b90f84961d7898797e54d01fda689fc",
+    "path": "SevenPlaneIncidence.lean"
+  },
+  {
+    "module": "WeightThirtyTypeB",
+    "sha256": "dcf59070cdf996dab5500c6919ab009d4e3092aa8fc979909449cd0576d4e002",
+    "path": "WeightThirtyTypeB.lean"
+  },
+  {
+    "module": "QuadraticThreeRadicalLine",
+    "sha256": "c5f1a22dfb8e4c374e7e1b76e2ab3220394da89b109e9a727b9d9425526d5d83",
+    "path": "QuadraticThreeRadicalLine.lean"
+  },
+  {
+    "module": "WeightThirtyCaseThree",
+    "sha256": "d7fafa7b880be8091fb6a8148d41f598d40e8c3902b87fda3afa3c71b6527060",
+    "path": "WeightThirtyCaseThree.lean"
+  },
+  {
+    "module": "WeightThirtyCommonRadical",
+    "sha256": "903951afbc42361349cd86b0dc60519f4f828e08f7fd4f4a12ea8f875b299b88",
+    "path": "WeightThirtyCommonRadical.lean"
+  },
+  {
+    "module": "ThreeCoordinateExtension",
+    "sha256": "bcf7ad38ace852491b09ce7524f297dda4a3537be5a9dde380dbe04a504d73b2",
+    "path": "ThreeCoordinateExtension.lean"
+  },
+  {
+    "module": "QuadraticThreeRadicalShape",
+    "sha256": "41379390b6304d21e2b1212d9b70050a366fdc2c73fb1c957f8aec8497abe350",
+    "path": "QuadraticThreeRadicalShape.lean"
+  },
+  {
+    "module": "CodeRadicalCoordinates",
+    "sha256": "371600bf4d4009b724ceae7285a62ace9731d96b09fc9bacb1891b3d46e9da43",
+    "path": "CodeRadicalCoordinates.lean"
+  },
+  {
+    "module": "WeightThirtyTypeBTransport",
+    "sha256": "f021574967333bed6c9ff57067f8df3a499048f011f8c7a217a0f422b80bd2e2",
+    "path": "WeightThirtyTypeBTransport.lean"
+  },
+  {
+    "module": "WeightThirtyRankThreePencil",
+    "sha256": "40608fe8a2bc911314ceb4d0bd48bdc3ec5eb220c20a103d553b56461f1a3f3a",
+    "path": "WeightThirtyRankThreePencil.lean"
+  },
+  {
+    "module": "WeightThirtyRankThreeFinal",
+    "sha256": "42026cbe4a36c075553c3d6e632574f96f0701e1e13acfef089733af4733e46b",
+    "path": "WeightThirtyRankThreeFinal.lean"
+  },
+  {
+    "module": "WeightThirtySupportProfile",
+    "sha256": "9bcc46543f790ed27db02c22fe14717698caa9878423208313ad980834eb3622",
+    "path": "WeightThirtySupportProfile.lean"
+  },
+  {
+    "module": "WeightThirtyClassification",
+    "sha256": "722e8b7babddc80dfe222bd51eb7f560feb7f57368f4a256a3eb419f245f2325",
+    "path": "WeightThirtyClassification.lean"
+  },
+  {
+    "module": "APNEightFinal",
+    "sha256": "388edf2c359a8c122c866f650bdf6f899a1be6c37edfe978cbaed4009a4f2534",
+    "path": "APNEightFinal.lean"
+  }
+]

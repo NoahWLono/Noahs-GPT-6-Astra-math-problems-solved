@@ -1,0 +1,3 @@
+'BooleanANF.QuadraticFour.constant_sum_costs' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticFourCostComplement", "exit": 0, "seconds": 1.506, "peak_rss_kib": 1542188, "termination": null}

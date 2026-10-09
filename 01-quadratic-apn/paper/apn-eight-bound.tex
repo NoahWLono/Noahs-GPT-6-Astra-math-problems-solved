@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=28mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem,longtable,booktabs,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue,
+ pdftitle={A bound of 222 bent components for quadratic APN functions in eight variables},
+ pdfauthor={GPT-6 Astra research project},pdfsubject={Detailed proof and Lean correspondence}}
+\urlstyle{tt}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlist{itemsep=3pt,topsep=5pt}
+\allowdisplaybreaks[2]
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Alt}{\operatorname{Alt}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\cost}{\operatorname{cost}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\symdiff}{\mathbin{\triangle}}
+\newcommand{\lean}[1]{{\small\nolinkurl{#1}}}
+\lstset{basicstyle=\ttfamily\footnotesize,columns=fullflexible,keepspaces=true,
+ breaklines=true,breakatwhitespace=false,showstringspaces=false,
+ frame=single,framerule=.2pt,rulecolor=\color{black!25},xleftmargin=3pt,xrightmargin=3pt}
+
+\title{A bound of 222 bent components for quadratic APN functions in eight variables}
+\author{GPT-6 Astra research project\thanks{AI-assisted research manuscript and formal proof development. ``GPT-6 Astra'' is a project label; it is not a verified runtime-model attribution or an institutional affiliation.}}
+\date{9 October 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $F\colon\F^8\to\F^8$ be an almost perfect nonlinear function of algebraic degree at most two, with arbitrary affine and constant terms. We prove that at least $33$ of its $255$ nonzero scalar components are not bent. Equivalently, at most $222$ components are bent. In particular, the amplitude distribution $[0^{226},2^{15},4^{14}]$ cannot occur for a quadratic APN function. The proof combines the actual Pfaffian indicator of the component polar forms with a binary affine rank obstruction. We give a self-contained proof of the needed degree-four weight-residue bound and of the weight-$30$ support classification, including every coefficient-code case, rather than assuming a general Reed--Muller classification theorem. The final obstruction rules out an affine three-space of rank-four alternating forms on an eight-space whose nonzero directions are all nonsingular. A Lean development proves the function-level statement using the ordinary APN condition and integer Walsh bentness. The appendices identify the precise declarations, semantic bridges, finite proof certificates, and reproduction procedure. The claim of mathematical contribution is limited to the additional obstruction and its application; established Pfaffian, Reed--Muller, and APN geometry ingredients are explicitly credited.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{The result and its scope}\label{sec:intro}
+Throughout, all vector spaces are over $\F$, unless another field is explicitly specified. A scalar component of $F\colon\F^8\to\F^8$ is
+\[
+q_b(x)=b\cdot F(x),\qquad b\in\F^8,
+\]
+where the dot denotes the standard nondegenerate coordinate pairing. We count labels $b\ne0$. Thus two labels are counted separately even if one initially makes no assumption that their component functions or their polar forms differ.
+
+For a Boolean function $q$ on $\F^8$, write
+\[
+W_q(u)=\sum_{x\in\F^8}(-1)^{q(x)+u\cdot x}\in\mathbb Z.
+\]
+The function is \emph{bent} if $|W_q(u)|=16$ for every $u$. A function $F$ is \emph{APN} if, for each $a\ne0$ and each $c$, the equation $F(x+a)+F(x)=c$ has at most two solutions. Because $x$ and $x+a$ always occur together, every nonempty such fiber then has exactly two elements.
+
+\begin{theorem}\label{thm:main}
+If $F\colon\F^8\to\F^8$ has algebraic degree at most two and is APN, then
+\[
+N_F:=\#\{b\in\F^8\setminus\{0\}:q_b\text{ is not bent}\}\ge33.
+\]
+Consequently, the number of bent nonzero scalar components is at most $222$.
+\end{theorem}
+
+``Quadratic'' in this theorem means degree at most two. No homogeneity, zero constant term, permutation property, special field-polynomial representation, or classification of APN maps is assumed. Equivalently, quadraticity means that the actual normalized polar
+\[
+\beta_F(x,y)=F(x+y)+F(x)+F(y)+F(0)
+\]
+is bilinear. The equivalence with the usual algebraic normal form is proved in Section~\ref{sec:anf}. All counts are counts of actual Walsh components, not merely of a rank statistic whose interpretation is left implicit.
+
+\begin{corollary}\label{cor:profile}
+The amplitude profile $[0^{226},2^{15},4^{14}]$ is impossible for a quadratic APN function $\F^8\to\F^8$.
+\end{corollary}
+Here the entry $s$ labels a polar radical dimension $s$, equivalently a nonzero Walsh amplitude $2^{(8+s)/2}$. Thus the displayed profile would mean $226$ bent components of amplitude $16$, $15$ components of amplitude $32$, and $14$ components of amplitude $64$. It would give only $29$ non-bent labels. It is the case $i=3$ of
+\begin{equation}\label{eq:profile-family}
+[0^{238-4i},2^{5i},4^{17-i}]
+\end{equation}
+in Open Problem VI.1 of B\'en\'eteau, Goluboff, K\"olsch, and Vaghasiya~\cite{BGKV}. The theorem also excludes $i=1,2$; it does not decide the other listed profiles.
+
+\subsection{Organization of the proof}
+The argument has five logically separate stages.
+\begin{enumerate}
+\item APN forces the nonzero component radicals to partition the nonzero input vectors. Alternating rank parity then gives $N_F\equiv1\pmod4$.
+\item The Pfaffian of the \emph{actual} component pencil gives a Boolean function $h$ of degree at most four with $h(0)=1$ and $\wt(h)=N_F+1$.
+\item An elementary derivative argument proves $\wt(h)\ge30$. If equality holds, an explicit weight-$30$ classification shows that $\supp(h)$ is the symmetric difference of two transverse affine four-flats.
+\item If $N_F=29$, the radical partition forces exactly $14$ rank-four and $15$ rank-six non-bent polar forms. Two distinct rank-four labels have a bent sum. Combining this with the two-flat support forces an affine three-flat of rank-four forms with all nonzero directions nonsingular.
+\item A self-contained linear-algebra obstruction rules out that affine family. Therefore $N_F\ne29$, and the congruence raises the lower bound to $33$.
+\end{enumerate}
+Sections~\ref{sec:anf}--\ref{sec:residue} give the Boolean and APN prerequisites. Sections~\ref{sec:normalize}--\ref{sec:classify} prove the complete specialized support classification. Sections~\ref{sec:obstruction}--\ref{sec:finish} prove and apply the rank obstruction. Appendices~\ref{app:lean}--\ref{app:reproduce} specify the formal theorem and its reproducibility evidence.
+
+\subsection{Relation to existing work and priority limits}
+The APN radical-partition viewpoint and the amplitude-profile problem are established in~\cite{BGKV}; they are not new claims of this manuscript. The August 2026 revision of Beierle et al.~\cite{BLLPR}, Section 5.1, still treats the profiles in~\eqref{eq:profile-family} as unresolved. Their large construction dataset is not a complete classification in dimension eight.
+
+The low-weight support theorem needed here is a special case of the classical Kasami--Tokura theorem~\cite{KT}; a modern statement is reproduced in~\cite{Ye}. Our detailed specialized proof and its formalization do not make that classification a new mathematical result. Deryck~\cite{Deryck}, Theorem 5.2.12 and Section 5.4, develops the Pfaffian/Reed--Muller connection and low-weight machinery. Those ingredients, combined with the APN congruence, already lead to the preliminary bound $N_F\ge29$; that specialization is an inference from the cited ingredients, not a claim that the thesis displays precisely that bound. Its conclusion explicitly points toward further structural exclusions.
+
+The proposed additional contribution is the affine rank obstruction of Theorem~\ref{thm:affine-obstruction} and its use in excluding $N_F=29$. The related affine constant-rank result in~\cite{Pazzis} has field-size hypotheses that do not cover the binary rank-four case used here. The bilinear-form dimension literature, including~\cite{Gow}, supplies important context but is not assumed to imply this particular obstruction. The recent semi-bent lower bound of Carlet and Thornburgh~\cite{CT} does not itself exclude a profile with $15$ semi-bent components in dimension eight.
+
+A literature recheck on 9 October 2026 found no earlier proof of this exact exclusion in the sources inspected. This is a qualified priority statement. It neither certifies absolute priority nor rules out unpublished or inadequately indexed work. The mathematical proof below does not depend on that search conclusion. Formal verification does not establish originality, peer review, optimality of the bound, or the existence of an example attaining $222$ bent components.
+
+\input{sections/preliminaries}
+\input{sections/classification}
+\input{sections/obstruction}
+\appendix
+\input{sections/formalization}
+\input{sections/bibliography}
+\end{document}

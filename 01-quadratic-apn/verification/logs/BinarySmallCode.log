@@ -1,0 +1,2 @@
+
+AUDIT {"module": "BinarySmallCode", "exit": 0, "seconds": 2.511, "peak_rss_kib": 1779120, "termination": null}

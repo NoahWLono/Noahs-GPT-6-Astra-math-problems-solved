@@ -1,0 +1,9 @@
+<LEAN_SOURCE>/FormNormalization.lean:44:0: warning: automatically included section variable(s) unused in theorem 'APNRedo.alternating_symmetric':
+  [FiniteDimensional F E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional F E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'APNRedo.normalize_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.normalize_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "FormNormalization", "exit": 0, "seconds": 3.919, "peak_rss_kib": 1878692, "termination": null}

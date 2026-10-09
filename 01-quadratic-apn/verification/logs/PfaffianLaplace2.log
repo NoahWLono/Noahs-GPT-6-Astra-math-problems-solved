@@ -1,0 +1,10 @@
+<LEAN_SOURCE>/PfaffianLaplace2.lean:14:13: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<LEAN_SOURCE>/PfaffianLaplace2.lean:14:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<LEAN_SOURCE>/PfaffianLaplace2.lean:19:13: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<LEAN_SOURCE>/PfaffianLaplace2.lean:19:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+AUDIT {"module": "PfaffianLaplace2", "exit": 0, "seconds": 1.306, "peak_rss_kib": 1649760, "termination": null}

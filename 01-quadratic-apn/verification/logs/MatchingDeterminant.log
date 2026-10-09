@@ -1,0 +1,8 @@
+<LEAN_SOURCE>/MatchingDeterminant.lean:12:0: warning: automatically included section variable(s) unused in theorem 'MatchingDeterminant.weight_inv':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'MatchingDeterminant.det_eq_matchings' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "MatchingDeterminant", "exit": 0, "seconds": 1.807, "peak_rss_kib": 1914552, "termination": null}

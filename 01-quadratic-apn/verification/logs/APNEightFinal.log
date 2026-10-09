@@ -1,0 +1,8 @@
+'APNRedo.apn_degenerate_count_ne_twenty_nine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_degenerate_count_ge_thirty_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_nonBent_count_ge_thirty_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+AUDIT {"module": "APNEightFinal", "exit": 0, "seconds": 7.728, "peak_rss_kib": 2007052, "termination": null}

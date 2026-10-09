@@ -1,0 +1,3 @@
+'BooleanANF.QuadraticFour.affine_cost_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticFourAffine", "exit": 0, "seconds": 4.618, "peak_rss_kib": 1776948, "termination": null}

@@ -1,0 +1,5 @@
+<LEAN_SOURCE>/AffineHalfRank.lean:55:28: warning: try 'simp at hh' instead of 'simpa using hh'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'APNRedo.no_affine_three_half_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "AffineHalfRank", "exit": 0, "seconds": 4.418, "peak_rss_kib": 1904064, "termination": null}

@@ -1,0 +1,4 @@
+<LEAN_SOURCE>/QuadraticCoefficientCode.lean:15:14: warning: unused variable `f`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+
+AUDIT {"module": "QuadraticCoefficientCode", "exit": 0, "seconds": 2.109, "peak_rss_kib": 1784764, "termination": null}

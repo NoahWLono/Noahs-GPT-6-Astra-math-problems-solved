@@ -1,0 +1,9 @@
+<LEAN_SOURCE>/FastWalsh.lean:17:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+<LEAN_SOURCE>/FastWalsh.lean:87:4: warning: unused variable `n`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'FastWalsh.transform_eq_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastWalsh_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FastWalsh.fastBent_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "FastWalsh", "exit": 0, "seconds": 1.41, "peak_rss_kib": 489916, "termination": null}

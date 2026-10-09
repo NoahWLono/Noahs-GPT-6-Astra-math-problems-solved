@@ -1,0 +1,3 @@
+<LEAN_SOURCE>/WeightThirtySupportProfile.lean:77:10: warning: `Prod.mk.inj_iff` has been deprecated: use `Prod.mk_inj` instead
+
+AUDIT {"module": "WeightThirtySupportProfile", "exit": 0, "seconds": 2.81, "peak_rss_kib": 1775140, "termination": null}

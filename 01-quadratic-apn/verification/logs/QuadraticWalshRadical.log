@@ -1,0 +1,5 @@
+'QuadraticWalshRadical.binaryDot_detect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshRadical.quadratic_zero_coefficient_of_radical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshRadical.quadratic_not_bent_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticWalshRadical", "exit": 0, "seconds": 0.707, "peak_rss_kib": 449188, "termination": null}

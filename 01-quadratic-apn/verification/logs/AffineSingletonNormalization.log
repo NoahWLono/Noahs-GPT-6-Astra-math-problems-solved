@@ -1,0 +1,2 @@
+
+AUDIT {"module": "AffineSingletonNormalization", "exit": 0, "seconds": 1.406, "peak_rss_kib": 1752980, "termination": null}

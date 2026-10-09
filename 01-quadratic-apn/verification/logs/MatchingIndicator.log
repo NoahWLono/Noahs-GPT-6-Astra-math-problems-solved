@@ -1,0 +1,4 @@
+'MatchingDeterminant.degree_nonsingular_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MatchingDeterminant.pfaffian_one_iff_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "MatchingIndicator", "exit": 0, "seconds": 2.309, "peak_rss_kib": 1919468, "termination": null}

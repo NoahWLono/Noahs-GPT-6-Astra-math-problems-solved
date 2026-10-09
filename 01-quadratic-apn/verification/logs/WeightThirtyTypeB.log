@@ -1,0 +1,6 @@
+<LEAN_SOURCE>/WeightThirtyTypeB.lean:33:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<LEAN_SOURCE>/WeightThirtyTypeB.lean:39:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+AUDIT {"module": "WeightThirtyTypeB", "exit": 0, "seconds": 13.552, "peak_rss_kib": 2156332, "termination": null}

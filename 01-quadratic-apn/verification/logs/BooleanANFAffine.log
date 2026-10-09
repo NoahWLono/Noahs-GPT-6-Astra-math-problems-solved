@@ -1,0 +1,2 @@
+
+AUDIT {"module": "BooleanANFAffine", "exit": 0, "seconds": 1.715, "peak_rss_kib": 1608580, "termination": null}

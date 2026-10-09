@@ -1,0 +1,2 @@
+
+AUDIT {"module": "QuadraticFourPairBatch2", "exit": 0, "seconds": 11.039, "peak_rss_kib": 1851420, "termination": null}

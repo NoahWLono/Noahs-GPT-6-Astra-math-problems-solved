@@ -1,0 +1,954 @@
+[
+  {
+    "module": "HalfRankAlgebra",
+    "exit": 0,
+    "seconds": 2.514,
+    "peak_rss_kib": 1780072,
+    "termination": null
+  },
+  {
+    "module": "NormalizedPencil",
+    "exit": 0,
+    "seconds": 4.317,
+    "peak_rss_kib": 1802864,
+    "termination": null
+  },
+  {
+    "module": "FormNormalization",
+    "exit": 0,
+    "seconds": 3.919,
+    "peak_rss_kib": 1878692,
+    "termination": null
+  },
+  {
+    "module": "APNPolar",
+    "exit": 0,
+    "seconds": 2.81,
+    "peak_rss_kib": 1968540,
+    "termination": null
+  },
+  {
+    "module": "APNRadicalPartition",
+    "exit": 0,
+    "seconds": 4.015,
+    "peak_rss_kib": 1962024,
+    "termination": null
+  },
+  {
+    "module": "APNIncidence",
+    "exit": 0,
+    "seconds": 4.821,
+    "peak_rss_kib": 1957096,
+    "termination": null
+  },
+  {
+    "module": "FastWalsh",
+    "exit": 0,
+    "seconds": 1.41,
+    "peak_rss_kib": 489916,
+    "termination": null
+  },
+  {
+    "module": "Quadratic",
+    "exit": 0,
+    "seconds": 0.402,
+    "peak_rss_kib": 429236,
+    "termination": null
+  },
+  {
+    "module": "QuadraticWalshShift",
+    "exit": 0,
+    "seconds": 2.108,
+    "peak_rss_kib": 499300,
+    "termination": null
+  },
+  {
+    "module": "QuadraticWalshParseval",
+    "exit": 0,
+    "seconds": 0.708,
+    "peak_rss_kib": 450752,
+    "termination": null
+  },
+  {
+    "module": "QuadraticWalshRadical",
+    "exit": 0,
+    "seconds": 0.707,
+    "peak_rss_kib": 449188,
+    "termination": null
+  },
+  {
+    "module": "QuadraticWalshMatrix",
+    "exit": 0,
+    "seconds": 3.213,
+    "peak_rss_kib": 1749052,
+    "termination": null
+  },
+  {
+    "module": "QuadraticWalshFamily",
+    "exit": 0,
+    "seconds": 4.416,
+    "peak_rss_kib": 1712276,
+    "termination": null
+  },
+  {
+    "module": "APNCoordinateLabels",
+    "exit": 0,
+    "seconds": 4.218,
+    "peak_rss_kib": 1986864,
+    "termination": null
+  },
+  {
+    "module": "QuadraticMapWalsh",
+    "exit": 0,
+    "seconds": 3.815,
+    "peak_rss_kib": 1975732,
+    "termination": null
+  },
+  {
+    "module": "AlternatingRankParity",
+    "exit": 0,
+    "seconds": 3.819,
+    "peak_rss_kib": 1862904,
+    "termination": null
+  },
+  {
+    "module": "APNCountCongruence",
+    "exit": 0,
+    "seconds": 3.413,
+    "peak_rss_kib": 1979732,
+    "termination": null
+  },
+  {
+    "module": "QuadraticSemantics",
+    "exit": 0,
+    "seconds": 2.811,
+    "peak_rss_kib": 1963376,
+    "termination": null
+  },
+  {
+    "module": "RankFourPair",
+    "exit": 0,
+    "seconds": 3.214,
+    "peak_rss_kib": 1852992,
+    "termination": null
+  },
+  {
+    "module": "APNProfile29",
+    "exit": 0,
+    "seconds": 4.718,
+    "peak_rss_kib": 1977148,
+    "termination": null
+  },
+  {
+    "module": "FourFlatGeometry",
+    "exit": 0,
+    "seconds": 3.713,
+    "peak_rss_kib": 1965768,
+    "termination": null
+  },
+  {
+    "module": "NoThreePencil",
+    "exit": 0,
+    "seconds": 6.032,
+    "peak_rss_kib": 1764380,
+    "termination": null
+  },
+  {
+    "module": "AffineHalfRank",
+    "exit": 0,
+    "seconds": 4.418,
+    "peak_rss_kib": 1904064,
+    "termination": null
+  },
+  {
+    "module": "APNTwoFlatExclusion",
+    "exit": 0,
+    "seconds": 5.322,
+    "peak_rss_kib": 1979876,
+    "termination": null
+  },
+  {
+    "module": "BooleanANF",
+    "exit": 0,
+    "seconds": 2.411,
+    "peak_rss_kib": 1609004,
+    "termination": null
+  },
+  {
+    "module": "PfaffianLaplace2",
+    "exit": 0,
+    "seconds": 1.306,
+    "peak_rss_kib": 1649760,
+    "termination": null
+  },
+  {
+    "module": "QuadraticIndicator.QuadraticIndicator",
+    "exit": 0,
+    "seconds": 3.519,
+    "peak_rss_kib": 690828,
+    "termination": null
+  },
+  {
+    "module": "PfaffianDegree",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1682932,
+    "termination": null
+  },
+  {
+    "module": "PfaffianMatrix",
+    "exit": 0,
+    "seconds": 5.42,
+    "peak_rss_kib": 1955852,
+    "termination": null
+  },
+  {
+    "module": "MatchingDeterminant",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1914552,
+    "termination": null
+  },
+  {
+    "module": "MatchingPfaffian",
+    "exit": 0,
+    "seconds": 2.01,
+    "peak_rss_kib": 1905660,
+    "termination": null
+  },
+  {
+    "module": "MatchingIndicator",
+    "exit": 0,
+    "seconds": 2.309,
+    "peak_rss_kib": 1919468,
+    "termination": null
+  },
+  {
+    "module": "BilinearIndicator",
+    "exit": 0,
+    "seconds": 2.714,
+    "peak_rss_kib": 1941532,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFFibers",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1555224,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFTranslation",
+    "exit": 0,
+    "seconds": 1.607,
+    "peak_rss_kib": 1546212,
+    "termination": null
+  },
+  {
+    "module": "SingletonShear",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1550500,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFWeight",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1571684,
+    "termination": null
+  },
+  {
+    "module": "QuadraticComponentIndicator",
+    "exit": 0,
+    "seconds": 3.111,
+    "peak_rss_kib": 1963740,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFDerivativeWeight",
+    "exit": 0,
+    "seconds": 1.506,
+    "peak_rss_kib": 1530996,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFDescentSpec",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1561752,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFSupportBounds",
+    "exit": 0,
+    "seconds": 1.205,
+    "peak_rss_kib": 1529576,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFDescent",
+    "exit": 0,
+    "seconds": 2.009,
+    "peak_rss_kib": 1548172,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFStabilizer",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1529744,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFAffineBalance",
+    "exit": 0,
+    "seconds": 2.008,
+    "peak_rss_kib": 1565748,
+    "termination": null
+  },
+  {
+    "module": "SingletonFiberCount",
+    "exit": 0,
+    "seconds": 1.809,
+    "peak_rss_kib": 1550220,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFDivisibility",
+    "exit": 0,
+    "seconds": 2.209,
+    "peak_rss_kib": 1551952,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFLowWeight",
+    "exit": 0,
+    "seconds": 2.814,
+    "peak_rss_kib": 1558164,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFQuadraticSix",
+    "exit": 0,
+    "seconds": 1.406,
+    "peak_rss_kib": 1532040,
+    "termination": null
+  },
+  {
+    "module": "BinarySmallCode",
+    "exit": 0,
+    "seconds": 2.511,
+    "peak_rss_kib": 1779120,
+    "termination": null
+  },
+  {
+    "module": "BinarySmallCodeEquality",
+    "exit": 0,
+    "seconds": 8.533,
+    "peak_rss_kib": 1927524,
+    "termination": null
+  },
+  {
+    "module": "SingletonFlat",
+    "exit": 0,
+    "seconds": 4.417,
+    "peak_rss_kib": 1805704,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFLinear",
+    "exit": 0,
+    "seconds": 1.406,
+    "peak_rss_kib": 1581704,
+    "termination": null
+  },
+  {
+    "module": "AffineSingletonNormalization",
+    "exit": 0,
+    "seconds": 1.406,
+    "peak_rss_kib": 1752980,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourCertificates",
+    "exit": 0,
+    "seconds": 1.808,
+    "peak_rss_kib": 1560644,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolynomial",
+    "exit": 0,
+    "seconds": 1.506,
+    "peak_rss_kib": 1532608,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourRaw",
+    "exit": 0,
+    "seconds": 1.812,
+    "peak_rss_kib": 1504792,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch0",
+    "exit": 0,
+    "seconds": 5.622,
+    "peak_rss_kib": 1602108,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch1",
+    "exit": 0,
+    "seconds": 6.122,
+    "peak_rss_kib": 1621120,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch2",
+    "exit": 0,
+    "seconds": 5.927,
+    "peak_rss_kib": 1619944,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch3",
+    "exit": 0,
+    "seconds": 6.324,
+    "peak_rss_kib": 1620556,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch4",
+    "exit": 0,
+    "seconds": 6.832,
+    "peak_rss_kib": 1623148,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch5",
+    "exit": 0,
+    "seconds": 6.625,
+    "peak_rss_kib": 1624588,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch6",
+    "exit": 0,
+    "seconds": 6.423,
+    "peak_rss_kib": 1625056,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourBatch7",
+    "exit": 0,
+    "seconds": 6.326,
+    "peak_rss_kib": 1642012,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourEnumeration",
+    "exit": 0,
+    "seconds": 2.411,
+    "peak_rss_kib": 1492304,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourWeights",
+    "exit": 0,
+    "seconds": 1.606,
+    "peak_rss_kib": 1557228,
+    "termination": null
+  },
+  {
+    "module": "QuadraticCoefficientCode",
+    "exit": 0,
+    "seconds": 2.109,
+    "peak_rss_kib": 1784764,
+    "termination": null
+  },
+  {
+    "module": "BooleanANFAffine",
+    "exit": 0,
+    "seconds": 1.715,
+    "peak_rss_kib": 1608580,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyModel",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1775640,
+    "termination": null
+  },
+  {
+    "module": "AffineGraphFlats",
+    "exit": 0,
+    "seconds": 1.707,
+    "peak_rss_kib": 1768124,
+    "termination": null
+  },
+  {
+    "module": "BinaryPatternCounts",
+    "exit": 0,
+    "seconds": 4.223,
+    "peak_rss_kib": 1872344,
+    "termination": null
+  },
+  {
+    "module": "CoefficientPatterns",
+    "exit": 0,
+    "seconds": 1.811,
+    "peak_rss_kib": 1783052,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourRadicalRaw",
+    "exit": 0,
+    "seconds": 1.205,
+    "peak_rss_kib": 1451640,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolar",
+    "exit": 0,
+    "seconds": 3.315,
+    "peak_rss_kib": 1558224,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourDegree",
+    "exit": 0,
+    "seconds": 1.108,
+    "peak_rss_kib": 1507780,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch0",
+    "exit": 0,
+    "seconds": 10.643,
+    "peak_rss_kib": 1774840,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch1",
+    "exit": 0,
+    "seconds": 10.644,
+    "peak_rss_kib": 1776204,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch2",
+    "exit": 0,
+    "seconds": 11.544,
+    "peak_rss_kib": 1776424,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch3",
+    "exit": 0,
+    "seconds": 11.343,
+    "peak_rss_kib": 1773968,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch4",
+    "exit": 0,
+    "seconds": 11.24,
+    "peak_rss_kib": 1766920,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch5",
+    "exit": 0,
+    "seconds": 11.239,
+    "peak_rss_kib": 1811332,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch6",
+    "exit": 0,
+    "seconds": 12.948,
+    "peak_rss_kib": 1782196,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarBatch7",
+    "exit": 0,
+    "seconds": 13.05,
+    "peak_rss_kib": 1816240,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarEnumeration",
+    "exit": 0,
+    "seconds": 2.309,
+    "peak_rss_kib": 1496652,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourRadicalRepresentative",
+    "exit": 0,
+    "seconds": 9.034,
+    "peak_rss_kib": 1832040,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourRadical",
+    "exit": 0,
+    "seconds": 1.511,
+    "peak_rss_kib": 1553592,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourAffine",
+    "exit": 0,
+    "seconds": 4.618,
+    "peak_rss_kib": 1776948,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyCaseZero",
+    "exit": 0,
+    "seconds": 2.209,
+    "peak_rss_kib": 1796880,
+    "termination": null
+  },
+  {
+    "module": "CodeBasis",
+    "exit": 0,
+    "seconds": 6.63,
+    "peak_rss_kib": 1809648,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourAffineDifference",
+    "exit": 0,
+    "seconds": 1.709,
+    "peak_rss_kib": 1544448,
+    "termination": null
+  },
+  {
+    "module": "CodeBasisProperties",
+    "exit": 0,
+    "seconds": 2.519,
+    "peak_rss_kib": 1797412,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourSupport",
+    "exit": 0,
+    "seconds": 1.608,
+    "peak_rss_kib": 1537616,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPlane",
+    "exit": 0,
+    "seconds": 3.218,
+    "peak_rss_kib": 1572936,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourMoments",
+    "exit": 0,
+    "seconds": 1.205,
+    "peak_rss_kib": 1546032,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyGraph",
+    "exit": 0,
+    "seconds": 1.808,
+    "peak_rss_kib": 1782228,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourCosets",
+    "exit": 0,
+    "seconds": 6.923,
+    "peak_rss_kib": 1666048,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourCosetCountRaw",
+    "exit": 0,
+    "seconds": 20.174,
+    "peak_rss_kib": 2143500,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourCosetCount",
+    "exit": 0,
+    "seconds": 1.406,
+    "peak_rss_kib": 1555888,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairRaw",
+    "exit": 0,
+    "seconds": 1.106,
+    "peak_rss_kib": 1447868,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch0",
+    "exit": 0,
+    "seconds": 17.669,
+    "peak_rss_kib": 1986360,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch1",
+    "exit": 0,
+    "seconds": 10.844,
+    "peak_rss_kib": 1852072,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch2",
+    "exit": 0,
+    "seconds": 11.039,
+    "peak_rss_kib": 1851420,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch3",
+    "exit": 0,
+    "seconds": 10.939,
+    "peak_rss_kib": 1900972,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch4",
+    "exit": 0,
+    "seconds": 11.138,
+    "peak_rss_kib": 1882204,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch5",
+    "exit": 0,
+    "seconds": 11.139,
+    "peak_rss_kib": 1874184,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch6",
+    "exit": 0,
+    "seconds": 10.536,
+    "peak_rss_kib": 1884568,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairBatch7",
+    "exit": 0,
+    "seconds": 10.639,
+    "peak_rss_kib": 1877728,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairEnumeration",
+    "exit": 0,
+    "seconds": 2.31,
+    "peak_rss_kib": 1496772,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPairs",
+    "exit": 0,
+    "seconds": 1.606,
+    "peak_rss_kib": 1551324,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourPolarRanks",
+    "exit": 0,
+    "seconds": 2.61,
+    "peak_rss_kib": 1626340,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourCostComplement",
+    "exit": 0,
+    "seconds": 1.506,
+    "peak_rss_kib": 1542188,
+    "termination": null
+  },
+  {
+    "module": "QuadraticFourAudit",
+    "exit": 0,
+    "seconds": 3.513,
+    "peak_rss_kib": 1538988,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyRankOneRows",
+    "exit": 0,
+    "seconds": 4.222,
+    "peak_rss_kib": 1623196,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyCaseOne",
+    "exit": 0,
+    "seconds": 5.023,
+    "peak_rss_kib": 1845116,
+    "termination": null
+  },
+  {
+    "module": "NormalizedCostBudget",
+    "exit": 0,
+    "seconds": 2.411,
+    "peak_rss_kib": 1804660,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTwoPatterns",
+    "exit": 0,
+    "seconds": 2.012,
+    "peak_rss_kib": 1779132,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTwoProfiles",
+    "exit": 0,
+    "seconds": 1.507,
+    "peak_rss_kib": 1761900,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTwoSix",
+    "exit": 0,
+    "seconds": 2.008,
+    "peak_rss_kib": 1782640,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTwoSeven",
+    "exit": 0,
+    "seconds": 2.512,
+    "peak_rss_kib": 1795060,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyCaseTwo",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1773972,
+    "termination": null
+  },
+  {
+    "module": "SimplexLabels",
+    "exit": 0,
+    "seconds": 3.413,
+    "peak_rss_kib": 1790188,
+    "termination": null
+  },
+  {
+    "module": "SevenPointAffineCube",
+    "exit": 0,
+    "seconds": 6.324,
+    "peak_rss_kib": 1834512,
+    "termination": null
+  },
+  {
+    "module": "SevenPlaneIncidence",
+    "exit": 0,
+    "seconds": 2.41,
+    "peak_rss_kib": 1782016,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTypeB",
+    "exit": 0,
+    "seconds": 13.552,
+    "peak_rss_kib": 2156332,
+    "termination": null
+  },
+  {
+    "module": "QuadraticThreeRadicalLine",
+    "exit": 0,
+    "seconds": 6.423,
+    "peak_rss_kib": 1823456,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyCaseThree",
+    "exit": 0,
+    "seconds": 1.506,
+    "peak_rss_kib": 1762088,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyCommonRadical",
+    "exit": 0,
+    "seconds": 3.715,
+    "peak_rss_kib": 1834528,
+    "termination": null
+  },
+  {
+    "module": "ThreeCoordinateExtension",
+    "exit": 0,
+    "seconds": 2.712,
+    "peak_rss_kib": 1795468,
+    "termination": null
+  },
+  {
+    "module": "QuadraticThreeRadicalShape",
+    "exit": 0,
+    "seconds": 1.607,
+    "peak_rss_kib": 1774044,
+    "termination": null
+  },
+  {
+    "module": "CodeRadicalCoordinates",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1783316,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyTypeBTransport",
+    "exit": 0,
+    "seconds": 1.908,
+    "peak_rss_kib": 1764720,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyRankThreePencil",
+    "exit": 0,
+    "seconds": 1.807,
+    "peak_rss_kib": 1778140,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyRankThreeFinal",
+    "exit": 0,
+    "seconds": 2.912,
+    "peak_rss_kib": 1803880,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtySupportProfile",
+    "exit": 0,
+    "seconds": 2.81,
+    "peak_rss_kib": 1775140,
+    "termination": null
+  },
+  {
+    "module": "WeightThirtyClassification",
+    "exit": 0,
+    "seconds": 2.711,
+    "peak_rss_kib": 1794432,
+    "termination": null
+  },
+  {
+    "module": "APNEightFinal",
+    "exit": 0,
+    "seconds": 7.728,
+    "peak_rss_kib": 2007052,
+    "termination": null
+  }
+]

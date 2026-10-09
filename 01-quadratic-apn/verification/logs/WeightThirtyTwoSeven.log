@@ -1,0 +1,3 @@
+'BooleanANF.rank_two_not_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "WeightThirtyTwoSeven", "exit": 0, "seconds": 2.512, "peak_rss_kib": 1795060, "termination": null}

@@ -1,0 +1,13 @@
+{
+  "pdf_file": "../paper/apn-eight-bound.pdf",
+  "pdf_sha256": "437b758682bf24eb0804af9f4a9c676d883921f49bb6f9a3305a3b61e7dfc130",
+  "pdf_pages": 29,
+  "pdf_bytes": 530509,
+  "paper_worker_checks": {
+    "all_pages_visually_inspected": true,
+    "final_latex_log_warnings": 0,
+    "overfull_or_underfull_boxes": 0,
+    "independent_mathematical_review": "no blocking gaps; three exposition clarifications and one correspondence filename correction applied"
+  },
+  "packaging_check": "Final PDF and all source assets copied byte-for-byte from QA-approved paper"
+}

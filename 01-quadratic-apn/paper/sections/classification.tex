@@ -1,0 +1,301 @@
+\section{Four-variable quadratic facts}\label{sec:quad-four}
+The support classification will use only quadratic functions on a four-dimensional space $X$. We give their needed properties in full, including the geometric interpretation of the minimum-cost representatives. For $q\colon X\to\F$, define the integer
+\begin{equation}\label{eq:cost}
+\cost(q)=\wt(q)-2q(0),
+\end{equation}
+where $q(0)$ on the right is interpreted as $0$ or $1$ in $\mathbb Z$. The reason for this definition is
+\begin{equation}\label{eq:delta-cost}
+\wt(\one_{\{0\}}+q)=1+\cost(q).
+\end{equation}
+Indeed, adding the singleton indicator toggles only the value at zero.
+
+\begin{lemma}[Four-variable weights and costs]\label{lem:four-costs}
+Let $q$ be a nonzero quadratic function on $X=\F^4$.
+\begin{enumerate}[label=(\roman*)]
+\item If its polar has rank zero, then $q$ is affine. A nonconstant affine function has weight $8$ and cost $6$ or $8$; the constant-one function has weight $16$ and cost $14$.
+\item If its polar has rank four, then its weight is $6$ or $10$, so its cost is at least $4$.
+\item If its polar has rank two, then its weight is $4$, $8$, or $12$. For a fixed rank-two polar $B$, with radical $K$, there is exactly one function of cost $2$ with polar $B$: $p_B=\one_K$. The functions of cost $4$ with that polar are precisely the indicators of the three nonzero cosets of $K$.
+\item Every nonzero quadratic function has even cost at least $2$. Every quadratic function of weight $4$ is the indicator of an affine two-flat. A nonzero quadratic function with weight at most $7$ has weight $4$ or $6$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Rank zero is equivalent to affine degree by Lemma~\ref{lem:polar}, and affine balance proves (i). For rank four, Lemma~\ref{lem:walsh} at $u=0$ says $W_q(0)^2=16$, so $W_q(0)=\pm4$. Since $W_q(0)=16-2\wt(q)$, the weights are $6$ and $10$, proving (ii).
+
+For rank two, the alternating normal form in Lemma~\ref{lem:even-rank} shows
+\[
+B(x,y)=a(x)b(y)+b(x)a(y)
+\]
+for two independent linear forms $a,b\in X^*$. Its radical is $K=\ker a\cap\ker b$. The function
+\[
+p_B(x)=(1+a(x))(1+b(x))
+\]
+is the indicator of $K$ and has polar $B$. Any other function with the same polar differs by an affine function, so write it as $p_B+\ell+c$.
+
+If $\ell$ is nonzero on $K$, translation by an appropriate element of $K$ pairs opposite values of $q$; hence $q$ is balanced, of weight $8$. If $\ell$ vanishes on $K$, it belongs to $\langle a,b\rangle$, and $q$ descends to a function on $X/K\cong\F^2$ with nonzero alternating polar. Its degree-two ANF coefficient is one, so its weight on the quotient is odd. It is therefore either a singleton indicator or the complement of a singleton indicator. Pulling back gives a coset indicator, of weight $4$, or its complement, of weight $12$.
+
+The only way to have cost $2$ is weight $4$ and value one at zero. Among the cosets of $K$, only $K$ itself contains zero. Cost $4$ requires weight $4$ and value zero at zero, giving exactly the other three cosets. This proves (iii). All other possible rank-two costs are $6,8,10,12$. Combining the three rank cases proves (iv), including the affine-plane description of weight-four support.
+\end{proof}
+
+\begin{lemma}[Linear corrections and offsets]\label{lem:offsets}
+Fix a rank-two polar $B$ with radical $K$, and let
+\[
+I_B=\{B(v,\cdot):v\in X\}\subseteq X^*.
+\]
+This is the two-dimensional annihilator of $K$. The quotient map
+\[
+X/K\longrightarrow I_B,\qquad v+K\longmapsto B(v,\cdot)
+\]
+is a linear isomorphism. Relative to $p_B=\one_K$:
+\begin{enumerate}[label=(\roman*)]
+\item the indicator of $v+K$ differs from $p_B$ by an affine function whose linear part is $B(v,\cdot)$;
+\item a same-polar quadratic is balanced if and only if the linear part of its affine correction lies outside $I_B$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+The kernel of $v\mapsto B(v,\cdot)$ is $K$, so its image has dimension two and consists exactly of functionals vanishing on $K$. For (i), the translated indicator is $p_B(x+v)$, and the polarization identity gives
+\[
+p_B(x+v)+p_B(x)=B(v,x)+p_B(v)+p_B(0).
+\]
+For (ii), the proof of Lemma~\ref{lem:four-costs} shows that a correction not vanishing on $K$ is balanced, whereas a correction vanishing on $K$ has weight $4$ or $12$.
+\end{proof}
+
+It is useful to describe rank-two polars intrinsically. For $a,b\in X^*$, let $a\wedge b$ denote the alternating form $(x,y)\mapsto a(x)b(y)+b(x)a(y)$. This notation denotes the polar, so no assumption is made about which linear terms appear in the ANF of the product $ab$ after a change of coordinates. Every nonzero rank-two polar is $a\wedge b$ for independent $a,b$. Its \emph{factor plane} is $\langle a,b\rangle=I_B$, which is independent of the chosen factorization.
+
+\begin{lemma}[Small spaces of rank-two polars]\label{lem:rank-two-pencil}
+Let $\mathcal Q\subseteq\Alt(X)$ be a linear space whose nonzero forms all have rank two.
+\begin{enumerate}[label=(\roman*)]
+\item If $\dim\mathcal Q=2$, its nonzero forms can be written
+\[
+a\wedge b,\quad a\wedge c,\quad a\wedge(b+c)
+\]
+with $a,b,c$ independent.
+\item If $\dim\mathcal Q=3$, it has one of the following two forms:
+\begin{align*}
+\text{type A: }&\mathcal Q=\{a\wedge b:b\in W\},
+\quad X^*=\langle a\rangle\oplus W;\\
+\text{type B: }&\mathcal Q=\Alt(U)=\langle a\wedge b,a\wedge c,b\wedge c\rangle,
+\quad U=\langle a,b,c\rangle\subseteq X^*.
+\end{align*}
+In type B the notation $\Alt(U)$ here means the span of wedges of elements of $U$, viewed as forms on $X$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Two distinct rank-two forms have a rank-two sum exactly when their factor planes meet in a line. Indeed, if the planes are disjoint, choose their four basis functionals as coordinates. The sum then has two nonsingular two-by-two alternating blocks and rank four. If they meet in $\langle a\rangle$, write the forms as $a\wedge b$ and $a\wedge c$. Their sum is $a\wedge(b+c)$, of rank two. This proves (i).
+
+For (ii), choose the first two basis elements as in (i), and let $P$ be the factor plane of a third basis element. It meets both $\langle a,b\rangle$ and $\langle a,c\rangle$ in a line. If $a\in P$, then the third form is $a\wedge d$. Independence of the three forms means that $b,c,d$ are independent modulo $a$, giving type A.
+
+If $a\notin P$, the two intersection lines are distinct, since the intersection of the first two factor planes is $\langle a\rangle$. They span $P$, so $P\subseteq U=\langle a,b,c\rangle$. The third form lies in the three-dimensional space spanned by $a\wedge b,a\wedge c,b\wedge c$. Independence now forces equality with that whole space, giving type B.
+\end{proof}
+
+\section{Normalizing a degree-four word of weight 30}\label{sec:normalize}
+\begin{theorem}[Specialized weight-$30$ classification]\label{thm:weight-thirty}
+Let $f\colon\F^8\to\F$ have degree at most four and weight $30$. Then there are affine four-flats $U,W\subseteq\F^8$ with complementary direction spaces and $|U\cap W|=1$ such that
+\[
+f=\one_U+\one_W,
+\qquad \supp(f)=U\symdiff W.
+\]
+\end{theorem}
+The theorem is the relevant special case of the established low-weight classification~\cite{KT,Ye}. The following proof uses neither that theorem nor an exhaustive enumeration of all degree-four words.
+
+\subsection{A singleton four-flat}
+\begin{lemma}\label{lem:singleton}
+Every $30$-point subset $S$ of $\F^8$ has an affine four-flat meeting $S$ in exactly one point.
+\end{lemma}
+\begin{proof}
+Choose $p\in S$, and put $T=S+p$, so $0\in T$ and $|T\setminus\{0\}|=29$. Construct a linear subspace $A$ avoiding $T\setminus\{0\}$. Start with $A=\{0\}$. If $\dim A=d\le3$, there are $2^{8-d}-1\ge31$ nonzero cosets of $A$. At most $29$ of them meet $T\setminus\{0\}$. Choose a nonzero coset $v+A$ that does not meet $T$. Then
+\[
+\langle A,v\rangle=A\cup(v+A)
+\]
+still avoids $T\setminus\{0\}$ and has dimension $d+1$. After four steps, $p+A$ is the desired affine four-flat.
+\end{proof}
+
+Choose a complementary four-space and affine coordinates $(x,y)\in X\times Y$, with $X=Y=\F^4$, so that the singleton flat is the fiber $y=0$. Degree and weight are preserved by this affine bijection.
+
+Write the ANF of $f$ by its $x$-monomials. The coefficient of $x_1x_2x_3x_4$ is independent of $y$, because the total degree is at most four. On the singleton fiber it is one by cube parity. Therefore every fiber $x\mapsto f(x,y)$ has odd weight. If $k$ fibers are not singletons, then
+\[
+30=\sum_{y\in Y}\wt(f(\cdot,y))\ge(16-k)+3k=16+2k,
+\]
+so $k\le7$. In particular at least nine fibers are singletons.
+
+\subsection{Simultaneous singleton normalization}
+Let $c_i(y)$ be the coefficient of the cubic $x$-monomial omitting $x_i$. Each $c_i$ is affine in $y$. If the fiber is the singleton indicator at $a\in X$, its ANF is
+\[
+\delta_a(x)=\prod_{i=1}^4(1+x_i+a_i),
+\]
+and its cubic coefficient omitting $x_i$ is $1+a_i$. Put $a_i(y)=1+c_i(y)$ and substitute the old $x$ by $x+a(y)$. This is an affine bijection and its own inverse in the $x$ coordinate. The new cubic coefficient is $c_i(y)+a_i(y)=1$: only the degree-four $x$ term can contribute another cubic term. The quartic coefficient remains one.
+
+Thus, after this shear, we have
+\begin{equation}\label{eq:normalized}
+f(x,y)=\delta_0(x)+q_y(x),\qquad
+\delta_0(x)=\prod_{i=1}^4(1+x_i).
+\end{equation}
+Every $q_y$ has $x$-degree at most two. More precisely, the coefficient of an $x$-monomial indexed by $I$ has $y$-degree at most $4-|I|$. Every singleton fiber is now at $x=0$ and hence has $q_y=0$. Conversely, if a normalized fiber is a singleton at $a$, its cubic coefficients being one force $a=0$. Therefore
+\begin{equation}\label{eq:active-bound}
+E:=\{y:q_y\ne0\}\quad\text{satisfies}\quad |E|\le7.
+\end{equation}
+The exact weight formula~\eqref{eq:delta-cost} yields
+\begin{equation}\label{eq:cost-fourteen}
+\sum_{y\in Y}\cost(q_y)=30-16=14.
+\end{equation}
+Moreover, every nonconstant $x$-coefficient has $y$-degree at most three. Its sum over the four-cube $Y$ vanishes by Lemma~\ref{lem:anf-basic}. Consequently,
+\begin{equation}\label{eq:constant-sum}
+\sum_{y\in Y}q_y(x)\quad\text{is a constant function of }x,
+\end{equation}
+where this sum is in $\F$. In particular, both its quadratic part and its linear part vanish. Its constant term is not required to vanish. This distinction is used repeatedly below.
+
+\section{The coefficient code and the four cases}\label{sec:classify}
+Let $D$ be the span of the six functions on $Y$ that occur as coefficients of the quadratic $x$-monomials in $q$. Each has degree at most two. Let $E'$ be the union of their supports; equivalently, $y\in E'$ exactly when $q_y$ has nonzero polar. Then $E'\subseteq E$ and $|E'|\le7$. Write $d=\dim D$.
+
+\subsection{The dimension bound and evaluation patterns}
+Every nonzero word in $D$ has weight at least four by Lemma~\ref{lem:anf-basic}. At every active position $y\in E'$, evaluation is a nonzero linear functional on $D$, so exactly $2^{d-1}$ words have value one there. If $d>0$, double counting gives
+\begin{equation}\label{eq:code-count}
+4(2^d-1)\le\sum_{a\in D\setminus\{0\}}\wt(a)
+=|E'|2^{d-1}\le7\cdot2^{d-1}.
+\end{equation}
+Thus $2^{d-1}\le4$ and $d\le3$. The case $d=0$ is separate and also allowed.
+
+Choose a basis $a_1,\ldots,a_d$ of $D$. The polar of row $q_y$ can be written uniquely as
+\begin{equation}\label{eq:polar-code}
+B_y=\sum_{j=1}^d a_j(y)Q_j,
+\end{equation}
+with independent alternating forms $Q_1,\ldots,Q_d$ on $X$. To check independence, express each of the six original coefficient functions in the chosen basis. The resulting six-by-$d$ matrix has row span all of $\F^d$, because those coefficient functions span $D$. A dependence among the $Q_j$ would give a nonzero vector killed by every row, a contradiction.
+
+Rows outside $E'$ are affine. A nonzero such row costs at least six, whereas each row in $E'$ costs at least two. Therefore:
+\begin{itemize}
+\item if $|E'|\ge5$, there are no extra nonzero affine rows, since $2|E'|+6>14$;
+\item if $|E'|=4$, an extra row can occur only at the exact boundary: it has cost six and the four quadratic rows all have cost two.
+\end{itemize}
+These conclusions use nonnegativity of every row cost, already proved in Lemma~\ref{lem:four-costs}.
+
+\subsection{Case zero}
+Suppose $d=0$. Every nonzero row is affine. A constant-one row costs $14$ and therefore consumes the entire budget. In that case $q=\one_{X\times\{y_0\}}$ for some $y_0$, the indicator of an affine four-flat.
+
+If no constant-one row occurs, every nonzero row is a nonconstant affine function and costs six or eight. There can be at most two. There cannot be exactly one, because its nonzero linear part would contradict~\eqref{eq:constant-sum}. Thus there are exactly two, at $y_0,y_1$, and their linear parts agree. Their costs sum to $14$, so one has cost six and the other cost eight; their constant terms are opposite. Write the two functions as $\ell(x)+c$ and $\ell(x)+c+1$, with $\ell\ne0$.
+
+Parameterize the affine line joining the row positions by $y=y_0+t(y_0+y_1)$. The support of $q$ is given by this line together with one affine equation $\ell(x)+c+t=1$. It is an affine four-flat: there is one free line parameter and three free $x$ coordinates. Exactly one of the two row functions is one at $x=0$, so this flat meets $U=\{(0,y):y\in Y\}$ in exactly one point. The same intersection statement holds for $X\times\{y_0\}$ in the constant-row case. Since $f=\one_U+q$, this proves the desired representation when $d=0$.
+
+\subsection{Case one}
+Suppose $d=1$. The unique nonzero coefficient word has support $E'$ of size $s\in\{4,6\}$: it has quadratic degree, is supported on at most seven points, and Lemma~\ref{lem:four-costs} applies. All active rows have the same nonzero polar $Q$. If $Q$ had rank four, their total cost would be at least $4s\ge16$. Thus $Q$ has rank two. Write $K=\rad Q$ and $p=\one_K$.
+
+If $s=6$, there are no extra affine rows. The baseline cost is $12$; since all costs are even, the total cost $14$ forces exactly one row of cost four and five of cost two. The six reference rows $p$ cancel in their sum. The replacement of one reference row by a cost-four coset indicator contributes a nonzero linear part by Lemma~\ref{lem:offsets}. This contradicts~\eqref{eq:constant-sum}. Hence $s=4$.
+
+At $s=4$, an extra affine row would have cost six and all four quadratic rows would equal $p$. Their sum is zero, while the extra affine row has nonzero linear part. Again~\eqref{eq:constant-sum} rules this out. There are therefore exactly four nonzero rows.
+
+The possible positive rank-two costs are $2,4,6,8,10,12$. The only partitions of $14$ into four such costs, in nondecreasing order, are
+\[
+(2,2,2,8),\qquad (2,2,4,6),\qquad (2,4,4,4).
+\]
+A cost at least ten would already give total at least sixteen. In each of the first two partitions, exactly one row is balanced. Relative to the common reference $p$, its linear correction lies outside $I_Q$, whereas all the other corrections lie in $I_Q$. Their sum cannot be zero, contrary to~\eqref{eq:constant-sum}. Only $(2,4,4,4)$ remains.
+
+Thus the four rows are coset indicators of $K$, exactly one of them the zero coset. Let their offsets in $X/K$ be $v_1,v_2,v_3,v_4$. The isomorphism of Lemma~\ref{lem:offsets} and vanishing linear sum give
+\[
+v_1+v_2+v_3+v_4=0.
+\]
+One offset is zero and the other three are nonzero. Three nonzero vectors in $\F^2$ sum to zero only if all three are distinct: if two coincided, the third would have to be zero. Therefore every coset occurs exactly once.
+
+The support $E'$ of the coefficient word is an affine two-flat, by its weight four. The assignment $\phi\colon E'\to X/K$ of offsets is a bijection of four-point affine planes, hence is affine. For completeness, choose an origin $y_0\in E'$ and two independent differences $u,v$. The images of $y_0+u$ and $y_0+v$ determine independent image differences, and the last image is forced by the zero sum of the four points. This proves affinity. Consequently,
+\[
+W=\{(x,y):y\in E',\ x+K=\phi(y)\}
+\]
+is an affine four-flat, with two free coordinates in $E'$ and two in $K$. It meets $U=\{x=0\}$ once, since $\phi$ is bijective. Here $q=\one_W$ and $f=\one_U+\one_W$, completing case one.
+
+\subsection{Case two}
+Suppose $d=2$. Let $n_{10},n_{01},n_{11}$ be the multiplicities of the three nonzero evaluation patterns $(a_1(y),a_2(y))$. Each of the three nonzero codewords has weight four or six. If their weights are $w_1,w_2,w_3$, then, for example,
+\[
+n_{10}=\frac{w_1+w_3-w_2}{2},
+\]
+and similarly for the other two. Their total is $(w_1+w_2+w_3)/2\le7$. Thus either all weights are four, giving pattern multiplicities $(2,2,2)$, or one weight is six and the other two are four, giving a permutation of $(1,3,3)$. These are all possibilities.
+
+In the first case, $|E'|=6$, so there are no extra affine rows. Each of the three nonzero polars $Q_1,Q_2,Q_1+Q_2$ occurs twice. A rank-four polar would contribute at least four extra cost units above the baseline twelve, exceeding fourteen. All three polars therefore have rank two. Exactly one row has cost four and the other five cost two. The reference radical indicators occur in pairs and cancel. The single cost-four replacement contributes a nonconstant affine difference by Lemma~\ref{lem:offsets}, contradicting~\eqref{eq:constant-sum}.
+
+In the second case, $|E'|=7$. Every row must have cost two, and all three nonzero polar types have odd multiplicity. They all have rank two, and Lemma~\ref{lem:rank-two-pencil} writes them as
+\[
+a\wedge b,\quad a\wedge c,\quad a\wedge(b+c)
+\]
+with $a,b,c$ independent. Their radical indicators are
+\[
+(1+a)(1+b),\quad(1+a)(1+c),\quad(1+a)(1+b+c).
+\]
+Their sum is
+\[
+(1+a)\bigl((1+b)+(1+c)+(1+b+c)\bigr)=1+a,
+\]
+which is nonconstant. Because all three multiplicities are odd, this is the sum of all rows, again contradicting~\eqref{eq:constant-sum}. Thus case two is impossible.
+
+\subsection{Case three and the geometry of the active positions}
+Suppose $d=3$. Both inequalities in~\eqref{eq:code-count} are equalities. Hence $|E'|=7$ and every nonzero word of $D$ has weight four. Every active row has cost two, and there are no extra affine rows. Thus every active row has a rank-two polar and is its radical indicator.
+
+The seven evaluation columns are exactly the seven distinct nonzero vectors of $\F^3$. Here is a direct proof that does not assume this code is projective. Let $n_v$ be the multiplicity of the nonzero pattern $v$ and set $n_0=0$. We have $\sum_vn_v=7$, and for every $u\ne0$,
+\[
+\sum_{u\cdot v=1}n_v=4.
+\]
+Therefore $\sum_v(-1)^{u\cdot v}n_v=-1$ for $u\ne0$, while the corresponding sum for $u=0$ is seven. Character orthogonality on $\F^3$ yields
+\[
+8n_v=7-\sum_{u\ne0}(-1)^{u\cdot v}.
+\]
+The final sum is seven at $v=0$ and minus one at $v\ne0$. Thus $n_0=0$ and $n_v=1$ for every nonzero $v$. Since every nonzero evaluation pattern occurs, every nonzero combination of $Q_1,Q_2,Q_3$ has rank two.
+
+Let $S_j=\supp(a_j)$. Each $S_j$ is an affine two-plane, since $a_j$ is quadratic of weight four. The pattern counts give
+\[
+|S_i\cap S_j|=2\quad(i\ne j),\qquad |S_1\cap S_2\cap S_3|=1.
+\]
+The first two planes meet in an affine line, so their affine span is a three-flat $H$. The third plane meets $S_1\cup S_2$ in $2+2-1=3$ distinct points. Any three distinct points of a binary affine two-plane span that plane. Consequently $S_3\subseteq H$. Their union $E'$ has seven points and therefore equals $H\setminus\{p\}$ for a unique point $p\in H$.
+
+Choose affine coordinates $y=(v,t)\in\F^3\times\F$ with $H=\{t=0\}$ and $p=(0,0)$. A coefficient function $a_j$, being zero on $t=1$, has the form $(1+t)b_j(v)$. Its total degree at most two forces $\deg b_j\le1$: in its unique ANF each degree-$k$ monomial of $b_j$ contributes a degree-$(k+1)$ monomial containing $t$. Since $a_j(p)=0$, the constant term of $b_j$ is zero. Thus
+\[
+a_j(v,t)=(1+t)\ell_j(v)
+\]
+for independent linear forms $\ell_1,\ell_2,\ell_3$. Changing the $v$ coordinates, we may assume $\ell_j(v)=v_j$. The polar in an active row is now $Q_v=\sum_jv_jQ_j$, for $v\ne0$ at $t=0$.
+
+\subsection{Eliminating the common-factor type}
+By Lemma~\ref{lem:rank-two-pencil}, the three-dimensional polar space is type A or type B. In type A, choose a fixed nonzero $a\in X^*$ and a linear parameterization $v\mapsto b_v$ of a complementary three-space in $X^*$. The seven row functions are
+\[
+p_{Q_v}=(1+a)(1+b_v),\qquad v\ne0.
+\]
+Since each coordinate occurs four times among the seven nonzero $v$, $\sum_{v\ne0}b_v=0$. The sum of the seven rows is therefore $1+a$, nonconstant. This contradicts~\eqref{eq:constant-sum}, eliminating type A.
+
+\subsection{Reconstructing the two flats in the remaining type}
+In type B, the forms are all wedges from a three-space $U\subseteq X^*$. Put $R=\ann(U)$, a line in $X$. Choose linear coordinates $x=(z,s)\in\F^3\times\F$ with $R=\{z=0\}$. A three-by-three alternating matrix
+\[
+\begin{pmatrix}
+0&\alpha&\beta\\
+\alpha&0&\gamma\\
+\beta&\gamma&0
+\end{pmatrix}
+\]
+has radical vector $(\gamma,\beta,\alpha)$. Direct multiplication gives zero. For a nonzero matrix the rank is two, so that vector spans the radical; its dependence on the three entries is a linear isomorphism.
+
+The map from the row parameter $v$ to its alternating matrix on $X/R$ is also a linear isomorphism. Composing it with the displayed radical-vector map gives $v\mapsto Av$ for some $A\in\operatorname{GL}(3,\F)$. Set $z_{\mathrm{new}}=A^{-1}z_{\mathrm{old}}$. This simultaneous linear coordinate change makes the radical line of $Q_v$ equal to $\{0,v\}$. Lifting back to $X$, and using the unique cost-two representative, we obtain
+\begin{equation}\label{eq:type-b-rows}
+q_{(v,0)}(z,s)=\one_{\{z\in\{0,v\}\}}\quad(v\ne0),
+\qquad q_{(0,0)}=0,\qquad q_{(v,1)}=0.
+\end{equation}
+All previous changes of the $x$ coordinates in this step are linear, so the singleton term in~\eqref{eq:normalized} remains the indicator of $z=s=0$.
+
+Define
+\begin{align}
+U'&=\{(z,s,v,t):z=0,\ s=1+t\},\label{eq:type-b-flat1}\\
+W'&=\{(z,s,v,t):t=0,\ z=v\}.\label{eq:type-b-flat2}
+\end{align}
+Each is an affine four-flat: $v,t$ are free in $U'$, and $v,s$ are free in $W'$. Their intersection is the single point $(z,s,v,t)=(0,1,0,0)$.
+
+We verify the function identity, including the exceptional fiber. If $t=1$, then $q=0$ and $f$ is one exactly at $z=s=0$; this is exactly $U'$ in that slice, while $W'$ is empty. If $t=0$ and $v\ne0$, then $q$ contains $z=0$ and $z=v$, with both values of $s$. Toggling the singleton $z=s=0$ leaves $z=0,s=1$ and $z=v$ with arbitrary $s$. These are precisely the disjoint portions of $U'$ and $W'$. Finally, if $t=v=0$, then $q=0$ and the original singleton remains. In that fiber, $W'$ contains both $z=0,s=0$ and $z=0,s=1$, while $U'$ contains only $z=0,s=1$; their symmetric difference is the required singleton. Thus $f=\one_{U'}+\one_{W'}$ in every fiber.
+
+\begin{proof}[Completion of Theorem~\ref{thm:weight-thirty}]
+The dimension bound exhausts $d=0,1,2,3$. Cases zero and one give the required pair directly, case two is impossible, and case three gives the explicit pair~\eqref{eq:type-b-flat1}--\eqref{eq:type-b-flat2}. Two affine four-flats in an eight-space with a singleton intersection have direction spaces intersecting only at zero: after translating their intersection point to zero, their intersection is the intersection of the directions. The two four-dimensional directions are therefore complementary. Undoing the affine coordinate changes preserves the support identity, dimensions, and intersection size, proving the theorem in the original coordinates.
+\end{proof}
+
+\subsection{The exact support model at the zero label}
+\begin{corollary}\label{cor:two-flat-model}
+If $f$ satisfies Theorem~\ref{thm:weight-thirty} and $f(0)=1$, then there are complementary linear four-spaces $A,V$ in the original domain and $c\in A\setminus\{0\}$ such that
+\begin{equation}\label{eq:nonzero-support}
+\supp(f)\setminus\{0\}
+=\bigl(A\setminus\{0,c\}\bigr)
+\ \cup\ \bigl((c+V)\setminus\{c\}\bigr).
+\end{equation}
+The two sets on the right are disjoint.
+\end{corollary}
+\begin{proof}
+Write $\supp(f)=U\symdiff W$ as in the theorem. Since $f(0)=1$, zero belongs to exactly one flat. Interchange them if necessary so $0\in U$ and $0\notin W$. An affine flat containing zero is linear; set $A=U$. Let $c$ be the unique point of $U\cap W$, and let $V$ be the direction of $W$. Then $W=c+V$, $c\in A$, and $c\ne0$ because $0\notin W$. The directions are complementary, so $A\cap(c+V)=\{c\}$. Taking their symmetric difference and removing zero gives~\eqref{eq:nonzero-support}.
+\end{proof}
+This last normalization is linear in the original component-label space. It does not translate labels after they have been interpreted as a linear pencil. That distinction prevents an invalid use of affine label changes in the APN application.

@@ -1,0 +1,3 @@
+'APNRedo.sum_nondegenerate_of_disjoint_half_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "RankFourPair", "exit": 0, "seconds": 3.214, "peak_rss_kib": 1852992, "termination": null}

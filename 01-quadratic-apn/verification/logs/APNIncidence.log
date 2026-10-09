@@ -1,0 +1,17 @@
+<LEAN_SOURCE>/APNIncidence.lean:15:8: warning: automatically included section variable(s) unused in theorem 'APNRedo.mem_radicalPoints':
+  [FiniteDimensional F E]
+  [Nontrivial E]
+  [Fintype (E →ₗ[F] F)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional F E] [Nontrivial E] [Fintype (E →ₗ[F] F)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/APNIncidence.lean:23:0: warning: automatically included section variable(s) unused in theorem 'APNRedo.card_radicalPoints':
+  [FiniteDimensional F E]
+  [Nontrivial E]
+  [Fintype (E →ₗ[F] F)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional F E] [Nontrivial E] [Fintype (E →ₗ[F] F)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'APNRedo.apn_radical_incidence_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "APNIncidence", "exit": 0, "seconds": 4.821, "peak_rss_kib": 1957096, "termination": null}

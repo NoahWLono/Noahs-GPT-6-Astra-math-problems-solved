@@ -1,14 +1,19 @@
-# Publication record
+# Publication and preservation notes
 
-This repository packages the completed quadratic-family project only.
+This is a local review package. Preparing it does not publish it or change the remote repository.
 
-- All 956 Lean proof modules and the Lean lakefile are byte-for-byte unchanged from the verified source package.
-- Frozen proof-source manifests, successful replay evidence, theorem/axiom reports, the two final reports, and source-only reproduction instructions are retained.
-- One existing uniform replay log was sanitized: its build-directory prefix was replaced by `<SOURCE_ROOT>/`. Log diagnostics and proof source bytes were not changed.
-- The proof-package `SHA256SUMS` was regenerated after that log-only sanitization. The root manifest additionally covers the publication layout.
-- The canonical report remains in the directory layout expected by its renderer and archive-sealing script.
-- Only editable LaTeX, frozen metadata, its README and manifest, and the final typeset PDF were copied from the LaTeX project. Intermediate `.aux`, `.log`, `.out`, and `.toc` files were omitted.
-- Old report versions, working notes, private conversation information, unrelated projects, unsuccessful experiments, compiled proof objects, vendored mathlib, and build caches are excluded.
-- No project-wide license or copyright assignment was added. Existing third-party font license notices are preserved.
+## Layout
 
-The long Lean replays described in the reports are recorded completed checks from the original verification work. Publication does not imply that another full Lean replay has occurred. Publication-time integrity and finite-check results are recorded in `publication-checks.json`.
+Each mathematical problem is grouped in its own numbered folder. The quadratic/APN materials are in `01-quadratic-apn/`. The new proof's 136-module dependency closure plus endpoint-inspection module is independent of the archived package. The LaTeX/PDF and verification records belong alongside that proof.
+
+The earlier 1,954-file quadratic-family package is copied into `01-quadratic-apn/archive-known-extremal-family/`, retaining its complete internal relative layout and every file's latest published bytes. The remote README and root checksum file supersede the initial local archive copies; all 1,953 entries in the latest remote checksum manifest were verified against the staged archive. Nothing is deleted from the original working directories. The archive's own checksums remain valid. Fonts and PDFs already present in that archive are intentional document assets, not proof caches or executable binaries.
+
+## History-preserving publication
+
+An eventual authorized repository update must use the then-current remote HEAD as its parent and retain existing commit history. Do not force-push, reset, or replace the repository's history. The old working package has no local Git commit history; its `.git` directory is therefore not a substitute for the remote's history and is not copied into this deliverable. Existing remote content must be compared with this manifest before applying moves. In particular, the current remote root README is newer than the archived family README; its prior version remains in Git history.
+
+## Scope and checks
+
+No new CI configuration, license choice, or external write is made here. Prior-art status is separate from proof correctness. The old family's construction remains established; it is not relabelled as a novel APN result. The new lower bound does not prove sharpness or an attaining construction.
+
+The package excludes internal research notes, abandoned experiments, compiled Lean objects, dependency checkouts, credentials, and machine-specific build paths. Only the actual imported proof closure is copied into the new proof tree. Source bytes are frozen by a separate source manifest. A root `SHA256SUMS` covers the final staged files except itself; regenerate it whenever reviewed assets change.

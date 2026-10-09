@@ -1,0 +1,7 @@
+<LEAN_SOURCE>/BinarySmallCodeEquality.lean:9:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.code_baseline_sum':
+  [DecidableEq Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+
+AUDIT {"module": "BinarySmallCodeEquality", "exit": 0, "seconds": 8.533, "peak_rss_kib": 1927524, "termination": null}

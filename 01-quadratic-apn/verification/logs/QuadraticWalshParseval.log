@@ -1,0 +1,4 @@
+'QuadraticWalshParseval.walsh_parseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuadraticWalshParseval.quadratic_bent_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticWalshParseval", "exit": 0, "seconds": 0.708, "peak_rss_kib": 450752, "termination": null}

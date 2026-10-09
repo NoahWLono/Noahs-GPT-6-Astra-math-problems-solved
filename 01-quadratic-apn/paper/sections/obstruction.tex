@@ -1,0 +1,170 @@
+\section{An affine obstruction for alternating forms}\label{sec:obstruction}
+The next argument is independent of APN functions and of the weight-$30$ classification. It is the rank-geometric step that will exclude the remaining component count.
+
+\begin{lemma}[No three-dimensional nonsingular pencil in dimension four]\label{lem:no-three-pencil}
+Let $R$ be four-dimensional. There is no linear map
+\[
+C\colon\F^3\longrightarrow\Alt(R)
+\]
+such that $C(u)$ is nonsingular for every $u\ne0$.
+\end{lemma}
+\begin{proof}
+Choose a basis of $R$. For a four-by-four alternating matrix $A$, the matching Pfaffian is
+\[
+p(A)=A_{12}A_{34}+A_{13}A_{24}+A_{14}A_{23},
+\qquad \det A=p(A)^2.
+\]
+Every entry of $C(u)$ is linear in the three coordinates of $u$. Therefore $u\mapsto p(C(u))$ has Boolean degree at most two. It equals zero at $u=0$, because $C(0)=0$, and it equals one at all seven nonzero points, because their matrices are nonsingular. It would have odd weight seven. This contradicts cube parity, Lemma~\ref{lem:anf-basic}, because its degree is less than three.
+\end{proof}
+
+\begin{lemma}[Half-rank endomorphisms are projections]\label{lem:half-rank}
+Let $E$ have dimension $2r$. If an endomorphism $Q$ satisfies
+\[
+\rank Q=\rank(I+Q)=r,
+\]
+then $Q^2=Q$.
+\end{lemma}
+\begin{proof}
+Both kernels have dimension $r$ by rank-nullity. If $x$ is in both, then $Qx=0$ and $x+Qx=0$, so $x=0$. Hence
+\[
+E=\ker Q\oplus\ker(I+Q).
+\]
+On the first summand $Q$ is zero, and on the second it is the identity. Thus $Q^2=Q$ on both summands and therefore on $E$.
+\end{proof}
+
+\begin{theorem}[The affine half-rank obstruction]\label{thm:affine-obstruction}
+Let $E$ be eight-dimensional and let $L\subseteq\Alt(E)$ be a three-dimensional linear space of alternating forms. Assume every nonzero form in $L$ is nonsingular. There is no alternating form $B$ such that
+\[
+\rank(B+D)=4\qquad\text{for every }D\in L.
+\]
+Equivalently, an affine three-space of rank-four alternating forms cannot have all its nonzero directions nonsingular.
+\end{theorem}
+\begin{proof}
+We give each normalization, algebraic identity, and restriction explicitly.
+
+\paragraph{Step 1: normalize using a nonsingular direction.}
+Choose $0\ne J\in L$. By hypothesis, $J$ is nonsingular. The map $z\mapsto J(\cdot,z)$ is an isomorphism from $E$ to $E^*$. Therefore every bilinear form $D$ determines a unique endomorphism $M_D$ by
+\begin{equation}\label{eq:normalization-form}
+D(x,y)=J(x,M_Dy).
+\end{equation}
+The map $D\mapsto M_D$ is linear and preserves rank, since it is obtained by composing the curried form with an isomorphism. Also $M_J=I$.
+
+Because both $J$ and $D$ are alternating, hence symmetric in characteristic two, $M_D$ is $J$-selfadjoint:
+\[
+J(M_Dx,y)=J(y,M_Dx)=D(y,x)=D(x,y)=J(x,M_Dy).
+\]
+Put $T=M_B$ and, for $D\in L$, write $S_D=M_D$.
+
+\paragraph{Step 2: every affine normalized member is idempotent.}
+Both $B+D$ and $B+D+J$ belong to $B+L$, so
+\[
+\rank(T+S_D)=\rank(I+T+S_D)=4.
+\]
+Lemma~\ref{lem:half-rank} gives $(T+S_D)^2=T+S_D$ for every $D\in L$. Taking $D=0$ gives $T^2=T$. Expanding and canceling $T^2=T$ yields
+\begin{equation}\label{eq:direction-identity}
+S_D^2+S_D=TS_D+S_DT.
+\end{equation}
+
+\paragraph{Step 3: directions commute and their squares preserve the eigenspaces.}
+Apply~\eqref{eq:direction-identity} to $D,D'$, and $D+D'$. Since $S_{D+D'}=S_D+S_{D'}$, canceling the first two equations from the third leaves
+\[
+S_DS_{D'}+S_{D'}S_D=0.
+\]
+Thus all directions commute. In particular,
+\[
+(S_D+S_{D'})^2=S_D^2+S_{D'}^2,
+\]
+so $D\mapsto S_D^2$ is $\F$-linear.
+
+Equation~\eqref{eq:direction-identity} also gives
+\begin{align*}
+TS_D^2+S_D^2T
+&=(TS_D+S_DT)S_D+S_D(TS_D+S_DT)\\
+&=(S_D^2+S_D)S_D+S_D(S_D^2+S_D)=0.
+\end{align*}
+Consequently, $S_D^2$ commutes with $T$ and preserves both $R=\ker T$ and $R'=\ker(I+T)$.
+
+\paragraph{Step 4: the restricted form on the kernel is nonsingular.}
+Since $T$ and $I+T$ both have rank four, the proof of Lemma~\ref{lem:half-rank} gives $E=R\oplus R'$ with $\dim R=\dim R'=4$. These two spaces are $J$-orthogonal. Indeed, for $x\in R$ and $y\in R'$, selfadjointness gives
+\[
+J(x,y)=J(x,Ty)=J(Tx,y)=0.
+\]
+If $x\in R$ is orthogonal to all of $R$, it is therefore orthogonal to both summands and hence to all of $E$. Nonsingularity of $J$ forces $x=0$. Thus $J|_R$ is a nonsingular alternating form.
+
+\paragraph{Step 5: construct a forbidden smaller pencil.}
+For $D\in L$, define on $R$
+\begin{equation}\label{eq:restricted-square}
+C_D(x,y)=J(x,S_D^2y).
+\end{equation}
+This is a linear family in $D$, by Step 3. It is alternating: selfadjointness of $S_D$ gives
+\[
+C_D(x,x)=J(x,S_D^2x)=J(S_Dx,S_Dx)=0,
+\]
+using alternation of $J$ on the entire space $E$.
+
+If $D\ne0$, its nonsingularity and the normalization~\eqref{eq:normalization-form} imply that $S_D$ is invertible. The square $S_D^2$ is invertible and preserves $R$. Its restriction to $R$ is injective, hence bijective because $R$ is finite-dimensional. If $x\in R$ satisfies $C_D(x,y)=0$ for every $y\in R$, surjectivity of $S_D^2|_R$ implies $J(x,z)=0$ for every $z\in R$. By Step 4, $x=0$. Thus every nonzero $D\in L$ gives a nonsingular $C_D$.
+
+Choose an isomorphism $\F^3\cong L$. Equation~\eqref{eq:restricted-square} becomes a three-dimensional linear pencil of alternating forms on the four-space $R$, nonsingular in every nonzero direction. Lemma~\ref{lem:no-three-pencil} gives the contradiction.
+\end{proof}
+
+\section{Excluding 29 non-bent components}\label{sec:finish}
+We now apply the obstruction to the actual component pencil. Suppose, toward a contradiction, that a quadratic APN map has $N_F=29$.
+
+\subsection{Deriving the rank distribution}
+\begin{lemma}\label{lem:profile29}
+Under $N_F=29$, exactly fourteen nonzero component polars have rank four, exactly fifteen have rank six, and the remaining $226$ are nonsingular.
+\end{lemma}
+\begin{proof}
+Non-bent radicals have positive even dimension, so their dimensions lie in $\{2,4,6,8\}$. A dimension-eight radical contributes all $255$ nonzero vectors to the partition~\eqref{eq:incidence}, leaving no room for another non-bent label, contrary to $N_F=29$.
+
+If one radical has dimension six, every other nonzero radical has dimension at most two: their intersection is zero, so their dimensions sum to at most eight. The total incidence is then at most
+\[
+(2^6-1)+28(2^2-1)=63+84=147,
+\]
+contradicting~\eqref{eq:incidence}. Thus every non-bent radical has dimension two or four. If $k$ of them have dimension four, then
+\[
+15k+3(29-k)=255,
+\]
+so $12k=168$ and $k=14$. Radical dimension four means rank four, and radical dimension two means rank six. The remaining $255-29=226$ labels are bent and have rank eight.
+\end{proof}
+No bound on the ranks of arbitrary components was assumed in this step; the large-radical cases were eliminated from the exact partition.
+
+\begin{lemma}[Two rank-four labels have a bent sum]\label{lem:pair-sum}
+If $b,d$ are distinct nonzero labels with $\rank B_b=\rank B_d=4$, then $B_{b+d}$ is nonsingular.
+\end{lemma}
+\begin{proof}
+Their four-dimensional radicals are disjoint by Proposition~\ref{prop:partition}, so $V=R_b\oplus R_d$. The form $B_b$ vanishes whenever either argument belongs to $R_b$, and its restriction to $R_d$ is nonsingular: a vector in $R_d$ orthogonal to $R_d$ under $B_b$ is automatically orthogonal to $R_b$, hence lies in $R_b$, and must be zero. Similarly, $B_d|_{R_b}$ is nonsingular and $B_d$ vanishes whenever either argument belongs to $R_d$.
+
+Relative to $R_b\oplus R_d$, the sum $B_b+B_d$ is block diagonal, with nonsingular restrictions $B_d|_{R_b}$ and $B_b|_{R_d}$. It is therefore nonsingular. Linearity of the component pencil gives $B_b+B_d=B_{b+d}$. Since $b\ne d$, the label $b+d$ is nonzero, and Lemma~\ref{lem:walsh} makes its component bent.
+\end{proof}
+
+\subsection{Finding the forbidden affine family}
+By Proposition~\ref{prop:indicator}, the actual singular-component indicator has weight $30$ and value one at zero. Corollary~\ref{cor:two-flat-model} therefore supplies complementary linear four-spaces $A,V_0$ in the label space and $0\ne c\in A$ such that the non-bent nonzero labels are exactly
+\begin{equation}\label{eq:apn-support}
+\mathcal N=\bigl(A\setminus\{0,c\}\bigr)
+\cup\bigl((c+V_0)\setminus\{c\}\bigr).
+\end{equation}
+Let $S$ be the set of fourteen rank-four labels from Lemma~\ref{lem:profile29}.
+
+Within $A$, the only bent nonzero label is $c$. If $b,d\in S\cap A$ are distinct, Lemma~\ref{lem:pair-sum} forces $b+d=c$. Fixing one such $b$ leaves at most one other possible label, namely $b+c$. Hence $|S\cap A|\le2$. By~\eqref{eq:apn-support}, at least twelve points of $S$ lie in the affine four-flat $C=c+V_0$.
+
+The missing set $D=C\setminus S$ has at most four points. It is nonempty because $c\notin\mathcal N$ and hence $c\notin S$. If $D=\{d_1,\ldots,d_k\}$ with $1\le k\le4$, its affine span is
+\[
+d_1+\langle d_2+d_1,\ldots,d_k+d_1\rangle,
+\]
+of dimension at most $k-1\le3$. Extend its direction to a three-dimensional subspace of the four-dimensional direction space of $C$; this gives an affine hyperplane $K$ of $C$ containing $D$.
+
+Over $\F$, the complement of an affine hyperplane in an affine four-space is the other coset of the same three-dimensional direction space. Thus $H=C\setminus K$ is an affine three-flat entirely contained in $S$. Write $H=b_0+T$ with $\dim T=3$. For every nonzero $w\in T$, the two points $b_0$ and $b_0+w$ are distinct members of $S$. Lemma~\ref{lem:pair-sum} gives that $B_w$ is nonsingular.
+
+The linear map $T\to\Alt(V)$, $w\mapsto B_w$, is injective, since every nonzero $w$ has nonsingular, in particular nonzero, image. Its image $L$ therefore has dimension three, and all nonzero members are nonsingular. On the other hand, every form
+\[
+B_{b_0}+B_w=B_{b_0+w}\qquad(w\in T)
+\]
+has rank four because $b_0+w\in H\subseteq S$. This contradicts Theorem~\ref{thm:affine-obstruction}.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main} and Corollary~\ref{cor:profile}]
+Corollary~\ref{cor:preliminary} gives $N_F\ge29$. The preceding contradiction proves $N_F\ne29$. Corollary~\ref{cor:congruence} gives $N_F\equiv1\pmod4$, so the next possible value is at least $33$. There are $2^8-1=255$ nonzero labels, yielding at most $255-33=222$ bent components. The profile of Corollary~\ref{cor:profile} would have $15+14=29$ non-bent labels and is therefore impossible.
+\end{proof}
+
+\subsection{What the bound does and does not settle}
+The proof excludes the first three values of $i$ in~\eqref{eq:profile-family}, since that profile has $17+4i$ non-bent labels. The value $i=4$ would give $33$, and is not excluded here. No construction with $33$ non-bent components is supplied, and no assertion that the upper bound $222$ is attained is made. The result is specific to quadratic APN maps on eight input and eight output bits. Neither a statement about all nonquadratic APN maps nor a solution of the general even-dimensional APN permutation problem follows.

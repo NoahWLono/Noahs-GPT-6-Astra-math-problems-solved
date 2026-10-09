@@ -1,0 +1,249 @@
+\section{Boolean algebra and quadratic polar forms}\label{sec:anf}
+For a finite-dimensional binary vector space with fixed coordinates, the algebraic normal form (ANF) of a Boolean function is its unique squarefree polynomial representation
+\begin{equation}\label{eq:anf}
+f(x_1,\ldots,x_m)=\sum_{I\subseteq\{1,\ldots,m\}}c_I\prod_{i\in I}x_i,
+\qquad c_I\in\F.
+\end{equation}
+The empty product is $1$. Uniqueness follows inductively by writing a function as $f_0(x')+x_m(f_0(x')+f_1(x'))$, where $f_t$ is its restriction to $x_m=t$. The degree is the largest $|I|$ with $c_I\ne0$; the zero function has degree at most every nonnegative integer. Reduction by $x_i^2=x_i$ never increases degree. Consequently, products have degree at most the sum of the degrees, and composition with an affine map does not increase degree. Affine bijections preserve weight and carry affine flats to affine flats of the same dimension.
+
+We write $\wt(f)=|\supp(f)|$, where $\supp(f)=\{x:f(x)=1\}$. Integer weight identities and identities in $\F$ will always be distinguished.
+
+\begin{lemma}[Cube parity and minimum weight]\label{lem:anf-basic}
+For $f\colon\F^m\to\F$:
+\begin{enumerate}[label=(\roman*)]
+\item The sum $\sum_x f(x)$ in $\F$ is the coefficient $c_{\{1,\ldots,m\}}$. In particular, if $\deg f<m$, its integer weight is even.
+\item A nonzero function of degree at most $r$, with $0\le r\le m$, has weight at least $2^{m-r}$.
+\item For Boolean $f,g$ on the same set,
+\[
+\wt(f+g)=\wt(f)+\wt(g)-2\wt(fg).
+\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+A monomial supported on $I$ has weight $2^{m-|I|}$. Its cube sum is therefore zero unless $I$ is the full coordinate set, when it is one. This proves (i). For (ii), induct on $m$. Write $f(x',t)=f_0(x')+t f_1(x')$. If $f_1=0$, then $\wt(f)=2\wt(f_0)$ and induction applies; if $r=m$, the bound $1$ is automatic. If $f_1\ne0$, then $\deg f_1\le r-1$, and the pointwise inequality for the two fibers gives
+\[
+\wt(f)=\wt(f_0)+\wt(f_0+f_1)\ge\wt(f_1)
+\ge2^{(m-1)-(r-1)}.
+\]
+The case $r=0$ is the nonzero constant function. Finally, (iii) counts the symmetric difference of two supports: common support points are counted twice on the right and zero times on the left.
+\end{proof}
+
+\begin{lemma}[Quadraticity and the normalized polar]\label{lem:polar}
+A Boolean function $q$ has degree at most two if and only if
+\[
+B_q(x,y)=q(x+y)+q(x)+q(y)+q(0)
+\]
+is bilinear. In that case it is alternating and symmetric. The corresponding assertion holds coordinatewise for vector-valued functions.
+\end{lemma}
+\begin{proof}
+For an ANF of degree at most two, constant and linear terms disappear from $B_q$, and the term $c_{ij}x_ix_j$ contributes
+\[
+c_{ij}(x_i y_j+x_j y_i).
+\]
+This proves bilinearity, symmetry, and $B_q(x,x)=0$. Conversely, suppose $B_q$ is bilinear. It is automatically symmetric by definition, and $B_q(x,x)=0$. Put
+\[
+Q(x)=\sum_{i<j}B_q(e_i,e_j)x_ix_j.
+\]
+The displayed expansion gives $B_Q=B_q$. Hence $g(x)=q(x)+q(0)+Q(x)$ satisfies $g(0)=0$ and $g(x+y)=g(x)+g(y)$. Additivity over $\F$ is linearity, so $q=q(0)+g+Q$ has degree at most two.
+\end{proof}
+
+For a bilinear form $B$ on $E$, its radical is
+\[
+R_B=\rad B=\{x\in E:B(x,y)=0\text{ for every }y\in E\}.
+\]
+Its rank is the rank of the linear map $x\mapsto B(x,\cdot)$ from $E$ to $E^*$. Thus $\rank B=\dim E-\dim R_B$. A form is nonsingular, or nondegenerate, precisely when $R_B=\{0\}$. For symmetric forms there is no distinction between left and right radicals.
+
+\begin{lemma}[Even rank]\label{lem:even-rank}
+An alternating form has even rank.
+\end{lemma}
+\begin{proof}
+If the form is zero, its rank is zero. Otherwise choose $e,f$ with $B(e,f)=1$. The restriction to $U=\langle e,f\rangle$ is nonsingular. For each $x$, set
+\[
+x_U=B(x,f)e+B(x,e)f,
+\qquad x_\perp=x+x_U.
+\]
+Direct substitution shows $B(x_\perp,e)=B(x_\perp,f)=0$, so $E=U\oplus U^\perp$. The sum is direct because the restriction to $U$ is nonsingular. Relative to this decomposition, $B$ is the orthogonal direct sum of the rank-two form on $U$ and the alternating restriction to $U^\perp$. Induction proves the assertion.
+\end{proof}
+
+\section{Walsh semantics and the APN radical partition}\label{sec:apn}
+\begin{lemma}[The quadratic Walsh-square identity]\label{lem:walsh}
+Let $q\colon\F^m\to\F$ be quadratic, let $B=B_q$, and put $R=\rad B$. For a linear functional $u\in(\F^m)^*$,
+\begin{equation}\label{eq:walsh-square}
+W_q(u)^2=2^m\sum_{a\in R}(-1)^{q(a)+q(0)+u(a)}.
+\end{equation}
+The sum on the right is either $0$ or $|R|$. In particular, when $m$ is even, $q$ is bent if and only if $B$ is nonsingular.
+\end{lemma}
+\begin{proof}
+Expand the square as a sum over ordered pairs $(x,y)$ and substitute $y=x+a$. Since
+\[
+q(x)+q(x+a)=B(x,a)+q(a)+q(0),
+\]
+we obtain
+\[
+W_q(u)^2=
+\sum_{a\in\F^m}(-1)^{q(a)+q(0)+u(a)}
+\sum_{x\in\F^m}(-1)^{B(x,a)}.
+\]
+If $a\notin R$, some $z$ has $B(z,a)=1$. Translation $x\mapsto x+z$ pairs opposite signs, so the inner sum is zero. If $a\in R$, it is $2^m$. This gives~\eqref{eq:walsh-square}.
+
+On $R$ the function $a\mapsto q(a)+q(0)$ is linear, since its polarization vanishes there. Therefore the remaining sum is the character sum of a linear functional on $R$. It is $|R|$ when that functional is zero, and otherwise it vanishes by the same translation pairing.
+
+If $R=\{0\}$, every Walsh square is $2^m$, exactly the bent condition. If $a\ne0$ lies in $R$, choose $u$ with $u(a)=q(a)+q(0)+1$; such a functional exists by extending $a$ to a basis. The summand character is then nonzero on $R$, so $W_q(u)=0$ and $q$ is not bent.
+\end{proof}
+
+The same identity shows that the nonzero Walsh amplitude of a quadratic component with radical dimension $s$ is $2^{(m+s)/2}$. There is at least one nonzero coefficient: the linear functional $a\mapsto q(a)+q(0)$ on $R$ extends to $E$, and choosing that extension makes the character in~\eqref{eq:walsh-square} trivial. This justifies the profile convention in Corollary~\ref{cor:profile}, including all affine terms.
+
+For $F\colon V\to V$, where $V=\F^8$, let
+\[
+L_a(x)=\beta_F(a,x),\qquad B_b(x,y)=b\cdot\beta_F(x,y),
+\qquad R_b=\rad B_b.
+\]
+The map $b\mapsto B_b$ is linear. The derivative of $F$ in direction $a$ equals $L_a(x)+F(a)+F(0)$.
+
+\begin{proposition}[Exact radical partition]\label{prop:partition}
+If $F$ is quadratic and APN, every nonzero $a\in V$ lies in exactly one $R_b$ with $b\ne0$. Consequently,
+\begin{equation}\label{eq:incidence}
+\sum_{b\ne0}(2^{\dim R_b}-1)=255,
+\end{equation}
+and $R_b\cap R_d=\{0\}$ for distinct nonzero labels $b,d$.
+\end{proposition}
+\begin{proof}
+The map $L_a$ is linear, and $L_a(0)=L_a(a)=0$. APN bounds the corresponding derivative fiber by two, so for $a\ne0$,
+\[
+\ker L_a=\{0,a\},\qquad \dim\im L_a=7.
+\]
+The annihilator $(\im L_a)^\perp$ in the output dual therefore has dimension one. Over $\F$ it contains exactly one nonzero label $b$. The condition that $b$ annihilate $\im L_a$ is exactly
+\[
+b\cdot L_a(x)=B_b(a,x)=0\quad\text{for all }x,
+\]
+or $a\in R_b$. This proves uniqueness and disjointness. Counting all pairs $(a,b)$ with $a\ne0$, $b\ne0$, and $a\in R_b$ gives~\eqref{eq:incidence}.
+\end{proof}
+
+\begin{corollary}[The component-count congruence]\label{cor:congruence}
+For a quadratic APN map on $V$, $N_F\equiv1\pmod4$.
+\end{corollary}
+\begin{proof}
+By Lemmas~\ref{lem:even-rank} and~\ref{lem:walsh}, a bent label has radical dimension zero and contributes zero to~\eqref{eq:incidence}. A non-bent label has radical dimension in $\{2,4,6,8\}$ and contributes $2^s-1\equiv-1\pmod4$. Hence $-N_F\equiv255\equiv-1\pmod4$.
+\end{proof}
+
+\section{The actual Pfaffian indicator}\label{sec:pfaffian}
+Fix an input basis. The matrix $A(b)$ of $B_b$ has zero diagonal, is symmetric, and has entries linear in $b$. For an alternating $2r$ by $2r$ matrix over a field of characteristic two, define
+\[
+\Pf(A)=\sum_{M}\prod_{\{i,j\}\in M}A_{ij},
+\]
+where $M$ ranges over perfect matchings of the $2r$ coordinate indices. For $r=4$ there are $(8-1)(6-1)(4-1)(2-1)=105$ matchings.
+
+\begin{lemma}[The binary determinant identity]\label{lem:pfaffian-det}
+For such a matrix, $\det A=\Pf(A)^2$.
+\end{lemma}
+\begin{proof}
+In the determinant expansion, signs disappear in characteristic two. Pair every permutation $\sigma$ that is not an involution with $\sigma^{-1}$. These are distinct, and they contribute the same monomial because $A$ is symmetric; thus their terms cancel. A permutation with a fixed point contributes zero because $A_{ii}=0$. The surviving permutations are fixed-point-free involutions, that is, perfect matchings. A matching contributes $\prod_{\{i,j\}\in M}A_{ij}^2$. Summing these squares gives the square of the matching sum, by the characteristic-two identity $(s+t)^2=s^2+t^2$.
+\end{proof}
+
+\begin{proposition}[A degree-four singular-component indicator]\label{prop:indicator}
+Define $P(b)=\Pf(A(b))$ and $h(b)=1+P(b)$. Then
+\begin{equation}\label{eq:indicator-properties}
+\deg h\le4,\qquad h(0)=1,\qquad
+h(b)=1\ \Longleftrightarrow\ q_b\text{ is not bent},
+\qquad \wt(h)=N_F+1.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Each matching product contains four entries linear in $b$, so its ordinary polynomial degree is four and its Boolean degree is at most four. At binary points, $P(b)^2=P(b)$. Lemma~\ref{lem:pfaffian-det} therefore says $P(b)=1$ exactly when $A(b)$ is nonsingular. Lemma~\ref{lem:walsh} gives the bentness equivalence. At the zero label the form is zero, so $P(0)=0$. The support of $h$ thus includes zero and exactly the $N_F$ non-bent nonzero labels.
+\end{proof}
+This construction is important logically: $h$ is the indicator of the actual component pencil of $F$. It is not an arbitrary low-degree word selected because its weight matches a desired profile.
+
+\section{An elementary low-weight residue bound}\label{sec:residue}
+The next theorem is a known consequence of low-weight Reed--Muller theory. We prove the exact specialization needed here directly, so no spectrum classification is a premise.
+
+\begin{theorem}\label{thm:residue}
+If $f\colon\F^8\to\F$ has degree at most four and $\wt(f)\equiv2\pmod4$, then $\wt(f)\ge30$.
+\end{theorem}
+
+\begin{lemma}[Derivative descent]\label{lem:descent}
+Let $1\le r\le m$, let $f\colon\F^m\to\F$ have degree at most $r$, and let $a\ne0$. There is a function $g\colon\F^{m-1}\to\F$ of degree at most $r-1$ such that
+\begin{equation}\label{eq:descent}
+\wt(D_a f)=2\wt(g),\qquad \wt(g)\le\wt(f),
+\end{equation}
+where $D_a f(x)=f(x+a)+f(x)$.
+\end{lemma}
+\begin{proof}
+Choose $i$ with $a_i=1$. For $y$ in the remaining $m-1$ coordinates and $t\in\F$, define the linear bijection
+\[
+T(y,t)_i=t,\qquad T(y,t)_j=y_j+t a_j\quad(j\ne i).
+\]
+Its inverse is $t=x_i$, $y_j=x_j+a_jx_i$, and $T(y,t+1)=T(y,t)+a$. Write the ANF after substitution as
+\[
+f(T(y,t))=f_0(y)+t g(y).
+\]
+The degree of $g$ is at most $r-1$. Its value is the derivative at both $T(y,0)$ and $T(y,1)$, proving the first identity. Also $\wt(D_a f)\le2\wt(f)$ by the symmetric-difference formula, proving the inequality.
+\end{proof}
+
+\begin{lemma}[Derivative-weight sum]\label{lem:derivative-sum}
+For any Boolean function on a binary vector space $E$ of size $M$, writing $w=\wt(f)$, one has
+\begin{equation}\label{eq:derivative-sum}
+\sum_{a\in E}\wt(D_a f)=2w(M-w).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The map $(a,x)\mapsto(x,x+a)$ is a bijection from $E^2$ to itself. A derivative value is one precisely when the two function values differ. There are $w(M-w)$ ordered pairs with values $(1,0)$ and the same number with values $(0,1)$.
+\end{proof}
+
+\begin{lemma}\label{lem:cubic-divisibility}
+Every degree-at-most-three function on $\F^7$ has weight divisible by four.
+\end{lemma}
+\begin{proof}
+Add its nonzero ANF monomials one at a time. A monomial of degree at most three has weight divisible by $16$. If $f$ is the partial sum and $M$ the next monomial, then $\deg(fM)\le6<7$, so $\wt(fM)$ is even by Lemma~\ref{lem:anf-basic}. The identity
+\[
+\wt(f+M)=\wt(f)+\wt(M)-2\wt(fM)
+\]
+therefore preserves divisibility by four, starting from weight zero.
+\end{proof}
+
+\begin{lemma}\label{lem:quadratic-six}
+If $q\colon\F^6\to\F$ is quadratic and $w=\wt(q)<24$, then $w\in\{0,16\}$.
+\end{lemma}
+\begin{proof}
+A derivative in a nonzero direction descends to an affine function on five variables. A nonconstant affine function on five variables is balanced: translation by a vector on which its linear part is one pairs its zeroes and ones. Its weight is therefore $16$; constant functions have weight $0$ or $32$. By~\eqref{eq:descent}, the quotient weight is at most $w<24$, so each full derivative has weight $0$ or $32$. The zero direction also has weight zero.
+
+Let $H=\{a:q(x+a)=q(x)\text{ for all }x\}$ be the translation stabilizer and $h=|H|$. The set $H$ is an additive subgroup: it contains zero and the sum of two periods is a period. Hence $h$ divides $64$. Exactly the $h$ directions in $H$ give derivative weight zero. Equation~\eqref{eq:derivative-sum} gives
+\[
+32(64-h)=2w(64-w),\qquad (w-32)^2=16h.
+\]
+Divisibility of a square by $16$ implies $4\mid(w-32)$, and hence $4\mid w$. For $0\le w<24$, the possibilities $w=0,4,8,12,16,20$ would give, respectively,
+\[
+h=64,49,36,25,16,9.
+\]
+Only $64$ and $16$ divide $64$. They correspond to $w=0$ and $w=16$.
+\end{proof}
+
+\begin{lemma}\label{lem:cubic-seven}
+If $g\colon\F^7\to\F$ has degree at most three and $w=\wt(g)\le26$, then $w\in\{0,16,24\}$.
+\end{lemma}
+\begin{proof}
+Lemma~\ref{lem:cubic-divisibility} gives
+$w\in\{0,4,8,12,16,20,24\}$. If $0<w<16$, every nonzero derivative descends to a quadratic on six variables of weight at most $w<16$. Lemma~\ref{lem:quadratic-six} makes all quotient weights zero. Thus every derivative vanishes. Taking direction $x$ at argument zero gives $g(x)=g(0)$ for all $x$, contradicting $0<w<16$.
+
+If $w=20$, every quotient derivative has weight $0$ or $16$, so every full derivative has weight at most $32$. Summing over all $128$ directions gives at most $4096$. On the other hand,~\eqref{eq:derivative-sum} gives
+\[
+2\cdot20\cdot(128-20)=4320>4096.
+\]
+This excludes $20$ and proves the claim.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:residue}]
+Suppose $w<30$. Because $w\equiv2\pmod4$, we have $w\le26$. Each nonzero derivative descends to a cubic in seven variables of weight at most $26$. By Lemma~\ref{lem:cubic-seven}, its full weight is $0$, $32$, or $48$, all divisible by $16$. The zero derivative also has weight zero. Hence the left side of~\eqref{eq:derivative-sum} is divisible by $16$.
+
+The right side is $2w(256-w)$. Writing $w=4t+2$ gives $w^2\equiv4\pmod8$ and therefore
+\[
+2w(256-w)\equiv-2w^2\equiv8\pmod{16},
+\]
+a contradiction.
+\end{proof}
+
+\begin{corollary}\label{cor:preliminary}
+Every quadratic APN function on $\F^8$ has $N_F\ge29$.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:residue} to the actual function $h$ of Proposition~\ref{prop:indicator}. Corollary~\ref{cor:congruence} gives $\wt(h)=N_F+1\equiv2\pmod4$.
+\end{proof}

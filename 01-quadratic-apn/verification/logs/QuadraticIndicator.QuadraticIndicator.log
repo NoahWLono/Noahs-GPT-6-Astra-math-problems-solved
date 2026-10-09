@@ -1,0 +1,5 @@
+'QuadraticIndicator.component_matching_candidate_degree' depends on axioms: [propext, Quot.sound]
+'QuadraticIndicator.every_matching_valid' depends on axioms: [propext, Quot.sound]
+'QuadraticIndicator.candidate_at_zero' depends on axioms: [propext, Quot.sound]
+
+AUDIT {"module": "QuadraticIndicator.QuadraticIndicator", "exit": 0, "seconds": 3.519, "peak_rss_kib": 690828, "termination": null}

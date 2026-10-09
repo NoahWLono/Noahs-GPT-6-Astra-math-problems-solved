@@ -1,0 +1,39 @@
+<LEAN_SOURCE>/BooleanANF.lean:20:8: warning: automatically included section variable(s) unused in theorem 'BooleanANF.transform_empty':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:27:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.transform_add':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:44:4: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+<LEAN_SOURCE>/BooleanANF.lean:116:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.coefficient_smul':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:120:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.coefficient_sum':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:135:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.HasDegreeLE.mono':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:140:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.HasDegreeLE.add':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/BooleanANF.lean:166:0: warning: automatically included section variable(s) unused in theorem 'BooleanANF.degree_zero':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+
+AUDIT {"module": "BooleanANF", "exit": 0, "seconds": 2.411, "peak_rss_kib": 1609004, "termination": null}

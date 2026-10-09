@@ -1,0 +1,3 @@
+'BooleanANF.QuadraticFour.exists_unique_cost_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "QuadraticFourRadical", "exit": 0, "seconds": 1.511, "peak_rss_kib": 1553592, "termination": null}

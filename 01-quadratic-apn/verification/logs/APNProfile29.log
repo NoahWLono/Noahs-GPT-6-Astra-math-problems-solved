@@ -1,0 +1,4 @@
+'APNRedo.apn_rank_four_pair_sum_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.apn_profile29' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "APNProfile29", "exit": 0, "seconds": 4.718, "peak_rss_kib": 1977148, "termination": null}

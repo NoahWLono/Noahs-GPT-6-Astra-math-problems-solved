@@ -1,0 +1,3 @@
+'FastWalsh.quadratic_component_correct' depends on axioms: [propext, Quot.sound]
+
+AUDIT {"module": "Quadratic", "exit": 0, "seconds": 0.402, "peak_rss_kib": 429236, "termination": null}

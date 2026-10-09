@@ -1,0 +1,5 @@
+<LEAN_SOURCE>/WeightThirtyRankOneRows.lean:26:5: warning: unused variable `hc`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'BooleanANF.rank_two_four_weight_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "WeightThirtyRankOneRows", "exit": 0, "seconds": 4.222, "peak_rss_kib": 1623196, "termination": null}

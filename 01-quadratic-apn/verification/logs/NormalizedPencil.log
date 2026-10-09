@@ -1,0 +1,14 @@
+<LEAN_SOURCE>/NormalizedPencil.lean:12:0: warning: automatically included section variable(s) unused in theorem 'APNRedo.binary_add_self':
+  [Nontrivial E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+<LEAN_SOURCE>/NormalizedPencil.lean:67:0: warning: automatically included section variable(s) unused in theorem 'APNRedo.kernel_nondegenerate':
+  [Nontrivial E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'APNRedo.restrictedSquarePencil_alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'APNRedo.restrictedSquarePencil_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "NormalizedPencil", "exit": 0, "seconds": 4.317, "peak_rss_kib": 1802864, "termination": null}

@@ -1,8 +1,10 @@
 .lake/
+build/
 __pycache__/
 *.pyc
 *.olean
 *.ilean
 *.aux
-*.toc
 *.out
+*.toc
+*.synctex.gz

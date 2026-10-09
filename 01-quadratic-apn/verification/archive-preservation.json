@@ -1,0 +1,18 @@
+{
+  "repository": "NoahWLono/Noahs-GPT-6-Astra-math-problems-solved",
+  "retrieval_date": "2026-10-09",
+  "preserved_file_count": 1954,
+  "checked_manifest_entries": 1953,
+  "remote_readme_git_blob": "6845c415756bc4c0f92ba20a544c5985c1b2ecad",
+  "remote_manifest_git_blob": "5266c3af17e398723582dabfb0c682ec7ad08764",
+  "archive_root": "../archive-known-extremal-family",
+  "local_initial_archive_differences": [
+    "README.md",
+    "SHA256SUMS"
+  ],
+  "all_other_initial_archive_bytes_unchanged": true,
+  "history_requirement": "Parent future publication commit on current remote HEAD; never force-replace history.",
+  "verified_remote_head": "ad7e51c05ff7a72c6409c518fb0d712e2834e47f",
+  "verified_remote_root_tree": "bc112a3ae270727713c6bb473f6ae4491ecb43f1",
+  "head_verification_time": "2026-10-09T17:35:00Z"
+}

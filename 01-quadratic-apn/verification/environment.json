@@ -1,0 +1,6 @@
+{
+  "lean": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)\n",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b\n",
+  "local_search_path": "isolated source snapshots only; original local object directories excluded",
+  "upstream_dependencies": "pinned mathlib and its Lake packages; installed Lean toolchain"
+}

@@ -1,0 +1,4 @@
+'BooleanANF.NormalizedQuartic.common_radical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BooleanANF.NormalizedQuartic.common_radical_all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+AUDIT {"module": "WeightThirtyCommonRadical", "exit": 0, "seconds": 3.715, "peak_rss_kib": 1834528, "termination": null}

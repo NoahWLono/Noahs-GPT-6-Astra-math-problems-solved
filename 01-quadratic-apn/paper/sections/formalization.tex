@@ -1,0 +1,231 @@
+\section{The precise Lean statement and semantic bridges}\label{app:lean}
+The formal development uses Lean 4.19.0 and mathlib at commit
+\begin{center}
+\lean{c44e0c8ee63ca166450922a373c7409c5d26b00b}.
+\end{center}
+The entry point is \lean{APNEightFinal.lean}. Its final theorem is
+\begin{center}
+\lean{APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three}.
+\end{center}
+The following is a mathematical transcription of its exact quantified statement, with each formal predicate explained below:
+\begin{equation}\label{eq:formal-endpoint}
+\begin{gathered}
+f\colon V_8\to V_8,\qquad V_8=(\operatorname{Fin}8\to\mathbb Z/2\mathbb Z),\\
+\exists\text{ bilinear }B\colon V_8\times V_8\to V_8,\\
+\forall x,y,\ f(x+y)+f(x)+f(y)+f(0)=B(x,y),\\
+\operatorname{APN}(f)
+\quad\Longrightarrow\quad
+33\le\bigl|\operatorname{nonBentFunctionLabels}(f)\bigr|.
+\end{gathered}
+\end{equation}
+The theorem assumes no classification, support normal form, incidence equation, rank spectrum, component-count congruence, or lower-weight theorem as an argument. Those are proved dependencies.
+
+\subsection{APN is the ordinary derivative-fiber condition}
+In \lean{APNPolar.lean}, the predicate \lean{APN} states that for any $a\ne0$ and $c,x,y,z$, if all three of $x,y,z$ solve $f(t+a)+f(t)=c$, then
+\[
+x=y\quad\text{or}\quad x=z\quad\text{or}\quad y=z.
+\]
+For a finite set this is exactly the assertion that every derivative fiber has at most two elements. The theorem \lean{apn_derivative_fiber} proves the sharper paired description: a point in the derivative fiber of $x$ is either $x$ or $x+a$. Thus the use of ``APN'' in~\eqref{eq:formal-endpoint} is not an abstract rank axiom renamed as APN.
+
+\subsection{The conclusion is about actual integer Walsh coefficients}
+The library \lean{FastWalsh.lean} defines \lean{FastWalsh.walsh} as the finite integer sum over all $2^n$ bit-vector inputs. Its predicate \lean{FastWalsh.IsBent} requires, for every input mask $u$,
+\[
+\operatorname{walsh}(f,b,u)^2=2^n.
+\]
+At $n=8$ this is exactly the condition $|W_{q_b}(u)|=16$. The encoded function in the final theorem is
+\[
+x\longmapsto\operatorname{decode}\bigl(f(\operatorname{coords}(x))\bigr).
+\]
+The coordinate and bit-vector maps are mutually inverse, and their pairing correspondence is proved in the dependency chain. The finite set \lean{nonBentFunctionLabels f} filters all nonzero coordinate masks by failure of this Walsh predicate. Its definition contains no polar-rank predicate.
+
+The theorem \lean{encodedQuadraticAffine_bent_iff} identifies Walsh bentness with polar nondegeneracy. Then \lean{nonBentLabels_eq_degenerateLabels} proves equality of the actual finite label sets, rather than merely equality of two unspecified counts. Finally, \lean{nonBentFunctionLabels_normalization} transfers from an arbitrary function with bilinear normalized polar to the quadratic-map formulation.
+
+\subsection{Linear and constant terms are included}
+Mathlib's characteristic-two quadratic-map interface admits linear terms: scalar homogeneity imposes no extra restriction over the two-element field beyond the zero value. For an arbitrary function $f$ satisfying the bilinear-polar hypothesis, \lean{quadraticMapOfBilinearPolar} constructs the actual quadratic map $x\mapsto f(x)+f(0)$. Its reconstruction theorem restores the constant $f(0)$, and the APN property is transported by the proved invariance under a constant output translation. Walsh coefficients change only by a sign under that translation, so bentness is unchanged. Thus~\eqref{eq:formal-endpoint} includes arbitrary constants as well as linear terms.
+
+The endpoint takes bilinear normalized polar as its quadraticity hypothesis. Lemma~\ref{lem:polar} proves its equivalence with ordinary degree at most two. This equivalence is part of the mathematical interpretation of the theorem statement; the endpoint does not present its premise as an ANF certificate and silently assume a conversion.
+
+\subsection{Canonical degree and actual affine support}
+The Boolean development defines canonical ANF coefficients through the binary subset transform, proves reconstruction and injectivity of those coefficients, and defines \lean{HasDegreeLE} by vanishing of coefficients above the degree bound. Consequently its degree condition is a property of the actual Boolean function.
+
+The normalized model \lean{NormalizedQuartic} records five proved properties of the residual $q$: total degree at most four; row degree at most two; at most seven active rows; integer cost sum fourteen; and the equality of every value of $\sum_yq_y$ to its value at zero. These are exactly~\eqref{eq:normalized}--\eqref{eq:constant-sum}. The model is constructed from every degree-four weight-$30$ input by the singleton-flat and shear theorems. It is not an extra assumption on the final input.
+
+The support predicate \lean{TwoTransverseFlats f} means that there exist a point $p$ and a genuine linear equivalence $e$ from two four-coordinate blocks to the ambient space such that
+\[
+f(p+e(x,y))=\delta_0(x)+\delta_0(y)
+\qquad\text{for every }x,y\in\F^4.
+\]
+This directly describes two affine four-flats through $p$ with complementary directions. The final support-profile theorem converts this affine description, under $f(0)=1$, to the zero-sensitive linear label model of Corollary~\ref{cor:two-flat-model}.
+
+\section{Theorem to source correspondence}\label{app:map}
+All listed filenames are relative to the delivered Lean source directory unless noted otherwise. Declaration names in the APN part have namespace \lean{APNRedo}; most Boolean declarations have namespace \lean{BooleanANF}. The table gives entry points, not a claim that every sentence of the human proof is translated line for line. Some finite lemmas are proved by checked enumeration in Lean, while the text gives structural proofs.
+
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.28\textwidth}>{\raggedright\arraybackslash}p{.68\textwidth}@{}}
+\toprule
+Mathematical step & Formal entry points and source files\\
+\midrule
+\endfirsthead
+\toprule
+Mathematical step & Formal entry points and source files\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Canonical ANF and affine degree &
+\lean{BooleanANF.lean}: \lean{reconstruction_all}, \lean{coefficient_injective}, \lean{HasDegreeLE.comp_affine}.\\[5pt]
+APN polar and partition, Proposition~\ref{prop:partition} &
+\lean{APNPolar.lean}; \lean{APNRadicalPartition.lean}: \lean{apn_unique_nonzero_radical_label}, \lean{apn_component_radicals_disjoint}; \lean{APNIncidence.lean}: \lean{apn_radical_incidence_eight}.\\[5pt]
+Rank parity and congruence &
+\lean{AlternatingRankParity.lean}; \lean{APNCountCongruence.lean}: \lean{component_radical_even}, \lean{apn_degenerate_count_congruence}.\\[5pt]
+Actual Walsh interpretation &
+\lean{QuadraticMapWalsh.lean}: \lean{encodedQuadraticAffine_bent_iff}; \lean{QuadraticSemantics.lean}: \lean{nonBentLabels_eq_degenerateLabels}. The borrowed \lean{FastWalsh.lean} defines the integer transform.\\[5pt]
+Pfaffian determinant and degree &
+\lean{MatchingDeterminant.lean}: \lean{det_eq_matchings}; \lean{BilinearIndicator.lean}: \lean{form_indicator_one_iff}, \lean{degree_form_singular_indicator}; matching and degree helper modules.\\[5pt]
+Proposition~\ref{prop:indicator} &
+\lean{QuadraticComponentIndicator.lean}: \lean{component_indicator_degree}, \lean{component_indicator_zero}, \lean{component_indicator_weight}, \lean{component_indicator_one_iff}.\\[5pt]
+Derivative descent and weight sum &
+\lean{BooleanANFDescent.lean}: \lean{derivative_descent}; \lean{BooleanANFDerivativeWeight.lean}: \lean{derivative_weight_sum}.\\[5pt]
+Theorem~\ref{thm:residue} &
+\lean{BooleanANFDivisibility.lean}: \lean{cubic_seven_weight_mod_four}; \lean{BooleanANFQuadraticSix.lean}: \lean{quadratic_six_low_weights}, \lean{cubic_seven_low_weights}, \lean{quartic_eight_residue_bound}.\\[5pt]
+Singleton flat and shear &
+\lean{SingletonFlat.lean}: \lean{exists_singleton_coordinates}; \lean{SingletonShear.lean}: \lean{normalized_cubic}, \lean{normalized_residual_quadratic}; \lean{AffineSingletonNormalization.lean}: \lean{quartic_thirty_normalization}.\\[5pt]
+Cost and coefficient-code bounds &
+\lean{NormalizedCostBudget.lean}; \lean{QuadraticCoefficientCode.lean}: \lean{quadraticCoefficientSpace_finrank}, \lean{coefficientSpace_dimension_three}; \lean{WeightThirtyModel.lean}: \lean{NormalizedQuartic.code_dimension}.\\[5pt]
+Four-variable finite semantics &
+\lean{QuadraticFourPolynomial.lean}, \lean{QuadraticFourDegree.lean}, \lean{QuadraticFourWeights.lean}, \lean{QuadraticFourRadical.lean}, \lean{QuadraticFourAffineDifference.lean}, and their certificate modules.\\[5pt]
+Coefficient-code cases $d=0,1,2$ &
+\lean{WeightThirtyCaseZero.lean}: \lean{weight_thirty_case_zero_finrank}; \lean{WeightThirtyCaseOne.lean}: \lean{weight_thirty_case_one}; \lean{WeightThirtyCaseTwo.lean}: \lean{weight_thirty_case_two}.\\[5pt]
+Case $d=3$ and type B reconstruction &
+\lean{WeightThirtyCaseThree.lean}: \lean{NormalizedQuartic.three_code_affine_coordinates}; \lean{WeightThirtyRankThreePencil.lean}: \lean{NormalizedQuartic.three_pencil_coordinates}; \lean{WeightThirtyRankThreeFinal.lean}: \lean{weight_thirty_case_three}; \lean{WeightThirtyTypeBTransport.lean}.\\[5pt]
+Theorem~\ref{thm:weight-thirty} &
+\lean{WeightThirtyClassification.lean}: \lean{normalized_quartic_two_flats}, \lean{quartic_weight_thirty_two_flats}.\\[5pt]
+Corollary~\ref{cor:two-flat-model} &
+\lean{WeightThirtySupportProfile.lean}: \lean{TwoTransverseFlats.nonzero_support_profile}; \lean{WeightThirtyClassification.lean}: \lean{quartic_weight_thirty_nonzero_support_profile}.\\[5pt]
+Half-rank projection and restriction &
+\lean{HalfRankAlgebra.lean}, \lean{NormalizedPencil.lean}, \lean{FormNormalization.lean}: idempotence, commuting squares, genuine normalization, and restricted pencil.\\[5pt]
+Theorem~\ref{thm:affine-obstruction} &
+\lean{NoThreePencil.lean}: \lean{NoThreePencil.no_three_pencil}; \lean{AffineHalfRank.lean}: \lean{no_affine_three_half_rank}.\\[5pt]
+Rank distribution and pair sum &
+\lean{APNProfile29.lean}: \lean{apn_profile29}, \lean{apn_rank_four_pair_sum_nondegenerate}; \lean{RankFourPair.lean}: \lean{sum_nondegenerate_of_disjoint_half_rank}.\\[5pt]
+Exclusion with the two-flat support &
+\lean{FourFlatGeometry.lean}; \lean{APNTwoFlatExclusion.lean}: \lean{apn_profile29_excluded_by_two_flat_support}.\\[5pt]
+Final count and Walsh endpoint &
+\lean{APNEightFinal.lean}: \lean{apn_degenerate_count_ne_twenty_nine}, \lean{apn_degenerate_count_ge_thirty_three}, \lean{apn_nonBent_count_ge_thirty_three}, \lean{quadratic_apn_function_nonBent_count_ge_thirty_three}.\\
+\end{longtable}
+\normalsize
+
+\subsection{What the finite certificates establish}
+The four-variable certificate layer works with all $2^{11}=2048$ degree-at-most-two ANFs on four variables: one constant coefficient, four linear coefficients, and six quadratic coefficients. There are $2^6=64$ quadratic polar encodings. The development proves the bridges from those encodings to evaluation, ANF degree, actual bilinear polars, radicals, weights, and affine differences. Checked finite facts are then used through those bridges. They are not uninterpreted truth-table claims that merely resemble the required geometric statements.
+
+Some finite propositions are discharged with kernel reduction via \lean{decide}; other steps use proof-producing tactics such as arithmetic normalization. No \lean{native_decide} is used in the audited local closure. The main argument is not an exhaustive search over the $2^{163}$ words of degree at most four on eight variables, since
+\[
+\sum_{j=0}^4\binom8j=1+8+28+56+70=163.
+\]
+Nor is it an enumeration of all quadratic APN functions on eight variables.
+
+A separate standard-library Python script, \lean{weight30-specialized-audit-check.py}, independently checks small finite facts by exhaustive four-variable truth tables and binary linear algebra. Its reported counts include the quadratic weight distribution
+\[
+\begin{array}{c|rrrrrrr}
+\text{weight}&0&4&6&8&10&12&16\\\hline
+\text{number}&1&140&448&870&448&140&1
+\end{array}
+\]
+and polar-rank counts $1,35,28$ at ranks $0,2,4$. It also checks $105$ two-dimensional rank-two pencils, $30$ three-dimensional rank-two pencils, and the explicit final type-B identity. These checks are corroborating evidence. The Python output is not a premise of the Lean theorem or of the structural proof in this paper.
+
+\section{Independent rebuild and reproduction}\label{app:reproduce}
+\subsection{Completed verification result}
+An independent clean rebuild completed on 9 October 2026. It snapshotted and freshly compiled the entire local dependency closure of \lean{APNEightFinal}: $136$ modules, including eight borrowed project modules outside the immediate APN source directory. The classification-only dependency closure has $94$ modules and is not, by itself, a verification of the final APN endpoint.
+
+Every one of the $136$ compiler invocations exited successfully. The isolated search path excluded all original local compiled objects. A post-build hash comparison confirmed that the original sources still matched the audited snapshots. The compiler was Lean 4.19.0, commit \lean{6caaee842e94}, and the mathlib commit was the one specified in Appendix~\ref{app:lean}.
+
+All four final endpoints printed precisely the standard axiom dependencies
+\begin{lstlisting}
+[propext, Classical.choice, Quot.sound]
+\end{lstlisting}
+including the function-level theorem. The comment-stripped local source scan found no proof holes, \lean{admit}, \lean{native_decide}, or custom axiom declarations. An additional scan found no \lean{unsafe}, \lean{extern}, \lean{implemented_by}, or inspected trust-bypass markers in that local closure. The axiom audit is more informative than a source-token scan alone: the final theorem's transitive dependencies, not just the final assembly file, are inspected.
+
+The summed compiler wall time was $579.965$ seconds; the longest module took $20.174$ seconds. The maximum observed resident memory was $2{,}156{,}332$ KiB, below the $2{,}900{,}000$ KiB watchdog cap. These are observations on the audit environment, not performance guarantees on other machines.
+
+The installed pinned Lean, standard libraries, mathlib, and mathlib packages were used as installed. They were not themselves rebuilt from source in this audit. Thus ``independent clean rebuild'' means a separate fresh compilation of the complete local development and inspection of its final statements. It does not mean an independently implemented proof kernel or a full supply-chain audit.
+
+\subsection{Exact evidence and source identity}
+The original verification evidence directory in the research workspace contains the following artifacts; the portable package includes sanitized evidence and its own build driver:
+\begin{itemize}
+\item \lean{AUDIT.md}, the completed verdict and scope;
+\item \lean{manifest.json}, each local module's original source path and SHA-256 hash;
+\item \lean{build-order.txt} and \lean{external-imports.txt}, the local topological order and standard-library imports;
+\item \lean{environment.json}, the actual compiler version, revision, and isolated search path;
+\item \lean{results.json}, the per-module exit codes, timings, and memory observations;
+\item \lean{logs/APNEightFinal.log}, the fresh endpoint axiom reports;
+\item \lean{source-audit.json}, \lean{additional-trust-scan.json}, \lean{SUCCESS}, and \lean{SHA256SUMS};
+\item \lean{rebuild.py}, the original audit driver, and \lean{source/}, the isolated local snapshots.
+\end{itemize}
+The SHA-256 of the final source file \lean{APNEightFinal.lean} is
+\begin{center}\lean{388edf2c359a8c122c866f650bdf6f899a1be6c37edfe978cbaed4009a4f2534}.\end{center}
+The original manifest hash is
+\begin{center}\lean{3313f8c986edb40f36a5e2fb20afdf3c197fd67f51db2b9aa6b3ae788c55358c},\end{center}
+and the original audit-driver hash is
+\begin{center}\lean{774ff613f577985a99b7f2d7baa63406870bfa43478e7d55ac0ef7a2fadc754e}.\end{center}
+These identify the original evidence. If a release package normalizes paths or supplies a portable driver, its separate manifest and driver will naturally have different hashes. The original manifest's absolute paths are provenance records, not portable installation requirements.
+
+\subsection{Reproducing the portable source package}
+The numbered package uses the directory layout
+\begin{lstlisting}
+01-quadratic-apn/
+  lean/          # all 136 local modules and the pinned build files
+  verification/ # recorded audit evidence
+  paper/         # this manuscript and its editable sources
+\end{lstlisting}
+Its \lean{lean/} directory contains \lean{lean-toolchain}, a pinned \lean{lakefile.lean}, a source manifest, a topological build order, and a portable \lean{rebuild.py}. With Lean's Lake tooling installed, run from that directory:
+\begin{lstlisting}
+lake update
+lake exe cache get
+python3 rebuild.py
+\end{lstlisting}
+The driver checks the compiler version, dependency pin, and source hashes; clears its generated build directory; and compiles the local closure serially into \lean{build/lean}. Its local search path uses these fresh objects plus the pinned Lake dependencies. It writes per-module evidence under \lean{build/logs} and a completion marker at \lean{build/SUCCESS}. For the source-integrity check without compilation, use:
+\begin{lstlisting}
+python3 rebuild.py --check-only
+\end{lstlisting}
+The full completed verification reported above was performed with the original isolated driver. The portable wrapper received an integrity check and an initial five-module compilation smoke test; a separate full run of that relocated wrapper is not claimed here. This distinction concerns packaging reproducibility, not a missing dependency in the completed $136$-module audit.
+
+\subsection{Reproducing the original isolated audit}
+For comparison, the original audit driver expected the following relative workspace layout; it is retained as provenance in the original research workspace rather than as the portable release driver:
+\begin{lstlisting}
+workspace/
+  lean-research/  # pinned toolchain, mathlib, and borrowed modules
+  original-crypto-research/apn-redo/
+    lean/
+    independent-full-audit/rebuild.py
+\end{lstlisting}
+The driver discovers the local import closure recursively, copies each source into a separate snapshot directory, removes each old output before rebuilding that module, and constructs \lean{LEAN_PATH} from the snapshots plus the pinned mathlib/package libraries. It never adds the original local source/compiled-object roots to that path. Each compiler invocation uses one worker, a 120-second time limit, and the memory watchdog. Compilation is serialized with a shared lock.
+
+In that layout, run:
+\begin{lstlisting}
+python3 original-crypto-research/apn-redo/independent-full-audit/rebuild.py
+\end{lstlisting}
+Successful completion writes \lean{SUCCESS}. Check every result in \lean{results.json}, rather than relying on the marker alone from a previous run, and inspect the final axiom log. A release-specific portable rebuild command should be taken from that release's README; the original script is layout-dependent and should not be described as universally relocatable.
+
+After configuring the corresponding Lean search path, a minimal endpoint inspection file is:
+\begin{lstlisting}
+import APNEightFinal
+
+#check APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three
+#print axioms APNRedo.apn_degenerate_count_ne_twenty_nine
+#print axioms APNRedo.apn_degenerate_count_ge_thirty_three
+#print axioms APNRedo.apn_nonBent_count_ge_thirty_three
+#print axioms APNRedo.quadratic_apn_function_nonBent_count_ge_thirty_three
+\end{lstlisting}
+This inspection is useful only after establishing the source and object-file provenance. Rechecking a final file against unexamined preexisting local compiled objects is weaker than the isolated closure rebuild described above.
+
+\subsection{Reproducing the manuscript}
+The editable manuscript consists of \lean{apn-eight-bound.tex} and the files in its \lean{sections/} directory. It uses standard LaTeX packages and requires no network access, shell-escape execution, bibliography download, or proprietary fonts. With a working TeX Live installation, run in the paper directory:
+\begin{lstlisting}
+latexmk -pdf -interaction=nonstopmode -halt-on-error apn-eight-bound.tex
+\end{lstlisting}
+Alternatively run \lean{pdflatex} repeatedly until cross-references and the contents are stable. The bibliography is embedded in the source. The PDF was compiled and its pages rendered for visual inspection. Rendering checks typography and layout; the mathematical and Lean verification checks are separate.
+
+\subsection{Provenance and limitations}
+This manuscript was developed with AI assistance, alongside a Lean proof development, a separate mathematical audit of the full argument, an audit of the specialized weight-$30$ classification, a fresh dependency rebuild, and a literature recheck. The theorem statements and mathematical proofs are given in full so that readers need not rely on those process descriptions. No human institutional affiliation, credential, external endorsement, or peer-review acceptance is asserted.
+
+The checked result establishes the universal bound under the exact hypotheses stated. It does not establish the novelty of every lemma, the absence of all prior proofs, the optimality of $222$, or the existence of a quadratic APN map realizing the boundary. Earlier project notes that described unresolved bridges are historical; the completed final theorem and the evidence identified above determine the verification status of this manuscript.
