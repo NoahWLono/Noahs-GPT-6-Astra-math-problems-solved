@@ -12,12 +12,12 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP:
 
-- The Ramsey number R(5,5)
-- The lonely runner conjecture
 - Odd perfect numbers
 - The Collatz conjecture
 - The strong Goldbach conjecture
 - The twin prime conjecture
+- Černý's conjecture
+- Splay-tree dynamic optimality
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
