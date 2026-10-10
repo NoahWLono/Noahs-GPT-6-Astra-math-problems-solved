@@ -1,0 +1,6 @@
+'ProgressivePool.StoppedForgerySplit.stopped_forgery_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.763
+PEAK_RSS_KIB=1578780
+LIMIT_REASON=None

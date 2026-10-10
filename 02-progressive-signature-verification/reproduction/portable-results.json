@@ -1,0 +1,481 @@
+{
+  "total_wall_seconds": 167.43330130699906,
+  "modules": [
+    {
+      "module": "UniformRow",
+      "exit_code": 0,
+      "elapsed_seconds": 1.5615227819944266,
+      "peak_rss_kib": 1515444,
+      "limit_reason": null
+    },
+    {
+      "module": "RowExclusions",
+      "exit_code": 0,
+      "elapsed_seconds": 1.6118758950033225,
+      "peak_rss_kib": 1565968,
+      "limit_reason": null
+    },
+    {
+      "module": "AdaptiveTranscript",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2598293500050204,
+      "peak_rss_kib": 1575840,
+      "limit_reason": null
+    },
+    {
+      "module": "FirstSpoilCounting",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3101646089926362,
+      "peak_rss_kib": 1574308,
+      "limit_reason": null
+    },
+    {
+      "module": "FieldTranscript",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9661042810039362,
+      "peak_rss_kib": 1576768,
+      "limit_reason": null
+    },
+    {
+      "module": "ProductCells",
+      "exit_code": 0,
+      "elapsed_seconds": 1.210257491999073,
+      "peak_rss_kib": 1561196,
+      "limit_reason": null
+    },
+    {
+      "module": "ActualConditionalBound",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3635322769987397,
+      "peak_rss_kib": 1566016,
+      "limit_reason": null
+    },
+    {
+      "module": "HistoryCells",
+      "exit_code": 0,
+      "elapsed_seconds": 1.4118442079925444,
+      "peak_rss_kib": 1580252,
+      "limit_reason": null
+    },
+    {
+      "module": "AdaptiveTail",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3095153869944625,
+      "peak_rss_kib": 1225544,
+      "limit_reason": null
+    },
+    {
+      "module": "ConcreteAdaptiveTail",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9636045259976527,
+      "peak_rss_kib": 1581556,
+      "limit_reason": null
+    },
+    {
+      "module": "SpoiledRows",
+      "exit_code": 0,
+      "elapsed_seconds": 2.9188117400044575,
+      "peak_rss_kib": 1602700,
+      "limit_reason": null
+    },
+    {
+      "module": "FinalResidual",
+      "exit_code": 0,
+      "elapsed_seconds": 1.6616030560107902,
+      "peak_rss_kib": 1594504,
+      "limit_reason": null
+    },
+    {
+      "module": "FreshSampling",
+      "exit_code": 0,
+      "elapsed_seconds": 3.626150422001956,
+      "peak_rss_kib": 1370168,
+      "limit_reason": null
+    },
+    {
+      "module": "FreshSamplingJoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3590729540010216,
+      "peak_rss_kib": 1342616,
+      "limit_reason": null
+    },
+    {
+      "module": "UniformPoolEndpoint",
+      "exit_code": 0,
+      "elapsed_seconds": 2.3154582570132334,
+      "peak_rss_kib": 1580920,
+      "limit_reason": null
+    },
+    {
+      "module": "EpochComposition",
+      "exit_code": 0,
+      "elapsed_seconds": 2.616785442995024,
+      "peak_rss_kib": 1379152,
+      "limit_reason": null
+    },
+    {
+      "module": "EpochPrefix",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3592724229965825,
+      "peak_rss_kib": 1355316,
+      "limit_reason": null
+    },
+    {
+      "module": "ConcreteEpochs",
+      "exit_code": 0,
+      "elapsed_seconds": 1.5610242819966516,
+      "peak_rss_kib": 1580840,
+      "limit_reason": null
+    },
+    {
+      "module": "EpochFreshEndpoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.662692830999731,
+      "peak_rss_kib": 1584864,
+      "limit_reason": null
+    },
+    {
+      "module": "EpochFreshJoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3595540570095181,
+      "peak_rss_kib": 1569316,
+      "limit_reason": null
+    },
+    {
+      "module": "StoredRows",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2090900619950844,
+      "peak_rss_kib": 1510380,
+      "limit_reason": null
+    },
+    {
+      "module": "SignatureCompiler",
+      "exit_code": 0,
+      "elapsed_seconds": 1.6110259929992026,
+      "peak_rss_kib": 1584644,
+      "limit_reason": null
+    },
+    {
+      "module": "BaseSecurityTerm",
+      "exit_code": 0,
+      "elapsed_seconds": 6.842981748006423,
+      "peak_rss_kib": 1586172,
+      "limit_reason": null
+    },
+    {
+      "module": "GlobalSignatureCompiler",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9129199999879347,
+      "peak_rss_kib": 1591204,
+      "limit_reason": null
+    },
+    {
+      "module": "CostAndConfidence",
+      "exit_code": 0,
+      "elapsed_seconds": 2.466811634993064,
+      "peak_rss_kib": 1456256,
+      "limit_reason": null
+    },
+    {
+      "module": "InvocationBudget",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2591019009996671,
+      "peak_rss_kib": 1581844,
+      "limit_reason": null
+    },
+    {
+      "module": "IncrementalPreparation",
+      "exit_code": 0,
+      "elapsed_seconds": 2.168401852992247,
+      "peak_rss_kib": 1611772,
+      "limit_reason": null
+    },
+    {
+      "module": "IndexedPreparation",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9696467619942268,
+      "peak_rss_kib": 1599724,
+      "limit_reason": null
+    },
+    {
+      "module": "BufferedExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 1.209359062006115,
+      "peak_rss_kib": 1590016,
+      "limit_reason": null
+    },
+    {
+      "module": "OperationalCost",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3090865940030199,
+      "peak_rss_kib": 1577080,
+      "limit_reason": null
+    },
+    {
+      "module": "CursorBufferedExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 1.258750370994676,
+      "peak_rss_kib": 1577148,
+      "limit_reason": null
+    },
+    {
+      "module": "ParameterCertificate",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9570002190012019,
+      "peak_rss_kib": 1301240,
+      "limit_reason": null
+    },
+    {
+      "module": "StoredCheckExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 2.719206014997326,
+      "peak_rss_kib": 1611264,
+      "limit_reason": null
+    },
+    {
+      "module": "StoredBufferedExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 1.964045073997113,
+      "peak_rss_kib": 1630208,
+      "limit_reason": null
+    },
+    {
+      "module": "MultiEpochExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 1.5105618980014697,
+      "peak_rss_kib": 1586264,
+      "limit_reason": null
+    },
+    {
+      "module": "MultiEpochCost",
+      "exit_code": 0,
+      "elapsed_seconds": 1.611242522005341,
+      "peak_rss_kib": 1586552,
+      "limit_reason": null
+    },
+    {
+      "module": "OperationalSignatureEndpoint",
+      "exit_code": 0,
+      "elapsed_seconds": 3.0216670439986046,
+      "peak_rss_kib": 1629232,
+      "limit_reason": null
+    },
+    {
+      "module": "StoppingEpochExecution",
+      "exit_code": 0,
+      "elapsed_seconds": 2.468418236996513,
+      "peak_rss_kib": 1639776,
+      "limit_reason": null
+    },
+    {
+      "module": "TraceErasure",
+      "exit_code": 0,
+      "elapsed_seconds": 2.2651126210112125,
+      "peak_rss_kib": 1627576,
+      "limit_reason": null
+    },
+    {
+      "module": "GlobalSignatureJoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3604008230031468,
+      "peak_rss_kib": 1568220,
+      "limit_reason": null
+    },
+    {
+      "module": "FinalStoredInvocation",
+      "exit_code": 0,
+      "elapsed_seconds": 1.818647959997179,
+      "peak_rss_kib": 1609748,
+      "limit_reason": null
+    },
+    {
+      "module": "StoppedSignatureEndpoint",
+      "exit_code": 0,
+      "elapsed_seconds": 3.0698048600024777,
+      "peak_rss_kib": 1622124,
+      "limit_reason": null
+    },
+    {
+      "module": "CompletedStoppedInvocation",
+      "exit_code": 0,
+      "elapsed_seconds": 2.466785844997503,
+      "peak_rss_kib": 1618504,
+      "limit_reason": null
+    },
+    {
+      "module": "RandomTapeAveraging",
+      "exit_code": 0,
+      "elapsed_seconds": 1.1585190810001222,
+      "peak_rss_kib": 1564648,
+      "limit_reason": null
+    },
+    {
+      "module": "RandomizedStoppedEndpoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2590514449984767,
+      "peak_rss_kib": 1576536,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks0",
+      "exit_code": 0,
+      "elapsed_seconds": 4.077068342012353,
+      "peak_rss_kib": 1361024,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks1",
+      "exit_code": 0,
+      "elapsed_seconds": 4.0759118200076045,
+      "peak_rss_kib": 1364120,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks2",
+      "exit_code": 0,
+      "elapsed_seconds": 4.076218119007535,
+      "peak_rss_kib": 1355572,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks3",
+      "exit_code": 0,
+      "elapsed_seconds": 4.178299548992072,
+      "peak_rss_kib": 1360312,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks4",
+      "exit_code": 0,
+      "elapsed_seconds": 3.975952192005934,
+      "peak_rss_kib": 1355176,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks5",
+      "exit_code": 0,
+      "elapsed_seconds": 4.233394908995251,
+      "peak_rss_kib": 1361148,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks6",
+      "exit_code": 0,
+      "elapsed_seconds": 4.43325672201172,
+      "peak_rss_kib": 1361092,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeDivisorBlocks7",
+      "exit_code": 0,
+      "elapsed_seconds": 4.080097537997062,
+      "peak_rss_kib": 1357292,
+      "limit_reason": null
+    },
+    {
+      "module": "PrimeCertificate",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2592085719952593,
+      "peak_rss_kib": 1363188,
+      "limit_reason": null
+    },
+    {
+      "module": "CertifiedField",
+      "exit_code": 0,
+      "elapsed_seconds": 1.0076458279945655,
+      "peak_rss_kib": 1504768,
+      "limit_reason": null
+    },
+    {
+      "module": "CertifiedParameters",
+      "exit_code": 0,
+      "elapsed_seconds": 1.5117704860022059,
+      "peak_rss_kib": 1532224,
+      "limit_reason": null
+    },
+    {
+      "module": "FiniteForgerySplit",
+      "exit_code": 0,
+      "elapsed_seconds": 1.8129697590047726,
+      "peak_rss_kib": 1344832,
+      "limit_reason": null
+    },
+    {
+      "module": "StoppedForgerySplit",
+      "exit_code": 0,
+      "elapsed_seconds": 1.8635726549982792,
+      "peak_rss_kib": 1578848,
+      "limit_reason": null
+    },
+    {
+      "module": "VerifiedCompiler",
+      "exit_code": 0,
+      "elapsed_seconds": 1.7131451960012782,
+      "peak_rss_kib": 1601364,
+      "limit_reason": null
+    },
+    {
+      "module": "FinalTraceErasure",
+      "exit_code": 0,
+      "elapsed_seconds": 2.4226135479984805,
+      "peak_rss_kib": 1628724,
+      "limit_reason": null
+    },
+    {
+      "module": "VerifierInterface",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2593256469990592,
+      "peak_rss_kib": 1598664,
+      "limit_reason": null
+    },
+    {
+      "module": "RandomizedFinalJoint",
+      "exit_code": 0,
+      "elapsed_seconds": 1.510136833996512,
+      "peak_rss_kib": 1597684,
+      "limit_reason": null
+    },
+    {
+      "module": "StoppedSourceBound",
+      "exit_code": 0,
+      "elapsed_seconds": 1.661268095995183,
+      "peak_rss_kib": 1595480,
+      "limit_reason": null
+    },
+    {
+      "module": "EpochResourceBounds",
+      "exit_code": 0,
+      "elapsed_seconds": 2.065633346006507,
+      "peak_rss_kib": 1617264,
+      "limit_reason": null
+    },
+    {
+      "module": "OperationalEarlyTradeoff",
+      "exit_code": 0,
+      "elapsed_seconds": 1.1108686959923944,
+      "peak_rss_kib": 1573976,
+      "limit_reason": null
+    },
+    {
+      "module": "MatchedEarlyCertificates",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2086667919938918,
+      "peak_rss_kib": 1395928,
+      "limit_reason": null
+    },
+    {
+      "module": "CompilerBundle",
+      "exit_code": 0,
+      "elapsed_seconds": 1.058090075996006,
+      "peak_rss_kib": 1579032,
+      "limit_reason": null
+    },
+    {
+      "module": "AuditAxioms",
+      "exit_code": 0,
+      "elapsed_seconds": 26.525316764993477,
+      "peak_rss_kib": 1624000,
+      "limit_reason": null
+    }
+  ]
+}

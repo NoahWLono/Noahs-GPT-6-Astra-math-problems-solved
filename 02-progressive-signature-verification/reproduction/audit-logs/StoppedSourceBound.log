@@ -1,0 +1,10 @@
+'ProgressivePool.StoppedSourceBound.stopped_forgery_split_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoppedSourceBound.stopped_full_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSourceBound.stopped_forgery_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.661
+PEAK_RSS_KIB=1595760
+LIMIT_REASON=None

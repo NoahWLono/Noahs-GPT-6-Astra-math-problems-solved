@@ -1,0 +1,9 @@
+'ProgressivePool.FiniteForgerySplit.progressive_le_ordinary_add_extra' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FiniteForgerySplit.full_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.814
+PEAK_RSS_KIB=1346184
+LIMIT_REASON=None

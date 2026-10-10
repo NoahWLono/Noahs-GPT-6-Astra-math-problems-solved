@@ -1,0 +1,32 @@
+source/StoppingEpochExecution.lean:99:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.StoppingEpochExecution.phase_reservations':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/StoppingEpochExecution.lean:160:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.StoppingEpochExecution.raw_selected_le':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/StoppingEpochExecution.lean:189:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.StoppingEpochExecution.run_pending':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.StoppingEpochExecution.run_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.coldRun_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.raw_selected_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.raw_room_for_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.run_pending' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.coldRun_pending' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppingEpochExecution.coldRun_total_multiplications' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoppingEpochExecution.coldRun_room_for_final' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.573
+PEAK_RSS_KIB=1636880
+LIMIT_REASON=None

@@ -6,12 +6,13 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 - [01 — Quadratic APN functions in dimension eight](01-quadratic-apn/README.md): **Completed and verified.** A Lean-checked proof that every quadratic APN function from F₂⁸ to F₂⁸ has at least **33 non-bent nonzero components**, equivalently at most 222 bent nonzero components. The author-side endpoint build and a separate fresh rebuild of all 136 local proof modules have passed. This proves a universal lower bound, not attainment or a new APN construction. Read the [full mathematical paper](01-quadratic-apn/paper/apn-eight-bound.pdf). The excluded i = 3 amplitude profile was explicitly still open in Beierle et al., 27 August 2026, §5.1. The completed literature review found no earlier proof of this exclusion in the sources checked; see [the paper’s prior-art discussion, §1.2](01-quadratic-apn/paper/apn-eight-bound.pdf#page=4).
 
+- [02 — Adaptive progressive verification with short private check banks](02-progressive-signature-verification/README.md): **Completed and verified.** A narrowly scoped private verification method with adaptive-query error bounds, an executable finite machine, and exact field-multiplication accounting. All 67 Lean modules were independently rebuilt; 862 theorem declarations were audited for standard Lean axioms. Semantic, mathematical, and qualified prior-work reviews passed. This changes verification preprocessing and checking, not signature generation; it does not claim a new signature primitive or practical speedup. Read the [reviewed paper](02-progressive-signature-verification/paper/short-private-pools.pdf).
+
 ## Ongoing research
 
 Current research-only WIP:
 
 - The graceful tree conjecture
-- New defensive digital signatures and mathematical security arguments
 - The Hadwiger–Nelson problem
 - The Ramsey number R(5,5)
 - The lonely runner conjecture
@@ -23,4 +24,4 @@ These are research directions, not completed solutions. Only completed, checked 
 
 ## Reproducibility and preservation
 
-The problem folder contains the proof dependency closure, pinned Lean/mathlib configuration, source hashes, build instructions, paper assets, and verification records. See [publication notes](PUBLICATION.md). No compiled proof objects, dependency checkout, credentials, or build cache is distributed. No CI or project-wide license has been added. Existing third-party license notices remain with the archived assets.
+Each problem folder contains the proof dependency closure, pinned Lean/mathlib configuration, source hashes, build instructions, paper assets, and verification records. See [publication notes](PUBLICATION.md). No compiled proof objects, dependency checkout, credentials, or build cache is distributed. No CI or project-wide license has been added. Existing third-party license notices remain with the archived assets.

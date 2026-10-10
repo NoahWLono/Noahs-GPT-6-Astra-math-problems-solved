@@ -1,0 +1,13 @@
+source/EpochFreshEndpoint.lean:20:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.zeroRowsAt_bad':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.zeroRowsAt_bad' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.epochs_fresh_progressive' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.766
+PEAK_RSS_KIB=1581816
+LIMIT_REASON=None

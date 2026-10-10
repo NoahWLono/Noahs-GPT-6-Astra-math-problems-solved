@@ -1,0 +1,8 @@
+source/HistoryCells.lean:23:20: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'ProgressivePool.historyCell_query_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.360
+PEAK_RSS_KIB=1579692
+LIMIT_REASON=None

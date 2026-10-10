@@ -1,0 +1,7 @@
+'ProgressivePool.AdaptiveTail.marked_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.AdaptiveTail.marked_event_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.361
+PEAK_RSS_KIB=1227596
+LIMIT_REASON=None

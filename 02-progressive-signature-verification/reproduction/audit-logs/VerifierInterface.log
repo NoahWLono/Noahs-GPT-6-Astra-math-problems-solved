@@ -1,0 +1,17 @@
+source/VerifierInterface.lean:33:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.VerifierInterface.verifyRequest_isSome':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.VerifierInterface.verifyRequest_isSome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.VerifierInterface.requested_confidence_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.VerifierInterface.requested_confidence_nontrivial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.259
+PEAK_RSS_KIB=1598056
+LIMIT_REASON=None

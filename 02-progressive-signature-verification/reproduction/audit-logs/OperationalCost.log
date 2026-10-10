@@ -1,0 +1,24 @@
+source/OperationalCost.lean:8:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.runBits_length_le':
+  [Fintype F]
+  [DecidableEq I]
+  [Fintype J]
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] [Fintype J] [DecidableEq J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/OperationalCost.lean:20:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.invocationDepths_length_le':
+  [Fintype F]
+  [DecidableEq I]
+  [Fintype J]
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] [Fintype J] [DecidableEq J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.buffered_prefix_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.operational_prefix_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.invocationDepths_sum_le' depends on axioms: [propext, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.410
+PEAK_RSS_KIB=1577220
+LIMIT_REASON=None

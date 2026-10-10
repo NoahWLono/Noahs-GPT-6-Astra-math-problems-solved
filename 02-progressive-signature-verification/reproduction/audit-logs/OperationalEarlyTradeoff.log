@@ -1,0 +1,8 @@
+'ProgressivePool.OperationalEarlyTradeoff.actual_prefix_below_seven_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.109
+PEAK_RSS_KIB=1573520
+LIMIT_REASON=None

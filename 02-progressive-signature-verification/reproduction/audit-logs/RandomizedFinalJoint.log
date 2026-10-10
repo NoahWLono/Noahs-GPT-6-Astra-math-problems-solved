@@ -1,0 +1,8 @@
+'ProgressivePool.RandomizedFinalJoint.randomized_final_signature_joint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.411
+PEAK_RSS_KIB=1598540
+LIMIT_REASON=None

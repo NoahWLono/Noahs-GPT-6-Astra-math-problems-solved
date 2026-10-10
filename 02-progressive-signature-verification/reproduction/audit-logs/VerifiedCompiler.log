@@ -1,0 +1,10 @@
+'ProgressivePool.VerifiedCompiler.final_signature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.VerifiedCompiler.final_signature_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.VerifiedCompiler.randomized_final_signature_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.814
+PEAK_RSS_KIB=1596156
+LIMIT_REASON=None

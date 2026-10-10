@@ -1,0 +1,22 @@
+source/FinalTraceErasure.lean:55:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.FinalTraceErasure.finish_refines':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.FinalTraceErasure.final_signature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalTraceErasure.final_signature_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalTraceErasure.finalMachine_total_multiplications' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalTraceErasure.finalMachine_perfect_completeness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalTraceErasure.finish_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalTraceErasure.finalMachine_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalTraceErasure.fieldSlots_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalTraceErasure.finalErrorMass_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.518
+PEAK_RSS_KIB=1635168
+LIMIT_REASON=None

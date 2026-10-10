@@ -1,0 +1,29 @@
+'ProgressivePool.StoredBufferedExecution.storedBuffered_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_products' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_reservations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_preparation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_preparation_products' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoredBufferedExecution.storedBuffered_reservations_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.016
+PEAK_RSS_KIB=1639044
+LIMIT_REASON=None

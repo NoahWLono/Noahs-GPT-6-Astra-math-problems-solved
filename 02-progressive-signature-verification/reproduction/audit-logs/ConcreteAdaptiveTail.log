@@ -1,0 +1,13 @@
+source/ConcreteAdaptiveTail.lean:36:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.markedExperiment_depth':
+  [Fintype F]
+  [DecidableEq I]
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] [Fintype J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.actual_first_spoil_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.066
+PEAK_RSS_KIB=1582024
+LIMIT_REASON=None

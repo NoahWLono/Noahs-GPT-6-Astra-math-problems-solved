@@ -1,0 +1,13 @@
+source/CursorBufferedExecution.lean:29:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.cursorBuffered_preparation':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.cursorBuffered_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.cursorBuffered_preparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.cursorBuffered_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.259
+PEAK_RSS_KIB=1581084
+LIMIT_REASON=None

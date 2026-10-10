@@ -1,0 +1,10 @@
+'ProgressivePool.MatchedEarlyCertificates.rs_storage_ceiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.MatchedEarlyCertificates.rs_early_thresholds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.MatchedEarlyCertificates.terminal_work' depends on axioms: [propext]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.210
+PEAK_RSS_KIB=1395372
+LIMIT_REASON=None

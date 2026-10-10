@@ -1,0 +1,7 @@
+'ProgressivePool.forgery_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.full_signature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=7.045
+PEAK_RSS_KIB=1587776
+LIMIT_REASON=None

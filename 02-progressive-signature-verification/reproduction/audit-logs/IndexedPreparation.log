@@ -1,0 +1,15 @@
+source/IndexedPreparation.lean:99:4: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'ProgressivePool.IndexedPreparation.taskAt_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.cursor_refines_fold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.indexed_fold_storedRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.cursor_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.runCursor_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.cursor_complete_at_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.runInvocations_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.IndexedPreparation.cursor_ledger_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.066
+PEAK_RSS_KIB=1600296
+LIMIT_REASON=None

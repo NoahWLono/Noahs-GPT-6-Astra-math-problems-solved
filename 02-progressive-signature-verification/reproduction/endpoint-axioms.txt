@@ -1,0 +1,8 @@
+AUDIT ProgressivePool.FinalTraceErasure.finalMachine_total_multiplications : [propext, Quot.sound, Classical.choice]
+AUDIT ProgressivePool.certified_global_error : [propext, Classical.choice, Quot.sound]
+AUDIT ProgressivePool.FinalTraceErasure.final_signature_joint : [propext, Quot.sound, Classical.choice]
+AUDIT ProgressivePool.parameter_prime_checked : [propext, Classical.choice, Quot.sound]
+AUDIT ProgressivePool.FinalTraceErasure.finalMachine_perfect_completeness : [propext, Quot.sound, Classical.choice]
+AUDIT ProgressivePool.FinalTraceErasure.final_signature_bound : [propext, Quot.sound, Classical.choice]
+AUDIT ProgressivePool.certified_tail_probability : [propext, Classical.choice, Quot.sound]
+AUDIT ProgressivePool.parameter_field_card : [propext, Quot.sound, Classical.choice]

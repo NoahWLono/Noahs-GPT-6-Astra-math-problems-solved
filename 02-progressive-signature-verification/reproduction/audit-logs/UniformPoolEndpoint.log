@@ -1,0 +1,10 @@
+source/UniformPoolEndpoint.lean:78:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ProgressivePool.uniform_pool_bad_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.uniform_pool_bad_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.uniform_pool_progressive' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.416
+PEAK_RSS_KIB=1581152
+LIMIT_REASON=None

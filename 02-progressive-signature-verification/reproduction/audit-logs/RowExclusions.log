@@ -1,0 +1,7 @@
+'ProgressivePool.uniform_row_conditioned_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.conditioned_count_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.460
+PEAK_RSS_KIB=1566488
+LIMIT_REASON=None

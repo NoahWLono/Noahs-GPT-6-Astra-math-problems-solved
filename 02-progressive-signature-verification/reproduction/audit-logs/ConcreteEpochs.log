@@ -1,0 +1,9 @@
+source/ConcreteEpochs.lean:38:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ProgressivePool.poolEpoch_local_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.concrete_epochs_bad_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.611
+PEAK_RSS_KIB=1579820
+LIMIT_REASON=None

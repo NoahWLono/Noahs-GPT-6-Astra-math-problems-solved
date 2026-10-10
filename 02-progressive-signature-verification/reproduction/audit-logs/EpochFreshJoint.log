@@ -1,0 +1,6 @@
+'ProgressivePool.epochs_fresh_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.464
+PEAK_RSS_KIB=1568644
+LIMIT_REASON=None

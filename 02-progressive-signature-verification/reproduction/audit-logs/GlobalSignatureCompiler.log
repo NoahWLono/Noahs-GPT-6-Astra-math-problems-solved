@@ -1,0 +1,7 @@
+'ProgressivePool.compiled_active_residual' depends on axioms: [propext, Quot.sound]
+'ProgressivePool.global_signature_verification_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.963
+PEAK_RSS_KIB=1591840
+LIMIT_REASON=None

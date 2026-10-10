@@ -1,0 +1,7 @@
+'ProgressivePool.FreshSampling.fresh_joint_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FreshSampling.fresh_joint_threshold_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.412
+PEAK_RSS_KIB=1339364
+LIMIT_REASON=None

@@ -1,0 +1,12 @@
+source/InvocationBudget.lean:14:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.bindQueries_height':
+  [Field F]
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Field F] [Fintype I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.reserved_query_budget' depends on axioms: [propext, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.210
+PEAK_RSS_KIB=1580892
+LIMIT_REASON=None

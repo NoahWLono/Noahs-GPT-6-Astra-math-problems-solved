@@ -1,0 +1,22 @@
+source/CostAndConfidence.lean:71:17: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'ProgressivePool.CostAndConfidence.alpha_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.CostAndConfidence.alpha_one_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.CostAndConfidence.alpha_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.CostAndConfidence.reachable_total_cost' depends on axioms: [propext, Quot.sound]
+'ProgressivePool.CostAndConfidence.next_buffer_work_by_R' depends on axioms: [propext, Quot.sound]
+'ProgressivePool.CostAndConfidence.every_phase_work_by_R' depends on axioms: [propext]
+'ProgressivePool.CostAndConfidence.numeric_average_exact_cross_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.CostAndConfidence.numeric_average_cross_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.CostAndConfidence.reachable_below_seven_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.367
+PEAK_RSS_KIB=1449348
+LIMIT_REASON=None

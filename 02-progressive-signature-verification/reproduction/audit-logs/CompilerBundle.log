@@ -1,0 +1,239 @@
+ProgressivePool.FinalTraceErasure.final_signature_bound.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F] [Fintype F]
+  [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (hdummy : dummy ≠ 0) (k u : ℕ)
+  (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (hr : r + 1 ≤ R)
+  (hc : ∀ p ∈ phases, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (h : H), invocationCaps k (mapInvocationInputs A (terminal h))) (hfield : R * k + s < Fintype.card F) (h : H)
+  (extra : MultiEpochExecution.Bank F s n)
+  (T : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u → ℕ) :
+  FinalTraceErasure.finalErrorMass A W stop terminal phases aux candidate dummy u h extra (fun x => true) T ≤
+    ∑ draws,
+        EpochComposition.sampleWeight
+            (List.map (fun e => e.toEpoch u)
+                (OperationalSignatureEndpoint.compiled A terminal phases aux candidate dummy)).length
+            draws *
+          (↑(u - 1) / ↑s) ^ T draws +
+      ↑(phases.length + 1) * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.FinalTraceErasure.final_signature_joint.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F] [Fintype F]
+  [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (hdummy : dummy ≠ 0) (k u : ℕ)
+  (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (hr : r + 1 ≤ R)
+  (hc : ∀ p ∈ phases, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (h : H), invocationCaps k (mapInvocationInputs A (terminal h))) (hfield : R * k + s < Fintype.card F) (h : H)
+  (extra : MultiEpochExecution.Bank F s n)
+  (T : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u → ℕ) (t : ℕ) :
+  FinalTraceErasure.finalErrorMass A W stop terminal phases aux candidate dummy u h extra
+      (fun draws => decide (T draws = t)) T ≤
+    (↑(u - 1) / ↑s) ^ t *
+        ∑ draws ∈ {draws | T draws = t},
+          EpochComposition.sampleWeight
+            (List.map (fun e => e.toEpoch u)
+                (OperationalSignatureEndpoint.compiled A terminal phases aux candidate dummy)).length
+            draws +
+      ↑(phases.length + 1) * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.FinalTraceErasure.finalMachine_total_multiplications.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F]
+  [Fintype F] [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (u : ℕ) (hr : r + 1 ≤ R)
+  (hB : s * m * n = R * W) (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (h : H)
+  (draws : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u)
+  (extra : MultiEpochExecution.Bank F s n) (t : ℕ) (indices : Fin t → Fin s) :
+  let e := FinalTraceErasure.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t indices;
+  e.preparationMultiplications + e.checkingMultiplications = s * m * n + e.reservations * W + (m + n) * e.checks
+ProgressivePool.FinalTraceErasure.finalMachine_perfect_completeness.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F]
+  [Fintype F] [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (u : ℕ)
+  (hB : s * m * n = R * W) (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (h : H)
+  (draws : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u)
+  (extra : MultiEpochExecution.Bank F s n) (t : ℕ) (indices : Fin t → Fin s)
+  (haux :
+    aux (FinalTraceErasure.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t indices).output =
+      true)
+  (hvalid :
+    mvResidual A
+        (candidate
+            (FinalTraceErasure.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t
+                indices).output).1
+        (candidate
+            (FinalTraceErasure.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t
+                indices).output).2 =
+      0) :
+  (FinalTraceErasure.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t indices).accepted =
+    true
+ProgressivePool.VerifiedCompiler.final_signature_bound.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F] [Fintype F]
+  [DecidableEq F] {s n m R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (hdummy : dummy ≠ 0) (k u : ℕ)
+  (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (hr : r + 1 ≤ R)
+  (hc : ∀ p ∈ phases, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (h : H), invocationCaps k (mapInvocationInputs A (terminal h))) (hfield : R * k + s < Fintype.card F) (h : H)
+  (extra : MultiEpochExecution.Bank F s n)
+  (T : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u → ℕ) :
+  CompletedStoppedInvocation.finalErrorMass A W stop terminal phases aux candidate dummy u h extra (fun x => true) T ≤
+    ∑ draws,
+        EpochComposition.sampleWeight
+            (List.map (fun e => e.toEpoch u)
+                (OperationalSignatureEndpoint.compiled A terminal phases aux candidate dummy)).length
+            draws *
+          (↑(u - 1) / ↑s) ^ T draws +
+      ↑(phases.length + 1) * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.VerifiedCompiler.final_signature_joint.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F] [Fintype F]
+  [DecidableEq F] {s n m R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (hdummy : dummy ≠ 0) (k u : ℕ)
+  (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (hr : r + 1 ≤ R)
+  (hc : ∀ p ∈ phases, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (h : H), invocationCaps k (mapInvocationInputs A (terminal h))) (hfield : R * k + s < Fintype.card F) (h : H)
+  (extra : MultiEpochExecution.Bank F s n)
+  (T : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u → ℕ) (t : ℕ) :
+  CompletedStoppedInvocation.finalErrorMass A W stop terminal phases aux candidate dummy u h extra
+      (fun draws => decide (T draws = t)) T ≤
+    (↑(u - 1) / ↑s) ^ t *
+        ∑ draws ∈ {draws | T draws = t},
+          EpochComposition.sampleWeight
+            (List.map (fun e => e.toEpoch u)
+                (OperationalSignatureEndpoint.compiled A terminal phases aux candidate dummy)).length
+            draws +
+      ↑(phases.length + 1) * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.VerifiedCompiler.randomized_final_signature_bound.{u_1, u_2, u_3} {F : Type u_1} {H : Type u_2}
+  [Field F] [Fintype F] [DecidableEq F] {s n m R r : ℕ} {C : Type u_3} [Fintype C] (A : Fin n → Fin m → F) (W : ℕ)
+  (stop : C → H → Bool) (terminal : C → MultiEpochExecution.Phase F H s m n r)
+  (phases : C → List (MultiEpochExecution.Phase F H s m n R)) (weights : C → ℚ) (hw : ∀ (c : C), 0 ≤ weights c)
+  (hnorm : ∑ c, weights c = 1) (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F)
+  (hdummy : dummy ≠ 0) (k u E : ℕ) (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ (c : C), ∀ p ∈ phases c, StoppingEpochExecution.ConditionalFull A (stop c) p) (hr : r + 1 ≤ R)
+  (hE : ∀ (c : C), (phases c).length + 1 ≤ E)
+  (hc : ∀ (c : C), ∀ p ∈ phases c, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (c : C) (h : H), invocationCaps k (mapInvocationInputs A (terminal c h)))
+  (hfield : R * k + s < Fintype.card F) (h : C → H) (extra : C → MultiEpochExecution.Bank F s n)
+  (T : (c : C) → OperationalSignatureEndpoint.Draws A (terminal c) (phases c) aux candidate dummy u → ℕ) :
+  ∑ c,
+      weights c *
+        CompletedStoppedInvocation.finalErrorMass A W (stop c) (terminal c) (phases c) aux candidate dummy u (h c)
+          (extra c) (fun x => true) (T c) ≤
+    ∑ c,
+        weights c *
+          ∑ draws,
+            EpochComposition.sampleWeight
+                (List.map (fun e => e.toEpoch u)
+                    (OperationalSignatureEndpoint.compiled A (terminal c) (phases c) aux candidate dummy)).length
+                draws *
+              (↑(u - 1) / ↑s) ^ T c draws +
+      ↑E * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.RandomizedFinalJoint.randomized_final_signature_joint.{u_1, u_2, u_3} {F : Type u_1} {H : Type u_2}
+  {C : Type u_3} [Field F] [Fintype F] [DecidableEq F] [Fintype C] {s n m R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ)
+  (stop : C → H → Bool) (terminal : C → MultiEpochExecution.Phase F H s m n r)
+  (phases : C → List (MultiEpochExecution.Phase F H s m n R)) (weights : C → ℚ) (hw : ∀ (c : C), 0 ≤ weights c)
+  (hnorm : ∑ c, weights c = 1) (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F)
+  (hdummy : dummy ≠ 0) (k u E : ℕ) (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ (c : C), ∀ p ∈ phases c, StoppingEpochExecution.ConditionalFull A (stop c) p) (hr : r + 1 ≤ R)
+  (hE : ∀ (c : C), (phases c).length + 1 ≤ E)
+  (hc : ∀ (c : C), ∀ p ∈ phases c, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (c : C) (h : H), invocationCaps k (mapInvocationInputs A (terminal c h)))
+  (hfield : R * k + s < Fintype.card F) (h : C → H) (extra : C → MultiEpochExecution.Bank F s n)
+  (T : (c : C) → OperationalSignatureEndpoint.Draws A (terminal c) (phases c) aux candidate dummy u → ℕ) (t : ℕ) :
+  ∑ c,
+      weights c *
+        CompletedStoppedInvocation.finalErrorMass A W (stop c) (terminal c) (phases c) aux candidate dummy u (h c)
+          (extra c) (fun draws => decide (T c draws = t)) (T c) ≤
+    (↑(u - 1) / ↑s) ^ t *
+        ∑ c,
+          weights c *
+            ∑ draws ∈ {draws | T c draws = t},
+              EpochComposition.sampleWeight
+                (List.map (fun e => e.toEpoch u)
+                    (OperationalSignatureEndpoint.compiled A (terminal c) (phases c) aux candidate dummy)).length
+                draws +
+      ↑E * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u)
+ProgressivePool.StoppedSourceBound.stopped_forgery_bound.{u_1, u_2} {F : Type u_1} {H : Type u_2} [Field F] [Fintype F]
+  [DecidableEq F] {s n m R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux fresh : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (hdummy : dummy ≠ 0)
+  (k u : ℕ) (hs : 0 < s) (hu : 0 < u) (hB : s * m * n = R * W)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (hr : r + 1 ≤ R)
+  (hc : ∀ p ∈ phases, ∀ (h : H), invocationCaps k (mapInvocationInputs A (p h)))
+  (ht : ∀ (h : H), invocationCaps k (mapInvocationInputs A (terminal h))) (hfield : R * k + s < Fintype.card F) (h : H)
+  (extra : MultiEpochExecution.Bank F s n)
+  (T : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u → ℕ) (baseError : ℚ)
+  (hbase :
+    StoppedSourceBound.OrdinarySourceBound A W stop terminal phases aux fresh candidate dummy u h extra baseError) :
+  StoppedSourceBound.progressiveForgeryMass A W stop terminal phases aux fresh candidate dummy u h extra T ≤
+    baseError +
+      (∑ draws,
+          EpochComposition.sampleWeight
+              (List.map (fun e => e.toEpoch u)
+                  (OperationalSignatureEndpoint.compiled A terminal phases aux candidate dummy)).length
+              draws *
+            (↑(u - 1) / ↑s) ^ T draws +
+        ↑(phases.length + 1) * (↑((R * k + s).choose u) / ↑(Fintype.card F - (R * k + s)) ^ u))
+ProgressivePool.CompletedStoppedInvocation.finalMachine_perfect_completeness.{u_1, u_2} {F : Type u_1} {H : Type u_2}
+  [Field F] [Fintype F] [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (u : ℕ)
+  (hB : s * m * n = R * W) (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (h : H)
+  (draws : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u)
+  (extra : MultiEpochExecution.Bank F s n)
+  (haux :
+    aux (StoppedSignatureEndpoint.machine A W stop terminal phases aux candidate dummy u h draws extra).output = true)
+  (hvalid :
+    mvResidual A
+        (candidate
+            (StoppedSignatureEndpoint.machine A W stop terminal phases aux candidate dummy u h draws extra).output).1
+        (candidate
+            (StoppedSignatureEndpoint.machine A W stop terminal phases aux candidate dummy u h draws extra).output).2 =
+      0)
+  (t : ℕ) (indices : Fin t → Fin s) :
+  (CompletedStoppedInvocation.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t
+        indices).accepted =
+    true
+ProgressivePool.CompletedStoppedInvocation.finalMachine_total_multiplications.{u_1, u_2} {F : Type u_1} {H : Type u_2}
+  [Field F] [Fintype F] [DecidableEq F] {s m n R r : ℕ} (A : Fin n → Fin m → F) (W : ℕ) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H s m n r) (phases : List (MultiEpochExecution.Phase F H s m n R))
+  (aux : H → Bool) (candidate : H → StoredCheckExecution.Input F m n) (dummy : Fin n → F) (u : ℕ) (hr : r + 1 ≤ R)
+  (hB : s * m * n = R * W) (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (h : H)
+  (draws : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u)
+  (extra : MultiEpochExecution.Bank F s n) (t : ℕ) (indices : Fin t → Fin s) :
+  let prior := StoppedSignatureEndpoint.machine A W stop terminal phases aux candidate dummy u h draws extra;
+  let actual :=
+    CompletedStoppedInvocation.finalMachine A W stop terminal phases aux candidate dummy u h draws extra t indices;
+  actual.preparationMultiplications + actual.checkingMultiplications =
+    s * m * n + (prior.reservations + 1) * W + (m + n) * (prior.trace.length + t)
+ProgressivePool.OperationalEarlyTradeoff.actual_prefix_below_seven_rows.{u_1, u_2} {F : Type u_1} {H : Type u_2}
+  [Field F] [Fintype F] [DecidableEq F] {r : ℕ} (A : Fin 1024 → Fin 61852 → F) (stop : H → Bool)
+  (terminal : MultiEpochExecution.Phase F H 64 61852 1024 r)
+  (phases : List (MultiEpochExecution.Phase F H 64 61852 1024 262144)) (aux : H → Bool)
+  (candidate : H → StoredCheckExecution.Input F 61852 1024) (dummy : Fin 1024 → F) (u : ℕ) (hr : r + 1 ≤ 262144)
+  (hFull : ∀ p ∈ phases, StoppingEpochExecution.ConditionalFull A stop p) (h : H)
+  (draws : OperationalSignatureEndpoint.Draws A terminal phases aux candidate dummy u)
+  (extra : MultiEpochExecution.Bank F 64 1024) (t : ℕ) (indices : Fin t → Fin 64)
+  (hN :
+    262144 ≤
+      (StoppedSignatureEndpoint.machine A 15463 stop terminal phases aux candidate dummy u h draws extra).reservations +
+        1)
+  (hS :
+    (StoppedSignatureEndpoint.machine A 15463 stop terminal phases aux candidate dummy u h draws extra).trace.length +
+        t ≤
+      ((StoppedSignatureEndpoint.machine A 15463 stop terminal phases aux candidate dummy u h draws
+              extra).reservations +
+          1) *
+        6) :
+  let prior := StoppedSignatureEndpoint.machine A 15463 stop terminal phases aux candidate dummy u h draws extra;
+  let actual :=
+    CompletedStoppedInvocation.finalMachine A 15463 stop terminal phases aux candidate dummy u h draws extra t indices;
+  actual.preparationMultiplications + actual.checkingMultiplications < (prior.reservations + 1) * 7 * 62876
+ProgressivePool.certified_tail_probability :
+  ↑((262144 * 128 + 64).choose 33) / ↑(Fintype.card ParameterField - (262144 * 128 + 64)) ^ 33 < 1 / 2 ^ 286
+ProgressivePool.certified_global_error (E : ℕ) (hE : E ≤ 2 ^ 64) :
+  ↑E * (↑((262144 * 128 + 64).choose 33) / ↑(Fintype.card ParameterField - (262144 * 128 + 64)) ^ 33) < 1 / 2 ^ 222
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.162
+PEAK_RSS_KIB=1578408
+LIMIT_REASON=None

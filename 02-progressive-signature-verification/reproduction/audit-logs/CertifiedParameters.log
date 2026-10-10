@@ -1,0 +1,12 @@
+source/CertifiedParameters.lean:22:2: warning: exponent 286 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+source/CertifiedParameters.lean:22:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ProgressivePool.certified_field_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.certified_tail_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.certified_confidence_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.certified_global_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.561
+PEAK_RSS_KIB=1531704
+LIMIT_REASON=None

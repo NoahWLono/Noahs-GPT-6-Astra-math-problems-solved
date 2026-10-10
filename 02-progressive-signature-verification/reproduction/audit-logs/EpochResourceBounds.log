@@ -1,0 +1,28 @@
+source/EpochResourceBounds.lean:94:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.EpochResourceBounds.lookaheadReads_eq':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/EpochResourceBounds.lean:152:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.EpochResourceBounds.promotion_field_draw_burst':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.EpochResourceBounds.run_reservation_epochs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochResourceBounds.coldRun_reservation_epochs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.EpochResourceBounds.final_reservation_epochs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.EpochResourceBounds.epoch_budget_u64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochResourceBounds.bankHeadReads_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochResourceBounds.idealFieldDraws_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochResourceBounds.promotion_field_draw_burst' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.013
+PEAK_RSS_KIB=1616632
+LIMIT_REASON=None

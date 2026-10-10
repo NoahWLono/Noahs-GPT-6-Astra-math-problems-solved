@@ -1,0 +1,22 @@
+source/MultiEpochCost.lean:17:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.MultiEpochCost.phase_checking':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/MultiEpochCost.lean:53:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.MultiEpochCost.phase_preparation':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.MultiEpochCost.run_checking' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.MultiEpochCost.run_preparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.MultiEpochCost.coldRun_checking' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.MultiEpochCost.coldRun_preparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.MultiEpochCost.coldRun_total_multiplications' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.561
+PEAK_RSS_KIB=1587596
+LIMIT_REASON=None

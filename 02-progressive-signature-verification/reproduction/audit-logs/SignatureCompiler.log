@@ -1,0 +1,21 @@
+source/SignatureCompiler.lean:14:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.runOutput_map':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/SignatureCompiler.lean:21:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.queryHeight_map':
+  [Field F]
+  [Fintype F]
+  [DecidableEq F]
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Field F] [Fintype F] [DecidableEq F] [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.signature_verification_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.763
+PEAK_RSS_KIB=1585232
+LIMIT_REASON=None

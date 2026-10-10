@@ -1,0 +1,29 @@
+source/BufferedExecution.lean:33:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.runOutput_bind':
+  [Fintype F]
+  [DecidableEq I]
+  [Fintype J]
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] [Fintype J] [DecidableEq J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/BufferedExecution.lean:42:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.buffered_output_projection':
+  [Fintype M]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype M] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/BufferedExecution.lean:53:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.buffered_preparation':
+  [Fintype F]
+  [DecidableEq I]
+  [Fintype J]
+  [DecidableEq J]
+  [Fintype M]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] [Fintype J] [DecidableEq J] [Fintype M] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.buffered_output_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.buffered_boundary_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.361
+PEAK_RSS_KIB=1582100
+LIMIT_REASON=None

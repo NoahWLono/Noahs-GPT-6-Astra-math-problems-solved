@@ -1,0 +1,6 @@
+'ProgressivePool.final_zero_rows_le_first_spoils' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.209
+PEAK_RSS_KIB=1573864
+LIMIT_REASON=None

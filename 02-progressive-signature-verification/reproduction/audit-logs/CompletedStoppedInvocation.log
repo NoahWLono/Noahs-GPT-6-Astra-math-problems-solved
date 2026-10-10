@@ -1,0 +1,34 @@
+source/CompletedStoppedInvocation.lean:50:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.CompletedStoppedInvocation.finish_acceptance':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/CompletedStoppedInvocation.lean:61:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.CompletedStoppedInvocation.finish_checking':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/CompletedStoppedInvocation.lean:78:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.CompletedStoppedInvocation.finish_preparation':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.CompletedStoppedInvocation.finish_checking' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.CompletedStoppedInvocation.finish_preparation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.CompletedStoppedInvocation.finalMachine_total_multiplications' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.CompletedStoppedInvocation.finalMachine_perfect_completeness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.CompletedStoppedInvocation.errorIndices_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.CompletedStoppedInvocation.finalErrorMass_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.568
+PEAK_RSS_KIB=1616824
+LIMIT_REASON=None

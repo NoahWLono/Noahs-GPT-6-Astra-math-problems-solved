@@ -1,0 +1,17 @@
+source/EpochPrefix.lean:66:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.EpochComposition.sampleWeight_append':
+  [Nonempty B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty B] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.EpochComposition.historyAt_append_prefix' does not depend on any axioms
+'ProgressivePool.EpochComposition.badAt_append_current' does not depend on any axioms
+'ProgressivePool.EpochComposition.candidate_future_independent' does not depend on any axioms
+'ProgressivePool.EpochComposition.sampleWeight_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochComposition.current_bank_uniform_given_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.310
+PEAK_RSS_KIB=1354468
+LIMIT_REASON=None

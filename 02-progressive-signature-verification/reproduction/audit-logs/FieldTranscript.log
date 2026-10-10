@@ -1,0 +1,18 @@
+source/FieldTranscript.lean:13:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.mem_rowInputs':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/FieldTranscript.lean:17:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.rowInputs_card_le':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.unspoiled_transcript_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.711
+PEAK_RSS_KIB=1576656
+LIMIT_REASON=None

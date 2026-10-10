@@ -1,0 +1,28 @@
+import VerifierInterface
+import RandomizedFinalJoint
+import StoppedSourceBound
+import EpochResourceBounds
+import FinalTraceErasure
+import OperationalEarlyTradeoff
+import MatchedEarlyCertificates
+
+/-! Single import for the checked finite compiler, operational refinement,
+explicit source-security assumption, parameter certificates and narrowly
+matched field-arithmetic comparison. Independent bundle audit status is
+recorded separately; importing this module does not certify novelty. -/
+namespace ProgressivePool.CompilerBundle
+#check FinalTraceErasure.final_signature_bound
+#check FinalTraceErasure.final_signature_joint
+#check FinalTraceErasure.finalMachine_total_multiplications
+#check FinalTraceErasure.finalMachine_perfect_completeness
+#check VerifiedCompiler.final_signature_bound
+#check VerifiedCompiler.final_signature_joint
+#check VerifiedCompiler.randomized_final_signature_bound
+#check RandomizedFinalJoint.randomized_final_signature_joint
+#check StoppedSourceBound.stopped_forgery_bound
+#check CompletedStoppedInvocation.finalMachine_perfect_completeness
+#check CompletedStoppedInvocation.finalMachine_total_multiplications
+#check OperationalEarlyTradeoff.actual_prefix_below_seven_rows
+#check certified_tail_probability
+#check certified_global_error
+end ProgressivePool.CompilerBundle

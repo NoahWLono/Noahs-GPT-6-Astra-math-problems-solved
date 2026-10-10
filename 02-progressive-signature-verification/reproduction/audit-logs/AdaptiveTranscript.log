@@ -1,0 +1,7 @@
+'ProgressivePool.actual_transcript_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.actual_transcript_factorization' depends on axioms: [propext, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.309
+PEAK_RSS_KIB=1574204
+LIMIT_REASON=None

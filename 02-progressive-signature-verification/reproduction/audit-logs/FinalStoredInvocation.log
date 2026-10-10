@@ -1,0 +1,27 @@
+source/FinalStoredInvocation.lean:145:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.FinalStoredInvocation.cursor_prefix_products':
+  [DecidableEq F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.FinalStoredInvocation.checkFresh_accepted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalStoredInvocation.checkFresh_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.FinalStoredInvocation.checkFresh_uniform_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalStoredInvocation.checkFresh_uniform_probability_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalStoredInvocation.final_invocation_counters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalStoredInvocation.final_invocation_preparation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.FinalStoredInvocation.zero_threshold_reserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.815
+PEAK_RSS_KIB=1610500
+LIMIT_REASON=None

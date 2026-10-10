@@ -1,0 +1,26 @@
+source/StoppedSignatureEndpoint.lean:27:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.StoppedSignatureEndpoint.rawRun_pack':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/StoppedSignatureEndpoint.lean:66:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.StoppedSignatureEndpoint.source_active':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.StoppedSignatureEndpoint.machine_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.source_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.source_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.machine_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.machine_mass_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.operational_signature_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProgressivePool.StoppedSignatureEndpoint.operational_signature_joint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=3.172
+PEAK_RSS_KIB=1630412
+LIMIT_REASON=None

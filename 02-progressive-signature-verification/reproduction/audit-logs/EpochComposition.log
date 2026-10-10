@@ -1,0 +1,15 @@
+source/EpochComposition.lean:144:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.EpochComposition.designated_count_bound':
+  [Nonempty B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty B] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.EpochComposition.sampleWeight_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochComposition.designated_count_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochComposition.anyBad_probability_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochComposition.anyBad_mixture_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.EpochComposition.selected_epoch_mixture_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.718
+PEAK_RSS_KIB=1376000
+LIMIT_REASON=None

@@ -1,0 +1,13 @@
+'ProgressivePool.StoredCheckExecution.stored_value_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoredCheckExecution.stored_bit_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoredCheckExecution.storedRun_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoredCheckExecution.storedRun_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoredCheckExecution.storedRun_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.StoredCheckExecution.storedRun_work_on_mapped_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.721
+PEAK_RSS_KIB=1605096
+LIMIT_REASON=None

@@ -1,0 +1,19 @@
+source/TraceErasure.lean:138:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.TraceErasure.run_refines':
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.TraceErasure.coldRun_checking' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.coldRun_total_multiplications' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.coldRun_pending' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.fieldSlots_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.publicAndStateSlots_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.checkRun_refines' depends on axioms: [propext]
+'ProgressivePool.TraceErasure.bufferedRun_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.run_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.TraceErasure.coldRun_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.267
+PEAK_RSS_KIB=1617960
+LIMIT_REASON=None

@@ -1,0 +1,465 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\hypersetup{pdftitle={Adaptive progressive verification with short private check banks},pdfsubject={A finite private-verifier compiler with Lean proofs and explicit resource limits}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Short private check banks}
+\fancyhead[R]{\small Finite verification theorem}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{3pt}
+\setlist{nosep,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Prb}{\mathop{\mathrm{Pr}}}
+\newcommand{\Ex}{\mathop{\mathbb E}}
+\newcommand{\Aux}{\mathsf{Aux}}
+\newcommand{\Reject}{\mathsf{reject}}
+\newcommand{\dotp}[2]{\langle #1,#2\rangle}
+\newcommand{\Bad}{\mathsf{Bad}}
+\newcommand{\Emax}{E_{\max}}
+\newcommand{\fall}[2]{(#1)_{#2}}
+\newcommand{\code}[1]{\texttt{\small\detokenize{#1}}}
+\title{Adaptive progressive verification with short private check banks}
+\author{}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\vspace{-1.7em}
+\begin{abstract}
+We give a bounded-reuse progressive verifier for signature checks consisting of an auxiliary predicate and a finite-field linear equation. The verifier samples fresh indices from a short private bank of preprocessed rows. Previous queries may adaptively reveal row indices and zero/nonzero answers. A first-spoil tail bounds how many rows can vanish on a subsequently chosen nonzero residual: after at most $L$ previous row queries, the exceptional probability is at most $\binom{L+s}{u}/(q-L-s)^u$, provided $L+s<q$. A designated final residual and threshold committed before fresh index sampling therefore have invalid-acceptance probability at most $\Ex[((u-1)/s)^T]+\Emax\delta$ over a deterministic maximum of $\Emax$ epochs. We prove a separate joint-threshold bound, preserve the original auxiliary checks, and account for field arithmetic in initialization, incremental matrix preparation, and the final invocation across actual buffer promotions. A finite example exhibits an initialization-inclusive field-multiplication crossing at early nominal confidence levels against specified terminal-compression and code-sampling baselines. It does not establish wall-clock or whole-resource superiority. The finite compiler, trace-erasure refinement and parameter certificates are formalized in Lean. The contribution is the combined quantitative verification method; excluded-key conditioning and random-check sampling are established ingredients.
+\end{abstract}
+
+\section{Introduction}
+A progressive verifier gives a useful partial answer before a complete verification finishes. For signatures whose verification includes a large matrix-vector product, private preprocessing can replace an online matrix computation by a small number of stored row checks. Reusing those rows is attractive, but previous verification responses reveal information about them. A confidence curve that ignores this interaction can be unjustified even when a single fresh check has a simple error bound.
+
+We analyze a particular arrangement of known ingredients. Independently sampled secret rows are preprocessed once per bounded epoch. Each progressive step samples a fresh index from that bank. The analysis permits some rows to have experienced previous false acceptances; it controls their number rather than requiring that no previous error has occurred. This change permits a useful finite arithmetic regime with a short bank, a small scheduled preparation charge, and an explicit small additive history term.
+
+The guarantee concerns an adaptive prior-query experiment followed by one designated final invocation. Its residual and interruption threshold are committed before that invocation's fresh random indices. The guarantee is an aggregate probability bound, together with a joint event bound for each threshold. It is not a per-transcript posterior guarantee, and it does not support choosing an earlier accepted response retrospectively as the final invocation.
+
+Our contribution is a bounded-reuse compiler theorem and a precisely scoped arithmetic tradeoff. We do not claim a new signature primitive, a new probability inequality, a first general feasibility result for progressive verification, or a practical speedup. In particular, fixed terminal compression remains substantially better when early low-confidence outputs are not useful.
+
+\paragraph{Formal artifact.}
+The accompanying revision consists of 67 Lean modules. A separate source-only rebuild checked all modules and audited 862 theorem declarations; only the standard Lean axioms \code{propext}, \code{Classical.choice} and \code{Quot.sound}, or subsets, occur. A separate semantic review passed the finite ideal-sampling, serialized-invocation scope stated here. These checks establish the specified mathematics, not originality, implementation safety, or source-signature hardness. Appendix~\ref{sec:artifact} maps the paper to the artifact.
+
+\section{Setting and experiment}
+\label{sec:model}
+Let $\F$ be a finite field with $q$ elements. Let $A\in\F^{n\times m}$, with $n>0$. A candidate $x$ determines vectors $\sigma(x)\in\F^m$ and $h(x)\in\F^n$, together with a Boolean auxiliary predicate $\Aux(x)$. Define
+\[
+ w(x)=A\sigma(x)-h(x).
+\]
+The supplied ordinary verifier accepts exactly when $\Aux(x)$ is true and $w(x)=0$. For a signature application, $x$ contains the message and signature; $\Aux$ retains the original parsing, norm, and other required checks. The theorem is independent of how a signer generates valid candidates and of how $h$ is computed.
+
+\begin{definition}[Row-bit experiment]
+A bank consists of independent uniform rows $C_1,\ldots,C_s\in\F^n$. A deterministic observer is a finite binary decision tree. At each internal node it chooses an index $j\in\{1,\ldots,s\}$ and a vector $v\in\F^n$, and receives the bit
+\[
+ b=\mathbf 1[\dotp{C_j}{v}=0].
+\]
+The choices may depend on all previous indices and bits. The tree has depth at most $L$. At a leaf it outputs a residual $w$; in the primitive experiment, every such output is nonzero. The observer does not receive nonzero field values or any additional information about the bank.
+\end{definition}
+
+This oracle is stronger than an atomic signature-verification oracle that reports only rejection or a confidence value. It even allows the observer to choose prior row indices and change the vector adaptively within a batch. Proving security for this stronger interface covers its restricted use by the compiler. It does not cover arbitrary leakage of stored coefficients or field-operation timing.
+
+\begin{definition}[Designated final invocation]
+After its prior interaction, the observer fixes a candidate $x$ and a threshold $T$. Then the verifier draws $T$ independent uniform indices from $\{1,\ldots,s\}$, with replacement. It accepts the projected equation if all selected rows vanish on $w(x)$. A final signature acceptance also requires $\Aux(x)$.
+\end{definition}
+
+The final fresh index function is sampled after $x$ and $T$ have been fixed. It is not an earlier response chosen from the transcript. The formal finite model allows $T$ to be any precommitted natural number; the public progressive interface uses $T=\min\{k,\text{requested}\}$.
+
+\paragraph{Epochs and external randomness.}
+There is a deterministic maximum allowance $\Emax$ of epochs. Each epoch has a fresh independent bank and at most $R$ reserved invocations, each with at most $k$ prior row checks. We use the conservative cap $L=Rk$. Every attempted invocation consumes a slot, including an empty or interrupted one. The adversary may stop before the last allowed epoch. A continuing epoch uses all $R$ slots; a stopping epoch leaves a slot for the designated final invocation. The final slot is charged as well. For a budget of at most $Q$ prior reserved invocations, $\Emax=\lfloor Q/R\rfloor+1$ is a conservative deterministic allowance including the designated final epoch.
+
+Randomized observers are finite mixtures of deterministic observers with nonnegative rational weights summing to one. Their random tapes are independent of the bank samples. This includes fixed bounded random tapes for the adversary and its environment. The expectation in our final bound uses the actual resulting distribution of $T$; it is not replaced by a fixed threshold.
+
+\paragraph{Relationship to progressive-verification syntax.}
+The stateful progressive interface and setup-inclusive accounting follow the setting of Boschini et al.~\cite{bfp}, Definitions 3, 5, 7 and 10. We state the random-threshold guarantee explicitly to avoid interpreting it as conditional calibration. State sequences must be generated by the specified transitions: restarting a cold state before every call is not the same amortized execution.
+
+\section{The private-bank compiler}
+\label{sec:compiler}
+For a secret row $C_j$, preprocess
+\[
+ Z_{j,a}=\sum_{i=1}^{n} C_{j,i}A_{i,a},\qquad 1\le a\le m.
+\]
+A stored check on candidate $x$ evaluates
+\begin{equation}
+ \sum_{a=1}^{m}Z_{j,a}\sigma_a(x)
+ -\sum_{i=1}^{n}C_{j,i}h_i(x)
+ =\dotp{C_j}{w(x)}.
+ \label{eq:stored}
+\end{equation}
+The checking algorithm reads $Z$, $C$ and the candidate vectors; it does not compute the full residual or multiply $A$ by $\sigma$ online. The public matrix $A$ remains available for preparing later banks.
+
+Set $d=m+n$, $B=snm$, and choose positive $R,W$ satisfying $B=RW$. The checked scheduling theorem uses this exact divisibility condition. Maintain a current bank and its complete stored matrix, and an independent next bank with a partially prepared matrix. Initially prepare the current matrix completely and initialize the next accumulator. Before responding to each invocation, advance the next matrix accumulator by exactly $W$ multiply-add tasks and reserve one slot. After $R$ invocations, the next matrix is complete. On continuing to another epoch, promote that actual matrix, draw a new lookahead bank, and reset the preparation cursor.
+
+A task is a triple $(j,a,i)$ and adds $C_{j,i}A_{i,a}$ to accumulator entry $(j,a)$. A mixed-radix cursor enumerates the $snm$ tasks once each. No list of all tasks is retained by the operational implementation. The final invocation is a separate call: it advances preparation, consumes one reservation, and executes every one of its $T$ requested checks. It does not reveal an early, value-dependent final rejection time.
+
+\paragraph{Scheduling pseudocode.}
+The following describes one atomic serialized invocation; its preparation phase must complete before a confidence response is returned.
+\begin{enumerate}[label=\arabic*.]
+\item At setup, draw current rows $C$ and lookahead rows $D$, initialize stored accumulators $Z,P$ to zero, compute $Z=CA$, and set the lookahead task cursor and local slot counter to zero.
+\item On every invocation, reserve one slot without refund. Execute the next $W$ cursor tasks for $P=DA$, even if the requested threshold is zero or the later progressive part is interrupted.
+\item Set $t=\min\{k,\text{requested}\}$ and $\mathsf{ok}=\mathsf{true}$. For each of the $t$ steps, sample a fresh uniform index $j$, execute~\eqref{eq:stored} using $(C,Z)$, and conjoin the zero-test bit into $\mathsf{ok}$. Execute all requested final checks rather than reporting an earlier private-bit-dependent failure time.
+\item Return $\Reject$ if $\Aux(x)$ or $\mathsf{ok}$ is false; otherwise return $1-\rho^t$.
+\item Before admitting the next invocation after a full $R$-slot epoch, promote $(C,Z)\gets(D,P)$, draw the next independent lookahead bank, reset its accumulator and cursor, and reset the local slot counter. Count this boundary's sampling and initialization work; no idle period or separate processor is assumed free.
+\end{enumerate}
+Empty and aborted progressive batches occupy their reserved slot. Faults or interruption inside the atomic preparation/reset operation are outside the stated model, rather than a reason to refund the charge.
+
+For $1\le u\le s$, let
+\begin{equation}
+ \rho=\frac{u-1}{s},\qquad \alpha(t)=1-\rho^t.
+ \label{eq:confidence}
+\end{equation}
+If $\Aux(x)$ holds and all projected checks pass, the interface returns $\alpha(T)$; otherwise it rejects. At $T=0$, it returns confidence zero when the auxiliary check passes. The curve is nondecreasing, lies in $[0,1]$, and has $\alpha(0)=0$ and $\alpha(1)>0$. Request clamping preserves monotonicity.
+
+\begin{proposition}[Perfect completeness]
+If $\Aux(x)$ is true and $w(x)=0$, every requested sequence of fresh indices accepts and returns $\alpha(T)$.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:stored} is zero for every row. The conjunction of all $T$ tests is true, including the empty conjunction at $T=0$. The original auxiliary predicate also passes. The operational refinement establishes that every promoted stored matrix still satisfies~\eqref{eq:stored}.
+\end{proof}
+
+\section{The first-spoil tail}
+\label{sec:tail}
+We give the finite probability argument in full. It uses established excluded-key conditioning followed by a multi-row tail argument. A row is \emph{spoiled} when it first answers zero to a nonzero queried vector. Later behavior of that row does not add another first-spoil event.
+
+\begin{lemma}[A nonzero linear functional]
+For $v\in\F^n\setminus\{0\}$, the map $c\mapsto\dotp{c}{v}$ is onto $\F$, and each fiber contains $q^{n-1}$ rows. In particular, a uniform row satisfies $\dotp{c}{v}=0$ with probability $1/q$.
+\end{lemma}
+\begin{proof}
+Choose a coordinate $i$ with $v_i\ne0$. For arbitrary values of the other $n-1$ coordinates and any desired output $a\in\F$, exactly one value of $c_i$ solves the equation: divide $a-\sum_{\ell\ne i}c_\ell v_\ell$ by $v_i$. Thus every output has the same number of preimages.
+\end{proof}
+
+\begin{lemma}[Conditional row cells]
+Fix an observer's coins and a feasible complete transcript prefix. For each row $j$, let $V_j$ be the set of rows satisfying the equations and inequations recorded for that row in the prefix. The compatible bank set is exactly $\prod_j V_j$, and the conditional bank distribution is uniform on this product.
+\end{lemma}
+\begin{proof}
+The fixed decision tree and the recorded bits determine every query along the prefix, including its index and vector. A bank follows this path if and only if it gives each recorded answer. Grouping those conditions by row gives precisely the product set. The initial distribution gives equal mass to every bank; conditioning on a nonempty subset therefore gives the uniform distribution on that subset. Since the subset is a Cartesian product, its row marginals are uniform on the corresponding cells. This reasoning fixes the transcript before grouping constraints; it does not assume that adaptively chosen query vectors were fixed independently of the bank.
+\end{proof}
+
+\begin{lemma}[First-spoil probability]
+Suppose a row is unspoiled after a transcript containing at most $M$ queries, where $M<q$. For the next query, the conditional probability that this row becomes newly spoiled is at most $1/(q-M)$. A query of the zero vector or of an already spoiled row contributes no new event.
+\label{lem:conditional}
+\end{lemma}
+\begin{proof}
+An unspoiled row has no previous zero answer on a nonzero vector. Zero-vector queries impose no restriction. Every remaining recorded restriction excludes the kernel of one nonzero linear functional. If there are $\ell\le M$ such restrictions, the allowed cell has size at least
+\[
+ q^n-\ell q^{n-1}=(q-\ell)q^{n-1}.
+\]
+For any next nonzero vector, at most $q^{n-1}$ allowed rows answer zero. The conditional probability is therefore at most $1/(q-\ell)\le1/(q-M)$. The preceding lemma justifies applying this row count after an adaptive full transcript. Empty conditional cells need not be assigned probabilities; the formal proof instead uses the equivalent joint cardinal inequality.
+\end{proof}
+
+\begin{lemma}[Adaptive finite tail]
+Let $Y_1,\ldots,Y_M$ be zero-one variables revealed sequentially. Let $0\le p\le1$, and suppose each conditional probability of $Y_i=1$, given a feasible preceding history, is at most $p$. Then, for every integer $u\ge1$,
+\[
+ \Prb\!\left[\sum_{i=1}^{M}Y_i\ge u\right]\le\binom{M}{u}p^u.
+\]
+\label{lem:tail}
+\end{lemma}
+\begin{proof}
+For any fixed $u$ positions, reveal them in increasing order. Repeated conditional summation bounds the probability that all their indicators equal one by $p^u$. If at least $u$ indicators are one, some $u$-element subset of positions has this property. A union bound over the $\binom{M}{u}$ subsets proves the claim. No independence of the indicators is required. The Lean proof states this argument as an integer cardinal inequality on finite decision-tree cells, so it uses no analytic conditional-expectation machinery.
+\end{proof}
+
+\begin{theorem}[Adaptive final zero-row bound]
+\label{thm:pool}
+Let an observer make at most $L$ row-bit queries and then output a nonzero residual $w$. Put $M=L+s$, assume $M<q$, and let $1\le u\le s$. If
+\[
+ K(C,w)=\#\{j:\dotp{C_j}{w}=0\},\qquad
+ \delta=\frac{\binom{L+s}{u}}{(q-L-s)^u},
+\]
+then $\Prb[K(C,w)\ge u]\le\delta$.
+\end{theorem}
+\begin{proof}
+After the observer commits to $w$, append one virtual test of $w$ against each row. These tests are only a proof device. The augmented adaptive experiment has at most $L+s=M$ queries; pad shorter paths with queries that cannot create first-spoil events.
+
+For every row that vanishes on the final $w$, either that row was already spoiled or its virtual query newly spoils it. Since $w\ne0$, these alternatives cover all final-zero rows. Different rows require different first-spoil events. Consequently $K(C,w)\ge u$ implies at least $u$ first-spoil events in the augmented experiment.
+
+Apply Lemma~\ref{lem:conditional} with the conservative total budget $M$ at every step. Each indicator of a new first-spoil event has conditional probability at most $1/(q-M)$. Lemma~\ref{lem:tail} gives the stated bound. The argument does not try to describe a row's distribution after its first spoil, and does not require every row to remain unspoiled.
+\end{proof}
+
+\paragraph{Denominator scope.}
+The checked endpoint deliberately uses $q-L-s$. Tracking negative restrictions separately can suggest sharper expressions, but no sharper denominator is needed for our finite example or claimed formal result. We do not silently substitute $q-L$ in parameter certificates.
+
+\section{Progressive soundness and epochs}
+\label{sec:soundness}
+\begin{lemma}[Fresh sampling]
+For a fixed zero-row set $S\subseteq\{1,\ldots,s\}$ with $K$ members and a fixed $t\ge0$, the probability that all $t$ independent uniform indices lie in $S$ is $(K/s)^t$.
+\end{lemma}
+\begin{proof}
+There are $s^t$ index functions from $\{1,\ldots,t\}$ to the bank and exactly $K^t$ whose values all lie in $S$. Their ratio gives the result. Both sets contain one empty function when $t=0$.
+\end{proof}
+
+\begin{theorem}[Progressive compiler bound]
+\label{thm:compiler}
+Consider the compiler of Section~\ref{sec:compiler} in the experiment of Section~\ref{sec:model}. Let $\Emax$ be a deterministic maximum number of independent epochs, let $L=Rk$, and assume $L+s<q$ and $1\le u\le s$. Set $\rho=(u-1)/s$ and $\delta=\binom{L+s}{u}/(q-L-s)^u$. Let $\mathsf{IA}$ denote acceptance in the designated final invocation when $\Aux(x)$ is true and $w(x)\ne0$. Then
+\begin{align}
+ \Prb[\mathsf{IA}]&\le \Ex[\rho^T]+\Emax\delta,\label{eq:aggregate}\\
+ \Prb[\mathsf{IA}\land T=t]&\le\rho^t\Prb[T=t]+\Emax\delta
+ \quad\text{for every }t\ge0.\label{eq:joint}
+\end{align}
+The same statements hold after averaging independent finite rational observer tapes.
+\end{theorem}
+\begin{proof}
+For a single epoch, define its bad event to be that its locally chosen nonzero final residual has at least $u$ zero rows. If a candidate has zero residual or fails an application gate, it need not contribute an invalid-acceptance event. Formally, zero-residual leaves may be mapped to an arbitrary fixed nonzero dummy vector while the corresponding invalid-acceptance gate is false; this leaves every counted real event unchanged.
+
+Condition on the incoming observable history before an epoch. Its bank is still uniform and independent. Theorem~\ref{thm:pool} bounds that epoch's bad probability by $\delta$. The candidate at an epoch is determined by its preceding history and its own bank interaction; it cannot be revised using a later bank. A union bound over the fixed maximum list of $\Emax$ epochs bounds the probability of any relevant bad epoch by $\Emax\delta$. An adaptive earlier stopping rule selects one of these locally fixed candidates. We use the deterministic allowance here, not the realized or expected number of reached epochs.
+
+Let $\Bad$ denote the resulting union event. Outside $\Bad$, on a branch eligible for $\mathsf{IA}$, the selected nonzero residual has $K\le u-1$ zero rows. Conditional on the complete state before fresh final sampling, the probability of $\mathsf{IA}$ is therefore at most $\rho^T$. On a gated-off branch it is zero; in particular, a valid zero residual has $K=s$ but contributes no invalid-acceptance event. This remains true for a state-dependent $T$, because the fresh indices are sampled after $T$ is chosen. Thus
+\[
+ \Prb[\mathsf{IA}]
+ \le\Ex[\mathbf1_{\neg\Bad}\rho^T]+\Prb[\Bad]
+ \le\Ex[\rho^T]+\Emax\delta.
+\]
+Restrict the same finite sum to $T=t$ to obtain
+\[
+ \Prb[\mathsf{IA}\land T=t]
+ \le\rho^t\Prb[T=t\land\neg\Bad]+\Prb[\Bad\land T=t],
+\]
+which implies~\eqref{eq:joint}. Finally, multiply each fixed-tape bound by its nonnegative tape weight and sum. Normalization leaves one copy of the common $\Emax\delta$ term and preserves the actual threshold expectation or threshold-event mass.
+\end{proof}
+
+\begin{remark}[Meaning of confidence]
+Dividing~\eqref{eq:joint} by a very small $\Prb[T=t]$ enlarges its additive term. Neither~\eqref{eq:aggregate} nor~\eqref{eq:joint} asserts that every transcript, or every rare selected threshold, has posterior error at most $\rho^t+\Emax\delta$.
+\end{remark}
+
+\begin{corollary}[Separate source-signature term]
+Suppose the probability of producing an eligible fresh candidate satisfying the original auxiliary predicate and original equation, in the same surrounding interaction, is at most $\varepsilon_{\rm src}$. Then progressive acceptance of an eligible fresh candidate has probability at most
+\[
+ \varepsilon_{\rm src}+\Ex[\rho^T]+\Emax\delta.
+\]
+\end{corollary}
+\begin{proof}
+Split the event according to whether the original equation holds. The equation-valid portion is bounded by the stated source assumption; the equation-invalid portion is a subset of $\mathsf{IA}$. Apply Theorem~\ref{thm:compiler}.
+\end{proof}
+The artifact names this premise \code{OrdinarySourceBound}. It is not a proved reduction to a particular EUF game or an instantiated lattice-hardness bound. Such a source-scheme instantiation must supply the appropriate simulation and security assumption separately.
+
+\section{Operational refinement}
+\label{sec:refinement}
+The probability experiment is connected to actual stored computations rather than used as an assumed oracle specification. The refinement has four parts.
+
+First, the stored checker computes both dot products in~\eqref{eq:stored}. Each has a zero-initialized accumulator. Induction over its coordinates proves its value and operation counters. Induction over an adaptive query tree then proves that actual stored bits choose exactly the same branches as the residual-row experiment, preserving the output and all observed bits.
+
+Second, the preparation cursor visits each task $(j,a,i)$ exactly once. Its matrix entry after a prefix is the sum of exactly the processed products for that entry. After $B=snm$ tasks, every entry equals $(CA)_{j,a}$. Composition of cursor prefixes shows that $R$ reserved invocations at $W$ tasks each produce the next stored matrix when $RW=B$.
+
+Third, a continuing phase promotes the accumulator it actually computed, not a separately supplied ideal matrix. It resets its next cursor and uses the new stored rows for subsequent checks. A stopping phase returns the current bank and matrix without promoting. An induction over the maximum phase list proves that the actual output, selected epoch, current bank and local reservation count equal those in the raw stopped experiment. The active matrix satisfies~\eqref{eq:stored} at every such boundary. Because the visible output of an epoch does not depend on its hidden lookahead preparation, prefetch is observationally equivalent to deferring a bank sample until its activation. The product-sample proof then supplies the required independent uniform current bank.
+
+Fourth, the final invocation uses the retained actual matrix, reserves its slot and advances the actual pending cursor. Its accepting fresh index functions are exactly the all-hit set from the fresh-sampling lemma, gated by $\Aux$ and, for the error event, by $w(x)\ne0$. This proves equality of the operational error mass and the mass bounded in Theorem~\ref{thm:compiler}, including $T=0$ and auxiliary rejection.
+
+The instrumented proofs retain traces and intermediate records for reasoning. Independently defined trace-free runners retain scalar check counts instead. Whole-record erasure equalities preserve outputs, matrices, cursors, stopping decisions, counters and acceptance. The final erased result also discards the old pending-buffer copy: it retains only the updated pending matrix. This is essential for the claimed field-state inventory.
+
+\section{Resource accounting}
+\label{sec:resources}
+\begin{theorem}[Exact field arithmetic]
+\label{thm:cost}
+Let a valid execution contain $N$ invocations in total, including the designated final call, and $S$ executed stored-row checks. Assuming $B=RW$, its initialization-inclusive number of field multiplications is
+\begin{equation}
+ \mathcal M=B+NW+dS.\label{eq:cost}
+\end{equation}
+The same count applies to accumulator additions. Stored checks additionally perform $S$ subtractions. These formulas include unused next-bank preparation, aborted invocations and threshold-zero calls.
+\end{theorem}
+\begin{proof}
+Initialization executes exactly $B$ cursor tasks. Each reservation advances the pending cursor by $W$ tasks; the capacity invariant ensures these are real tasks rather than steps past an already finished bank. Thus preparation contributes exactly $B+NW$ products and additions. A stored row performs $m+n=d$ products and additions and one subtraction. Summing over the actual $S$ checks gives~\eqref{eq:cost}. The final call is included through its extra reservation and the actual difference of its pending cursor counters. The erased runner has identical arithmetic counters.
+\end{proof}
+
+\paragraph{Epoch count.}
+If $e$ promotions occur before the selected stopping epoch and $a$ prior invocations occur within that epoch, the actual prior count is $eR+a$; the final call makes $N=eR+a+1$. This links a predetermined invocation budget to a predetermined sufficient maximum epoch allowance. It does not replace $\Emax$ in Theorem~\ref{thm:compiler} by the random realized count $e+1$.
+
+\paragraph{Ideal randomness.}
+The eager-lookahead schedule reads two independent banks at setup and one more at each promotion. Its bank-sampling resource is therefore exactly $(e+2)sn$ ideal uniform field draws. A promotion may entail an $sn$-draw burst. Each randomized stored check also needs a row-index draw; the final call uses exactly $T$ independent indices. The Lean sampling model is finite and ideal. It does not implement an entropy source, a bit-level rejection sampler, or a pseudorandom generator.
+
+\paragraph{Field coordinates and other memory.}
+The erased persistent checking state has two $s\times n$ row banks and two $s\times m$ stored matrices. Including retained public $A$, its field-coordinate inventory is
+\begin{equation}
+ nm+2s(n+m).\label{eq:storage}
+\end{equation}
+Scalar counters, an acceptance bit and the external history/interface remain separate. The inventory excludes caller-owned candidate vectors, adversary state and program, and the mathematical random-tape specification. It is not a compiled heap/stack bound; integer counter bit lengths and a concrete array representation still matter.
+
+\paragraph{Writes, allocation and decoding are not free.}
+The cursor uses two integer divisions and two remainders to decode each task, together with loop and indexing operations. Each task updates an accumulator entry. A conventional dense-array realization of the abstract zero accumulator additionally zero-fills $sm$ cells at initialization or reset. With two initial matrices and $e$ subsequent resets, that realization performs $(e+2)sm$ zero-fill writes, in addition to the cursor's $B+NW$ updates and other reads/writes. In particular, a reset can have a substantial memory-write burst. These zero-fill counts describe that straightforward array realization; they are not machine-code cost counters in the Lean field-arithmetic theorem. An overwrite-on-first-product optimization could avoid a separate fill, but it is not the frozen implementation analyzed here.
+
+Allocation, pointer management and memory bandwidth therefore remain implementation obligations. Together with sampling bursts, they prevent interpreting the preparation schedule as a deamortization of \emph{all} work. We prove scheduled field arithmetic, not worst-case wall-clock checkpoint latency. Original hashing, parsing and norm checking must be added unchanged. A practical benefit is an open empirical question.
+
+\Needspace{11\baselineskip}
+\section{A certified finite arithmetic crossing}
+\label{sec:example}
+The following is a verifier-arithmetic point, not a recommended signature parameter set:
+\begin{center}
+\begin{tabular}{@{}lrlr@{}}
+\toprule
+Field order $q$ & $1073741789$ & Public rows $n$ & $1024$\\
+Public columns $m$ & $61852$ & Bank rows $s$ & $64$\\
+Epoch invocations $R$ & $262144$ & Maximum depth $k$ & $128$\\
+Bad-row threshold $u$ & $33$ & Tasks per call $W$ & $15463$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The field order is proved prime, and the artifact instantiates $\mathbb Z/q\mathbb Z$. Here $d=62876$, $L=33554432$, and
+\[
+ B=4053532672=RW,\qquad \rho=\tfrac12,\qquad \delta<2^{-286}.
+\]
+For a deterministic allowance $\Emax\le2^{64}$, the checked certificate gives $\Emax\delta<2^{-222}$. The field-state inventory is $71384576$ elements, including $A$. It is larger than the original public matrix alone; the word ``short'' refers to the private row bank, not a reduction of total retained public-key storage.
+
+\subsection{The terminal comparator}
+We derive a fixed high-confidence terminal comparator in the same linear interface. Preprocess seven independent private projection rows and test the complete block at each high-confidence verification. Before the full block finishes, return confidence zero without exposing partial-row answers or early data-dependent rejection. Its ordinary-invalid final acceptance over at most $Q$ prior completed queries is bounded by $(Q+1)/q^7$ using a standard first-error coupling. Fix the external random tape and follow an ideal ordinary verifier that accepts exactly the valid equations passing $\Aux$ and rejects all others. This ideal path is independent of the compression key. Along it there are at most $Q+1$ fixed nonzero residuals on auxiliary-eligible queries. Each is annihilated by all seven independent rows with unconditioned probability $q^{-7}$. Union-bound these events. Until the first such event, the real complete-block answers agree with the ideal path; valid and auxiliary-failing inputs give key-independent answers. This proves the bound without asserting that the real key stays uniform after conditioning on previous rejections. Averaging the independent external tape preserves it.
+
+For $Q\le2^{64}$ the exact integer certificate gives $(Q+1)/q^7<2^{-145}$. Setup uses $7nm$ products, online completion uses $7d$, and the stored linear representation uses $7d$ field elements if $A$ can be discarded. This is a derived fixed-compression baseline, not a verbatim parameter claim from another paper. It has no nontrivial early confidence before completing seven rows. Revealing its partial-row outcomes would be a different interface and would not inherit this first-error proof.
+
+For the pool, if $N\ge R$ and $\overline t=S/N$, Theorem~\ref{thm:cost} implies
+\[
+ \frac{\mathcal M}{Nd}
+ \le \overline t+\frac{2W}{d}
+ <\overline t+0.491857.
+\]
+The strict comparison is kernel checked for actual executions: if $S\le6N$, then $\mathcal M<7Nd$, even granting the terminal comparator free preprocessing. Thus the pool reaches the first six nominal confidence levels $1-2^{-t}$ with a smaller initialization-inclusive average field-multiplication budget than this specified seven-row comparator's completed block. Its actual fixed-threshold error cap is $2^{-t}+\Emax\delta$, including the certified slack $\Emax\delta<2^{-222}$. At high confidence, the terminal method wins decisively, as it does in storage and cold setup. This is a crossing of specified arithmetic curves, not dominance.
+
+\paragraph{Shorter terminal blocks materially narrow the comparison.}
+Seven rows are appropriate for the stated high-confidence comparator, but they are not the best fixed block for every weak target. At the same $Q\le2^{64}$, a three-row terminal block already has fixed-threshold total error
+\[
+ (Q+1)/q^3<2^{-25}
+\]
+and completes after $3d$ products. A direct integer inequality verifies this value; a $2^{-26}$ upper bound would fail at the displayed maximal $Q$. Since $2W<d$, only the pool's first two nominal checkpoints precede this three-row block under the same $N\ge R$ initialization-inclusive average-product comparison. The six-checkpoint theorem against seven rows remains true, but does not describe a frontier over terminal compression methods.
+
+Independent short and long terminal blocks can also be staged to offer an intermediate endpoint and a later stronger one. Their setup, row counts, observable outputs and history budgets must then be analyzed together. In particular, the three-row first-error budget is much larger than the pool's additive slack; the unconditional fixed-threshold estimate alone does not establish the same rare-threshold joint calibration. We claim neither optimality nor exclusion of such alternatives. The demonstrated early crossing against the three-row comparator concerns only the first two nominal checkpoints, and practical value remains unestablished.
+
+\subsection{A code-sampling comparator}
+Taleb and Vergnaud use a full-distance expanded representation and sampled checks~\cite{tv}. For an explicit derived comparator, use Reed--Solomon evaluation of residual polynomials of degree at most $1023$, retain the evaluated public matrix, use an implicit generator, and discard $A$. Give this comparator the entire pool field-state budget and, favorably, no setup or scratch charge. At most
+\[
+ \ell=\left\lfloor\frac{71384576}{61852}\right\rfloor=1154
+\]
+stored rows fit. A nonzero residual polynomial has at most $1023$ zero coordinates. For $0\le t\le1154$, uniform distinct row sampling therefore has worst-case error
+\[
+ \frac{\binom{1023}{t}}{\binom{1154}{t}}
+ =\frac{\fall{1023}{t}}{\fall{1154}{t}}.
+\]
+The finite products certify the following first six nominal/main-term thresholds. For the pool, the actual fixed-threshold error bound is $2^{-b}+\Emax\delta$, not exactly $2^{-b}$. RS needs no such history slack. Thus the table aligns nominal checkpoints rather than silently asserting exact equal-error guarantees:
+\begin{center}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Nominal confidence $1-2^{-b}$, $b$ & 1&2&3&4&5&6\\
+\midrule
+Pool row checks &1&2&3&4&5&6\\
+RS distinct row checks &6&12&18&23&29&34\\
+Three-row terminal completion &3&3&3&3&3&3\\
+Fixed seven-row high-confidence block &7&7&7&7&7&7\\
+\bottomrule
+\end{tabular}
+\end{center}
+The pool additionally pays its scheduled and initial preparation. The arithmetic comparison uses a conventional full stored-row dot product, including the corresponding target evaluation. It is not a lower bound on arbitrary circuits, batched verification, alternative codes or all implementations. Reed--Solomon coding facts are prior mathematical premises; the artifact certifies the displayed finite threshold and storage arithmetic, not an entire RS implementation.
+
+\subsection{Comparison dimensions}
+The pool requires $2sn$ initial ideal field draws and $sn$ per promotion; the seven-row terminal representation requires $7n$ at setup and no refresh within its stated lifetime. The deterministic RS comparator has no secret-bank sampling, but has actual encoding, target evaluation and indexing costs. Dense accumulators require initialization and writes in every method, according to their chosen implementation. These resources cannot be silently priced at zero to claim a runtime improvement. The pool's initial product cost alone exceeds four billion at this example point. Whether early confidence is useful enough to justify the retained state, recurring work and bursts depends on a workload not established here.
+
+\section{Prior work and contribution boundary}
+\label{sec:prior}
+Fischlin introduced progressive verification and studied prior-query and committed final-attempt experiments, including randomized checking order~\cite{fischlin}. Early confidence and final precommitment are therefore not new. Nguyen and Roscoe's sampled-digest work is also a conceptual antecedent for checking a random part of a bank with a bounded number of problematic entries~\cite{nr}; its published signed material and guarantee differ from our private row-bit experiment.
+
+Boschini et al.~\cite{bfp} are the immediate compiler antecedent. Their reusable-projection analysis excludes earlier unsuccessful kernel events. Their Section 8.3 reuses corresponding prefix rows, refreshes after a bounded number of calls, and gives a counter-dependent curve with a first-partial-error term. Our verifier instead resamples indices from a short bank and bounds the fraction of rows with first errors. The distinction is the combined quantitative guarantee and cost regime, not private preprocessing, refresh, or merely removing an age argument from notation. Their Section 9 motivates simultaneous progressive and efficient verification; we do not claim a universal solution for every polynomial modulus.
+
+Taleb--Vergnaud already supply random row sampling and exponential confidence from a code's distance~\cite{tv}. Verifier-side caching of their expanded matrix gives a broad derived feasibility baseline without changing ordinary signature generation. Their distance property holds for every residual simultaneously. A bank with $s<n$ cannot have that property; our shorter private bank instead needs secrecy, bounded interaction, refreshing and final precommitment.
+
+Banegas, Le D\'ev\'ehat and Smith give private compressed verification for long-lived keys~\cite{bls}. Their excluded-key estimate in Section 3.4 directly supplies the conditioning principle behind Lemma~\ref{lem:conditional}, and their security analysis separates source forgeries from compression failure. They target terminal compression. Their inspected statement does not combine the independent short bank, first-spoil fraction tail and fresh progressive sampling used here. We claim no new excluded-key technique, and the seven-row baseline above is our explicitly derived comparator rather than a quoted implementation of their construction.
+
+Slalom precomputes and reuses private Freivalds checks for outsourced computation~\cite{slalom}. It is an important offline/online antecedent, but its inspected layer-integrity theorem is not the progressive bank experiment stated here.
+
+To our knowledge, the combined compiler and quantitative bound in this note have not appeared in the primary statements reviewed. This is a modest, model-specific novelty claim. Its ingredients are familiar, and later identification of an exact antecedent would require revising it. The meaningful claimed advance is the ability to tolerate some previous row errors while retaining a provable progressive curve with an explicit small history term and a verified finite arithmetic crossing.
+
+\section{Limitations and next questions}
+The useful regime needs $Rk+s<q$ and a sufficiently small preparation share $W/d$. The exact preparation share is $snm/[R(m+n)]$. In the example regime $m\ge n$, making this share small requires $R$ large relative to $sn$, up to constant factors; $R\gg sn$ is sufficient more generally. In that regime attractive early arithmetic curves consequently need a modulus appreciably larger than $skn$. We give no uniformly attractive small-modulus construction.
+
+The method is private verifier preprocessing, not public compression or a new signing algorithm. It retains the original matrix for refresh. The finite point is not a certified source-signature hardness parameter set. The source security assumption, hash and norm costs, and any application-specific signature encoding must be supplied independently.
+
+The observable interface is zero/nonzero row bits with ideal finite-field and index randomness. Scalar values, field-operation timing leakage, faults, rollback and key exposure are outside the theorem. Invocations are atomic and serialized. Arbitrary resumable or forkable final sessions require another model. The confidence statement is aggregate/joint, not per-history Bayesian calibration.
+
+Most importantly, the product schedule does not eliminate randomness and zero-fill bursts, allocation costs or memory bandwidth. A trace-erased finite state and exact arithmetic counters are not compiled code. A concrete implementation, its sampler, a measured workload requiring early confidence, and a full multi-resource comparison are necessary before any practical recommendation.
+
+\appendix
+\section{Formal artifact and theorem inventory}
+\label{sec:artifact}
+The source manifest is \code{SOURCE-SHA256SUMS-v2}; its SHA-256 digest is
+\begin{center}\small
+\texttt{218087b2b1b3961c6a275095e27ca46ec2d42cbb88798732c6f7ea3d7546296d}.
+\end{center}
+The proof entry points below identify the completed trace-free machine wherever possible. Instrumented and erased acceptance masses are proved equal.
+
+\begin{longtable}{@{}p{0.36\textwidth}p{0.60\textwidth}@{}}
+\toprule
+Claim & Lean entry points\\
+\midrule
+\endhead
+Uniform-row and adaptive tail & \path{UniformRow}; \path{ActualConditionalBound.actual_query_count_bound}; \path{ConcreteAdaptiveTail.actual_first_spoil_tail}; \path{UniformPoolEndpoint.uniform_pool_bad_count}\\[5pt]
+Aggregate final bound & \path{FinalTraceErasure.final_signature_bound}\\[5pt]
+Joint threshold event & \path{FinalTraceErasure.final_signature_joint}\\[5pt]
+Randomized tapes & \path{VerifiedCompiler.randomized_final_signature_bound}; \path{RandomizedFinalJoint.randomized_final_signature_joint}, transported through event-generic \path{FinalTraceErasure.finalErrorMass_eq}\\[5pt]
+Perfect completeness & \path{FinalTraceErasure.finalMachine_perfect_completeness}\\[5pt]
+Actual arithmetic & \path{FinalTraceErasure.finalMachine_total_multiplications}; \path{CompletedStoppedInvocation.finalMachine_total_multiplications}\\[5pt]
+Epoch and random-draw counts & \path{EpochResourceBounds.coldRun_reservation_epochs}; \path{EpochResourceBounds.bankHeadReads_eq}; \path{EpochResourceBounds.idealFieldDraws_eq}\\[5pt]
+Trace-free state & \path{TraceErasure.coldRun_refines}; \path{FinalTraceErasure.finalMachine_refines}; \path{FinalTraceErasure.fieldSlots_card}\\[5pt]
+Progressive interface & \path{VerifierInterface.verifyRequest_isSome}; \path{VerifierInterface.requested_confidence_monotone}; \path{VerifierInterface.requested_confidence_nontrivial}\\[5pt]
+Source-security separation & \path{StoppedSourceBound.OrdinarySourceBound}; \path{StoppedSourceBound.stopped_forgery_bound}\\[5pt]
+Prime field and finite error & \path{PrimeCertificate.parameter_prime_checked}; \path{CertifiedField.parameter_field_card}; \path{CertifiedParameters.certified_tail_probability}; \path{CertifiedParameters.certified_global_error}\\[5pt]
+Matched arithmetic crossing & \path{OperationalEarlyTradeoff.actual_prefix_below_seven_rows}; \path{MatchedEarlyCertificates.rs_early_thresholds}\\
+\bottomrule
+\end{longtable}
+
+Some file names are module names rather than namespaces; the source files give exact fully qualified declarations. The bundle contains no \code{sorry}, custom axiom or \code{native_decide}. Primality is checked by bounded divisor certificates, followed by the square-root primality criterion; the tail certificate uses an integer upper bound on the binomial coefficient. The separate clean build used Lean 4.19 and the accompanying mathlib checkout. Its peak observed resident memory was $1{,}639{,}044$ KiB.
+
+\paragraph{Reproduction.}
+The pinned toolchain is \code{leanprover/lean4:v4.19.0}; the mathlib checkout is commit
+\begin{center}\small\texttt{c44e0c8ee63ca166450922a373c7409c5d26b00b}.\end{center}
+Obtain these pinned dependencies and their matching dependency artifacts in a separate build workspace, preserving mathlib's dependency manifest. From the proof source directory, check \code{SOURCE-SHA256SUMS-v2}, then run \code{build-all-v2.sh}. Its ordered input is \code{modules-v2.txt}; \code{check.sh} points to the companion \code{lean-research} toolchain/mathlib layout, takes the shared compile lock, uses one Lean worker and enforces a 120-second and 2,900,000-KiB per-module limit. A source-only replay must remove or quarantine project \code{.olean} files and rebuild them in that order; merely loading previous compiled artifacts is not that check. The independent replay archive additionally records its exact dependency bootstrap and exhaustive axiom-audit procedure. This paper's source is independent of the proof directory and compiles with a standard pdfLaTeX installation and the packages listed in its preamble, using two passes to resolve references.
+
+The uniform-bank theorem and operational compiler are fully finite. We do not formalize a concrete instruction set, an entropy-source implementation, a source-signature reduction, or all cited baseline coding results. The resource statements about a conventional dense array's zero-fill writes are disclosed implementation accounting, not additional kernel-checked machine-code claims.
+
+\begin{thebibliography}{9}
+\bibitem{fischlin}
+M. Fischlin.
+\emph{Progressive Verification: The Case of Message Authentication}.
+INDOCRYPT, 2003. Extended abstract.
+\url{https://www.cryptoplexity.informatik.tu-darmstadt.de/media/crypt/publications_1/prog-ver.pdf}.
+
+\bibitem{tv}
+A. R. Taleb and D. Vergnaud.
+\emph{Speeding-up verification of digital signatures}.
+Journal of Computer and System Sciences 116 (2021), 22--39.
+\url{https://doi.org/10.1016/j.jcss.2020.08.005}.
+
+\bibitem{bfp}
+C. Boschini, D. Fiore, E. Pagnin, L. Torresetti and A. Visconti.
+\emph{Progressive and efficient verification for digital signatures: extensions and experimental results}.
+Journal of Cryptographic Engineering 14 (2024), 551--575.
+\url{https://doi.org/10.1007/s13389-024-00358-0}.
+
+\bibitem{bls}
+G. Banegas, A. Le D\'ev\'ehat and B. Smith.
+\emph{Compressed verification for post-quantum signatures with long-term public keys}.
+arXiv:2509.03098v1, 2025; arXiv record lists CANS 2025.
+\url{https://arxiv.org/abs/2509.03098}.
+
+\bibitem{slalom}
+F. Tram\`er and D. Boneh.
+\emph{Slalom: Fast, Verifiable and Private Execution of Neural Networks in Trusted Hardware}.
+ICLR, 2019. arXiv:1806.03287v2.
+\url{https://arxiv.org/abs/1806.03287}.
+
+\bibitem{nr}
+L. H. Nguyen and A. W. Roscoe.
+\emph{Separating two roles of hashing in one-way message authentication}.
+FCS-ARSPA-WITS 2008; extended version, Cryptology ePrint Archive, Report 2009/003 (revised 28 November 2009).
+\url{https://eprint.iacr.org/2009/003}.
+\end{thebibliography}
+\end{document}

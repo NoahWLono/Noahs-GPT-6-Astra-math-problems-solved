@@ -1,0 +1,7 @@
+'ProgressivePool.choose_tail_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProgressivePool.terminal_seven_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=1.007
+PEAK_RSS_KIB=1302088
+LIMIT_REASON=None

@@ -1,0 +1,18 @@
+source/SpoiledRows.lean:12:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.not_mem_spoiledRows':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+source/SpoiledRows.lean:22:0: warning: automatically included section variable(s) unused in theorem 'ProgressivePool.spoiledRows_append':
+  [Fintype F]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'ProgressivePool.spoiledRows_card_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0
+ELAPSED_SECONDS=2.969
+PEAK_RSS_KIB=1595964
+LIMIT_REASON=None
