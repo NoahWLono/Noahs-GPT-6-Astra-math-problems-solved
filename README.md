@@ -17,6 +17,7 @@ Current research-only WIP:
 - The Ramsey number R(5,5)
 - The lonely runner conjecture
 - The Erdős–Straus conjecture
+- The perfect cuboid problem
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
