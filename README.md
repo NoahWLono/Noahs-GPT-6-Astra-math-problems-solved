@@ -19,15 +19,15 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 Current research-only WIP:
 
 - koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound than the current accepted theorem, prove it in Lean 4, verify that the exported theorem matches the required specification, and prepare an eligible submission
-- Lehmer’s Mahler-measure gap problem
-- Lehmer’s totient problem
-- Carmichael’s totient conjecture
 - Brocard–Ramanujan factorial-square problem
-- Erdős–Moser equation conjecture
+- Beal’s conjecture
+- Pillai’s fixed-gap conjecture
+- Littlewood’s simultaneous-approximation conjecture
+- Zaremba’s bounded-partial-quotient conjecture
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
-Shelved: the exact covering number C(13,6,4).
+Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture.
 
 ### Queued research
 
@@ -39,10 +39,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Number theory**
 
-6. [Beal’s conjecture](https://www.bealconjecture.com/)
-7. [Pillai’s fixed-gap conjecture](https://arxiv.org/abs/0908.4031)
-8. [Littlewood’s simultaneous-approximation conjecture](https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/blms.70359)
-9. [Zaremba’s bounded-partial-quotient conjecture](https://arxiv.org/abs/2512.11357)
 10. [Gauss circle error-term conjecture](https://arxiv.org/abs/2609.04725)
 11. [Dirichlet divisor error-term conjecture](https://www.sciencedirect.com/science/article/abs/pii/S0022314X25002550)
 12. [Kummer–Vandiver conjecture](https://arxiv.org/html/2602.05090v1)
