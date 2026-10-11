@@ -1,0 +1,14 @@
+{
+  "result": "PASS independent audit of clean full build",
+  "modules": 257,
+  "replay_modules": 194,
+  "replay_steps": 61970,
+  "source_files": 451,
+  "all_source_and_olean_hashes_match": true,
+  "source_manifest_sha256": "0db2b23683bd596b65975841a75677ba05dc92fafba7f87fe03b40e87ed0c566",
+  "final_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

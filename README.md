@@ -12,6 +12,8 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 - [04 — A uniform optimum for short-interval square-difference masks](04-short-interval-square-difference/README.md): **Central all-length theorem verified in Lean; historical novelty unestablished.** Modulus 144 minimizes worst-case surviving-candidate counts among every raw residue table of at most 256 bits, simultaneously for all positive interval lengths. All nine local proof modules were rebuilt from the publication sources, including the finite checks and semantic bridge. The [native-evaluation trust boundary and formal scope](04-short-interval-square-difference/lean/README.md) are explicit; the analytic argument and Python verification are also included. It establishes candidate-count optimality under the stated model, without a faster-factorization claim. Read the [mathematical paper](04-short-interval-square-difference/paper.pdf).
 
+- [05 — The minimum local identifying code in the binary 6-cube](05-local-identifying-q6/README.md): **Completed and verified in Lean: M^L(6) = 14.** An explicit 14-word code attains the minimum, and the unconditional Lean theorem proves that every local 1-identifying code has at least 14 words. Both the first build and an independent clean-source rebuild of all 257 modules passed using only standard Lean axioms. The exact certificate is replayed as kernel-checked proof terms; no SAT-solver answer or native-evaluation axiom is assumed. This improves the strongest located published bounds of 12–15; the [bounded prior-art comparison](05-local-identifying-q6/REPRODUCIBILITY.md#prior-art) does not claim absolute priority. Read the [9-page mathematical paper](05-local-identifying-q6/paper/main.pdf).
+
 ## Ongoing research
 
 Current research-only WIP:
@@ -19,7 +21,6 @@ Current research-only WIP:
 - Splay-tree dynamic optimality
 - The exact covering number C(13,6,4)
 - Minimum-size unrestricted 13-input sorting networks
-- Minimum local 1-identifying code in the binary 6-cube (M^L(6))
 - Existence of three mutually orthogonal Latin squares of order 10
 - Existence of a Conway 99-graph: SRG(99,14,1,2)
 

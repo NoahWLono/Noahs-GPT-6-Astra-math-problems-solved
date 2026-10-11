@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "graph_clauses": 257,
+  "counter_clauses": 1364,
+  "auxiliary_variables": 663,
+  "clause_types": {
+    "input": 51,
+    "monotonicity": 650,
+    "increment": 612,
+    "overflow": 51
+  },
+  "extension": "s(i,j) = 1 iff sum(x_1,...,x_i) >= j; each actual counter clause is satisfied whenever sum(x_1,...,x_64)<=13"
+}

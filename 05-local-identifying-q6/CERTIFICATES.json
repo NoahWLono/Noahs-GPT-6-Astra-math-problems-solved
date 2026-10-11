@@ -1,0 +1,18 @@
+[
+  {
+    "path": "exclude13-path.lrat",
+    "bytes": 14321829,
+    "sha256": "f554bf730712d5339fa9b4e15436161de6b58e81086d4ebd0e47d734c33328ca",
+    "gzip_path": "exclude13-path.lrat.gz",
+    "gzip_bytes": 3901487,
+    "gzip_sha256": "d268119f4262f61b211a8d4e4a4a5559e8c04719d233bad3e5b5d1fb35036b99"
+  },
+  {
+    "path": "exclude13-path.drat",
+    "bytes": 8559861,
+    "sha256": "fcef4be96f7c7f07d1da352d5db72e68a240a5a53f476efdbf2f838deb6da2a6",
+    "gzip_path": "exclude13-path.drat.gz",
+    "gzip_bytes": 1902851,
+    "gzip_sha256": "6b30c01e098b818995a78ecb3e5bfbf7f1ba25edf2819df5566c01d6e902725d"
+  }
+]

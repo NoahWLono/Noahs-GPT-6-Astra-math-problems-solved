@@ -1,0 +1,28 @@
+{
+  "status": "FINAL MANUSCRIPT; complete Lean proof and independent clean-source rebuild passed",
+  "pages": 9,
+  "appendix_python_check": "PASS",
+  "latex_layout_warnings": [],
+  "all_pages_visually_inspected": true,
+  "official_path_lrat_check": "VERIFIED",
+  "formal_statement_alignment": "Existence of a local identifying code of cardinality 14 AND universal lower bound 14; all adjacent pairs including code vertices",
+  "clean_verification": {
+    "source_files": 451,
+    "modules": 257,
+    "rup_steps": 61970,
+    "seconds": 2127.903920650482,
+    "peak_module_rss_kib": 4135660,
+    "source_manifest_sha256": "0db2b23683bd596b65975841a75677ba05dc92fafba7f87fe03b40e87ed0c566",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "sha256": {
+    "main.tex": "68c979285cbe31b7a01580e0159851ca6f1ebd8e6160783ded92b8c66da74a7e",
+    "main.pdf": "cf5d08a8911a16d8da60196d8b07f30d4206ff728375d83dfbd3cda665d0e937",
+    "build.sh": "c9dcf8d443b9426d6932385530aa8494e9841e2e2cc40d0f5dd6a8cd2ded9a4d",
+    "README.txt": "3b0b07f24bc7afaa93e849905d8cc3326a604fa0065587fa39ed9c3052033667"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "theorem": "LocalIdentifyingQ6.minimum_local_identifying_Q6",
+  "result": "The minimum cardinality of a local identifying code in Q6 is 14.",
+  "initial_build_passed": true,
+  "independent_clean_build_passed": true,
+  "clean_modules": 257,
+  "rup_steps": 61970,
+  "pinned_source_and_json_files": 451,
+  "clean_seconds": 2127.903920650482,
+  "peak_process_rss_kb": 4135660,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "native_decide": false,
+  "new_assumed_axioms": false,
+  "source_manifest_sha256": "0db2b23683bd596b65975841a75677ba05dc92fafba7f87fe03b40e87ed0c566",
+  "final_log_sha256": "972f9ea910c8f0d5f89145db17bcc6d4deacf12d3de65e3df4ab4d515c55e77d"
+}

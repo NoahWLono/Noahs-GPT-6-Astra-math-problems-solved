@@ -1,0 +1,11 @@
+{
+  "result": "VERIFIED UNSAT by independent RUP checker",
+  "variables": 727,
+  "input_clauses": 1623,
+  "additions": 61970,
+  "hints": 1987090,
+  "deletions": 63517,
+  "seconds": 2.199371814727783,
+  "cnf_sha256": "13bcf1c4d71a670f0b4f7e8c12ddefd2115d36ac71257e9cd0b9d8e9752b6a99",
+  "proof_sha256": "f554bf730712d5339fa9b4e15436161de6b58e81086d4ebd0e47d734c33328ca"
+}

@@ -1,0 +1,722 @@
+
+CHECKING RUPPath.Inputs
+
+CHECKING LocalIdentifyingQ6
+'LocalIdentifyingQ6.witness_localIdentifying' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LocalIdentifyingQ6.witness_cardinality' depends on axioms: [propext]
+'LocalIdentifyingQ6.localIdentifying_iff_constraints' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING GraphEncoding
+'LocalIdentifyingQ6.constraints_graph_sat' depends on axioms: [propext, Quot.sound]
+
+CHECKING GraphRows.Chunk00
+
+CHECKING GraphRows.Chunk01
+
+CHECKING GraphRows.Chunk02
+
+CHECKING GraphRows.Chunk03
+
+CHECKING GraphRows.Chunk04
+
+CHECKING GraphRows.Chunk05
+
+CHECKING GraphRows.Chunk06
+
+CHECKING GraphRows.Chunk07
+
+CHECKING GraphRows.Chunk08
+
+CHECKING GraphRows.Chunk09
+
+CHECKING GraphRows.Chunk10
+
+CHECKING GraphRows.Chunk11
+
+CHECKING GraphRows.Chunk12
+
+CHECKING GraphRows.Chunk13
+
+CHECKING GraphRows.Chunk14
+
+CHECKING GraphRows.Chunk15
+
+CHECKING GraphClauseData
+
+CHECKING CardinalityEncoding
+'LocalIdentifyingQ6.CardinalityEncoding.clauses_satisfied' depends on axioms: [propext, Quot.sound]
+
+CHECKING PathInputs.Chunk00
+
+CHECKING PathInputs.Chunk01
+
+CHECKING PathInputs.Chunk02
+
+CHECKING PathInputs.Chunk03
+
+CHECKING PathInputs.Chunk04
+
+CHECKING PathInputs.Chunk05
+
+CHECKING PathInputs.Chunk06
+
+CHECKING PathInputs.Chunk07
+
+CHECKING PathInputs.Chunk08
+
+CHECKING PathInputs.Chunk09
+
+CHECKING PathInputs.Chunk10
+
+CHECKING PathInputs.Chunk11
+
+CHECKING PathInputs.Chunk12
+
+CHECKING PathInputs.Chunk13
+
+CHECKING PathInputs.Chunk14
+
+CHECKING PathInputs.Chunk15
+
+CHECKING PathInputs.Chunk16
+
+CHECKING PathInputs.Chunk17
+
+CHECKING PathInputs.Chunk18
+
+CHECKING PathInputs.Chunk19
+
+CHECKING PathInputs.Chunk20
+
+CHECKING PathInputs.Chunk21
+
+CHECKING PathInputs.Chunk22
+
+CHECKING PathInputs.Chunk23
+
+CHECKING PathInputs.Chunk24
+
+CHECKING PathInputs.Chunk25
+
+CHECKING PathInputs.Chunk26
+
+CHECKING PathInputs.Chunk27
+
+CHECKING PathInputs.Chunk28
+
+CHECKING PathInputs.Chunk29
+
+CHECKING PathInputs.Chunk30
+
+CHECKING PathInputs.Chunk31
+
+CHECKING PathInputs.Chunk32
+
+CHECKING PathInputs
+'LocalIdentifyingQ6.path_inputs_from_constraints' depends on axioms: [propext, Quot.sound]
+
+CHECKING CardinalityBridge
+'LocalIdentifyingQ6.CardinalityEncoding.prefixCount_eq_cardinality' depends on axioms: [propext, Quot.sound]
+
+CHECKING Translation
+'LocalIdentifyingQ6.normalize_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING PathNormalization
+'LocalIdentifyingQ6.small_code_has_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING CubePathAutomorphism
+'LocalIdentifyingQ6.normalize_code_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING NormalizeSmallCode
+'LocalIdentifyingQ6.normalize_small_code_path' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING PathSemantics
+'LocalIdentifyingQ6.small_normalized_path_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LocalIdentifyingQ6.minimum_fourteen_of_path_refutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+CHECKING RUPReplay
+
+CHECKING RUPPathFast.Chunk0000
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0001
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0002
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0003
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0004
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0005
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0006
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0007
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0008
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0009
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0010
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0011
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0012
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0013
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0014
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0015
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0016
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0017
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0018
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0019
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0020
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0021
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0022
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0023
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0024
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0025
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0026
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0027
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0028
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0029
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0030
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0031
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0032
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0033
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0034
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0035
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0036
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0037
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0038
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0039
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0040
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0041
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0042
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0043
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0044
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0045
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0046
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0047
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0048
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0049
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0050
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0051
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0052
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0053
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0054
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0055
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0056
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0057
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0058
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0059
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0060
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0061
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0062
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0063
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0064
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0065
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0066
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0067
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0068
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0069
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0070
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0071
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0072
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0073
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0074
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0075
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0076
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0077
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0078
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0079
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0080
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0081
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0082
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0083
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0084
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0085
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0086
+Kernel checked 100 RUP steps
+
+CHECKING RUPPathFast.Chunk0087
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0088
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0089
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0090
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0091
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0092
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0093
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0094
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0095
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0096
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0097
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0098
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0099
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0100
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0101
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0102
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0103
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0104
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0105
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0106
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0107
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0108
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0109
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0110
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0111
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0112
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0113
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0114
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0115
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0116
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0117
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0118
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0119
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0120
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0121
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0122
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0123
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0124
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0125
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0126
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0127
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0128
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0129
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0130
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0131
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0132
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0133
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0134
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0135
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0136
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0137
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0138
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0139
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0140
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0141
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0142
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0143
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0144
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0145
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0146
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0147
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0148
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0149
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0150
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0151
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0152
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0153
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0154
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0155
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0156
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0157
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0158
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0159
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0160
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0161
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0162
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0163
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0164
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0165
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0166
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0167
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0168
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0169
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0170
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0171
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0172
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0173
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0174
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0175
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0176
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0177
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0178
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0179
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0180
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0181
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0182
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0183
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0184
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0185
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0186
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0187
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0188
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0189
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0190
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0191
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0192
+Kernel checked 500 RUP steps
+
+CHECKING RUPPathFast.Chunk0193
+Kernel checked 270 RUP steps
+
+CHECKING FullTheorem
+'LocalIdentifyingQ6.minimum_local_identifying_Q6' depends on axioms: [propext, Classical.choice, Quot.sound]

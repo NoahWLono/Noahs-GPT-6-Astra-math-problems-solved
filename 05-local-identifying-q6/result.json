@@ -1,0 +1,23 @@
+{
+  "code": [
+    0,
+    4,
+    15,
+    23,
+    26,
+    29,
+    31,
+    33,
+    35,
+    36,
+    41,
+    49,
+    58,
+    62
+  ],
+  "size": 14,
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "dual_bound": 14.0,
+  "seconds": 3.9828362464904785
+}

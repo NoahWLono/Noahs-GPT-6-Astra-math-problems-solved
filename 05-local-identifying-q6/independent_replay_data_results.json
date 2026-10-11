@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "input_propositions": 1623,
+  "replay_modules": 194,
+  "replay_steps": 61970,
+  "final_clause_id": 92061,
+  "final_clause": [],
+  "engine_sha256": "fbae6fdc20174b8436812c4298253bbc4066628af5f6777d84081598239a6335"
+}

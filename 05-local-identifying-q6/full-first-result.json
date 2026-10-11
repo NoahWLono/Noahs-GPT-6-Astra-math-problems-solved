@@ -1,0 +1,14 @@
+{
+  "returncode": 0,
+  "seconds": 34.0048394203186,
+  "peak_rss_kb": 4071452,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "success": true,
+  "theorem": "LocalIdentifyingQ6.minimum_local_identifying_Q6",
+  "toolchain": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "source_manifest_sha256": "3496f5ffe42944406e95e2383538248430b14745632ac127a874d11e6bf7990f"
+}
