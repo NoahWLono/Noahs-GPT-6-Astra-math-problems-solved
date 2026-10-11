@@ -10,6 +10,8 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 - [03 — Classification of order-ten binary 3-frameproof codes](03-order-ten-frameproof/README.md): **Complete computer-assisted proof, verified in Lean.** Every binary `SHF(10;10,2,{1,3})` is a permutation matrix up to independent row complementation. The full matrix theorem, structural reduction, and four finite cases are proved in Lean. Standard `bv_check` replays saved certificates using compiled evaluation; the [trust boundary](03-order-ten-frameproof/reviews/proof-audit.md) is explicit. Read the [11-page paper](03-order-ten-frameproof/paper/order_ten_frameproof.pdf). The exact case was explicitly left open in 2015; no earlier resolution was located in the documented search, with full-text access gaps recorded in the [prior-art review](03-order-ten-frameproof/reviews/prior-art-review.md).
 
+- [04 — A uniform optimum for short-interval square-difference masks](04-short-interval-square-difference/README.md): **Complete computer-assisted proof with independently checked finite certificates; historical novelty unestablished.** Modulus 144 minimizes worst-case surviving-candidate counts among every raw residue table of at most 256 bits, simultaneously for all positive interval lengths. The analytic argument and exact Python verification are included; this result has not been formalized in Lean. It establishes candidate-count optimality under the stated model, without a faster-factorization claim. Read the [6-page paper](04-short-interval-square-difference/paper.pdf).
+
 ## Ongoing research
 
 Current research-only WIP:
@@ -27,4 +29,4 @@ These are research directions, not completed solutions. Only completed, checked 
 
 ## Reproducibility and preservation
 
-Each problem folder contains the proof dependency closure, pinned Lean/mathlib configuration, source hashes, build instructions, paper assets, and verification records. See [publication notes](PUBLICATION.md). No compiled proof objects, dependency checkout, credentials, or build cache is distributed. No CI or project-wide license has been added. Existing third-party license notices remain with the archived assets.
+Each problem folder contains its proof and verification sources, source hashes, reproduction instructions, paper assets, and verification records. The Lean projects additionally include their proof dependency closures and pinned Lean/mathlib configurations. Each entry identifies its verification method and trust boundary. See [publication notes](PUBLICATION.md). No compiled proof objects, dependency checkout, credentials, or build cache is distributed. No CI or project-wide license has been added. Existing third-party license notices remain with the archived assets.

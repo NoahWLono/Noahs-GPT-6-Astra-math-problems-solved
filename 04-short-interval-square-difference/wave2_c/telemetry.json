@@ -1,0 +1,8 @@
+{
+  "address_space_limit_bytes": 268435456,
+  "cpu_limit_seconds": 120,
+  "cpu_seconds": 34.763710627,
+  "results_sha256": "d9249e5f4202beb063c2f0b5a6b4c6445ae4a52f81629a818d31208b0db334a4",
+  "script_sha256": "72adf5ca5309fec44cb18d4f1def8d355dfb379d007063bd9a7dc4183e18ea16",
+  "wall_seconds": 37.06304224199994
+}

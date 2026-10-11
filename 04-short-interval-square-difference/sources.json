@@ -1,0 +1,59 @@
+{
+  "review_date_local": "2026-10-10",
+  "research_cutoff": "2026-10-10",
+  "prior_art_gate": "Completed before construction experiments; later targeted review followed the all-length theorem.",
+  "assessment": "Verified finite-budget theorem; novelty unestablished. No exact matching statement located in the bounded search.",
+  "sources": [
+    {
+      "id": "bower2012",
+      "authors": "Amanda Bower, Ron Evans, Victor Luo, Steven J. Miller",
+      "title": "Coordinate sum and difference sets of d-dimensional modular hyperbolas",
+      "url": "https://arxiv.org/abs/1212.2930v1",
+      "version_date": "2012-12-12",
+      "source_type": "primary research preprint",
+      "relevant_parts": "Proposition 2.1; Lemma 2.3; Theorems 3.3 and 3.6",
+      "role": "CRT, square-difference projection, prime-power counts",
+      "date_caution": "Use version history, not the dynamic date in a rendered manuscript."
+    },
+    {
+      "id": "hittmeir2022",
+      "author": "Markus Hittmeir",
+      "title": "Integer Factorization as Subset-Sum Problem",
+      "url": "https://arxiv.org/abs/2205.10074v1",
+      "version_date": "2022-05-20",
+      "journal": "Journal of Number Theory 249 (2023), 93-118",
+      "source_type": "primary research",
+      "relevant_parts": "Sections 3, 4, and 7; Example 4.7",
+      "role": "Known full-period mathematics and sieve/modulus tradeoffs"
+    },
+    {
+      "id": "hewitt2022",
+      "author": "Stephen Hewitt",
+      "title": "Empirical explorations of faster Fermat factorisation, part 5",
+      "url": "https://www.cambridgeclarion.org/61.html",
+      "published": "2022-08-12",
+      "updated": "2022-08-16",
+      "source_type": "self-authored empirical study",
+      "relevant_parts": "A systematic approach to tuning the filter; appendix",
+      "role": "Direct prior art for finite modulus optimization and use of modulus 144",
+      "limits": "Different search domain, input conditioning, cost and objective; experiments not reproduced."
+    }
+  ],
+  "search_terms": [
+    "Fermat 144 sieve",
+    "Fermat 144 modulus",
+    "Fermat mod 144",
+    "Fermat modulo 144",
+    "Fermat 144 256 optimal",
+    "Fermat factorization minimax",
+    "Fermat sieve discrepancy",
+    "Fermat sieve window",
+    "square-difference 144"
+  ],
+  "search_limits": [
+    "Indexed public sources only; cannot exclude inaccessible, nonindexed or private work.",
+    "No priority claim follows from a search without an exact match.",
+    "Modulus 144, modular filtering, and modulus optimization are already known."
+  ],
+  "release_decision": "User-authorized public reproducibility release on 2026-10-10. Historical novelty remains unestablished; no priority or faster-factorization claim."
+}

@@ -1,0 +1,28 @@
+{
+  "wave": "ASTRA-2",
+  "date_local": "2026-10-10",
+  "program": "E: classical integer factorization, finite combinatorial analysis only",
+  "prior_art_gate": "Completed before experiment implementation: extensive overlap in full-period counts and modulus selection; exact bounded minimax table not located; novelty unestablished",
+  "question": "For each short length h, which raw residue-table moduli minimize the uniform worst-case number of admitted positions under a 256-bit table payload limit?",
+  "mask": "f(m,n,a)=1 iff a*a-n is a square modulo m, including zero",
+  "domain": {
+    "moduli": "every integer m from 1 through 256",
+    "n": "all residues 0 <= n < m with gcd(n,m)=1",
+    "start": "every residue 0 <= s < m",
+    "length": "every integer h from 1 through 64",
+    "m1_convention": "n=0 and mask [1]",
+    "objective": "F_m(h)=max over n and s of sum_{j=0}^{h-1} f(m,n,s+j); G_B(h)=min_{1<=m<=B} F_m(h)"
+  },
+  "representation": {
+    "persistent_table_bits": "exactly m logical bits for one full raw period at the current n",
+    "budget_bits": 256,
+    "budget_bytes": 32,
+    "excluded_from_payload": ["integer metadata", "temporary construction storage", "verifier memory", "caches over all n"],
+    "limitation": "Representation-specific budget, not optimal compressed memory. Even-modulus masks can have period dividing m/2."
+  },
+  "checks": ["Two independent exhaustive methods", "Attaining n/start witness for every modulus and length", "All ties retained", "Exact rational density comparison", "Divisibility and periodicity controls", "Parent reruns and independent proof"],
+  "hypotheses": ["Full-period worst-density ordering need not agree with finite-window minimax ordering", "A finite exact optimum profile may be certifiable", "Any novel theorem or table claim requires separate literature assessment"],
+  "resources": {"parent": 1,"children": 3,"extra_workers": 0,"research_target_minutes": 20,"per_verifier_cpu_seconds": 120,"per_verifier_address_space_MiB": 256,"external_compute_spend": 0},
+  "boundaries": "Finite synthetic residue masks only; no arbitrary-input factorization, key recovery, deployed tests, accounts, services, external sends or publication",
+  "interpretation": "Worst case over arbitrary intervals and unit residues; no equivalence claimed to the correlated start and endpoint of an actual Fermat search. Counts are not timings."
+}

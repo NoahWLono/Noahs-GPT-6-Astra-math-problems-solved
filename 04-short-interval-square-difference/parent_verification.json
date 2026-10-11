@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "verification_date_local": "2026-10-10",
+  "theorem": "For every integer h>=1 and every integer 1<=m<=256, F_144(h)<=F_m(h), under the stated raw-mask model.",
+  "proof_type": "Analytic CRT envelope plus computer-assisted exact finite lemmas; not proof-assistant formalized.",
+  "public_release_authorization": {
+    "date_local": "2026-10-10",
+    "scope": "The owner explicitly requested pushing this result to the next numbered folder of the existing GitHub collection.",
+    "original_protocol": "Retained byte-for-byte as historical research provenance.",
+    "novelty": "Unestablished; release does not assert priority or faster factorization."
+  },
+  "fresh_parent_replay": {
+    "location": "Isolated relocated copy of the publication files",
+    "commands": [
+      {
+        "command": "python3 -B wave2_b/test_minimax.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_b/test_minimax_146.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_b/generate_minimax_146.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_b/check_all_h_constants.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_c/verify_minimax.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_c/verify_peer.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_c/extend_optimality.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B wave2_c/verify_extended_peer.py",
+        "exit_code": 0
+      }
+    ],
+    "extended_construction_cpu_seconds": 51.834163505,
+    "independent_original_enumeration_cpu_seconds": 34.763710627,
+    "independent_bridge_cpu_seconds": 2.099991017,
+    "constants_cpu_seconds": 0.639059693
+  },
+  "mathematical_output_sha256": {
+    "wave2_b/minimax_results.json": "b7b78ab434c3ab7539db16e58bc728db40de23141a4f87f0cad19ea6396ba7d3",
+    "wave2_b/minimax_certificate.json": "bf334cc68f28a35f69413f5fa479cde1efae11078d91e7c39ffe885d0b3c7097",
+    "wave2_b/minimax_146_results.json": "4eb4b6db030d4b4e4716780c36ddebb1bb33a1bd0213de488a170ef47ecccab4",
+    "wave2_b/minimax_146_certificate.json": "c911c587c1f79cf2b3b34f90accfe51498a3854d37ef9c3d0afdc85a3188a3cc",
+    "wave2_b/all_h_constants.json": "10042b2e46506b0addc2ef515cfc1c927c881f3790bec0ac36ee3994da9b251f",
+    "wave2_c/results.json": "d9249e5f4202beb063c2f0b5a6b4c6445ae4a52f81629a818d31208b0db334a4",
+    "wave2_c/optimality_bridge.json": "22bbbabde4b7ccbdb4792f6588b489a1ac47e0471185d9be10c8905a9fafa3b7"
+  },
+  "independent_coverage": {
+    "exact_F_entries_h1_through_64": 16384,
+    "exact_window_popcounts_h1_through_64": 218035264,
+    "all_max_density_tie_sets": 256,
+    "exact_F144_entries_h1_through_146": 146,
+    "competitor_cells_h65_through_146_discharged_by_averaging": 20910,
+    "extended_attaining_witnesses": 37376,
+    "qualification": "Competing upper bounds beyond h64 were not independently recomputed; lower bounds suffice for the optimum theorem."
+  },
+  "reviews": {
+    "mathematics": "Independent worker accepted CRT classes, gaps, envelopes, sharp discrepancy, density gap and infinite tail; parent also reviewed them.",
+    "prior_art": "Independent worker accepted attribution and qualified novelty wording; no claim that publication itself resolves novelty.",
+    "portability": "Scripts resolve inputs relative to their own paths; tests also passed from an unrelated cwd. Linux/Python3.10 compatibility is documented; tested runtime was Python3.14.8.",
+    "human_peer_review": false
+  },
+  "paper": {
+    "source": "paper.tex",
+    "source_sha256": "50fbfa45d2807eb1d2dcbbd1ab50df0fdee2453388f487cac915d7639d08b709",
+    "pdf": "paper.pdf",
+    "pdf_sha256": "0c1905a7c447f0354d3b3d4ad6cb660695844a886332516ed45017599ee0e8c3",
+    "pages": 6,
+    "attribution": "GPT-6 astra",
+    "desktop_editor_compile": "success",
+    "export_compiler": "Tectonic 0.17.0 with untrusted mode",
+    "export_tool_provenance": {
+      "version": "0.17.0",
+      "official_release_asset": "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-unknown-linux-musl.tar.gz",
+      "github_asset_sha256": "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7",
+      "download_sha256": "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7"
+    },
+    "visual_qa": "All six pages rendered and inspected. After the final wording change, page5 re-inspected and rendered pages1,2,3,4,6 confirmed byte-identical to previously inspected PNGs.",
+    "metadata": "Creator LaTeX with hyperref; Producer xdvipdfmx; no custom metadata, encryption, JavaScript or embedded files found."
+  },
+  "scope": "Synthetic finite residue sets; no arbitrary-input factoring API or deployed tests.",
+  "trust": "Exact integer/rational code and reviewed mathematics; Python runtime and machine execution are trusted.",
+  "resource_limits": {
+    "per_exhaustive_verifier_cpu_seconds": 120,
+    "per_exhaustive_verifier_address_space_MiB": 256
+  },
+  "hash_convention": "SHA256SUMS covers every package file except itself. Mathematical files match the earlier reviewed records; telemetry is variable and reflects the stated run."
+}

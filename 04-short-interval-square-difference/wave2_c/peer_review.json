@@ -1,0 +1,18 @@
+{
+  "all_density_ties_checked": 256,
+  "attaining_witnesses_directly_checked": 16384,
+  "budget_and_length_all_tie_coordinates": 16384,
+  "full_F_entries_compared": 16384,
+  "input_sha256": {
+    "certificate": "bf334cc68f28a35f69413f5fa479cde1efae11078d91e7c39ffe885d0b3c7097",
+    "construction": "b7b78ab434c3ab7539db16e58bc728db40de23141a4f87f0cad19ea6396ba7d3",
+    "independent": "d9249e5f4202beb063c2f0b5a6b4c6445ae4a52f81629a818d31208b0db334a4"
+  },
+  "lexicographic_witnesses_match": true,
+  "limits": "Finite raw-mask domain only. No external actions or factor search.",
+  "profile_Pareto_frontier": [
+    144
+  ],
+  "status": "PASS",
+  "witness_bit_examinations": 532480
+}

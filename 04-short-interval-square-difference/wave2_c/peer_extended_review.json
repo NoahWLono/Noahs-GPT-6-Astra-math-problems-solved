@@ -1,0 +1,15 @@
+{
+  "all_h1_through_146_pointwise_optimality_lower_witnesses_checked": 37376,
+  "direct_attainment_witnesses_checked": 37376,
+  "direct_witness_bit_checks": 2747136,
+  "exact_F144_entries_independently_compared_h1_through_146": 146,
+  "exact_competing_F_entries_independently_compared_h1_through_64": 16384,
+  "input_sha256": {
+    "extended_certificate": "c911c587c1f79cf2b3b34f90accfe51498a3854d37ef9c3d0afdc85a3188a3cc",
+    "extended_table": "4eb4b6db030d4b4e4716780c36ddebb1bb33a1bd0213de488a170ef47ecccab4",
+    "own_bridge": "22bbbabde4b7ccbdb4792f6588b489a1ac47e0471185d9be10c8905a9fafa3b7",
+    "own_table": "d9249e5f4202beb063c2f0b5a6b4c6445ae4a52f81629a818d31208b0db334a4"
+  },
+  "qualification": "Competitor upper bounds for h65..146 were not independently recomputed; independent averaging certificates suffice for the all-length optimality theorem.",
+  "status": "PASS"
+}
