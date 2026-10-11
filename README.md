@@ -16,10 +16,10 @@ Current research-only WIP:
 
 - Černý's conjecture
 - Splay-tree dynamic optimality
-- Polynomial-time parity games
-- Deterministic polynomial identity testing
-- Polynomial-time graph isomorphism
-- Matrix-multiplication exponent 2
+- L versus NL
+- NC versus P
+- The log-rank conjecture (real matrix rank)
+- The Hamiltonian quantum PCP conjecture
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
