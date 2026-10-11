@@ -1,0 +1,3 @@
+403bd28cb27de5b697dad32e42da2f1543f5686db508dfebaad23a1b4de532ce  SharpnessBaseFieldMinimum.lean
+'Astra01.SharpnessActual.base_field_cover_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.base_field_four_cover' depends on axioms: [propext, Classical.choice, Quot.sound]

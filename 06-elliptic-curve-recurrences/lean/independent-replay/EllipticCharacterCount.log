@@ -1,0 +1,1 @@
+'Astra01.EllipticTwist.point_count_character' depends on axioms: [propext, Classical.choice, Quot.sound]

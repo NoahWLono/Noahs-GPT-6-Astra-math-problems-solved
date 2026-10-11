@@ -1,0 +1,2 @@
+33c25db5eb953984e6f0ea424b61aacd944be2e830a25af23f7b162242714aa2  AdicRingEquiv.lean
+'Astra01.valuation_ringEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]

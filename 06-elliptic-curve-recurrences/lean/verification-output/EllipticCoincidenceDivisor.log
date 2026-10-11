@@ -1,0 +1,8 @@
+579f58faecf19abf6007c0c8d3c9d9c2447525f81a604c8e72ffa2118da6819e  EllipticCoincidenceDivisor.lean
+EllipticCoincidenceDivisor.lean:80:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.coincidenceDivisor_pos_of_agreement`:
+  [IsScalarTower k k[X] K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsScalarTower k k[X] K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.projective_agreement_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]

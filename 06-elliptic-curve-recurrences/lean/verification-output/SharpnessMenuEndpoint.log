@@ -1,0 +1,5 @@
+e1d5ec555d2a6e4de27739c698390784fc802f5ed0e16396752ebaa79b1ebdc1  SharpnessMenuEndpoint.lean
+'Astra01.SharpnessActual.menu_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.menu_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.menu_covers_cyclic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.no_smaller_cover' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+'Astra01.EllipticFrobenius.finite_field_hasse_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticFrobenius.half_field_card_lt_point_count' depends on axioms: [propext, Classical.choice, Quot.sound]

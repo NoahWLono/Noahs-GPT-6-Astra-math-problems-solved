@@ -1,0 +1,2 @@
+a297f2ee0ec17a1f765b268fe1de4e8223fe49c7c20625e487953985af3b53b1  EllipticPrincipalFiniteCoefficients.lean
+'Astra01.EllipticPicard.principalDivisor_finite' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+60cd23a931803541ceed5714f8e4d5e72896afb81e1e93be9555f99eb5e4a233  EllipticFunctionField.lean
+'Astra01.elliptic_principal_divisor_degree_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.finrank_ratFunc_eq_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.isSeparable' depends on axioms: [propext, Classical.choice, Quot.sound]

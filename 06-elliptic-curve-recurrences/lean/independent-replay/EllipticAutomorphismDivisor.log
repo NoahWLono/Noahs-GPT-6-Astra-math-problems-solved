@@ -1,0 +1,2 @@
+'Astra01.EllipticPointDivisor.principalDivisor_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.pole_degree_automorphism' depends on axioms: [propext, Classical.choice, Quot.sound]

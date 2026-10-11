@@ -1,0 +1,8 @@
+22d757ab79e71d827d39a43521355d281718388390fc2957b54a7376cfc1dc7b  LinearFractionFixedFiber.lean
+LinearFractionFixedFiber.lean:13:0: warning: automatically included section variable(s) unused in theorem `Astra01.linear_polynomial_root_factor`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.exists_fixed_linear_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]

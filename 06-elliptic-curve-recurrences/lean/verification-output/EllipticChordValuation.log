@@ -1,0 +1,2 @@
+1654a22ae05e48d4f7695f7602f02b10c73a8dd2e2bbb4ad207f1cf6bbe5af73  EllipticChordValuation.lean
+'Astra01.EllipticAddSub.chordNumerator_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+bf864553e573122cd9323496db0145cdefa2b956117ad71c2e80a36df88fcb36  EllipticFrobeniusOrbitBound.lean
+'Astra01.EllipticFrobenius.rational_count_le_difference_pole_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.EllipticFrobenius.rational_count_le_difference_height' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,2 @@
+53dc7e9c0dcd55c32e843bcb6cb1e9aa604ddd670806da977369bbbb7305e43d  EllipticFiniteFieldUpper.lean
+'Astra01.EllipticFrobenius.finite_field_upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

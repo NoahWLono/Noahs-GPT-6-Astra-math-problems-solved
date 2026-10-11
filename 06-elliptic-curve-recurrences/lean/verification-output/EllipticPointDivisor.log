@@ -1,0 +1,3 @@
+631196d4438f975f26eda0fb6b0f0f48adb75ce832cc8b3a991fa30a578ee7fa  EllipticPointDivisor.lean
+'Astra01.EllipticPointDivisor.sum_principalDivisor_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.point_valuation_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

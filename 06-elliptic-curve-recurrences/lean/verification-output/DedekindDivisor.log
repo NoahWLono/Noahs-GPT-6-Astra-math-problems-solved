@@ -1,0 +1,4 @@
+d640abf7a6cbe03c7c9e946c5ba73687d50c54a6f4714ea168483b62ae180ecc  DedekindDivisor.lean
+'Astra01.DedekindDivisor.divisorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.DedekindDivisor.principalDivisor_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.DedekindDivisor.weightedDegree' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+ad97addbbf06e738b926c8b88cb267a3288bdbfd28bd559b9e3f53661d22b772  EllipticPrincipalCriterion.lean
+'Astra01.EllipticPicard.principal_of_degree_zero_pointSum_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

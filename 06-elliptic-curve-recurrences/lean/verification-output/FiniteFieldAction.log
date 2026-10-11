@@ -1,0 +1,3 @@
+1b10b808f45ff4d4477dc55de7cd72875646b7fd48a18da8629fb3631eb1bb68  FiniteFieldAction.lean
+'Astra01.prime_recurrence_gl2_field_alternatives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.prime_period_gl2_field_alternatives' depends on axioms: [propext, Classical.choice, Quot.sound]

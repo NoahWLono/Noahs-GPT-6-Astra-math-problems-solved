@@ -1,0 +1,11 @@
+{
+  "document": "FORMAL_VERIFICATION.pdf",
+  "source": "FORMAL_VERIFICATION.tex",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "exit_code": 0,
+  "pages": 2,
+  "visual_review": "Both rendered pages inspected; no clipping, overlaps or missing glyphs.",
+  "source_sha256": "c3468fe0237cc5be2389268c6ca99031922fed75aab3ed0c752629ad657203fb",
+  "pdf_sha256": "309bddd9a1269b755df3324cc707e79a46587aa0c06d0be6f3453f74ed1a0255",
+  "reproduction": "pdflatex -interaction=nonstopmode -halt-on-error FORMAL_VERIFICATION.tex (twice; requires article, geometry, fontenc, lmodern, amsmath, amssymb, enumitem, hyperref and their standard dependencies)."
+}

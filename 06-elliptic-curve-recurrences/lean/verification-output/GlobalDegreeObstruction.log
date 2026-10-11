@@ -1,0 +1,4 @@
+ed701e0667e3183774b1dcb6abdb6506ead2c20cd34d71fe15ad060e15842f08  GlobalDegreeObstruction.lean
+'Astra01.EllipticPointDivisor.translation_semiconjugacy_degree_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

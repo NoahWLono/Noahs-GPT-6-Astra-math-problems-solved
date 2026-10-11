@@ -1,0 +1,4 @@
+655ef39b79c3d5db3b6dd1294a6ffef8df1801f891a6140a05c449fc624bc410  InvariantDivisor.lean
+'Astra01.translation_invariant_degree_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.invariant_weight_sum_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.invariant_finsupp_degree_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]

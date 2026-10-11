@@ -1,0 +1,3 @@
+EllipticChordPole.lean:38:16: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+'Astra01.EllipticAddSub.addX_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticAddSub.negY_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]

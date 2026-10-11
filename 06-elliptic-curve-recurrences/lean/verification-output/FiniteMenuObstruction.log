@@ -1,0 +1,8 @@
+71ba1346741f112901bc28860ff670aa01ba82b548a10b15536d5f9a34686af4  FiniteMenuObstruction.lean
+FiniteMenuObstruction.lean:20:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.reduced_numerator_ne_zero`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.finite_recurrence_menu_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

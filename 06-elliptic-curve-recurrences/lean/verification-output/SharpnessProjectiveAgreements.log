@@ -1,0 +1,3 @@
+44ad7c0eaed86121f971855aab2dbdf82e1a696a9a33285cd6f212d775ac428c  SharpnessProjectiveAgreements.lean
+'Astra01.SharpnessActual.exact_agreement_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.actual_four_maps_cover' depends on axioms: [propext, Classical.choice, Quot.sound]

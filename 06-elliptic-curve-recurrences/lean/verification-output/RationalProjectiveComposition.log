@@ -1,0 +1,4 @@
+399fcd5d57a395cb3b52e54495d5959a4b20c7b62edfd5a9b11bdd02e0bb18fc  RationalProjectiveComposition.lean
+'Astra01.EllipticPointDivisor.projectiveValue_rational_composition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+EllipticQuadraticTwist.lean:21:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Astra01.EllipticTwist.quadraticTwist_isElliptic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticTwist.quadraticTwist_squareDiscriminant' depends on axioms: [propext, Quot.sound]

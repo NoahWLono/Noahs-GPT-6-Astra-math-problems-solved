@@ -1,0 +1,2 @@
+2c971fd97a05a7ee028a7b8cf4fb2ac88fd7d7a613e0460439d3d1d0ae6a4dfe  ProjectiveFixedPoint.lean
+'Astra01.projective_transformation_has_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]

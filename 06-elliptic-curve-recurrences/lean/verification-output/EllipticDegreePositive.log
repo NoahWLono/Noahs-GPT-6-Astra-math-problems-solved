@@ -1,0 +1,17 @@
+e02ad40ed11bdcacf4da37f7ce40e0c263e09c9e1122467242c50fab50ee2970  EllipticDegreePositive.lean
+EllipticDegreePositive.lean:13:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.coordinate_unit_constant`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticDegreePositive.lean:51:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.divisorDegree_eq_zero_iff`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.coordinate_unit_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.nonconstant_pole_degree_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

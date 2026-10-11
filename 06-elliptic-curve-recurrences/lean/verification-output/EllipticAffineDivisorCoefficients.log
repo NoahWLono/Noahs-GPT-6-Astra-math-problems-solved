@@ -1,0 +1,2 @@
+29cc6defc21b0b4fbae4cfda3a7483c0dbb1daeade10b13a3634eb1f6bc344e2  EllipticAffineDivisorCoefficients.lean
+'Astra01.EllipticPicard.affineDivisor_apply' depends on axioms: [propext, Classical.choice, Quot.sound]

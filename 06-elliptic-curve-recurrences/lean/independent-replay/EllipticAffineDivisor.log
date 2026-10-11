@@ -1,0 +1,2 @@
+'WeierstrassCurve.Affine.CoordinateRing.isDedekindDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.ellipticAffinePrincipalDivisor_apply' depends on axioms: [propext, Classical.choice, Quot.sound]

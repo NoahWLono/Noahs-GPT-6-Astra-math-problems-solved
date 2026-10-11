@@ -1,0 +1,3 @@
+26e085117de1a5a6526a8532037b7dc4d2285b11ae75834043c3b51c9341b93c  EllipticSymmetricHeight.lean
+'Astra01.EllipticHeight.sym2x_divisor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticHeight.sym2x_height' depends on axioms: [propext, Classical.choice, Quot.sound]

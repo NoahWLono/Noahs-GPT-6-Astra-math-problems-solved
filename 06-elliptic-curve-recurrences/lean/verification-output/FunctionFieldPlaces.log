@@ -1,0 +1,7 @@
+5c9249347463a3bc35f83c080a1ae89c28bd456acc52de6f4528d822675e1761  FunctionFieldPlaces.lean
+'FunctionField.Chart.placeValuation_eq_exp_neg_principalDivisor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FunctionField.Chart.inftyValuationSubring.finrank_residueField' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,3 @@
+'Astra01.semaev_factorization' depends on axioms: [propext, Quot.sound]
+'Astra01.addition_numerator' depends on axioms: [propext, Quot.sound]
+'Astra01.duplication_numerator' depends on axioms: [propext]

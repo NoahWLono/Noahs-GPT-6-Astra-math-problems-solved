@@ -1,0 +1,21 @@
+3723c7163a2dbfcbe8ca834a8dd24c45c2941854d6c4fa4cdf50d76868cbe015  ProjectiveQuotientAction.lean
+ProjectiveQuotientAction.lean:17:24: warning: This simp argument is unused:
+  Matrix.GeneralLinearGroup.toLin_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵M̵a̵t̵r̵i̵x̵.̵G̵e̵n̵e̵r̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵t̵o̵L̵i̵n̵_̵a̵p̵p̵l̵y̵,̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵L̵i̵n̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵M̵a̵t̵r̵i̵x̵.̵G̵e̵n̵e̵r̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵c̵o̵e̵_̵s̵c̵a̵l̵a̵r̵,̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵,̵d̵o̵t̵P̵r̵o̵d̵u̵c̵t̵,̵F̵i̵n̵.̵s̵u̵m̵_̵u̵n̵i̵v̵_̵t̵w̵o̵,̵M̵a̵t̵r̵i̵x̵.̵s̵c̵a̵l̵a̵r̵]̵[̲M̲a̲t̲r̲i̲x̲.̲m̲u̲l̲V̲e̲c̲L̲i̲n̲_̲a̲p̲p̲l̲y̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲G̲e̲n̲e̲r̲a̲l̲L̲i̲n̲e̲a̲r̲G̲r̲o̲u̲p̲.̲c̲o̲e̲_̲s̲c̲a̲l̲a̲r̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲m̲u̲l̲V̲e̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲d̲o̲t̲P̲r̲o̲d̲u̲c̲t̲,̲ ̲F̲i̲n̲.̲s̲u̲m̲_̲u̲n̲i̲v̲_̲t̲w̲o̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲s̲c̲a̲l̲a̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ProjectiveQuotientAction.lean:17:62: warning: This simp argument is unused:
+  Matrix.mulVecLin_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵M̵a̵t̵r̵i̵x̵.̵G̵e̵n̵e̵r̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵t̵o̵L̵i̵n̵_̵a̵p̵p̵l̵y̵,̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵L̵i̵n̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵M̵a̵t̵r̵i̵x̵.̵G̵e̵n̵e̵r̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵c̵o̵e̵_̵s̵c̵a̵l̵a̵r̵,̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵,̵d̵o̵t̵P̵r̵o̵d̵u̵c̵t̵,̵F̵i̵n̵.̵s̵u̵m̵_̵u̵n̵i̵v̵_̵t̵w̵o̵,̵M̵a̵t̵r̵i̵x̵.̵s̵c̵a̵l̵a̵r̵]̵[̲M̲a̲t̲r̲i̲x̲.̲G̲e̲n̲e̲r̲a̲l̲L̲i̲n̲e̲a̲r̲G̲r̲o̲u̲p̲.̲t̲o̲L̲i̲n̲_̲a̲p̲p̲l̲y̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲G̲e̲n̲e̲r̲a̲l̲L̲i̲n̲e̲a̲r̲G̲r̲o̲u̲p̲.̲c̲o̲e̲_̲s̲c̲a̲l̲a̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲M̲a̲t̲r̲i̲x̲.̲m̲u̲l̲V̲e̲c̲,̲ ̲d̲o̲t̲P̲r̲o̲d̲u̲c̲t̲,̲ ̲F̲i̲n̲.̲s̲u̲m̲_̲u̲n̲i̲v̲_̲t̲w̲o̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲s̲c̲a̲l̲a̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.projectiveQuotientAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.pgl_eq_one_of_three_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]

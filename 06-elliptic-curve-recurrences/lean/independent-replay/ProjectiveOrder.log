@@ -1,0 +1,4 @@
+'Astra01.projective_recurrence_exact_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.scalar_of_three_eigenlines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.scalar_of_three_projective_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.projective_identity_of_three_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]

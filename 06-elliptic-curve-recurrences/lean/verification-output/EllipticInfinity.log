@@ -1,0 +1,3 @@
+282fc7faf70c31a2a27f6474a3708d5c5017db988e328178670d912577fdb83b  EllipticInfinity.lean
+'WeierstrassCurve.Affine.Chart.infinity_heightOne_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.Chart.infinityPlace_deg_one' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,1 @@
+'Astra01.EllipticPointDivisor.translation_ratio_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,9 @@
+a5a638c79ac31cd152dec4596513d65380a552db1d1fd507f4a392839185c456  EllipticTranslationCovariance.lean
+EllipticTranslationCovariance.lean:21:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.chart_eq_of_valuation_eq`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.translationPoint_eq_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.principalDivisor_translation' depends on axioms: [propext, Classical.choice, Quot.sound]

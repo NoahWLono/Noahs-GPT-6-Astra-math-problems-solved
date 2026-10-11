@@ -1,0 +1,5 @@
+26b447824ae399f607c94d39c4a2b6ddf5566ac81a935cec150bb409aa457c70  EllipticFixedFiber.lean
+'Astra01.EllipticPointDivisor.zeroDivisor_rational_of_degree_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.EllipticPointDivisor.zeroDivisor_linear_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+8e556a4c012696e945bc6cb2cd9ff2596609d07193839ba759aa3366f07c8564  FunctionFieldIntrinsicPlace.lean
+'FunctionField.Place.valuationSubring_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]

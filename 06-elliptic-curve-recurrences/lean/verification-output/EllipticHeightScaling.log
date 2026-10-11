@@ -1,0 +1,4 @@
+754943ba3b833f929c097fbc2e3c64c262393204760399c4240f735d31c6cba0  EllipticHeightScaling.lean
+EllipticHeightScaling.lean:52:10: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+'Astra01.EllipticHeight.vectorHeight_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticHeight.vectorDivisor_addSubMap' depends on axioms: [propext, Classical.choice, Quot.sound]

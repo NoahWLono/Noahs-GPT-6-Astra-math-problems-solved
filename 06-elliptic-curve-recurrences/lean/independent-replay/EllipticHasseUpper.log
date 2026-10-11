@@ -1,0 +1,1 @@
+'Astra01.EllipticFrobenius.rational_count_upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

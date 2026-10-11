@@ -1,0 +1,10 @@
+f0325f0fb415feb13c4e33920ff4252e77725b7021f4302a6d6db02c66a64e60  ProjectiveRecurrenceBounds.lean
+ProjectiveRecurrenceBounds.lean:25:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.mem_cyclicPoints_iff`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.full_agreement_set_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.full_menu_agreement_set_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

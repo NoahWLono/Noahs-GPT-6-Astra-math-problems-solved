@@ -1,0 +1,41 @@
+44dab48edec36dcba0a950a490301d2b3bf19e7eee995b172282b67d8b0f2c46  EllipticDuplicationPolynomials.lean
+EllipticDuplicationPolynomials.lean:16:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.numerator_degree`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticDuplicationPolynomials.lean:20:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.four_ne_zero`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticDuplicationPolynomials.lean:21:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+EllipticDuplicationPolynomials.lean:23:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.denominator_degree`:
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticDuplicationPolynomials.lean:39:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.derivative_identity`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticDuplicationPolynomials.lean:44:60: warning: This simp argument is unused:
+  eval_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [numerator, denominator, WeierstrassCurve.twoTorsionPolynomial, Cubic.toPoly,
+      derivative_add, derivative_mul, derivative_pow, derivative_C, derivative_X,
+  ̵  ̵ ̵ ̵eval_add, eval_sub,
+  ̲  ̲ ̲ ̲eval_mul, eval_pow, eval_C, eval_X, eval_n̵a̵t̵C̵a̵s̵t̵,̵ ̵e̵v̵a̵l̵_̵zero, eval_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.EllipticDuplication.pair_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]

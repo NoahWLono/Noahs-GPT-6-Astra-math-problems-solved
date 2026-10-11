@@ -1,0 +1,2 @@
+4a9822c520a07a01e0301caa11a9176507cd335cc8c2527217617fcaf4ae0724  EllipticCharacterCount.lean
+'Astra01.EllipticTwist.point_count_character' depends on axioms: [propext, Classical.choice, Quot.sound]

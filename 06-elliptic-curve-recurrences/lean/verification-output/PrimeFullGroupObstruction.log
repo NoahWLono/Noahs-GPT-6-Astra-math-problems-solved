@@ -1,0 +1,2 @@
+4084770d4eb338461c287422e82943946e9bec29b14df5c8403ace857ee14449  PrimeFullGroupObstruction.lean
+'Astra01.prime_full_group_recurrence_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

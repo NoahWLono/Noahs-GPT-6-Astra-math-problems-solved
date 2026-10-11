@@ -1,0 +1,15 @@
+EllipticXDifferenceDivisor.lean:25:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPicard.xDifference_principalIdeal`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticXDifferenceDivisor.lean:48:8: warning: automatically included section variable(s) unused in theorem `_private.EllipticXDifferenceDivisor.0.Astra01.EllipticPicard.divisor_eq_of_finite_and_sum`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPicard.xDifference_affine_divisor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPicard.xDifference_projective_divisor' depends on axioms: [propext, Classical.choice, Quot.sound]

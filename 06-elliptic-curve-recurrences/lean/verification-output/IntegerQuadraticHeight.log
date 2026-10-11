@@ -1,0 +1,5 @@
+5257e8c426157589bbc37b3050f029b8c750b015942c20d4bd22e42ea712c818  IntegerQuadraticHeight.lean
+IntegerQuadraticHeight.lean:57:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Astra01.QuadraticHeight.upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

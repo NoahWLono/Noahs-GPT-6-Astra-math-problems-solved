@@ -1,0 +1,4 @@
+EllipticAffineClassCriterion.lean:34:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Astra01.EllipticPicard.affine_principal_of_pointSum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+773d627fd47970c0ba9db0a187cd6a92e7f7f520070092ecf8b048f127cc495c  ExtensionDegree.lean
+'Astra01.order_dvd_twice_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.extension_divisibility_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.minimal_extension_degree_divides' depends on axioms: [propext, Classical.choice, Quot.sound]

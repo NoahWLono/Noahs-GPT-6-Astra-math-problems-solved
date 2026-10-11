@@ -1,0 +1,10 @@
+FiniteAgreementObstruction.lean:43:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.finite_cyclic_subset_card_le`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.finite_recurrence_agreement_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

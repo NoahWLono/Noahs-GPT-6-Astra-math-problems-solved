@@ -1,0 +1,8 @@
+EllipticTranslationLocal.lean:24:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.translation_coordinates`:
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.translation_place_of_x_ne' depends on axioms: [propext, Classical.choice, Quot.sound]

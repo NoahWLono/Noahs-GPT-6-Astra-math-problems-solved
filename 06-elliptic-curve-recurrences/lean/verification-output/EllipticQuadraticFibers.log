@@ -1,0 +1,5 @@
+64d0bd77ab7d5badb301d035962c6aca54302bbf1033b354d71bf028ee1046cf  EllipticQuadraticFibers.lean
+EllipticQuadraticFibers.lean:26:65: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Astra01.EllipticTwist.affine_fiber_count' depends on axioms: [propext, Classical.choice, Quot.sound]

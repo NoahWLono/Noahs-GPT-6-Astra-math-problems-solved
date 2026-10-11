@@ -1,0 +1,3 @@
+FunctionFieldPlaceEquiv.lean:361:4: warning: `Ideal.IsDedekindDomain.ramificationIdx_ne_zero_of_liesOver` has been deprecated: Use `Ideal.IsDedekindDomain.ramificationIdx'_ne_zero_of_liesOver` instead
+'FunctionField.chartToPlace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FunctionField.placeValuation_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

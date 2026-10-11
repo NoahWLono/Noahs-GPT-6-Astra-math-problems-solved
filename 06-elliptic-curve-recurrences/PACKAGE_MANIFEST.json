@@ -1,0 +1,1779 @@
+{
+  "package": "ASTRA-01 formal verification",
+  "module_count": 113,
+  "original_asset_count": 24,
+  "build_exit_code": 0,
+  "novelty": "unestablished",
+  "files": [
+    {
+      "path": "FORMAL_VERIFICATION.md",
+      "sha256": "2eed22dc8521d81aa738e9bbb8aa36bc3cd266cf8965df09e1e05fcf5edf22c5",
+      "bytes": 6007
+    },
+    {
+      "path": "FORMAL_VERIFICATION.pdf",
+      "sha256": "309bddd9a1269b755df3324cc707e79a46587aa0c06d0be6f3453f74ed1a0255",
+      "bytes": 168675
+    },
+    {
+      "path": "FORMAL_VERIFICATION.tex",
+      "sha256": "c3468fe0237cc5be2389268c6ca99031922fed75aab3ed0c752629ad657203fb",
+      "bytes": 6242
+    },
+    {
+      "path": "ORIGINAL_ASSET_MANIFEST.json",
+      "sha256": "6ead2a0d0a3ca989cc96675ede610228f81344b7e160133ea34e5a1defa11b1c",
+      "bytes": 5639
+    },
+    {
+      "path": "PDF_BUILD_RECORD.json",
+      "sha256": "062a93e721f2d667d8b95bab4babac8d06af405cfeb61b4df702c4c760041ad5",
+      "bytes": 674
+    },
+    {
+      "path": "README.md",
+      "sha256": "77af3e62764101f00516bd1413191a5501c918b8b977e023168787bad7bb922b",
+      "bytes": 1615
+    },
+    {
+      "path": "lean/APACHE-2.0.txt",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "bytes": 11357
+    },
+    {
+      "path": "lean/AdicRingEquiv.lean",
+      "sha256": "33c25db5eb953984e6f0ea424b61aacd944be2e830a25af23f7b162242714aa2",
+      "bytes": 2407
+    },
+    {
+      "path": "lean/CLEAN_AXIOM_AUDIT.json",
+      "sha256": "a2fe07403da8d41a2590883348beb62be1f80b2d3548e42cd538763523b23d2b",
+      "bytes": 82202
+    },
+    {
+      "path": "lean/CLEAN_BUILD_RECORD.json",
+      "sha256": "97bad7e1684b4c2b151e38e6d4d5913ce8dd92545de9e9ff5bbf470024a689bf",
+      "bytes": 12411
+    },
+    {
+      "path": "lean/CharacteristicSevenExample.lean",
+      "sha256": "383de0e75a1a639abf0e7fba79adfab6701118d8c79225cafb3f68bf89ed5f66",
+      "bytes": 6182
+    },
+    {
+      "path": "lean/CyclicFieldTheorem.lean",
+      "sha256": "db780cd1dc47364bb2bae604cb25752228f7253ced6f7a559ffb77750d6eb4f7",
+      "bytes": 4988
+    },
+    {
+      "path": "lean/DedekindDivisor.lean",
+      "sha256": "d640abf7a6cbe03c7c9e946c5ba73687d50c54a6f4714ea168483b62ae180ecc",
+      "bytes": 4397
+    },
+    {
+      "path": "lean/DivisorClassCriterion.lean",
+      "sha256": "adc526a35a9ec3a526fa5447b80a954e16daa5a80864292ea6b33a0b20d33ea2",
+      "bytes": 1748
+    },
+    {
+      "path": "lean/DoublingEvaluationCost.lean",
+      "sha256": "74a2bc662ce40bfc1db1dbaf4cdc21938648e28fff9e0b5c729c2ff7255c31c8",
+      "bytes": 2244
+    },
+    {
+      "path": "lean/EllipticAddSubAlgebra.lean",
+      "sha256": "032385ad478f8ee0513facc2512ad5ec58592fcb2d39f907fbf70ebe9aa1952f",
+      "bytes": 1890
+    },
+    {
+      "path": "lean/EllipticAddSubAllPoints.lean",
+      "sha256": "994ba664e89c769c30d08bc2940a83f54370f64e9328747f214b64420b18a12b",
+      "bytes": 4897
+    },
+    {
+      "path": "lean/EllipticAddSubCompatibility.lean",
+      "sha256": "ba017f0c1787892ff1c252bed09138388a00f75737a59d3916927167e233b0cc",
+      "bytes": 2228
+    },
+    {
+      "path": "lean/EllipticAddSubMaxValuation.lean",
+      "sha256": "8558982ce0ed3aefc534956a8cee9c77440134e80d2ab096da5818013f0169e9",
+      "bytes": 2120
+    },
+    {
+      "path": "lean/EllipticAddSubValuation.lean",
+      "sha256": "4a365c8b764023dc30091bab8f687a086039290dc19871c6b622ac58827a3215",
+      "bytes": 2749
+    },
+    {
+      "path": "lean/EllipticAffineClassCriterion.lean",
+      "sha256": "a235245856a5a8e66e86a2e7701d9b0859068a1784da631a6d4a82f5d744223e",
+      "bytes": 2176
+    },
+    {
+      "path": "lean/EllipticAffineDivisor.lean",
+      "sha256": "e93e46f1010476ddac761682fc69ffafc040602fc5d4b9c26b29fbf97d820205",
+      "bytes": 17466
+    },
+    {
+      "path": "lean/EllipticAffineDivisorCoefficients.lean",
+      "sha256": "29cc6defc21b0b4fbae4cfda3a7483c0dbb1daeade10b13a3634eb1f6bc344e2",
+      "bytes": 2106
+    },
+    {
+      "path": "lean/EllipticAutomorphismDivisor.lean",
+      "sha256": "03adc78a348b9b866fbe232d8d55d1512960f01d97e29c511ace44e3e3a2cf39",
+      "bytes": 2827
+    },
+    {
+      "path": "lean/EllipticAuxiliaryPoints.lean",
+      "sha256": "110c35cd62e6485fb0f0ee0c1754bca90d56a5bc16f6afa35d88391694df47a8",
+      "bytes": 5484
+    },
+    {
+      "path": "lean/EllipticCharacterCount.lean",
+      "sha256": "4a9822c520a07a01e0301caa11a9176507cd335cc8c2527217617fcaf4ae0724",
+      "bytes": 1160
+    },
+    {
+      "path": "lean/EllipticChordExpansion.lean",
+      "sha256": "f76b9248b94b22065a3361303f3a9caa11855a6cb82cc7c8aed36862106e2507",
+      "bytes": 813
+    },
+    {
+      "path": "lean/EllipticChordPole.lean",
+      "sha256": "9d2fe0e95b584bec3b5bf6d0017922d100cd065bffb92e193cb022f019589533",
+      "bytes": 2200
+    },
+    {
+      "path": "lean/EllipticChordValuation.lean",
+      "sha256": "1654a22ae05e48d4f7695f7602f02b10c73a8dd2e2bbb4ad207f1cf6bbe5af73",
+      "bytes": 3713
+    },
+    {
+      "path": "lean/EllipticCoincidenceDivisor.lean",
+      "sha256": "579f58faecf19abf6007c0c8d3c9d9c2447525f81a604c8e72ffa2118da6819e",
+      "bytes": 6135
+    },
+    {
+      "path": "lean/EllipticCompositionDegree.lean",
+      "sha256": "ef0dfce77bdc0fdbaff41683f238f21dbd2b590120a887afc1a42ffc56c3de29",
+      "bytes": 11481
+    },
+    {
+      "path": "lean/EllipticCoordinateInfinityValuation.lean",
+      "sha256": "ea3b6bd25ac7aee563391b55228a73c14d1ad26fcc6b747c643e818114bda5f4",
+      "bytes": 2061
+    },
+    {
+      "path": "lean/EllipticCoordinatePoleDegree.lean",
+      "sha256": "32fdca2c250a9c923f0f05a688c9a7d4281deaa1f15ddbbbe0c2b3f18b03aeef",
+      "bytes": 4408
+    },
+    {
+      "path": "lean/EllipticDegreePositive.lean",
+      "sha256": "e02ad40ed11bdcacf4da37f7ce40e0c263e09c9e1122467242c50fab50ee2970",
+      "bytes": 5570
+    },
+    {
+      "path": "lean/EllipticDoublingIteration.lean",
+      "sha256": "e4690f19c1c81eec45b95044a3d0671fa9c395ae56bb6696748fa03e2ac0a344",
+      "bytes": 4441
+    },
+    {
+      "path": "lean/EllipticDuplicationPolynomials.lean",
+      "sha256": "44dab48edec36dcba0a950a490301d2b3bf19e7eee995b172282b67d8b0f2c46",
+      "bytes": 2842
+    },
+    {
+      "path": "lean/EllipticFiberDegree.lean",
+      "sha256": "27326253cd4e4ef19503eac873375b7868c75579bdbe4b504b74a1e12580e6b3",
+      "bytes": 4675
+    },
+    {
+      "path": "lean/EllipticFiniteFieldUpper.lean",
+      "sha256": "53dc7e9c0dcd55c32e843bcb6cb1e9aa604ddd670806da977369bbbb7305e43d",
+      "bytes": 1236
+    },
+    {
+      "path": "lean/EllipticFinitePlaces.lean",
+      "sha256": "d39b190625e39411d2ef581e49f734a47f7e8867571a9ca0f733a299ab9d23e5",
+      "bytes": 4510
+    },
+    {
+      "path": "lean/EllipticFixedFiber.lean",
+      "sha256": "26b447824ae399f607c94d39c4a2b6ddf5566ac81a935cec150bb409aa457c70",
+      "bytes": 4202
+    },
+    {
+      "path": "lean/EllipticFrobenius.lean",
+      "sha256": "5ddf7a2d34f5537465c1ec301045711051fb13e19b600b0fbbb648e2992a9479",
+      "bytes": 2526
+    },
+    {
+      "path": "lean/EllipticFrobeniusGeneric.lean",
+      "sha256": "57a66882d3041e7214a6e4fd62d55b22457aba864b9fdf2394c203c31bd3f39c",
+      "bytes": 3332
+    },
+    {
+      "path": "lean/EllipticFrobeniusHeight.lean",
+      "sha256": "dc46c3531d04d134350b417296debf2bbf4a5456700f60cdb4b8512fb3a33694",
+      "bytes": 1380
+    },
+    {
+      "path": "lean/EllipticFrobeniusInfinity.lean",
+      "sha256": "b2a6b4eacbec0cc68b39ffbe21bfdba92c191457682b41739a1d3b9e90fe094a",
+      "bytes": 4719
+    },
+    {
+      "path": "lean/EllipticFrobeniusOrbitBound.lean",
+      "sha256": "bf864553e573122cd9323496db0145cdefa2b956117ad71c2e80a36df88fcb36",
+      "bytes": 3397
+    },
+    {
+      "path": "lean/EllipticFrobeniusRationalPoles.lean",
+      "sha256": "26d8503956c298b5073f05dee1b202e6b8eca59d9cb8ca2ae961cf5444a5e48b",
+      "bytes": 3332
+    },
+    {
+      "path": "lean/EllipticFunctionField.lean",
+      "sha256": "60cd23a931803541ceed5714f8e4d5e72896afb81e1e93be9555f99eb5e4a233",
+      "bytes": 13265
+    },
+    {
+      "path": "lean/EllipticHasseOdd.lean",
+      "sha256": "7a273fbd774be1f9df556093023bcd92b1da90afeeb6673615fe4d6696012848",
+      "bytes": 1949
+    },
+    {
+      "path": "lean/EllipticHasseUpper.lean",
+      "sha256": "584e748dfab5d3c118c83f445daf9eb82601b4ef44a8d905455cc13b3dbeb8e7",
+      "bytes": 3021
+    },
+    {
+      "path": "lean/EllipticHeightCauchySchwarz.lean",
+      "sha256": "ac6df5c276578217d1d2252c4df18a24a8fc422c6c91635d90d87bf9ffacbbd5",
+      "bytes": 1549
+    },
+    {
+      "path": "lean/EllipticHeightNormalization.lean",
+      "sha256": "bff2c145835bb02ee778160f3e84d1948b017f6089d75cd5f55a8628dd728d2d",
+      "bytes": 4569
+    },
+    {
+      "path": "lean/EllipticHeightParallelogram.lean",
+      "sha256": "c6682edbf841cb6ab874c8a14b3ebd2a13ecdba7c55d320a2415970f799f50b3",
+      "bytes": 2132
+    },
+    {
+      "path": "lean/EllipticHeightPowers.lean",
+      "sha256": "89eb58cceb3b2b23e57097e48fadf1399641fbfb58b8820e4a9ea901eb096c49",
+      "bytes": 2163
+    },
+    {
+      "path": "lean/EllipticHeightScaling.lean",
+      "sha256": "754943ba3b833f929c097fbc2e3c64c262393204760399c4240f735d31c6cba0",
+      "bytes": 3929
+    },
+    {
+      "path": "lean/EllipticInfinity.lean",
+      "sha256": "282fc7faf70c31a2a27f6474a3708d5c5017db988e328178670d912577fdb83b",
+      "bytes": 19380
+    },
+    {
+      "path": "lean/EllipticPlaceDictionary.lean",
+      "sha256": "caedfa87c42deae08c325a63973c426c39af07770647b05f0844fb864c495b8d",
+      "bytes": 4227
+    },
+    {
+      "path": "lean/EllipticPointDivisor.lean",
+      "sha256": "631196d4438f975f26eda0fb6b0f0f48adb75ce832cc8b3a991fa30a578ee7fa",
+      "bytes": 2551
+    },
+    {
+      "path": "lean/EllipticPointResidues.lean",
+      "sha256": "cd8ec187e69f99f6bc33bc8247e45fa5f8fa9fca91d350c4c593a499f1c80dab",
+      "bytes": 5383
+    },
+    {
+      "path": "lean/EllipticPrincipalCriterion.lean",
+      "sha256": "ad97addbbf06e738b926c8b88cb267a3288bdbfd28bd559b9e3f53661d22b772",
+      "bytes": 2682
+    },
+    {
+      "path": "lean/EllipticPrincipalFiniteCoefficients.lean",
+      "sha256": "a297f2ee0ec17a1f765b268fe1de4e8223fe49c7c20625e487953985af3b53b1",
+      "bytes": 2491
+    },
+    {
+      "path": "lean/EllipticProjectiveDoubling.lean",
+      "sha256": "f684cf229ebac97171527f8079b007d61bf7af2168d55b82bbe69c3f17b43f8b",
+      "bytes": 2950
+    },
+    {
+      "path": "lean/EllipticProjectiveHeightDivisor.lean",
+      "sha256": "d081b12fbb50a3b810afabc04dd6979e97ff75c3f3e1f264f517a091e9594b80",
+      "bytes": 3335
+    },
+    {
+      "path": "lean/EllipticProjectiveValue.lean",
+      "sha256": "584816553b43113f61687b1130a7dc589180f32167ca2dba365b473065734c81",
+      "bytes": 5698
+    },
+    {
+      "path": "lean/EllipticQuadraticFibers.lean",
+      "sha256": "64d0bd77ab7d5badb301d035962c6aca54302bbf1033b354d71bf028ee1046cf",
+      "bytes": 2202
+    },
+    {
+      "path": "lean/EllipticQuadraticTwist.lean",
+      "sha256": "51f50b21217ec925a575b05d46349a80b5ae668bd2d249f671ef9e4a25e2ff3c",
+      "bytes": 1431
+    },
+    {
+      "path": "lean/EllipticSymmetricHeight.lean",
+      "sha256": "26e085117de1a5a6526a8532037b7dc4d2285b11ae75834043c3b51c9341b93c",
+      "bytes": 2894
+    },
+    {
+      "path": "lean/EllipticTranslation.lean",
+      "sha256": "8b52e206b6709771700d8e622bffc40058b12f6c910f57ec5cd3b4042382eae9",
+      "bytes": 11224
+    },
+    {
+      "path": "lean/EllipticTranslationCovariance.lean",
+      "sha256": "a5a638c79ac31cd152dec4596513d65380a552db1d1fd507f4a392839185c456",
+      "bytes": 5041
+    },
+    {
+      "path": "lean/EllipticTranslationLocal.lean",
+      "sha256": "6b668f840423a313fe5d76d60f6fda34f0d0d7bc12e3f5434ebe069ab27e31b1",
+      "bytes": 4124
+    },
+    {
+      "path": "lean/EllipticTwistCount.lean",
+      "sha256": "799efd4a41c2165abb041a51dfb4ed588d5c5f4d853d709c75e7f82fd0c01e14",
+      "bytes": 1733
+    },
+    {
+      "path": "lean/EllipticWeilConstantRatio.lean",
+      "sha256": "2538d7efab74ac64353eeb07b53cc1e03800daa120c868435e63b78f030b0f24",
+      "bytes": 2590
+    },
+    {
+      "path": "lean/EllipticWeilFunction.lean",
+      "sha256": "1d9b2585af31188d98b99573784d76e92c87f6d2f67393e672f3abecc8049496",
+      "bytes": 1908
+    },
+    {
+      "path": "lean/EllipticXDifferenceDivisor.lean",
+      "sha256": "8769e95e26e5c2192b22bc1e1123295321074ca0e76bb79002944e0237785c94",
+      "bytes": 4517
+    },
+    {
+      "path": "lean/EllipticXProjectiveValue.lean",
+      "sha256": "81069978b7af3094f48db21365fc7ad92f25ec40901f66764b593945c62b6429",
+      "bytes": 1865
+    },
+    {
+      "path": "lean/EllipticXYDegrees.lean",
+      "sha256": "3320f62fea96262da79eb9051dcd9b44118baf6df17f33fa6dc600f233df198a",
+      "bytes": 3605
+    },
+    {
+      "path": "lean/ExtensionDegree.lean",
+      "sha256": "773d627fd47970c0ba9db0a187cd6a92e7f7f520070092ecf8b048f127cc495c",
+      "bytes": 1661
+    },
+    {
+      "path": "lean/FiniteAgreementObstruction.lean",
+      "sha256": "f941f68d70c9d9727619c9ed5ba031be89dd9d435695868d5fc7f9608288e4a1",
+      "bytes": 5307
+    },
+    {
+      "path": "lean/FiniteFieldAction.lean",
+      "sha256": "1b10b808f45ff4d4477dc55de7cd72875646b7fd48a18da8629fb3631eb1bb68",
+      "bytes": 3890
+    },
+    {
+      "path": "lean/FiniteMenuObstruction.lean",
+      "sha256": "71ba1346741f112901bc28860ff670aa01ba82b548a10b15536d5f9a34686af4",
+      "bytes": 3438
+    },
+    {
+      "path": "lean/FractionalDivisorDegree.lean",
+      "sha256": "909034a9ddd3853dd9dd600ed0c2928b521dd50285ff0e78deb5487780f7665a",
+      "bytes": 5743
+    },
+    {
+      "path": "lean/FunctionFieldIntrinsicPlace.lean",
+      "sha256": "8e556a4c012696e945bc6cb2cd9ff2596609d07193839ba759aa3366f07c8564",
+      "bytes": 7452
+    },
+    {
+      "path": "lean/FunctionFieldPlaceAction.lean",
+      "sha256": "377d7a3d63e1b65cb96d836a81835d40b6b892657dd686c195349c662ece9494",
+      "bytes": 5755
+    },
+    {
+      "path": "lean/FunctionFieldPlaceEquiv.lean",
+      "sha256": "3b9bdb1a845a205e87f82b054d03e2debd7bec8f636848bcffb89e6287fe58e8",
+      "bytes": 20390
+    },
+    {
+      "path": "lean/FunctionFieldPlaces.lean",
+      "sha256": "5c9249347463a3bc35f83c080a1ae89c28bd456acc52de6f4528d822675e1761",
+      "bytes": 20142
+    },
+    {
+      "path": "lean/FunctionFieldProductFormula.lean",
+      "sha256": "3e4d740910726b10af65a3d8f1d53013c25e49d4e4822f6c16089382f386b41a",
+      "bytes": 27295
+    },
+    {
+      "path": "lean/GlobalDegreeObstruction.lean",
+      "sha256": "ed701e0667e3183774b1dcb6abdb6506ead2c20cd34d71fe15ad060e15842f08",
+      "bytes": 2537
+    },
+    {
+      "path": "lean/GlobalProjectiveRecurrence.lean",
+      "sha256": "ead9060a1194eea40f6d0612f80e0e5f90b6203005c070d3a64cc96e00ca923b",
+      "bytes": 3119
+    },
+    {
+      "path": "lean/GlobalRecurrenceObstruction.lean",
+      "sha256": "cf3cc7f2827b33d2b1c8973ff1236dd1b72069d216e18302a02b8d066e218b5c",
+      "bytes": 5846
+    },
+    {
+      "path": "lean/INDEPENDENT_REPLAY_MANIFEST.json",
+      "sha256": "6af2c2c902f6781f0dd61651488a98846c1efb13f61d4f9c36b0da4a0d18d564",
+      "bytes": 65744
+    },
+    {
+      "path": "lean/IntegerQuadraticHeight.lean",
+      "sha256": "5257e8c426157589bbc37b3050f029b8c750b015942c20d4bd22e42ea712c818",
+      "bytes": 2418
+    },
+    {
+      "path": "lean/InvariantDivisor.lean",
+      "sha256": "655ef39b79c3d5db3b6dd1294a6ffef8df1801f891a6140a05c449fc624bc410",
+      "bytes": 6680
+    },
+    {
+      "path": "lean/LOCAL_REPRODUCTION.md",
+      "sha256": "5e90aadf0a03a701fd3752571bd667bde939e684e5df7c0523ad07404a7243d4",
+      "bytes": 2173
+    },
+    {
+      "path": "lean/LinearFractionBaseChange.lean",
+      "sha256": "40d6c4b86af1967a839065ed78d6b5e187e42934df32edeeb5d4fcd99a4c0700",
+      "bytes": 1169
+    },
+    {
+      "path": "lean/LinearFractionFixedFiber.lean",
+      "sha256": "22d757ab79e71d827d39a43521355d281718388390fc2957b54a7376cfc1dc7b",
+      "bytes": 2939
+    },
+    {
+      "path": "lean/LinearFractionProjective.lean",
+      "sha256": "64056f5a235b5ed77deb0f0f4e38136713dff599e77dd6085171026fa76f8078",
+      "bytes": 1665
+    },
+    {
+      "path": "lean/OVERLAY_DEPENDENCY_MANIFEST.json",
+      "sha256": "9f40b2356eeb4a8a348846964a8fdadfdabe8ab5ff4e3687a7480d92991e7b35",
+      "bytes": 99341
+    },
+    {
+      "path": "lean/PolynomialIdentities.lean",
+      "sha256": "514c8721d83e1f3d4ceb7dac3f2be00330c09eeb94975c408596e9797dc3f49b",
+      "bytes": 1606
+    },
+    {
+      "path": "lean/PrimeFieldArithmetic.lean",
+      "sha256": "b50f7d39562c5869fa07bd782293ae53bf24f3cbccfc0f727488af614bfc3c57",
+      "bytes": 798
+    },
+    {
+      "path": "lean/PrimeFullGroupObstruction.lean",
+      "sha256": "4084770d4eb338461c287422e82943946e9bec29b14df5c8403ace857ee14449",
+      "bytes": 2326
+    },
+    {
+      "path": "lean/PrimeFullGroupPGLObstruction.lean",
+      "sha256": "9e235f58d7f39bc38f8da644531d03baa36c005021f5d76ee74b02b08b0428a9",
+      "bytes": 1290
+    },
+    {
+      "path": "lean/PrimeOrbit.lean",
+      "sha256": "c95d50127379b9d67f8a777ff5bdde760814594f6fdc2e0e6e627ce3965cd58e",
+      "bytes": 1682
+    },
+    {
+      "path": "lean/ProjectiveFieldCondition.lean",
+      "sha256": "77aaa40142315dc6a5bfaeed60b5fab1b61c3a6b237340da4c7efd24a06f7103",
+      "bytes": 2778
+    },
+    {
+      "path": "lean/ProjectiveFixedPoint.lean",
+      "sha256": "2c971fd97a05a7ee028a7b8cf4fb2ac88fd7d7a613e0460439d3d1d0ae6a4dfe",
+      "bytes": 1311
+    },
+    {
+      "path": "lean/ProjectiveOrder.lean",
+      "sha256": "3406676cc0f37053bf729fcaecca47e71175fd86e327cf9954681d4c303c1352",
+      "bytes": 7031
+    },
+    {
+      "path": "lean/ProjectiveQuotientAction.lean",
+      "sha256": "3723c7163a2dbfcbe8ca834a8dd24c45c2941854d6c4fa4cdf50d76868cbe015",
+      "bytes": 2189
+    },
+    {
+      "path": "lean/ProjectiveQuotientRecurrence.lean",
+      "sha256": "b7d78f9075980a58bd5286a1755a698c7fca2744643300589d9cba1710c82676",
+      "bytes": 5350
+    },
+    {
+      "path": "lean/ProjectiveRecurrenceBounds.lean",
+      "sha256": "f0325f0fb415feb13c4e33920ff4252e77725b7021f4302a6d6db02c66a64e60",
+      "bytes": 4847
+    },
+    {
+      "path": "lean/README.md",
+      "sha256": "4f9c970294c6a290fc734f9d3bef6be9ce0cb9324e94b38d3d5833cfe09fc31e",
+      "bytes": 1692
+    },
+    {
+      "path": "lean/RationalFunctionDivisor.lean",
+      "sha256": "6b96dc0998e9e2825d52e8e191359b5d41f5381314a9dc82981ac1a599573b7f",
+      "bytes": 2749
+    },
+    {
+      "path": "lean/RationalProjectiveBaseChange.lean",
+      "sha256": "c9ae780d4f191048756203606913d5990536c07f951eedef578664de3b3477b3",
+      "bytes": 1029
+    },
+    {
+      "path": "lean/RationalProjectiveComposition.lean",
+      "sha256": "399fcd5d57a395cb3b52e54495d5959a4b20c7b62edfd5a9b11bdd02e0bb18fc",
+      "bytes": 7308
+    },
+    {
+      "path": "lean/SEMANTIC_COVERAGE.md",
+      "sha256": "6109f5f46df5f53d7d4ca01dc4101ee97b560abe8180a021a1bb71f921669d66",
+      "bytes": 7569
+    },
+    {
+      "path": "lean/SOURCE_SHA256SUMS",
+      "sha256": "21bfab41592da841e7f69d47c24944683849b64d0de74743c15358c36ab02e29",
+      "bytes": 10738
+    },
+    {
+      "path": "lean/SeparableIdealNorm.lean",
+      "sha256": "1bee3294683d92722c16d236147b0a28ce82183db0dfdead4497be1d9b6d30d4",
+      "bytes": 3907
+    },
+    {
+      "path": "lean/SeparablePrimeNorm.lean",
+      "sha256": "59d5baa197b53d8b17cfbf6911a6013ad456688fba5d85a1a59da1813766e1e7",
+      "bytes": 6332
+    },
+    {
+      "path": "lean/SharpnessActualGroup.lean",
+      "sha256": "ff6f84ebca79bf8c5f49b93d9270a17e2521360c9458bab6376df0f8235562df",
+      "bytes": 7016
+    },
+    {
+      "path": "lean/SharpnessActualOrbit.lean",
+      "sha256": "50bdc9ed2bf887665a164cba2430176e8af6c4d1acfff595c967b2b7addbd873",
+      "bytes": 2396
+    },
+    {
+      "path": "lean/SharpnessBaseChange.lean",
+      "sha256": "b2ebef4acee1946f175f5c3c90bbdc55f6e9eda55b7c3edbe1fd5438b3aaddd2",
+      "bytes": 1420
+    },
+    {
+      "path": "lean/SharpnessBaseFieldMinimum.lean",
+      "sha256": "403bd28cb27de5b697dad32e42da2f1543f5686db508dfebaad23a1b4de532ce",
+      "bytes": 2464
+    },
+    {
+      "path": "lean/SharpnessCertificate.lean",
+      "sha256": "06be9bcc7e44699dbfc49a87f16f65f316657e8e9a68223dc125f5159580311f",
+      "bytes": 4487
+    },
+    {
+      "path": "lean/SharpnessCoverMinimum.lean",
+      "sha256": "70386ad02ee7c0af0f0fdf0f16b3d13e257a836767b01a95efbb89a13d279a6f",
+      "bytes": 2568
+    },
+    {
+      "path": "lean/SharpnessGeometricAgreements.lean",
+      "sha256": "d8c069daeb207ea864e2b0e38059aaaab0471a49288eff09ba30f0745053a3b0",
+      "bytes": 4056
+    },
+    {
+      "path": "lean/SharpnessMenuEndpoint.lean",
+      "sha256": "e1d5ec555d2a6e4de27739c698390784fc802f5ed0e16396752ebaa79b1ebdc1",
+      "bytes": 4538
+    },
+    {
+      "path": "lean/SharpnessProjectiveAgreements.lean",
+      "sha256": "44ad7c0eaed86121f971855aab2dbdf82e1a696a9a33285cd6f212d775ac428c",
+      "bytes": 1798
+    },
+    {
+      "path": "lean/ShortCurveYSemiconjugacy.lean",
+      "sha256": "6c961bb69a106a9f7ed5fe09b2566f784ee3d4529e08d5372d34c08a360a9882",
+      "bytes": 3861
+    },
+    {
+      "path": "lean/TranslationActionRigidity.lean",
+      "sha256": "bd0fd19e42bab0b8fa30871add3139ca07200e51a93449c39f51cec35b14bf01",
+      "bytes": 5029
+    },
+    {
+      "path": "lean/ValuationResidueArithmetic.lean",
+      "sha256": "e91a13da6d4a4d5faf2bba67965f8844b4b3273a2bc78c3787a7db0b4648efe4",
+      "bytes": 3556
+    },
+    {
+      "path": "lean/ValuationSymmetricSquare.lean",
+      "sha256": "610201d7cb58bb2b780ae8bf92b1da850c446f33446dbce04a7a7a7d1fbf8d12",
+      "bytes": 1530
+    },
+    {
+      "path": "lean/dependency-manifest.mathlib.json",
+      "sha256": "015c7e00ead0f05f2a72b32d9bdef782d4689d05a6297f0ceb0ab5d196c164bd",
+      "bytes": 2811
+    },
+    {
+      "path": "lean/independent-replay/AdicRingEquiv.log",
+      "sha256": "1b9d1459182aa380014b6a3821a7522fba6374d4b8f6f3e571e5228aa19f7766",
+      "bytes": 89
+    },
+    {
+      "path": "lean/independent-replay/CharacteristicSevenExample.log",
+      "sha256": "3367c86c0184718ac06916e599e8b9675d77c42a51ed8a8e6f3a4b223566ab4e",
+      "bytes": 1479
+    },
+    {
+      "path": "lean/independent-replay/CyclicFieldTheorem.log",
+      "sha256": "41367ffbd2f3acdf9f8fd7a096f2f4d68ecc763cf379d5ea8ea816172200437a",
+      "bytes": 215
+    },
+    {
+      "path": "lean/independent-replay/DedekindDivisor.log",
+      "sha256": "3f40c8d158faa382d0eb34da87243eee4c1d650d636c160746def99992a3cebe",
+      "bytes": 306
+    },
+    {
+      "path": "lean/independent-replay/DoublingEvaluationCost.log",
+      "sha256": "588948685bf6c19f410e9d2aa43f78184a926d3e427d084a77061db7d3716f25",
+      "bytes": 536
+    },
+    {
+      "path": "lean/independent-replay/EllipticAddSubAlgebra.log",
+      "sha256": "cb0abbfc5c8b70538f672b22608ed16f96e9379776728b353d175a674f2ee450",
+      "bytes": 210
+    },
+    {
+      "path": "lean/independent-replay/EllipticAddSubAllPoints.log",
+      "sha256": "7e9ed2d726f563ccc69e8a2d79107cd164a79199b43e343c6237e6d8ef38f2cd",
+      "bytes": 635
+    },
+    {
+      "path": "lean/independent-replay/EllipticAddSubMaxValuation.log",
+      "sha256": "8a2523e7267fbeeda40725635a9a984cc8eaf86c3559bc9d62efddc2141ed7a9",
+      "bytes": 972
+    },
+    {
+      "path": "lean/independent-replay/EllipticAddSubValuation.log",
+      "sha256": "6bb5355fd1853070bc0b3124885cc51a47f5a4ae6ec7f53973269eaac9d945d2",
+      "bytes": 1317
+    },
+    {
+      "path": "lean/independent-replay/EllipticAffineClassCriterion.log",
+      "sha256": "f26f7127a3d4fb937e308696bea5cb599408434096dd1a5e8264667d1e5de968",
+      "bytes": 310
+    },
+    {
+      "path": "lean/independent-replay/EllipticAffineDivisor.log",
+      "sha256": "e97016a7bef9f1e3e31ead620cff9d96b2c3014cabc1fd52dda2d6b84d235830",
+      "bytes": 223
+    },
+    {
+      "path": "lean/independent-replay/EllipticAutomorphismDivisor.log",
+      "sha256": "6f6ade1abbe418d78948e416fa800499febbce060a6d7066ebf22a48907b91a4",
+      "bytes": 231
+    },
+    {
+      "path": "lean/independent-replay/EllipticAuxiliaryPoints.log",
+      "sha256": "e09a8a3e958fbbc07fe7937704ef517500bda916b6ae694fe50b0f2d7dd57067",
+      "bytes": 1178
+    },
+    {
+      "path": "lean/independent-replay/EllipticCharacterCount.log",
+      "sha256": "9a4bd2e466080bb83c913e5f802400b96c27be8bcc8cf1089a7ace56eaefca48",
+      "bytes": 105
+    },
+    {
+      "path": "lean/independent-replay/EllipticChordExpansion.log",
+      "sha256": "2222560fa6bdeeac0790789a4c68bc241f9f29da8075fcf82172f3f147a05332",
+      "bytes": 109
+    },
+    {
+      "path": "lean/independent-replay/EllipticChordPole.log",
+      "sha256": "c6e44d588e78f35689665941075acd1bd38bedd0be3aca38ac6baaf554fbc6a1",
+      "bytes": 308
+    },
+    {
+      "path": "lean/independent-replay/EllipticChordValuation.log",
+      "sha256": "138404666ace285369a0450d5bec096c33c8d0412eac37f39638a95fcaee942b",
+      "bytes": 109
+    },
+    {
+      "path": "lean/independent-replay/EllipticCompositionDegree.log",
+      "sha256": "8da489d1a4b08c025b175354cea568660045e0eb460df5a6a41c14afe259fe2a",
+      "bytes": 1395
+    },
+    {
+      "path": "lean/independent-replay/EllipticCoordinateInfinityValuation.log",
+      "sha256": "789083eef296080dba9e3d1a97c82d4cefccd5647f0b0957431caa73bb1048c7",
+      "bytes": 222
+    },
+    {
+      "path": "lean/independent-replay/EllipticCoordinatePoleDegree.log",
+      "sha256": "a8fd844c0590462fbdbd418f927b5cf2bae45e5e47caad541527f219fa7a687c",
+      "bytes": 1334
+    },
+    {
+      "path": "lean/independent-replay/EllipticFiberDegree.log",
+      "sha256": "8852e5788f814eaa7f8a92335248b8d08090227ffb83d917bb8e295d3321257d",
+      "bytes": 483
+    },
+    {
+      "path": "lean/independent-replay/EllipticFiniteFieldUpper.log",
+      "sha256": "45a927b7b0ccd3de1b7b54030337c50fa4bb803a5185b0994f1379155702e356",
+      "bytes": 119
+    },
+    {
+      "path": "lean/independent-replay/EllipticFinitePlaces.log",
+      "sha256": "0866c54e2bc2ef6a9098dc6928e784fa21f5bb3fdc3023da1e41bf7f0636b6ec",
+      "bytes": 1091
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobenius.log",
+      "sha256": "531a5dbfdb926cbe733810662a10890efeb7438dc566bfeefabfff3d69ce5520",
+      "bytes": 219
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobeniusGeneric.log",
+      "sha256": "df6bc8c91adbaa90c5ad21f8a50c96191bce65ad63dc637d53d15542ac5ed9a6",
+      "bytes": 1477
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobeniusHeight.log",
+      "sha256": "4005d7d8df5eb46706d3cc2ecc6983687a7d47f2dbeed41d7f1962531b210c70",
+      "bytes": 106
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobeniusInfinity.log",
+      "sha256": "567ef06e755251ca914c939cc4752bb557e335b1ffa934a975d9c05ad24f15be",
+      "bytes": 229
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobeniusOrbitBound.log",
+      "sha256": "6df94540bda552a7c431410d73a14fcf7989f4dadcc5ba69ad5e13614b2c778b",
+      "bytes": 255
+    },
+    {
+      "path": "lean/independent-replay/EllipticFrobeniusRationalPoles.log",
+      "sha256": "65638aed632086d56d8523255dbcb062badf40357b5b7349d122da43effa6ee5",
+      "bytes": 241
+    },
+    {
+      "path": "lean/independent-replay/EllipticFunctionField.log",
+      "sha256": "9672460a13d21eefde985a030e0fadd572f18cf5e7f0aa5c96f5b38ddec6c43f",
+      "bytes": 313
+    },
+    {
+      "path": "lean/independent-replay/EllipticHasseOdd.log",
+      "sha256": "fd64751098879d2965b94385b450048d51f29f89db33be5f18f85e5ea6e0d752",
+      "bytes": 237
+    },
+    {
+      "path": "lean/independent-replay/EllipticHasseUpper.log",
+      "sha256": "fa0b8e3835f5125f4137999914183b7ac0c473944e8649b7d61296fb40d2ddf9",
+      "bytes": 121
+    },
+    {
+      "path": "lean/independent-replay/EllipticHeightCauchySchwarz.log",
+      "sha256": "248beac21e287d3d46796bd4bc068c329e137dc5d774cbfea5593ac53f896535",
+      "bytes": 115
+    },
+    {
+      "path": "lean/independent-replay/EllipticHeightParallelogram.log",
+      "sha256": "bc8227da9dff249be2a0a7c829a5ce7f9823cf92253cb502e15f3e6ac048debe",
+      "bytes": 110
+    },
+    {
+      "path": "lean/independent-replay/EllipticHeightPowers.log",
+      "sha256": "02cc916545dbb3cbe4dc4e5f48b1bb62021dca9eeb3ba011ab7df58e87579e0b",
+      "bytes": 600
+    },
+    {
+      "path": "lean/independent-replay/EllipticHeightScaling.log",
+      "sha256": "75f69ab3c444ea0bbfef5ee366a9f9e823e49ac8276d4925d870ad202eea5f64",
+      "bytes": 324
+    },
+    {
+      "path": "lean/independent-replay/EllipticInfinity.log",
+      "sha256": "769477a23a21a725a9e4c5a9ce28e6a1f531d2d60fd47be2eea64f8803f0fc96",
+      "bytes": 230
+    },
+    {
+      "path": "lean/independent-replay/EllipticPlaceDictionary.log",
+      "sha256": "f0c43bad466131ed9da6b8528cc10aeb647c743045e3ecfc5b0673c177f439bd",
+      "bytes": 1369
+    },
+    {
+      "path": "lean/independent-replay/EllipticPointDivisor.log",
+      "sha256": "6f7c09174efdf5fa719390ad2518771ea4744c0f29c596ff283d72d0a6373d13",
+      "bytes": 228
+    },
+    {
+      "path": "lean/independent-replay/EllipticPrincipalCriterion.log",
+      "sha256": "522ceecac07b76849e856a0565975f9f21b9c22194b1f6228c4d8e298c141642",
+      "bytes": 125
+    },
+    {
+      "path": "lean/independent-replay/EllipticProjectiveDoubling.log",
+      "sha256": "6ad2204ee98c271e69b6ab28eb13f1b9349f96338852f917311862832825a221",
+      "bytes": 1078
+    },
+    {
+      "path": "lean/independent-replay/EllipticProjectiveHeightDivisor.log",
+      "sha256": "80fd05bb10643b34e8b019c4fe0024366f239e8b1f815e54ea735976cb6b513d",
+      "bytes": 517
+    },
+    {
+      "path": "lean/independent-replay/EllipticQuadraticFibers.log",
+      "sha256": "a5f8121d1466241443369c8829e7e178f74a43ba14f57484a9dc27ab5574da7c",
+      "bytes": 289
+    },
+    {
+      "path": "lean/independent-replay/EllipticQuadraticTwist.log",
+      "sha256": "5495fc60d918d57be7fd2f908886aebe0127f7f572edb3902d2cc1695c6f461c",
+      "bytes": 394
+    },
+    {
+      "path": "lean/independent-replay/EllipticTranslation.log",
+      "sha256": "3c4a4907960a514fe96a2bb48f41755e5e33757bf5ff6b37a5309e63de38b6fe",
+      "bytes": 4505
+    },
+    {
+      "path": "lean/independent-replay/EllipticTranslationCovariance.log",
+      "sha256": "e5262a5a9f519a555b7672f61929d140b51f1c7a9f39e7f413ae62e027a5165a",
+      "bytes": 657
+    },
+    {
+      "path": "lean/independent-replay/EllipticTranslationLocal.log",
+      "sha256": "cb7c2b424dee3bf749f1b6cb1d895bef9cabe557cd1373baf0d4fce9d62b4bc5",
+      "bytes": 624
+    },
+    {
+      "path": "lean/independent-replay/EllipticTwistCount.log",
+      "sha256": "452476b64eb9d9479d7bfc56b55979472d957231fcd6e21d89e5b55abc48a8ad",
+      "bytes": 469
+    },
+    {
+      "path": "lean/independent-replay/EllipticWeilConstantRatio.log",
+      "sha256": "f0b4c7a0c0893e904c6fbdbb5fb52ffb3f0b7fdf1b5cc2613ffe37bdec77ffae",
+      "bytes": 117
+    },
+    {
+      "path": "lean/independent-replay/EllipticWeilFunction.log",
+      "sha256": "9b1f68cdca8e4f85c935405226f7637833c95c087887bd88cbf45bee2a480fc2",
+      "bytes": 104
+    },
+    {
+      "path": "lean/independent-replay/EllipticXDifferenceDivisor.log",
+      "sha256": "755c1f4140c21d8e06a63d63cec430380d78b6901e0fca37dfee41ed7318fa56",
+      "bytes": 1166
+    },
+    {
+      "path": "lean/independent-replay/EllipticXProjectiveValue.log",
+      "sha256": "4761aa642519374864035cbdbf84cc8a84fd5fc8824161cb7fc5dfecc513f6eb",
+      "bytes": 108
+    },
+    {
+      "path": "lean/independent-replay/EllipticXYDegrees.log",
+      "sha256": "405b82644186242712a73fca22c56d9f3dc932dc0a45e8b262742e1967cc360f",
+      "bytes": 2492
+    },
+    {
+      "path": "lean/independent-replay/ExtensionDegree.log",
+      "sha256": "de3abc1755995fe95c06805d5ee65a4ce2dba1e74d43318cc96ae729f75eb2c6",
+      "bytes": 293
+    },
+    {
+      "path": "lean/independent-replay/FiniteAgreementObstruction.log",
+      "sha256": "1367ee8aa29d72c265fc04cdc17cb0f207c07180eee2ed04b948ad22a3c05391",
+      "bytes": 617
+    },
+    {
+      "path": "lean/independent-replay/FiniteMenuObstruction.log",
+      "sha256": "d05d940645406edfec652b6508786ee2ba4f651e5415a59cff95cec2d1679aa4",
+      "bytes": 536
+    },
+    {
+      "path": "lean/independent-replay/FunctionFieldPlaceEquiv.log",
+      "sha256": "9e9fff4469a89f1cde1bbffd80b975dda5c19abf5d5724b9655fab3b92950bf8",
+      "bytes": 382
+    },
+    {
+      "path": "lean/independent-replay/FunctionFieldProductFormula.log",
+      "sha256": "8af94f24ec2b3caad4ef997679eb6f9f25f7bf6fcefeb572547a9be08f713249",
+      "bytes": 111
+    },
+    {
+      "path": "lean/independent-replay/GlobalDegreeObstruction.log",
+      "sha256": "1401ebceeac773a6f8c5b24ed7742d42695ac1607bdad2cc6559ddfcaf81c3b2",
+      "bytes": 129
+    },
+    {
+      "path": "lean/independent-replay/GlobalProjectiveRecurrence.log",
+      "sha256": "0bfb73c969c34246c81ef902e3f0bd34c3942f2c5fd981db87125234b02aa780",
+      "bytes": 133
+    },
+    {
+      "path": "lean/independent-replay/GlobalRecurrenceObstruction.log",
+      "sha256": "32b37a4ef29e54fd628dcb5ce3ce9258178d917e7546a4a9e099fcfac1f74152",
+      "bytes": 120
+    },
+    {
+      "path": "lean/independent-replay/InvariantDivisor.log",
+      "sha256": "fb9e186bf6e4187368c1daa22ed375aebd00185b77b9145b46a16fa540a356ea",
+      "bytes": 294
+    },
+    {
+      "path": "lean/independent-replay/PolynomialIdentities.log",
+      "sha256": "270dbf2eeb72476051c1b7cd349098e332b4fbde04fc43fd5d52295d9d0bfb46",
+      "bytes": 203
+    },
+    {
+      "path": "lean/independent-replay/PrimeFullGroupObstruction.log",
+      "sha256": "e908fc2d0cb53cb0074c21af71908fbf0c8601186e1c28923ac5df6d0e4ebbfd",
+      "bytes": 106
+    },
+    {
+      "path": "lean/independent-replay/PrimeFullGroupPGLObstruction.log",
+      "sha256": "77c4c77a6d3bdcbf4f2539672d65f7c3dbcc8cfe8a857eeffed36cbc5203cc7c",
+      "bytes": 110
+    },
+    {
+      "path": "lean/independent-replay/PrimeOrbit.log",
+      "sha256": "3954075e69aaaf2e6bf3a63f71d77541b402a6fc03fbfd12e0672b83a7e36e76",
+      "bytes": 96
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveFieldCondition.log",
+      "sha256": "5eda7471aaf1a9b54b64df22233eed3e470980fc754a55e45ac9eb4509a0b2c5",
+      "bytes": 320
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveFixedPoint.log",
+      "sha256": "488445afbf3d69cfb0d29f65d9e21cc5d6eb0352ce54c567e987b7b79d396cda",
+      "bytes": 111
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveOrder.log",
+      "sha256": "f1835b72f06c498fea80febb4d7e34b2ac255fd11dbc5e775714b9d6cd0f0f28",
+      "bytes": 405
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveQuotientAction.log",
+      "sha256": "19fb15b6905687780992bd0224f463b3861c0a34b4476defb4d0448897c7c9bf",
+      "bytes": 2441
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveQuotientRecurrence.log",
+      "sha256": "500fc617ea536ded91ff27ef4ff84aa5569b3c754d93415219a1a77a8ea904af",
+      "bytes": 693
+    },
+    {
+      "path": "lean/independent-replay/ProjectiveRecurrenceBounds.log",
+      "sha256": "6090ef8327fab0a55c8cd912cb734d84ed9b46a5a1651fa3c96b5aa9195d9c0a",
+      "bytes": 718
+    },
+    {
+      "path": "lean/independent-replay/RationalFunctionDivisor.log",
+      "sha256": "38093b45790b2a23d5c96b5e54bd996838fb35600ef310cc5f2f98d359241d85",
+      "bytes": 372
+    },
+    {
+      "path": "lean/independent-replay/SharpnessActualGroup.log",
+      "sha256": "c0524b90fd89945049730257cc3f9be5c1de16365426997f5a9a62ba41e3e271",
+      "bytes": 498
+    },
+    {
+      "path": "lean/independent-replay/SharpnessActualOrbit.log",
+      "sha256": "c3d4ca190f3effc6da67c79e7083aaba2763ddd6cfba3269ac410d3664eb9baf",
+      "bytes": 306
+    },
+    {
+      "path": "lean/independent-replay/SharpnessBaseChange.log",
+      "sha256": "c6e8091aa53c820a6abf0c90d03e29df06986e093eab94dd05e91e1c25dd59f5",
+      "bytes": 211
+    },
+    {
+      "path": "lean/independent-replay/SharpnessBaseFieldMinimum.log",
+      "sha256": "fde4cab9e103757cfb0e58a8c53f8c59f6750ee7904cc3ec18c739c4415febd7",
+      "bytes": 217
+    },
+    {
+      "path": "lean/independent-replay/SharpnessCertificate.log",
+      "sha256": "d522db88e1715eef86c62041591fcbe825212dde394d7d1b617854c652ebcf97",
+      "bytes": 880
+    },
+    {
+      "path": "lean/independent-replay/SharpnessCoverMinimum.log",
+      "sha256": "f104f052148b5140a99125bbf941db32795567b2c12c555a71f83e84719f805d",
+      "bytes": 596
+    },
+    {
+      "path": "lean/independent-replay/SharpnessGeometricAgreements.log",
+      "sha256": "95eed418dadfb7d01a686c427cc9f5056a29a592a8f85bdc2fb9aa9e924f9992",
+      "bytes": 212
+    },
+    {
+      "path": "lean/independent-replay/SharpnessMenuEndpoint.log",
+      "sha256": "3a6896b482f017f25bfc4fa83369d0e463fdb0ef8123310e3485e211574c6010",
+      "bytes": 401
+    },
+    {
+      "path": "lean/independent-replay/SharpnessProjectiveAgreements.log",
+      "sha256": "c5cb3a6555c7f39ae4ecfb75d467989ba84b30456a2a02ca7fa3e9a902aa9618",
+      "bytes": 217
+    },
+    {
+      "path": "lean/independent-replay/ShortCurveYSemiconjugacy.log",
+      "sha256": "2b224f0e0f17a783d6d6b5a6914b6a8353979493eeb85d2e9524b0d764299d6d",
+      "bytes": 648
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "sha256": "ca0f04a0f6c2c70d74aa71d236ae43bde26ddbb13cada237371efca6231e4be3",
+      "bytes": 3317
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "sha256": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273",
+      "bytes": 25
+    },
+    {
+      "path": "lean/verification-output/AdicRingEquiv.log",
+      "sha256": "3bea91208ae819eb61cf001266cb7d945a05c91ba093ea775ac46d4e34049506",
+      "bytes": 174
+    },
+    {
+      "path": "lean/verification-output/CharacteristicSevenExample.log",
+      "sha256": "16d7cee5160756285f9e00a5d5dbae35e4f5dc908282e1cf70c299321417a6a7",
+      "bytes": 1577
+    },
+    {
+      "path": "lean/verification-output/CyclicFieldTheorem.log",
+      "sha256": "973dc0169ba4447de836abcd1f30666fb3cd13bc432aae94bcd0683ab17c3cc5",
+      "bytes": 305
+    },
+    {
+      "path": "lean/verification-output/DedekindDivisor.log",
+      "sha256": "075b5ab358a90e8bf7d2e7146bfc56ae39181ca09b452d780da50bf208a556da",
+      "bytes": 393
+    },
+    {
+      "path": "lean/verification-output/DivisorClassCriterion.log",
+      "sha256": "97594f371a33cc4fe1145b0fe5f920f2d8f76fb512921ea132b33ce5057e325c",
+      "bytes": 218
+    },
+    {
+      "path": "lean/verification-output/DoublingEvaluationCost.log",
+      "sha256": "a9ed6a9537ff3d34bc1370d6c2ffc077721a4eaac331e02a332e8d9eaea06e81",
+      "bytes": 630
+    },
+    {
+      "path": "lean/verification-output/EllipticAddSubAlgebra.log",
+      "sha256": "e93b6d0cc7dc638245f277450f444b5f5915ed7b9cfc2e9548691b462a26f902",
+      "bytes": 303
+    },
+    {
+      "path": "lean/verification-output/EllipticAddSubAllPoints.log",
+      "sha256": "463a3dff5281b2ec45aafe2008b925a1a42e34828ef23ced7edc691086c8f941",
+      "bytes": 730
+    },
+    {
+      "path": "lean/verification-output/EllipticAddSubCompatibility.log",
+      "sha256": "72b68416fbe625060eed813f025492865afeaee9e5e990d17b7ae5e3adf1e02c",
+      "bytes": 901
+    },
+    {
+      "path": "lean/verification-output/EllipticAddSubMaxValuation.log",
+      "sha256": "f202f82283fa25114a1af70b38e5074b38b67bd35804019dd918d58dca81f85a",
+      "bytes": 1070
+    },
+    {
+      "path": "lean/verification-output/EllipticAddSubValuation.log",
+      "sha256": "a562a363ed80c2e0e77a82f41ae1e65f56f857b58f65ea9b0726cdb19e6720d9",
+      "bytes": 1412
+    },
+    {
+      "path": "lean/verification-output/EllipticAffineClassCriterion.log",
+      "sha256": "a551b17c07ac43b687ad3d090085fbe9a6a9422f33bbb80d4f13f916fde65b5d",
+      "bytes": 410
+    },
+    {
+      "path": "lean/verification-output/EllipticAffineDivisor.log",
+      "sha256": "9407849c8abf1a6e3bd93a5f742de30896f4d73946852dcd5ffde8cf9c33e17b",
+      "bytes": 316
+    },
+    {
+      "path": "lean/verification-output/EllipticAffineDivisorCoefficients.log",
+      "sha256": "7b3fb49b7efde6f1098c934cde122d2a27688fb6707ae14575238c16510ffcd2",
+      "bytes": 209
+    },
+    {
+      "path": "lean/verification-output/EllipticAutomorphismDivisor.log",
+      "sha256": "8c42da5152e131cf0e15e99d4bcb10df28954476f113a5c3f3c26bcaf0f74924",
+      "bytes": 330
+    },
+    {
+      "path": "lean/verification-output/EllipticAuxiliaryPoints.log",
+      "sha256": "901b221a771d3a1eecccf52b4f1ac0cad9b8aff8c7dd4d333d3a141e0cabc6e4",
+      "bytes": 1273
+    },
+    {
+      "path": "lean/verification-output/EllipticCharacterCount.log",
+      "sha256": "455894120b256739fa8f19cd486d06bcd732d923458a5f604c137d41d9a0b758",
+      "bytes": 199
+    },
+    {
+      "path": "lean/verification-output/EllipticChordExpansion.log",
+      "sha256": "97944f84779569dc9d65a7f77f806a6680e6da20c1e2960cc0b54b5ab4b664cc",
+      "bytes": 203
+    },
+    {
+      "path": "lean/verification-output/EllipticChordPole.log",
+      "sha256": "ec947d2034764b3ee1534e0d5eb5485f3a8606379f61ce475c282811537a8020",
+      "bytes": 397
+    },
+    {
+      "path": "lean/verification-output/EllipticChordValuation.log",
+      "sha256": "89e55734a454eb60eb54a87849cd32b3bf56d44a6b4f66bccbdf9036ae9a2c4d",
+      "bytes": 203
+    },
+    {
+      "path": "lean/verification-output/EllipticCoincidenceDivisor.log",
+      "sha256": "998999d2c4beb6a7771a6cc660e14486d6c79c6d458d3f52c627183b4708d3ce",
+      "bytes": 667
+    },
+    {
+      "path": "lean/verification-output/EllipticCompositionDegree.log",
+      "sha256": "a869149465f78b307ece331b34a445a48ddea8c648fcbf7f834ddf2c0645950c",
+      "bytes": 1492
+    },
+    {
+      "path": "lean/verification-output/EllipticCoordinateInfinityValuation.log",
+      "sha256": "fe692dbc28e918ac4c1926bab69cbd95acdcf14c161271c4ad4864142735b226",
+      "bytes": 329
+    },
+    {
+      "path": "lean/verification-output/EllipticCoordinatePoleDegree.log",
+      "sha256": "13ae5191bdc1058b28d8ce5bf9ecdd73399b02fa8876af0b0de65b503e6e36e8",
+      "bytes": 1434
+    },
+    {
+      "path": "lean/verification-output/EllipticDegreePositive.log",
+      "sha256": "0dc35952c314d2a5daaaa2045da19f159343a7e409955b9c686b722bb2afa89c",
+      "bytes": 1294
+    },
+    {
+      "path": "lean/verification-output/EllipticDoublingIteration.log",
+      "sha256": "91b537ffe9682de9d20aab065a8ceb6ba239717f72237adadccfccb65ec8256a",
+      "bytes": 605
+    },
+    {
+      "path": "lean/verification-output/EllipticDuplicationPolynomials.log",
+      "sha256": "912f8fd9d720a985d8bb348539ae8446fe77e4a58b5efa1c3a01a7e96d11a497",
+      "bytes": 2768
+    },
+    {
+      "path": "lean/verification-output/EllipticFiberDegree.log",
+      "sha256": "1a358a5e918f17b3a987ab76676510e170a79710906d61330f82b2ca2986b5e3",
+      "bytes": 574
+    },
+    {
+      "path": "lean/verification-output/EllipticFiniteFieldUpper.log",
+      "sha256": "309c96f4152b6319472f91f99f634734febe9c916c0a76c2380a3d7beeea5b31",
+      "bytes": 215
+    },
+    {
+      "path": "lean/verification-output/EllipticFinitePlaces.log",
+      "sha256": "c031202720030e856492cfdaba8c9689a9e0179289918a4c5573b963fc83f7bb",
+      "bytes": 1183
+    },
+    {
+      "path": "lean/verification-output/EllipticFixedFiber.log",
+      "sha256": "4c57a7f9a7feec54615f6de397426e22a1ee5cc0fbc6c203b2fa81e0a1f9f953",
+      "bytes": 331
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobenius.log",
+      "sha256": "8e9d6bd820a7f1b5972e76bc6557a2a9ed0f4a654099b14b0e78018893270619",
+      "bytes": 308
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobeniusGeneric.log",
+      "sha256": "a9e960dd95d8c13777366c6094bdb51124e249b05d6bf33a39a8618b66019fd2",
+      "bytes": 1573
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobeniusHeight.log",
+      "sha256": "9253af1d8ef2652f3652ae0abb459477aef353e1e33d24d4b15cc03b805347fd",
+      "bytes": 201
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobeniusInfinity.log",
+      "sha256": "aa78ab1ec8b623574f079c5a53d56cfe22411a4fbb25693d91d8f6aef492a5bd",
+      "bytes": 326
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobeniusOrbitBound.log",
+      "sha256": "c3aa6c9eed43c6138e09c1f6116f1b0d59c42b028ee626d56d416551cdb78e08",
+      "bytes": 354
+    },
+    {
+      "path": "lean/verification-output/EllipticFrobeniusRationalPoles.log",
+      "sha256": "73224e1209117cf95132af75a2ee242d29ff2aae73183ccec52eb022696a3cc8",
+      "bytes": 343
+    },
+    {
+      "path": "lean/verification-output/EllipticFunctionField.log",
+      "sha256": "57326c4d7c8a86e2e4edcb030e6e7ea59b1f5a07366efb432f2bcfaa0744d7da",
+      "bytes": 406
+    },
+    {
+      "path": "lean/verification-output/EllipticHasseOdd.log",
+      "sha256": "b70d28dfdb216e7422b8e5299df52f87b03cb6e6a867ccd5295ee05e9e92f59e",
+      "bytes": 325
+    },
+    {
+      "path": "lean/verification-output/EllipticHasseUpper.log",
+      "sha256": "37a44b6055033dc109acb0c24f768718be04f578d5ebf57490ef6d4f2cff84ff",
+      "bytes": 211
+    },
+    {
+      "path": "lean/verification-output/EllipticHeightCauchySchwarz.log",
+      "sha256": "26fc30e416d284a7ce0599c1d2b7fe25050fcf1e3f969b03e9237add42d947ff",
+      "bytes": 214
+    },
+    {
+      "path": "lean/verification-output/EllipticHeightNormalization.log",
+      "sha256": "b24cb49e0e9e7fe071d9a64e16ece47870039fbcb30cacb09511664934691fb0",
+      "bytes": 509
+    },
+    {
+      "path": "lean/verification-output/EllipticHeightParallelogram.log",
+      "sha256": "e9367d2ecee1c37703138102a23b21ad20cbdd3b3089b8ddd78ec6c88c1cb600",
+      "bytes": 209
+    },
+    {
+      "path": "lean/verification-output/EllipticHeightPowers.log",
+      "sha256": "c63f31067040cdd1fc61bd4b030b12ba169b7e63e48afc8956f7933f850ff519",
+      "bytes": 692
+    },
+    {
+      "path": "lean/verification-output/EllipticHeightScaling.log",
+      "sha256": "bef8d0f25e1e9faddcdb525de0babac3d7317199ff194ba1e79d2665f38b9ddf",
+      "bytes": 417
+    },
+    {
+      "path": "lean/verification-output/EllipticInfinity.log",
+      "sha256": "cdc310a9e466356de1d0e670a7ee0f359505d97f50cac733ef9993038260ac21",
+      "bytes": 318
+    },
+    {
+      "path": "lean/verification-output/EllipticPlaceDictionary.log",
+      "sha256": "106e8c2bff35120275cab44ba74a6a9174af82ae2c2a0fab3df61b71b11a1a56",
+      "bytes": 1464
+    },
+    {
+      "path": "lean/verification-output/EllipticPointDivisor.log",
+      "sha256": "2d4f3bd8d15f5b74655d70cff074e3fd317933e87d00aedf73e29684ea51cf46",
+      "bytes": 320
+    },
+    {
+      "path": "lean/verification-output/EllipticPointResidues.log",
+      "sha256": "af9633bd6b853bbfe17ac4006a38100296884a0f2384f1ddf93f10a30c23e364",
+      "bytes": 869
+    },
+    {
+      "path": "lean/verification-output/EllipticPrincipalCriterion.log",
+      "sha256": "bd8152c214c7a9d0385b15bca55fdef57fb921e7e0b9c8c9bcd196e91d3132a6",
+      "bytes": 223
+    },
+    {
+      "path": "lean/verification-output/EllipticPrincipalFiniteCoefficients.log",
+      "sha256": "3731f0609d5f4683f2f94d0f15543f65448137eb600e81115a28b6799c2f6b98",
+      "bytes": 215
+    },
+    {
+      "path": "lean/verification-output/EllipticProjectiveDoubling.log",
+      "sha256": "33eb7b99c4981128cb5d892b1123875d8a20a2cf7277e812f45422a083a65473",
+      "bytes": 1176
+    },
+    {
+      "path": "lean/verification-output/EllipticProjectiveHeightDivisor.log",
+      "sha256": "6effa27c55313f8ff5d19c05783a38c3cc4308ba74670adf0f62b474209807b8",
+      "bytes": 620
+    },
+    {
+      "path": "lean/verification-output/EllipticProjectiveValue.log",
+      "sha256": "a736b5ced3f25bda3b260b3fcfad36d8e254d551d2b35324fd7e6d0063d30d05",
+      "bytes": 1870
+    },
+    {
+      "path": "lean/verification-output/EllipticQuadraticFibers.log",
+      "sha256": "d3281d48ddf89624f244e6330b44576d3b4c2eb0b285fb67b5d6b63a12e9e746",
+      "bytes": 384
+    },
+    {
+      "path": "lean/verification-output/EllipticQuadraticTwist.log",
+      "sha256": "2a0b2f2893d94d26f70d94e65ae05a3da0fa892b79a464f3e49b9ae7399db277",
+      "bytes": 488
+    },
+    {
+      "path": "lean/verification-output/EllipticSymmetricHeight.log",
+      "sha256": "898ffe0b394ec1a7fb915e485923352c22445609b46947a6e8167f6f06de17e7",
+      "bytes": 290
+    },
+    {
+      "path": "lean/verification-output/EllipticTranslation.log",
+      "sha256": "6d54bf9d400d169a5e3b5cb3730cb82d069f0b5de301781c7fc48cf92c0da546",
+      "bytes": 4596
+    },
+    {
+      "path": "lean/verification-output/EllipticTranslationCovariance.log",
+      "sha256": "19992f8c1305d2a3c8533619247fdfccba563b3849ad8e798bb18e7be86d07cf",
+      "bytes": 758
+    },
+    {
+      "path": "lean/verification-output/EllipticTranslationLocal.log",
+      "sha256": "51c57edf1ca1868892a33832b1588ae189d30d5a6ef24528181932228a1e9489",
+      "bytes": 720
+    },
+    {
+      "path": "lean/verification-output/EllipticTwistCount.log",
+      "sha256": "6692ed1dc8411da8fb2d4564de1f2ba2fa35410926ddea2586a041cb8a42d7c3",
+      "bytes": 559
+    },
+    {
+      "path": "lean/verification-output/EllipticWeilConstantRatio.log",
+      "sha256": "ebfae5284ed2d449ddd8ea26360ca42cda511789381de88252be234ad67875a2",
+      "bytes": 214
+    },
+    {
+      "path": "lean/verification-output/EllipticWeilFunction.log",
+      "sha256": "5e4c8becd287df58873608448df7265ce53377e975d9afcb8639f4fc2c082b08",
+      "bytes": 196
+    },
+    {
+      "path": "lean/verification-output/EllipticXDifferenceDivisor.log",
+      "sha256": "3b962f8d491fcf0745029b145c012ff47a4f5a44bbe2713daa78b0563c602e8a",
+      "bytes": 1264
+    },
+    {
+      "path": "lean/verification-output/EllipticXProjectiveValue.log",
+      "sha256": "572fa7ace947258abcf12346da32ef6877acb30dc05de6bd3b7c91f123cd147c",
+      "bytes": 204
+    },
+    {
+      "path": "lean/verification-output/EllipticXYDegrees.log",
+      "sha256": "0d4d11867ac88a9d613d5b74aa00d028378f02ae644f06941b3d850821dac5ae",
+      "bytes": 2581
+    },
+    {
+      "path": "lean/verification-output/ExtensionDegree.log",
+      "sha256": "6029b561f3e6b0c6a7fae69e35530369bdd8babaccc2bbb2d0af837b95622874",
+      "bytes": 380
+    },
+    {
+      "path": "lean/verification-output/FiniteAgreementObstruction.log",
+      "sha256": "3435f552e5cf056074ac72812099d703ab480a9f171f45fc253fec601c7ad886",
+      "bytes": 715
+    },
+    {
+      "path": "lean/verification-output/FiniteFieldAction.log",
+      "sha256": "b425a59c67fcc518b7b7df42465ec2ea83123ddc992803ccec0bce0fbb60714f",
+      "bytes": 303
+    },
+    {
+      "path": "lean/verification-output/FiniteMenuObstruction.log",
+      "sha256": "504bd723f5091ff8b80f2f81777281b3c85438d13807bc2dda0869d593473864",
+      "bytes": 629
+    },
+    {
+      "path": "lean/verification-output/FractionalDivisorDegree.log",
+      "sha256": "55c3205832e48716c340c78afc029b13200f35eec42ca5a3c9647a7665986a99",
+      "bytes": 209
+    },
+    {
+      "path": "lean/verification-output/FunctionFieldIntrinsicPlace.log",
+      "sha256": "8473d200939a4d0b471bb4d43f5f496b03d947a3d87744403cabc27e87d84cc8",
+      "bytes": 207
+    },
+    {
+      "path": "lean/verification-output/FunctionFieldPlaceAction.log",
+      "sha256": "8e2a702d71fdfa7be96f84408fe5c2aadda528b198bf97cd64fc5fa7eff8c606",
+      "bytes": 297
+    },
+    {
+      "path": "lean/verification-output/FunctionFieldPlaceEquiv.log",
+      "sha256": "a67b9ab7e36697f9e2071be5cfc72c56f1b2d7b873b22c5105a721633a24a28d",
+      "bytes": 477
+    },
+    {
+      "path": "lean/verification-output/FunctionFieldPlaces.log",
+      "sha256": "485c740060f97ef7d507b888d02d3fb3252fa84647db8c6e02f71374f38f0442",
+      "bytes": 343
+    },
+    {
+      "path": "lean/verification-output/FunctionFieldProductFormula.log",
+      "sha256": "6f87bb1698415b76b2f03a70599bc3b0df347cd30839fabf1c7df804d3932b32",
+      "bytes": 210
+    },
+    {
+      "path": "lean/verification-output/GlobalDegreeObstruction.log",
+      "sha256": "ee65370a9e1035a69f8f835e2ba4f04a31ad0f6339f3a6a06a70c9bfbb7ca1db",
+      "bytes": 224
+    },
+    {
+      "path": "lean/verification-output/GlobalProjectiveRecurrence.log",
+      "sha256": "5c6884ed6b442de0948694bed5829ee9ea6aecb650043d043e6d8900320427c6",
+      "bytes": 231
+    },
+    {
+      "path": "lean/verification-output/GlobalRecurrenceObstruction.log",
+      "sha256": "0332ea978c78d7d1c6009f85b339a074d422fda0af8a93bc0a38416deb3baf74",
+      "bytes": 219
+    },
+    {
+      "path": "lean/verification-output/IntegerQuadraticHeight.log",
+      "sha256": "1e28b070328c78510c6e690adc0cea4120acd657a752e0f12c85a0277e87c0b0",
+      "bytes": 384
+    },
+    {
+      "path": "lean/verification-output/InvariantDivisor.log",
+      "sha256": "72844528c2305850d7c1b9d253be2a1fdf627d1b8e560fc13d37dc10764b85da",
+      "bytes": 382
+    },
+    {
+      "path": "lean/verification-output/LinearFractionBaseChange.log",
+      "sha256": "76c983a2b286defebc787514b4ff42b68b512957553374188bace9ab68eb791e",
+      "bytes": 999
+    },
+    {
+      "path": "lean/verification-output/LinearFractionFixedFiber.log",
+      "sha256": "350037a008b76ae4a142c0770860752192b9c8e290d7849169fc153c49ac3a58",
+      "bytes": 594
+    },
+    {
+      "path": "lean/verification-output/LinearFractionProjective.log",
+      "sha256": "4996e729b2ec0aba758deebd9f4b86f7e56aec585d61069e2c510935417a1bbd",
+      "bytes": 462
+    },
+    {
+      "path": "lean/verification-output/PolynomialIdentities.log",
+      "sha256": "a0c4569f12ca08a3d0065dafc0bf33b998b4aa4051df131777c4aa9437abc91a",
+      "bytes": 295
+    },
+    {
+      "path": "lean/verification-output/PrimeFieldArithmetic.log",
+      "sha256": "3aba43a5efb90580b3323fc2ad6a8e6091676131020288d648da6f0dcb494a9f",
+      "bytes": 177
+    },
+    {
+      "path": "lean/verification-output/PrimeFullGroupObstruction.log",
+      "sha256": "f679e55752d083d258e61afb1c11a47885b99915beaa586d642ad0fdbe8ef742",
+      "bytes": 203
+    },
+    {
+      "path": "lean/verification-output/PrimeFullGroupPGLObstruction.log",
+      "sha256": "3850358a3d541c4f046fc74758ad8ed63040dbe6a5705a51c5f5d829c00b37d1",
+      "bytes": 210
+    },
+    {
+      "path": "lean/verification-output/PrimeOrbit.log",
+      "sha256": "24189c8372ce44d5a306c0ac0c30b2fc104520edae88493b264e54f48c20cb5d",
+      "bytes": 178
+    },
+    {
+      "path": "lean/verification-output/ProjectiveFieldCondition.log",
+      "sha256": "f78df07ed881f1306238a6e1d3396de8a7aa62663605eaff373e3abf2bae12e4",
+      "bytes": 416
+    },
+    {
+      "path": "lean/verification-output/ProjectiveFixedPoint.log",
+      "sha256": "91c702d1aa67b24654c71f189be6c92fad686eda3a8a70af88b845be4e941093",
+      "bytes": 203
+    },
+    {
+      "path": "lean/verification-output/ProjectiveOrder.log",
+      "sha256": "d763f051fd254aa6fec9e45e02b63df9007922c5b1b37efb19fd4d632e13b0c7",
+      "bytes": 492
+    },
+    {
+      "path": "lean/verification-output/ProjectiveQuotientAction.log",
+      "sha256": "e6537d9faa32b2c10beb5695c4e7111a4b9d144a02c237b564fe90647734485a",
+      "bytes": 2537
+    },
+    {
+      "path": "lean/verification-output/ProjectiveQuotientRecurrence.log",
+      "sha256": "aad1a8cf8f800983f57680309c6ca61062879cdea0a444acd726020a9bf1f978",
+      "bytes": 793
+    },
+    {
+      "path": "lean/verification-output/ProjectiveRecurrenceBounds.log",
+      "sha256": "873f9e23cb8df3763cdb86fd439f5ed9b526c7b68fb99b3fde0476c94cada8cd",
+      "bytes": 816
+    },
+    {
+      "path": "lean/verification-output/RationalFunctionDivisor.log",
+      "sha256": "f9f930b87df9a7082ec13721e35982f6066099a1aa73bb3ed368161e8ca41dfb",
+      "bytes": 467
+    },
+    {
+      "path": "lean/verification-output/RationalProjectiveBaseChange.log",
+      "sha256": "cf8574a0edd5d02776fd60bcbb5d3608d25e73679e988fa9d21ec8dd0172c6c7",
+      "bytes": 202
+    },
+    {
+      "path": "lean/verification-output/RationalProjectiveComposition.log",
+      "sha256": "ac8850f9634316c9f28164e3f19a4976ba11b6d7e6eb44e8a0ac97185c8e1c65",
+      "bytes": 230
+    },
+    {
+      "path": "lean/verification-output/SeparableIdealNorm.log",
+      "sha256": "4a0d5bf534d414b5bd341cbc4385bf11cfadd9dfc6e0d2f09246a37fa6b70d37",
+      "bytes": 312
+    },
+    {
+      "path": "lean/verification-output/SeparablePrimeNorm.log",
+      "sha256": "3d37983002306a12f8730f64948586dbcaf174fdde662075a221a0b8e91693dd",
+      "bytes": 200
+    },
+    {
+      "path": "lean/verification-output/SharpnessActualGroup.log",
+      "sha256": "44c39abeba84a2958c5cedb3b5a6624678cce10298793151a602decdc4de4091",
+      "bytes": 590
+    },
+    {
+      "path": "lean/verification-output/SharpnessActualOrbit.log",
+      "sha256": "323b68d5a5d41bf465ced1bdc83b23f4191ce149ea76ef393e53028275353a2a",
+      "bytes": 398
+    },
+    {
+      "path": "lean/verification-output/SharpnessBaseChange.log",
+      "sha256": "9044879116a5a493ef6b4717ffb2c1c6bb27ae3e18024b11a15d17de75582389",
+      "bytes": 302
+    },
+    {
+      "path": "lean/verification-output/SharpnessBaseFieldMinimum.log",
+      "sha256": "3c46aa2505ac0036ec064cd15d139969fdc95f92135f6479849523f62cd747f4",
+      "bytes": 314
+    },
+    {
+      "path": "lean/verification-output/SharpnessCertificate.log",
+      "sha256": "4731e3c4c0464066100d92dcce3b0f175381728a1d5be4ee8dd726deb0eacc9a",
+      "bytes": 972
+    },
+    {
+      "path": "lean/verification-output/SharpnessCoverMinimum.log",
+      "sha256": "ac6444b1744b13417699cc1e8cd8e2abf3d336f392dfedb61cb79dec601c4707",
+      "bytes": 689
+    },
+    {
+      "path": "lean/verification-output/SharpnessGeometricAgreements.log",
+      "sha256": "635a318a4d8e294c1d95991d61ba617be69d74b9bdad8315975b42330bc53244",
+      "bytes": 312
+    },
+    {
+      "path": "lean/verification-output/SharpnessMenuEndpoint.log",
+      "sha256": "eb5c09f1abb0f5bbaa8da203fae6323775bf19c4b2aacb4e3cb0e804d2b98dd2",
+      "bytes": 494
+    },
+    {
+      "path": "lean/verification-output/SharpnessProjectiveAgreements.log",
+      "sha256": "ad0b0e3b76ba805a2bb2dc0c8b7bc1d6827eaf870142f7ffdd84b3e1658d77fc",
+      "bytes": 318
+    },
+    {
+      "path": "lean/verification-output/ShortCurveYSemiconjugacy.log",
+      "sha256": "9528a7f2bea0ac2a73bd670201d74529601f9c48ee5c0eabd143983b6f17eee9",
+      "bytes": 744
+    },
+    {
+      "path": "lean/verification-output/TranslationActionRigidity.log",
+      "sha256": "3b3f7872d96abf82ceb27c318896ed75e134948ebdc53cf95e97417e5f121866",
+      "bytes": 589
+    },
+    {
+      "path": "lean/verification-output/ValuationResidueArithmetic.log",
+      "sha256": "9a4cd026e08a0c1c351aea03dd36b4d75cef3b57ee83f836b9010ced927a2732",
+      "bytes": 1639
+    },
+    {
+      "path": "lean/verification-output/ValuationSymmetricSquare.log",
+      "sha256": "f67440f1f6c37c7902c4f52e9ec2d8abe6bccc05e2fee7d8a6034b5a2f9f5e04",
+      "bytes": 660
+    },
+    {
+      "path": "lean/verify-cached.sh",
+      "sha256": "c362bbcf41d59e809aae12b8e1107096148480a7efc60ce674017617acc4755a",
+      "bytes": 4130
+    },
+    {
+      "path": "lean/verify.sh",
+      "sha256": "fce30571ddad8f3499fedd6cd87e09956634e8a8dd370056fd30324c271401b8",
+      "bytes": 3558
+    },
+    {
+      "path": "original-research/CLAIMS.md",
+      "sha256": "1d6ad55f9f847289a7cc71ed586b21306f3f7622cdc0f0463ea51657f26330f9",
+      "bytes": 5583
+    },
+    {
+      "path": "original-research/COMPLEXITY.md",
+      "sha256": "7c1204cc85514a9b7ba03d4ff7015c40c78e5610a45cad7cefcb07bedd93fe30",
+      "bytes": 4720
+    },
+    {
+      "path": "original-research/PACKAGE_VERIFICATION.txt",
+      "sha256": "fe6c32a48b6ba619293dd572842a4763d4fc20e2f2a818f3bac17a767bb4db0f",
+      "bytes": 737
+    },
+    {
+      "path": "original-research/PRIOR_ART.md",
+      "sha256": "2de2e4be630ca431c67c6b839a834ecb22e45d15d1e3826b5a5c8c5aae72152e",
+      "bytes": 4130
+    },
+    {
+      "path": "original-research/PUBLICATION_STATUS.md",
+      "sha256": "85bc3b8881403d634b001b765bbc555023e0deed6ae079741e9997f87953d67d",
+      "bytes": 2428
+    },
+    {
+      "path": "original-research/README.md",
+      "sha256": "a8911aed3081811113cc93e6708c87bdca7bf9aac14512b1509767474ae52a28",
+      "bytes": 6917
+    },
+    {
+      "path": "original-research/SHA256SUMS",
+      "sha256": "43b6c2fd956c4edde174c20a39e5d85820dd261996d1cc3b95c59a3417ea7e4c",
+      "bytes": 1988
+    },
+    {
+      "path": "original-research/claims.json",
+      "sha256": "20d19975d6e9f8efec5c8a056feef6d47bf2a687ef343c3f9eed33db82e9b55e",
+      "bytes": 6801
+    },
+    {
+      "path": "original-research/manuscript.pdf",
+      "sha256": "063d45efd872cce55b9cdaa323f7059821bf46e5f0d3830bea9a853dfa5ebb14",
+      "bytes": 320851
+    },
+    {
+      "path": "original-research/manuscript.tex",
+      "sha256": "d781daf406f3cc1afa84de48f8991221258358c442c05af8a6ee41a4d959e8d1",
+      "bytes": 34262
+    },
+    {
+      "path": "original-research/optional-requirements.txt",
+      "sha256": "42a099cdf9fde1db448009e7febc6ebdd17c23086433d2525ee74a3905fd0366",
+      "bytes": 98
+    },
+    {
+      "path": "original-research/results/environment.json",
+      "sha256": "9082e92d0a07ad517ba2fe844e9df85c2c7ddc7944401e35e99dc994ec8745dd",
+      "bytes": 176
+    },
+    {
+      "path": "original-research/results/experiment_run.log",
+      "sha256": "79994d1d37f0cef4675e4f47e6dd3dcc636efe7e01cfaaf38ac148436ad56be0",
+      "bytes": 763
+    },
+    {
+      "path": "original-research/results/experiments.json",
+      "sha256": "f44f7ab567620702585be66943791b51d9774d8593a928edd46fe84a926e9d45",
+      "bytes": 99258
+    },
+    {
+      "path": "original-research/results/independent_checks.json",
+      "sha256": "aa047665ce9dd009092c77e3548369f7bf65347e53b55d9958a3c6b7230708af",
+      "bytes": 536
+    },
+    {
+      "path": "original-research/results/independent_run.log",
+      "sha256": "aa047665ce9dd009092c77e3548369f7bf65347e53b55d9958a3c6b7230708af",
+      "bytes": 536
+    },
+    {
+      "path": "original-research/results/summary.txt",
+      "sha256": "2ef43450fb446dab11a22fae73e6ff88a50d3187237252c626bd16aec05e71fe",
+      "bytes": 762
+    },
+    {
+      "path": "original-research/results/symbolic_checks.json",
+      "sha256": "eb15661e765cc4a5204138a9fb11a425b7cc75c2d0b3a192c72803a956c80fd4",
+      "bytes": 493
+    },
+    {
+      "path": "original-research/results/symbolic_run.log",
+      "sha256": "eb15661e765cc4a5204138a9fb11a425b7cc75c2d0b3a192c72803a956c80fd4",
+      "bytes": 493
+    },
+    {
+      "path": "original-research/sources.json",
+      "sha256": "4420b6a7dc00adcbaded2bcad9320df6f5f79b986a347bc7972027fcf959da26",
+      "bytes": 5799
+    },
+    {
+      "path": "original-research/src/experiments.py",
+      "sha256": "70b376988ca5ba9857c66256285b2742d2380a67591395c13588f30d49de54fc",
+      "bytes": 17306
+    },
+    {
+      "path": "original-research/src/independent_check.py",
+      "sha256": "2ce64fd224dd9aa9e3b98d34edfd928ea0cf1ea413a9495523a61df759890cd2",
+      "bytes": 7592
+    },
+    {
+      "path": "original-research/src/symbolic_check.py",
+      "sha256": "2e61df619fb60ae8b881b3fdb9a9834ecf467f1fa235c070324add9452704d75",
+      "bytes": 1771
+    },
+    {
+      "path": "original-research/verify_package.py",
+      "sha256": "110d840228d4d4c4e0499fb2b3ac7291eb58953dd8ceb6a1b994167dd5b9eff6",
+      "bytes": 4945
+    },
+    {
+      "path": "reviews/06-independent-novelty-review.md",
+      "sha256": "7b7985cfd1980f0a54215eb3034b68ce82b7949b905f1b25b475bd24fb46f430",
+      "bytes": 9774
+    }
+  ]
+}

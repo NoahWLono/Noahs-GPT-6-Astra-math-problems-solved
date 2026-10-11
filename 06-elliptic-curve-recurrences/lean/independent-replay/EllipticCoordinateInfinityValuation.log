@@ -1,0 +1,2 @@
+'Astra01.EllipticPointDivisor.infinity_valuation_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.infinity_valuation_y' depends on axioms: [propext, Classical.choice, Quot.sound]

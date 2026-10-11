@@ -1,0 +1,14 @@
+ba017f0c1787892ff1c252bed09138388a00f75737a59d3916927167e233b0cc  EllipticAddSubCompatibility.lean
+EllipticAddSubCompatibility.lean:20:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+EllipticAddSubCompatibility.lean:27:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+EllipticAddSubCompatibility.lean:46:47: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+EllipticAddSubCompatibility.lean:46:47: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'Astra01.EllipticAddSub.mapVector_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]

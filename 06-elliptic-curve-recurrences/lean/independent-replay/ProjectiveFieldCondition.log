@@ -1,0 +1,3 @@
+'Astra01.projective_prime_recurrence_field_alternatives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.projectiveMatrixAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.projective_prime_period_field_alternatives' depends on axioms: [propext, Classical.choice, Quot.sound]

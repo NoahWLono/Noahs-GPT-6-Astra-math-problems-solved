@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,enumitem,hyperref}
+\hypersetup{hidelinks,pdftitle={ASTRA-01 formal verification addendum}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=*}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+symbols.map}
+\setlength{\emergencystretch}{2em}
+\begin{document}
+\begin{center}
+{\Large\bfseries ASTRA-01 formal verification addendum}\\[5pt]
+11 October 2026
+\end{center}
+
+The main T1--T6 obstruction statements and E1--E4 mathematical examples now have Lean 4 proof artifacts in the precise formulations summarized here. All 113 local modules passed a fresh source rebuild. This addendum updates the original research-stage statement that proof-assistant verification had not been performed. It does not establish historical novelty or an ECDLP-solving algorithm.
+
+The 24 original research assets are preserved byte-for-byte in \texttt{original-research/}, from repository commit \texttt{31ce2acb2f90f9ca515c60fa56de01b9d576226b}. This addendum supplements the preserved manuscript; it does not replace its proofs or alter authorship.
+
+\section*{Formal mathematical coverage}
+The geometric source is a genuine nonsingular Weierstrass curve, with Mathlib's actual point group and function field. The degree $D$ is the sum of actual pole multiplicities, matching the manuscript's convention. Projective values include infinity, constructed through actual residue fields.
+
+\begin{description}[style=nextline]
+\item[T1 Global obstruction]
+Over algebraically closed constants in arbitrary characteristic, exact translation order $n\ge2$, a nonconstant function and a reduced nonconstant rational update: a global projective recurrence implies update degree $r=1$ and $n\mid D$.
+\item[T2 and T3 Finite agreement bounds]
+The complete cyclic agreement set has cardinality at most $\min(n,D(r+1))$, including common poles. For a fixed finite menu, the complete union has cardinality at most $\min(n,D\sum_j(r_j+1))$.
+\item[T4 Finite field obstruction]
+For an odd prime cyclic order and a nonconstant projective recurrence, the function is injective on the cyclic subgroup; the actual PGL element has exact order $n$. The finite-field alternatives and minimal extension-degree divisibility are proved. The function is presented on the ambient group and restricted to that subgroup.
+\item[T5 Prime full group obstruction]
+For prime $p\ge17$, a nonsingular Weierstrass curve over $\mathbb F_p$ whose full point group has prime cardinality $n\ne p$, and nonzero $G$, every full recurrence of an arbitrary projective-valued function under a base-field PGL element forces that function constant. Hasse, exact point order, generation and representative existence are derived internally.
+\item[T6 Deterministic prime cycle]
+For any deterministic update and a prime-length closed orbit, nonconstancy within the first $n$ entries implies that those $n$ entries are all distinct. Invertibility is not assumed.
+\end{description}
+
+\newpage
+\section*{Examples and additional identities}
+\begin{description}[style=nextline]
+\item[E1 and E2 Sharp agreement and menu examples]
+The explicit $\mathbb F_{11}$ table is identified with the actual elliptic group: 13 points, generator order 13 and $\deg(x)=2$. There are exactly four agreements, at indices $1,6,8,9$. The displayed four degree-one maps cover; every such covering menu over the base field has at least four members. Geometric base-change statements are also proved.
+\item[E3 Characteristic seven example]
+The actual $\mathbb F_7$ curve has 12 points and the specified point has order three. The degree-three $y$ function satisfies the stated global projective semiconjugacy.
+\item[E4 Degree and evaluation cost]
+In characteristic different from two, the iterated doubling observable has pole degree $2\cdot4^t$ and value $x([2^t]P)$. Its specified recursive evaluator charges exactly $t$ point doublings, followed by reading $x$.
+\end{description}
+The universal Semaev factorization and denominator-cleared addition and duplication identities are checked. Exact declarations and hypotheses are indexed in \texttt{FORMAL\_VERIFICATION.md} and \texttt{lean/SEMANTIC\_COVERAGE.md}; the Lean source statements take precedence over these summaries.
+
+\section*{Trust and reproducibility}
+\begin{itemize}
+\item Lean version: \texttt{4.32.2}.
+\item Mathlib commit: \texttt{905b95818eb32af7874a58b427f50c1711a5e96c}.
+\item Final fresh local-source rebuild: 113 modules, exit code 0, 535.05 seconds, peak sampled process-group RSS 3,346,960 KiB. Pinned upstream dependencies were cached; previous local objects were not reused.
+\item The audit records 210 printed declaration closures. The only reported axioms are \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. No admitted proofs, custom axioms or native-evaluation proof shortcuts appear in the local source.
+\item Separate successful replays cover 83 modules using the same trusted compiler and dependencies. These are internal verification, not outside expert peer review.
+\end{itemize}
+Portable reproduction instructions, source and package checksums, successful logs, build records and axiom manifests are included. No caches or compiled objects are distributed. The audited workflow reused provisioned dependencies; clean online dependency provisioning was not exercised. Apache-2.0 attribution is retained for adapted divisor foundations.
+
+\section*{Scope and novelty}
+No separate scheme-level transport theorem for every abstract curve presentation is supplied. The uniform-probability restatement of T3 follows from the cardinality bound, without a probability-space API wrapper. E4 uses a specified group-operation cost model, not a bit-complexity or general circuit lower bound. Original empirical execution histories are not certified.
+
+The independent novelty review does not establish historical priority. Hasse and other classical prerequisites are formalized as prerequisites, not claimed as discoveries. The original U1--U5 algorithmic, complexity, sufficiency and novelty claims remain unproved or unestablished. No faster cryptographic solver or attack is supplied.
+\end{document}

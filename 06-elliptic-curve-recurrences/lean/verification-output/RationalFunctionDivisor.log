@@ -1,0 +1,8 @@
+6b96dc0998e9e2825d52e8e191359b5d41f5381314a9dc82981ac1a599573b7f  RationalFunctionDivisor.lean
+'Astra01.RationalFunctionDivisor.principalDivisor_degree_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.RationalFunctionDivisor.principalDivisor_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.RationalFunctionDivisor.principalDivisor_infinity_valuation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,18 @@
+EllipticPlaceDictionary.lean:30:0: warning: automatically included section variable(s) unused in theorem `WeierstrassCurve.Affine.Chart.finitePlaceOfAffine_degree`:
+  [IsScalarTower k[X] k⟮X⟯ K]
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsScalarTower k[X] k⟮X⟯ K] [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticPlaceDictionary.lean:66:0: warning: automatically included section variable(s) unused in theorem `WeierstrassCurve.Affine.Chart.placeOfPoint_injective`:
+  [IsScalarTower k[X] k⟮X⟯ K]
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsScalarTower k[X] k⟮X⟯ K] [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'WeierstrassCurve.Affine.Chart.pointPlaceEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.Chart.placeOfPoint_deg_one' depends on axioms: [propext, Classical.choice, Quot.sound]

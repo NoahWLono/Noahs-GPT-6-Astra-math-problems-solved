@@ -1,0 +1,2 @@
+1d9b2585af31188d98b99573784d76e92c87f6d2f67393e672f3abecc8049496  EllipticWeilFunction.lean
+'Astra01.EllipticPicard.exists_weilFunction' depends on axioms: [propext, Classical.choice, Quot.sound]

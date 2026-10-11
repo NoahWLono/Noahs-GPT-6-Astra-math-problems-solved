@@ -1,0 +1,3 @@
+'Astra01.translation_invariant_degree_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.invariant_weight_sum_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.invariant_finsupp_degree_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]

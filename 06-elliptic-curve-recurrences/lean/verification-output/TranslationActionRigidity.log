@@ -1,0 +1,8 @@
+bd0fd19e42bab0b8fa30871add3139ca07200e51a93449c39f51cec35b14bf01  TranslationActionRigidity.lean
+TranslationActionRigidity.lean:18:0: warning: automatically included section variable(s) unused in theorem `Astra01.translation_action_regular`:
+  [Infinite A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Infinite A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.translation_action_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]

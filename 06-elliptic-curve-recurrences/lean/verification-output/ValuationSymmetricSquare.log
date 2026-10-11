@@ -1,0 +1,6 @@
+610201d7cb58bb2b780ae8bf92b1da850c446f33446dbce04a7a7a7d1fbf8d12  ValuationSymmetricSquare.lean
+ValuationSymmetricSquare.lean:17:50: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+ValuationSymmetricSquare.lean:22:50: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+ValuationSymmetricSquare.lean:25:51: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+ValuationSymmetricSquare.lean:26:51: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+'Astra01.valuation_symmetric_square' depends on axioms: [propext, Classical.choice, Quot.sound]

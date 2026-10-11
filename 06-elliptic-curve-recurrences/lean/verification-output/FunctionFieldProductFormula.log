@@ -1,0 +1,2 @@
+3e4d740910726b10af65a3d8f1d53013c25e49d4e4822f6c16089382f386b41a  FunctionFieldProductFormula.lean
+'FunctionField.Chart.deg_principalDivisorA_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

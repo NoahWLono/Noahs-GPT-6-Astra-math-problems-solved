@@ -1,0 +1,2 @@
+'WeierstrassCurve.Affine.Chart.infinity_heightOne_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.Chart.infinityPlace_deg_one' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,15 @@
+cd8ec187e69f99f6bc33bc8247e45fa5f8fa9fca91d350c4c593a499f1c80dab  EllipticPointResidues.lean
+EllipticPointResidues.lean:25:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.coordinateIntegers_value`:
+  [IsAlgClosed k]
+  [Algebra k⟮X⟯ K]
+  [IsScalarTower k[X] k⟮X⟯ K]
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed
+  k] [Algebra k⟮X⟯ K] [IsScalarTower k[X] k⟮X⟯ K] [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.place_eq_of_coordinate_residues' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

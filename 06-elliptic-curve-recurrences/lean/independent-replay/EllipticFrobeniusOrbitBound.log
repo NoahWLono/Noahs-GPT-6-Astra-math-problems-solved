@@ -1,0 +1,6 @@
+'Astra01.EllipticFrobenius.rational_count_le_difference_pole_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.EllipticFrobenius.rational_count_le_difference_height' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

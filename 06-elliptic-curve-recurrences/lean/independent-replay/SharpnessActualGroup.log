@@ -1,0 +1,9 @@
+SharpnessActualGroup.lean:78:58: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [curve, negY, zero_mul, sub_zero, mul_zero, z̵e̵r̵o̵_̵add,̵ ̵a̵d̵d̵_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.SharpnessActual.lift_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.orbit_addition' depends on axioms: [propext, Classical.choice, Quot.sound]

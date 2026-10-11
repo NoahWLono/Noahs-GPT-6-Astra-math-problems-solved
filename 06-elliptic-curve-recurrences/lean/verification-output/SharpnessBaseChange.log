@@ -1,0 +1,3 @@
+b2ebef4acee1946f175f5c3c90bbdc55f6e9eda55b7c3edbe1fd5438b3aaddd2  SharpnessBaseChange.lean
+'Astra01.SharpnessActual.extended_generator_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.extended_xValue' depends on axioms: [propext, Classical.choice, Quot.sound]

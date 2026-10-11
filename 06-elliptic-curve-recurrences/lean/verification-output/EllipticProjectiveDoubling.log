@@ -1,0 +1,16 @@
+f684cf229ebac97171527f8079b007d61bf7af2168d55b82bbe69c3f17b43f8b  EllipticProjectiveDoubling.lean
+EllipticProjectiveDoubling.lean:14:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.denominator_square`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticProjectiveDoubling.lean:22:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticDuplication.numerator_doubling_identity`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticDuplication.projective_doubling' depends on axioms: [propext, Classical.choice, Quot.sound]

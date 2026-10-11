@@ -1,0 +1,12 @@
+74a2bc662ce40bfc1db1dbaf4cdc21938648e28fff9e0b5c729c2ff7255c31c8  DoublingEvaluationCost.lean
+DoublingEvaluationCost.lean:21:75: warning: This simp argument is unused:
+  nsmul_add
+
+Hint: Omit it from the simp argument list.
+  simp [doublingTrace, ih, pow_succ', mul_nsmul, two_nsmul,̵ ̵n̵s̵m̵u̵l̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.EllipticDuplication.exponential_degree_linear_doublings' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.EllipticDuplication.degree_at_eight' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,10 @@
+e4690f19c1c81eec45b95044a3d0671fa9c395ae56bb6696748fa03e2ac0a344  EllipticDoublingIteration.lean
+EllipticDoublingIteration.lean:92:43: warning: This simp argument is unused:
+  nsmul_add
+
+Hint: Omit it from the simp argument list.
+  simp [pow_succ', mul_nsmul, two_nsmul,̵ ̵n̵s̵m̵u̵l̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.EllipticDuplication.iterated_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticDuplication.iterated_projective_value' depends on axioms: [propext, Classical.choice, Quot.sound]

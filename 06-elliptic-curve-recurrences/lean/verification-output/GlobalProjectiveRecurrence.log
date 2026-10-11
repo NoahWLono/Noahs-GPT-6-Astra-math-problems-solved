@@ -1,0 +1,4 @@
+ead9060a1194eea40f6d0612f80e0e5f90b6203005c070d3a64cc96e00ca923b  GlobalProjectiveRecurrence.lean
+'Astra01.EllipticPointDivisor.global_projective_recurrence_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

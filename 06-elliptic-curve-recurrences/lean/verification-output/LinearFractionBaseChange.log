@@ -1,0 +1,19 @@
+40d6c4b86af1967a839065ed78d6b5e187e42934df32edeeb5d4fcd99a4c0700  LinearFractionBaseChange.lean
+LinearFractionBaseChange.lean:22:6: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.map_none, Option.map_some, homogeneous, mul_zero, mul_one,
+  ̵  ̵ ̵ ̵ ̵ ̵z̵e̵r̵o_̵m̵u̵l̵,̵ ̵o̵ne_mul, add_zero,
+  ̲  ̲ ̲ ̲ ̲ ̲zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LinearFractionBaseChange.lean:22:35: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.map_none, Option.map_some, homogeneous, mul_zero, mul_one, zero_mul, one_mul,
+  ̲  ̲ ̲ ̲ ̲ ̲a̵d̵d̵_̵z̵e̵r̵o̵,̵ ̵z̵e̵r̵o̵_̵a̵d̵d̵]̵a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.linearFraction_baseChange_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+514c8721d83e1f3d4ceb7dac3f2be00330c09eeb94975c408596e9797dc3f49b  PolynomialIdentities.lean
+'Astra01.semaev_factorization' depends on axioms: [propext, Quot.sound]
+'Astra01.addition_numerator' depends on axioms: [propext, Quot.sound]
+'Astra01.duplication_numerator' depends on axioms: [propext]

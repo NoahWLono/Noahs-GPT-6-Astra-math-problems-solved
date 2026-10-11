@@ -1,0 +1,2 @@
+'Astra01.SharpnessActual.base_field_cover_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.SharpnessActual.base_field_four_cover' depends on axioms: [propext, Classical.choice, Quot.sound]

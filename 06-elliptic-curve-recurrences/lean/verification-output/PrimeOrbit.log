@@ -1,0 +1,2 @@
+c95d50127379b9d67f8a777ff5bdde760814594f6fdc2e0e6e627ce3965cd58e  PrimeOrbit.lean
+'Astra01.prime_recurrence_injective' depends on axioms: [propext, Classical.choice, Quot.sound]

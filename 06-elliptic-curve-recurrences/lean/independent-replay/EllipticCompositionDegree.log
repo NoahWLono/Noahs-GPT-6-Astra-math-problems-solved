@@ -1,0 +1,19 @@
+EllipticCompositionDegree.lean:19:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.valuation_polynomial_le_one`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticCompositionDegree.lean:200:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.nonconstant_polynomial_ne_zero`:
+  [FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.poleDivisor_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.pole_degree_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.poleDivisor_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.nonconstant_rational_composition_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

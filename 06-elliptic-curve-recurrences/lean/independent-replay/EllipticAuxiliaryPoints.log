@@ -1,0 +1,17 @@
+EllipticAuxiliaryPoints.lean:45:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+EllipticAuxiliaryPoints.lean:67:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPoints.two_torsion_polynomial_ne_zero`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticAuxiliaryPoints.lean:77:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPoints.two_torsion_x_root`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPoints.exists_auxiliary' depends on axioms: [propext, Classical.choice, Quot.sound]

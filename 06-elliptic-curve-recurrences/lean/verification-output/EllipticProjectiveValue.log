@@ -1,0 +1,30 @@
+584816553b43113f61687b1130a7dc589180f32167ca2dba365b473065734c81  EllipticProjectiveValue.lean
+EllipticProjectiveValue.lean:15:0: warning: automatically included section variable(s) unused in theorem `Astra01.exists_constant_residue_of_degree_one`:
+  [IsDomain R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticProjectiveValue.lean:15:8: warning: Overlapping instance parameters in `exists_constant_residue_of_degree_one`:
+
+⚠️ `[IsDomain
+   R]` and `[IsDedekindDomain
+   R]` each imply `[Nontrivial R]`, `[IsLeftCancelMulZero R]`, and `[IsRightCancelMulZero R]`.
+💡️ Of these, `[IsDomain R]` may be removed.
+
+Note: This linter can be disabled with `set_option linter.overlappingInstances false`
+EllipticProjectiveValue.lean:48:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.exists_point_constant_residue`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticProjectiveValue.lean:57:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.point_constant_residue_unique`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.projectiveValue_eq_iff_agreement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

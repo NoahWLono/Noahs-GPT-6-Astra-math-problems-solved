@@ -1,0 +1,8 @@
+'Astra01.EllipticPointDivisor.nonconstant_finite_fiber_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.EllipticPointDivisor.zero_degree_eq_pole_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.poleDivisor_sub_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.finite_fiber_degree_eq_pole_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

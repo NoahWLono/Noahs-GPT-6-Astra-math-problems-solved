@@ -1,0 +1,3 @@
+26d8503956c298b5073f05dee1b202e6b8eca59d9cb8ca2ae961cf5444a5e48b  EllipticFrobeniusRationalPoles.lean
+'Astra01.EllipticFrobenius.geometricDifferenceX_translation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticFrobenius.geometricDifference_pole_rational' depends on axioms: [propext, Classical.choice, Quot.sound]

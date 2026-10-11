@@ -1,0 +1,2071 @@
+[
+  {
+    "source": "AdicRingEquiv.lean",
+    "source_sha256": "33c25db5eb953984e6f0ea424b61aacd944be2e830a25af23f7b162242714aa2",
+    "log": "independent-replay/AdicRingEquiv.log",
+    "log_sha256": "1b9d1459182aa380014b6a3821a7522fba6374d4b8f6f3e571e5228aa19f7766",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.valuation_ringEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "CharacteristicSevenExample.lean",
+    "source_sha256": "383de0e75a1a639abf0e7fba79adfab6701118d8c79225cafb3f68bf89ed5f66",
+    "log": "independent-replay/CharacteristicSevenExample.log",
+    "log_sha256": "3367c86c0184718ac06916e599e8b9675d77c42a51ed8a8e6f3a4b223566ab4e",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.CharacteristicSeven.base_point_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.CharacteristicSeven.base_point_count",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.CharacteristicSeven.characteristic_seven_global_example",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "CyclicFieldTheorem.lean",
+    "source_sha256": "db780cd1dc47364bb2bae604cb25752228f7253ced6f7a559ffb77750d6eb4f7",
+    "log": "independent-replay/CyclicFieldTheorem.log",
+    "log_sha256": "41367ffbd2f3acdf9f8fd7a096f2f4d68ecc763cf379d5ea8ea816172200437a",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.cyclic_subgroup_projective_recurrence",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.finite_extension_projective_recurrence",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "DedekindDivisor.lean",
+    "source_sha256": "d640abf7a6cbe03c7c9e946c5ba73687d50c54a6f4714ea168483b62ae180ecc",
+    "log": "independent-replay/DedekindDivisor.log",
+    "log_sha256": "3f40c8d158faa382d0eb34da87243eee4c1d650d636c160746def99992a3cebe",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.DedekindDivisor.divisorEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.DedekindDivisor.principalDivisor_apply",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.DedekindDivisor.weightedDegree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "DoublingEvaluationCost.lean",
+    "source_sha256": "74a2bc662ce40bfc1db1dbaf4cdc21938648e28fff9e0b5c729c2ff7255c31c8",
+    "log": "independent-replay/DoublingEvaluationCost.log",
+    "log_sha256": "588948685bf6c19f410e9d2aa43f78184a926d3e427d084a77061db7d3716f25",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticDuplication.exponential_degree_linear_doublings",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticDuplication.degree_at_eight",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAddSubAlgebra.lean",
+    "source_sha256": "032385ad478f8ee0513facc2512ad5ec58592fcb2d39f907fbf70ebe9aa1952f",
+    "log": "independent-replay/EllipticAddSubAlgebra.log",
+    "log_sha256": "cb0abbfc5c8b70538f672b22608ed16f96e9379776728b353d175a674f2ee450",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.chordNumerator_sum",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticAddSub.chordNumerator_product",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAddSubAllPoints.lean",
+    "source_sha256": "994ba664e89c769c30d08bc2940a83f54370f64e9328747f214b64420b18a12b",
+    "log": "independent-replay/EllipticAddSubAllPoints.log",
+    "log_sha256": "7e9ed2d726f563ccc69e8a2d79107cd164a79199b43e343c6237e6d8ef38f2cd",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.mapVector_same",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticAddSub.mapVector_add_sub",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAddSubMaxValuation.lean",
+    "source_sha256": "8558982ce0ed3aefc534956a8cee9c77440134e80d2ab096da5818013f0169e9",
+    "log": "independent-replay/EllipticAddSubMaxValuation.log",
+    "log_sha256": "8a2523e7267fbeeda40725635a9a984cc8eaf86c3559bc9d62efddc2141ed7a9",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.mapVector_maximum",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAddSubValuation.lean",
+    "source_sha256": "4a365c8b764023dc30091bab8f687a086039290dc19871c6b622ac58827a3215",
+    "log": "independent-replay/EllipticAddSubValuation.log",
+    "log_sha256": "6bb5355fd1853070bc0b3124885cc51a47f5a4ae6ec7f53973269eaac9d945d2",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.normalized_mapVector",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAffineClassCriterion.lean",
+    "source_sha256": "a235245856a5a8e66e86a2e7701d9b0859068a1784da631a6d4a82f5d744223e",
+    "log": "independent-replay/EllipticAffineClassCriterion.log",
+    "log_sha256": "f26f7127a3d4fb937e308696bea5cb599408434096dd1a5e8264667d1e5de968",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPicard.affine_principal_of_pointSum_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAffineDivisor.lean",
+    "source_sha256": "e93e46f1010476ddac761682fc69ffafc040602fc5d4b9c26b29fbf97d820205",
+    "log": "independent-replay/EllipticAffineDivisor.log",
+    "log_sha256": "e97016a7bef9f1e3e31ead620cff9d96b2c3014cabc1fd52dda2d6b84d235830",
+    "reported_declarations": [
+      {
+        "declaration": "WeierstrassCurve.Affine.CoordinateRing.isDedekindDomain",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.ellipticAffinePrincipalDivisor_apply",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAutomorphismDivisor.lean",
+    "source_sha256": "03adc78a348b9b866fbe232d8d55d1512960f01d97e29c511ace44e3e3a2cf39",
+    "log": "independent-replay/EllipticAutomorphismDivisor.log",
+    "log_sha256": "6f6ade1abbe418d78948e416fa800499febbce060a6d7066ebf22a48907b91a4",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.principalDivisor_pullback",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.pole_degree_automorphism",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticAuxiliaryPoints.lean",
+    "source_sha256": "110c35cd62e6485fb0f0ee0c1754bca90d56a5bc16f6afa35d88391694df47a8",
+    "log": "independent-replay/EllipticAuxiliaryPoints.log",
+    "log_sha256": "e09a8a3e958fbbc07fe7937704ef517500bda916b6ae694fe50b0f2d7dd57067",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPoints.exists_auxiliary",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticCharacterCount.lean",
+    "source_sha256": "4a9822c520a07a01e0301caa11a9176507cd335cc8c2527217617fcaf4ae0724",
+    "log": "independent-replay/EllipticCharacterCount.log",
+    "log_sha256": "9a4bd2e466080bb83c913e5f802400b96c27be8bcc8cf1089a7ace56eaefca48",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticTwist.point_count_character",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticChordExpansion.lean",
+    "source_sha256": "f76b9248b94b22065a3361303f3a9caa11855a6cb82cc7c8aed36862106e2507",
+    "log": "independent-replay/EllipticChordExpansion.log",
+    "log_sha256": "2222560fa6bdeeac0790789a4c68bc241f9f29da8075fcf82172f3f147a05332",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.chordNumerator_expansion",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticChordPole.lean",
+    "source_sha256": "9d2fe0e95b584bec3b5bf6d0017922d100cd065bffb92e193cb022f019589533",
+    "log": "independent-replay/EllipticChordPole.log",
+    "log_sha256": "c6e44d588e78f35689665941075acd1bd38bedd0be3aca38ac6baaf554fbc6a1",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.addX_valuation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticAddSub.negY_valuation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticChordValuation.lean",
+    "source_sha256": "1654a22ae05e48d4f7695f7602f02b10c73a8dd2e2bbb4ad207f1cf6bbe5af73",
+    "log": "independent-replay/EllipticChordValuation.log",
+    "log_sha256": "138404666ace285369a0450d5bec096c33c8d0412eac37f39638a95fcaee942b",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticAddSub.chordNumerator_valuation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticCompositionDegree.lean",
+    "source_sha256": "ef0dfce77bdc0fdbaff41683f238f21dbd2b590120a887afc1a42ffc56c3de29",
+    "log": "independent-replay/EllipticCompositionDegree.log",
+    "log_sha256": "8da489d1a4b08c025b175354cea568660045e0eb460df5a6a41c14afe259fe2a",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.poleDivisor_polynomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.pole_degree_polynomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.poleDivisor_rational",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.nonconstant_rational_composition_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticCoordinateInfinityValuation.lean",
+    "source_sha256": "ea3b6bd25ac7aee563391b55228a73c14d1ad26fcc6b747c643e818114bda5f4",
+    "log": "independent-replay/EllipticCoordinateInfinityValuation.log",
+    "log_sha256": "789083eef296080dba9e3d1a97c82d4cefccd5647f0b0957431caa73bb1048c7",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.infinity_valuation_x",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.infinity_valuation_y",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticCoordinatePoleDegree.lean",
+    "source_sha256": "32fdca2c250a9c923f0f05a688c9a7d4281deaa1f15ddbbbe0c2b3f18b03aeef",
+    "log": "independent-replay/EllipticCoordinatePoleDegree.log",
+    "log_sha256": "a8fd844c0590462fbdbd418f927b5cf2bae45e5e47caad541527f219fa7a687c",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.pole_degree_coordinate",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFiberDegree.lean",
+    "source_sha256": "27326253cd4e4ef19503eac873375b7868c75579bdbe4b504b74a1e12580e6b3",
+    "log": "independent-replay/EllipticFiberDegree.log",
+    "log_sha256": "8852e5788f814eaa7f8a92335248b8d08090227ffb83d917bb8e295d3321257d",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.nonconstant_finite_fiber_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.zero_degree_eq_pole_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.poleDivisor_sub_constant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.finite_fiber_degree_eq_pole_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFiniteFieldUpper.lean",
+    "source_sha256": "53dc7e9c0dcd55c32e843bcb6cb1e9aa604ddd670806da977369bbbb7305e43d",
+    "log": "independent-replay/EllipticFiniteFieldUpper.log",
+    "log_sha256": "45a927b7b0ccd3de1b7b54030337c50fa4bb803a5185b0994f1379155702e356",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.finite_field_upper_discriminant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFinitePlaces.lean",
+    "source_sha256": "d39b190625e39411d2ef581e49f734a47f7e8867571a9ca0f733a299ab9d23e5",
+    "log": "independent-replay/EllipticFinitePlaces.log",
+    "log_sha256": "0866c54e2bc2ef6a9098dc6928e784fa21f5bb3fdc3023da1e41bf7f0636b6ec",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPlaces.pointPrime_residue_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPlaces.every_finite_prime_is_point",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobenius.lean",
+    "source_sha256": "5ddf7a2d34f5537465c1ec301045711051fb13e19b600b0fbbb648e2992a9479",
+    "log": "independent-replay/EllipticFrobenius.log",
+    "log_sha256": "531a5dbfdb926cbe733810662a10890efeb7438dc566bfeefabfff3d69ce5520",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.pointFrobenius_rational",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.difference_invariant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobeniusGeneric.lean",
+    "source_sha256": "57a66882d3041e7214a6e4fd62d55b22457aba864b9fdf2394c203c31bd3f39c",
+    "log": "independent-replay/EllipticFrobeniusGeneric.log",
+    "log_sha256": "df6bc8c91adbaa90c5ad21f8a50c96191bce65ad63dc637d53d15542ac5ed9a6",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricFrobenius_height",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricDifference_translation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobeniusHeight.lean",
+    "source_sha256": "dc46c3531d04d134350b417296debf2bbf4a5456700f60cdb4b8512fb3a33694",
+    "log": "independent-replay/EllipticFrobeniusHeight.log",
+    "log_sha256": "4005d7d8df5eb46706d3cc2ecc6983687a7d47f2dbeed41d7f1962531b210c70",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.pointHeight_frobenius",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobeniusInfinity.lean",
+    "source_sha256": "b2a6b4eacbec0cc68b39ffbe21bfdba92c191457682b41739a1d3b9e90fe094a",
+    "log": "independent-replay/EllipticFrobeniusInfinity.log",
+    "log_sha256": "567ef06e755251ca914c939cc4752bb557e335b1ffa934a975d9c05ad24f15be",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricDifferenceX_infinity",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricDifference_some",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobeniusOrbitBound.lean",
+    "source_sha256": "bf864553e573122cd9323496db0145cdefa2b956117ad71c2e80a36df88fcb36",
+    "log": "independent-replay/EllipticFrobeniusOrbitBound.log",
+    "log_sha256": "6df94540bda552a7c431410d73a14fcf7989f4dadcc5ba69ad5e13614b2c778b",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.rational_count_le_difference_pole_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.rational_count_le_difference_height",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFrobeniusRationalPoles.lean",
+    "source_sha256": "26d8503956c298b5073f05dee1b202e6b8eca59d9cb8ca2ae961cf5444a5e48b",
+    "log": "independent-replay/EllipticFrobeniusRationalPoles.log",
+    "log_sha256": "65638aed632086d56d8523255dbcb062badf40357b5b7349d122da43effa6ee5",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricDifferenceX_translation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.geometricDifference_pole_rational",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticFunctionField.lean",
+    "source_sha256": "60cd23a931803541ceed5714f8e4d5e72896afb81e1e93be9555f99eb5e4a233",
+    "log": "independent-replay/EllipticFunctionField.log",
+    "log_sha256": "9672460a13d21eefde985a030e0fadd572f18cf5e7f0aa5c96f5b38ddec6c43f",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.elliptic_principal_divisor_degree_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "WeierstrassCurve.Affine.finrank_ratFunc_eq_two",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "WeierstrassCurve.Affine.isSeparable",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHasseOdd.lean",
+    "source_sha256": "7a273fbd774be1f9df556093023bcd92b1da90afeeb6673615fe4d6696012848",
+    "log": "independent-replay/EllipticHasseOdd.log",
+    "log_sha256": "fd64751098879d2965b94385b450048d51f29f89db33be5f18f85e5ea6e0d752",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.finite_field_hasse_discriminant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticFrobenius.half_field_card_lt_point_count",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHasseUpper.lean",
+    "source_sha256": "584e748dfab5d3c118c83f445daf9eb82601b4ef44a8d905455cc13b3dbeb8e7",
+    "log": "independent-replay/EllipticHasseUpper.log",
+    "log_sha256": "fa0b8e3835f5125f4137999914183b7ac0c473944e8649b7d61296fb40d2ddf9",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticFrobenius.rational_count_upper_discriminant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHeightCauchySchwarz.lean",
+    "source_sha256": "ac6df5c276578217d1d2252c4df18a24a8fc422c6c91635d90d87bf9ffacbbd5",
+    "log": "independent-replay/EllipticHeightCauchySchwarz.log",
+    "log_sha256": "248beac21e287d3d46796bd4bc068c329e137dc5d774cbfea5593ac53f896535",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.pointHeight_upper_discriminant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHeightParallelogram.lean",
+    "source_sha256": "c6682edbf841cb6ab874c8a14b3ebd2a13ecdba7c55d320a2415970f799f50b3",
+    "log": "independent-replay/EllipticHeightParallelogram.log",
+    "log_sha256": "bc8227da9dff249be2a0a7c829a5ce7f9823cf92253cb502e15f3e6ac048debe",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.pointHeight_parallelogram",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHeightPowers.lean",
+    "source_sha256": "89eb58cceb3b2b23e57097e48fadf1399641fbfb58b8820e4a9ea901eb096c49",
+    "log": "independent-replay/EllipticHeightPowers.log",
+    "log_sha256": "02cc916545dbb3cbe4dc4e5f48b1bb62021dca9eeb3ba011ab7df58e87579e0b",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.vectorDivisor_pow",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticHeight.vectorHeight_pow",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticHeightScaling.lean",
+    "source_sha256": "754943ba3b833f929c097fbc2e3c64c262393204760399c4240f735d31c6cba0",
+    "log": "independent-replay/EllipticHeightScaling.log",
+    "log_sha256": "75f69ab3c444ea0bbfef5ee366a9f9e823e49ac8276d4925d870ad202eea5f64",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.vectorHeight_smul",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticHeight.vectorDivisor_addSubMap",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticInfinity.lean",
+    "source_sha256": "282fc7faf70c31a2a27f6474a3708d5c5017db988e328178670d912577fdb83b",
+    "log": "independent-replay/EllipticInfinity.log",
+    "log_sha256": "769477a23a21a725a9e4c5a9ce28e6a1f531d2d60fd47be2eea64f8803f0fc96",
+    "reported_declarations": [
+      {
+        "declaration": "WeierstrassCurve.Affine.Chart.infinity_heightOne_unique",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "WeierstrassCurve.Affine.Chart.infinityPlace_deg_one",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticPlaceDictionary.lean",
+    "source_sha256": "caedfa87c42deae08c325a63973c426c39af07770647b05f0844fb864c495b8d",
+    "log": "independent-replay/EllipticPlaceDictionary.log",
+    "log_sha256": "f0c43bad466131ed9da6b8528cc10aeb647c743045e3ecfc5b0673c177f439bd",
+    "reported_declarations": [
+      {
+        "declaration": "WeierstrassCurve.Affine.Chart.pointPlaceEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "WeierstrassCurve.Affine.Chart.placeOfPoint_deg_one",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticPointDivisor.lean",
+    "source_sha256": "631196d4438f975f26eda0fb6b0f0f48adb75ce832cc8b3a991fa30a578ee7fa",
+    "log": "independent-replay/EllipticPointDivisor.log",
+    "log_sha256": "6f7c09174efdf5fa719390ad2518771ea4744c0f29c596ff283d72d0a6373d13",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.sum_principalDivisor_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.point_valuation_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticPrincipalCriterion.lean",
+    "source_sha256": "ad97addbbf06e738b926c8b88cb267a3288bdbfd28bd559b9e3f53661d22b772",
+    "log": "independent-replay/EllipticPrincipalCriterion.log",
+    "log_sha256": "522ceecac07b76849e856a0565975f9f21b9c22194b1f6228c4d8e298c141642",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPicard.principal_of_degree_zero_pointSum_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticProjectiveDoubling.lean",
+    "source_sha256": "f684cf229ebac97171527f8079b007d61bf7af2168d55b82bbe69c3f17b43f8b",
+    "log": "independent-replay/EllipticProjectiveDoubling.log",
+    "log_sha256": "6ad2204ee98c271e69b6ab28eb13f1b9349f96338852f917311862832825a221",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticDuplication.projective_doubling",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticProjectiveHeightDivisor.lean",
+    "source_sha256": "d081b12fbb50a3b810afabc04dd6979e97ff75c3f3e1f264f517a091e9594b80",
+    "log": "independent-replay/EllipticProjectiveHeightDivisor.log",
+    "log_sha256": "80fd05bb10643b34e8b019c4fe0024366f239e8b1f815e54ea735976cb6b513d",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticHeight.vectorDivisor_valuation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticQuadraticFibers.lean",
+    "source_sha256": "64d0bd77ab7d5badb301d035962c6aca54302bbf1033b354d71bf028ee1046cf",
+    "log": "independent-replay/EllipticQuadraticFibers.log",
+    "log_sha256": "a5f8121d1466241443369c8829e7e178f74a43ba14f57484a9dc27ab5574da7c",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticTwist.affine_fiber_count",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticQuadraticTwist.lean",
+    "source_sha256": "51f50b21217ec925a575b05d46349a80b5ae668bd2d249f671ef9e4a25e2ff3c",
+    "log": "independent-replay/EllipticQuadraticTwist.log",
+    "log_sha256": "5495fc60d918d57be7fd2f908886aebe0127f7f572edb3902d2cc1695c6f461c",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticTwist.quadraticTwist_isElliptic",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTwist.quadraticTwist_squareDiscriminant",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticTranslation.lean",
+    "source_sha256": "8b52e206b6709771700d8e622bffc40058b12f6c910f57ec5cd3b4042382eae9",
+    "log": "independent-replay/EllipticTranslation.log",
+    "log_sha256": "3c4a4907960a514fe96a2bb48f41755e5e33757bf5ff6b37a5309e63de38b6fe",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticTranslation.translatedPoint_ne_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translated_x_ne_constant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.pointFunctionHom",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translationHom_generic",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translationHom_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translationEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translationEquiv_generic",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticTranslation.translationEquiv_injective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticTranslationCovariance.lean",
+    "source_sha256": "a5a638c79ac31cd152dec4596513d65380a552db1d1fd507f4a392839185c456",
+    "log": "independent-replay/EllipticTranslationCovariance.log",
+    "log_sha256": "e5262a5a9f519a555b7672f61929d140b51f1c7a9f39e7f413ae62e027a5165a",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.translationPoint_eq_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.principalDivisor_translation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticTranslationLocal.lean",
+    "source_sha256": "6b668f840423a313fe5d76d60f6fda34f0d0d7bc12e3f5434ebe069ab27e31b1",
+    "log": "independent-replay/EllipticTranslationLocal.log",
+    "log_sha256": "cb7c2b424dee3bf749f1b6cb1d895bef9cabe557cd1373baf0d4fce9d62b4bc5",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.translation_place_of_x_ne",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticTwistCount.lean",
+    "source_sha256": "799efd4a41c2165abb041a51dfb4ed588d5c5f4d853d709c75e7f82fd0c01e14",
+    "log": "independent-replay/EllipticTwistCount.log",
+    "log_sha256": "452476b64eb9d9479d7bfc56b55979472d957231fcd6e21d89e5b55abc48a8ad",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticTwist.twist_point_count_sum",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticWeilConstantRatio.lean",
+    "source_sha256": "2538d7efab74ac64353eeb07b53cc1e03800daa120c868435e63b78f030b0f24",
+    "log": "independent-replay/EllipticWeilConstantRatio.log",
+    "log_sha256": "f0b4c7a0c0893e904c6fbdbb5fb52ffb3f0b7fdf1b5cc2613ffe37bdec77ffae",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.translation_ratio_constant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticWeilFunction.lean",
+    "source_sha256": "1d9b2585af31188d98b99573784d76e92c87f6d2f67393e672f3abecc8049496",
+    "log": "independent-replay/EllipticWeilFunction.log",
+    "log_sha256": "9b1f68cdca8e4f85c935405226f7637833c95c087887bd88cbf45bee2a480fc2",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPicard.exists_weilFunction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticXDifferenceDivisor.lean",
+    "source_sha256": "8769e95e26e5c2192b22bc1e1123295321074ca0e76bb79002944e0237785c94",
+    "log": "independent-replay/EllipticXDifferenceDivisor.log",
+    "log_sha256": "755c1f4140c21d8e06a63d63cec430380d78b6901e0fca37dfee41ed7318fa56",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPicard.xDifference_affine_divisor",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPicard.xDifference_projective_divisor",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticXProjectiveValue.lean",
+    "source_sha256": "81069978b7af3094f48db21365fc7ad92f25ec40901f66764b593945c62b6429",
+    "log": "independent-replay/EllipticXProjectiveValue.log",
+    "log_sha256": "4761aa642519374864035cbdbf84cc8a84fd5fc8824161cb7fc5dfecc513f6eb",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.projectiveValue_x",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "EllipticXYDegrees.lean",
+    "source_sha256": "3320f62fea96262da79eb9051dcd9b44118baf6df17f33fa6dc600f233df198a",
+    "log": "independent-replay/EllipticXYDegrees.log",
+    "log_sha256": "405b82644186242712a73fca22c56d9f3dc932dc0a45e8b262742e1967cc360f",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.pole_degree_x",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.pole_degree_y",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.poleDivisor_x",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.poleDivisor_y",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ExtensionDegree.lean",
+    "source_sha256": "773d627fd47970c0ba9db0a187cd6a92e7f7f520070092ecf8b048f127cc495c",
+    "log": "independent-replay/ExtensionDegree.log",
+    "log_sha256": "de3abc1755995fe95c06805d5ee65a4ce2dba1e74d43318cc96ae729f75eb2c6",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.order_dvd_twice_extension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.extension_divisibility_iff",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.minimal_extension_degree_divides",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "FiniteAgreementObstruction.lean",
+    "source_sha256": "f941f68d70c9d9727619c9ed5ba031be89dd9d435695868d5fc7f9608288e4a1",
+    "log": "independent-replay/FiniteAgreementObstruction.log",
+    "log_sha256": "1367ee8aa29d72c265fc04cdc17cb0f207c07180eee2ed04b948ad22a3c05391",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.finite_recurrence_agreement_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "FiniteMenuObstruction.lean",
+    "source_sha256": "71ba1346741f112901bc28860ff670aa01ba82b548a10b15536d5f9a34686af4",
+    "log": "independent-replay/FiniteMenuObstruction.log",
+    "log_sha256": "d05d940645406edfec652b6508786ee2ba4f651e5415a59cff95cec2d1679aa4",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.finite_recurrence_menu_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "FunctionFieldPlaceEquiv.lean",
+    "source_sha256": "3b9bdb1a845a205e87f82b054d03e2debd7bec8f636848bcffb89e6287fe58e8",
+    "log": "independent-replay/FunctionFieldPlaceEquiv.log",
+    "log_sha256": "9e9fff4469a89f1cde1bbffd80b975dda5c19abf5d5724b9655fab3b92950bf8",
+    "reported_declarations": [
+      {
+        "declaration": "FunctionField.chartToPlace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "FunctionField.placeValuation_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "FunctionFieldProductFormula.lean",
+    "source_sha256": "3e4d740910726b10af65a3d8f1d53013c25e49d4e4822f6c16089382f386b41a",
+    "log": "independent-replay/FunctionFieldProductFormula.log",
+    "log_sha256": "8af94f24ec2b3caad4ef997679eb6f9f25f7bf6fcefeb572547a9be08f713249",
+    "reported_declarations": [
+      {
+        "declaration": "FunctionField.Chart.deg_principalDivisorA_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "GlobalDegreeObstruction.lean",
+    "source_sha256": "ed701e0667e3183774b1dcb6abdb6506ead2c20cd34d71fe15ad060e15842f08",
+    "log": "independent-replay/GlobalDegreeObstruction.log",
+    "log_sha256": "1401ebceeac773a6f8c5b24ed7742d42695ac1607bdad2cc6559ddfcaf81c3b2",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.translation_semiconjugacy_degree_one",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "GlobalProjectiveRecurrence.lean",
+    "source_sha256": "ead9060a1194eea40f6d0612f80e0e5f90b6203005c070d3a64cc96e00ca923b",
+    "log": "independent-replay/GlobalProjectiveRecurrence.log",
+    "log_sha256": "0bfb73c969c34246c81ef902e3f0bd34c3942f2c5fd981db87125234b02aa780",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.global_projective_recurrence_obstruction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "GlobalRecurrenceObstruction.lean",
+    "source_sha256": "cf3cc7f2827b33d2b1c8973ff1236dd1b72069d216e18302a02b8d066e218b5c",
+    "log": "independent-replay/GlobalRecurrenceObstruction.log",
+    "log_sha256": "32b37a4ef29e54fd628dcb5ce3ce9258178d917e7546a4a9e099fcfac1f74152",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.global_recurrence_obstruction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "InvariantDivisor.lean",
+    "source_sha256": "655ef39b79c3d5db3b6dd1294a6ffef8df1801f891a6140a05c449fc624bc410",
+    "log": "independent-replay/InvariantDivisor.log",
+    "log_sha256": "fb9e186bf6e4187368c1daa22ed375aebd00185b77b9145b46a16fa540a356ea",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.translation_invariant_degree_dvd",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.invariant_weight_sum_dvd",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.invariant_finsupp_degree_dvd",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "PolynomialIdentities.lean",
+    "source_sha256": "514c8721d83e1f3d4ceb7dac3f2be00330c09eeb94975c408596e9797dc3f49b",
+    "log": "independent-replay/PolynomialIdentities.log",
+    "log_sha256": "270dbf2eeb72476051c1b7cd349098e332b4fbde04fc43fd5d52295d9d0bfb46",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.semaev_factorization",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.addition_numerator",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.duplication_numerator",
+        "axioms": [
+          "propext"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "PrimeFullGroupObstruction.lean",
+    "source_sha256": "4084770d4eb338461c287422e82943946e9bec29b14df5c8403ace857ee14449",
+    "log": "independent-replay/PrimeFullGroupObstruction.log",
+    "log_sha256": "e908fc2d0cb53cb0074c21af71908fbf0c8601186e1c28923ac5df6d0e4ebbfd",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.prime_full_group_recurrence_constant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "PrimeFullGroupPGLObstruction.lean",
+    "source_sha256": "9e235f58d7f39bc38f8da644531d03baa36c005021f5d76ee74b02b08b0428a9",
+    "log": "independent-replay/PrimeFullGroupPGLObstruction.log",
+    "log_sha256": "77c4c77a6d3bdcbf4f2539672d65f7c3dbcc8cfe8a857eeffed36cbc5203cc7c",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.prime_full_group_pgl_recurrence_constant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "PrimeOrbit.lean",
+    "source_sha256": "c95d50127379b9d67f8a777ff5bdde760814594f6fdc2e0e6e627ce3965cd58e",
+    "log": "independent-replay/PrimeOrbit.log",
+    "log_sha256": "3954075e69aaaf2e6bf3a63f71d77541b402a6fc03fbfd12e0672b83a7e36e76",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.prime_recurrence_injective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveFieldCondition.lean",
+    "source_sha256": "77aaa40142315dc6a5bfaeed60b5fab1b61c3a6b237340da4c7efd24a06f7103",
+    "log": "independent-replay/ProjectiveFieldCondition.log",
+    "log_sha256": "5eda7471aaf1a9b54b64df22233eed3e470980fc754a55e45ac9eb4509a0b2c5",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.projective_prime_recurrence_field_alternatives",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.projectiveMatrixAction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.projective_prime_period_field_alternatives",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveFixedPoint.lean",
+    "source_sha256": "2c971fd97a05a7ee028a7b8cf4fb2ac88fd7d7a613e0460439d3d1d0ae6a4dfe",
+    "log": "independent-replay/ProjectiveFixedPoint.log",
+    "log_sha256": "488445afbf3d69cfb0d29f65d9e21cc5d6eb0352ce54c567e987b7b79d396cda",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.projective_transformation_has_fixed_point",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveOrder.lean",
+    "source_sha256": "3406676cc0f37053bf729fcaecca47e71175fd86e327cf9954681d4c303c1352",
+    "log": "independent-replay/ProjectiveOrder.log",
+    "log_sha256": "f1835b72f06c498fea80febb4d7e34b2ac255fd11dbc5e775714b9d6cd0f0f28",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.projective_recurrence_exact_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.scalar_of_three_eigenlines",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.scalar_of_three_projective_fixed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.projective_identity_of_three_fixed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveQuotientAction.lean",
+    "source_sha256": "3723c7163a2dbfcbe8ca834a8dd24c45c2941854d6c4fa4cdf50d76868cbe015",
+    "log": "independent-replay/ProjectiveQuotientAction.log",
+    "log_sha256": "19fb15b6905687780992bd0224f463b3861c0a34b4476defb4d0448897c7c9bf",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.projectiveQuotientAction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.pgl_eq_one_of_three_fixed",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveQuotientRecurrence.lean",
+    "source_sha256": "b7d78f9075980a58bd5286a1755a698c7fca2744643300589d9cba1710c82676",
+    "log": "independent-replay/ProjectiveQuotientRecurrence.log",
+    "log_sha256": "500fc617ea536ded91ff27ef4ff84aa5569b3c754d93415219a1a77a8ea904af",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.pgl_recurrence_exact_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.pgl_finite_extension_recurrence",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.pgl_cyclic_subgroup_recurrence",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ProjectiveRecurrenceBounds.lean",
+    "source_sha256": "f0325f0fb415feb13c4e33920ff4252e77725b7021f4302a6d6db02c66a64e60",
+    "log": "independent-replay/ProjectiveRecurrenceBounds.log",
+    "log_sha256": "6090ef8327fab0a55c8cd912cb734d84ed9b46a5a1651fa3c96b5aa9195d9c0a",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.full_agreement_set_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.full_menu_agreement_set_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "RationalFunctionDivisor.lean",
+    "source_sha256": "6b96dc0998e9e2825d52e8e191359b5d41f5381314a9dc82981ac1a599573b7f",
+    "log": "independent-replay/RationalFunctionDivisor.log",
+    "log_sha256": "38093b45790b2a23d5c96b5e54bd996838fb35600ef310cc5f2f98d359241d85",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.RationalFunctionDivisor.principalDivisor_degree_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.RationalFunctionDivisor.principalDivisor_finite",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.RationalFunctionDivisor.principalDivisor_infinity_valuation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessActualGroup.lean",
+    "source_sha256": "ff6f84ebca79bf8c5f49b93d9270a17e2521360c9458bab6376df0f8235562df",
+    "log": "independent-replay/SharpnessActualGroup.log",
+    "log_sha256": "c0524b90fd89945049730257cc3f9be5c1de16365426997f5a9a62ba41e3e271",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.lift_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.orbit_addition",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessActualOrbit.lean",
+    "source_sha256": "50bdc9ed2bf887665a164cba2430176e8af6c4d1acfff595c967b2b7addbd873",
+    "log": "independent-replay/SharpnessActualOrbit.log",
+    "log_sha256": "c3d4ca190f3effc6da67c79e7083aaba2763ddd6cfba3269ac410d3664eb9baf",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.orbit_surjective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.curve_point_count",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.generator_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessBaseChange.lean",
+    "source_sha256": "b2ebef4acee1946f175f5c3c90bbdc55f6e9eda55b7c3edbe1fd5438b3aaddd2",
+    "log": "independent-replay/SharpnessBaseChange.log",
+    "log_sha256": "c6e8091aa53c820a6abf0c90d03e29df06986e093eab94dd05e91e1c25dd59f5",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.extended_generator_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.extended_xValue",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessBaseFieldMinimum.lean",
+    "source_sha256": "403bd28cb27de5b697dad32e42da2f1543f5686db508dfebaad23a1b4de532ce",
+    "log": "independent-replay/SharpnessBaseFieldMinimum.log",
+    "log_sha256": "fde4cab9e103757cfb0e58a8c53f8c59f6750ee7904cc3ec18c739c4415febd7",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.base_field_cover_minimum",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.base_field_four_cover",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessCertificate.lean",
+    "source_sha256": "06be9bcc7e44699dbfc49a87f16f65f316657e8e9a68223dc125f5159580311f",
+    "log": "independent-replay/SharpnessCertificate.log",
+    "log_sha256": "d522db88e1715eef86c62041591fcbe825212dde394d7d1b617854c652ebcf97",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.Sharpness.inverse_correct",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.nonsingular",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.orbit_complete",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.orbit_injective",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.orbit_successor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.orbit_addition",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.generator_exact_order",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.valid_projective_pairs",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.witness_invertible",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.exact_four_agreements",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.exact_four_count",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.four_maps_cover",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Astra01.Sharpness.cover_maps_invertible",
+        "axioms": [
+          "propext"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessCoverMinimum.lean",
+    "source_sha256": "70386ad02ee7c0af0f0fdf0f16b3d13e257a836767b01a95efbb89a13d279a6f",
+    "log": "independent-replay/SharpnessCoverMinimum.log",
+    "log_sha256": "f104f052148b5140a99125bbf941db32795567b2c12c555a71f83e84719f805d",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.x_order_thirteen_cover_minimum",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessGeometricAgreements.lean",
+    "source_sha256": "d8c069daeb207ea864e2b0e38059aaaab0471a49288eff09ba30f0745053a3b0",
+    "log": "independent-replay/SharpnessGeometricAgreements.log",
+    "log_sha256": "95eed418dadfb7d01a686c427cc9f5056a29a592a8f85bdc2fb9aa9e924f9992",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.geometric_exact_count",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.extended_four_cover",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessMenuEndpoint.lean",
+    "source_sha256": "e1d5ec555d2a6e4de27739c698390784fc802f5ed0e16396752ebaa79b1ebdc1",
+    "log": "independent-replay/SharpnessMenuEndpoint.log",
+    "log_sha256": "3a6896b482f017f25bfc4fa83369d0e463fdb0ef8123310e3485e211574c6010",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.menu_coprime",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.menu_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.menu_covers_cyclic",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.no_smaller_cover",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "SharpnessProjectiveAgreements.lean",
+    "source_sha256": "44ad7c0eaed86121f971855aab2dbdf82e1a696a9a33285cd6f212d775ac428c",
+    "log": "independent-replay/SharpnessProjectiveAgreements.log",
+    "log_sha256": "c5cb3a6555c7f39ae4ecfb75d467989ba84b30456a2a02ca7fa3e9a902aa9618",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.SharpnessActual.exact_agreement_indices",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.SharpnessActual.actual_four_maps_cover",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  },
+  {
+    "source": "ShortCurveYSemiconjugacy.lean",
+    "source_sha256": "6c961bb69a106a9f7ed5fe09b2566f784ee3d4529e08d5372d34c08a360a9882",
+    "log": "independent-replay/ShortCurveYSemiconjugacy.log",
+    "log_sha256": "2b224f0e0f17a783d6d6b5a6914b6a8353979493eeb85d2e9524b0d764299d6d",
+    "reported_declarations": [
+      {
+        "declaration": "Astra01.EllipticPointDivisor.short_unit_point_order",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Astra01.EllipticPointDivisor.short_y_semiconjugacy",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "result": "Separate replay reported exit 0; source unchanged since replay."
+  }
+]

@@ -1,0 +1,3 @@
+1bee3294683d92722c16d236147b0a28ce82183db0dfdead4497be1d9b6d30d4  SeparableIdealNorm.lean
+'Ideal.relNorm_eq_pow_of_isMaximal_of_isSeparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ideal.sum_normalizedFactors_relNorm_of_isSeparable' depends on axioms: [propext, Classical.choice, Quot.sound]

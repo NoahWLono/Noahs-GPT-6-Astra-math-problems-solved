@@ -1,0 +1,1 @@
+'Astra01.EllipticHeight.pointHeight_upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

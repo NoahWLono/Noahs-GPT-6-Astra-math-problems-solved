@@ -1,0 +1,2 @@
+59d5baa197b53d8b17cfbf6911a6013ad456688fba5d85a1a59da1813766e1e7  SeparablePrimeNorm.lean
+'Ideal.relNorm_eq_pow_of_isMaximal_of_isSeparable' depends on axioms: [propext, Classical.choice, Quot.sound]

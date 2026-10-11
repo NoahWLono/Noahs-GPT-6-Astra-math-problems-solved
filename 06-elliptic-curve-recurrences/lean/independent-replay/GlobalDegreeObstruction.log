@@ -1,0 +1,3 @@
+'Astra01.EllipticPointDivisor.translation_semiconjugacy_degree_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

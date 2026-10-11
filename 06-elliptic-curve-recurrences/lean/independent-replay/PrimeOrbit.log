@@ -1,0 +1,1 @@
+'Astra01.prime_recurrence_injective' depends on axioms: [propext, Classical.choice, Quot.sound]

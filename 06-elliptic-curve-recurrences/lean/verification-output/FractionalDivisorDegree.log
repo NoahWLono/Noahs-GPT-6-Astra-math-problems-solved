@@ -1,0 +1,2 @@
+909034a9ddd3853dd9dd600ed0c2928b521dd50285ff0e78deb5487780f7665a  FractionalDivisorDegree.lean
+'Astra01.DedekindDivisor.weightedDegree_principal_mk'' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+f76b9248b94b22065a3361303f3a9caa11855a6cb82cc7c8aed36862106e2507  EllipticChordExpansion.lean
+'Astra01.EllipticAddSub.chordNumerator_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

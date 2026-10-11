@@ -1,0 +1,1 @@
+'FunctionField.Chart.deg_principalDivisorA_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

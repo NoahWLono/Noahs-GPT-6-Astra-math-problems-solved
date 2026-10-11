@@ -1,0 +1,2 @@
+ac6df5c276578217d1d2252c4df18a24a8fc422c6c91635d90d87bf9ffacbbd5  EllipticHeightCauchySchwarz.lean
+'Astra01.EllipticHeight.pointHeight_upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

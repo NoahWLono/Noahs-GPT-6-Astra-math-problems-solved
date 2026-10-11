@@ -1,0 +1,3 @@
+db780cd1dc47364bb2bae604cb25752228f7253ced6f7a559ffb77750d6eb4f7  CyclicFieldTheorem.lean
+'Astra01.cyclic_subgroup_projective_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.finite_extension_projective_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]

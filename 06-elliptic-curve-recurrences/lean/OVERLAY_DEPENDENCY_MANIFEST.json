@@ -1,0 +1,1951 @@
+{
+  "mathlib_commit": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "module_count": 324,
+  "modules": [
+    {
+      "module": "Mathlib.Algebra.CubicDiscriminant",
+      "source": "Mathlib/Algebra/CubicDiscriminant.lean",
+      "source_sha256": "ca5bc03b0bf418b60f8b828c598304e348d56b14635909f29ba0706ef9b546ec",
+      "object_sha256": "9e85dbd80a6e6e52ea4f1d98a98f82817a3882efdcb562e0b032f63a0a71c404"
+    },
+    {
+      "module": "Mathlib.Algebra.FreeAlgebra",
+      "source": "Mathlib/Algebra/FreeAlgebra.lean",
+      "source_sha256": "7a604565b155fb48d9a985eaee47d90a13162779f754adcfb0b36556356fb884",
+      "object_sha256": "d1d6cb344121e9e46dfca6d420121abe097a6a365cd3d35643f39f5802be13ae"
+    },
+    {
+      "module": "Mathlib.Algebra.GradedMonoid",
+      "source": "Mathlib/Algebra/GradedMonoid.lean",
+      "source_sha256": "18bb94f16346ffaa7fa79c4b1ee6d4905d30a807c832b0c38ffd78ab9c29e9ae",
+      "object_sha256": "3c941ecd1d9f4e0689033aca55bcd0fca78aff8f5cc26869bed3c778e028e1ce"
+    },
+    {
+      "module": "Mathlib.Algebra.GradedMulAction",
+      "source": "Mathlib/Algebra/GradedMulAction.lean",
+      "source_sha256": "80ab409f7bf6f0ac37396fb0e246e3e649098e4b5b278bef51a76f3eea4323a1",
+      "object_sha256": "d05f3b1a2fd45147e720360db7ff89a99fe8990ec57c1f91faf4aa9b8fe9c9a7"
+    },
+    {
+      "module": "Mathlib.Algebra.IsPrimePow",
+      "source": "Mathlib/Algebra/IsPrimePow.lean",
+      "source_sha256": "d4d6e4a76d07252d71fffc82944baecfddd0766f8ec4c603451f35aa1290a51d",
+      "object_sha256": "722d1f5fc2175f44a3111741120ddc890c6da0499659f274382706321c26e659"
+    },
+    {
+      "module": "Mathlib.Algebra.NeZero",
+      "source": "Mathlib/Algebra/NeZero.lean",
+      "source_sha256": "d954b4eec8ec9a99812c42de35cc91bb2bb53f29201e11f19ca2c11eec0e7b84",
+      "object_sha256": "639fb8797ed026ed81edd4e1686aceb1738ab556f3ee96af054aba7334e5a539"
+    },
+    {
+      "module": "Mathlib.Algebra.Notation",
+      "source": "Mathlib/Algebra/Notation.lean",
+      "source_sha256": "a50c507bb0a023243fff8a5488254a1f2842457dc8b14e3047e86d22430d7104",
+      "object_sha256": "0446319ec5a62cba543340beeb6cb740d8a7c1d35f8f2b9a995b720ebf9b82c7"
+    },
+    {
+      "module": "Mathlib.Algebra.Opposites",
+      "source": "Mathlib/Algebra/Opposites.lean",
+      "source_sha256": "103fe648f74b47d77e319f82672325cf4b8ef07e5cc4c90f3ae018d2b5891611",
+      "object_sha256": "98fde064f30e8f06b016aa78d1c1f2a95d568df18b1ee6fb23a15a42ab1550b0"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.AddGroupWithTop",
+      "source": "Mathlib/Algebra/Order/AddGroupWithTop.lean",
+      "source_sha256": "04605f21d9701983fcdedba05e7a6f4cf0f8371d24f51d224ee83aa7b03dec94",
+      "object_sha256": "afd1d0b47a8fbc8840fc8288f687b8188ecac77e581d02d834fca340afb29ac0"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.AddTorsor",
+      "source": "Mathlib/Algebra/Order/AddTorsor.lean",
+      "source_sha256": "3a3e1c1824482e2ebe926be447bfaf90cd67b42c02a62d30bcd41add2bd508f8",
+      "object_sha256": "7fc04586ac4cdaff128c450df55203049038a178dc892bd882f98d1ba46670b7"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Algebra",
+      "source": "Mathlib/Algebra/Order/Algebra.lean",
+      "source_sha256": "82bc5cdc7dfb5ae9f0bceabe318d2d0253cd552d36378b595a62743b5b33d627",
+      "object_sha256": "4d861b01a222e8f1755262cd5f34ee2524e8b1843fbdbc0da0e7f493c9a47f12"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Chebyshev",
+      "source": "Mathlib/Algebra/Order/Chebyshev.lean",
+      "source_sha256": "12e3c5ab7697c964bb609c90cafe26b1d5ab7347f296c51674b4fc02b16d5055",
+      "object_sha256": "d9774022b537c2a69d6e0cd3fb0c15c2e8462b0963dd062a22970b07ecf35433"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Invertible",
+      "source": "Mathlib/Algebra/Order/Invertible.lean",
+      "source_sha256": "1e29f469ed2561a8652a4f894e99ee19e4a598968f9afa1f5a97221184812746",
+      "object_sha256": "e9faa37382112e2ac60a71c7b79aac2ea19d32b94e25da3c1408fd62d32972eb"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.IsBotOne",
+      "source": "Mathlib/Algebra/Order/IsBotOne.lean",
+      "source_sha256": "63bee0a862f983563acb420798904e2ce06e96db6dff8df3fdfc25d460a3a954",
+      "object_sha256": "4e5645a21c270344e3908648d49067428c2f1e43dfa892a2e661f84d08fe112b"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Kleene",
+      "source": "Mathlib/Algebra/Order/Kleene.lean",
+      "source_sha256": "6e7627e00f4a7177afb53665b0a5905b7b5565ab730c1fc33802a931a4f06cd3",
+      "object_sha256": "5bd872b735a2cf1dfd2e08825f3e42491e1a9ef20a53dabe723fa27b5a13db6a"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Basic",
+      "source": "Mathlib/Algebra/Order/Monoid/Basic.lean",
+      "source_sha256": "0ac62cf4b13a404e4fc6f998bfe43bbab836e7f4c780161a27cb8cce3eb7e0d9",
+      "object_sha256": "9959e776e7cbd233b428d80d0083494f29b21626e5704bf7557b79fe077ad4d2"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Defs",
+      "source": "Mathlib/Algebra/Order/Monoid/Defs.lean",
+      "source_sha256": "ca45e64be405f50d506afb09051a929c7896ef25f1a42b260a5466e0a497f59b",
+      "object_sha256": "64cb3cb3ac4019b1ed3d3f2b228b484a8cbe510995ec94e801e91acf9c064def"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.LocallyFiniteOrder",
+      "source": "Mathlib/Algebra/Order/Monoid/LocallyFiniteOrder.lean",
+      "source_sha256": "200e2edf83dd463e3e788e57ef915b3152afe326e7e7028daf6b2818196864b5",
+      "object_sha256": "3949eb8fd29c8b704132c72c3b2c60a1ade4894e0f4b648dda3b2a91e4caec2e"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.NatCast",
+      "source": "Mathlib/Algebra/Order/Monoid/NatCast.lean",
+      "source_sha256": "ea9b5c6f30fa5ae46e5011dbc9bee7ea28846eb0ecb79e8db5aa01b876ca9641",
+      "object_sha256": "85dfbfba4a63e554227bc864cb443d5eb165bd4f5c4bce24a33cd3fd50b8890c"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.OrderDual",
+      "source": "Mathlib/Algebra/Order/Monoid/OrderDual.lean",
+      "source_sha256": "e306c8d6ec26038ec4e4561946476065f787904efbca6f5daedce0d079977996",
+      "object_sha256": "f7dc2c472d9b3f1b62983f86b7dfb388aeeb204f4d7fdeb814159b7be29189c1"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Submonoid",
+      "source": "Mathlib/Algebra/Order/Monoid/Submonoid.lean",
+      "source_sha256": "6826be3df248aaa44f7568f3a0490ccc1ae707cf1abfe6662cf0a9c3ce4ac686",
+      "object_sha256": "8c615797d1c4055145467b0c455d25efcb4232d8587aa11bb42781d6e33aadc9"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.TypeTags",
+      "source": "Mathlib/Algebra/Order/Monoid/TypeTags.lean",
+      "source_sha256": "0660539a19a82bc90baa94db5f00ef79601d801f70ca62a8a241f1e8d256702c",
+      "object_sha256": "e04809d50a677649d8cca07db0f6e3b5db76508e1058ef5dec0ee6282603e2ba"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Units",
+      "source": "Mathlib/Algebra/Order/Monoid/Units.lean",
+      "source_sha256": "52cc50e04f911b3cb7014b8c73cd594d90bc999d3e9e3dfd7bf800868c589bb6",
+      "object_sha256": "ea8bd4392a08dfe275850caa51cbf61d9c0f893574db07d4b733de96bbbf83e2"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.WithTop",
+      "source": "Mathlib/Algebra/Order/Monoid/WithTop.lean",
+      "source_sha256": "04471622d19cb47396f42c2cb7ef60bdcb8ecddd04859a2794172cbbf1887e73",
+      "object_sha256": "cd668ecf9e7d704ddb1ef42320f6b5b1f45384a567b99f9fcf39d12d22b324f4"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monovary",
+      "source": "Mathlib/Algebra/Order/Monovary.lean",
+      "source_sha256": "d0140c144d34fea5b8e3e5a229224fa513dbbf46e8b310da66c7ed9d7779e25f",
+      "object_sha256": "3a214a2416058393eed438f5fcd735db72859c634922e63641196a7a5e1218f6"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Pi",
+      "source": "Mathlib/Algebra/Order/Pi.lean",
+      "source_sha256": "0fcfb716131a9cea7f08aa3b74340b60db27e1035b02c744186cc32d9a5de5b1",
+      "object_sha256": "81cbc7c9ebc6794283f8346a9e0ce8b745a1af8e93f3ee9f5abeeabba6489cf8"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Rearrangement",
+      "source": "Mathlib/Algebra/Order/Rearrangement.lean",
+      "source_sha256": "271011160797a0781397d6672fe996f092afc4031f0dc4b7ab91f64189231a95",
+      "object_sha256": "7fcd9a54b6783af9fd9fdbf49b79fef22d96ba31886ad271bb813d54af4b7e06"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Round",
+      "source": "Mathlib/Algebra/Order/Round.lean",
+      "source_sha256": "cfe49867d055da30fc91df6f7983d2013310616b9bdf0db382b7b06cdebf04b6",
+      "object_sha256": "aa5842be177a1dcd4c302d7a042be00da4646b965f53dbbd8edf93ca4a583c10"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.SuccPred",
+      "source": "Mathlib/Algebra/Order/SuccPred.lean",
+      "source_sha256": "66d12dc693f1172229e381ec139b007103efff869cb7f71277deb823515f01f9",
+      "object_sha256": "05e05d5f3f1536795f6f947b3ad69fc8e1a6852818aac6964276274aa39415a9"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.ToIntervalMod",
+      "source": "Mathlib/Algebra/Order/ToIntervalMod.lean",
+      "source_sha256": "d695497361108235dd8a8b8d3ca454b426848c00e27ae6948268f1bc79cc30d8",
+      "object_sha256": "e142b965588b5c7bdc1a341de4b332b5e560cf194b988262a4f2c1996d60447f"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.ZeroLEOne",
+      "source": "Mathlib/Algebra/Order/ZeroLEOne.lean",
+      "source_sha256": "4e21b0022f327d09b1a02a282f41dceee9be69cb30b1517b8cd60c36d3fcd1ce",
+      "object_sha256": "3a718f7cbb1a1cafca3dfa60fc1b071d6016cb78ec338bd4861aadc45fa7f811"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.AlgebraMap",
+      "source": "Mathlib/Algebra/Polynomial/AlgebraMap.lean",
+      "source_sha256": "44480220e8998fc94589b1648a673d868dfc6d381d627bf0cbc901d58540d2e1",
+      "object_sha256": "f5a15c9a19c6dfecf203598917fca8d1dec6317d4e9a9c2f77e31ddc4039cf96"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "source": "Mathlib/Algebra/Polynomial/Basic.lean",
+      "source_sha256": "b0e18ad7f82b1f51fabbf44cf7af873c8dcf0f1348a5d697c6a3b86f0a58be3d",
+      "object_sha256": "d727777426f95b9737f0d43c351e5278de02b4b8c29a1d88569b110e396df772"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.BigOperators",
+      "source": "Mathlib/Algebra/Polynomial/BigOperators.lean",
+      "source_sha256": "3855de2b1a1f005bb6769a8e6c3813a2220881457d43fe0a2604a3b2f7d94b55",
+      "object_sha256": "f3eeabc02cbda88e74a55ca672c86ed7680f293beaef61442629ea605cf017ca"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Bivariate",
+      "source": "Mathlib/Algebra/Polynomial/Bivariate.lean",
+      "source_sha256": "3648507b36fb3ff0a10236330829f17760cac7a87eb5bc2d357e101776607cea",
+      "object_sha256": "1188cc04908035512834f3ae56a582e89116a20e75b3bd46c36f9c031f89eebd"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.CancelLeads",
+      "source": "Mathlib/Algebra/Polynomial/CancelLeads.lean",
+      "source_sha256": "32d2297449a070d9c400a22f04652efdea6087e4ac27eeb4aad640ed0bd7fed8",
+      "object_sha256": "9e9b6103dd9a38e78e136e3a3574488f781b3bef9fadbfef1d467b8e0255b6b8"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Coeff",
+      "source": "Mathlib/Algebra/Polynomial/Coeff.lean",
+      "source_sha256": "6ee03ca5ac14ca0722b66ebc446fa93e3d5ace4a3ec5cf8d950bab976d815370",
+      "object_sha256": "9ba0668dd6ce48cdc0525aa21a88fdffe6290e78b53259e3cb6cfc52d1b31104"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Defs",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+      "source_sha256": "f804f89872524b7559eccc71a39fb082c497e8a7fd8cf2c50aeb7a0a48255b82",
+      "object_sha256": "394490319f111e36482e4327dc4b11a74c0d0cc875af29a2ecc5bbafcbb4d79f"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Domain",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Domain.lean",
+      "source_sha256": "c5f338125e105370e6b60b3092d657c57dd76c8a5bf67b78c2085a8241132cbc",
+      "object_sha256": "e05c7e65eda6142ab6b31353145cb53f1340537c8a242a167e0928210b92edca"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.IsMonicOfDegree",
+      "source": "Mathlib/Algebra/Polynomial/Degree/IsMonicOfDegree.lean",
+      "source_sha256": "043e9d6eadd51a445ef6488206cc1785ae7e5bebd215b8249287def08e275619",
+      "object_sha256": "70ccc1a83706049aeed285bc8031f73b424d24c7d14b3df8ce18e9080891207e"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Lemmas",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Lemmas.lean",
+      "source_sha256": "77adee51f9fe6f03f88db9ccbd69e3e968e07957b7e2d774b3ae543911cf4c75",
+      "object_sha256": "0b13c41f26e2be3dad6374b3116431f414980529037d57419f86050c83fd3be6"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Monomial",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Monomial.lean",
+      "source_sha256": "49f6306d9a1fc11aa2da40386b24ef93100b8f81f110780b793ab9162ff291fb",
+      "object_sha256": "ae220b5484d8be392545b4807ff742036a692dba14f367623d7fd51a10224cb0"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Operations",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+      "source_sha256": "6cf6ab951454822af7f2e4a926dc326078ef2431ed579b8b02ac7442c82b84a3",
+      "object_sha256": "0cb0c3e42fdd724384fa68a214e01b15d5401548e049d572ba88a71bd106c3db"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "source": "Mathlib/Algebra/Polynomial/Degree/SmallDegree.lean",
+      "source_sha256": "00d40e2dddef0455888de3213b66ff256cb47c225cad9c277361f1e5bfdc4d7f",
+      "object_sha256": "3fbb61824fa8d3d117e2a577530666dd6f45e1178d5765ab1a2a3457896868ab"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Support",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Support.lean",
+      "source_sha256": "d5b4fd615b57da6015b5967b3b55ba31494d3ee1cd0ab05853b8f2349d74a1ea",
+      "object_sha256": "742ad6326298d93a67266a36d64bbba15c5d250794cece679775271c592f7fa7"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.TrailingDegree",
+      "source": "Mathlib/Algebra/Polynomial/Degree/TrailingDegree.lean",
+      "source_sha256": "e4c0e784fd3388d1d0727372a78f8cbc12fdb922e3f30240d0fbf2d278f2283e",
+      "object_sha256": "f5668d8fc3ce95d69754fbcf50ad5facc095da6e73f4eb36e8776595c3101f1a"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Degree.Units",
+      "source": "Mathlib/Algebra/Polynomial/Degree/Units.lean",
+      "source_sha256": "e164d7f7e58e6cc8cf280134463429c00ab05867e59e1a46bb630e7bb6f49225",
+      "object_sha256": "b8b955d406dbc4588ada463a3a2e7e988e076c124eb3b214945aa37b3bb820b5"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Derivation",
+      "source": "Mathlib/Algebra/Polynomial/Derivation.lean",
+      "source_sha256": "92db59c0cca19f9c28529fd17474c1f344e67bd83f08b4344e7abe51502b9b08",
+      "object_sha256": "acb52a0ceca0c5158aa00dec629634c4fbbc6903bab5d69126b8e4a19b742e9b"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Derivative",
+      "source": "Mathlib/Algebra/Polynomial/Derivative.lean",
+      "source_sha256": "a7419f317106744e68279f30fc588015076f2a8baeb125f6ed74b59575e42f58",
+      "object_sha256": "7ab91bf69d6472e682d7d765ab787e2aefcb6003d4c9bbe594187dd83cf7b6dd"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Div",
+      "source": "Mathlib/Algebra/Polynomial/Div.lean",
+      "source_sha256": "38a1b6973f339cb214b9a6e7b945b31d5ddd31da78d781d93916955be7e2b60f",
+      "object_sha256": "21829a964629a531a0b0bd6812bef39d2eb0bb8136f3dcccb0ce07007b0518ba"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.EraseLead",
+      "source": "Mathlib/Algebra/Polynomial/EraseLead.lean",
+      "source_sha256": "ae3be93f03e7ee5b13ef986aaca9d5c93969be2a1e3ed241218d8a090c04676b",
+      "object_sha256": "f32bc958e22666c8e623c32e0a24f67eea3e430f0430789450461c34d8782379"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Expand",
+      "source": "Mathlib/Algebra/Polynomial/Expand.lean",
+      "source_sha256": "c67ca8c349bec63be1faddd20e11d18d7837f5df28a3210426047a811f25c479",
+      "object_sha256": "ea3bb35f5b05b1b76d8a921c7c6a817b6154372d2114a9d85435d1fbbcbbce86"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.FieldDivision",
+      "source": "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "source_sha256": "c41b3288371ca6cfdbf3d708f9090da773c89a7e1fa83f8bf6c9afe8c7e96480",
+      "object_sha256": "621aaf4de897e7794ac0a2f729006a934198369f2052ce997af235fdc963c218"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.GroupRingAction",
+      "source": "Mathlib/Algebra/Polynomial/GroupRingAction.lean",
+      "source_sha256": "2ac3900c577230b6a03a6aded0ac2d1ebb21eb0728a8188ca31108e502fda453",
+      "object_sha256": "71be29611e4bff3928e5f98f3b2e4128cc03f29b4868366c91f69b0cc9feb244"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.HasseDeriv",
+      "source": "Mathlib/Algebra/Polynomial/HasseDeriv.lean",
+      "source_sha256": "4b29dc7a07c8c44b421347768bbf46b81f4772ccdf90dfd89c0b25f3881fb94c",
+      "object_sha256": "385afdde2143e7f9dadd4f287a285c5b77cc20f219af306cd7da3b2475e37ce2"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Identities",
+      "source": "Mathlib/Algebra/Polynomial/Identities.lean",
+      "source_sha256": "f9079e8d5486ae38b97bee55ab8e44fe10acc599a97302996db62a529e1e380c",
+      "object_sha256": "70d2f4b2e29fab065b07c6f8ec00f773c3ce87602936742230efed4ed90edf63"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Inductions",
+      "source": "Mathlib/Algebra/Polynomial/Inductions.lean",
+      "source_sha256": "935f894c1c857c2966022a2e0241481a4e67e769c5c565e41491d378b3de1c95",
+      "object_sha256": "e027edc17e5082e51040e1d4c5604e3bf0dd400eb55dc3c0ac64d1e50da7f302"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Laurent",
+      "source": "Mathlib/Algebra/Polynomial/Laurent.lean",
+      "source_sha256": "18d657edbaad7871e15cfd15ee78980bdc992105940a31610461d926e0efdb3c",
+      "object_sha256": "43e9ebe8d07f82985a00873dfc40ab4435d21dc8246d1235d00267a0712f47ce"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Lifts",
+      "source": "Mathlib/Algebra/Polynomial/Lifts.lean",
+      "source_sha256": "75a31439fcf0cc66217858603ddc9186d809a607d8060712454e4d6d95bdb809",
+      "object_sha256": "112813d6b2d8a69e64e8ee6081d4e5e1a41193d762f76ad326bb9d7ae1ad6d1b"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Monic",
+      "source": "Mathlib/Algebra/Polynomial/Monic.lean",
+      "source_sha256": "04dedab688a8a011d91bccf65e9bb1871fdc73d0fecf44ec685e2b19d965a649",
+      "object_sha256": "6d3b7314a664780e67ac2fefee7a2e4fb8510620a02d8b351dd8c905f53ff4d6"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Monomial",
+      "source": "Mathlib/Algebra/Polynomial/Monomial.lean",
+      "source_sha256": "ccb1d5f8bf16c2d774013487512188c388d4af2c964eb82754b5dfba953f370b",
+      "object_sha256": "f1c80621d48895f97dda7552f03a079bafd2712c7afd07701c08b69b50c2f75e"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.OfFn",
+      "source": "Mathlib/Algebra/Polynomial/OfFn.lean",
+      "source_sha256": "4b471e49fdbaaa34df30df264e6debaf5139932103208f0bfac75cb41dcfaaff",
+      "object_sha256": "61bd3cb7dfb9ebb3d4267abf2206c0146221c2d3cb30d5349a6e099a75c6e048"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Reverse",
+      "source": "Mathlib/Algebra/Polynomial/Reverse.lean",
+      "source_sha256": "ba402eefeb863c96c46216436d76752d2fcca97e86f089f8915b86ff9ebf2bfb",
+      "object_sha256": "a0187eb51c8e811a86725b3e53775edd23ace4f88d8c346135513966a14ecb35"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.RingDivision",
+      "source": "Mathlib/Algebra/Polynomial/RingDivision.lean",
+      "source_sha256": "f4baf56001bb5b4adab4c362fad2c231bf63d4b402763c82e07d7e25f57996e1",
+      "object_sha256": "3370935975e87704a33c034a99f197baefa226c30d907817044afe67d3e20766"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Roots",
+      "source": "Mathlib/Algebra/Polynomial/Roots.lean",
+      "source_sha256": "68226d8e8c84d99b7560beb853d9683737f34ca97c086bd92729e34ae1818153",
+      "object_sha256": "2608a6ad23f30dedf6dae74d8683664078f7033b152c72326371e488176e3f67"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Splits",
+      "source": "Mathlib/Algebra/Polynomial/Splits.lean",
+      "source_sha256": "cf6b905af4aeb41c917e603dbcd494ed7381a2bef35aded7b23ed038cd409028",
+      "object_sha256": "8be0714f868907ed1e2b5485b14cfb35233a5778f17ef22cb68c3ed3c8ccd706"
+    },
+    {
+      "module": "Mathlib.Algebra.Polynomial.Taylor",
+      "source": "Mathlib/Algebra/Polynomial/Taylor.lean",
+      "source_sha256": "f2e00e9e019758d44ff9dc496a578942fee22a0c2c15cbf8c78d97e9509e56cd",
+      "object_sha256": "91b9aa1a91292ea27a6aadb74aa8c0cd23f14700591f13fdc0ff708de71abe11"
+    },
+    {
+      "module": "Mathlib.Algebra.QuadraticDiscriminant",
+      "source": "Mathlib/Algebra/QuadraticDiscriminant.lean",
+      "source_sha256": "7a62a7b18ade09ec1e81d986b870dd17a35fc854c628450de689bee90312ae5e",
+      "object_sha256": "a10897b65643ad74f16302b61bafd0ed1a83f00fcb396b4be6ae7c2e2388b3bd"
+    },
+    {
+      "module": "Mathlib.Algebra.Quotient",
+      "source": "Mathlib/Algebra/Quotient.lean",
+      "source_sha256": "a1f8d68ca003481fc081120e1707b45434f395291f77eb416cf46841f2eded32",
+      "object_sha256": "e73bb392395c1c4054d4bb58e59747611517c0c70e34f7d4e2b93441e911494a"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.AddSubMap",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
+      "source_sha256": "f2242f08dad6f6a0c1f097b3491e7f1cdea7576c1933ea6d68fa905babedf725",
+      "object_sha256": "509a25b25b10a9f4e33f8fba9bb137adf6e05d97c4e793bff5d626640bc59e2a"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Basic.lean",
+      "source_sha256": "b8bd64bfbd3eb9468502c262c37855e75d84457fc4933abc3a395b39a58bdf4a",
+      "object_sha256": "08559a5d70e3defc06d90fad9974c92ec2e1bbdfc86721b8ae061dbb5859e168"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Formula.lean",
+      "source_sha256": "08baf4ad491f76cf9e4093d96418c6d10d14a879e4175b38cef98fa945161330",
+      "object_sha256": "41af0078395d56ad865fcf001f1daa6084c60332d09c62ee306fd9e17232fd2f"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Point.lean",
+      "source_sha256": "c55c5ed75e4703af6082bf20715dbf553b7841a1dd5fa7487d1ce877605925c6",
+      "object_sha256": "4062b3073ec18f67320170ac8d7dd5f592a6278aef321214194ae633bca01859"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.VariableChange",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/VariableChange.lean",
+      "source_sha256": "35f25b2dcb8c06a36eadb2d430a44cea282cf6d0fe142f37561be68fe4ea892d",
+      "object_sha256": "9a53499b86e8f788ba0addc920e2455756aa849e07647fefeb6dbbf51f201a05"
+    },
+    {
+      "module": "Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass",
+      "source": "Mathlib/AlgebraicGeometry/EllipticCurve/Weierstrass.lean",
+      "source_sha256": "471c1e8ec85a9905a58f91e331567ddf14a0cdb6997da1b526861b0120c13b3e",
+      "object_sha256": "b5f0b3f46c34fe5aaaa17e248e46bd085a5df418097f328ab59b90469d4595cf"
+    },
+    {
+      "module": "Mathlib.FieldTheory.AlgebraicClosure",
+      "source": "Mathlib/FieldTheory/AlgebraicClosure.lean",
+      "source_sha256": "f1d648fc418040759ac66e47788e06ea795a6f2c511f108a548fbeb7c28e2708",
+      "object_sha256": "35e718ae71b6a03f44bf59e4e15a4afea1c85fa584d7e7ce294fe3845628a25c"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Extension",
+      "source": "Mathlib/FieldTheory/Extension.lean",
+      "source_sha256": "61672f9026dc9a37ee3ba643479765512e3c1391d9fd6de6bb3a8d253a678c07",
+      "object_sha256": "41eb78713cf3d9e6b87f0512a1f21553e58a1c0eeae19fc348dc9196d57ec84a"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Finite.Basic",
+      "source": "Mathlib/FieldTheory/Finite/Basic.lean",
+      "source_sha256": "e13bd133063e0349d955817f5f319f8c861f7d6136afa326cb477302348f1db3",
+      "object_sha256": "ddd69237ab2e106eaed41c98b452bde39abfc6ee8edf1064819214729cdfdd7d"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Finite.Valuation",
+      "source": "Mathlib/FieldTheory/Finite/Valuation.lean",
+      "source_sha256": "72c080c49c4d252a9088a8037fd0035ad61560d6f34ce2947cf3bd3ceaf7e3f4",
+      "object_sha256": "9ae8a0ffcdd0c98a6ba07e6c39fc5a337510424d20355b0807668021b49b5e94"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Finiteness",
+      "source": "Mathlib/FieldTheory/Finiteness.lean",
+      "source_sha256": "d60cb8c1026f057a501f360aca8a7b6d4a8c3556022919765475c40ae2f8af4a",
+      "object_sha256": "df059eb84a44d48f2a000425bc57a8d61e57590891290d8854c22d3cfddbee60"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Fixed",
+      "source": "Mathlib/FieldTheory/Fixed.lean",
+      "source_sha256": "911cd0df8050c4b0dbb17591771e3c499fdb7cb32ff3c73c505357f96020189e",
+      "object_sha256": "5f99307e712d02b64a3ce8664b01dcbe1bae6ae73fb14187ce494234311a4425"
+    },
+    {
+      "module": "Mathlib.FieldTheory.IsSepClosed",
+      "source": "Mathlib/FieldTheory/IsSepClosed.lean",
+      "source_sha256": "7607f70e93f74a3b813a76448fe32ad4757dfee423bf69f046b32dfdc311ad2a",
+      "object_sha256": "3c3cec1461000a31ec6fd854d5d62e102bd9f58f833968d158b5eb32ba00c403"
+    },
+    {
+      "module": "Mathlib.FieldTheory.KrullTopology",
+      "source": "Mathlib/FieldTheory/KrullTopology.lean",
+      "source_sha256": "bf16fcfb1dfc63e4dd62a210f9db2b7f6873dc4a7240ee55394377c58fa8cf79",
+      "object_sha256": "9ef672dc1e1be4b42531768888ef0c5cdacd7670e5fe45cacf02e7afb0fef44a"
+    },
+    {
+      "module": "Mathlib.FieldTheory.KummerPolynomial",
+      "source": "Mathlib/FieldTheory/KummerPolynomial.lean",
+      "source_sha256": "7dbf6fae5adcec1403573c95e01280805b35106f8426e7ec2a02bd79e1d2dd08",
+      "object_sha256": "f03c738927345d5df1be8bdc61bffbd95b567160e843ad4c193280091fcca2ef"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Perfect",
+      "source": "Mathlib/FieldTheory/Perfect.lean",
+      "source_sha256": "aef2d68a08a6d8f21b5afa4cb48ce60348930b28e9882254ff39b390d146c479",
+      "object_sha256": "a96fc608525b6a1081d99129b57b6c3d1fdd128ffcdffd21b21860b8b1f81526"
+    },
+    {
+      "module": "Mathlib.FieldTheory.PrimitiveElement",
+      "source": "Mathlib/FieldTheory/PrimitiveElement.lean",
+      "source_sha256": "8b64c39ff8df16dff49444470375ab39816c19848b4f157a32d9fc2a465a5a62",
+      "object_sha256": "127fbeab000f636894abe6ff57a3c661fc82a3ff0966aee5275210906dad5f07"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Separable",
+      "source": "Mathlib/FieldTheory/Separable.lean",
+      "source_sha256": "f2787923a8c0cda8ff6c60d8e47e54b09ad5068fb03e5b288a15ab6ccee48898",
+      "object_sha256": "29ea20f44f4133a38629df620e72ea37725ba35ca2ba3ab2c23d29fecb1b6cdc"
+    },
+    {
+      "module": "Mathlib.FieldTheory.SeparableClosure",
+      "source": "Mathlib/FieldTheory/SeparableClosure.lean",
+      "source_sha256": "8648dd7d984dcb15a6dc26568d18437a0f4b922ded2272dd19e6d72b3c6cc2f6",
+      "object_sha256": "9aaa717052b69ded36e9c368b92fe4062842246d7f9f7ea958398252b89da89e"
+    },
+    {
+      "module": "Mathlib.FieldTheory.SeparableDegree",
+      "source": "Mathlib/FieldTheory/SeparableDegree.lean",
+      "source_sha256": "57990a4f079488480ec7226cf8d9c6bd7c5a64b66508b7859fba9b099a78054c",
+      "object_sha256": "f849ed504a2b0b472ac32295d2be8360e691106e99ac88515f7ea843acf4eaf5"
+    },
+    {
+      "module": "Mathlib.FieldTheory.Tower",
+      "source": "Mathlib/FieldTheory/Tower.lean",
+      "source_sha256": "cddade2b2d8c5c1f9ee62a291dade9839b6e1a7212bf5732a97668786f23a0d3",
+      "object_sha256": "803d6629a2b87644f63d61003612319e9a9c8ebf9e0577ed58baa010264e2d18"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Archimedean",
+      "source": "Mathlib/GroupTheory/Archimedean.lean",
+      "source_sha256": "a90508d8942e1a035d1cb66c53c670a14b122f4ff05ebe7e67b7e14e58c8ca6b",
+      "object_sha256": "8e6ad8de2d7750acf938c51a498f9135f2edcf6a54e260565c1b04661372db25"
+    },
+    {
+      "module": "Mathlib.GroupTheory.ArchimedeanDensely",
+      "source": "Mathlib/GroupTheory/ArchimedeanDensely.lean",
+      "source_sha256": "3766bc708c301da45913b430965159328651da1dc82f44eb74d440f4b49c84df",
+      "object_sha256": "cf4cb9087509d46a68d55dfa382a10575b3d1d973b9b21e860a91eacd983900d"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Complement",
+      "source": "Mathlib/GroupTheory/Complement.lean",
+      "source_sha256": "73951b111cac05e92c967888526a1ac0760ed787602ed8b599c43183b473df0f",
+      "object_sha256": "684cbbc65c2b6508b31deba2f194d5763eb394f1641d72a372d3fb1b946206cf"
+    },
+    {
+      "module": "Mathlib.GroupTheory.DedekindFinite",
+      "source": "Mathlib/GroupTheory/DedekindFinite.lean",
+      "source_sha256": "25de607156beb096a16409a4009a9ee704a961eaf680573ed5912c9a83aea75e",
+      "object_sha256": "5ee3b70a0f26f6473e4bb3b0bf9c1f295e0524e108c2f95345d07c7f25887cdd"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Divisible",
+      "source": "Mathlib/GroupTheory/Divisible.lean",
+      "source_sha256": "30e0b42f578b6d6f1484c783f3d26382ad9aae5e927194b0d194dd2a9b555f76",
+      "object_sha256": "bf37d7d4acca2ae2dc2b3eb8699873e677e65e46175ad8334bb034c18bdecf26"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Exponent",
+      "source": "Mathlib/GroupTheory/Exponent.lean",
+      "source_sha256": "c2c17f1bdb766b40d4a6bcdfb6c467202fd17625b59792160bdeb726f91ee741",
+      "object_sha256": "2a7913532667763bf8d011bc15965a268095be20f8e02f33c9512fa094a079fa"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Finiteness",
+      "source": "Mathlib/GroupTheory/Finiteness.lean",
+      "source_sha256": "7f8931a571f72a156f54d32235c3c09aa83af9028fdb1dd7d6b95c91662f1231",
+      "object_sha256": "813fd1fd906f4a340a24b88b5ed8a5dfdac588ba71d1268f72f7aa1cbb8b404a"
+    },
+    {
+      "module": "Mathlib.GroupTheory.FreeAbelianGroup",
+      "source": "Mathlib/GroupTheory/FreeAbelianGroup.lean",
+      "source_sha256": "0c023e613b73b96a22200610736edd5685b314c06c5105fc40a059376009f8bc",
+      "object_sha256": "21b73fc6d3c57bd709f3573a2eae8eb26fb69738e6ea7e5ec4e72e4db71804c6"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Index",
+      "source": "Mathlib/GroupTheory/Index.lean",
+      "source_sha256": "42fb0659fc45c89baaf7736b59ecf2b544cdafc86a370e3c3932858b36311e18",
+      "object_sha256": "6f539da77bbeaf78574707401e3a27ea1408049a55d7832f1c3b14ab98c0cebb"
+    },
+    {
+      "module": "Mathlib.GroupTheory.NoncommPiCoprod",
+      "source": "Mathlib/GroupTheory/NoncommPiCoprod.lean",
+      "source_sha256": "e0d8f4606a4d3d7907ddd902cbe04c90c7647e6cf26cf02334b9ad76e3c53894",
+      "object_sha256": "7703fe8397fb3ffaa33ef8b4a747fbdb1b0759a7a566a0d88b44a9f2d694250b"
+    },
+    {
+      "module": "Mathlib.GroupTheory.OrderOfElement",
+      "source": "Mathlib/GroupTheory/OrderOfElement.lean",
+      "source_sha256": "f5f551cc84fa8cc46ecd5b431703dbdc98d73c24d5d312dc9c35600659245169",
+      "object_sha256": "e73d2917565dee313aeaffdf0d006cadd0b88a836c1ab497c5809865917c8128"
+    },
+    {
+      "module": "Mathlib.GroupTheory.PGroup",
+      "source": "Mathlib/GroupTheory/PGroup.lean",
+      "source_sha256": "df335bc9227ee06f1d77185b9b5b1ed045353751120bfac813027d7a87f4ba77",
+      "object_sha256": "a5ab28d2aa44196613ae9e4db433bfb58229f3e79cbf71cd9f2090afcf8c2f5c"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Rank",
+      "source": "Mathlib/GroupTheory/Rank.lean",
+      "source_sha256": "e036a20c99d057a0013728119f3903f71841df9c5e715315a12f3c4f3ab2f84e",
+      "object_sha256": "749afc23ce17532fefc892bfd62f8ea1f1ca82794227eedb275b2c02ac04a77d"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Solvable",
+      "source": "Mathlib/GroupTheory/Solvable.lean",
+      "source_sha256": "86872381627c46ae240304166785865cdb5c2ec3f6f0ff9f95fd406fef112c50",
+      "object_sha256": "b3b0db5550bf04636039f7489ac74d06d6a0b69dbbe435c7bca33a72107d9d7a"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Sylow",
+      "source": "Mathlib/GroupTheory/Sylow.lean",
+      "source_sha256": "784d21307e58a9fa414b627563ca10fdeef6e8fa9485a5bd138942f8d1e0e6f2",
+      "object_sha256": "5ed72e15efcb8d94d8b26fa519ccd28ffb6015083ca0defb79839b4fceab9d34"
+    },
+    {
+      "module": "Mathlib.GroupTheory.Torsion",
+      "source": "Mathlib/GroupTheory/Torsion.lean",
+      "source_sha256": "8377a58c08ee7585bd3b041c9e5fff5f1ca8fd2e211ffcfbb977c15d6483fc71",
+      "object_sha256": "8bbd9788081abc2a37e37e31715ed13651bb05732f3362f11304bdc7882787e8"
+    },
+    {
+      "module": "Mathlib.Init",
+      "source": "Mathlib/Init.lean",
+      "source_sha256": "ef1ac48085075e843bc4b79e281d1a0dd731183dd98a168f79f8da9b06497a33",
+      "object_sha256": "06fe2aa1bbf7f0732f1c9d01bc1eb78fafcd39b7d509f50a1155541d5cd08bad"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.BilinearMap",
+      "source": "Mathlib/LinearAlgebra/BilinearMap.lean",
+      "source_sha256": "1fc748ae877fad382c51c8f0438cb4ce6281d6b21afa094da410862033a2e2b2",
+      "object_sha256": "c6921c33fb2b5972e654d28f5cd71c9e6f5c97dca0fc6c93c187f029269e88c5"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Contraction",
+      "source": "Mathlib/LinearAlgebra/Contraction.lean",
+      "source_sha256": "6e7f77499eb6b85db2bc61c7e9bab71294233871823ff246950dbc95c812e494",
+      "object_sha256": "9ecceecee8a64237f0e891f5b7ab9fb66f883c056051dde0c66bc6dc7b925393"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.DFinsupp",
+      "source": "Mathlib/LinearAlgebra/DFinsupp.lean",
+      "source_sha256": "d9a02cc12bb23e39111bf7233788e9f1aff64759f84931de58cef40ffcdf87e7",
+      "object_sha256": "8bce9f20964593ba1aace84c2ee31d46a777a73acc5bd2f8a60e9260ab8e0c8f"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Determinant",
+      "source": "Mathlib/LinearAlgebra/Determinant.lean",
+      "source_sha256": "b8360e2e5ba9a984bbc1a73a88635487d51123503dcdc7277cf077f96970b30a",
+      "object_sha256": "b435bbb3bded1c6bb525c1186b1b2fa2b58f66d53ea0550123c60cd5c78073ba"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.Basic",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/Basic.lean",
+      "source_sha256": "52ff0fe87b73fede3f39441e07e71cb89ad50a6e4053fe0f3786acb5ba7a6fa6",
+      "object_sha256": "0eaca6fb6f9e71d2ef90d0b1e2bedfea90a48434eb0d53531ae075d1ec71a608"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.Charpoly",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/Charpoly.lean",
+      "source_sha256": "a8e3d7f8c29aae5356e2c8cf84a7b45c44262e6ab65cc5f2249a74266532d0d5",
+      "object_sha256": "b5ff7d15272a875567c9fae5684290b4b3a7da245bcb4b57e1e1543d7b7e6047"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.ContinuousLinearMap",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/ContinuousLinearMap.lean",
+      "source_sha256": "bdbd37e37f8849c621376f55eb4af0932fb7971d0380a99301391e87751f1ea5",
+      "object_sha256": "941e2a94cc3cc6c2ab0367f5ceef5ea67177eebb3a9eeca426f1e92c68f185b8"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.Matrix",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/Matrix.lean",
+      "source_sha256": "4429263ed0fb0f7baadfb57f401d91dbdfa9289aa398388d6684f252b97e65e4",
+      "object_sha256": "bf549897ef373f37ec4d51f37bff4ac19247270919a02d1080a72b46c80fb4c1"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.Minpoly",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/Minpoly.lean",
+      "source_sha256": "22b710b74e6fca38e007512b2c6e36a25880d7f77845c02e6906740cb8d848b8",
+      "object_sha256": "2b1a2e5296e5183ebcdf8b6d70f061bda7b5baf9532520c3d01ae8962e6dc69e"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Eigenspace.Triangularizable",
+      "source": "Mathlib/LinearAlgebra/Eigenspace/Triangularizable.lean",
+      "source_sha256": "c441e191010aedfb7bbc7e65bcfafa9ec7da27474f96d29a3f1550613cc03c0d",
+      "object_sha256": "db2703069d36c6ab1cd8f604d5b4d8c4e6f89b7cde63a77ddac34acd3251501a"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.Basic",
+      "source": "Mathlib/LinearAlgebra/FreeModule/Basic.lean",
+      "source_sha256": "9af67befa965832787166cae1bbf9287520dcb158fa6470e99d0d09859258ee4",
+      "object_sha256": "a234f2ce44677dcbae516cb83149850405d0aa734da7aca40f6b253d2782d1c0"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.Determinant",
+      "source": "Mathlib/LinearAlgebra/FreeModule/Determinant.lean",
+      "source_sha256": "71d2cb8cf909893134d78921cb3411d0d8649349d644b58c711599fc911a2ead",
+      "object_sha256": "92aa495bbcf53ff19c25a7bf8807ae45b90d4d0fa41179ef226a4c65fc803707"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.IdealQuotient",
+      "source": "Mathlib/LinearAlgebra/FreeModule/IdealQuotient.lean",
+      "source_sha256": "5affef533a7d7a78274b7bdc5286f31c17f28de9e58357035cf417e929da447e",
+      "object_sha256": "f3a72a00310db92033e34a5da5a2c67a8e841b5401e17b9d6a42d1184496c406"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.Norm",
+      "source": "Mathlib/LinearAlgebra/FreeModule/Norm.lean",
+      "source_sha256": "8060e37466b3302b2105e28fed1e67ab40308a45a3b1fd87385fa3905b80afc1",
+      "object_sha256": "cc4e0d69b4e30caf99aff8b8dbbd4935b75e0dc9b2575c3519f15059a32e2da4"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.PID",
+      "source": "Mathlib/LinearAlgebra/FreeModule/PID.lean",
+      "source_sha256": "5609ccaed38135841c57807916d7b2e5ebf4de49396f017447b51b786d4137ab",
+      "object_sha256": "57a233f73e929acc3ec5627fbbfb630b04756121c2f2192ed0daecbad227eaeb"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FreeModule.StrongRankCondition",
+      "source": "Mathlib/LinearAlgebra/FreeModule/StrongRankCondition.lean",
+      "source_sha256": "5e08e3adccbb7786d9cee448270ccd0e50b0408e4411ac397e81edb1ea694582",
+      "object_sha256": "473155b584fd8e4a9ae8abfd9404849908aba733d7b9d7c057d4666257d94e7b"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.InvariantBasisNumber",
+      "source": "Mathlib/LinearAlgebra/InvariantBasisNumber.lean",
+      "source_sha256": "cb46685107db7526a4c58da1662c5f58a970b356156f640b03878600cb4956b7",
+      "object_sha256": "af135d212792ca4eb3eacd8d0b8e959246b98bdaee1d74f80713bea95a3feb12"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Isomorphisms",
+      "source": "Mathlib/LinearAlgebra/Isomorphisms.lean",
+      "source_sha256": "4d21cd74f6d5a419b57c2d8324b62f114588d72600730f72bfadcb012c1fcf53",
+      "object_sha256": "9b110e5178d72eb8a7c52c6fdea54c5c5b31a1d0e749e0f1becbabc3cd88e39a"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Lagrange",
+      "source": "Mathlib/LinearAlgebra/Lagrange.lean",
+      "source_sha256": "787c70cab27668bfd24917a098b3767b91098ff0973d0218c344bd10251fc7f8",
+      "object_sha256": "10628582af9aeb72ae365514a8353a4b06102ec870adff2a4d221956043fbb79"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.LinearDisjoint",
+      "source": "Mathlib/LinearAlgebra/LinearDisjoint.lean",
+      "source_sha256": "dce9e2b979d97ba536dde0c61df770fe2f56f5c1282e3aded94c693675f4b1d9",
+      "object_sha256": "bac9d5b7813fd98d5d993caaaa466324aa0373080bff15a802d24bc233277934"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.LinearPMap",
+      "source": "Mathlib/LinearAlgebra/LinearPMap.lean",
+      "source_sha256": "bc6b8a7b7e2fcda96e551cad1a7ae7fd65730a7c75c46a4aa9288758f090ecca",
+      "object_sha256": "d4fbb3133ebdd41ef31db73e2770217917d4040ab855e35bccab8ef90953d247"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Action",
+      "source": "Mathlib/LinearAlgebra/Matrix/Action.lean",
+      "source_sha256": "da139b4c337dcfede9454f66031c0096be5853edcba9c05ef2b22ac720e93329",
+      "object_sha256": "13d477723bd96f917044130db07308793853786c650c56554095851da355c19a"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Adjugate",
+      "source": "Mathlib/LinearAlgebra/Matrix/Adjugate.lean",
+      "source_sha256": "690c65767f702dd4cd815873b74997f8df862f5060aa7d22e8834c9f1a5025e4",
+      "object_sha256": "18a82eff91a1f818fe35c414fa4d846c6d7e1158b2497cd841558587ffa07b7f"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Basis",
+      "source": "Mathlib/LinearAlgebra/Matrix/Basis.lean",
+      "source_sha256": "bb51e86ca7aa797679596a87eafef3892f2e6608d76cbb72e5bbfa005bd28b22",
+      "object_sha256": "471a06ec89d689c564d13f5d2a6d97d5fd734da1575170ca1a98aa01f187c1ed"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.BilinearForm",
+      "source": "Mathlib/LinearAlgebra/Matrix/BilinearForm.lean",
+      "source_sha256": "6b438bdcb0b80057beec48c7a9a1f234b44b153474b61732effd69c42c628d3a",
+      "object_sha256": "c9c44b8a7a19354b04d9d4b6b98b6b1e78d7475b55b904fdbceac6ca9e893022"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Block",
+      "source": "Mathlib/LinearAlgebra/Matrix/Block.lean",
+      "source_sha256": "e1fdbb3ba3bf87e90167c3249887ff7da754e36bb1842400a573a8a22e156390",
+      "object_sha256": "b701f4b398457a22dee311056da09168767a4aa2dc5db7c8d3ef58e1c815bce2"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
+      "source": "Mathlib/LinearAlgebra/Matrix/ConjTranspose.lean",
+      "source_sha256": "10ace10899567db7c2ccd38c0e89e3bdca2261494975a42d3b1a5535c9e3b1b6",
+      "object_sha256": "c004b351b70c24988a6bccbe8dceeda989bc52ba243b630824ed6a8d3d6448e8"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Defs",
+      "source": "Mathlib/LinearAlgebra/Matrix/Defs.lean",
+      "source_sha256": "d1b8dd919b0845ace3e518b85681fe8deeb400f9352bfe6b3640190f62eb47fa",
+      "object_sha256": "96717ad31faf0a2557aaa8392c7a36405df4488f8b1544906bc01c4eaf611363"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Diagonal",
+      "source": "Mathlib/LinearAlgebra/Matrix/Diagonal.lean",
+      "source_sha256": "16ec77c2931a23c29f0fb086af6455ba8ec16f170f0fd8c2178cb81f79494219",
+      "object_sha256": "1c468c01709efa503eff165b61791cecd01e7a0551bada4699b12b4b98375df0"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.DotProduct",
+      "source": "Mathlib/LinearAlgebra/Matrix/DotProduct.lean",
+      "source_sha256": "abe08c1c8f3a22451e5242ceb70b7db37c5b62c641d4f0ee0829a45a12744612",
+      "object_sha256": "8f00b86908bf2a43e117f50b79bb249173ef3aab6f74c30a0907caa70758656b"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Dual",
+      "source": "Mathlib/LinearAlgebra/Matrix/Dual.lean",
+      "source_sha256": "a68cf1e56d143a323a313ded6ad8f74052e81f2e03d7b30311eb8e5be73796f5",
+      "object_sha256": "eab626ee2a8a0ababfea61fc7e5c5f81f767fcf539306cca72a3da56ad3b09fc"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+      "source": "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Basic.lean",
+      "source_sha256": "d42c0d24fdd3ff83cb1a409b8d253a250b400565f70f977a9565b02746fbe528",
+      "object_sha256": "b918728ff54fe9f7af789d578e18fbe43760735af606ff7cc1907a6520b491cd"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card",
+      "source": "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Card.lean",
+      "source_sha256": "feabf983b515b06af01a87777f299e192119f724d3e55d0a30c2d219da94acb8",
+      "object_sha256": "25da450a54b86acecd0e75c956b8be5eedab7e9d97a50720388792a398aa5271"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs",
+      "source": "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Defs.lean",
+      "source_sha256": "b22cc8e1b3a239d59c044cfe38bd52541bb07ecb1db58a349241d8120a0dd3d4",
+      "object_sha256": "c5589db14a85cac4c5ad2e3e6512ac0c3a1df34eb3e11c4e350a6780147e6a59"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective",
+      "source": "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Projective.lean",
+      "source_sha256": "01f520ff7c3f1bd27a27bc7383453f28d3eae0e8d0752ce1bb0ba6f26f0dc0ff",
+      "object_sha256": "137a6c9673ecc820072dfefe6d8fd3cecdc6f5816b1accf443d9cce6f65505fa"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Hadamard",
+      "source": "Mathlib/LinearAlgebra/Matrix/Hadamard.lean",
+      "source_sha256": "a2b53920e94aed7cdfa6dd63604fcf730effd63b79ddaaacde25a738c55b8c59",
+      "object_sha256": "8d82fb9037fb2062830234fdebbe5c5084ec5816acfcf7d603625fcfb5e4989e"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Hermitian",
+      "source": "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "source_sha256": "9f4e84cafd93f05935d8accc2846a4d624c1fe994c53ab348b8338464bf5cb21",
+      "object_sha256": "ed743478a334612a767df3c5b6afce9b2a834d7f4ee206b5770a30b3b74aec4b"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Ideal",
+      "source": "Mathlib/LinearAlgebra/Matrix/Ideal.lean",
+      "source_sha256": "ba21785f67a658f17c5fa25162fbafb73e1767f9fc88e662bc1d37af05548e5a",
+      "object_sha256": "7a1be77c74f440f2f30bdc8164e512b6ef59dc7acbf417003394cdef1e261bf9"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.InvariantBasisNumber",
+      "source": "Mathlib/LinearAlgebra/Matrix/InvariantBasisNumber.lean",
+      "source_sha256": "d737725c5ac89a197406b7e2be3409e6f8f292fbc2024af36535864f661232e7",
+      "object_sha256": "b81d76bf57505f50e24c249682e922ce0956542359280c22c110774ed06c77db"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Invertible",
+      "source": "Mathlib/LinearAlgebra/Matrix/Invertible.lean",
+      "source_sha256": "0d7c4394d4058df58d117fe00d6effed22dcb91fd22d448df0d8ab6451831cac",
+      "object_sha256": "537277af33abd1f277247ae91677f1664c8bd4b898a10374fb130b963223216f"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Kronecker",
+      "source": "Mathlib/LinearAlgebra/Matrix/Kronecker.lean",
+      "source_sha256": "2b246b20d1348c0e4343932599e7eb6b8c9288d9bf4c7b1111a318fc389ade02",
+      "object_sha256": "27f45acce392ce0b8b483c88f009312376bebd7606daa952a660c61a2663d805"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.MvPolynomial",
+      "source": "Mathlib/LinearAlgebra/Matrix/MvPolynomial.lean",
+      "source_sha256": "f5d48ef24eee96850735e9ab7f928609e09d255cfd94ff0d3ba06556005d4078",
+      "object_sha256": "534f9d733f9103d5e807645ac20624ac1c565f13d33db722148a36be3dfaa080"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Nondegenerate",
+      "source": "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+      "source_sha256": "169fea6bd88a0373e1b09b71c17b8f1cf4f332dc7ef215273eddedfac2a37ae5",
+      "object_sha256": "4d11b5640a0bc420ab8a5e46daf58b6a3ced81569419094ed28de95cb92dda32"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+      "source": "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean",
+      "source_sha256": "b13e82310ad43e22fd4611c07b2786cfa28c8c3696e0c7d361470791488bfee7",
+      "object_sha256": "ba579d9b73e0578fb946aabfd8bdd3c949dc54a2fd5e1a21fe785ec3d95f54e4"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Notation",
+      "source": "Mathlib/LinearAlgebra/Matrix/Notation.lean",
+      "source_sha256": "7b9aa15db9aac0ba7a1581099cb2c481571c20af69a5e130065a7a51d683b99e",
+      "object_sha256": "e2e327f0a81908b547e3a453919bb0626637cdb8c8753f2eb0650a930e877513"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "source": "Mathlib/LinearAlgebra/Matrix/Polynomial.lean",
+      "source_sha256": "c4213a9fc48a9dcb289e1562bbfecd723d4eb208228c0bbdd4da9e37c6f74d68",
+      "object_sha256": "b2d0b79502165a12f76ce890fbf78fb7127f3900fc1c05ca254fedcdb119abaf"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "source": "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "source_sha256": "1dfca33f432dd2275af43f9efa10fdfd8aefb3216fa76ca05ee9dcce00107406",
+      "object_sha256": "4603798ab3c69a8f3c7562ee7eb096c7c223ada27dd45adaf0cbd5f64b57c096"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup",
+      "source": "Mathlib/LinearAlgebra/Matrix/ProjectiveSpecialLinearGroup.lean",
+      "source_sha256": "e99a13c37ba52d474bf4e797f52b26535372cae5c25a0216496f803e2e19115e",
+      "object_sha256": "2fbf80f417a94e1f8f2c71fa81895e126c04a33a50efa8129badd4d856824d26"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Rank",
+      "source": "Mathlib/LinearAlgebra/Matrix/Rank.lean",
+      "source_sha256": "a16ed31b88ffcb51da5078c1b04eba1c3d5e6803507aaa89ea388438c980e379",
+      "object_sha256": "3a5839bb82748d88e76ee2fddc4f1c46399f0c71e8b51dfbcf92c59b056448d6"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Reindex",
+      "source": "Mathlib/LinearAlgebra/Matrix/Reindex.lean",
+      "source_sha256": "8178dff6183ced5f5892ef4194adb9bffddb87a36dc2b7db9526d15d2371394c",
+      "object_sha256": "d0ed5357d734b978300bd7fe06449e643a2169fba1f0d686d5b09367ff7fbadf"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.RowCol",
+      "source": "Mathlib/LinearAlgebra/Matrix/RowCol.lean",
+      "source_sha256": "f0f79d58c4b9e2025888c65c49fdd1bbbebb4fc0901d0c91619ead833fb63d2a",
+      "object_sha256": "d3f9b0eb86d305a9c3f633be96e101773cd94b5bd3ead05c85bae802b4a35d97"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+      "source": "Mathlib/LinearAlgebra/Matrix/SchurComplement.lean",
+      "source_sha256": "a59c9abc8438459792c5875c38514a0df8bd23126f0509e41cd1c37fee3ddb78",
+      "object_sha256": "e288f15582c220d1a10a7a124a1ad7b37b7ab08d388a2687200a83bd8a5e8edc"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.SemiringInverse",
+      "source": "Mathlib/LinearAlgebra/Matrix/SemiringInverse.lean",
+      "source_sha256": "6c417bbe036ef0983068f8cad7a9d7da67c6daf153c949a7326e46d3eb8b1a89",
+      "object_sha256": "4f0ff301a73f9a98ab0e0af7a7f2020bc861269768afd1673558f92604af44b7"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.SesquilinearForm",
+      "source": "Mathlib/LinearAlgebra/Matrix/SesquilinearForm.lean",
+      "source_sha256": "4c452b093c7e19028193ada213285306e845722af63737490768deae87e48658",
+      "object_sha256": "1f9555a4b41eb91d367bd1f993d11d07e972a01ce0c24593c1de6c72b7882570"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+      "source": "Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean",
+      "source_sha256": "6d17d7b79c1ec38405466c5269cf917856d209e0fad4a2dae5dda8341e0c9d58",
+      "object_sha256": "d8e622259ee4cfdb12d55826bc51e28a1f2ab1432a2f7d29b6a68b1782bf4a67"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.StdBasis",
+      "source": "Mathlib/LinearAlgebra/Matrix/StdBasis.lean",
+      "source_sha256": "72b40833975d985e232b3cf6861452272ce3cc4a70e175edd9240e62a077c2aa",
+      "object_sha256": "3f9fd6195f471f29d1f506668d57bbb68f9bf034402275fd4ac00f6d1348de5c"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Symmetric",
+      "source": "Mathlib/LinearAlgebra/Matrix/Symmetric.lean",
+      "source_sha256": "34d6325647e44e9d590e661691ec146d1c9744f273c01229646a0ea8f8d8f99a",
+      "object_sha256": "d929a0e9378394f83cf3d2f94a310f34b55409ef6e3caee9ae37f8608a8ce025"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.ToLin",
+      "source": "Mathlib/LinearAlgebra/Matrix/ToLin.lean",
+      "source_sha256": "3f6fcd9274c56b54b6667805164841203f828ddc50a0e25ac372e0ccd5bcd356",
+      "object_sha256": "7831b09bf912c674e714a49418dccbffeb26a25222a52becc0379dd8b3517577"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
+      "source": "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean",
+      "source_sha256": "e8453aaf5dc0dc0eb4b7f788172a03c84f7499d81e7792c7488cc1b4a4e8c71a",
+      "object_sha256": "c95b3879991a6f22b76a9383288601ace10b910694bba069e85de59ffc1fbfdd"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Trace",
+      "source": "Mathlib/LinearAlgebra/Matrix/Trace.lean",
+      "source_sha256": "8053b04dc1c67b3a7d14262acc43b574e521940085e031726947f3c2241b7a73",
+      "object_sha256": "475c7fb70f4084715cad0ea7aadeaa734aadf88f4711a6754e7a989c657c8b34"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Transvection",
+      "source": "Mathlib/LinearAlgebra/Matrix/Transvection.lean",
+      "source_sha256": "ef1426814f179523ff7e246e66953258ee7c8ffd721d6b14eac547e6e3a9d8a9",
+      "object_sha256": "2216538e1cf510073340d21bc69314afa8647ab72a4acc67a0d3fa6fdcf775e7"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Vec",
+      "source": "Mathlib/LinearAlgebra/Matrix/Vec.lean",
+      "source_sha256": "629d8691b6dd8fd3775f09c8cefa5dc4583902b7b538302bfac79d1bf9887f67",
+      "object_sha256": "d89ec61b88de0051c9fbbad71ec2a937c9d6e8165d6e3664870399120ad142b7"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.ZPow",
+      "source": "Mathlib/LinearAlgebra/Matrix/ZPow.lean",
+      "source_sha256": "e9185e74fa9875b6dc0054bc08b9cf8b7946d7686d7fac2f5552dfddca09a03b",
+      "object_sha256": "bd2644517251c3134928c469067a0ffc845efb95fe2e8c3862c6e6064c45adfd"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Pi",
+      "source": "Mathlib/LinearAlgebra/Pi.lean",
+      "source_sha256": "106ec6ccc535451d9f567694160df14e1e84ebc8dceac7ad5d991608e79c1796",
+      "object_sha256": "9feaff2fc0216310ba598002af81fe93f6eb125c9004c7b227c1c71477ad500c"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Prod",
+      "source": "Mathlib/LinearAlgebra/Prod.lean",
+      "source_sha256": "949e2c1a2ab2a97ceed7c77feb972789ad6b9ff5404f92ad04e38a169fa1f963",
+      "object_sha256": "d47bed8f99e811c3fcc7a1c5cda5a483301054ffc6e43681ecf8c258affbcd17"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Projection",
+      "source": "Mathlib/LinearAlgebra/Projection.lean",
+      "source_sha256": "2174496a42054df6800b776c3ae9ca3a75d93e35541ff526151f413ac011d503",
+      "object_sha256": "cf3a24c21dc7131516ef8b4a0802c017761237cb33822ca81101025f917ad7a4"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Projectivization.Basic",
+      "source": "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+      "source_sha256": "88589b5bdc882d0b030472eb77511eda1cac979e3c5bb71a1e7cb4e278a4bb9c",
+      "object_sha256": "18a25275840239554b5501bd70ab6425ce6e4afa3bc51dc8167aa86286bf6941"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Ray",
+      "source": "Mathlib/LinearAlgebra/Ray.lean",
+      "source_sha256": "c367a9d8f1b05a60b223af02ed92d229e8caaf11b4e0d4437f8044236205c771",
+      "object_sha256": "72b650cb60f07029c87781a8b600ce87ab6fd5ef934020c1ff369ccc8e8c1a12"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.StdBasis",
+      "source": "Mathlib/LinearAlgebra/StdBasis.lean",
+      "source_sha256": "7272c9e680e6a84391984aaf01a4f8ae5b5f9c61cec38d814e5fcf10e455be98",
+      "object_sha256": "e3f48e9bf3d3a6cdf13f7f1ec1fa5278ada797bab7510e1f647b3006738b4844"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Trace",
+      "source": "Mathlib/LinearAlgebra/Trace.lean",
+      "source_sha256": "a87eaa8ffd1acf2da6e564bc42c29826b0a070f52f825a46c5ac40d821ad9e3d",
+      "object_sha256": "352f72da3d7f00f8806e617563aee2ec0fd3e9e7367dec91ae097104e9996db0"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.UnitaryGroup",
+      "source": "Mathlib/LinearAlgebra/UnitaryGroup.lean",
+      "source_sha256": "0136abe584007ffe1b9e9b0016b792ed92bc2de36fa710e87af9cb87d0808f93",
+      "object_sha256": "a2c545d04fb4c38f094581acc7cfb3a0d04238078078356bf57cc4ed548a1c0f"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Vandermonde",
+      "source": "Mathlib/LinearAlgebra/Vandermonde.lean",
+      "source_sha256": "f975844f29513ed4423e88d0e22654f38b7c1b74b7f6ce164aa5ed4d20d52403",
+      "object_sha256": "c7cb407833ebc44fc7b6e0726b898ce344bebf8d5bb43e613a5225131f6c11cd"
+    },
+    {
+      "module": "Mathlib.NumberTheory.Divisors",
+      "source": "Mathlib/NumberTheory/Divisors.lean",
+      "source_sha256": "0a0c63798853ce08ee4b4dbc1cab6804d9ad4b6df9e636028ebe94186e72fbc6",
+      "object_sha256": "133770fa753116e9e08005a86afdea4fe18432e039d6f98db10d890ed8d2418e"
+    },
+    {
+      "module": "Mathlib.NumberTheory.FunctionField",
+      "source": "Mathlib/NumberTheory/FunctionField.lean",
+      "source_sha256": "d6e838a5f1b3817af8820eb123fb16847eef4259153bc8aa4506ab114a1382bf",
+      "object_sha256": "ce53d34c04e9451df286e3cb518d82af03cb1469f2932e58e702be9f9d6e0895"
+    },
+    {
+      "module": "Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic",
+      "source": "Mathlib/NumberTheory/LegendreSymbol/QuadraticChar/Basic.lean",
+      "source_sha256": "8fc3190363fca042ba368ed92ed3f48c2dad8da0f2420256fc072e59e05515fb",
+      "object_sha256": "e378a5443eae859d42d9656a364a46847ff7ccbc2ae821309d72d3d926542784"
+    },
+    {
+      "module": "Mathlib.NumberTheory.LegendreSymbol.ZModChar",
+      "source": "Mathlib/NumberTheory/LegendreSymbol/ZModChar.lean",
+      "source_sha256": "91650588effef6e496df87468c8410a9d82a15bb98e131711e17ff26502c9f43",
+      "object_sha256": "1cbd62a987816f7b952008e5e374c8cd86b2320f10011f03c2725bd6018c2b16"
+    },
+    {
+      "module": "Mathlib.NumberTheory.LucasPrimality",
+      "source": "Mathlib/NumberTheory/LucasPrimality.lean",
+      "source_sha256": "473b4116c0c8fb3e4f1478d41471df080e5b09607e5fd5e6593d57cd90f249f6",
+      "object_sha256": "ee84e9f29af890073d9dbbada1fa1b01694e20058f1a33bd478d923d458e1f26"
+    },
+    {
+      "module": "Mathlib.NumberTheory.MulChar.Basic",
+      "source": "Mathlib/NumberTheory/MulChar/Basic.lean",
+      "source_sha256": "96b93e774d7f2071797742aab74d7371dec26b20348c9f93cd322847a9ed2c09",
+      "object_sha256": "b9c3f781c8760efb8637e0f9e29bf55fc9afdfeb912553157840de652b9c531a"
+    },
+    {
+      "module": "Mathlib.NumberTheory.RatFunc.Ostrowski",
+      "source": "Mathlib/NumberTheory/RatFunc/Ostrowski.lean",
+      "source_sha256": "50e4a4d798ba2dd2872d163b6a5aeb55d8cf128d153e35dcc8c630f4eadcbabe",
+      "object_sha256": "d95e166f4f161c0e331f6e60ea6c565e0cfebc92f166f09636e93c4adf89f803"
+    },
+    {
+      "module": "Mathlib.Order.Antichain",
+      "source": "Mathlib/Order/Antichain.lean",
+      "source_sha256": "7cd92ed10c4cfa5903b0c10709596fb186a39070d2dae4cf3fb24189130901dc",
+      "object_sha256": "ad64484841e270de5e832b109726b25bbaa3b736eda05d8433b3ed8c028d7510"
+    },
+    {
+      "module": "Mathlib.Order.Antisymmetrization",
+      "source": "Mathlib/Order/Antisymmetrization.lean",
+      "source_sha256": "1e94bfeb3e4c8c427bdf4f6bf80cdbda570fb6b07a03284b742a9ea1db96dc60",
+      "object_sha256": "725a97c3dd54fbe7fb5aa6e7750a94792093aa35df62b6d7bb84cca962574459"
+    },
+    {
+      "module": "Mathlib.Order.Atoms",
+      "source": "Mathlib/Order/Atoms.lean",
+      "source_sha256": "0119b5415a86347b5fbe25ac1cc7c7da368d0527d140769f1b3bebed2b43e8ce",
+      "object_sha256": "8bb7594508bc88f27c7a3054cf22ad1998149423abd27933f9a81020a465559b"
+    },
+    {
+      "module": "Mathlib.Order.Basic",
+      "source": "Mathlib/Order/Basic.lean",
+      "source_sha256": "f2290a956df02b3fe15af9805250dbf046aad8a8c69b6eeb4c3831a3576d3e80",
+      "object_sha256": "95b4dc0f1363b465b09f39e29f1e869502df3a2157b15d67c5aee0c49ee34c7b"
+    },
+    {
+      "module": "Mathlib.Order.BooleanSubalgebra",
+      "source": "Mathlib/Order/BooleanSubalgebra.lean",
+      "source_sha256": "0c1d04d1da07598d3caca9375b997ac8065615dcc7346c161630f5e4233dc8e6",
+      "object_sha256": "f10e2596e028b62036076e834187e69453f7916f2c33c4a07c6c2ccf146f118e"
+    },
+    {
+      "module": "Mathlib.Order.BourbakiWitt",
+      "source": "Mathlib/Order/BourbakiWitt.lean",
+      "source_sha256": "cf846a98a2af74d90a01767e84642b48d9e729b6172cf24eeafbfc6d26f0681b",
+      "object_sha256": "1a39ebaabd31384993f18859374f87dbb7b1c5fee3cdaa068fff3b52f6a4b2e2"
+    },
+    {
+      "module": "Mathlib.Order.Circular",
+      "source": "Mathlib/Order/Circular.lean",
+      "source_sha256": "a3b9a03ade56f6ad7e5a9e3bac1f8998c357d121084949c9767f509f6992a990",
+      "object_sha256": "64ac167d114564c0a6381ace14fa1fa74746bba3add23c29a6bb421f3ccf2d9a"
+    },
+    {
+      "module": "Mathlib.Order.Closure",
+      "source": "Mathlib/Order/Closure.lean",
+      "source_sha256": "aeee0321a37b7b6d663a9a0caa4955de1294190f0f330a0e3bb414a646238fcb",
+      "object_sha256": "b36f94095d50583209c9625c4e7331f26c4e369e9137207eb9ba0f70000942b3"
+    },
+    {
+      "module": "Mathlib.Order.Cofinal",
+      "source": "Mathlib/Order/Cofinal.lean",
+      "source_sha256": "096b8dd50f00b805bca7286a0f4bd8adb334540f1fc0aed2ebab70d09b5f2d40",
+      "object_sha256": "a250b0b7a5d64727bc57ebdf84f16b246a0e5937e3ff356413ce73f6c2fba9fe"
+    },
+    {
+      "module": "Mathlib.Order.Compare",
+      "source": "Mathlib/Order/Compare.lean",
+      "source_sha256": "7925b4704fab56c74ced28467543cdf9bf5ac3543019c33dcb6f8d34bb9c63f6",
+      "object_sha256": "f7c9ad6136c6dedab0d2314d225e8af882a7232b4e332c74e4f18d9415fd80f1"
+    },
+    {
+      "module": "Mathlib.Order.CompleteBooleanAlgebra",
+      "source": "Mathlib/Order/CompleteBooleanAlgebra.lean",
+      "source_sha256": "4906e4b5c7ad565eb3c8a464b815c1b94e2fcd734390c5f91efea3e252f77e73",
+      "object_sha256": "7259a96628a0ca38a4d532c5dd85951353a7b44d0830ec8c50de90d91819aac0"
+    },
+    {
+      "module": "Mathlib.Order.CompleteLatticeIntervals",
+      "source": "Mathlib/Order/CompleteLatticeIntervals.lean",
+      "source_sha256": "9052c1c2f6d0fdf239f1eb2cb5c72df8894a11e038ee685f276b57ece21f83e9",
+      "object_sha256": "6f91396c7d81afd6de11dbe6b648ec73f3ac6fb57ea776a6e5b702b91c056f64"
+    },
+    {
+      "module": "Mathlib.Order.CompletePartialOrder",
+      "source": "Mathlib/Order/CompletePartialOrder.lean",
+      "source_sha256": "810a4d9bbe7f635bcd74b6f03ec550e8b60497e08e5c829ca52262d67a079653",
+      "object_sha256": "7a5af93e1e6b59b87b0b90a5fd6601efc5da1fdc8ef39aca4448144c836bbee5"
+    },
+    {
+      "module": "Mathlib.Order.Copy",
+      "source": "Mathlib/Order/Copy.lean",
+      "source_sha256": "d72a670c80aebea17a8cb4e7e14a2fa5cfc7480282b6560866bfc35df7c7e835",
+      "object_sha256": "e757480abbd3dd9b8d6c7746e86d01bd3434ba1c2008f6d37121f110f046d5ec"
+    },
+    {
+      "module": "Mathlib.Order.Cover",
+      "source": "Mathlib/Order/Cover.lean",
+      "source_sha256": "8e142c23a160cdf9b101daf5550fbe0ffa576a459182d26204fd67b58f4574d9",
+      "object_sha256": "493dcd5ab462410230e2c22095ec275f5133e6f937711463711e4939410bf226"
+    },
+    {
+      "module": "Mathlib.Order.DirSupClosed",
+      "source": "Mathlib/Order/DirSupClosed.lean",
+      "source_sha256": "4a20209370b04628c475df4b6d1a36b8ea132afffb84a8e6cb0db611a3c8d8c3",
+      "object_sha256": "940bde04ef99a2be5e1e28d6680d42ab567f1f0eb1a4b856407a587414271874"
+    },
+    {
+      "module": "Mathlib.Order.Directed",
+      "source": "Mathlib/Order/Directed.lean",
+      "source_sha256": "1f8b476e8a5070fe78f0e55e17e49575d6793cc93018b0756fd8bef11a36b124",
+      "object_sha256": "06008ec0693ea5290d8270cba04d35d61896c8aac5f29586be40138ff7b933b1"
+    },
+    {
+      "module": "Mathlib.Order.DirectedInverseSystem",
+      "source": "Mathlib/Order/DirectedInverseSystem.lean",
+      "source_sha256": "5287e30bf736cea83b5a79b9685c058982680f56268e207623adbd7702974d9e",
+      "object_sha256": "1805256e47fec38fed00d7abf8680d3da122408dc383e628639f4c7c42db1521"
+    },
+    {
+      "module": "Mathlib.Order.Disjoint",
+      "source": "Mathlib/Order/Disjoint.lean",
+      "source_sha256": "ee39fce84019aee8b85be6b329a5939cee77c285b09e0503d3e2084fa77ee696",
+      "object_sha256": "4a9c052fc298067bcf3b1b67ab40978509e2806ec85f5ade8be3d754b14db539"
+    },
+    {
+      "module": "Mathlib.Order.Disjointed",
+      "source": "Mathlib/Order/Disjointed.lean",
+      "source_sha256": "36100454a2ea2a4239522e80fc5c18a7a87c5fa21f45952de3b625338dc99079",
+      "object_sha256": "817b308cd9411f79e0b8b9dd3a8d489c9e07031987a27482c90b0d929f03ab06"
+    },
+    {
+      "module": "Mathlib.Order.FixedPoints",
+      "source": "Mathlib/Order/FixedPoints.lean",
+      "source_sha256": "127dc67ffbb65bf1977104fb0e1029785baeff1fe0e2b525c55e8f479bde944b",
+      "object_sha256": "967d4c364fa60c442d870088b6365b9eb5a49dfd57b9318d3f08fbfe16aa0bfb"
+    },
+    {
+      "module": "Mathlib.Order.GameAdd",
+      "source": "Mathlib/Order/GameAdd.lean",
+      "source_sha256": "4703c19c868c07c989b66fe6f90055df30d2b6ba73265d08d8f20dc88d06b1e8",
+      "object_sha256": "027e8265da7857eed3e299c25b8f6d6d26e7099b6609a4475f88559cb55ceb35"
+    },
+    {
+      "module": "Mathlib.Order.Ideal",
+      "source": "Mathlib/Order/Ideal.lean",
+      "source_sha256": "672e57170ae557fa39d88dcc94d275ed609a89799633823072639bedbc76f8be",
+      "object_sha256": "79df6e710d4c345b0cada95505d328c499284625b631e5973b63130fb2a2757f"
+    },
+    {
+      "module": "Mathlib.Order.InitialSeg",
+      "source": "Mathlib/Order/InitialSeg.lean",
+      "source_sha256": "fa0d99ef1cf889a281bcb0f6c4d1afd20f3555a508caf659f483d84d79081336",
+      "object_sha256": "fcb35c513d798d339710d0aee5ef2a3489f4c6b34aa8513eccc308f14b9cc3be"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.Basic",
+      "source": "Mathlib/Order/Interval/Finset/Basic.lean",
+      "source_sha256": "d8947666ee12e1aac0a4fe6749953d001e842ed00e68c48a80adf7c69492dc95",
+      "object_sha256": "e0d879aee329603584581b409d4510c773aa65c94afc5a719fc65af232b12f2a"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.Defs",
+      "source": "Mathlib/Order/Interval/Finset/Defs.lean",
+      "source_sha256": "5a40d40b2569bea01fcf259d1644068fe565163c8dfea2e480a15293912eff3c",
+      "object_sha256": "d5819d7ab73141a8ac67d11843f017b55fa94f93d3e4599cd20acdf255ad8616"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.DenselyOrdered",
+      "source": "Mathlib/Order/Interval/Finset/DenselyOrdered.lean",
+      "source_sha256": "65cf770f583b45d68313b1acb163de2438806be7ff51ba9b45b9575c5845f735",
+      "object_sha256": "a216067bef7fa4e4f3861b12e9bbedae53a44bf306c43fc38862d387dfa4bb50"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.Fin",
+      "source": "Mathlib/Order/Interval/Finset/Fin.lean",
+      "source_sha256": "1f61a87f5a33679269110a3da98111b222e2daecb73418b7b7df64238cf98263",
+      "object_sha256": "6d04d0d01a6aac03fd64c7006975cb50c73f87827f9e3de83631534c42e91e40"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.Nat",
+      "source": "Mathlib/Order/Interval/Finset/Nat.lean",
+      "source_sha256": "e1a7b1cf7d86209af1d6f894e05f2a4cc40997840ff64461d98476fcd5e248e2",
+      "object_sha256": "6f24516f62033db8a43ad222b6dabac7aec7bee7b90d374f98b0aa79441ba513"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.SuccPred",
+      "source": "Mathlib/Order/Interval/Finset/SuccPred.lean",
+      "source_sha256": "743bcefb83d0c8f1f51706b01a840d726bc1778ae4465836e429d6173ec82b24",
+      "object_sha256": "d7620c361f8315c16438d91cd549b74112b0862d79133a8d56f99760a0f10302"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Multiset",
+      "source": "Mathlib/Order/Interval/Multiset.lean",
+      "source_sha256": "b9e1955bad9ccedd12f1c42ad9e33b209c809105f1d0992e9c62788915da79be",
+      "object_sha256": "493e473dc525afadcc1614c5152c021fce22ce5e9b1af59404313209fde83dc8"
+    },
+    {
+      "module": "Mathlib.Order.IsNormal",
+      "source": "Mathlib/Order/IsNormal.lean",
+      "source_sha256": "441d4d47a684d141d2b59321a5b6c717b79f3a4984d75453d3407ba12712d68b",
+      "object_sha256": "89a840446930e7cd79d0ce18d18dfc542db026d2424144630543e41c72757fb1"
+    },
+    {
+      "module": "Mathlib.Order.Iterate",
+      "source": "Mathlib/Order/Iterate.lean",
+      "source_sha256": "7842e70f4b262dfcc66c7d74286d71d0a7bc26ef0ae9624752ea41ce54daa084",
+      "object_sha256": "7d1514dc99c459ab4df23abd356a7b5e3d2b3125bda7fd6b098b24892f67f0d7"
+    },
+    {
+      "module": "Mathlib.Order.JordanHolder",
+      "source": "Mathlib/Order/JordanHolder.lean",
+      "source_sha256": "f4713192214a3f3e166b747efd4c93c6077660db32df456178c0985c6da8377b",
+      "object_sha256": "b9a7cf6b8af932cc672851c2c0703ceae0a5fd17929a460e79dc92620c215116"
+    },
+    {
+      "module": "Mathlib.Order.KrullDimension",
+      "source": "Mathlib/Order/KrullDimension.lean",
+      "source_sha256": "84c9b22091f1f464ef909ec961f1945bd9df8dbacc49973d28224ea065218aa9",
+      "object_sha256": "e10555e801883d926eb474a276888adf73fb6947b86ed47565b899aaac9e6d05"
+    },
+    {
+      "module": "Mathlib.Order.Lattice",
+      "source": "Mathlib/Order/Lattice.lean",
+      "source_sha256": "35393cc6fcd64cb7e1e5c91e71278d964cd8d783e06bb99b72a9ab339c242da2",
+      "object_sha256": "a13b0c75bd6e7a91e725cb299f6643bedc07133c42ee438cf8c84b0768baaa0a"
+    },
+    {
+      "module": "Mathlib.Order.LatticeIntervals",
+      "source": "Mathlib/Order/LatticeIntervals.lean",
+      "source_sha256": "1b535fc84686e855128d07657c29463effee71d706a72e5699196dc31ebaf045",
+      "object_sha256": "ccc0adca4797b254b2009a38d492886f622f09ed25c48bbc445fe125e668d7d8"
+    },
+    {
+      "module": "Mathlib.Order.Lex",
+      "source": "Mathlib/Order/Lex.lean",
+      "source_sha256": "90a44a9f275460ab2c342e14b41042f88530145785d0373c786bf5054afd815a",
+      "object_sha256": "75ba19097e7072e1456b10256fe18c843394db5d368f17fff21f8363a038f95f"
+    },
+    {
+      "module": "Mathlib.Order.LiminfLimsup",
+      "source": "Mathlib/Order/LiminfLimsup.lean",
+      "source_sha256": "7e16afb7cc86285ff6bc5108b6dea30a37a07bfe077f7f63020dd05070aabf66",
+      "object_sha256": "7424fe923bb90cd11f015930fb49aedff9c0541719a19462abe54f05e6e41156"
+    },
+    {
+      "module": "Mathlib.Order.Max",
+      "source": "Mathlib/Order/Max.lean",
+      "source_sha256": "688409fe65276176aece9a1d3ea60107d45488e16d19a420f9f3b63329792ea8",
+      "object_sha256": "c3df54f3c9bea3cd67598908628544cd20194325d2540cb953f075a4f8503a61"
+    },
+    {
+      "module": "Mathlib.Order.MinMax",
+      "source": "Mathlib/Order/MinMax.lean",
+      "source_sha256": "3fca3e17cc6358b25a171dcbc3255684f144cd5625517b16cd7a57e5e59efa3c",
+      "object_sha256": "835e9671add773bde1a3cc0b81ea5f681e6be8c0d7fb1331392fe44162c04dfe"
+    },
+    {
+      "module": "Mathlib.Order.Minimal",
+      "source": "Mathlib/Order/Minimal.lean",
+      "source_sha256": "922a2a59fb1fc36c103fae24b2191baa9f3ff93b1e7900ce0916618aff01c64f",
+      "object_sha256": "89fd862860ca7ef558d06f53ee322b3e56188c5ad03dd4d48d552700b4bff734"
+    },
+    {
+      "module": "Mathlib.Order.ModularLattice",
+      "source": "Mathlib/Order/ModularLattice.lean",
+      "source_sha256": "8214953758e0d1c85fda5da10afbdb63079752a7920eb1ed6f49b79f69ee9ded",
+      "object_sha256": "6b3a4ef30e80c114180e51726097a14ee382aaecd39982507b4090bd2c4a25b8"
+    },
+    {
+      "module": "Mathlib.Order.Nat",
+      "source": "Mathlib/Order/Nat.lean",
+      "source_sha256": "a91c44b811373d9db8bb09d974e5e076029ddb4f11e14d8570eabc468903fb5a",
+      "object_sha256": "6608ad9a65d5ed3c46e8891c8b6a15d92307b76bdf0014d409843e0e2572374c"
+    },
+    {
+      "module": "Mathlib.Order.Notation",
+      "source": "Mathlib/Order/Notation.lean",
+      "source_sha256": "0a0ff33caa4bf0b75600dbbd20ad4a374e46faa34ef16fba598f265144a69aa9",
+      "object_sha256": "d28eb28a69c45dc3fba8e6cd9ff947997d658c484a27830500ea322f0d76e638"
+    },
+    {
+      "module": "Mathlib.Order.OmegaCompletePartialOrder",
+      "source": "Mathlib/Order/OmegaCompletePartialOrder.lean",
+      "source_sha256": "a96ae8df2b43769e4bdca0d2489dce1d3f7b510fe9e810af50f0ddc6c2142270",
+      "object_sha256": "c8e4118b991da48b088488ad2f694fcb4087ae71758684ce538444df651f282f"
+    },
+    {
+      "module": "Mathlib.Order.OrdContinuous",
+      "source": "Mathlib/Order/OrdContinuous.lean",
+      "source_sha256": "c98502811fee0495ec454e237cf4b807df3799854955006a6b20286299a355b0",
+      "object_sha256": "8e0a94ce6a57e0070b090a4686ce9041256c76fa892c1a5fbef567866dad4061"
+    },
+    {
+      "module": "Mathlib.Order.OrderDual",
+      "source": "Mathlib/Order/OrderDual.lean",
+      "source_sha256": "ab73f4235ce87a5dc4349d326316efe847f91a825ca0b265437f03f86d1299fe",
+      "object_sha256": "113cfdebbb3314c7aaa02c100464037471db49cf1521ee6f94702dad2b77f96e"
+    },
+    {
+      "module": "Mathlib.Order.OrderIsoNat",
+      "source": "Mathlib/Order/OrderIsoNat.lean",
+      "source_sha256": "eac2477bdcd8a2e5591f4ab2a198094c057fe36ae170f038fe7a6b5e1c998724",
+      "object_sha256": "bd107cc3f18f178963e60124a734819c2e8cc7f995079c3be09cc9d5f49429ad"
+    },
+    {
+      "module": "Mathlib.Order.Part",
+      "source": "Mathlib/Order/Part.lean",
+      "source_sha256": "ffc0ac2e9decec1bf213bc41c898752d1b50581b9f1e04c989838b31eea9bd68",
+      "object_sha256": "00d5043ccd7df277de835e7971549af84ec9b541b41dac5662599490f3a09872"
+    },
+    {
+      "module": "Mathlib.Order.PartialSups",
+      "source": "Mathlib/Order/PartialSups.lean",
+      "source_sha256": "03b2ca9ee425bd862e940710df2ed6c9503e7490978a3866f535d33804380d0d",
+      "object_sha256": "7523b8cd9e127ca9c19320ca0ea0e52519d7207622add97e8f997d31804c309c"
+    },
+    {
+      "module": "Mathlib.Order.PiLex",
+      "source": "Mathlib/Order/PiLex.lean",
+      "source_sha256": "df896d72992855c7bdd995504bf5f3159da44d551803ff187efcb1d751dfa0c9",
+      "object_sha256": "db23e6ff0197f7053b0f2ed94511da3a8f314cb8142668cd253887caf860c9dc"
+    },
+    {
+      "module": "Mathlib.Order.PropInstances",
+      "source": "Mathlib/Order/PropInstances.lean",
+      "source_sha256": "6c8aba1a26e0ad4e4b080a2759a24716bc4492cdea94aefb353273c116d74e71",
+      "object_sha256": "be5e455bb09e56a65c1261942ac6e160aa568f38374f6171183de4f9b3ff95ff"
+    },
+    {
+      "module": "Mathlib.Order.RelClasses",
+      "source": "Mathlib/Order/RelClasses.lean",
+      "source_sha256": "332ab2b0a4d4e890eb40e8578ee4fbb56347fcb13b0552a80dbda4ee846a536e",
+      "object_sha256": "01390f974751e3de0eb1214c0e65d5fa174b2eaddd9c2225815ac4109c27e356"
+    },
+    {
+      "module": "Mathlib.Order.RelSeries",
+      "source": "Mathlib/Order/RelSeries.lean",
+      "source_sha256": "32da4c9fb8948e2c4bf61909ed1181027ffb61485044e1668bc48569a5226841",
+      "object_sha256": "42a64ff981a6701d7c9865e4d19a720479f74987f06bab517eed95e563572a3b"
+    },
+    {
+      "module": "Mathlib.Order.ScottContinuity",
+      "source": "Mathlib/Order/ScottContinuity.lean",
+      "source_sha256": "5f08f04871c9eb1140f459fcb94cc147264b206ada959597f18d74d055d9ec43",
+      "object_sha256": "49fcd1c77cb25c7b65c551ad9c1e84c063dac949764964bb1daf5b7ff205e34a"
+    },
+    {
+      "module": "Mathlib.Order.SetAccumulate",
+      "source": "Mathlib/Order/SetAccumulate.lean",
+      "source_sha256": "1a21f24b013d94aa2f39d411f2ecd55dc224f1a6a40f52fd628c8a85d1d27ed7",
+      "object_sha256": "96e208288b43b47b0985a5b454f99a02b72337c756e7d62b58fe5304622637ac"
+    },
+    {
+      "module": "Mathlib.Order.SetDissipate",
+      "source": "Mathlib/Order/SetDissipate.lean",
+      "source_sha256": "eda9c18dd223cf33c0f1fdd342e14727ae7056a49027003baf9ca98fea112c2e",
+      "object_sha256": "bf0901099b88dee954b2bb111630d16cbe17f62be21611d90f1161fb545a20f4"
+    },
+    {
+      "module": "Mathlib.Order.SetNotation",
+      "source": "Mathlib/Order/SetNotation.lean",
+      "source_sha256": "302c614100cbc978e2af66d21d5eb0e09eb39402e9ae52a166e6faaa36d3dc14",
+      "object_sha256": "2bb965d225df3ec064aa79bbbd66e683ff7b81a8269117170138c4225771aa04"
+    },
+    {
+      "module": "Mathlib.Order.Sublattice",
+      "source": "Mathlib/Order/Sublattice.lean",
+      "source_sha256": "921fa10ef2b717f3a5b1dbe8d360a7618faec15f01a514b5eca20794fd7495f4",
+      "object_sha256": "a6d387335daa07f7d0a0eb6a6344440e4c6882b8c0191bb4af2bd1c2f3e69393"
+    },
+    {
+      "module": "Mathlib.Order.SupClosed",
+      "source": "Mathlib/Order/SupClosed.lean",
+      "source_sha256": "eefb4f7b13a14343d17e9ce6e549c5453ce88615662d75e44ad1106fb0f11dcc",
+      "object_sha256": "c1f13b3b174f51f047c48bc85b60931645b7c6d879c0467f4f63d8e27d1053f3"
+    },
+    {
+      "module": "Mathlib.Order.SupIndep",
+      "source": "Mathlib/Order/SupIndep.lean",
+      "source_sha256": "2cb0a5ed496853cbaecaed87bfda879d3f77223cfc04f64e6667921925762aa6",
+      "object_sha256": "a3243f49bb26f1b923fb43de50a6bc98bad885641b715665addc76222391aff1"
+    },
+    {
+      "module": "Mathlib.Order.SymmDiff",
+      "source": "Mathlib/Order/SymmDiff.lean",
+      "source_sha256": "f599c83094831e6a8c712b8a149a2283b2e278cf2d08a731a5c148c63117a70e",
+      "object_sha256": "db0939a5483b87846e1e6811ffd59404b9ff27d2509779048f28218df4e4ddc4"
+    },
+    {
+      "module": "Mathlib.Order.TypeTags",
+      "source": "Mathlib/Order/TypeTags.lean",
+      "source_sha256": "011e9123e021e9c2664c47b088fdfb1ade341915b78556df08b8830fdb7c1f67",
+      "object_sha256": "166aeab2a05a5797c05c585b5b07d9194250455f1bc304fe12e49cfd7ae1c98d"
+    },
+    {
+      "module": "Mathlib.Order.ULift",
+      "source": "Mathlib/Order/ULift.lean",
+      "source_sha256": "0ec28d7004b3c5299141f33c77f7dcc2c32d3f5f453c97296e2f29a468e5e468",
+      "object_sha256": "0259dd5d1af3b54bea19ddcb64f06a832483b2d4d9225dfe07d0df9e0696f13b"
+    },
+    {
+      "module": "Mathlib.Order.WellFounded",
+      "source": "Mathlib/Order/WellFounded.lean",
+      "source_sha256": "08c3b878ae84431a27351c72c7a8bda6de131cdfb8e8627cda94564e65ef3b50",
+      "object_sha256": "4cf84a0142879319ad592dc79bd9d4d3f824691dc86ffcbedf3fb6dd67cd3e7d"
+    },
+    {
+      "module": "Mathlib.Order.WellFoundedSet",
+      "source": "Mathlib/Order/WellFoundedSet.lean",
+      "source_sha256": "583634087cb3c4d81628cfb840bad248c6b4a0e96dc37d89c1c9b24e1c33c335",
+      "object_sha256": "a9dc6a186d55e1496663130d50fe3f5161786e7dfc75628470c5cfaf4b81a196"
+    },
+    {
+      "module": "Mathlib.Order.WellQuasiOrder",
+      "source": "Mathlib/Order/WellQuasiOrder.lean",
+      "source_sha256": "22780e19dd2bca096529f3430213b8de8c5b78a238f9cb1e2fc36683ce244535",
+      "object_sha256": "f90dcbfe8903779a5ea9455b870ee575fbd5b5113e55bb454b5dcf161ef8394a"
+    },
+    {
+      "module": "Mathlib.Order.WithBot",
+      "source": "Mathlib/Order/WithBot.lean",
+      "source_sha256": "d6ca14f444ba36389dbb12844dfced9a0344d872908845efbbc6a332fbbd746e",
+      "object_sha256": "1cfe07430eb041295e507a8e31bbe359c615920b6e7f60f4142a84f79e47cc2e"
+    },
+    {
+      "module": "Mathlib.Order.Zorn",
+      "source": "Mathlib/Order/Zorn.lean",
+      "source_sha256": "7488fb223dfea62dda5732585f61b0f9c942732772d8883f1c00f87909edad25",
+      "object_sha256": "59823ce1256e1efb76f5e4c1155f7f4066cbc330699c035cd61cb8cda4e70e09"
+    },
+    {
+      "module": "Mathlib.Order.ZornAtoms",
+      "source": "Mathlib/Order/ZornAtoms.lean",
+      "source_sha256": "4de1a4da4754eb8b2765e544abc9c22ba0330d7f05ba36e149a0e17913b0a870",
+      "object_sha256": "5c5dc91e13683388ff8b77bd3ca3accdbc3b6292b174c6627b3d22a455483546"
+    },
+    {
+      "module": "Mathlib.RingTheory.AdjoinRoot",
+      "source": "Mathlib/RingTheory/AdjoinRoot.lean",
+      "source_sha256": "bc4283e592acedb62e633fa0ac136109bd4be5a8b4f77d7fbc64a7e29e460a75",
+      "object_sha256": "8dda0b3409676a809cd58012120693f07a4f6180158848051c39ca6e55448a43"
+    },
+    {
+      "module": "Mathlib.RingTheory.AlgebraTower",
+      "source": "Mathlib/RingTheory/AlgebraTower.lean",
+      "source_sha256": "004f319a48097b3b06bfc040444ce766bf928f7ca1d70e774985450b3295404e",
+      "object_sha256": "50296eb8fe48c12782aebb8fc006cc8b5f82b401f3f3d47b465ff1983f662b8b"
+    },
+    {
+      "module": "Mathlib.RingTheory.Bezout",
+      "source": "Mathlib/RingTheory/Bezout.lean",
+      "source_sha256": "901160f55c663d32ef22463758bce1ac982f8c91e33369d37058afa693f0c2cf",
+      "object_sha256": "fb97d3ea5a850607a1ec561c260a2d3180375d00e1c7defa628942b5ed6e763b"
+    },
+    {
+      "module": "Mathlib.RingTheory.ChainOfDivisors",
+      "source": "Mathlib/RingTheory/ChainOfDivisors.lean",
+      "source_sha256": "b29b1ddc51fa5826e47e745f07bbdb8b1210b0646da950e9752d46525e821af9",
+      "object_sha256": "928b6f098cad6f364eae0c01234a27f4975abc8d9e27622b33801c466d2979d8"
+    },
+    {
+      "module": "Mathlib.RingTheory.Discriminant",
+      "source": "Mathlib/RingTheory/Discriminant.lean",
+      "source_sha256": "36ddd826bf8c3af0abf9eac1053f09c1b851380f7adc6685cd7fd1239740c42e",
+      "object_sha256": "22c4b62feba1e1bf5ef54f981e5bf2921637ab74ef2b274b3132bbe863fc26fc"
+    },
+    {
+      "module": "Mathlib.RingTheory.EssentialFiniteness",
+      "source": "Mathlib/RingTheory/EssentialFiniteness.lean",
+      "source_sha256": "3cf065c35e6cb49919f12c3e32c246c079c0ea39813504b0eba1ab1db10f5e9a",
+      "object_sha256": "b7cc17a8eacd7283fb6995e7b8ca17e7f409581dda1227b87fbac29c33a6b659"
+    },
+    {
+      "module": "Mathlib.RingTheory.Etale.Basic",
+      "source": "Mathlib/RingTheory/Etale/Basic.lean",
+      "source_sha256": "1250aaa4e2146c085a1e87f086accb1c824436f310d4bd0a43cf5649ca627807",
+      "object_sha256": "b54d28ce627a3d1f03262eb76ebb18026512490509a6c9fa9335e45295751400"
+    },
+    {
+      "module": "Mathlib.RingTheory.Etale.Kaehler",
+      "source": "Mathlib/RingTheory/Etale/Kaehler.lean",
+      "source_sha256": "2e3c892fa69179c7b9438f7318a810116138243af7290e2dff5c8878f3f21d10",
+      "object_sha256": "20eddb0647c2be160dab815ffed707a2b9406b1d73b5f649096eca98b213f2c8"
+    },
+    {
+      "module": "Mathlib.RingTheory.Etale.StandardEtale",
+      "source": "Mathlib/RingTheory/Etale/StandardEtale.lean",
+      "source_sha256": "b3089302a576c2dc736d3c67f568de3a0a537aef070105a453ab4501b462c8f6",
+      "object_sha256": "35279b35d525bb7d526c89657d30e1473a72a8fc6afedd878c9669ef570f6cf2"
+    },
+    {
+      "module": "Mathlib.RingTheory.EuclideanDomain",
+      "source": "Mathlib/RingTheory/EuclideanDomain.lean",
+      "source_sha256": "40003822e47a3ecf3f5665e190d4c47bb3eae4a2006a222cad2f5dc917be6305",
+      "object_sha256": "d325aabc0364d044c4b40af5ffad903a5c3d8af702ca71bb4dd08459ed7f9a75"
+    },
+    {
+      "module": "Mathlib.RingTheory.Extension.Basic",
+      "source": "Mathlib/RingTheory/Extension/Basic.lean",
+      "source_sha256": "efeafe255d03e70b98b4add26064249fdc0455c2d2ef045cdf0da8eae74e8e54",
+      "object_sha256": "2d4077f724bf3cfd0c39972441d3239f0ab6d677f9e7c7d6022f3b62816c479d"
+    },
+    {
+      "module": "Mathlib.RingTheory.Extension.Generators",
+      "source": "Mathlib/RingTheory/Extension/Generators.lean",
+      "source_sha256": "7ac49bef0915dbb629337351881789863ac54c16521a256ce4f92849316e677c",
+      "object_sha256": "f049fe3b8bdd7d8832117916d3d114ae5e4f04d2d1e8ecab4744ea3a33019944"
+    },
+    {
+      "module": "Mathlib.RingTheory.Extension.Presentation.Basic",
+      "source": "Mathlib/RingTheory/Extension/Presentation/Basic.lean",
+      "source_sha256": "d61f013a5e08fbabb8816e4a10bf0a0f47a45e0ebefa628868a42e0f48e2e69a",
+      "object_sha256": "a2a61ec522dbb0212ef2b6663e509d95f300e64ce80de338acc7b8c2fa3d9105"
+    },
+    {
+      "module": "Mathlib.RingTheory.Extension.Presentation.Submersive",
+      "source": "Mathlib/RingTheory/Extension/Presentation/Submersive.lean",
+      "source_sha256": "f0011aab87493b37ba2c6928331c4e9aef4ddf7200d4c0af0cc7136b05c712b8",
+      "object_sha256": "bb9d3cd754f899f91b38189415292cc27593ddccda78dc2f0a1c5976ea1be797"
+    },
+    {
+      "module": "Mathlib.RingTheory.Filtration",
+      "source": "Mathlib/RingTheory/Filtration.lean",
+      "source_sha256": "13888c698d6a9f281c372ed19ad2da3b88f7e44f991e4a51e025eb6c569ad346",
+      "object_sha256": "759a1dc60d5d712c95f7838ad08f8a9b7483f47ac5047fec6c6a6db4f9dbed9b"
+    },
+    {
+      "module": "Mathlib.RingTheory.FiniteLength",
+      "source": "Mathlib/RingTheory/FiniteLength.lean",
+      "source_sha256": "c63e094d7274bbbaf7d80f86f1d54f3cb865578d6d7f2762c123d488fcb09e48",
+      "object_sha256": "af24428b80113c2a867d878f21803053df7eacc4477e32b114aa6b46ebf072b2"
+    },
+    {
+      "module": "Mathlib.RingTheory.FinitePresentation",
+      "source": "Mathlib/RingTheory/FinitePresentation.lean",
+      "source_sha256": "72a1c26fb99f9639d98718ccabacbac4d85dbb9956e64ae15c6b527aaff538a4",
+      "object_sha256": "cc799b5a590559e01b8bc49b776b94a01e9627aefb3eff6f58949d9db855a4e0"
+    },
+    {
+      "module": "Mathlib.RingTheory.FiniteStability",
+      "source": "Mathlib/RingTheory/FiniteStability.lean",
+      "source_sha256": "ad8017fd63d5dbe2de824dec427506bff690a5fc9f47d11bc782e4cbd29d5939",
+      "object_sha256": "8508e37fe0d310267441d90abaeaa3465145111afa2af8870b877b0b3745f446"
+    },
+    {
+      "module": "Mathlib.RingTheory.FiniteType",
+      "source": "Mathlib/RingTheory/FiniteType.lean",
+      "source_sha256": "cc9254a8ee35866e5bf1c153b2a47945649c9b6457a04c2222c1a1957446c48a",
+      "object_sha256": "9b4fe9f6aef3d26ab661d164a0f908af5589e0efb4e4dc0ae1bf6348bd95d24c"
+    },
+    {
+      "module": "Mathlib.RingTheory.FreeCommRing",
+      "source": "Mathlib/RingTheory/FreeCommRing.lean",
+      "source_sha256": "76018ace25032873aa89680bfba147bcf2f9dc3b3e51e0d4063d6a53c3e6176c",
+      "object_sha256": "be715eaf02cb80a0b27cac2647b01843fa208ba4bcff8f3e06d867e8d77f729c"
+    },
+    {
+      "module": "Mathlib.RingTheory.FreeRing",
+      "source": "Mathlib/RingTheory/FreeRing.lean",
+      "source_sha256": "2c22add9b443a13ab583409e32c891edf80c85a0803998ed42eeab6a93b484f0",
+      "object_sha256": "4b55e83f767c91e20774429333acdae89f6ec9ec9432a466d644f41ac71ebded"
+    },
+    {
+      "module": "Mathlib.RingTheory.Henselian",
+      "source": "Mathlib/RingTheory/Henselian.lean",
+      "source_sha256": "03ab184650810529ac9bd12eec5a4f8e6fdb5487eea4ce5b123c7b7dbdb4171c",
+      "object_sha256": "fcf8b355d241848d349570b42d76de092ce8b7ab0bd5c1562613b0fc37b7d171"
+    },
+    {
+      "module": "Mathlib.RingTheory.HopkinsLevitzki",
+      "source": "Mathlib/RingTheory/HopkinsLevitzki.lean",
+      "source_sha256": "95a60d9f80d31299ff3e307b2a6929622c700cf9126576651ec061af44f5abee",
+      "object_sha256": "2ea37b69a21344fa12a7de539f076e1b2d8448053feb06551f5e0c6707f3e041"
+    },
+    {
+      "module": "Mathlib.RingTheory.Idempotents",
+      "source": "Mathlib/RingTheory/Idempotents.lean",
+      "source_sha256": "e4c11db5e888464c81ab8668daedbe8c9e26ee697c32b66a08713c643dac183b",
+      "object_sha256": "2999557fa9d2f8e2519df6a1a97865315dba2647c0ec548a6639610981ef6602"
+    },
+    {
+      "module": "Mathlib.RingTheory.IntegralDomain",
+      "source": "Mathlib/RingTheory/IntegralDomain.lean",
+      "source_sha256": "ae42e6102c4878a56183d953cc106513fe5988cb504af8ef46c43a80df8c847b",
+      "object_sha256": "85263a07f8c31144697d292a964bb3fcd432ae1222f2c9b9c7cf4b6ac09bc612"
+    },
+    {
+      "module": "Mathlib.RingTheory.IsPrimary",
+      "source": "Mathlib/RingTheory/IsPrimary.lean",
+      "source_sha256": "bbbb24b9758a45612b29d57cc5bf9e1150cc5e2078cba1a9a9da0b437c492c2f",
+      "object_sha256": "f0157e2995c9f4056c4a4ba8a488b4c287a6d2664b86c79516925aa6d65b06f2"
+    },
+    {
+      "module": "Mathlib.RingTheory.IsTensorProduct",
+      "source": "Mathlib/RingTheory/IsTensorProduct.lean",
+      "source_sha256": "eb93fcc94ccd82d272cc505308ebac17f05b7feda7cef66ea26c384d478a7b86",
+      "object_sha256": "8f9310170411f61bc4269982c6957973590ab915fe1d3c0cb5c82375cec63f58"
+    },
+    {
+      "module": "Mathlib.RingTheory.Length",
+      "source": "Mathlib/RingTheory/Length.lean",
+      "source_sha256": "7b06dcf567e71b8fd20bdb2b8296041dd52baea25460d5444dbfbff98b108c3a",
+      "object_sha256": "54a7bbfe66b714dc6ddcaf3c41f661a3884d2e30d7775c1076d32dafa32f2c9e"
+    },
+    {
+      "module": "Mathlib.RingTheory.LocalRing.Basic",
+      "source": "Mathlib/RingTheory/LocalRing/Basic.lean",
+      "source_sha256": "dd93fff570d047ef5c6b637f838edd7c8b562eff635a2284f866798d1959ec51",
+      "object_sha256": "67997a1a033d0714e52dd063244ce32a099c6758aa8e1380c80456c8b8582f87"
+    },
+    {
+      "module": "Mathlib.RingTheory.LocalRing.Defs",
+      "source": "Mathlib/RingTheory/LocalRing/Defs.lean",
+      "source_sha256": "006196b340c3ab52800b766d7e84968e84f1cef4398c592bffeedc140f094808",
+      "object_sha256": "b3db100049aab617a6afc7fbd5066cdbd3a3a46cb7f5365a825a6657f3023324"
+    },
+    {
+      "module": "Mathlib.RingTheory.LocalRing.Length",
+      "source": "Mathlib/RingTheory/LocalRing/Length.lean",
+      "source_sha256": "e9ce787da9f1184f805ecc503de117c396d2242e4d7ff24809a8e5cc7f47b5b4",
+      "object_sha256": "ba0066ca441d521ad520c323c7277c909a868b3ba5b6de794113a28a51fb5cb5"
+    },
+    {
+      "module": "Mathlib.RingTheory.LocalRing.LocalSubring",
+      "source": "Mathlib/RingTheory/LocalRing/LocalSubring.lean",
+      "source_sha256": "7c0f7b7e22ddcc554b0e8686ed948b4890d625bf5a6e089d12baf5a876474f14",
+      "object_sha256": "907c1cf223592f316300ad8db180a64a20417ab8bcee031e0eed4e4154c9b846"
+    },
+    {
+      "module": "Mathlib.RingTheory.LocalRing.Module",
+      "source": "Mathlib/RingTheory/LocalRing/Module.lean",
+      "source_sha256": "1348554bcedbf8d18663af52d03f14ce9d254e50408b1288d485348667383d7d",
+      "object_sha256": "3a7352c82b5da64593a807f483b0dc0fcf227e26f0e0b9d6e9b77aff1e37fc7f"
+    },
+    {
+      "module": "Mathlib.RingTheory.MatrixAlgebra",
+      "source": "Mathlib/RingTheory/MatrixAlgebra.lean",
+      "source_sha256": "86458229819334f43f3e3780175dc7ebc5c4881264d83ebc7bc30a5c8290c911",
+      "object_sha256": "a9f338f52939b18ab308369df5e20892d9a334623788fe81de4bb3dafad3cfb0"
+    },
+    {
+      "module": "Mathlib.RingTheory.MatrixPolynomialAlgebra",
+      "source": "Mathlib/RingTheory/MatrixPolynomialAlgebra.lean",
+      "source_sha256": "2a524def3eccf5665a2201c498678a67d42ec01d6a769fafd713c11d666bb3d6",
+      "object_sha256": "adef54b136ad8646436823db89bb0b0faf8fba3f69d6d98f6302f0440539198c"
+    },
+    {
+      "module": "Mathlib.RingTheory.Multiplicity",
+      "source": "Mathlib/RingTheory/Multiplicity.lean",
+      "source_sha256": "ed76cef9e77c6c5e3fb2c7bc091aaeafc2bb048194a926baf0f6384e5e5c7af6",
+      "object_sha256": "26ed44b0c8f82aeb513eb9c75d1460fd8a691dc6cedc4067df9094ab9f086936"
+    },
+    {
+      "module": "Mathlib.RingTheory.Nakayama",
+      "source": "Mathlib/RingTheory/Nakayama.lean",
+      "source_sha256": "f7b88a0f587c674c0e49731918f94a4e2fc36f8d390f632c55e3fe6353a5a4d7",
+      "object_sha256": "f655377dd7702d8f42981eaec0e8b9f9bc89e16427a47e52e2e18f14b35967bf"
+    },
+    {
+      "module": "Mathlib.RingTheory.NormalClosure",
+      "source": "Mathlib/RingTheory/NormalClosure.lean",
+      "source_sha256": "40a93c10e43d2f04ead1bc5df6774a9cdb6d4c8013f13a23b679309156c25965",
+      "object_sha256": "27b03bdb1fa2882363acaef7bb4c3e7f15f28208f7bcc1bc892dc6c7d7b06cb3"
+    },
+    {
+      "module": "Mathlib.RingTheory.OrzechProperty",
+      "source": "Mathlib/RingTheory/OrzechProperty.lean",
+      "source_sha256": "86f054cf950176e9892478a495b2bf32d77de20a84555f31ab4aa0ce306a7ea1",
+      "object_sha256": "2456d74a1799b2780f11e76eae65286d8670337e1a4b07f35d3440f38174e35c"
+    },
+    {
+      "module": "Mathlib.RingTheory.PicardGroup",
+      "source": "Mathlib/RingTheory/PicardGroup.lean",
+      "source_sha256": "437c0d03c49f24f2fe0a38968dc41ddd8ec71e28d050cf20164fea5713dbdeec",
+      "object_sha256": "f7475a27b8807535687e7e7332d1ba6e5dc519aa04131a2c6ede6b9b2a6b1aaa"
+    },
+    {
+      "module": "Mathlib.RingTheory.PolynomialAlgebra",
+      "source": "Mathlib/RingTheory/PolynomialAlgebra.lean",
+      "source_sha256": "9485f26b4d22e94b7fccd86e47caffb795a6cb941413f91083f2589a2af3afd2",
+      "object_sha256": "c64c491e5cc727ea3fbc4513b0e56af31d4df7a106420e6a484441a7ea9ad0cc"
+    },
+    {
+      "module": "Mathlib.RingTheory.PowerBasis",
+      "source": "Mathlib/RingTheory/PowerBasis.lean",
+      "source_sha256": "9f3efd7723e4f07178d9144ce6d111010d0af8af46bc2b104dfaade698ef105e",
+      "object_sha256": "9c3240ade3025a42db94c00fe2e32057aa0b4e676376c5bc9eeae35a000dbf32"
+    },
+    {
+      "module": "Mathlib.RingTheory.PrincipalIdealDomain",
+      "source": "Mathlib/RingTheory/PrincipalIdealDomain.lean",
+      "source_sha256": "f6399d94a4e74c8f943a776a4d4641489e58bd5d8d583c7e23f1f82d24d50cef",
+      "object_sha256": "8de8a2a5fa675db023e3c6a26eb0a6013d82deb50ffc44a875450c07d74931c3"
+    },
+    {
+      "module": "Mathlib.RingTheory.PrincipalIdealDomainOfPrime",
+      "source": "Mathlib/RingTheory/PrincipalIdealDomainOfPrime.lean",
+      "source_sha256": "e516caf95b359651a2ad9fb65dfb60e5499f31e20abf366e0b08bdf9a79fe4b6",
+      "object_sha256": "79db585d5543312002d25b8dc514f22544d53d8cf5e77f2c077ed4464eeb373a"
+    },
+    {
+      "module": "Mathlib.RingTheory.QuotSMulTop",
+      "source": "Mathlib/RingTheory/QuotSMulTop.lean",
+      "source_sha256": "9b5025a52e4141c50274dddac38b30b5651e153d13796ec9a29c381f8f97760c",
+      "object_sha256": "97f532e69ec1209108b839de9db7e03d9f786d4fa0fc023a02a99b3bd0e514b7"
+    },
+    {
+      "module": "Mathlib.RingTheory.ReesAlgebra",
+      "source": "Mathlib/RingTheory/ReesAlgebra.lean",
+      "source_sha256": "ccfcbde3f10bc565628c0a834c762e9d5e446934b2c86ddc567af141b0f9967f",
+      "object_sha256": "b661847e463df68b89baa9c22d073f551a7a23493cfcb63cd33f8dfc963a6b05"
+    },
+    {
+      "module": "Mathlib.RingTheory.RingHomProperties",
+      "source": "Mathlib/RingTheory/RingHomProperties.lean",
+      "source_sha256": "6474759344c723ce12c4456f4ca40795669e05a84ad41850b9a5edc6410fff6d",
+      "object_sha256": "e12b8aeb17003b8766518be68b21e48c0bceaeb1723817f70fa0bfd5486f1ad4"
+    },
+    {
+      "module": "Mathlib.RingTheory.Support",
+      "source": "Mathlib/RingTheory/Support.lean",
+      "source_sha256": "57b858884dd973d22b3aa1ae9ab0fdebdf3755512285bf11e5f672a26f13284a",
+      "object_sha256": "f85bfd77786f9f5ae83e9f43b72798bc549135e4db9a7af7d528ac482cd226ab"
+    },
+    {
+      "module": "Mathlib.RingTheory.SurjectiveOnStalks",
+      "source": "Mathlib/RingTheory/SurjectiveOnStalks.lean",
+      "source_sha256": "ab9276895d2bd5f7e7a7cff6dd3c539b999a703b634af35443d5c2f8d64f2c77",
+      "object_sha256": "7ac76219cd43ef91a857fd3d6f98bb41d77d192ac3864607b19d5aecd7e5fb5f"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.Basic",
+      "source": "Mathlib/RingTheory/Unramified/Basic.lean",
+      "source_sha256": "3515fc6cb9dca5ac2299be57f26e635ec27ebf8210939a036c04117dc1144714",
+      "object_sha256": "d0945a1aa66950f788d9b3d73ce81de77ca29935de9711c8593a374eeba8ca15"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.Dedekind",
+      "source": "Mathlib/RingTheory/Unramified/Dedekind.lean",
+      "source_sha256": "bd8873c8801410e49d952a5044287a8ed4aa7fcac5d855e35e15c1d95d4054ef",
+      "object_sha256": "b892e9b678d1bd2952e467d0bb45ee0519aed443c5950462b225d4805413f0ca"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.Field",
+      "source": "Mathlib/RingTheory/Unramified/Field.lean",
+      "source_sha256": "73ebc2e72f7678b20eb20bcb8222b112e9c86c209dc6aa3492fcf8a265aa9fa7",
+      "object_sha256": "f2dc498dcf7f8296b2df487be1d40da63c23162006cf58cb025fb2c4e9dd8739"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.Finite",
+      "source": "Mathlib/RingTheory/Unramified/Finite.lean",
+      "source_sha256": "025a2bd29a707fe0e43b84e131dd976f3d53d6b837e522a431d19986009bba54",
+      "object_sha256": "eab43e7c662dfe1f7bc7693ba5bd51bd2a37784c82a8d7cd6147e0000f750709"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.LocalRing",
+      "source": "Mathlib/RingTheory/Unramified/LocalRing.lean",
+      "source_sha256": "fef689bf72e1f8f7fad47b522e0bd28715d9388be7262ed1245722dd9a2ef1ac",
+      "object_sha256": "1ecb0daef47eb694ea7a4efcbe4a9a0f3f543e59843f443dc5508fb5217ae446"
+    },
+    {
+      "module": "Mathlib.RingTheory.Unramified.Locus",
+      "source": "Mathlib/RingTheory/Unramified/Locus.lean",
+      "source_sha256": "289da02135ec3c404e7c8c19cf60739e9661b8f25bccb689d27a612429d9a397",
+      "object_sha256": "f5c087d1888271260f1672bbeb2b567b10910da7da7b790fabb8ae4e9385ff7c"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.AlgebraInstances",
+      "source": "Mathlib/RingTheory/Valuation/AlgebraInstances.lean",
+      "source_sha256": "dc214ce4f9cf13e19c687e41eaeb9348db731b5811116ada8dfb93d3b82f7325",
+      "object_sha256": "845796020595fa12a20c5559a36efd99bce374a30597df12f422264a4a3c71a2"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.Basic",
+      "source": "Mathlib/RingTheory/Valuation/Basic.lean",
+      "source_sha256": "243cdd8fa3fea34d67e2ae8ca0af413ff1587f802a3d510452c01b626d8148fe",
+      "object_sha256": "206be346f29689ba7a98f2072dced27cab305dda825392c745fc57dbda16af4b"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.ExtendToLocalization",
+      "source": "Mathlib/RingTheory/Valuation/ExtendToLocalization.lean",
+      "source_sha256": "6f7fe082112d8fd2eef0b1b333b93729524e9250418b5099524b4517c801ee8c",
+      "object_sha256": "cb38b1d50297db4bc13cb345869bb0ba3664425c68e403911c4752cdc1633238"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.Integers",
+      "source": "Mathlib/RingTheory/Valuation/Integers.lean",
+      "source_sha256": "cc6e4a65f3e90ddd1dbb7d476a847483bff55cb0fb629b77873f5ebd6e96b076",
+      "object_sha256": "23f9d656407165c29557b8b238a66068b39077af7d88045ccd92f5be814cb38e"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.Integral",
+      "source": "Mathlib/RingTheory/Valuation/Integral.lean",
+      "source_sha256": "77e2767524434f0c52676fb3c6f3b313bc55b49d2fd0945a77bfa80ab20ab614",
+      "object_sha256": "18560cf32db3909d4f090cac3254969041cd55a432569f8f791133dca0c34301"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.IsTrivialOn",
+      "source": "Mathlib/RingTheory/Valuation/IsTrivialOn.lean",
+      "source_sha256": "dca802831431dcb6c333d53e52270985ff1ad48c37dcf4a12794765b5db50748",
+      "object_sha256": "fe7e0e7b24d36a94add8b59241ef4f80c3415433b456e8e4038ad3df73c6285c"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.LocalSubring",
+      "source": "Mathlib/RingTheory/Valuation/LocalSubring.lean",
+      "source_sha256": "9fe1526492964a5139f012e6db8543cc3f31c872a4e72f756268c28947ee0e81",
+      "object_sha256": "25ed1db441deb8a74ada63c768c6ae34819ff6cc78105c0e929e9e692ffdc4ef"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.PrimeMultiplicity",
+      "source": "Mathlib/RingTheory/Valuation/PrimeMultiplicity.lean",
+      "source_sha256": "f43160e5b0551d097e99f2a7fa3d4708cf2b79a854da6a67ba745188495f793b",
+      "object_sha256": "40cf70bcd03afcffb66bb891ff96c2b930ba11b78659f220cbb3770fb5064bbd"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.RankOne",
+      "source": "Mathlib/RingTheory/Valuation/RankOne.lean",
+      "source_sha256": "0d2cc9a5fb8a2d3243e2b6c0b9940a7e18a66ddb8a847000c7884f73093d0072",
+      "object_sha256": "0988940ccbb17882d196a7198f0cd0a59817aaec87f133a5b26fa2bc2101ed43"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.ValuationRing",
+      "source": "Mathlib/RingTheory/Valuation/ValuationRing.lean",
+      "source_sha256": "5935d3a3cada0f7599fe914d97fd075880d4d3adc0135bea59a9e3f69c2112f3",
+      "object_sha256": "1a9f4d9309f1b30c81c54f5d9976cc11acf7e720fd61a9ff41139ec457e49a64"
+    },
+    {
+      "module": "Mathlib.RingTheory.Valuation.ValuationSubring",
+      "source": "Mathlib/RingTheory/Valuation/ValuationSubring.lean",
+      "source_sha256": "173f87ac1d4f4abe79c878058cd4ffd6478c84c72f632fd18cca6f66d511c2de",
+      "object_sha256": "e21daf9013c0f95db8a57114e243f8e17859bce2976b76ec8a905504d233a7ea"
+    },
+    {
+      "module": "Mathlib.RingTheory.ZMod",
+      "source": "Mathlib/RingTheory/ZMod.lean",
+      "source_sha256": "31804f322172b6b70cbd8a116e4fe1d4d96c5eefec8ae4cfe2e79c585b9b45be",
+      "object_sha256": "3a1b81cf3abd018b8f4f3bfface2f28d67dd57c43b7f646fa52393adc25eb60a"
+    }
+  ],
+  "note": "Pinned upstream modules additionally compiled for the cached environment. Objects are not distributed."
+}

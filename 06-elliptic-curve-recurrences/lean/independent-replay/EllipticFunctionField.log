@@ -1,0 +1,3 @@
+'Astra01.elliptic_principal_divisor_degree_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.finrank_ratFunc_eq_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeierstrassCurve.Affine.isSeparable' depends on axioms: [propext, Classical.choice, Quot.sound]

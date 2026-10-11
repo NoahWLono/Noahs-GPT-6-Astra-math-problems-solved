@@ -1,0 +1,3 @@
+b2a6b4eacbec0cc68b39ffbe21bfdba92c191457682b41739a1d3b9e90fe094a  EllipticFrobeniusInfinity.lean
+'Astra01.EllipticFrobenius.geometricDifferenceX_infinity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticFrobenius.geometricDifference_some' depends on axioms: [propext, Classical.choice, Quot.sound]

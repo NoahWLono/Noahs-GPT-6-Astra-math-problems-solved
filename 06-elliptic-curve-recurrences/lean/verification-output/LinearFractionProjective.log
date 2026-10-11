@@ -1,0 +1,9 @@
+64056f5a235b5ed77deb0f0f4e38136713dff599e77dd6085171026fa76f8078  LinearFractionProjective.lean
+LinearFractionProjective.lean:36:21: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [hq,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Astra01.linearFraction_projective' depends on axioms: [propext, Classical.choice, Quot.sound]

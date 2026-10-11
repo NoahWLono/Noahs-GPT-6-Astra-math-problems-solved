@@ -1,0 +1,8 @@
+799efd4a41c2165abb041a51dfb4ed588d5c5f4d853d709c75e7f82fd0c01e14  EllipticTwistCount.lean
+EllipticTwistCount.lean:16:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+EllipticTwistCount.lean:17:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Astra01.EllipticTwist.twist_point_count_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

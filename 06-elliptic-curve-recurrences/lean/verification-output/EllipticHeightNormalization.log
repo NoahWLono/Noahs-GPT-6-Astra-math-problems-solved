@@ -1,0 +1,5 @@
+bff2c145835bb02ee778160f3e84d1948b017f6089d75cd5f55a8628dd728d2d  EllipticHeightNormalization.lean
+'Astra01.EllipticHeight.pointHeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticHeight.pointHeight_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticHeight.pointHeight_some' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticHeight.generic_point_height' depends on axioms: [propext, Classical.choice, Quot.sound]

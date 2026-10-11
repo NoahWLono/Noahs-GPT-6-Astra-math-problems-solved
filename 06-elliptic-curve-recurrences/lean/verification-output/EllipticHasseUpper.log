@@ -1,0 +1,2 @@
+584e748dfab5d3c118c83f445daf9eb82601b4ef44a8d905455cc13b3dbeb8e7  EllipticHasseUpper.lean
+'Astra01.EllipticFrobenius.rational_count_upper_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]

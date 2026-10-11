@@ -1,0 +1,7 @@
+EllipticProjectiveHeightDivisor.lean:24:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticHeight.coordinate_nonempty`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticHeight.vectorDivisor_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]

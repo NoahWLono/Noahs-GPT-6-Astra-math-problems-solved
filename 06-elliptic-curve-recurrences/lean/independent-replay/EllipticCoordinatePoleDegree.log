@@ -1,0 +1,23 @@
+EllipticCoordinatePoleDegree.lean:59:15: warning: This simp argument is unused:
+  poleDivisor
+
+Hint: Omit it from the simp argument list.
+  simp only [p̵o̵l̵e̵D̵i̵v̵i̵s̵o̵r̵,̵ ̵Finsupp.mapRange_apply, Finsupp.single_eq_same,
+        principal_at_infinity_eq_neg_norm_degree, neg_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EllipticCoordinatePoleDegree.lean:59:28: warning: This simp argument is unused:
+  Finsupp.mapRange_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [poleDivisor, F̵i̵n̵s̵u̵p̵p̵.̵m̵a̵p̵R̵a̵n̵g̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵Finsupp.single_eq_same, principal_at_infinity_eq_neg_norm_degree,
+  ̲  ̲ ̲ ̲ ̲ ̲neg_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+EllipticCoordinatePoleDegree.lean:69:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.field_norm_coordinate`:
+  [IsAlgClosed k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.pole_degree_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]

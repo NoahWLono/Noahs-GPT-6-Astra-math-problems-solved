@@ -1,0 +1,23 @@
+e91a13da6d4a4d5faf2bba67965f8844b4b3273a2bc78c3787a7db0b4648efe4  ValuationResidueArithmetic.lean
+ValuationResidueArithmetic.lean:16:0: warning: automatically included section variable(s) unused in theorem `Astra01.HasConstantResidue.constant`:
+  [Valuation.IsTrivialOn k v]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Valuation.IsTrivialOn k v] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ValuationResidueArithmetic.lean:23:0: warning: automatically included section variable(s) unused in theorem `Astra01.HasConstantResidue.add`:
+  [Valuation.IsTrivialOn k v]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Valuation.IsTrivialOn k v] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ValuationResidueArithmetic.lean:30:0: warning: automatically included section variable(s) unused in theorem `Astra01.HasConstantResidue.neg`:
+  [Valuation.IsTrivialOn k v]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Valuation.IsTrivialOn k v] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ValuationResidueArithmetic.lean:66:34: warning: Try `simp at hav` instead of `simpa using hav`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'Astra01.HasConstantResidue.div' depends on axioms: [propext, Classical.choice, Quot.sound]

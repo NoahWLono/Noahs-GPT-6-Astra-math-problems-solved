@@ -14,12 +14,13 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 - [05 — The minimum local identifying code in the binary 6-cube](05-local-identifying-q6/README.md): **Completed and verified in Lean: M^L(6) = 14.** An explicit 14-word code attains the minimum, and the unconditional Lean theorem proves that every local 1-identifying code has at least 14 words. Both the first build and an independent clean-source rebuild of all 257 modules passed using only standard Lean axioms. The exact certificate is replayed as kernel-checked proof terms; no SAT-solver answer or native-evaluation axiom is assumed. This improves the strongest located published bounds of 12–15; the [bounded prior-art comparison](05-local-identifying-q6/REPRODUCIBILITY.md#prior-art) does not claim absolute priority. Read the [9-page mathematical paper](05-local-identifying-q6/paper/main.pdf).
 
+- [06 — Rational recurrences for elliptic-curve translation](06-elliptic-curve-recurrences/README.md): **Verified formalization; historical novelty unestablished.** The Lean formalization covers the recurrence obstruction and its stated supporting results, with the exact assumptions, theorem correspondence, trust boundary, and clean-rebuild evidence recorded in the [formal verification addendum](06-elliptic-curve-recurrences/FORMAL_VERIFICATION.md). The [original mathematical paper](06-elliptic-curve-recurrences/original-research/manuscript.pdf) and reproducible synthetic experiments are preserved unchanged as historical research assets. This is a result about the specified rational-recurrence model, not a faster ECDLP solver or a general algorithmic lower bound.
+
 ## Ongoing research
 
 Current research-only WIP:
 
 - koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound, a Lean 4 proof matching the required exported specification, and an eligible submission
-- Elliptic-curve translation recurrences: finish independent Lean verification, paper-to-theorem coverage review, and prior-art assessment; historical novelty remains unestablished
 - Pillai’s fixed-gap conjecture
 - Gauss circle error-term conjecture
 - Dirichlet divisor error-term conjecture

@@ -1,0 +1,3 @@
+032385ad478f8ee0513facc2512ad5ec58592fcb2d39f907fbf70ebe9aa1952f  EllipticAddSubAlgebra.lean
+'Astra01.EllipticAddSub.chordNumerator_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticAddSub.chordNumerator_product' depends on axioms: [propext, Classical.choice, Quot.sound]

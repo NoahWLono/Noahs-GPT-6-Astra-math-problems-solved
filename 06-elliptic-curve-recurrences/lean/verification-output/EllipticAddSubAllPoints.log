@@ -1,0 +1,9 @@
+994ba664e89c769c30d08bc2940a83f54370f64e9328747f214b64420b18a12b  EllipticAddSubAllPoints.lean
+EllipticAddSubAllPoints.lean:59:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticAddSub.mapVector_zero`:
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticAddSub.mapVector_same' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticAddSub.mapVector_add_sub' depends on axioms: [propext, Classical.choice, Quot.sound]

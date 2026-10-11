@@ -1,0 +1,3 @@
+377d7a3d63e1b65cb96d836a81835d40b6b892657dd686c195349c662ece9494  FunctionFieldPlaceAction.lean
+'FunctionField.chartPullback_valuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FunctionField.principalDivisorA_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]

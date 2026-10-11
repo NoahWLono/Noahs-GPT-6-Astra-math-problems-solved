@@ -1,0 +1,36 @@
+EllipticXYDegrees.lean:20:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.xCoord_ne_zero`:
+  [IsAlgClosed k]
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticXYDegrees.lean:23:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.yCoord_ne_zero`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+  [_root_.FunctionField k K]
+  [Algebra.IsSeparable k⟮X⟯ K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed
+  k] [WeierstrassCurve.IsElliptic W] [_root_.FunctionField k K] [Algebra.IsSeparable k⟮X⟯ K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticXYDegrees.lean:30:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.coordinate_norm_x_degree`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+EllipticXYDegrees.lean:37:0: warning: automatically included section variable(s) unused in theorem `Astra01.EllipticPointDivisor.coordinate_norm_y_degree`:
+  [IsAlgClosed k]
+  [WeierstrassCurve.IsElliptic W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed k] [WeierstrassCurve.IsElliptic W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Astra01.EllipticPointDivisor.pole_degree_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.pole_degree_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.poleDivisor_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticPointDivisor.poleDivisor_y' depends on axioms: [propext, Classical.choice, Quot.sound]

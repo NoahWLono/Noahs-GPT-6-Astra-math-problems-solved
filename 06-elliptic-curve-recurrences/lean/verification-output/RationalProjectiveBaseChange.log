@@ -1,0 +1,2 @@
+c9ae780d4f191048756203606913d5990536c07f951eedef578664de3b3477b3  RationalProjectiveBaseChange.lean
+'Astra01.rationalProjectiveMap_baseChange' depends on axioms: [propext, Classical.choice, Quot.sound]

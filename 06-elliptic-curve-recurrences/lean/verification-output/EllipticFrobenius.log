@@ -1,0 +1,3 @@
+5ddf7a2d34f5537465c1ec301045711051fb13e19b600b0fbbb648e2992a9479  EllipticFrobenius.lean
+'Astra01.EllipticFrobenius.pointFrobenius_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.EllipticFrobenius.difference_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]

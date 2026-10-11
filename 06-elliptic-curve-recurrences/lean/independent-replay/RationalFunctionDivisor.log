@@ -1,0 +1,7 @@
+'Astra01.RationalFunctionDivisor.principalDivisor_degree_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Astra01.RationalFunctionDivisor.principalDivisor_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.RationalFunctionDivisor.principalDivisor_infinity_valuation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

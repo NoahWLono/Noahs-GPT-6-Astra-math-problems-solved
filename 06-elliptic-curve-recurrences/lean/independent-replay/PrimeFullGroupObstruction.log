@@ -1,0 +1,1 @@
+'Astra01.prime_full_group_recurrence_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

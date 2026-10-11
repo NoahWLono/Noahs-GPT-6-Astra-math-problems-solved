@@ -1,0 +1,2 @@
+'Astra01.cyclic_subgroup_projective_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra01.finite_extension_projective_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]

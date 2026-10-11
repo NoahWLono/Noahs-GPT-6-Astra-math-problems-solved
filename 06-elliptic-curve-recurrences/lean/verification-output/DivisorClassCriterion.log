@@ -1,0 +1,4 @@
+adc526a35a9ec3a526fa5447b80a954e16daa5a80864292ea6b33a0b20d33ea2  DivisorClassCriterion.lean
+'Astra01.DedekindDivisor.exists_principalDivisor_of_class_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
