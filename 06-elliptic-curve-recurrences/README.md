@@ -1,4 +1,4 @@
-# ASTRA-01: elliptic-curve rational recurrence obstructions
+# ASTRA-06: elliptic-curve rational recurrence obstructions
 
 This package contains a research note and Lean 4 verification of its main obstruction theorems and mathematical examples. It does not provide an ECDLP-solving algorithm or establish historical novelty.
 
