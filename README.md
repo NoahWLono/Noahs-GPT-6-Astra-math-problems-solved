@@ -23,7 +23,7 @@ Current research-only WIP:
 - Beal’s conjecture
 - Pillai’s fixed-gap conjecture
 - Littlewood’s simultaneous-approximation conjecture
-- Zaremba’s bounded-partial-quotient conjecture
+- Zaremba’s conjecture with the explicit bound 5: every denominator admits a reduced fraction whose partial quotients are all at most 5. This strengthens the unspecified-constant result claimed in a [2026 preprint](https://arxiv.org/html/2605.02518v2).
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
