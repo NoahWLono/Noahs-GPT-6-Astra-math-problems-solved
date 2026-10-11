@@ -15,7 +15,7 @@
 \newcommand{\ind}{\mathbf 1}
 \newcommand{\U}{\mathcal U}
 \DeclareMathOperator{\lcm}{lcm}
-\title{A Uniform Optimum for Short-Interval\protect\\Square-Difference Masks\protect\\[5pt]\large A computer-assisted result for a 256-bit raw-table model}
+\title{A Uniform Optimum for Short-Interval\protect\\Square-Difference Masks\protect\\[5pt]\large A Lean-verified result for a 256-bit raw-table model}
 \author{GPT-6 astra}
 \date{10 October 2026}
 \begin{document}
@@ -34,9 +34,11 @@ starts and inputs coprime to the chosen modulus. We prove that $m=144$
 minimizes this worst-case count among every integer modulus
 $1\le m\le256$, simultaneously for every positive interval length $h$.
 For example, at most two candidates pass in any interval of 18 positions,
-and at most four pass in any interval of 48 positions. An explicit formula
-for the count at modulus 144, independently checked finite computations,
-and a density comparison together prove the statement for all lengths.
+and at most four pass in any interval of 48 positions. We give an explicit
+formula for the count at modulus 144 and formalize the central optimality
+theorem in Lean~4. The formal proof checks finite certificates directly
+from the residue definition, then uses periodicity to cover all lengths.
+Two Python implementations provide additional computational checks.
 
 The theorem concerns candidate counts under this specific table-storage
 model; it does not establish a faster factorization algorithm. Earlier
@@ -81,11 +83,12 @@ Thus $G_{256}(h)=F_{144}(h)$ for all positive lengths. The assertion allows
 ties at individual lengths and does not extend the modulus budget.
 \end{theorem}
 
-The proof separates an analytic description of one periodic family from
-finite, computer-assisted comparisons. The finite lemmas are not claimed
-to have been formalized in a proof assistant. The package includes two
-independent implementations, attaining witnesses, exact output hashes,
-and the verification limits needed to audit those lemmas.
+The paper first gives an analytic description of the modulus-144 family
+and the finite comparisons used in the proof. Section~\ref{sec:lean}
+gives a separate Lean~4 formalization of Theorem~\ref{thm:main}, including
+the finite bounds and their extension to arbitrary lengths. The exact
+envelope formula below retains its analytic proof; it is not a premise
+assumed by the Lean theorem.
 
 \section{An exact formula for the modulus 144}
 
@@ -303,10 +306,10 @@ additional constants checker enumerates 995,328 remainder cases for
 $m=144$ and confirms the excess $7/4$ and the density gap.
 
 All arithmetic used for correctness is integral or rational. Each exhaustive
-verifier and certificate checker accepts no arguments and enforces limits
+Python verifier and certificate checker accepts no arguments and enforces limits
 of 120 CPU seconds and 256 MiB
-of address space. Those limits govern the verifier, not the logical mask
-payload. Mathematical JSON is deterministic; runtime telemetry is stored
+of address space. Those limits apply to the Python programs, not to the
+Lean build or the logical mask payload. Mathematical JSON is deterministic; runtime telemetry is stored
 separately. Parent reruns and document-build checks are recorded in
 \texttt{parent\_verification.json} and \texttt{SHA256SUMS}.
 
@@ -328,6 +331,93 @@ The original $64$-length construction can also be regenerated with
 telemetry files; preserve the supplied record by using a separate copy.
 The mathematical hashes are expected to agree. Hash agreement identifies
 artifacts and does not substitute for proof review.
+
+\section{Lean formalization and its trust boundary}\label{sec:lean}
+
+The accompanying \texttt{lean/} project pins Lean~4.19.0 and the mathlib
+revision recorded in its package manifest. Its endpoint in
+\texttt{MainTheorem.lean} is
+\begin{quote}\small\ttfamily
+theorem uniform\_optimal (m h : $\mathbb N$)\\
+\hspace*{1em}(hm1 : $1\le m$) (hm256 : $m\le256$) :\\
+\hspace*{1em}F 144 h $\le$ F m h
+\end{quote}
+There is no finite-horizon hypothesis or assumed certificate-correctness
+premise. The statement includes $h=0$. The same development proves strict
+inequality for every competing modulus when $h\ge148$, as well as
+\[
+ 12F_{144}(h)\le h+21,\qquad
+ 2h\le21F_m(h)\quad(1\le m\le256,\ m\ne144).
+\]
+
+\paragraph{Connection to the mathematical definition.}
+\texttt{Model.lean} defines the indicator by
+$a^2\bmod m=(n+b^2)\bmod m$ for some $0\le b<m$.
+This equation includes zero squares and avoids truncated subtraction on
+natural numbers. Unit inputs satisfy $n<m$ and $\gcd(n,m)=1$, so the
+modulus-one convention is included. \texttt{SemanticBridge.lean} proves
+that the executable window count equals the sum of this predicate, and
+that the executable $F$ equals the corresponding maximum over inputs and
+starts. Repeated positions in windows longer than a period are counted.
+The formal theorem concerns these counts; the raw $m$-bit storage charge
+is the representation convention stated in Section~1, not a claim about
+the Lean verifier's physical memory use.
+
+\paragraph{Finite checks and the infinite argument.}
+For every unit input and start modulo $144$, Lean checks the full-period
+upper bound, all $144$ remainder bounds, and an explicit upper target at
+each length through $146$. For each competing modulus, it checks a valid
+unit input, its full-period lower bound at every start, and a valid start
+for every remainder. It also checks a lower witness meeting the upper
+target in all $255\cdot146=37{,}230$ competing modulus/length pairs.
+Witnesses imported from Python are untrusted proposals: Lean reconstructs
+the masks and validates their unit conditions, starts, and count bounds.
+An inductively proved running-sum identity accelerates the upper check
+without changing its exhaustive specification.
+
+The generic window lemmas prove, for every periodic indicator $f$, the
+identity
+\[
+ W_f(s,h)=\left\lfloor\frac hm\right\rfloor W_f(s,m)
+          +W_f(s,h\bmod m).
+\]
+Thus the checked period and remainder bounds imply the displayed global
+inequalities. Arithmetic gives the comparison from $h=147$ onward, and
+the finite witnesses cover the remaining positive lengths. The proof
+does not need to assume the exact envelope or a Python result table.
+
+\paragraph{Trust and formal scope.}
+The finite checks use Lean's standard \texttt{native\_decide} facility.
+The final theorem has precisely these axiom dependencies:
+\begin{quote}\small\ttfamily
+propext, Classical.choice, Quot.sound, Lean.ofReduceBool.
+\end{quote}
+The last dependency records reliance on
+Lean's compiled Boolean evaluation, including its compiler and runtime;
+the finite computation is not performed entirely by kernel reduction.
+There are no \texttt{sorry} placeholders or custom mathematical axioms.
+The semantic and certificate-extraction proofs are checked by the kernel.
+
+The formalization covers the central optimality theorem, eventual strict
+optimality, both displayed bounds, and the semantic connection to the
+residue model. Lemma~\ref{lem:envelope}, its sharpness examples, the budget
+table, and the historical discussion are not formalized here. Their
+analytic arguments and original computational evidence remain available.
+The formal proof does not establish historical novelty or human peer
+review.
+
+\paragraph{Reproduction.}
+With the pinned Lean toolchain installed through elan, run from
+\texttt{lean/}:
+\begin{quote}\small\ttfamily
+lake exe cache get\\
+bash verify.sh
+\end{quote}
+The script rechecks all nine local proof modules, reruns the finite
+evaluations, and prints the endpoint statements and axiom lists. The
+published verification record distinguishes cached dependencies from the
+fresh local source rebuild and records its time and memory usage.
+The original Python checks remain a separate verification route.
 
 \section{Prior art, novelty, and release decision}
 

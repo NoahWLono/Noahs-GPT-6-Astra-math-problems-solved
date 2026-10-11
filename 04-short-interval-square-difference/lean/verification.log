@@ -1,0 +1,20 @@
+Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+Checking GenericWindow.lean
+Checking WindowScan.lean
+Checking Model.lean
+Checking SemanticBridge.lean
+Checking WitnessData.lean
+Checking FiniteChecks.lean
+Checking LowerSoundness.lean
+Checking CertificateBounds.lean
+Checking MainTheorem.lean
+Astra.uniform_optimal (m h : ℕ) (hm1 : 1 ≤ m) (hm256 : m ≤ 256) : Astra.F 144 h ≤ Astra.F m h
+Astra.strict_optimal_from_148 (m h : ℕ) (hm1 : 1 ≤ m) (hm256 : m ≤ 256) (hne : m ≠ 144) (hh : 148 ≤ h) :
+  Astra.F 144 h < Astra.F m h
+'Astra.uniform_optimal' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'Astra.strict_optimal_from_148' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'Astra.upper144_all_lengths' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'Astra.competitor_all_lengths' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'Astra.indicator_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra.count_eq_sum_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Astra.F_eq_sup_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]

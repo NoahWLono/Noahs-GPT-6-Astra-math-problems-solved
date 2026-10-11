@@ -1,0 +1,8 @@
+{
+  "meaning": "Untrusted data only; FiniteChecks.lean checks every needed inequality.",
+  "source_certificate_sha256": "c911c587c1f79cf2b3b34f90accfe51498a3854d37ef9c3d0afdc85a3188a3cc",
+  "source_results_sha256": "4eb4b6db030d4b4e4716780c36ddebb1bb33a1bd0213de488a170ef47ecccab4",
+  "finite_witness_count": 37376,
+  "lower_remainder_witness_count_including_skipped_144": 32896,
+  "generated_source_sha256": "f965fad145fa6d86ffe864342cfbf1893bf4b440e35502f484f2772b55fba04d"
+}

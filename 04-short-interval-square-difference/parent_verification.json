@@ -2,12 +2,13 @@
   "status": "PASS",
   "verification_date_local": "2026-10-10",
   "theorem": "For every integer h>=1 and every integer 1<=m<=256, F_144(h)<=F_m(h), under the stated raw-mask model.",
-  "proof_type": "Analytic CRT envelope plus computer-assisted exact finite lemmas; not proof-assistant formalized.",
+  "proof_type": "Central all-length theorem formally verified in Lean 4.19.0, including standard native_decide finite evaluation; analytic/Python proofs remain for additional paper claims.",
   "public_release_authorization": {
     "date_local": "2026-10-10",
     "scope": "The owner explicitly requested pushing this result to the next numbered folder of the existing GitHub collection.",
     "original_protocol": "Retained byte-for-byte as historical research provenance.",
-    "novelty": "Unestablished; release does not assert priority or faster factorization."
+    "novelty": "Unestablished; release does not assert priority or faster factorization.",
+    "lean_update": "Owner explicitly requested Lean verification and a push to folder 04."
   },
   "fresh_parent_replay": {
     "location": "Isolated relocated copy of the publication files",
@@ -72,14 +73,15 @@
     "mathematics": "Independent worker accepted CRT classes, gaps, envelopes, sharp discrepancy, density gap and infinite tail; parent also reviewed them.",
     "prior_art": "Independent worker accepted attribution and qualified novelty wording; no claim that publication itself resolves novelty.",
     "portability": "Scripts resolve inputs relative to their own paths; tests also passed from an unrelated cwd. Linux/Python3.10 compatibility is documented; tested runtime was Python3.14.8.",
-    "human_peer_review": false
+    "human_peer_review": false,
+    "formalization": "Three worker lanes covered semantics, finite evaluation, and checker soundness. Parent rebuilt all nine published local modules in a relocated copy and audited final axioms."
   },
   "paper": {
     "source": "paper.tex",
-    "source_sha256": "50fbfa45d2807eb1d2dcbbd1ab50df0fdee2453388f487cac915d7639d08b709",
+    "source_sha256": "365a93ad1862250b15845984240f239a2948e8ddd6a112ff8218dd90edd954ff",
     "pdf": "paper.pdf",
-    "pdf_sha256": "0c1905a7c447f0354d3b3d4ad6cb660695844a886332516ed45017599ee0e8c3",
-    "pages": 6,
+    "pdf_sha256": "2f784459eff5b907aa58209b30d0f8b28c14ff0ac4477b2a77c6378a1204d5e8",
+    "pages": 7,
     "attribution": "GPT-6 astra",
     "desktop_editor_compile": "success",
     "export_compiler": "Tectonic 0.17.0 with untrusted mode",
@@ -89,14 +91,23 @@
       "github_asset_sha256": "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7",
       "download_sha256": "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7"
     },
-    "visual_qa": "All six pages rendered and inspected. After the final wording change, page5 re-inspected and rendered pages1,2,3,4,6 confirmed byte-identical to previously inspected PNGs.",
-    "metadata": "Creator LaTeX with hyperref; Producer xdvipdfmx; no custom metadata, encryption, JavaScript or embedded files found."
+    "visual_qa": "All seven pages rendered and inspected; final revised trust paragraph also re-rendered and inspected. Final TeX log has no overfull/underfull boxes or missing characters.",
+    "metadata": "LaTeX/hyperref and xdvipdfmx; no encryption, attachments, or document JavaScript. OpenAction is the ordinary initial page-fit destination."
   },
   "scope": "Synthetic finite residue sets; no arbitrary-input factoring API or deployed tests.",
-  "trust": "Exact integer/rational code and reviewed mathematics; Python runtime and machine execution are trusted.",
+  "trust": "Lean kernel and ordinary logical axioms, plus compiler/runtime evaluation through Lean.ofReduceBool for the three finite checks. Python verification of the additional tables and analytic review are separate.",
   "resource_limits": {
     "per_exhaustive_verifier_cpu_seconds": 120,
-    "per_exhaustive_verifier_address_space_MiB": 256
+    "per_exhaustive_verifier_address_space_MiB": 256,
+    "applies_to": "Original exhaustive Python verifiers only. Lean replay time and peak child RSS are recorded separately in lean/verification.json."
   },
-  "hash_convention": "SHA256SUMS covers every package file except itself. Mathematical files match the earlier reviewed records; telemetry is variable and reflects the stated run."
+  "hash_convention": "SHA256SUMS covers every package file except itself. Mathematical files match the earlier reviewed records; telemetry is variable and reflects the stated run.",
+  "previous_publication": {
+    "commit": "aa5b18d6326687515b34475f4ed0926bbcd9fd57",
+    "proof_type": "Analytic CRT envelope plus computer-assisted exact finite lemmas; not proof-assistant formalized.",
+    "paper_source_sha256": "50fbfa45d2807eb1d2dcbbd1ab50df0fdee2453388f487cac915d7639d08b709",
+    "paper_pdf_sha256": "0c1905a7c447f0354d3b3d4ad6cb660695844a886332516ed45017599ee0e8c3",
+    "note": "Initial Python/analytic release; superseded by this explicitly authorized Lean formalization."
+  },
+  "formal_verification": "lean/verification.json"
 }

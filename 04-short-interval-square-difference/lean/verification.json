@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "theorem": "Astra.uniform_optimal",
+  "statement": "For every natural h and every 1 <= m <= 256, Astra.F 144 h <= Astra.F m h.",
+  "other_formal_results": [
+    "Astra.strict_optimal_from_148",
+    "Astra.upper144_all_lengths",
+    "Astra.competitor_all_lengths",
+    "Astra.F_eq_sup_congruence"
+  ],
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "fresh_relocated_replay": {
+    "status": "PASS",
+    "exit_code": 0,
+    "started_utc": "2026-10-11T02:28:09Z",
+    "finished_utc": "2026-10-11T02:30:27Z",
+    "wall_seconds": 137.35328806300004,
+    "user_cpu_seconds": 117.939601,
+    "system_cpu_seconds": 11.233163,
+    "peak_child_rss_kib": 2807828,
+    "local_proof_objects_before_replay": 0,
+    "module_count": 9,
+    "dependency_policy": "Pinned dependency caches reused; every local project proof module re-elaborated from the publication source.",
+    "generator_roundtrip_byte_identical": true
+  },
+  "author_finite_check_run": {
+    "returncode": 0,
+    "elapsed_seconds": 144.30186224800036,
+    "cpu_user": 105.23625,
+    "cpu_system": 1.162449,
+    "peak_rss_kib": 2738272
+  },
+  "axioms_by_declaration": {
+    "Astra.uniform_optimal": [
+      "propext",
+      "Classical.choice",
+      "Lean.ofReduceBool",
+      "Quot.sound"
+    ],
+    "Astra.strict_optimal_from_148": [
+      "propext",
+      "Classical.choice",
+      "Lean.ofReduceBool",
+      "Quot.sound"
+    ],
+    "Astra.upper144_all_lengths": [
+      "propext",
+      "Classical.choice",
+      "Lean.ofReduceBool",
+      "Quot.sound"
+    ],
+    "Astra.competitor_all_lengths": [
+      "propext",
+      "Classical.choice",
+      "Lean.ofReduceBool",
+      "Quot.sound"
+    ],
+    "Astra.indicator_eq_one_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Astra.count_eq_sum_congruence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Astra.F_eq_sup_congruence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "trust": "The three finite evaluations use standard native_decide and rely on Lean compiler/runtime correctness through Lean.ofReduceBool, in addition to the ordinary logical kernel axioms. The finite computation is not entirely kernel reduction.",
+  "audit": {
+    "sorry_or_admit": false,
+    "custom_axiom_declarations": false,
+    "custom_external_or_unsafe_definitions": false,
+    "diagnostic_IO_in_proof_sources": false,
+    "dependency_revisions_match_manifest": true,
+    "dependency_tracked_files_clean": true,
+    "native_check_count": 3,
+    "source_modules": [
+      "GenericWindow",
+      "WindowScan",
+      "Model",
+      "SemanticBridge",
+      "WitnessData",
+      "FiniteChecks",
+      "LowerSoundness",
+      "CertificateBounds",
+      "MainTheorem"
+    ]
+  },
+  "coverage": {
+    "moduli_including144": 256,
+    "competitors": 255,
+    "upper_unit_inputs": 48,
+    "upper_starts_per_input": 144,
+    "upper_remainders_per_start": 144,
+    "upper_prefix_lengths_including0": 147,
+    "lower_period_starts": 32752,
+    "lower_remainder_witnesses": 32752,
+    "finite_competitor_length_pairs": 37230
+  },
+  "untrusted_data": {
+    "meaning": "Untrusted data only; FiniteChecks.lean checks every needed inequality.",
+    "source_certificate_sha256": "c911c587c1f79cf2b3b34f90accfe51498a3854d37ef9c3d0afdc85a3188a3cc",
+    "source_results_sha256": "4eb4b6db030d4b4e4716780c36ddebb1bb33a1bd0213de488a170ef47ecccab4",
+    "finite_witness_count": 37376,
+    "lower_remainder_witness_count_including_skipped_144": 32896,
+    "generated_source_sha256": "f965fad145fa6d86ffe864342cfbf1893bf4b440e35502f484f2772b55fba04d"
+  },
+  "source_sha256": {
+    "CertificateBounds.lean": "69c85de4037b5a4009101380a7be7462547aac6021cd0a4aec8b9614416b518a",
+    "FiniteChecks.lean": "3ec2b1828945e1c024c985dc6aae51d693c3552f35dc3a7ec057ac40b2ad1418",
+    "GenericWindow.lean": "e412e04a9bf3b262c8d74390a70cfa23bae0382107c0ae657cb77411110eee96",
+    "LowerSoundness.lean": "95e4957bfb2aff7fcdc6ca5dc7b36af4fa84dae2cae2c8e903d5f32af14e5474",
+    "MainTheorem.lean": "ff3281ecd0717f16f019cfe7983ec147e131b7f3108cd7234f9b4569a20bc8f3",
+    "Model.lean": "6241b9f6156c61be9c32ca40ceea51ce0dd806faa4de4bffa65c928b60050769",
+    "SemanticBridge.lean": "4fc2d92f7ae0bc8bb03aa9d9092242a8ba4acb73d6d4c496c08850b68860a76d",
+    "WindowScan.lean": "078e1797de7881dc202656c0f23c5e6a5ad1ecc53945df066a8c523e9b3d079b",
+    "WitnessData.lean": "f965fad145fa6d86ffe864342cfbf1893bf4b440e35502f484f2772b55fba04d",
+    "generate_witness_data.py": "59277b9588457ee7ad7aa1aa2687d9c6f6ad3642c911f7f369d1ef535891aa90",
+    "lake-manifest.json": "c900ba7aa2d752dd44952d117c76310c07b2b89ef2e6b4eede5c329227a34c33",
+    "lakefile.toml": "2d514a9ce8caf2441369b103e55ad2b3f175e64f85a2ffc51f71cf2b815d7cd6",
+    "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "verify.sh": "a7a6e651e61fc2bbfde27da677876f6dd898254ec41086bd314a0874a4c91525",
+    "witness_data_provenance.json": "176459b009a134d010aa3191b8c2e7bc17b25c29bdb4baf5e0087cc4623ea464"
+  },
+  "formal_scope_exclusions": [
+    "Exact all-length envelope formula in the paper",
+    "Sharpness examples",
+    "Original budget table and full numerical tables",
+    "Historical novelty and prior-art claims"
+  ],
+  "review": "Separate semantic, finite-certificate soundness, and paper-scope reviews passed; this is agent-assisted review, not independent human peer review.",
+  "log": "verification.log",
+  "novelty": "Unestablished; formal correctness does not establish priority.",
+  "scope": "Synthetic finite residue sets only; no factoring input interface or deployed testing."
+}
