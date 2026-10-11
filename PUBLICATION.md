@@ -1,6 +1,6 @@
 # Publication and preservation notes
 
-This is a local review package. Preparing it does not publish it or change the remote repository.
+These notes record the collection's preservation and publication rules. Repository changes require the owner's authorization.
 
 ## Layout
 
@@ -14,6 +14,12 @@ An eventual authorized repository update must use the then-current remote HEAD a
 
 ## Scope and checks
 
-No new CI configuration, license choice, or external write is made here. Prior-art status is separate from proof correctness. The old family's construction remains established; it is not relabelled as a novel APN result. The new lower bound does not prove sharpness or an attaining construction.
+The collection adds no CI configuration or project-wide license. External publication requires the owner's authorization. Prior-art status is separate from proof correctness. The old family's construction remains established; it is not relabelled as a novel APN result. The new lower bound does not prove sharpness or an attaining construction.
 
 The package excludes internal research notes, abandoned experiments, compiled Lean objects, dependency checkouts, credentials, and machine-specific build paths. Only the actual imported proof closure is copied into the new proof tree. Source bytes are frozen by a separate source manifest. A root `SHA256SUMS` covers the final staged files except itself; regenerate it whenever reviewed assets change.
+
+## Order-ten frameproof classification
+
+`03-order-ten-frameproof/` contains the 15-module dependency closure of the completed classification theorem, four saved LRAT certificates, pinned Lean/mathlib configuration, portable verification scripts, the mathematical paper, and reviewed verification and prior-art records. The final theorem uses standard compiled `bv_check` evaluation; its four generated evaluation axioms are disclosed alongside the ordinary Lean axioms. Optional separately checked CNF proofs are included as corroboration and are not imports of the main theorem.
+
+The owner authorized this addition on 10 October 2026. It is added to the current remote history without changing either existing problem package or the research-only WIP list. The publication contains no abandoned experiments, dependency checkout, compiled proof objects, credentials, or machine-specific build paths. Prior-art coverage remains qualified and separate from the successful formal proof.

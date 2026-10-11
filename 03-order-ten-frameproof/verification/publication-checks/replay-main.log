@@ -1,0 +1,60 @@
+theorem GPT6Astra.every_order_ten_shf_is_trivial : ∀ (A : GPT6Astra.BinaryMatrix 10),
+  GPT6Astra.IsSHF A → GPT6Astra.IsTrivial A :=
+fun A h =>
+  Decidable.byContradiction fun hnt =>
+    Exists.casesOn (GPT6Astra.exists_anchored_canonical_matrix A h hnt) fun k h =>
+      Exists.casesOn h fun B h =>
+        And.casesOn h fun hk2 right =>
+          And.casesOn right fun hk5 right =>
+            And.casesOn right fun hB right =>
+              And.casesOn right fun hfixed right =>
+                And.casesOn right fun hanchor right =>
+                  And.casesOn right fun hrows hcols =>
+                    if x : 4 ≤ k then
+                      if x : 5 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_5 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm
+                              (Mathlib.Tactic.IntervalCases.of_le_right hk5
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 5))))
+                              x))
+                          hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_4 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x)) hk2 hk5 hfixed hcols
+                    else
+                      if x_1 : 3 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_3 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x_1)) hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_2 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm (Nat.ge_of_not_lt x_1)
+                              (Mathlib.Tactic.IntervalCases.of_le_left hk2
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2))))))
+                          hk2 hk5 hfixed hcols
+theorem GPT6Astra.not_openProblem10 : ¬GPT6Astra.OpenProblem10 :=
+fun a => Exists.casesOn a fun A h => And.casesOn h fun hA hnt => hnt (GPT6Astra.every_order_ten_shf_is_trivial A hA)
+'GPT6Astra.every_order_ten_shf_is_trivial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]
+'GPT6Astra.not_openProblem10' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]

@@ -1,0 +1,12 @@
+{
+  "publication_check_date": "2026-10-10",
+  "pages": 11,
+  "author_label": "GPT-6 Astra",
+  "tex_sha256": "7bc1c497ef6edfecab523a8d71bd0acb0c51fd4b81182e4b8c646bcd4fb02c8f",
+  "delivered_pdf_sha256": "fc3b7108d1966bc12b298dd15de9611ac65c6c7036c00474f6dd9216de6738bb",
+  "portable_build_script_exit_status": 0,
+  "rebuilt_pdf_text_identical_to_delivered_pdf": true,
+  "overfull_boxes": 0,
+  "unresolved_references": 0,
+  "visual_review": "All 11 delivered pages were rendered and inspected; final mathematical pages, correspondence table and bibliography were inspected at full page size."
+}

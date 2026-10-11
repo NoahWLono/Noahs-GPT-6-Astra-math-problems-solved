@@ -1,0 +1,419 @@
+CanonicalBoolAtoms.lean: OK
+CanonicalMatrix.lean: OK
+CryptographyResearch.lean: OK
+CutFamilies.lean: OK
+DoubleLex.lean: OK
+FiniteCase2.lean: OK
+FiniteCase3.lean: OK
+FiniteCase4.lean: OK
+FiniteCase5.lean: OK
+FiniteCaseSupport.lean: OK
+LexBoolean.lean: OK
+MainTheorem.lean: OK
+MatrixNormalization.lean: OK
+MatrixStructure.lean: OK
+README.txt: OK
+SearchLemmas.lean: OK
+certificates/case2.lrat: OK
+certificates/case3.lrat: OK
+certificates/case4.lrat: OK
+certificates/case5.lrat: OK
+lake: OK
+lake-manifest.json: OK
+lakefile.toml: OK
+lean-toolchain: OK
+verify.sh: OK
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+mathlib commit: d13f23b723b8a846827a245b89c10fc7d3f11612
+
+build-case-2
+ℹ [3092/3103] Built CryptographyResearch (7.2s)
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3093/3103] Built CanonicalBoolAtoms (6.2s)
+ℹ [3094/3103] Built SearchLemmas (2.2s)
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3095/3103] Built MatrixStructure (2.1s)
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3096/3103] Built CutFamilies (2.4s)
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3103] Built FiniteCaseSupport (4.2s)
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3103] Built MatrixNormalization (2.6s)
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3103] Built DoubleLex (13s)
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3103] Built CanonicalMatrix (3.3s)
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3101/3103] Built LexBoolean (3.7s)
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3103] Built FiniteCase2 (49s)
+info: FiniteCase2.lean:326:0: 'GPT6Astra.anchored_case_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_2._native.bv_decide.ax_36]
+Build completed successfully (3103 jobs).
+
+build-case-3
+ℹ [636/718] Replayed CryptographyResearch
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [639/718] Replayed SearchLemmas
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [644/718] Replayed MatrixStructure
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [645/718] Replayed CutFamilies
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [817/900] Replayed MatrixNormalization
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3103] Replayed DoubleLex
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3103] Replayed CanonicalMatrix
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3103] Replayed LexBoolean
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3103] Replayed FiniteCaseSupport
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3103] Built FiniteCase3 (46s)
+info: FiniteCase3.lean:326:0: 'GPT6Astra.anchored_case_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_3._native.bv_decide.ax_36]
+Build completed successfully (3103 jobs).
+
+build-case-4
+ℹ [636/758] Replayed CryptographyResearch
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [639/758] Replayed SearchLemmas
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [644/758] Replayed MatrixStructure
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [645/758] Replayed CutFamilies
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [817/1017] Replayed MatrixNormalization
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3103] Replayed DoubleLex
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3103] Replayed CanonicalMatrix
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3103] Replayed LexBoolean
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3103] Replayed FiniteCaseSupport
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3103] Built FiniteCase4 (48s)
+info: FiniteCase4.lean:326:0: 'GPT6Astra.anchored_case_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_4._native.bv_decide.ax_36]
+Build completed successfully (3103 jobs).
+
+build-case-5
+ℹ [636/828] Replayed CryptographyResearch
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [639/828] Replayed SearchLemmas
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [644/828] Replayed MatrixStructure
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [645/828] Replayed CutFamilies
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [817/828] Replayed MatrixNormalization
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3103] Replayed DoubleLex
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3103] Replayed CanonicalMatrix
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3103] Replayed LexBoolean
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3103] Replayed FiniteCaseSupport
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3103] Built FiniteCase5 (46s)
+info: FiniteCase5.lean:326:0: 'GPT6Astra.anchored_case_5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_5._native.bv_decide.ax_36]
+Build completed successfully (3103 jobs).
+
+build-main
+ℹ [636/680] Replayed CryptographyResearch
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [639/680] Replayed SearchLemmas
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [644/680] Replayed MatrixStructure
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [645/680] Replayed CutFamilies
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [817/887] Replayed MatrixNormalization
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3107] Replayed DoubleLex
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3107] Replayed CanonicalMatrix
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3107] Replayed LexBoolean
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3107] Replayed FiniteCaseSupport
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3107] Replayed FiniteCase2
+info: FiniteCase2.lean:326:0: 'GPT6Astra.anchored_case_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_2._native.bv_decide.ax_36]
+ℹ [3103/3107] Replayed FiniteCase3
+info: FiniteCase3.lean:326:0: 'GPT6Astra.anchored_case_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_3._native.bv_decide.ax_36]
+ℹ [3104/3107] Replayed FiniteCase4
+info: FiniteCase4.lean:326:0: 'GPT6Astra.anchored_case_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_4._native.bv_decide.ax_36]
+ℹ [3105/3107] Replayed FiniteCase5
+info: FiniteCase5.lean:326:0: 'GPT6Astra.anchored_case_5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_5._native.bv_decide.ax_36]
+ℹ [3106/3107] Built MainTheorem (3.8s)
+info: MainTheorem.lean:33:0: theorem GPT6Astra.every_order_ten_shf_is_trivial : ∀ (A : GPT6Astra.BinaryMatrix 10),
+  GPT6Astra.IsSHF A → GPT6Astra.IsTrivial A :=
+fun A h =>
+  Decidable.byContradiction fun hnt =>
+    Exists.casesOn (GPT6Astra.exists_anchored_canonical_matrix A h hnt) fun k h =>
+      Exists.casesOn h fun B h =>
+        And.casesOn h fun hk2 right =>
+          And.casesOn right fun hk5 right =>
+            And.casesOn right fun hB right =>
+              And.casesOn right fun hfixed right =>
+                And.casesOn right fun hanchor right =>
+                  And.casesOn right fun hrows hcols =>
+                    if x : 4 ≤ k then
+                      if x : 5 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_5 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm
+                              (Mathlib.Tactic.IntervalCases.of_le_right hk5
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 5))))
+                              x))
+                          hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_4 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x)) hk2 hk5 hfixed hcols
+                    else
+                      if x_1 : 3 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_3 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x_1)) hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_2 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm (Nat.ge_of_not_lt x_1)
+                              (Mathlib.Tactic.IntervalCases.of_le_left hk2
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2))))))
+                          hk2 hk5 hfixed hcols
+info: MainTheorem.lean:34:0: theorem GPT6Astra.not_openProblem10 : ¬GPT6Astra.OpenProblem10 :=
+fun a => Exists.casesOn a fun A h => And.casesOn h fun hA hnt => hnt (GPT6Astra.every_order_ten_shf_is_trivial A hA)
+info: MainTheorem.lean:35:0: 'GPT6Astra.every_order_ten_shf_is_trivial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]
+info: MainTheorem.lean:36:0: 'GPT6Astra.not_openProblem10' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]
+Build completed successfully (3107 jobs).
+
+replay-case-2
+'GPT6Astra.anchored_case_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_2._native.bv_decide.ax_36]
+
+replay-case-3
+'GPT6Astra.anchored_case_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_3._native.bv_decide.ax_36]
+
+replay-case-4
+'GPT6Astra.anchored_case_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_4._native.bv_decide.ax_36]
+
+replay-case-5
+'GPT6Astra.anchored_case_5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_5._native.bv_decide.ax_36]
+
+replay-main
+theorem GPT6Astra.every_order_ten_shf_is_trivial : ∀ (A : GPT6Astra.BinaryMatrix 10),
+  GPT6Astra.IsSHF A → GPT6Astra.IsTrivial A :=
+fun A h =>
+  Decidable.byContradiction fun hnt =>
+    Exists.casesOn (GPT6Astra.exists_anchored_canonical_matrix A h hnt) fun k h =>
+      Exists.casesOn h fun B h =>
+        And.casesOn h fun hk2 right =>
+          And.casesOn right fun hk5 right =>
+            And.casesOn right fun hB right =>
+              And.casesOn right fun hfixed right =>
+                And.casesOn right fun hanchor right =>
+                  And.casesOn right fun hrows hcols =>
+                    if x : 4 ≤ k then
+                      if x : 5 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_5 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm
+                              (Mathlib.Tactic.IntervalCases.of_le_right hk5
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 5))))
+                              x))
+                          hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_4 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x)) hk2 hk5 hfixed hcols
+                    else
+                      if x_1 : 3 ≤ k then
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_3 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm (le_antisymm (Nat.ge_of_not_lt x) x_1)) hk2 hk5 hfixed hcols
+                      else
+                        Eq.ndrec (motive := fun x =>
+                          2 ≤ x → x ≤ 5 → GPT6Astra.FixedRow B x → GPT6Astra.DoubleLexAnchoredColumns B x → False)
+                          (fun hk2 hk5 hfixed hcols => GPT6Astra.anchored_case_2 B hB hfixed hanchor hrows hcols)
+                          (Eq.symm
+                            (le_antisymm (Nat.ge_of_not_lt x_1)
+                              (Mathlib.Tactic.IntervalCases.of_le_left hk2
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2))))))
+                          hk2 hk5 hfixed hcols
+theorem GPT6Astra.not_openProblem10 : ¬GPT6Astra.OpenProblem10 :=
+fun a => Exists.casesOn a fun A h => And.casesOn h fun hA hnt => hnt (GPT6Astra.every_order_ten_shf_is_trivial A hA)
+'GPT6Astra.every_order_ten_shf_is_trivial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]
+'GPT6Astra.not_openProblem10' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ GPT6Astra.anchored_case_2._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_3._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_4._native.bv_decide.ax_36,
+ GPT6Astra.anchored_case_5._native.bv_decide.ax_36]
+
+Verification succeeded: hashes and pins checked; four certificates and MainTheorem freshly rechecked.
+Trust includes the standard Lean axioms and compiled bv_check evaluation, as documented in README.txt.
+Logs: <PROJECT>/verification-logs/20261011T003648Z-15309

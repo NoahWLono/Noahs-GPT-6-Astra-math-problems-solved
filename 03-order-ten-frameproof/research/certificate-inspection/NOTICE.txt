@@ -1,0 +1,20 @@
+Third-party attribution for the optional LRAT proof helpers
+
+SharedLRAT.lean and DagLRAT.lean adapt the proof-construction approach in
+Mathlib/Tactic/Sat/FromLRAT.lean, pinned mathlib commit
+  d13f23b723b8a846827a245b89c10fc7d3f11612
+
+Original source notice:
+  Copyright (c) 2022 Mario Carneiro. All rights reserved.
+  Released under Apache 2.0 license as described in the file LICENSE.
+  Authors: Mario Carneiro
+
+Source:
+https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Tactic/Sat/FromLRAT.lean
+
+The local adaptations share theorem declarations and input-clause projection
+proofs to reduce repeated kernel work. These modified helpers are provided
+under Apache License 2.0; the accompanying LICENSE.mathlib is its full text.
+This notice applies to these adapted helpers and does not select a license
+for the repository as a whole. Lean and mathlib are external dependencies;
+their checkouts and binaries are not distributed in this package.

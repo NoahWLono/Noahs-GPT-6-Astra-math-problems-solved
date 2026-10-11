@@ -1,0 +1,50 @@
+{
+  "verification_date": "2026-10-10",
+  "command": "./gpt6_astra/verify.sh",
+  "exit_status": 0,
+  "source_hash_manifest_verified": true,
+  "lean_version": "4.34.1",
+  "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "fresh_local_build_directory": true,
+  "external_dependency_build_cache_reused": true,
+  "local_modules_built_from_source": [
+    "CanonicalBoolAtoms",
+    "CanonicalMatrix",
+    "CryptographyResearch",
+    "CutFamilies",
+    "DoubleLex",
+    "FiniteCase2",
+    "FiniteCase3",
+    "FiniteCase4",
+    "FiniteCase5",
+    "FiniteCaseSupport",
+    "LexBoolean",
+    "MainTheorem",
+    "MatrixNormalization",
+    "MatrixStructure",
+    "SearchLemmas"
+  ],
+  "local_module_count": 15,
+  "direct_certificate_source_replays": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "direct_main_source_recheck": true,
+  "source_recheck_warnings_are_errors": true,
+  "main_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound",
+    "GPT6Astra.anchored_case_2._native.bv_decide.ax_36",
+    "GPT6Astra.anchored_case_3._native.bv_decide.ax_36",
+    "GPT6Astra.anchored_case_4._native.bv_decide.ax_36",
+    "GPT6Astra.anchored_case_5._native.bv_decide.ax_36"
+  ],
+  "sorryAx_present": false,
+  "main_source_sha256": "27cd898344d74a6e9abe83443ee2a8638bbbb20988af46177b3c18e456a50953",
+  "main_manifest_sha256": "36e43a38e346541ae4258259e15ff736c508f75ca20838baecc08824b1ca7448",
+  "publication_log_path_normalization": "Absolute project/package prefixes replaced by <PROJECT> and <PACKAGE>; original local logs preserved outside distribution."
+}

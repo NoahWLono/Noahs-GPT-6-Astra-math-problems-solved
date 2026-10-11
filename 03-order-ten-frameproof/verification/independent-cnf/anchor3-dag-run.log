@@ -1,0 +1,58 @@
+Parsing input CNF
+Kernel checked formula definition: 37974 clauses
+Parsed 2450 LRAT steps; 3889 referenced inputs
+Kernel checked 100 DAG input inclusions
+Kernel checked 200 DAG input inclusions
+Kernel checked 300 DAG input inclusions
+Kernel checked 400 DAG input inclusions
+Kernel checked 500 DAG input inclusions
+Kernel checked 600 DAG input inclusions
+Kernel checked 700 DAG input inclusions
+Kernel checked 800 DAG input inclusions
+Kernel checked 900 DAG input inclusions
+Kernel checked 1000 DAG input inclusions
+Kernel checked 1100 DAG input inclusions
+Kernel checked 1200 DAG input inclusions
+Kernel checked 1300 DAG input inclusions
+Kernel checked 1400 DAG input inclusions
+Kernel checked 1500 DAG input inclusions
+Kernel checked 1600 DAG input inclusions
+Kernel checked 1700 DAG input inclusions
+Kernel checked 1800 DAG input inclusions
+Kernel checked 1900 DAG input inclusions
+Kernel checked 2000 DAG input inclusions
+Kernel checked 2100 DAG input inclusions
+Kernel checked 2200 DAG input inclusions
+Kernel checked 2300 DAG input inclusions
+Kernel checked 2400 DAG input inclusions
+Kernel checked 2500 DAG input inclusions
+Kernel checked 2600 DAG input inclusions
+Kernel checked 2700 DAG input inclusions
+Kernel checked 2800 DAG input inclusions
+Kernel checked 2900 DAG input inclusions
+Kernel checked 3000 DAG input inclusions
+Kernel checked 3100 DAG input inclusions
+Kernel checked 3200 DAG input inclusions
+Kernel checked 3300 DAG input inclusions
+Kernel checked 3400 DAG input inclusions
+Kernel checked 3500 DAG input inclusions
+Kernel checked 3600 DAG input inclusions
+Kernel checked 3700 DAG input inclusions
+Kernel checked 3800 DAG input inclusions
+Kernel checked 100 RUP lemmas
+Kernel checked 200 RUP lemmas
+Kernel checked 300 RUP lemmas
+Kernel checked 400 RUP lemmas
+Kernel checked 500 RUP lemmas
+Kernel checked 600 RUP lemmas
+Kernel checked 700 RUP lemmas
+Kernel checked 800 RUP lemmas
+Kernel checked 900 RUP lemmas
+Kernel checked 1000 RUP lemmas
+Kernel checked 1100 RUP lemmas
+Kernel checked 1200 RUP lemmas
+Kernel checked 1300 RUP lemmas
+Kernel checked 1400 RUP lemmas
+Kernel checked all 1443 RUP lemmas
+anchor3DagUnsat : anchor3DagUnsat.formula.proof Sat.Clause.nil
+'anchor3DagUnsat' depends on axioms: [propext]

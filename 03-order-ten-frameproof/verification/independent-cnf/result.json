@@ -1,0 +1,62 @@
+{
+  "original_check_date": "2026-10-08",
+  "scope": "Separate original-CNF unsatisfiability, not the main matrix proof",
+  "cases": [
+    {
+      "case": 2,
+      "axioms": [
+        "propext"
+      ],
+      "source_sha256": "0e50f2daa568c20b052445625a0c763c6b595fcab3dc05d9e41564a808f96b04",
+      "cnf_sha256": "9027c35aefce751ca030a09c676878dd6384226f9a926d46340262751dcbbdff",
+      "certificate_sha256": "b5f14430a75b1358ad0b92798463e0d435c14ee6a578c0e6ec717ca67501b066",
+      "log_sha256": "a6bbe00cf1f211076616175d193cb578cbe275018b87ef27f0824bac8ed644b0",
+      "cnf_header": "p cnf 9193 37974"
+    },
+    {
+      "case": 3,
+      "axioms": [
+        "propext"
+      ],
+      "source_sha256": "b221751b2870abc88e2ccb0c6228ce26a5666b213309f6c539b4231f7ed31475",
+      "cnf_sha256": "03fcf0b2323e12f738bffdba22f0bccd5c72f0d7224be4acf9e68cdff1015f1a",
+      "certificate_sha256": "b82c934124fb61ff5a58423daa74711a59e96b58b2b0355a3dcaacd5b128bb10",
+      "log_sha256": "6f47d44b2e92504a5efbcb37337a53d4efcfde13e69ea1899ef8956b8cd1f8e9",
+      "cnf_header": "p cnf 9193 37974"
+    },
+    {
+      "case": 4,
+      "axioms": [
+        "propext"
+      ],
+      "source_sha256": "d634396287121dae610257912868d0abd1ba795e437cafc7aee28d0357416b50",
+      "cnf_sha256": "a15ba78cfc863763dcd3945203474267cc67f6396de647057ce771c3e5583c93",
+      "certificate_sha256": "ceb48111fb45f1251b93ff1f30e60d5cb924c153d23a9cf911ce9f4760fc41d5",
+      "log_sha256": "e35ed97ac59be3efdf92143cbec314d94f94e28c43af8ec9faf9b5a2cb266cc1",
+      "cnf_header": "p cnf 9193 37974"
+    },
+    {
+      "case": 5,
+      "axioms": [
+        "propext"
+      ],
+      "source_sha256": "80e59113c4ed8247a0ef8167ac4aa1cbfaa96beffe2f5d4fb20a726fac85db97",
+      "cnf_sha256": "6b6a87e3815dc3ce536404585b0c284eacaf8ceab59dd18b8258d1334e36256a",
+      "certificate_sha256": "50911720d48d544633a8ee9043127ea4395f5720011683a13b04c11662b70a0c",
+      "log_sha256": "84faab67916491c1857e404162345f9b12d3f646702a783734dd825e3657ccbc",
+      "cnf_header": "p cnf 9193 37974"
+    }
+  ],
+  "publication_helper_notices": [
+    {
+      "file": "SharedLRAT.lean",
+      "difference": "Publication adds only an attribution comment before the original source; executable/proof-construction text is unchanged.",
+      "body_equal_to_original": true
+    },
+    {
+      "file": "DagLRAT.lean",
+      "difference": "Publication adds only an attribution comment before the original source; executable/proof-construction text is unchanged.",
+      "body_equal_to_original": true
+    }
+  ]
+}

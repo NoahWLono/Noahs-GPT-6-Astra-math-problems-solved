@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+task_root="$(cd -- "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd -- "$task_root"
+export MATHLIB_CACHE_DIR="${MATHLIB_CACHE_DIR:-$task_root/.tools/mathlib-cache}"
+
+# The optional bundled toolchain is Linux x86-64. On other hosts, or when the
+# bundle is absent, use an installed Lake (normally the elan shim). Elan reads
+# this project's lean-toolchain file; no global toolchain setting is changed.
+task_local_bin="$task_root/.tools/lean-4.34.1-linux/bin"
+if [[ "$(uname -s):$(uname -m)" == "Linux:x86_64" && -x "$task_local_bin/lake" ]]; then
+  export PATH="$task_local_bin:${PATH:-}"
+  exec "$task_local_bin/lake" "$@"
+fi
+
+# Search all PATH entries so a PATH containing the project itself cannot
+# recursively select this wrapper, including through a symlink.
+IFS=: read -r -a task_search_dirs <<< "${PATH:-}"
+for task_search_dir in "${task_search_dirs[@]}"; do
+  task_candidate="${task_search_dir:-.}/lake"
+  if [[ -f "$task_candidate" && -x "$task_candidate" && ! "$task_candidate" -ef "$task_root/lake" ]]; then
+    exec "$task_candidate" "$@"
+  fi
+done
+
+printf '%s\n' 'No usable Lake executable found.' >&2
+printf '%s\n' 'Install elan or Lean 4.34.1 and make its lake executable available on PATH.' >&2
+printf '%s\n' 'The project lean-toolchain file selects leanprover/lean4:v4.34.1.' >&2
+exit 127

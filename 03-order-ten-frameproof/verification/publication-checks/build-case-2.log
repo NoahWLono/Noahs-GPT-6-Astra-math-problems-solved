@@ -1,0 +1,44 @@
+ℹ [3092/3103] Built CryptographyResearch (7.2s)
+info: CryptographyResearch.lean:80:0: def GPT6Astra.OpenProblem10 : Prop :=
+∃ A, GPT6Astra.IsSHF A ∧ ¬GPT6Astra.IsTrivial A
+info: CryptographyResearch.lean:81:0: 'GPT6Astra.identity_isSHF' depends on axioms: [propext]
+info: CryptographyResearch.lean:82:0: 'GPT6Astra.identity_isTrivial' depends on axioms: [Quot.sound]
+info: CryptographyResearch.lean:83:0: 'GPT6Astra.isSHF_complementRows_iff' depends on axioms: [propext, Quot.sound]
+info: CryptographyResearch.lean:84:0: 'GPT6Astra.separation_iff_no_descendant' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3093/3103] Built CanonicalBoolAtoms (6.2s)
+ℹ [3094/3103] Built SearchLemmas (2.2s)
+info: SearchLemmas.lean:95:0: 'GPT6Astra.two_rows_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SearchLemmas.lean:96:0: 'GPT6Astra.columnDistance_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3095/3103] Built MatrixStructure (2.1s)
+info: MatrixStructure.lean:155:0: 'GPT6Astra.isTrivial_of_all_rows_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:156:0: 'GPT6Astra.exists_non_elementary_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:157:0: 'GPT6Astra.two_rows_separate_pair_of_noPrivateAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixStructure.lean:158:0: 'GPT6Astra.private_or_pair_other_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3096/3103] Built CutFamilies (2.4s)
+info: CutFamilies.lean:263:0: 'GPT6Astra.selectedCuts_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:264:0: 'GPT6Astra.selectedCuts_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:265:0: 'GPT6Astra.selectedCuts_two_separate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CutFamilies.lean:266:0: 'GPT6Astra.selectedCuts_has_minimal_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3103] Built FiniteCaseSupport (4.2s)
+info: FiniteCaseSupport.lean:118:0: 'GPT6Astra.conditionalPair_of_isSHF' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3098/3103] Built MatrixNormalization (2.6s)
+info: MatrixNormalization.lean:226:0: 'GPT6Astra.exists_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:227:0: 'GPT6Astra.shape_excludes_forbidden_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixNormalization.lean:228:0: 'GPT6Astra.exists_anchor_normalized_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3099/3103] Built DoubleLex (13s)
+info: DoubleLex.lean:223:0: 'GPT6Astra.exists_doubleLex_anchored' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:224:0: 'GPT6Astra.exists_doubleLex_anchored_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:226:0: 'GPT6Astra.exists_doubleLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: DoubleLex.lean:227:0: 'GPT6Astra.exists_doubleLex_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3100/3103] Built CanonicalMatrix (3.3s)
+info: CanonicalMatrix.lean:36:0: 'GPT6Astra.exists_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CanonicalMatrix.lean:37:0: 'GPT6Astra.exists_anchored_canonical_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3101/3103] Built LexBoolean (3.7s)
+info: LexBoolean.lean:92:0: 'GPT6Astra.rowLexClause_of_doubleLexRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LexBoolean.lean:93:0: 'GPT6Astra.columnLexClause_of_doubleLexAnchoredColumns' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3102/3103] Built FiniteCase2 (49s)
+info: FiniteCase2.lean:326:0: 'GPT6Astra.anchored_case_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ anchored_case_2._native.bv_decide.ax_36]
+Build completed successfully (3103 jobs).

@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "case": 2,
+      "generated_source_equals_published_source": true,
+      "sha256": "e46d2ef1cdd44f7d062ec2039ee9025a593cf0a7ae04dcc968cb64f1ba098a13"
+    },
+    {
+      "case": 3,
+      "generated_source_equals_published_source": true,
+      "sha256": "9f1e015df3f37be90bfff78e0c7ca3f49029b48e3b8aab1d6cb0d2beb9c6bc65"
+    },
+    {
+      "case": 4,
+      "generated_source_equals_published_source": true,
+      "sha256": "7b0fd0f4a9d31756de8b955b33f3078c8f13e28799e47bd358d0834257c8e17b"
+    },
+    {
+      "case": 5,
+      "generated_source_equals_published_source": true,
+      "sha256": "d510e673ddc116525f09e0666ef3bf0fdad16243f31295c23cf3a3ef35cc22e7"
+    }
+  ]
+}

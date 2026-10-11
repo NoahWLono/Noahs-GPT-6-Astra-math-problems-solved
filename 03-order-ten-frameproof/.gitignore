@@ -1,0 +1,4 @@
+gpt6_astra/.tools
+gpt6_astra/verification-logs/
+research/certificate-inspection/independent-replays/
+research/certificate-inspection/*.progress
