@@ -18,16 +18,17 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP:
 
-- koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound than the current accepted theorem, prove it in Lean 4, verify that the exported theorem matches the required specification, and prepare an eligible submission
-- Brocard–Ramanujan factorial-square problem
-- Beal’s conjecture
+- koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound, a Lean 4 proof matching the required exported specification, and an eligible submission
+- Elliptic-curve translation recurrences: finish independent Lean verification, paper-to-theorem coverage review, and prior-art assessment; historical novelty remains unestablished
 - Pillai’s fixed-gap conjecture
-- Littlewood’s simultaneous-approximation conjecture
-- Zaremba’s conjecture with the explicit bound 5: every denominator admits a reduced fraction whose partial quotients are all at most 5. This strengthens the unspecified-constant result claimed in a [2026 preprint](https://arxiv.org/html/2605.02518v2).
+- Gauss circle error-term conjecture
+- Dirichlet divisor error-term conjecture
+- Kummer–Vandiver conjecture
+- Inverse Galois problem over the rationals
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
-Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture.
+Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture.
 
 ### Queued research
 
@@ -39,10 +40,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Number theory**
 
-10. [Gauss circle error-term conjecture](https://arxiv.org/abs/2609.04725)
-11. [Dirichlet divisor error-term conjecture](https://www.sciencedirect.com/science/article/abs/pii/S0022314X25002550)
-12. [Kummer–Vandiver conjecture](https://arxiv.org/html/2602.05090v1)
-13. [Inverse Galois problem over the rationals](https://arxiv.org/abs/2302.13719)
 14. [Uniform boundedness of number-field abelian-variety torsion](https://arxiv.org/html/2608.22285v1)
 15. [Four exponentials conjecture](https://www.dpmms.cam.ac.uk/~pv270/diophantine.pdf)
 16. [Irrationality of Euler’s constant](https://arxiv.org/abs/1303.1856)
