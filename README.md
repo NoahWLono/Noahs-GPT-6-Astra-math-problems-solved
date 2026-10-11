@@ -18,7 +18,7 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP:
 
-- The exact covering number C(13,6,4)
+- koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound than the current accepted theorem, prove it in Lean 4, verify that the exported theorem matches the required specification, and prepare an eligible submission
 - Lehmer’s Mahler-measure gap problem
 - Lehmer’s totient problem
 - Carmichael’s totient conjecture
@@ -26,6 +26,8 @@ Current research-only WIP:
 - Erdős–Moser equation conjecture
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
+
+Shelved: the exact covering number C(13,6,4).
 
 ### Queued research
 
