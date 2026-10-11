@@ -19,7 +19,7 @@ Current research-only WIP:
 - Splay-tree dynamic optimality
 - The exact covering number C(13,6,4)
 - Minimum-size unrestricted 13-input sorting networks
-- The exact Zarankiewicz number z(10,16;4,4)
+- Minimum local 1-identifying code in the binary 6-cube (M^L(6))
 - Existence of three mutually orthogonal Latin squares of order 10
 - Existence of a Conway 99-graph: SRG(99,14,1,2)
 
