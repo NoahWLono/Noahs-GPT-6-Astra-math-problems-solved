@@ -18,14 +18,15 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Current research-only WIP:
+Current research-only WIP (seven active targets; status updated 11 October 2026):
 
-- koalaIRS12 soundness benchmark at better.codes: seek a strictly stronger bound, a Lean 4 proof matching the required exported specification, and an eligible submission
-- Pillai’s fixed-gap conjecture
-- Gauss circle error-term conjecture
-- Dirichlet divisor error-term conjecture
-- Kummer–Vandiver conjecture
-- Inverse Galois problem over the rationals
+- **koalaIRS12 soundness benchmark at better.codes:** principal-factor and support-model dimension checks are in place, but the required owner-intersection bound is still missing. No improved benchmark score or eligible strengthened theorem is established.
+- **Pillai’s fixed-gap conjecture:** a scoped shifted-binomial irreducibility paper argument has passed internal review; Lean verification and novelty review are pending. This does not resolve the full fixed-gap conjecture.
+- **Gauss circle error-term conjecture:** cancellation approaches remain blocked; no improved error bound has been established.
+- **Dirichlet divisor error-term conjecture:** a deterministic moment-transfer gap remains; no improved error bound has been established.
+- **Kummer–Vandiver conjecture:** tested height and transfer approaches do not establish the required plus-class saturation. The conjecture remains unresolved here.
+- **Inverse Galois problem over the rationals:** an explicit Sz(8) dessin has been verified, but numerical Belyi reconstruction is not yet exact. No new realization over the rationals is established.
+- **Uniform boundedness of number-field abelian-variety torsion:** newly activated from queue item 14, replacing the completed elliptic-curve recurrence project. Initial primary-source review has started. The target is a bound on the size of A(K)'s torsion subgroup depending only on the fixed abelian-variety dimension g and number-field degree d; no new bound is established.
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
@@ -41,7 +42,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Number theory**
 
-14. [Uniform boundedness of number-field abelian-variety torsion](https://arxiv.org/html/2608.22285v1)
 15. [Four exponentials conjecture](https://www.dpmms.cam.ac.uk/~pv270/diophantine.pdf)
 16. [Irrationality of Euler’s constant](https://arxiv.org/abs/1303.1856)
 17. [Base-ten normality of pi](https://www.tandfonline.com/doi/abs/10.4169/amer.math.monthly.121.03.191)
