@@ -1,0 +1,142 @@
+{
+  "project": "ASTRA-01",
+  "date": "2026-10-11",
+  "claims": [
+    {
+      "id": "T1",
+      "status": "proved_analytically",
+      "claim": "A global identity f o tau_G = R o f forces deg(R)=1 and n divides deg(f).",
+      "assumptions": "Smooth projective elliptic curve over an algebraically closed field; any characteristic; G exact order n>=2; f and R nonconstant rational morphisms.",
+      "verification": "Complete divisor and degree proof in the manuscript.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "T2",
+      "status": "proved_analytically",
+      "claim": "The number of P in <G> satisfying f(P+G)=R(f(P)) is at most min(n,D*(r+1)).",
+      "assumptions": "As T1, with D=deg(f), r=deg(R)>=1; values interpreted in P^1 at poles.",
+      "verification": "Coincidence-divisor bound plus T1; exhaustive and sampled synthetic checks.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "T3",
+      "status": "proved_analytically",
+      "claim": "A fixed finite menu R_j covers at most min(n,D*sum_j(r_j+1)) points, even with arbitrary per-point branch choice.",
+      "assumptions": "Fixed coordinate and finite recurrence menu; degrees r_j>=1. Uniform-point probability corollary fixes the family before drawing the point.",
+      "verification": "Union bound applied to T2; exact tiny minimum-cover certificate.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "T4",
+      "status": "proved_analytically",
+      "claim": "For odd prime n, a nonconstant full Mobius recurrence over F_(q^k) has exact order n and requires n=p or n divides q^k-1 or q^k+1. For n!=p, ord_n(q) divides 2k.",
+      "assumptions": "H subset E(F_q), G exact odd prime order n, p=char(F_q), k>=1, any f:H->P^1(F_(q^k)) not constant on H, M in PGL2(F_(q^k)).",
+      "verification": "Finite orbit argument and explicit eigenvalue classification; prime-field PGL order checks.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "T5",
+      "status": "proved_analytically",
+      "claim": "For p>=17 prime and #E(F_p)=n prime with n!=p, no nonconstant full base-field Mobius translation recurrence exists, even for an arbitrary coordinate on the finite group.",
+      "assumptions": "The entire group has prime order, not merely a subgroup; f is nonconstant on that group.",
+      "verification": "T4 plus Hasse bound and divisibility/parity argument.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "T6",
+      "status": "proved_analytically",
+      "claim": "A nonconstant deterministic full recurrence on a prime-length cyclic orbit has n distinct coordinate values.",
+      "assumptions": "A sequence z_(i+1)=T(z_i), z_n=z_0, n prime, not constant. T need not be invertible.",
+      "verification": "The least period divides n.",
+      "historical_novelty": "standard_finite_dynamics_fact"
+    },
+    {
+      "id": "E1",
+      "status": "verified_finite_certificate",
+      "claim": "On E/F_11: y^2=x^3+x+6 with G=(2,4), f=x and M(z)=z/(z+5) agree at exactly d=[1,6,8,9].",
+      "assumptions": "Specified synthetic curve of order 13; arithmetic modulo 11, including infinity.",
+      "verification": "Primary exhaustive search and separate homogeneous-coordinate checker.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "E2",
+      "status": "verified_finite_certificate",
+      "claim": "The same 13-point orbit needs and admits exactly four Mobius maps to cover all points under arbitrary branch selection.",
+      "assumptions": "Fixed f=x, maps over F_11. No efficient branch selector is claimed.",
+      "verification": "T2 implies at least ceil(13/4)=4; explicit four-map witness; exact DP and separate checker.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "E3",
+      "status": "proved_analytically_and_checked_finitely",
+      "claim": "On y^2=x^3+1 over F_7, G=(0,1) of order 3 and f=y have global recurrence M(z)=(z-3)/(z+1).",
+      "assumptions": "Specified curve; f degree 3. The full curve has 12 rational points.",
+      "verification": "Symbolic reduction modulo curve equation and all 12 rational-point checks.",
+      "historical_novelty": "unestablished"
+    },
+    {
+      "id": "E4",
+      "status": "established_identity_with_executed_control",
+      "claim": "The morphism f_t(P)=x([2^t]P) has degree 2*4^t but can be evaluated by t point doublings.",
+      "assumptions": "Characteristic different from two; degree concerns the algebraic morphism.",
+      "verification": "Multiplication-map degrees and exact repeated-doubling controls t=1..8.",
+      "historical_novelty": "not_claimed"
+    },
+    {
+      "id": "K1",
+      "status": "established_prior_art_rederived",
+      "claim": "The derived biquadratic addition relation is the third Semaev summation polynomial, not a new formula.",
+      "assumptions": "Short Weierstrass model, characteristic neither two nor three; displayed affine addition derivation excludes x(P)=x(G).",
+      "verification": "Exact symbolic identity, Galbraith Chapter 15 formula, and 724 finite checks.",
+      "historical_novelty": "known"
+    },
+    {
+      "id": "F1",
+      "status": "refuted",
+      "claim": "A universal bound of 2D-1 suffices for a single Mobius recurrence.",
+      "counterexample": "E1 reaches 2D=4."
+    },
+    {
+      "id": "F2",
+      "status": "refuted",
+      "claim": "Global rational semiconjugacy of elliptic-curve translation is impossible in all degrees.",
+      "counterexample": "E3 has D=n=3."
+    },
+    {
+      "id": "F3",
+      "status": "refuted_as_an_inference",
+      "claim": "A degree lower bound by itself implies a comparably large arithmetic evaluation time.",
+      "counterexample": "E4 has exponentially growing degree and a linear-length doubling circuit."
+    },
+    {
+      "id": "U1",
+      "status": "unproved",
+      "claim": "A faster-than-generic classical ECDLP algorithm for ordinary cryptographic prime-order curves."
+    },
+    {
+      "id": "U2",
+      "status": "unproved",
+      "claim": "A general non-generic runtime lower bound for ECDLP."
+    },
+    {
+      "id": "U3",
+      "status": "unproved",
+      "claim": "An efficient construction and inversion of a useful high-degree compact rational coordinate or multivalued correspondence."
+    },
+    {
+      "id": "U4",
+      "status": "unproved",
+      "claim": "Sufficiency of the extension-degree condition for an efficient ECDLP reduction."
+    },
+    {
+      "id": "U5",
+      "status": "unestablished",
+      "claim": "Historical novelty of the assembled obstruction theorem or exact sharpness example."
+    },
+    {
+      "id": "U6",
+      "status": "not_performed",
+      "claim": "Formal proof-assistant verification or external expert peer review."
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=0.88in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black,
+ pdftitle={Rational recurrences for elliptic-curve translation},
+ pdfauthor={ASTRA-01 research session; prepared for Noah Weinberger}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small ASTRA-01 \quad Classical ECDLP research}
+\fancyhead[R]{\small Research note 1.0}
+\fancyfoot[L]{\small Analytic proofs and exact synthetic checks}
+\fancyfoot[R]{\small\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\tauG}{\tau_G}
+\title{\vspace{-1.1cm}\textbf{Rational recurrences for\newline elliptic-curve translation}\\[5pt]
+\large Sharp degree bounds and a finite-field obstruction}
+\author{ASTRA-01 research session\\\small Prepared in ChatGPT for Noah Weinberger}
+\date{11 October 2026}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\begin{center}
+\colorbox{blue!5}{\parbox{0.93\linewidth}{\textbf{Result status.} Complete analytic proofs are given for the stated obstructions. Exact finite experiments and a separate implementation agree with them. No faster ECDLP algorithm, formal proof-assistant certification, or historical novelty is claimed. No third-party key was used and no repository was modified.}}
+\end{center}
+
+\begin{abstract}
+Let $G$ have order $n\ge2$ on an elliptic curve, and let $H=\langle G\rangle$. For a nonconstant rational coordinate $f:E\to\PP^1$ of degree $D$ and a rational recurrence $R:\PP^1\to\PP^1$ of degree $r\ge1$, we derive
+\[
+\#\{P\in H:f(P+G)=R(f(P))\}\le\min\{n,D(r+1)\}.
+\]
+The proof handles poles projectively and rules out the potentially exceptional global identity when $D<n$. Globally, such an identity forces $r=1$ and $n\mid D$. A finite menu of rational recurrences satisfies an additive degree budget. A synthetic degree-two example attains four agreements, so the constant $2D$ for a single M\"obius recurrence cannot be universally lowered.
+
+For an odd prime-order orbit over $\F_q$, a nonconstant full M\"obius recurrence over $\F_{q^k}$ also requires $n=p$ or $n\mid q^k-1$ or $n\mid q^k+1$, where $p$ is the characteristic. Consequently, a non-anomalous prime-order full group $E(\F_p)$ with $p\ge17$ admits no such nonconstant base-field recurrence, even for an arbitrary coordinate function on the finite group. These results obstruct a narrowly specified linearization strategy, not classical ECDLP in general. High degree is explicitly shown not to imply high evaluation cost.
+\end{abstract}
+
+\section{Question, baseline, and scope}
+
+The ECDLP instance is $(E,\F_q,G,Q)$ with $G$ of prime order $n$ and $Q=[d]G$, $d\in\{0,\ldots,n-1\}$. The proposed avenue is to find a single coordinate $f$ for which translation becomes a low-degree recurrence. If $f$ separates the orbit and an orbit-index problem for the recurrence is easier, then evaluating $f(Q)$ could reduce ECDLP to that problem. Construction of $f$, evaluation, the field of definition, and inversion of the recurrence orbit would all be charged.
+
+The precise hypothesis investigated is the existence of public-parameter-dependent maps with
+\begin{equation}\label{eq:hyp}
+f(P+G)=R(f(P))\quad(P\in H),\qquad D(r+1)<n.
+\end{equation}
+The hoped-for low-degree version of this hypothesis is false. Theorem~\ref{thm:agreement} proves this without a distributional assumption. M\"obius recurrences receive a stronger field-of-definition obstruction. No unresolved algorithmic cost is disguised as a theorem.
+
+\subsection{Established comparison points}
+
+Baby-step giant-step (BSGS) is an exact generic baseline with $O(\sqrt n)$ group operations and $O(\sqrt n)$ stored points. Pollard rho uses low-storage collision search with the familiar expected square-root behavior under the appropriate random-walk assumptions. Optimizations using negation or a fixed-size automorphism action can change constants, not by themselves a growing exponent advantage; their action costs must be charged \cite{gal13,gal14}.
+
+Shoup's generic-group model uses random injective labels rather than an elliptic curve's coordinate representation. For a uniform secret and random encoding, bounded generic oracle work $t$ has success at most $O((t+1)^2/n)$ in the prime-order case. Thus constant success needs square-root generic work. This does not prohibit representation-specific methods, and it does not give a free-preprocessing lower bound \cite{shoup}.
+
+Important non-generic comparison points include trace-one curves, where special efficient algorithms are established \cite{smart}; pairing transfers to finite-field logarithms, whose usefulness depends on the extension field \cite{mov}; and extension-field descent or summation-polynomial methods, whose relation generation and polynomial-solving costs cannot be omitted \cite{gal15,semaev,survey}. This is a targeted review, not a claim to have exhaustively certified the literature through 2026.
+
+\subsection{Assumptions and probability spaces}
+
+The main geometric theorem works over an algebraically closed field of \emph{any} characteristic. It requires only a smooth projective elliptic curve and a point of exact order $n\ge2$; $n$ need not be prime or prime to the characteristic. No special endomorphism, ordinary/supersingular distinction, random curve, or random generator is assumed.
+
+The finite-field theorem separately assumes $E/\F_q$, $H\subset E(\F_q)$, odd prime $n$, and a recurrence defined over a specified finite extension. The experiments use nonsingular short Weierstrass models in prime characteristic greater than three, full prime group order, and $n\ne p$.
+
+For the probability corollary only, $P$ is uniform on $H$. The coordinate and recurrence menu are fixed before drawing $P$. They may depend arbitrarily on public $(E,G)$ and precomputation. A coordinate chosen after seeing the target is not covered by that fixed-map probability statement without accounting for the entire adaptive family.
+
+\section{Geometric definitions and degree obstruction}
+
+A nonconstant rational function on a smooth projective curve defines an everywhere-defined morphism to $\PP^1$, with a pole mapping to $\infty$. Its degree is the degree of its pole divisor, including multiplicities over the algebraic closure. It is not the degree of an arbitrary unreduced affine numerator. Degrees of nonconstant morphisms multiply under composition, and every fiber has total multiplicity equal to the degree \cite{milne}.
+
+Write $\tauG(P)=P+G$, an automorphism of degree one. Define
+\[
+A(f,R)=\{P\in H:f(\tauG(P))=R(f(P))\}.
+\]
+Both sides are evaluated in $\PP^1$, including at $O$ and at finite poles.
+
+\begin{lemma}[Coincidence bound]\label{lem:coinc}
+If $u,v:C\to\PP^1$ are distinct nonconstant morphisms of degrees $a,b$ from a smooth projective integral curve, their coincidence set has at most $a+b$ geometric points.
+\end{lemma}
+\begin{proof}
+The diagonal in $\PP^1\times\PP^1$ is the zero divisor of a section of $\OO(1,1)$. Its pullback by $(u,v)$ is a nonzero section of the line bundle $u^*\OO(1)\otimes v^*\OO(1)$, of degree $a+b$. It is nonzero because $u\ne v$. Its effective zero divisor has that degree, and every coincidence contributes at least one to it.
+
+Equivalently, the coincidence set is finite. Over the algebraic closure, choose a target coordinate whose infinity is not a common value at any coincidence. The nonzero rational function $u-v$ in that coordinate has at most $a+b$ total pole multiplicity, hence at most $a+b$ zeros. This also explains why poles must not simply be dropped from the count.
+\end{proof}
+
+\begin{lemma}[Global identity obstruction]\label{lem:global}
+Let $f:E\to\PP^1$ have degree $D>0$. If
+\[
+f\circ\tauG=R\circ f
+\]
+as morphisms, then $r=\deg R=1$ and $n\mid D$.
+\end{lemma}
+\begin{proof}
+Taking degrees gives $D=rD$, hence $r=1$ and $R=M$ is a M\"obius transformation. Over the algebraic closure, $M$ has a fixed point $\alpha$; if $M$ is the identity, choose any $\alpha$. Let $F=f^*([\alpha])$. This is an effective divisor of degree $D$, and
+\[
+\tauG^*F=(f\circ\tauG)^*([\alpha])
+=(M\circ f)^*([\alpha])=f^*(M^*[\alpha])=F.
+\]
+The last equality uses that $M$ has degree one and fixes $\alpha$. Thus multiplicity is constant along translation orbits in $\supp F$. Every such orbit has exactly $n$ points: $P+[j]G=P$ holds exactly when $n\mid j$. Partitioning $F$ into these orbits shows that its degree is a sum of multiples of $n$.
+\end{proof}
+
+\begin{theorem}[Rational recurrence agreement]\label{thm:agreement}
+For the definitions above, with $D>0$ and $r\ge1$,
+\begin{equation}\label{eq:bound}
+|A(f,R)|\le\min\{n,D(r+1)\}.
+\end{equation}
+More precisely, either the two morphisms are distinct and their total geometric coincidence count is at most $D(r+1)$, or they agree globally and $r=1$, $n\mid D$.
+\end{theorem}
+\begin{proof}
+The morphisms $u=f\circ\tauG$ and $v=R\circ f$ have degrees $D$ and $Dr$. If they differ, Lemma~\ref{lem:coinc} proves the bound. If they agree, Lemma~\ref{lem:global} gives $D\ge n$, so the right side of~\eqref{eq:bound} is $n$ and the bound is immediate.
+\end{proof}
+
+\begin{corollary}[Full and partial recurrences]\label{cor:prob}
+A recurrence valid on all of $H$ requires $D(r+1)\ge n$. For a M\"obius recurrence, $D\ge\lceil n/2\rceil$ is necessary. For a fixed $f,R$ and uniform $P\in H$,
+\[
+\Pr[f(P+G)=R(f(P))]\le\min\{1,D(r+1)/n\}.
+\]
+This is prediction agreement, not an ECDLP-solving success probability.
+\end{corollary}
+
+\begin{corollary}[Finite branch menu]\label{cor:menu}
+For fixed maps $R_1,\ldots,R_m$ of degrees $r_j\ge1$, even with an arbitrary per-point branch selection,
+\[
+\#\{P\in H:\exists j,\ f(P+G)=R_j(f(P))\}
+\le\min\left\{n,D\sum_{j=1}^{m}(r_j+1)\right\}.
+\]
+In particular, if all degrees are at most $r$, full coverage requires $mD(r+1)\ge n$.
+\end{corollary}
+\begin{proof}
+Take the union of the $m$ agreement sets and apply Theorem~\ref{thm:agreement} to each. No independence assumption is used. The result permits branch selection more powerful than a practical algorithm may possess.
+\end{proof}
+
+\begin{remark}
+These bounds limit algebraic degree and branch coverage. They do not bound arithmetic circuit size or the time needed to evaluate $f$. Section~\ref{sec:cost} gives an explicit reason that such a conversion would be invalid.
+\end{remark}
+
+\section{Finite-field and prime-order obstruction}
+
+First observe a purely finite fact. If $z_{i+1}=T(z_i)$ and $z_n=z_0$, the sequence is a periodic orbit of a deterministic map. Its least period divides $n$. For prime $n$, a nonconstant orbit therefore has $n$ distinct values. This observation does not require $T$ to be invertible. It explains why a full recurrence cannot silently discard information about a prime-order orbit.
+
+\begin{theorem}[M\"obius field condition]\label{thm:field}
+Let $n$ be an odd prime, $H=\langle G\rangle\subset E(\F_q)$, $K=\F_{q^k}$, and $p=\operatorname{char}\F_q$. Suppose $f:H\to\PP^1(K)$ is any function, not constant on $H$, and $M\in\PGL_2(K)$ satisfies
+\[
+f(P+G)=M(f(P))\quad\text{for every }P\in H.
+\]
+Then $f|_H$ is injective, $M$ has exact order $n$, and
+\begin{equation}\label{eq:field}
+n=p\quad\text{or}\quad n\mid q^k-1\quad\text{or}\quad n\mid q^k+1.
+\end{equation}
+If $n\ne p$ and $e=\ord_n(q)$, then $e\mid2k$. Equivalently, $k$ is a positive multiple of $e/\gcd(e,2)$.
+\end{theorem}
+\begin{proof}
+The preceding orbit argument makes the $n$ values $M^j(f(O))$ distinct. The transformation $M^n$ fixes all of them. A nonidentity M\"obius transformation has at most two fixed geometric points, whereas $n\ge3$, so $M^n=1$. Since $M\ne1$ and $n$ is prime, its order is $n$.
+
+Represent $M$ by a nonsingular two-by-two matrix over $K$. With repeated eigenvalues, a nonscalar matrix is projectively unipotent: after scaling it is $I+N$, with $N\ne0$ and $N^2=0$. Its order is exactly $p$, since $(I+N)^j=I+jN$.
+
+With distinct eigenvalues $\lambda,\mu$, its projective order is the multiplicative order of $\rho=\lambda/\mu$. If the eigenvalues lie in $K$, then $\rho\in K^*$, so its order divides $q^k-1$. Otherwise they lie in the quadratic extension of $K$ and are exchanged by its Frobenius, giving $\rho^{q^k}=\rho^{-1}$. Its order then divides $q^k+1$. This proves~\eqref{eq:field}. When $n\ne p$, it follows that $q^{2k}\equiv1\pmod n$, hence $e\mid2k$, with the stated equivalent divisibility.
+\end{proof}
+
+The theorem applies in particular to rational $f$ defined over $K$. It is only a necessary field condition. It does not construct $f$, make its evaluation cheap, or solve the finite-field orbit-index problem. In the split case a suitable projective coordinate changes the action into multiplication by an element of order $n$, which still leaves a discrete logarithm problem. Finding that conjugacy and doing extension-field arithmetic also carry costs.
+
+\begin{corollary}[Non-anomalous cofactor-one prime fields]\label{cor:prime}
+Let $p\ge17$ be prime and $\#E(\F_p)=n$ be prime with $n\ne p$. There is no nonconstant function $f:E(\F_p)\to\PP^1(\F_p)$ and no $M\in\PGL_2(\F_p)$ satisfying a full translation recurrence by a nonzero $G$.
+\end{corollary}
+\begin{proof}
+Hasse's bound \cite{milne} gives
+\[
+n\ge p+1-2\sqrt p>\frac{p+1}{2},
+\]
+where the strict inequality holds for $p\ge17$. If $n\mid p-1$ or $n\mid p+1$, this lower bound forces $n=p-1$ or $n=p+1$, respectively. Neither can be prime: $p\pm1$ are even and greater than two. The remaining alternative $n=p$ is excluded. Apply Theorem~\ref{thm:field} with $k=1$.
+\end{proof}
+
+The defining parameters of secp256k1 and NIST P-256 have full prime group order, cofactor one, and $n\ne p$, so the corollary applies to this \emph{specific base-field recurrence model} \cite{sec2,nist}. No group operation or logarithm computation on either production curve was performed. This application is not a proof of their security and does not rule out other representation-specific algorithms.
+
+\section{Symbolic derivation and its important boundary}
+
+Assume characteristic different from two and three, and write
+\[
+E:y^2=F(x),\qquad F(X)=X^3+aX+b.
+\]
+For affine $P=(x,y)$ and $G=(u,v)$ with $x\ne u$, the group law gives
+\[
+z=x(P+G)=\frac{(y-v)^2}{(x-u)^2}-x-u.
+\]
+Use $y^2=F(x)$ and $v^2=F(u)$ and set
+\[
+\Delta=(x-u)^2,\qquad B=(x+u)(xu+a)+2b.
+\]
+Then
+\begin{equation}\label{eq:add}
+z=\frac{B-2vy}{\Delta}.
+\end{equation}
+Eliminating $y$ gives
+\begin{align}
+(\Delta z-B)^2-4F(u)F(x)&=\Delta S_3(x,u,z),\label{eq:factor}\\
+S_3(x,u,z)&=\Delta z^2-2Bz+(xu-a)^2-4b(x+u).\label{eq:s3}
+\end{align}
+These identities were checked by exact polynomial expansion with SymPy. Formula~\eqref{eq:s3} is the established third Semaev summation polynomial, not a newly discovered formula \cite{semaev,gal15}.
+
+For nonexceptional points, the two roots correspond to $x(P+G)$ and $x(P-G)$. When $y,v\ne0$ and the characteristic is odd, they are distinct. A degree-two \emph{algebraic correspondence} thus describes translation in the $x$ coordinate. That does not contradict Theorem~\ref{thm:agreement}: a correspondence is not a single-valued rational map $R$. Retaining a sign, the preceding point, or a second coordinate changes the state model. This note does not rule out useful algorithms exploiting such extra state; it also supplies no efficient branch-resolution or relation-solving theorem.
+
+Affine denominator clearing must be used carefully at $P=G$, $P=-G$, and $O$. Those are handled by the full group law and projective evaluation in the experiments, rather than by an affine formula with zero denominator.
+
+\section{Sharpness and counterexamples to stronger claims}\label{sec:counter}
+
+\subsection{Four agreements attain the M\"obius bound}
+
+Take the self-generated curve and point
+\[
+E/\F_{11}:y^2=x^3+x+6,\qquad G=(2,4),\qquad\#E(\F_{11})=13.
+\]
+The discriminant condition is nonzero, and exhaustive counting and the independent group law establish the order. With $f=x$, $D=2$, and
+\[
+M(z)=\frac{z}{z+5},\qquad
+\begin{pmatrix}1&0\\1&5\end{pmatrix}\in\PGL_2(\F_{11}),
+\]
+there are exactly four matches:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$d$ & $[d]G$ & $[d+1]G$ & $M(x([d]G))$\\
+\midrule
+1 & $(2,4)$ & $(5,9)$ & 5\\
+6 & $(7,2)$ & $(7,9)$ & 7\\
+8 & $(3,6)$ & $(10,2)$ & 10\\
+9 & $(10,2)$ & $(8,3)$ & 8\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus $2D-1$ cannot replace $2D$ as a universal bound. Exhaustive enumeration of all 1,320 M\"obius transformations over $\F_{11}$ confirms that four is the maximum for this $f$.
+
+An affine cleared eliminant factors as
+\[
+(x-3)(x-2)^3(x+1)(x+4)\quad\text{in }\F_{11}[x].
+\]
+It contains a removable $(x-2)^2$ factor from the singularity of the chosen addition formula. This factorization alone is not a proof of the four projective agreements. In particular, the match at $P=G$ was checked using actual doubling.
+
+\subsection{A sharp branch-budget example}
+
+On the same 13-point orbit, four M\"obius branches cover all points, whereas three cannot: each covers at most four. One exact cover uses the following normalized matrices, with arithmetic modulo 11:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Matrix entries $(a,b,c,d)$ & Matching scalar indices\\
+\midrule
+$(1,4,7,8)$ & $4,10,11,12$\\
+$(1,3,6,9)$ & $0,7,8,9$\\
+$(1,10,10,0)$ & $1,2,6$\\
+$(1,1,5,6)$ & $1,2,3,5$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $(a,b,c,d)$ denotes $(az+b)/(cz+d)$. Exact dynamic programming over $2^{13}$ coverage states finds the minimum four, and the separate checker verifies the displayed cover. A branch-selection procedure is not supplied; the cover does not solve ECDLP.
+
+\subsection{Global semiconjugacy is sometimes possible}
+
+On $E/\F_7:y^2=x^3+1$, take $G=(0,1)$ of order three. Then
+\[
+f=y,\quad D=3,\quad M(z)=\frac{z-3}{z+1}
+\]
+satisfy the \emph{global} identity $f\circ\tauG=M\circ f$. Substituting the addition law and reducing modulo $y^2-x^3-1$ proves the equality on a dense affine open set, hence as morphisms. It was also checked at all 12 rational points, including poles. This is consistent with $n\mid D$, and refutes the stronger but false claim that translation can never admit such a global recurrence. The full curve has composite order 12, so Corollary~\ref{cor:prime} does not apply.
+
+\subsection{Multiplication is not translation}
+
+The known $x$-only duplication map is
+\[
+x([2]P)=L(x(P)),\qquad
+L(X)=\frac{X^4-2aX^2-8bX+a^2}{4(X^3+aX+b)}.
+\]
+Its degree is four for a nonsingular short Weierstrass curve in characteristic greater than three. The numerator identity was checked symbolically. This map is not a counterexample to the translation theorem: $[2]$ has degree four, whereas $\tauG$ has degree one. Conflating these two maps would invalidate the central degree argument.
+
+\section{Executed experiments and verification record}\label{sec:experiments}
+
+The core experiment and independent checker use only Python's standard library and exact modular integer arithmetic. SymPy 1.14.0 is optional and was present for the symbolic checks. No SageMath, Lean, GPU, external computation service, or network access is required by the experiment scripts.
+
+For each listed prime $p$, the generator searches $(a,b)$ lexicographically for the first nonsingular model with full prime order $n>7$, $n\ne p$, and takes the first affine point in its deterministic enumeration. These curves are deliberately synthetic and \emph{not uniformly sampled}. For every point of every resulting group, BSGS recovers the known exhaustive-orbit index and verifies $[d]G=Q$.
+
+\begin{center}
+\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$p$ & $a$ & $b$ & $n$ & $G$ & $e=\ord_n(p)$ & $e/\gcd(e,2)$\\
+\midrule
+11&1&6&13&$(2,4)$&12&6\\
+17&2&2&19&$(0,6)$&9&9\\
+19&0&2&13&$(4,3)$&12&6\\
+23&1&4&29&$(0,2)$&7&7\\
+29&1&12&23&$(2,14)$&11&11\\
+31&0&3&43&$(1,2)$&21&21\\
+37&1&12&29&$(0,7)$&28&14\\
+43&0&7&31&$(2,12)$&30&15\\
+59&1&13&67&$(1,29)$&11&11\\
+83&1&7&79&$(0,16)$&39&39\\
+101&1&46&109&$(2,37)$&12&6\\
+127&0&29&109&$(1,41)$&108&54\\
+211&0&2&199&$(4,53)$&66&33\\
+\bottomrule
+\end{tabular}
+\end{center}
+The last column is a necessary extension-degree threshold, not an existence assertion or a cost measurement. Extension-field curves were not constructed.
+
+The six coordinate functions and their degrees are
+\[
+(x,2),\ (y,3),\ (x+y,3),\ (x^2+y,4),\ (xy+y,5),\ (1/(y+1),3).
+\]
+Their degrees follow from the distinct pole orders of $x$ and $y$ at $O$, together with invariance of degree under postcomposition with a M\"obius map. For $p=11,17,19$, every element of $\PGL_2(\F_p)$ is tested against all six coordinates. Independently, each coordinate on each curve receives 250 sampled reduced rational maps of actual degree one through four, using seed 2026101101. Coefficients are sampled and rejected until numerator and denominator are coprime and the requested degree is attained. These are bounded tests, not a uniform sample of all rational coordinates or all curves.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Executed check & Count\\
+\midrule
+Synthetic curves & 13\\
+All possible scalar instances solved by BSGS & 763\\
+Exhaustive coordinate/M\"obius pairs & 78,336\\
+Sampled coordinate/rational-map pairs & 19,500\\
+Degree-bound violations & 0\\
+Nonexceptional addition-correspondence checks & 724\\
+Separate all-pairs group-law checks & 79,813\\
+Separately recomputed coordinate/M\"obius pairs & 78,336\\
+Separate matrix-power order checks & 15,696\\
+\bottomrule
+\end{tabular}
+\end{center}
+All 724 nonexceptional correspondence cases had two distinct roots, illustrating rather than resolving the branch ambiguity.
+
+\subsection{What ``independent'' means here}
+
+The second implementation does not import the primary arithmetic. It computes group addition by intersecting a line with the cubic, dividing out the two known roots, and reflecting the third intersection. It enumerates points by a full $(x,y)$ search, checks every ordered pair against the cyclic labels, and recomputes every exhaustive M\"obius histogram using homogeneous determinant comparisons. It enumerates all nonsingular matrices and normalizes them, rather than using the primary generator. Matrix orders are checked by direct powers, whereas the primary code uses permutation cycle lengths.
+
+This is implementation independence within the same research session, not external peer review. The sampled rational-map tests are checked by the primary implementation; the second implementation does not independently recompute that entire sample. The general proofs are written mathematical arguments, not Lean or another proof-assistant artifact. Finite experiments corroborate them but cannot establish their universal quantifiers.
+
+\section{Correctness, complexity, and hidden-cost audit}\label{sec:cost}
+
+\subsection{Exact baseline correctness}
+
+Let $m=\lceil\sqrt n\rceil$. BSGS stores $[j]G$ for $0\le j<m$ and examines $Q-[im]G$ for $0\le i<m$. Write $d=im+j$ with $0\le j<m$. Since $d<n\le m^2$, this $i$ is in range, so the corresponding table entry matches. The implementation verifies any returned candidate by multiplication and returns only $0\le d<n$. Uniqueness follows from the exact order of $G$. Thus for all valid inputs in the specified subgroup, correctness and termination are deterministic.
+
+The implementation builds the baby table once per tested instance, rather than treating it as free. Its group-operation count is $O(\sqrt n+\log n)$ including final verification, and its stored-point count is $O(\sqrt n)$. Dictionary lookup is an expected-cost implementation choice, not a worst-case mathematical guarantee. A sorted table gives deterministic lookup with an extra comparison factor; the group-operation bound is unchanged.
+
+\subsection{Equivalent cost models}
+
+In a group-operation model, charge every group addition/doubling and separately record equality, table access, and storage. In a field-operation model, affine addition uses a bounded number of field additions/multiplications and normally one inversion. If $B=\lceil\log_2p\rceil$, let $M(B)$ and $I(B)$ denote bit costs of field multiplication and inversion. The arithmetic part of this baseline is bounded by
+\[
+O\big((\sqrt n+\log n)(M(B)+I(B))\big),
+\]
+with dictionary/comparison work and $O(\sqrt n(B+\log n))$ bits of mathematical table contents accounted for separately. Python object overhead is additional. Projective arithmetic changes constants and inversion scheduling, not the stated exponent. Extension-field operations must be priced at their actual representation size, not counted as base-field operations.
+
+Exhaustive point counting, full-orbit generation, enumeration of every M\"obius map, and the $2^{13}$ set-cover computation are \emph{verification costs}. They are not claimed to be an efficient ECDLP algorithm. Recorded wall times are diagnostics only and are not used to infer an asymptotic improvement.
+
+\subsection{High degree can have a short evaluation circuit}
+
+In characteristic different from two, consider the algebraic morphism
+\[
+f_t(P)=x([2^t]P).
+\]
+Since $\deg[2^t]=4^t$ and $\deg x=2$ \cite{milne}, its degree is $2\cdot4^t$. Nevertheless it can be evaluated with $t$ point doublings followed by reading $x$. On the synthetic curve over $\F_{211}$, the executed control verified this for $t=1,\ldots,8$. At $t=8$, the morphism has degree 131,072 and the evaluation uses eight doublings.
+
+Thus a lower bound such as $D\ge n/2$ cannot be turned into $\Omega(n)$ field operations, or even $\Omega(\sqrt n)$ operations, without a separate representation/circuit lower bound. Degrees of particular algebraic morphisms can also differ when their restrictions agree on a finite group. Dense expansion, sparse representation, and straight-line evaluation must not be conflated.
+
+\subsection{Preprocessing and success probability}
+
+A proposed reduction would need a ledger containing setup time $S$, setup memory $M_S$, evaluation cost $C_f$, recurrence-orbit inversion cost $C_{\rm inv}$, and verification cost $C_{\rm ver}$. Single-target time would include $S+C_f+C_{\rm inv}+C_{\rm ver}$; any claimed amortization over many targets would have to name the target count and the reusable data. A table containing all logarithms is not a free construction of $f$.
+
+No candidate fast algorithm survived the stated low-degree hypothesis. Accordingly there is no unreported runtime, memory, or success claim for such an algorithm. The analytic agreement bounds are exact; BSGS correctness is deterministic; the finite random-map sample has no asserted statistical generalization. A point-dependent choice of a new coordinate or new recurrence is outside the fixed-family probability model unless its family size and selection cost are included.
+
+\section{Prior art, unproved claims, and publication decision}
+
+\subsection{Assessment of novelty}
+
+The divisor mechanism is standard algebraic geometry. A particularly close precedent is Hess and Shparlinski's work on congruential generators over elliptic curves: their Lemma 1 uses translated pole divisors and zero counts to constrain recurrences \cite{hess}. M\'erai and Winterhof also study linear complexity of elliptic-curve-derived sequences, including degree-based rational-function arguments \cite{merai}. Their stated settings are not identical to the present arbitrary rational one-step recurrence and finite-menu formulation, but that distinction does not establish priority.
+
+The matrix classification, Hasse bound, BSGS, duplication formula, and Semaev relation are established ingredients. The exact four-agreement witness and branch-cover certificate were generated in this session. Historical novelty of that example or of the assembled quantitative theorem has not been established. The appropriate description is a proved research note with reproducible certificates, not a verified new cryptographic breakthrough.
+
+\subsection{Claims deliberately left unproved}
+
+No sub-square-root algorithm for ordinary prime-order ECDLP is given. No lower bound on general representation-specific ECDLP algorithms is proved. No relation between degree and minimum circuit size strong enough for a runtime lower bound is established. No efficient high-degree coordinate construction, multivalued-correspondence inversion, adaptive-family analysis, or favorable finite-field DLP reduction is supplied. The extension-degree condition is necessary, not sufficient for an efficient reduction. Universal sharpness for every parameter choice, or optimality of all sampled maxima, is not claimed. Formal proof-assistant verification and outside expert review remain absent.
+
+These are explicit boundaries of the result, not missing steps silently assumed in a claimed algorithm.
+
+\subsection{Repository and disclosure status}
+
+The specified repository's \texttt{PUBLICATION.md} was read through the connected GitHub tool. Its returned blob SHA was
+\begin{center}\small\texttt{a4ad58e41d34284ff4b99277f68c55e0fd816b4b}.\end{center}
+It requires authorization, preservation of existing history and materials, and separation of correctness from prior-art claims. No writes, branches, commits, or publication actions were taken. Because the novelty condition is not established, this package remains research-only. It presents no credible attack on deployed cryptography requiring a sensitive-results release. An eventual publication would require separate review and an authorized, curated package consistent with that policy.
+
+\section*{Reproduction and file map}
+
+From the package directory, run \texttt{python3 verify\_package.py}. The runner first checks the shipped checksums, then executes the primary experiment and separate checker in a temporary directory, and compares the mathematical results against the shipped JSON after removing timing diagnostics. It also runs the symbolic check when SymPy is installed, otherwise reports that optional check as skipped. No network call is made. Python 3.10 or later is required; the recorded interpreter version is in \texttt{results/environment.json}.
+
+The main files are \texttt{src/experiments.py}, \texttt{src/independent\_check.py}, \texttt{src/symbolic\_check.py}, the JSON and text records under \texttt{results/}, and the claim and prior-art ledgers at the package root. This manuscript's source is included. The PDF can be rebuilt with two \texttt{pdflatex} passes or \texttt{latexmk -pdf}.
+
+\begin{thebibliography}{99}\small
+\bibitem{shoup} V. Shoup. \emph{Lower Bounds for Discrete Logarithms and Related Problems}. EUROCRYPT 1997; revised author-hosted version. \href{https://www.shoup.net/papers/dlbounds1.pdf}{Author PDF}, Theorem 1.
+\bibitem{gal13} S. D. Galbraith. \emph{Mathematics of Public Key Cryptography}. Cambridge University Press, 2012. \href{https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch13.pdf}{Author-hosted Chapter 13: Basic Discrete Logarithm Algorithms}.
+\bibitem{gal14} S. D. Galbraith. Same book. \href{https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch14.pdf}{Chapter 14: Factoring and Discrete Logarithms using Pseudorandom Walks}.
+\bibitem{smart} N. P. Smart. \emph{The Discrete Logarithm Problem on Elliptic Curves of Trace One}. Journal of Cryptology 12 (1999), 193--196. \href{https://link.springer.com/article/10.1007/s001459900052}{Publisher abstract}.
+\bibitem{mov} A. J. Menezes, T. Okamoto, and S. A. Vanstone. \emph{Reducing Elliptic Curve Logarithms to Logarithms in a Finite Field}. IEEE Transactions on Information Theory 39 (1993), 1639--1646. \href{https://ieeexplore.ieee.org/document/259647/}{Publisher record}.
+\bibitem{gal15} S. D. Galbraith. Same book. \href{https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch15.pdf}{Chapter 15}, especially Sections 15.7--15.9 and the explicit third summation polynomial in Section 15.8.1.
+\bibitem{semaev} I. Semaev. \emph{Summation Polynomials and the Discrete Logarithm Problem on Elliptic Curves}. Cryptology ePrint 2004/031. \href{https://eprint.iacr.org/2004/031}{ePrint abstract and record}. The formula was also checked against Galbraith's full chapter; the ePrint PDF was not available in this session.
+\bibitem{survey} S. D. Galbraith and P. Gaudry. \emph{Recent Progress on the Elliptic Curve Discrete Logarithm Problem}. Cryptology ePrint 2015/1022. \href{https://eprint.iacr.org/2015/1022}{Abstract and record reviewed}; the full ePrint PDF was not available in this session.
+\bibitem{milne} J. S. Milne. \emph{Elliptic Curves}, second edition, author-hosted text. \href{https://www.jmilne.org/math/Books/EC2.pdf}{Online book}. In particular, Remark I.4.26 on degrees of fiber divisors and the treatment of multiplication maps and finite-field point counts.
+\bibitem{hess} F. Hess and I. E. Shparlinski. \emph{On the Linear Complexity and Multidimensional Distribution of Congruential Generators over Elliptic Curves}. \href{https://uol.de/f/5/inst/mathe/personen/florian.hess/pdf/lincomplex.pdf}{Author-hosted draft}, 18 June 2003, especially Lemma 1 and Theorem 4.
+\bibitem{merai} L. M\'erai and A. Winterhof. \emph{On the Linear Complexity Profile of Some Sequences Derived from Elliptic Curves}. \href{https://arxiv.org/abs/1509.06909}{arXiv:1509.06909}, 2015.
+\bibitem{sec2} Standards for Efficient Cryptography Group. \emph{SEC 2: Recommended Elliptic Curve Domain Parameters}, version 2.0. \href{https://www.secg.org/sec2-v2.pdf}{Official PDF}, Section 2.4.1.
+\bibitem{nist} NIST. \emph{Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters}. SP 800-186, 2023. \href{https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-186.pdf}{Official PDF}, Section 3.2.1.3.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,29 @@
+ASTRA-01 EXACT SYNTHETIC EXPERIMENTS
+
+{
+  "curves": 13,
+  "all_dlog_instances": 763,
+  "exhaustive_coordinate_map_tests": 78336,
+  "sampled_coordinate_rational_map_tests": 19500,
+  "degree_bound_violations": 0
+}
+
+p a b n G embedding_degree minimum_Mobius_extension
+11 1 6 13 (2, 4) 12 6
+17 2 2 19 (0, 6) 9 9
+19 0 2 13 (4, 3) 12 6
+23 1 4 29 (0, 2) 7 7
+29 1 12 23 (2, 14) 11 11
+31 0 3 43 (1, 2) 21 21
+37 1 12 29 (0, 7) 28 14
+43 0 7 31 (2, 12) 30 15
+59 1 13 67 (1, 29) 11 11
+83 1 7 79 (0, 16) 39 39
+101 1 46 109 (2, 37) 12 6
+127 0 29 109 (1, 41) 108 54
+211 0 2 199 (4, 53) 66 33
+
+Exact minimum branch cover on the 13-point example: 4
+Sharpness scalars: [1, 6, 8, 9]
+Runtime (diagnostic, not complexity evidence): 1.352725 s
+PASS: all active exact checks completed.

@@ -1,0 +1,121 @@
+{
+  "sources": [
+    {
+      "id": "shoup",
+      "authors": "Victor Shoup",
+      "title": "Lower Bounds for Discrete Logarithms and Related Problems",
+      "url": "https://www.shoup.net/papers/dlbounds1.pdf",
+      "scope_reviewed": "Author PDF, theorem 1 and model; garbled parsed text checked with page screenshots.",
+      "use": "Generic-group bound only; not representation-specific lower bound.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "gal13",
+      "authors": "Steven D. Galbraith",
+      "title": "Mathematics of Public Key Cryptography, Chapter 13",
+      "url": "https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch13.pdf",
+      "scope_reviewed": "Author-hosted chapter; basic discrete logarithm algorithms.",
+      "use": "Established exact generic baseline and accounting context.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "gal14",
+      "authors": "Steven D. Galbraith",
+      "title": "Mathematics of Public Key Cryptography, Chapter 14",
+      "url": "https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch14.pdf",
+      "scope_reviewed": "Author-hosted chapter; pseudorandom walks and automorphism discussion.",
+      "use": "Pollard rho context and qualifications on expected behavior.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "smart",
+      "authors": "Nigel P. Smart",
+      "title": "The Discrete Logarithm Problem on Elliptic Curves of Trace One",
+      "url": "https://link.springer.com/article/10.1007/s001459900052",
+      "scope_reviewed": "Publisher abstract and institutional bibliographic record.",
+      "use": "Established exceptional trace-one family; no implementation or new complexity claim.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "mov",
+      "authors": "Alfred J. Menezes, Tatsuaki Okamoto, Scott A. Vanstone",
+      "title": "Reducing Elliptic Curve Logarithms to Logarithms in a Finite Field",
+      "url": "https://ieeexplore.ieee.org/document/259647/",
+      "scope_reviewed": "Primary publisher record and indexed abstract.",
+      "use": "Pairing-transfer context; no claim to rederive or audit the reduction.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "gal15",
+      "authors": "Steven D. Galbraith",
+      "title": "Mathematics of Public Key Cryptography, Chapter 15",
+      "url": "https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch15.pdf",
+      "scope_reviewed": "Sections on elliptic-curve extension fields, summation polynomials, and general index-calculus caveats.",
+      "use": "Exact third summation-polynomial formula and representation-specific context.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "semaev",
+      "authors": "Igor Semaev",
+      "title": "Summation Polynomials and the Discrete Logarithm Problem on Elliptic Curves",
+      "url": "https://eprint.iacr.org/2004/031",
+      "scope_reviewed": "Abstract and record. Full ePrint PDF requests were unavailable.",
+      "use": "Attribution of established summation-polynomial method; exact formula confirmed in gal15.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "survey",
+      "authors": "Steven D. Galbraith and Pierrick Gaudry",
+      "title": "Recent Progress on the Elliptic Curve Discrete Logarithm Problem",
+      "url": "https://eprint.iacr.org/2015/1022",
+      "scope_reviewed": "Abstract and bibliographic record. Full ePrint PDF requests were unavailable.",
+      "use": "Orientation to algebraic methods, not exhaustive literature certification.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "milne",
+      "authors": "James S. Milne",
+      "title": "Elliptic Curves, second edition, author-hosted text",
+      "url": "https://www.jmilne.org/math/Books/EC2.pdf",
+      "scope_reviewed": "Selected degree/divisor passages, including Remark I.4.26 and relevant curve-map facts.",
+      "use": "Standard foundations for written proofs.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "hess",
+      "authors": "Florian Hess and Igor E. Shparlinski",
+      "title": "On the Linear Complexity and Multidimensional Distribution of Congruential Generators over Elliptic Curves",
+      "url": "https://uol.de/f/5/inst/mathe/personen/florian.hess/pdf/lincomplex.pdf",
+      "scope_reviewed": "Author-hosted draft, especially Lemma 1 and Theorem 4; proof page inspected visually.",
+      "use": "Closest located translated-pole/recurrence prior art.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "merai",
+      "authors": "Laszlo Merai and Arne Winterhof",
+      "title": "On the Linear Complexity Profile of Some Sequences Derived from Elliptic Curves",
+      "url": "https://arxiv.org/abs/1509.06909",
+      "scope_reviewed": "Abstract and available selected HTML text.",
+      "use": "Further close prior art on degree-based complexity arguments; not a priority certificate.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "sec2",
+      "authors": "Standards for Efficient Cryptography Group",
+      "title": "SEC 2, version 2.0",
+      "url": "https://www.secg.org/sec2-v2.pdf",
+      "scope_reviewed": "secp256k1 and nearby parameter definitions, including screenshots.",
+      "use": "Cofactor-one prime-order non-anomalous parameter scope only; no production computation.",
+      "accessed": "2026-10-11"
+    },
+    {
+      "id": "nist",
+      "authors": "NIST",
+      "title": "SP 800-186: Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-186.pdf",
+      "scope_reviewed": "P-256 parameter definition in Section 3.2.1.3, including screenshots.",
+      "use": "Defining curve parameters only; not a current regulatory recommendation.",
+      "accessed": "2026-10-11"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Only needed for src/symbolic_check.py. Core experiments use the standard library.
+sympy==1.14.0

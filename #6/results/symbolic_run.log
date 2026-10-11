@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "general_addition_numerator_identity": true,
+  "semaev_biquadratic_factorization_identity": true,
+  "global_degree_three_translation_identity": true,
+  "sharpness_raw_eliminant_mod_11": "(x - 3)*(x - 2)**3*(x + 1)*(x + 4)",
+  "raw_eliminant_warning": "Contains a removable (x-2)^2 factor; affine clearing is not proof at P=G.",
+  "doubling_rational_map_numerator": "a**2 - 2*a*x**2 - 8*b*x + x**4",
+  "formal_proof_assistant_used": false
+}

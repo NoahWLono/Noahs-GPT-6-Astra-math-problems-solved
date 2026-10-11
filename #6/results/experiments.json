@@ -1,0 +1,6368 @@
+{
+  "project": "ASTRA-01",
+  "seed": 2026101101,
+  "synthetic_only": true,
+  "curves": [
+    {
+      "p": 11,
+      "a": 1,
+      "b": 6,
+      "n": 13,
+      "G": [
+        2,
+        4
+      ],
+      "trace": -1,
+      "orbit": [
+        null,
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 13,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "baseline_max_stored_points": 4,
+      "baseline_max_add_calls": 13,
+      "embedding_degree": 12,
+      "min_possible_mobius_field_extension": 6,
+      "exhaustive_mobius": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "maps_tested": 1320,
+          "max_agreements": 4,
+          "bound": 4,
+          "best_map": [
+            1,
+            0,
+            1,
+            5
+          ],
+          "matching_scalars": [
+            1,
+            6,
+            8,
+            9
+          ],
+          "histogram": {
+            "0": 415,
+            "1": 485,
+            "2": 345,
+            "3": 45,
+            "4": 30
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "maps_tested": 1320,
+          "max_agreements": 5,
+          "bound": 6,
+          "best_map": [
+            1,
+            6,
+            3,
+            1
+          ],
+          "matching_scalars": [
+            0,
+            2,
+            6,
+            10,
+            12
+          ],
+          "histogram": {
+            "0": 408,
+            "1": 513,
+            "2": 302,
+            "3": 76,
+            "4": 20,
+            "5": 1
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "maps_tested": 1320,
+          "max_agreements": 5,
+          "bound": 6,
+          "best_map": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "matching_scalars": [
+            0,
+            1,
+            3,
+            6,
+            10
+          ],
+          "histogram": {
+            "0": 409,
+            "1": 528,
+            "2": 270,
+            "3": 92,
+            "4": 19,
+            "5": 2
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "maps_tested": 1320,
+          "max_agreements": 5,
+          "bound": 8,
+          "best_map": [
+            1,
+            2,
+            6,
+            0
+          ],
+          "matching_scalars": [
+            2,
+            3,
+            5,
+            8,
+            12
+          ],
+          "histogram": {
+            "0": 420,
+            "1": 510,
+            "2": 276,
+            "3": 92,
+            "4": 18,
+            "5": 4
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "maps_tested": 1320,
+          "max_agreements": 6,
+          "bound": 10,
+          "best_map": [
+            1,
+            5,
+            4,
+            1
+          ],
+          "matching_scalars": [
+            1,
+            2,
+            3,
+            9,
+            10,
+            11
+          ],
+          "histogram": {
+            "0": 459,
+            "1": 467,
+            "2": 262,
+            "3": 100,
+            "4": 23,
+            "5": 7,
+            "6": 2
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "maps_tested": 1320,
+          "max_agreements": 5,
+          "bound": 6,
+          "best_map": [
+            1,
+            4,
+            4,
+            9
+          ],
+          "matching_scalars": [
+            0,
+            2,
+            6,
+            10,
+            12
+          ],
+          "histogram": {
+            "0": 408,
+            "1": 513,
+            "2": 302,
+            "3": 76,
+            "4": 20,
+            "5": 1
+          }
+        }
+      ],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 59,
+            "2": 72,
+            "1": 67,
+            "3": 52
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 2,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 75,
+            "3": 57,
+            "1": 63,
+            "4": 55
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 5,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 60,
+            "4": 57,
+            "3": 69,
+            "1": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 5,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 73,
+            "2": 55,
+            "1": 65,
+            "4": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 72,
+            "3": 73,
+            "4": 55,
+            "1": 50
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 57,
+            "1": 69,
+            "4": 64,
+            "3": 60
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 10,
+        "two_root_cases": 10,
+        "excluded_scalars": [
+          0,
+          1,
+          12
+        ]
+      }
+    },
+    {
+      "p": 17,
+      "a": 2,
+      "b": 2,
+      "n": 19,
+      "G": [
+        0,
+        6
+      ],
+      "trace": -1,
+      "orbit": [
+        null,
+        [
+          0,
+          6
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 19,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "baseline_max_stored_points": 5,
+      "baseline_max_add_calls": 16,
+      "embedding_degree": 9,
+      "min_possible_mobius_field_extension": 9,
+      "exhaustive_mobius": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "maps_tested": 4896,
+          "max_agreements": 4,
+          "bound": 4,
+          "best_map": [
+            1,
+            0,
+            4,
+            5
+          ],
+          "matching_scalars": [
+            4,
+            7,
+            9,
+            16
+          ],
+          "histogram": {
+            "0": 1636,
+            "1": 1752,
+            "2": 1248,
+            "3": 120,
+            "4": 140
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "maps_tested": 4896,
+          "max_agreements": 6,
+          "bound": 6,
+          "best_map": [
+            1,
+            3,
+            2,
+            12
+          ],
+          "matching_scalars": [
+            3,
+            4,
+            6,
+            9,
+            14,
+            18
+          ],
+          "histogram": {
+            "0": 1686,
+            "1": 1791,
+            "2": 1001,
+            "3": 314,
+            "4": 92,
+            "5": 7,
+            "6": 5
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "maps_tested": 4896,
+          "max_agreements": 6,
+          "bound": 6,
+          "best_map": [
+            1,
+            10,
+            10,
+            2
+          ],
+          "matching_scalars": [
+            6,
+            11,
+            12,
+            13,
+            14,
+            17
+          ],
+          "histogram": {
+            "0": 1607,
+            "1": 1871,
+            "2": 1050,
+            "3": 287,
+            "4": 72,
+            "5": 6,
+            "6": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "maps_tested": 4896,
+          "max_agreements": 6,
+          "bound": 8,
+          "best_map": [
+            1,
+            2,
+            9,
+            3
+          ],
+          "matching_scalars": [
+            2,
+            9,
+            10,
+            11,
+            17,
+            18
+          ],
+          "histogram": {
+            "0": 1810,
+            "1": 1684,
+            "2": 901,
+            "3": 365,
+            "4": 101,
+            "5": 27,
+            "6": 8
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "maps_tested": 4896,
+          "max_agreements": 6,
+          "bound": 10,
+          "best_map": [
+            1,
+            6,
+            3,
+            13
+          ],
+          "matching_scalars": [
+            0,
+            3,
+            5,
+            8,
+            11,
+            14
+          ],
+          "histogram": {
+            "0": 1626,
+            "1": 1810,
+            "2": 1114,
+            "3": 270,
+            "4": 64,
+            "5": 8,
+            "6": 4
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "maps_tested": 4896,
+          "max_agreements": 6,
+          "bound": 6,
+          "best_map": [
+            1,
+            3,
+            12,
+            7
+          ],
+          "matching_scalars": [
+            1,
+            3,
+            6,
+            12,
+            15,
+            17
+          ],
+          "histogram": {
+            "0": 1686,
+            "1": 1791,
+            "2": 1001,
+            "3": 314,
+            "4": 92,
+            "5": 7,
+            "6": 5
+          }
+        }
+      ],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 70,
+            "3": 45,
+            "1": 65,
+            "2": 70
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 77,
+            "3": 58,
+            "4": 62,
+            "2": 53
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 60,
+            "2": 71,
+            "3": 62,
+            "4": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 55,
+            "1": 70,
+            "4": 78,
+            "3": 47
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 5,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 57,
+            "1": 67,
+            "4": 64,
+            "3": 62
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 5,
+            "2": 3,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 65,
+            "2": 62,
+            "3": 62,
+            "1": 61
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 16,
+        "two_root_cases": 16,
+        "excluded_scalars": [
+          0,
+          1,
+          18
+        ]
+      }
+    },
+    {
+      "p": 19,
+      "a": 0,
+      "b": 2,
+      "n": 13,
+      "G": [
+        4,
+        3
+      ],
+      "trace": 7,
+      "orbit": [
+        null,
+        [
+          4,
+          3
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          8,
+          18
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          6,
+          16
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 13,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "baseline_max_stored_points": 4,
+      "baseline_max_add_calls": 13,
+      "embedding_degree": 12,
+      "min_possible_mobius_field_extension": 6,
+      "exhaustive_mobius": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "maps_tested": 6840,
+          "max_agreements": 4,
+          "bound": 4,
+          "best_map": [
+            1,
+            0,
+            5,
+            8
+          ],
+          "matching_scalars": [
+            0,
+            2,
+            4,
+            5
+          ],
+          "histogram": {
+            "0": 3447,
+            "1": 2445,
+            "2": 873,
+            "3": 45,
+            "4": 30
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "maps_tested": 6840,
+          "max_agreements": 4,
+          "bound": 6,
+          "best_map": [
+            1,
+            0,
+            3,
+            9
+          ],
+          "matching_scalars": [
+            2,
+            3,
+            9,
+            12
+          ],
+          "histogram": {
+            "0": 3502,
+            "1": 2429,
+            "2": 735,
+            "3": 149,
+            "4": 25
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "maps_tested": 6840,
+          "max_agreements": 5,
+          "bound": 6,
+          "best_map": [
+            1,
+            16,
+            11,
+            16
+          ],
+          "matching_scalars": [
+            0,
+            1,
+            3,
+            10,
+            11
+          ],
+          "histogram": {
+            "0": 3511,
+            "1": 2400,
+            "2": 767,
+            "3": 137,
+            "4": 24,
+            "5": 1
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "maps_tested": 6840,
+          "max_agreements": 5,
+          "bound": 8,
+          "best_map": [
+            1,
+            0,
+            10,
+            3
+          ],
+          "matching_scalars": [
+            1,
+            4,
+            5,
+            7,
+            12
+          ],
+          "histogram": {
+            "0": 3490,
+            "1": 2435,
+            "2": 751,
+            "3": 149,
+            "4": 13,
+            "5": 2
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "maps_tested": 6840,
+          "max_agreements": 6,
+          "bound": 10,
+          "best_map": [
+            1,
+            2,
+            14,
+            1
+          ],
+          "matching_scalars": [
+            0,
+            2,
+            3,
+            9,
+            10,
+            12
+          ],
+          "histogram": {
+            "0": 3540,
+            "1": 2339,
+            "2": 809,
+            "3": 122,
+            "4": 28,
+            "5": 1,
+            "6": 1
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "maps_tested": 6840,
+          "max_agreements": 4,
+          "bound": 6,
+          "best_map": [
+            1,
+            1,
+            3,
+            11
+          ],
+          "matching_scalars": [
+            3,
+            4,
+            7,
+            9
+          ],
+          "histogram": {
+            "0": 3502,
+            "1": 2429,
+            "2": 735,
+            "3": 149,
+            "4": 25
+          }
+        }
+      ],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 58,
+            "2": 62,
+            "4": 61,
+            "3": 69
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 2,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 64,
+            "3": 63,
+            "4": 56,
+            "2": 67
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 56,
+            "4": 65,
+            "3": 70,
+            "1": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 60,
+            "1": 59,
+            "3": 67,
+            "4": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 2,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 67,
+            "2": 51,
+            "1": 62,
+            "4": 70
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 2,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 63,
+            "4": 55,
+            "3": 62,
+            "1": 70
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 10,
+        "two_root_cases": 10,
+        "excluded_scalars": [
+          0,
+          1,
+          12
+        ]
+      }
+    },
+    {
+      "p": 23,
+      "a": 1,
+      "b": 4,
+      "n": 29,
+      "G": [
+        0,
+        2
+      ],
+      "trace": -5,
+      "orbit": [
+        null,
+        [
+          0,
+          2
+        ],
+        [
+          13,
+          12
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          15,
+          6
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          22,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          9
+        ],
+        [
+          18,
+          14
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          17,
+          14
+        ],
+        [
+          10,
+          18
+        ],
+        [
+          22,
+          18
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 29,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "baseline_max_stored_points": 6,
+      "baseline_max_add_calls": 19,
+      "embedding_degree": 7,
+      "min_possible_mobius_field_extension": 7,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 68,
+            "1": 63,
+            "3": 59,
+            "4": 60
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 5,
+            "3": 4,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 69,
+            "4": 55,
+            "1": 63,
+            "3": 63
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 5,
+            "2": 4,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 73,
+            "4": 66,
+            "3": 52,
+            "2": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 69,
+            "1": 65,
+            "4": 62,
+            "3": 54
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 5,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 60,
+            "4": 61,
+            "2": 70,
+            "1": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 5,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 69,
+            "3": 58,
+            "2": 69,
+            "1": 54
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 26,
+        "two_root_cases": 26,
+        "excluded_scalars": [
+          0,
+          1,
+          28
+        ]
+      }
+    },
+    {
+      "p": 29,
+      "a": 1,
+      "b": 12,
+      "n": 23,
+      "G": [
+        2,
+        14
+      ],
+      "trace": 7,
+      "orbit": [
+        null,
+        [
+          2,
+          14
+        ],
+        [
+          20,
+          17
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          11,
+          22
+        ],
+        [
+          15,
+          26
+        ],
+        [
+          18,
+          27
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          21
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          23,
+          15
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          24
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          20,
+          12
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 23,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "baseline_max_stored_points": 5,
+      "baseline_max_add_calls": 17,
+      "embedding_degree": 11,
+      "min_possible_mobius_field_extension": 11,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 46,
+            "2": 79,
+            "1": 67,
+            "3": 58
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 61,
+            "1": 65,
+            "4": 62,
+            "2": 62
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 66,
+            "3": 49,
+            "2": 64,
+            "4": 71
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 4,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 69,
+            "3": 68,
+            "1": 64,
+            "2": 49
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 3,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 47,
+            "3": 73,
+            "1": 66,
+            "4": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 2
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 58,
+            "2": 61,
+            "3": 65,
+            "4": 66
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 2,
+            "3": 3,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 20,
+        "two_root_cases": 20,
+        "excluded_scalars": [
+          0,
+          1,
+          22
+        ]
+      }
+    },
+    {
+      "p": 31,
+      "a": 0,
+      "b": 3,
+      "n": 43,
+      "G": [
+        1,
+        2
+      ],
+      "trace": -11,
+      "orbit": [
+        null,
+        [
+          1,
+          2
+        ],
+        [
+          16,
+          10
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          24,
+          30
+        ],
+        [
+          26,
+          8
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          25,
+          29
+        ],
+        [
+          30,
+          8
+        ],
+        [
+          9,
+          22
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          14,
+          22
+        ],
+        [
+          18,
+          10
+        ],
+        [
+          6,
+          23
+        ],
+        [
+          28,
+          21
+        ],
+        [
+          11,
+          30
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          20,
+          6
+        ],
+        [
+          17,
+          24
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          23,
+          7
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          8,
+          22
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          17,
+          7
+        ],
+        [
+          20,
+          25
+        ],
+        [
+          7,
+          25
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          28,
+          10
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          4,
+          25
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          30,
+          23
+        ],
+        [
+          25,
+          2
+        ],
+        [
+          5,
+          29
+        ],
+        [
+          26,
+          23
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          22,
+          7
+        ],
+        [
+          16,
+          21
+        ],
+        [
+          1,
+          29
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 43,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "baseline_max_stored_points": 7,
+      "baseline_max_add_calls": 22,
+      "embedding_degree": 21,
+      "min_possible_mobius_field_extension": 21,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 68,
+            "1": 52,
+            "2": 69,
+            "4": 61
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 60,
+            "1": 57,
+            "4": 59,
+            "2": 74
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 5,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 68,
+            "3": 62,
+            "1": 54,
+            "4": 66
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 47,
+            "4": 60,
+            "3": 70,
+            "2": 73
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 66,
+            "1": 62,
+            "3": 65,
+            "4": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 67,
+            "3": 66,
+            "2": 59,
+            "1": 58
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 5,
+            "4": 5
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 40,
+        "two_root_cases": 40,
+        "excluded_scalars": [
+          0,
+          1,
+          42
+        ]
+      }
+    },
+    {
+      "p": 37,
+      "a": 1,
+      "b": 12,
+      "n": 29,
+      "G": [
+        0,
+        7
+      ],
+      "trace": 9,
+      "orbit": [
+        null,
+        [
+          0,
+          7
+        ],
+        [
+          27,
+          36
+        ],
+        [
+          21,
+          28
+        ],
+        [
+          17,
+          13
+        ],
+        [
+          36,
+          26
+        ],
+        [
+          29,
+          26
+        ],
+        [
+          20,
+          22
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          31,
+          30
+        ],
+        [
+          32,
+          17
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          25,
+          23
+        ],
+        [
+          22,
+          10
+        ],
+        [
+          18,
+          4
+        ],
+        [
+          18,
+          33
+        ],
+        [
+          22,
+          27
+        ],
+        [
+          25,
+          14
+        ],
+        [
+          9,
+          26
+        ],
+        [
+          32,
+          20
+        ],
+        [
+          31,
+          7
+        ],
+        [
+          6,
+          30
+        ],
+        [
+          20,
+          15
+        ],
+        [
+          29,
+          11
+        ],
+        [
+          36,
+          11
+        ],
+        [
+          17,
+          24
+        ],
+        [
+          21,
+          9
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 29,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "baseline_max_stored_points": 6,
+      "baseline_max_add_calls": 19,
+      "embedding_degree": 28,
+      "min_possible_mobius_field_extension": 14,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 76,
+            "2": 53,
+            "3": 56,
+            "4": 65
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 59,
+            "2": 68,
+            "1": 73,
+            "3": 50
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 61,
+            "3": 74,
+            "2": 50,
+            "4": 65
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 63,
+            "4": 60,
+            "3": 66,
+            "2": 61
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 61,
+            "2": 69,
+            "3": 68,
+            "1": 52
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 75,
+            "2": 58,
+            "1": 53,
+            "3": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 5,
+            "3": 5,
+            "4": 3
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 26,
+        "two_root_cases": 26,
+        "excluded_scalars": [
+          0,
+          1,
+          28
+        ]
+      }
+    },
+    {
+      "p": 43,
+      "a": 0,
+      "b": 7,
+      "n": 31,
+      "G": [
+        2,
+        12
+      ],
+      "trace": 13,
+      "orbit": [
+        null,
+        [
+          2,
+          12
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          35,
+          21
+        ],
+        [
+          21,
+          18
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          25,
+          18
+        ],
+        [
+          32,
+          40
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          42,
+          7
+        ],
+        [
+          40,
+          25
+        ],
+        [
+          37,
+          36
+        ],
+        [
+          13,
+          21
+        ],
+        [
+          34,
+          40
+        ],
+        [
+          38,
+          21
+        ],
+        [
+          38,
+          22
+        ],
+        [
+          34,
+          3
+        ],
+        [
+          13,
+          22
+        ],
+        [
+          37,
+          7
+        ],
+        [
+          40,
+          18
+        ],
+        [
+          42,
+          36
+        ],
+        [
+          20,
+          3
+        ],
+        [
+          32,
+          3
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          29,
+          12
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          35,
+          22
+        ],
+        [
+          7,
+          36
+        ],
+        [
+          2,
+          31
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 31,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "baseline_max_stored_points": 6,
+      "baseline_max_add_calls": 20,
+      "embedding_degree": 30,
+      "min_possible_mobius_field_extension": 15,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 56,
+            "4": 60,
+            "3": 75,
+            "2": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 2,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 57,
+            "1": 72,
+            "3": 58,
+            "4": 63
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 68,
+            "4": 61,
+            "2": 64,
+            "3": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 2,
+            "3": 4,
+            "4": 2
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 59,
+            "4": 68,
+            "2": 71,
+            "1": 52
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 62,
+            "1": 63,
+            "2": 62,
+            "4": 63
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 3,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 66,
+            "1": 60,
+            "4": 65,
+            "3": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 4,
+            "4": 2
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 28,
+        "two_root_cases": 28,
+        "excluded_scalars": [
+          0,
+          1,
+          30
+        ]
+      }
+    },
+    {
+      "p": 59,
+      "a": 1,
+      "b": 13,
+      "n": 67,
+      "G": [
+        1,
+        29
+      ],
+      "trace": -7,
+      "orbit": [
+        null,
+        [
+          1,
+          29
+        ],
+        [
+          14,
+          23
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          53,
+          33
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          57,
+          48
+        ],
+        [
+          28,
+          24
+        ],
+        [
+          34,
+          23
+        ],
+        [
+          45,
+          38
+        ],
+        [
+          11,
+          36
+        ],
+        [
+          41,
+          2
+        ],
+        [
+          20,
+          3
+        ],
+        [
+          25,
+          38
+        ],
+        [
+          23,
+          7
+        ],
+        [
+          36,
+          6
+        ],
+        [
+          39,
+          28
+        ],
+        [
+          38,
+          17
+        ],
+        [
+          32,
+          56
+        ],
+        [
+          55,
+          2
+        ],
+        [
+          18,
+          9
+        ],
+        [
+          52,
+          31
+        ],
+        [
+          54,
+          58
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          48,
+          21
+        ],
+        [
+          17,
+          39
+        ],
+        [
+          46,
+          24
+        ],
+        [
+          4,
+          50
+        ],
+        [
+          44,
+          24
+        ],
+        [
+          30,
+          32
+        ],
+        [
+          5,
+          54
+        ],
+        [
+          22,
+          2
+        ],
+        [
+          22,
+          57
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          30,
+          27
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          46,
+          35
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          48,
+          38
+        ],
+        [
+          29,
+          51
+        ],
+        [
+          54,
+          1
+        ],
+        [
+          52,
+          28
+        ],
+        [
+          18,
+          50
+        ],
+        [
+          55,
+          57
+        ],
+        [
+          32,
+          3
+        ],
+        [
+          38,
+          42
+        ],
+        [
+          39,
+          31
+        ],
+        [
+          36,
+          53
+        ],
+        [
+          23,
+          52
+        ],
+        [
+          25,
+          21
+        ],
+        [
+          20,
+          56
+        ],
+        [
+          41,
+          57
+        ],
+        [
+          11,
+          23
+        ],
+        [
+          45,
+          21
+        ],
+        [
+          34,
+          36
+        ],
+        [
+          28,
+          35
+        ],
+        [
+          57,
+          11
+        ],
+        [
+          37,
+          50
+        ],
+        [
+          7,
+          56
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          53,
+          26
+        ],
+        [
+          10,
+          43
+        ],
+        [
+          14,
+          36
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 67,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "baseline_max_stored_points": 9,
+      "baseline_max_add_calls": 28,
+      "embedding_degree": 11,
+      "min_possible_mobius_field_extension": 11,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 61,
+            "3": 67,
+            "1": 65,
+            "4": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 74,
+            "3": 61,
+            "1": 69,
+            "4": 46
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 72,
+            "3": 74,
+            "4": 57,
+            "1": 47
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 66,
+            "4": 58,
+            "1": 72,
+            "3": 54
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 5,
+            "3": 5,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 60,
+            "2": 52,
+            "4": 63,
+            "3": 75
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 4,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 65,
+            "3": 59,
+            "4": 62,
+            "1": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 64,
+        "two_root_cases": 64,
+        "excluded_scalars": [
+          0,
+          1,
+          66
+        ]
+      }
+    },
+    {
+      "p": 83,
+      "a": 1,
+      "b": 7,
+      "n": 79,
+      "G": [
+        0,
+        16
+      ],
+      "trace": 5,
+      "orbit": [
+        null,
+        [
+          0,
+          16
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          15,
+          49
+        ],
+        [
+          33,
+          11
+        ],
+        [
+          11,
+          41
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          47,
+          25
+        ],
+        [
+          62,
+          41
+        ],
+        [
+          61,
+          25
+        ],
+        [
+          34,
+          13
+        ],
+        [
+          6,
+          48
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          10,
+          42
+        ],
+        [
+          20,
+          15
+        ],
+        [
+          74,
+          79
+        ],
+        [
+          58,
+          58
+        ],
+        [
+          50,
+          68
+        ],
+        [
+          71,
+          33
+        ],
+        [
+          63,
+          11
+        ],
+        [
+          46,
+          14
+        ],
+        [
+          29,
+          43
+        ],
+        [
+          75,
+          63
+        ],
+        [
+          49,
+          54
+        ],
+        [
+          70,
+          72
+        ],
+        [
+          7,
+          78
+        ],
+        [
+          2,
+          73
+        ],
+        [
+          1,
+          80
+        ],
+        [
+          28,
+          18
+        ],
+        [
+          8,
+          19
+        ],
+        [
+          9,
+          74
+        ],
+        [
+          52,
+          27
+        ],
+        [
+          56,
+          36
+        ],
+        [
+          14,
+          62
+        ],
+        [
+          51,
+          18
+        ],
+        [
+          44,
+          49
+        ],
+        [
+          24,
+          49
+        ],
+        [
+          57,
+          82
+        ],
+        [
+          57,
+          1
+        ],
+        [
+          24,
+          34
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          51,
+          65
+        ],
+        [
+          14,
+          21
+        ],
+        [
+          56,
+          47
+        ],
+        [
+          52,
+          56
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          8,
+          64
+        ],
+        [
+          28,
+          65
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          70,
+          11
+        ],
+        [
+          49,
+          29
+        ],
+        [
+          75,
+          20
+        ],
+        [
+          29,
+          40
+        ],
+        [
+          46,
+          69
+        ],
+        [
+          63,
+          72
+        ],
+        [
+          71,
+          50
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          58,
+          25
+        ],
+        [
+          74,
+          4
+        ],
+        [
+          20,
+          68
+        ],
+        [
+          10,
+          41
+        ],
+        [
+          17,
+          66
+        ],
+        [
+          4,
+          65
+        ],
+        [
+          6,
+          35
+        ],
+        [
+          34,
+          70
+        ],
+        [
+          61,
+          58
+        ],
+        [
+          62,
+          42
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          12,
+          81
+        ],
+        [
+          11,
+          42
+        ],
+        [
+          33,
+          72
+        ],
+        [
+          15,
+          34
+        ],
+        [
+          13,
+          68
+        ],
+        [
+          3,
+          55
+        ],
+        [
+          0,
+          67
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 79,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "baseline_max_stored_points": 9,
+      "baseline_max_add_calls": 28,
+      "embedding_degree": 39,
+      "min_possible_mobius_field_extension": 39,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 71,
+            "2": 61,
+            "4": 59,
+            "3": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 60,
+            "1": 72,
+            "2": 63,
+            "4": 55
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 63,
+            "3": 63,
+            "4": 60,
+            "1": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 58,
+            "4": 59,
+            "1": 60,
+            "2": 73
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 66,
+            "4": 61,
+            "2": 67,
+            "1": 56
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 5,
+            "2": 3,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 56,
+            "1": 67,
+            "2": 68,
+            "3": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 76,
+        "two_root_cases": 76,
+        "excluded_scalars": [
+          0,
+          1,
+          78
+        ]
+      }
+    },
+    {
+      "p": 101,
+      "a": 1,
+      "b": 46,
+      "n": 109,
+      "G": [
+        2,
+        37
+      ],
+      "trace": -7,
+      "orbit": [
+        null,
+        [
+          2,
+          37
+        ],
+        [
+          45,
+          66
+        ],
+        [
+          29,
+          27
+        ],
+        [
+          47,
+          47
+        ],
+        [
+          72,
+          26
+        ],
+        [
+          74,
+          58
+        ],
+        [
+          20,
+          84
+        ],
+        [
+          88,
+          19
+        ],
+        [
+          69,
+          24
+        ],
+        [
+          36,
+          51
+        ],
+        [
+          9,
+          73
+        ],
+        [
+          34,
+          87
+        ],
+        [
+          56,
+          68
+        ],
+        [
+          39,
+          97
+        ],
+        [
+          81,
+          56
+        ],
+        [
+          97,
+          68
+        ],
+        [
+          82,
+          6
+        ],
+        [
+          73,
+          65
+        ],
+        [
+          96,
+          44
+        ],
+        [
+          4,
+          66
+        ],
+        [
+          78,
+          73
+        ],
+        [
+          52,
+          35
+        ],
+        [
+          63,
+          22
+        ],
+        [
+          3,
+          51
+        ],
+        [
+          90,
+          44
+        ],
+        [
+          32,
+          18
+        ],
+        [
+          83,
+          85
+        ],
+        [
+          46,
+          8
+        ],
+        [
+          49,
+          33
+        ],
+        [
+          41,
+          5
+        ],
+        [
+          94,
+          10
+        ],
+        [
+          14,
+          28
+        ],
+        [
+          54,
+          2
+        ],
+        [
+          62,
+          50
+        ],
+        [
+          80,
+          37
+        ],
+        [
+          19,
+          64
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          89,
+          86
+        ],
+        [
+          98,
+          97
+        ],
+        [
+          44,
+          63
+        ],
+        [
+          35,
+          58
+        ],
+        [
+          21,
+          6
+        ],
+        [
+          58,
+          65
+        ],
+        [
+          16,
+          57
+        ],
+        [
+          50,
+          82
+        ],
+        [
+          70,
+          76
+        ],
+        [
+          93,
+          43
+        ],
+        [
+          71,
+          65
+        ],
+        [
+          84,
+          60
+        ],
+        [
+          99,
+          6
+        ],
+        [
+          79,
+          48
+        ],
+        [
+          53,
+          100
+        ],
+        [
+          65,
+          4
+        ],
+        [
+          40,
+          31
+        ],
+        [
+          40,
+          70
+        ],
+        [
+          65,
+          97
+        ],
+        [
+          53,
+          1
+        ],
+        [
+          79,
+          53
+        ],
+        [
+          99,
+          95
+        ],
+        [
+          84,
+          41
+        ],
+        [
+          71,
+          36
+        ],
+        [
+          93,
+          58
+        ],
+        [
+          70,
+          25
+        ],
+        [
+          50,
+          19
+        ],
+        [
+          16,
+          44
+        ],
+        [
+          58,
+          36
+        ],
+        [
+          21,
+          95
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          44,
+          38
+        ],
+        [
+          98,
+          4
+        ],
+        [
+          89,
+          15
+        ],
+        [
+          64,
+          82
+        ],
+        [
+          19,
+          37
+        ],
+        [
+          80,
+          64
+        ],
+        [
+          62,
+          51
+        ],
+        [
+          54,
+          99
+        ],
+        [
+          14,
+          73
+        ],
+        [
+          94,
+          91
+        ],
+        [
+          41,
+          96
+        ],
+        [
+          49,
+          68
+        ],
+        [
+          46,
+          93
+        ],
+        [
+          83,
+          16
+        ],
+        [
+          32,
+          83
+        ],
+        [
+          90,
+          57
+        ],
+        [
+          3,
+          50
+        ],
+        [
+          63,
+          79
+        ],
+        [
+          52,
+          66
+        ],
+        [
+          78,
+          28
+        ],
+        [
+          4,
+          35
+        ],
+        [
+          96,
+          57
+        ],
+        [
+          73,
+          36
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          97,
+          33
+        ],
+        [
+          81,
+          45
+        ],
+        [
+          39,
+          4
+        ],
+        [
+          56,
+          33
+        ],
+        [
+          34,
+          14
+        ],
+        [
+          9,
+          28
+        ],
+        [
+          36,
+          50
+        ],
+        [
+          69,
+          77
+        ],
+        [
+          88,
+          82
+        ],
+        [
+          20,
+          17
+        ],
+        [
+          74,
+          43
+        ],
+        [
+          72,
+          75
+        ],
+        [
+          47,
+          54
+        ],
+        [
+          29,
+          74
+        ],
+        [
+          45,
+          35
+        ],
+        [
+          2,
+          64
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 109,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "baseline_max_stored_points": 11,
+      "baseline_max_add_calls": 32,
+      "embedding_degree": 12,
+      "min_possible_mobius_field_extension": 6,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 78,
+            "2": 65,
+            "1": 48,
+            "4": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 2,
+            "2": 4,
+            "3": 6,
+            "4": 6
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 62,
+            "1": 65,
+            "3": 70,
+            "4": 53
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 5,
+            "3": 3,
+            "4": 6
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 53,
+            "4": 61,
+            "1": 76,
+            "3": 60
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 5,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 61,
+            "4": 62,
+            "3": 67,
+            "2": 60
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 60,
+            "2": 65,
+            "1": 61,
+            "4": 64
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 65,
+            "2": 63,
+            "3": 65,
+            "1": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 6,
+            "2": 4,
+            "3": 3,
+            "4": 4
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 106,
+        "two_root_cases": 106,
+        "excluded_scalars": [
+          0,
+          1,
+          108
+        ]
+      }
+    },
+    {
+      "p": 127,
+      "a": 0,
+      "b": 29,
+      "n": 109,
+      "G": [
+        1,
+        41
+      ],
+      "trace": 19,
+      "orbit": [
+        null,
+        [
+          1,
+          41
+        ],
+        [
+          33,
+          122
+        ],
+        [
+          40,
+          23
+        ],
+        [
+          105,
+          7
+        ],
+        [
+          70,
+          111
+        ],
+        [
+          49,
+          87
+        ],
+        [
+          124,
+          111
+        ],
+        [
+          86,
+          113
+        ],
+        [
+          87,
+          52
+        ],
+        [
+          115,
+          98
+        ],
+        [
+          43,
+          65
+        ],
+        [
+          60,
+          16
+        ],
+        [
+          100,
+          44
+        ],
+        [
+          113,
+          98
+        ],
+        [
+          63,
+          93
+        ],
+        [
+          23,
+          2
+        ],
+        [
+          119,
+          122
+        ],
+        [
+          88,
+          107
+        ],
+        [
+          102,
+          5
+        ],
+        [
+          68,
+          3
+        ],
+        [
+          10,
+          93
+        ],
+        [
+          2,
+          52
+        ],
+        [
+          118,
+          69
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          111,
+          88
+        ],
+        [
+          89,
+          23
+        ],
+        [
+          56,
+          2
+        ],
+        [
+          37,
+          3
+        ],
+        [
+          125,
+          104
+        ],
+        [
+          61,
+          76
+        ],
+        [
+          38,
+          75
+        ],
+        [
+          83,
+          69
+        ],
+        [
+          58,
+          113
+        ],
+        [
+          90,
+          7
+        ],
+        [
+          66,
+          88
+        ],
+        [
+          54,
+          34
+        ],
+        [
+          16,
+          76
+        ],
+        [
+          59,
+          120
+        ],
+        [
+          55,
+          65
+        ],
+        [
+          32,
+          44
+        ],
+        [
+          110,
+          14
+        ],
+        [
+          50,
+          76
+        ],
+        [
+          48,
+          125
+        ],
+        [
+          21,
+          107
+        ],
+        [
+          107,
+          41
+        ],
+        [
+          19,
+          86
+        ],
+        [
+          18,
+          107
+        ],
+        [
+          22,
+          124
+        ],
+        [
+          77,
+          88
+        ],
+        [
+          29,
+          62
+        ],
+        [
+          42,
+          87
+        ],
+        [
+          36,
+          87
+        ],
+        [
+          122,
+          83
+        ],
+        [
+          53,
+          69
+        ],
+        [
+          53,
+          58
+        ],
+        [
+          122,
+          44
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          42,
+          40
+        ],
+        [
+          29,
+          65
+        ],
+        [
+          77,
+          39
+        ],
+        [
+          22,
+          3
+        ],
+        [
+          18,
+          20
+        ],
+        [
+          19,
+          41
+        ],
+        [
+          107,
+          86
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          48,
+          2
+        ],
+        [
+          50,
+          51
+        ],
+        [
+          110,
+          113
+        ],
+        [
+          32,
+          83
+        ],
+        [
+          55,
+          62
+        ],
+        [
+          59,
+          7
+        ],
+        [
+          16,
+          51
+        ],
+        [
+          54,
+          93
+        ],
+        [
+          66,
+          39
+        ],
+        [
+          90,
+          120
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          83,
+          58
+        ],
+        [
+          38,
+          52
+        ],
+        [
+          61,
+          51
+        ],
+        [
+          125,
+          23
+        ],
+        [
+          37,
+          124
+        ],
+        [
+          56,
+          125
+        ],
+        [
+          89,
+          104
+        ],
+        [
+          111,
+          39
+        ],
+        [
+          26,
+          98
+        ],
+        [
+          118,
+          58
+        ],
+        [
+          2,
+          75
+        ],
+        [
+          10,
+          34
+        ],
+        [
+          68,
+          124
+        ],
+        [
+          102,
+          122
+        ],
+        [
+          88,
+          20
+        ],
+        [
+          119,
+          5
+        ],
+        [
+          23,
+          125
+        ],
+        [
+          63,
+          34
+        ],
+        [
+          113,
+          29
+        ],
+        [
+          100,
+          83
+        ],
+        [
+          60,
+          111
+        ],
+        [
+          43,
+          62
+        ],
+        [
+          115,
+          29
+        ],
+        [
+          87,
+          75
+        ],
+        [
+          86,
+          14
+        ],
+        [
+          124,
+          16
+        ],
+        [
+          49,
+          40
+        ],
+        [
+          70,
+          16
+        ],
+        [
+          105,
+          120
+        ],
+        [
+          40,
+          104
+        ],
+        [
+          33,
+          5
+        ],
+        [
+          1,
+          86
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 109,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "baseline_max_stored_points": 11,
+      "baseline_max_add_calls": 32,
+      "embedding_degree": 108,
+      "min_possible_mobius_field_extension": 54,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 63,
+            "3": 66,
+            "1": 56,
+            "4": 65
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 51,
+            "1": 79,
+            "2": 63,
+            "4": 57
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 3,
+            "4": 5
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 53,
+            "2": 62,
+            "4": 64,
+            "3": 71
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 5,
+            "3": 3,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 60,
+            "4": 61,
+            "1": 68,
+            "3": 61
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 4,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 56,
+            "4": 72,
+            "2": 64,
+            "3": 58
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 64,
+            "4": 63,
+            "2": 70,
+            "3": 53
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 3
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 106,
+        "two_root_cases": 106,
+        "excluded_scalars": [
+          0,
+          1,
+          108
+        ]
+      }
+    },
+    {
+      "p": 211,
+      "a": 0,
+      "b": 2,
+      "n": 199,
+      "G": [
+        4,
+        53
+      ],
+      "trace": 13,
+      "orbit": [
+        null,
+        [
+          4,
+          53
+        ],
+        [
+          135,
+          31
+        ],
+        [
+          97,
+          201
+        ],
+        [
+          130,
+          80
+        ],
+        [
+          203,
+          40
+        ],
+        [
+          118,
+          140
+        ],
+        [
+          185,
+          192
+        ],
+        [
+          205,
+          182
+        ],
+        [
+          103,
+          148
+        ],
+        [
+          199,
+          54
+        ],
+        [
+          144,
+          114
+        ],
+        [
+          48,
+          175
+        ],
+        [
+          202,
+          31
+        ],
+        [
+          104,
+          5
+        ],
+        [
+          85,
+          180
+        ],
+        [
+          95,
+          57
+        ],
+        [
+          161,
+          114
+        ],
+        [
+          98,
+          61
+        ],
+        [
+          139,
+          151
+        ],
+        [
+          40,
+          160
+        ],
+        [
+          204,
+          9
+        ],
+        [
+          19,
+          98
+        ],
+        [
+          197,
+          1
+        ],
+        [
+          47,
+          151
+        ],
+        [
+          27,
+          189
+        ],
+        [
+          132,
+          80
+        ],
+        [
+          68,
+          39
+        ],
+        [
+          117,
+          97
+        ],
+        [
+          191,
+          130
+        ],
+        [
+          160,
+          131
+        ],
+        [
+          100,
+          110
+        ],
+        [
+          143,
+          148
+        ],
+        [
+          148,
+          137
+        ],
+        [
+          137,
+          98
+        ],
+        [
+          193,
+          194
+        ],
+        [
+          59,
+          194
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          153,
+          102
+        ],
+        [
+          175,
+          140
+        ],
+        [
+          145,
+          164
+        ],
+        [
+          176,
+          63
+        ],
+        [
+          110,
+          196
+        ],
+        [
+          25,
+          60
+        ],
+        [
+          18,
+          83
+        ],
+        [
+          129,
+          71
+        ],
+        [
+          165,
+          123
+        ],
+        [
+          179,
+          192
+        ],
+        [
+          32,
+          102
+        ],
+        [
+          33,
+          160
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          101,
+          137
+        ],
+        [
+          127,
+          182
+        ],
+        [
+          57,
+          123
+        ],
+        [
+          58,
+          19
+        ],
+        [
+          163,
+          94
+        ],
+        [
+          55,
+          113
+        ],
+        [
+          195,
+          45
+        ],
+        [
+          105,
+          202
+        ],
+        [
+          172,
+          94
+        ],
+        [
+          90,
+          29
+        ],
+        [
+          131,
+          164
+        ],
+        [
+          120,
+          40
+        ],
+        [
+          167,
+          189
+        ],
+        [
+          7,
+          61
+        ],
+        [
+          43,
+          54
+        ],
+        [
+          188,
+          110
+        ],
+        [
+          99,
+          171
+        ],
+        [
+          152,
+          83
+        ],
+        [
+          138,
+          51
+        ],
+        [
+          29,
+          45
+        ],
+        [
+          170,
+          17
+        ],
+        [
+          198,
+          45
+        ],
+        [
+          210,
+          210
+        ],
+        [
+          63,
+          196
+        ],
+        [
+          180,
+          157
+        ],
+        [
+          108,
+          39
+        ],
+        [
+          22,
+          201
+        ],
+        [
+          39,
+          175
+        ],
+        [
+          52,
+          57
+        ],
+        [
+          92,
+          10
+        ],
+        [
+          89,
+          130
+        ],
+        [
+          106,
+          150
+        ],
+        [
+          38,
+          196
+        ],
+        [
+          173,
+          74
+        ],
+        [
+          87,
+          94
+        ],
+        [
+          26,
+          109
+        ],
+        [
+          41,
+          83
+        ],
+        [
+          17,
+          22
+        ],
+        [
+          142,
+          130
+        ],
+        [
+          124,
+          36
+        ],
+        [
+          190,
+          5
+        ],
+        [
+          151,
+          53
+        ],
+        [
+          56,
+          158
+        ],
+        [
+          128,
+          5
+        ],
+        [
+          64,
+          154
+        ],
+        [
+          35,
+          39
+        ],
+        [
+          134,
+          101
+        ],
+        [
+          146,
+          164
+        ],
+        [
+          200,
+          88
+        ],
+        [
+          200,
+          123
+        ],
+        [
+          146,
+          47
+        ],
+        [
+          134,
+          110
+        ],
+        [
+          35,
+          172
+        ],
+        [
+          64,
+          57
+        ],
+        [
+          128,
+          206
+        ],
+        [
+          56,
+          53
+        ],
+        [
+          151,
+          158
+        ],
+        [
+          190,
+          206
+        ],
+        [
+          124,
+          175
+        ],
+        [
+          142,
+          81
+        ],
+        [
+          17,
+          189
+        ],
+        [
+          41,
+          128
+        ],
+        [
+          26,
+          102
+        ],
+        [
+          87,
+          117
+        ],
+        [
+          173,
+          137
+        ],
+        [
+          38,
+          15
+        ],
+        [
+          106,
+          61
+        ],
+        [
+          89,
+          81
+        ],
+        [
+          92,
+          201
+        ],
+        [
+          52,
+          154
+        ],
+        [
+          39,
+          36
+        ],
+        [
+          22,
+          10
+        ],
+        [
+          108,
+          172
+        ],
+        [
+          180,
+          54
+        ],
+        [
+          63,
+          15
+        ],
+        [
+          210,
+          1
+        ],
+        [
+          198,
+          166
+        ],
+        [
+          170,
+          194
+        ],
+        [
+          29,
+          166
+        ],
+        [
+          138,
+          160
+        ],
+        [
+          152,
+          128
+        ],
+        [
+          99,
+          40
+        ],
+        [
+          188,
+          101
+        ],
+        [
+          43,
+          157
+        ],
+        [
+          7,
+          150
+        ],
+        [
+          167,
+          22
+        ],
+        [
+          120,
+          171
+        ],
+        [
+          131,
+          47
+        ],
+        [
+          90,
+          182
+        ],
+        [
+          172,
+          117
+        ],
+        [
+          105,
+          9
+        ],
+        [
+          195,
+          166
+        ],
+        [
+          55,
+          98
+        ],
+        [
+          163,
+          117
+        ],
+        [
+          58,
+          192
+        ],
+        [
+          57,
+          88
+        ],
+        [
+          127,
+          29
+        ],
+        [
+          101,
+          74
+        ],
+        [
+          15,
+          210
+        ],
+        [
+          33,
+          51
+        ],
+        [
+          32,
+          109
+        ],
+        [
+          179,
+          19
+        ],
+        [
+          165,
+          88
+        ],
+        [
+          129,
+          140
+        ],
+        [
+          18,
+          128
+        ],
+        [
+          25,
+          151
+        ],
+        [
+          110,
+          15
+        ],
+        [
+          176,
+          148
+        ],
+        [
+          145,
+          47
+        ],
+        [
+          175,
+          71
+        ],
+        [
+          153,
+          109
+        ],
+        [
+          113,
+          202
+        ],
+        [
+          59,
+          17
+        ],
+        [
+          193,
+          17
+        ],
+        [
+          137,
+          113
+        ],
+        [
+          148,
+          74
+        ],
+        [
+          143,
+          63
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          160,
+          80
+        ],
+        [
+          191,
+          81
+        ],
+        [
+          117,
+          114
+        ],
+        [
+          68,
+          172
+        ],
+        [
+          132,
+          131
+        ],
+        [
+          27,
+          22
+        ],
+        [
+          47,
+          60
+        ],
+        [
+          197,
+          210
+        ],
+        [
+          19,
+          113
+        ],
+        [
+          204,
+          202
+        ],
+        [
+          40,
+          51
+        ],
+        [
+          139,
+          60
+        ],
+        [
+          98,
+          150
+        ],
+        [
+          161,
+          97
+        ],
+        [
+          95,
+          154
+        ],
+        [
+          85,
+          31
+        ],
+        [
+          104,
+          206
+        ],
+        [
+          202,
+          180
+        ],
+        [
+          48,
+          36
+        ],
+        [
+          144,
+          97
+        ],
+        [
+          199,
+          157
+        ],
+        [
+          103,
+          63
+        ],
+        [
+          205,
+          29
+        ],
+        [
+          185,
+          19
+        ],
+        [
+          118,
+          71
+        ],
+        [
+          203,
+          171
+        ],
+        [
+          130,
+          131
+        ],
+        [
+          97,
+          10
+        ],
+        [
+          135,
+          180
+        ],
+        [
+          4,
+          158
+        ]
+      ],
+      "baseline_solved_all": true,
+      "baseline_instances": 199,
+      "baseline_recovered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198
+      ],
+      "baseline_max_stored_points": 15,
+      "baseline_max_add_calls": 42,
+      "embedding_degree": 66,
+      "min_possible_mobius_field_extension": 33,
+      "exhaustive_mobius": [],
+      "random_rational": [
+        {
+          "coordinate": "x",
+          "degree": 2,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "4": 63,
+            "3": 68,
+            "1": 63,
+            "2": 56
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 70,
+            "2": 58,
+            "3": 74,
+            "4": 48
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x+y",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 58,
+            "1": 71,
+            "4": 62,
+            "2": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 4
+          }
+        },
+        {
+          "coordinate": "x^2+y",
+          "degree": 4,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "3": 51,
+            "2": 80,
+            "1": 60,
+            "4": 59
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 5,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "x*y+y",
+          "degree": 5,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "1": 56,
+            "2": 77,
+            "4": 49,
+            "3": 68
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 4,
+            "2": 3,
+            "3": 4,
+            "4": 3
+          }
+        },
+        {
+          "coordinate": "1/(y+1)",
+          "degree": 3,
+          "trials": 250,
+          "trials_by_recurrence_degree": {
+            "2": 68,
+            "1": 55,
+            "3": 64,
+            "4": 63
+          },
+          "max_agreements_by_recurrence_degree": {
+            "1": 3,
+            "2": 3,
+            "3": 3,
+            "4": 5
+          }
+        }
+      ],
+      "addition_correspondence": {
+        "tested_nonexceptional_points": 196,
+        "two_root_cases": 196,
+        "excluded_scalars": [
+          0,
+          1,
+          198
+        ]
+      }
+    }
+  ],
+  "sharpness_counterexample": {
+    "p": 11,
+    "a": 1,
+    "b": 6,
+    "n": 13,
+    "G": [
+      2,
+      4
+    ],
+    "coordinate": "x",
+    "degree": 2,
+    "matrix": [
+      1,
+      0,
+      1,
+      5
+    ],
+    "matching_scalars": [
+      1,
+      6,
+      8,
+      9
+    ],
+    "matches": [
+      {
+        "d": 1,
+        "P": [
+          2,
+          4
+        ],
+        "P_plus_G": [
+          5,
+          9
+        ],
+        "predicted": 5
+      },
+      {
+        "d": 6,
+        "P": [
+          7,
+          2
+        ],
+        "P_plus_G": [
+          7,
+          9
+        ],
+        "predicted": 7
+      },
+      {
+        "d": 8,
+        "P": [
+          3,
+          6
+        ],
+        "P_plus_G": [
+          10,
+          2
+        ],
+        "predicted": 10
+      },
+      {
+        "d": 9,
+        "P": [
+          10,
+          2
+        ],
+        "P_plus_G": [
+          8,
+          3
+        ],
+        "predicted": 8
+      }
+    ]
+  },
+  "piecewise_minimum_cover": {
+    "minimum_branches": 4,
+    "degree_bound_lower_branches": 4,
+    "witness": [
+      {
+        "matrix": [
+          1,
+          4,
+          7,
+          8
+        ],
+        "scalars": [
+          4,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "matrix": [
+          1,
+          3,
+          6,
+          9
+        ],
+        "scalars": [
+          0,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "matrix": [
+          1,
+          10,
+          10,
+          0
+        ],
+        "scalars": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "matrix": [
+          1,
+          1,
+          5,
+          6
+        ],
+        "scalars": [
+          1,
+          2,
+          3,
+          5
+        ]
+      }
+    ],
+    "search_states": 8192,
+    "distinct_masks": 155,
+    "maximal_masks": 75
+  },
+  "pgl_order_checks": [
+    {
+      "p": 5,
+      "matrices": 120,
+      "order_histogram": {
+        "1": 1,
+        "2": 25,
+        "3": 20,
+        "4": 30,
+        "5": 24,
+        "6": 20
+      }
+    },
+    {
+      "p": 7,
+      "matrices": 336,
+      "order_histogram": {
+        "1": 1,
+        "2": 49,
+        "3": 56,
+        "4": 42,
+        "6": 56,
+        "7": 48,
+        "8": 84
+      }
+    },
+    {
+      "p": 11,
+      "matrices": 1320,
+      "order_histogram": {
+        "1": 1,
+        "2": 121,
+        "3": 110,
+        "4": 110,
+        "5": 264,
+        "6": 110,
+        "10": 264,
+        "11": 120,
+        "12": 220
+      }
+    },
+    {
+      "p": 13,
+      "matrices": 2184,
+      "order_histogram": {
+        "1": 1,
+        "2": 169,
+        "3": 182,
+        "4": 182,
+        "6": 182,
+        "7": 468,
+        "12": 364,
+        "13": 168,
+        "14": 468
+      }
+    },
+    {
+      "p": 17,
+      "matrices": 4896,
+      "order_histogram": {
+        "1": 1,
+        "2": 289,
+        "3": 272,
+        "4": 306,
+        "6": 272,
+        "8": 612,
+        "9": 816,
+        "16": 1224,
+        "17": 288,
+        "18": 816
+      }
+    },
+    {
+      "p": 19,
+      "matrices": 6840,
+      "order_histogram": {
+        "1": 1,
+        "2": 361,
+        "3": 380,
+        "4": 342,
+        "5": 684,
+        "6": 380,
+        "9": 1140,
+        "10": 684,
+        "18": 1140,
+        "19": 360,
+        "20": 1368
+      }
+    }
+  ],
+  "controls": {
+    "global_degree_equal_order": {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "G": [
+        0,
+        1
+      ],
+      "n": 3,
+      "coordinate": "y",
+      "coordinate_degree": 3,
+      "matrix": [
+        1,
+        4,
+        1,
+        1
+      ],
+      "total_rational_points": 12,
+      "agreements_on_whole_curve": 12,
+      "orbit": [
+        null,
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    "high_degree_short_evaluation": [
+      {
+        "t": 1,
+        "algebraic_degree_of_x_after_2t": 8,
+        "point_doublings_for_evaluation": 1,
+        "value": 63
+      },
+      {
+        "t": 2,
+        "algebraic_degree_of_x_after_2t": 32,
+        "point_doublings_for_evaluation": 2,
+        "value": 101
+      },
+      {
+        "t": 3,
+        "algebraic_degree_of_x_after_2t": 128,
+        "point_doublings_for_evaluation": 3,
+        "value": 134
+      },
+      {
+        "t": 4,
+        "algebraic_degree_of_x_after_2t": 512,
+        "point_doublings_for_evaluation": 4,
+        "value": 203
+      },
+      {
+        "t": 5,
+        "algebraic_degree_of_x_after_2t": 2048,
+        "point_doublings_for_evaluation": 5,
+        "value": 199
+      },
+      {
+        "t": 6,
+        "algebraic_degree_of_x_after_2t": 8192,
+        "point_doublings_for_evaluation": 6,
+        "value": 40
+      },
+      {
+        "t": 7,
+        "algebraic_degree_of_x_after_2t": 32768,
+        "point_doublings_for_evaluation": 7,
+        "value": 145
+      },
+      {
+        "t": 8,
+        "algebraic_degree_of_x_after_2t": 131072,
+        "point_doublings_for_evaluation": 8,
+        "value": 92
+      }
+    ]
+  },
+  "totals": {
+    "curves": 13,
+    "all_dlog_instances": 763,
+    "exhaustive_coordinate_map_tests": 78336,
+    "sampled_coordinate_rational_map_tests": 19500,
+    "degree_bound_violations": 0
+  },
+  "runtime_seconds_diagnostic_only": 1.352725
+}

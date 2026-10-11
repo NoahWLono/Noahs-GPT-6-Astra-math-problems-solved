@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "external_peer_review": false,
+  "formal_proof_checker": false,
+  "imports_primary_implementation": false,
+  "independently_counted_points": 763,
+  "independent_logarithm_checks": 763,
+  "all_pairs_group_law_checks": 79813,
+  "independently_recomputed_mobius_cases": 78336,
+  "independent_matrix_power_order_checks": 15696,
+  "sharpness_counterexample_verified": true,
+  "minimum_four_branch_cover_verified": true,
+  "global_semiconjugacy_control_verified": true,
+  "runtime_seconds_diagnostic_only": 0.992624
+}

@@ -1,0 +1,22 @@
+Verification executed from a freshly extracted final ZIP.
+
+PASS: SHA-256 integrity for 22 shipped files.
+PASS: experiments.py; exact mathematical output reproduced.
+PASS: independent_check.py; exact mathematical output reproduced.
+PASS: symbolic_check.py; polynomial identities reproduced.
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "totals": {
+    "curves": 13,
+    "all_dlog_instances": 763,
+    "exhaustive_coordinate_map_tests": 78336,
+    "sampled_coordinate_rational_map_tests": 19500,
+    "degree_bound_violations": 0
+  },
+  "independent_all_pairs_group_law_checks": 79813,
+  "symbolic_status": "PASS",
+  "external_peer_review": false,
+  "formal_proof_assistant_verification": false,
+  "original_results_unchanged": true
+}
