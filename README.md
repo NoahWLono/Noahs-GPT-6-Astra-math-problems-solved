@@ -16,12 +16,12 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP:
 
-- Černý's conjecture
 - Splay-tree dynamic optimality
-- L versus NL
-- NC versus P
-- The log-rank conjecture (real matrix rank)
-- The Hamiltonian quantum PCP conjecture
+- The exact covering number C(13,6,4)
+- Minimum-size unrestricted 13-input sorting networks
+- The exact Zarankiewicz number z(10,16;4,4)
+- Existence of three mutually orthogonal Latin squares of order 10
+- Existence of a Conway 99-graph: SRG(99,14,1,2)
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
