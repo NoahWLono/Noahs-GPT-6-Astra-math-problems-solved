@@ -1,6 +1,6 @@
 # Noah's GPT-6 Astra math problems solved
 
-A growing collection of mathematical research, formal proofs, papers, and reproducible artifacts. Status updated 10 October 2026. Each problem's materials live together in its numbered folder.
+A growing collection of mathematical research, formal proofs, papers, and reproducible artifacts. Status updated 11 October 2026. Each problem's materials live together in its numbered folder.
 
 ## Results and verification
 
@@ -12,12 +12,12 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP:
 
-- Odd perfect numbers
-- The Collatz conjecture
-- The strong Goldbach conjecture
-- The twin prime conjecture
 - Černý's conjecture
 - Splay-tree dynamic optimality
+- Polynomial-time parity games
+- Deterministic polynomial identity testing
+- Polynomial-time graph isomorphism
+- Matrix-multiplication exponent 2
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
