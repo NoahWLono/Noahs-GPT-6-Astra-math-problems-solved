@@ -20,7 +20,7 @@ The proof descends the operator on every polynomial representative, proves Jacob
 
 The paper also supplies a written theorem for isolated ordinary homogeneous hypersurfaces in at least three variables, with its classical complete-intersection Jacobian-socle import stated explicitly. That full class is not formalized here. The fixed quartic uses an explicit coefficient certificate instead.
 
-The three-variable operator formula already appears in Diethorn et al., arXiv:2209.13110v3, Sections 4.1.3 and 4.5, equations (33), (35), and Theorem 4.5.1, up to the explained normalization. Stable-ideal methods and related Hessian constructions are prior art. No publication priority, previously unknown singularity class, or resolution of the unrestricted Nakai conjecture is claimed.
+The three-variable operator formula already appears in Diethorn et al., arXiv:2209.13110v3, Sections 4.1.3 and 4.5, equations (33), (35), and Theorem 4.5.1, up to the explained normalization. In every dimension, the ordinary-homogeneous specialization of Yau–Zhu–Zuo, arXiv:2604.24508v4, gives the same operator, up to the factor 1/2 explained in the review. Jacobian-ideal descent is explicit in Li–Xiao–Zuo, arXiv:2502.04672v1, Theorem 2.7; their Remark 1.1 also records the filtered/full-word distinction. Stable-ideal methods are prior art. No publication priority, previously unknown singularity class, or resolution of the unrestricted Nakai conjecture is claimed.
 
 ## Verification and package
 

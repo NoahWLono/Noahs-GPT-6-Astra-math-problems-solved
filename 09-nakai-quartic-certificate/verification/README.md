@@ -28,3 +28,7 @@ Published logs are normalized copies: machine-specific absolute source paths are
 - No external human peer review or historical novelty is claimed.
 - The unrestricted Nakai conjecture is not resolved by this package.
 - Source correctness and publication priority are distinct questions; see the prior-art review.
+
+## Attribution refinement, 12 October 2026
+
+The paper and prior-art review now identify the exact ordinary-homogeneous specialization of the Yau–Zhu–Zuo construction in every dimension, including its first-order normalization. They also cite Li–Xiao–Zuo for Jacobian-ideal descent and the filtered/full-generation distinction. The review supplies the index and Piola calculations. All fifteen Lean source hashes and mathematical theorem statements remain unchanged. The six-page PDF was rebuilt twice and visually inspected again on every page. No additional Lean build is asserted for this documentation-only revision.

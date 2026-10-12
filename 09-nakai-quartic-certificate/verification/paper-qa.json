@@ -1,9 +1,9 @@
 {
   "date": "2026-10-12",
   "pdf": "paper/nakai-quartic-certificate.pdf",
-  "pdf_sha256": "f13cbac0aa4b1e61a00986ed06b4bbf5fa4760e3e79a132af6c9a22ef8310195",
+  "pdf_sha256": "6ba4e9edd23fcf737833ca59290aa9aac872290cf893a31187927fb4652e53e9",
   "source": "paper/nakai-quartic-certificate.tex",
-  "source_sha256": "a62b68dfd5c2a356b1d03dc1c6e845709cef01c0091b191f989647ae4d62d757",
+  "source_sha256": "e7bf7de8cd703991670c9a1d29742729a69d5f14f884501a9f71c1ad7b972b5c",
   "pages": 6,
   "pdflatex_passes": 2,
   "rendering": "Poppler pdftoppm, 90 dpi",
@@ -20,5 +20,6 @@
     "overfull_boxes": false,
     "undefined_references": false,
     "latex_warnings": false
-  }
+  },
+  "revision": "Attribution refinement; mathematical theorem statements and Lean source bytes unchanged."
 }

@@ -292,5 +292,12 @@
         "time_limit_seconds": 60
       }
     ]
+  },
+  "documentation_revision": {
+    "date": "2026-10-12",
+    "scope": "Precise prior attribution and operator normalization; no mathematical theorem or Lean source changes.",
+    "all_15_lean_source_hashes_unchanged": true,
+    "new_lean_build_claimed": false,
+    "paper_pages": 6
   }
 }
