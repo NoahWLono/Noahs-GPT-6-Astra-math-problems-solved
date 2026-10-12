@@ -1,0 +1,4 @@
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_G0_not_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]

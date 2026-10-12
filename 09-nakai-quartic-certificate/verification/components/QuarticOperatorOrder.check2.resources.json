@@ -1,0 +1,19 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/QuarticOperatorOrder.olean",
+    "lean/QuarticOperatorOrder.lean"
+  ],
+  "source_sha256": "b3f5ea1df047df3700b835352361c16668ba748629017dfc956f187b1935e703",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 3.642,
+  "peak_group_rss_KiB": 3094256
+}

@@ -1,0 +1,12 @@
+{
+  "module": "QuarticCofactors",
+  "exit_code": 0,
+  "elapsed_seconds": 13.124,
+  "max_rss_kib": 2304516,
+  "timeout_seconds": 30,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "551d4a135f2bc7a3e0005d72a5de539f078a2c105123e6baa08d127663fa7388",
+  "object_sha256": "e46549e12f1f6e1467b7a977ed697a442a04348b6b73c688b318b2ee23d6179f"
+}

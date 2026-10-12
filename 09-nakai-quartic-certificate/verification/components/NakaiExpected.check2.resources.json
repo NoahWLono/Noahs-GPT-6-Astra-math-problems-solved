@@ -1,0 +1,19 @@
+{
+  "command": [
+    "<LEAN_BINARY>",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/NakaiExpected.olean",
+    "lean/NakaiExpected.lean"
+  ],
+  "source_sha256": "ee29a87a18cfb1372791005718187022029dee822c76e5bbaf061c8f664e327e",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 4.241,
+  "peak_group_rss_KiB": 2271480,
+  "rss_limit_KiB": 3932160,
+  "time_limit_seconds": 60
+}

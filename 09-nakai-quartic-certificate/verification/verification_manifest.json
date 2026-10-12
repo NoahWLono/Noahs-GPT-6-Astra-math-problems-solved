@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-12",
+  "scope": "Concrete full quotient-operator separation for the fixed rational mixed quartic in four variables; not the unrestricted Nakai conjecture and no publication-priority claim.",
+  "lean_version": "4.32.2",
+  "lean_commit": "f3b06c705e6c85f5314019d5d3baab0fec5b580c",
+  "mathlib_commit": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "final_theorems": [
+    "NakaiQuartic.quartic_full_operator_separation",
+    "NakaiExpected.expected_full_operator_separation"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "modules_in_dependency_order": [
+    {
+      "module": "NakaiFramework",
+      "source": "lean/NakaiFramework.lean",
+      "source_sha256": "fb6827e6ddd17d055cd648e48b753ff4c381851076019d42b9d00f995772876f",
+      "successful_log": "verification/components/NakaiFramework.check3.log",
+      "resources": "verification/components/NakaiFramework.check3.resources.json"
+    },
+    {
+      "module": "QuarticDefinitions",
+      "source": "lean/QuarticDefinitions.lean",
+      "source_sha256": "569365540f93a655811389d7f2bcae9b25e94b3626739e27a16039eee6d11767",
+      "successful_log": "verification/components/QuarticDefinitions.log",
+      "resources": "verification/components/QuarticDefinitions.run.json"
+    },
+    {
+      "module": "QuarticCofactors",
+      "source": "lean/QuarticCofactors.lean",
+      "source_sha256": "551d4a135f2bc7a3e0005d72a5de539f078a2c105123e6baa08d127663fa7388",
+      "successful_log": "verification/components/QuarticCofactors.log",
+      "resources": "verification/components/QuarticCofactors.run.json"
+    },
+    {
+      "module": "QuarticCoefficientDefinitions",
+      "source": "lean/QuarticCoefficientDefinitions.lean",
+      "source_sha256": "aeac5440923d6967c79eed2ee6cb3b1073f2f56ae4a149cd08d708499a74d179",
+      "successful_log": "verification/components/QuarticCoefficientDefinitions.log",
+      "resources": "verification/components/QuarticCoefficientDefinitions.run.json"
+    },
+    {
+      "module": "QuarticDeterminant",
+      "source": "lean/QuarticDeterminant.lean",
+      "source_sha256": "d76dd9f31c9b315fd4b805056dbcb5f4a73344accffb1dac1fe84433d2f26ca4",
+      "successful_log": "verification/components/QuarticDeterminant.log",
+      "resources": "verification/components/QuarticDeterminant.run.json"
+    },
+    {
+      "module": "QuarticSeparatorMonomials",
+      "source": "lean/QuarticSeparatorMonomials.lean",
+      "source_sha256": "26b2311cacdcbb74db3bfbd9ba1c9f16b22879a722603890952cf575058a15c2",
+      "successful_log": "verification/components/QuarticSeparatorMonomials.check1.log",
+      "resources": "verification/components/QuarticSeparatorMonomials.check1.resources.json"
+    },
+    {
+      "module": "QuarticSeparatorValue",
+      "source": "lean/QuarticSeparatorValue.lean",
+      "source_sha256": "8f045f0f494cc12c8c32587907f7123b41110d13d38e044571bdb01fa2be70d3",
+      "successful_log": "verification/components/QuarticSeparatorValue.check3.log",
+      "resources": "verification/components/QuarticSeparatorValue.check3.resources.json"
+    },
+    {
+      "module": "QuarticSeparatorAnnihilation",
+      "source": "lean/QuarticSeparatorAnnihilation.lean",
+      "source_sha256": "809f7542ea6a4020726cd050f9d756ba6687721e5e1458198d1586232ba9bbc0",
+      "successful_log": "verification/components/QuarticSeparatorAnnihilation.log",
+      "resources": "verification/components/QuarticSeparatorAnnihilation.run.json"
+    },
+    {
+      "module": "QuarticSeparator",
+      "source": "lean/QuarticSeparator.lean",
+      "source_sha256": "1ce0efd8be48d55b7cbfd41d85708a145ffcc99b18f2b6d50b97cb53ac555b18",
+      "successful_log": "verification/components/QuarticSeparator.check1.log",
+      "resources": "verification/components/QuarticSeparator.check1.resources.json"
+    },
+    {
+      "module": "QuarticOperatorCoefficients",
+      "source": "lean/QuarticOperatorCoefficients.lean",
+      "source_sha256": "9e8ff88b60a3529d50b0b253ca58d416adbc8b934b28d07e0e0a094c159fdd57",
+      "successful_log": "verification/components/QuarticOperatorCoefficients.check1.log",
+      "resources": "verification/components/QuarticOperatorCoefficients.check1.resources.json"
+    },
+    {
+      "module": "QuarticOperatorDescent",
+      "source": "lean/QuarticOperatorDescent.lean",
+      "source_sha256": "10add2657a7a4968207ef3a5e2970352ce4702b071cfc4b685301ddcd9bc67ef",
+      "successful_log": "verification/components/QuarticOperatorDescent.check2.log",
+      "resources": "verification/components/QuarticOperatorDescent.check2.resources.json"
+    },
+    {
+      "module": "QuarticPolynomial",
+      "source": "lean/QuarticPolynomial.lean",
+      "source_sha256": "19ea87e0d9b5474e8572173240c79cba201c10af88357eaf50eeba2b7b82e173",
+      "successful_log": "verification/components/QuarticPolynomial.check6.log",
+      "resources": "verification/components/QuarticPolynomial.check6.resources.json"
+    },
+    {
+      "module": "QuarticOperatorOrder",
+      "source": "lean/QuarticOperatorOrder.lean",
+      "source_sha256": "b3f5ea1df047df3700b835352361c16668ba748629017dfc956f187b1935e703",
+      "successful_log": "verification/components/QuarticOperatorOrder.check2.log",
+      "resources": "verification/components/QuarticOperatorOrder.check2.resources.json"
+    },
+    {
+      "module": "NakaiConcrete",
+      "source": "lean/NakaiConcrete.lean",
+      "source_sha256": "43cca9b1d8f8667462906b96b8e76d4cec3d37568c00053976fdc202300f259b",
+      "successful_log": "verification/components/NakaiConcrete.check1.log",
+      "resources": "verification/components/NakaiConcrete.check1.resources.json"
+    },
+    {
+      "module": "NakaiExpected",
+      "source": "lean/NakaiExpected.lean",
+      "source_sha256": "ee29a87a18cfb1372791005718187022029dee822c76e5bbaf061c8f664e327e",
+      "successful_log": "verification/components/NakaiExpected.check2.log",
+      "resources": "verification/components/NakaiExpected.check2.resources.json"
+    }
+  ],
+  "clean_replay_command": "MATHLIB_ROOT=/absolute/path/to/mathlib4 OUTPUT=/absolute/path/to/new-empty-build bash lean/build.sh",
+  "independent_rebuild": {
+    "status": "passed",
+    "exit_code": 0,
+    "module_count": 15,
+    "method": "Fresh copied source snapshots and fresh output directory; pinned cached mathlib; direct Lean; no pre-existing project .olean files.",
+    "source_snapshots_match_manifest": true,
+    "log": "verification/independent-rebuild.log",
+    "original_log_sha256": "987e5f0363843026ccabe5b3d70148782447b92aefba6de155dfa87ced05884e",
+    "published_normalized_log_sha256": "8546135288860d4677d2bc54a846b2badcb0439ce4399cc687de57e0596d868c"
+  },
+  "audit_log_normalization": "Machine-specific absolute source, output, and toolchain paths are replaced by portable labels. Compiler warnings, theorem names, axiom lists, recorded exit codes, and resource measurements are unchanged. Mathematical source files are byte-identical to the checked closure.",
+  "publication_script_rebuild": {
+    "status": "passed",
+    "exit_code": 0,
+    "module_count": 15,
+    "method": "Public lean/build.sh, unchanged source bytes, fresh empty output directory, pinned cached upstream dependencies; no pre-existing project proof objects.",
+    "log": "verification/publication-rebuild.log",
+    "original_log_sha256": "ac05b686688039f9187802e79f3fb7f3c20074e7ff0b30b918c1b0fbe61cd900",
+    "published_normalized_log_sha256": "be629b2e26f500571b47bd44e9d40db1e491b0644c284ecdbeaf194be5034484",
+    "resources": [
+      {
+        "module": "NakaiFramework",
+        "source_sha256": "fb6827e6ddd17d055cd648e48b753ff4c381851076019d42b9d00f995772876f",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 8.469,
+        "peak_group_rss_KiB": 2186740,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticDefinitions",
+        "source_sha256": "569365540f93a655811389d7f2bcae9b25e94b3626739e27a16039eee6d11767",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 8.575,
+        "peak_group_rss_KiB": 2268972,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticCofactors",
+        "source_sha256": "551d4a135f2bc7a3e0005d72a5de539f078a2c105123e6baa08d127663fa7388",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 11.283,
+        "peak_group_rss_KiB": 2298836,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticCoefficientDefinitions",
+        "source_sha256": "aeac5440923d6967c79eed2ee6cb3b1073f2f56ae4a149cd08d708499a74d179",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 2.426,
+        "peak_group_rss_KiB": 2245288,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticDeterminant",
+        "source_sha256": "d76dd9f31c9b315fd4b805056dbcb5f4a73344accffb1dac1fe84433d2f26ca4",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 4.116,
+        "peak_group_rss_KiB": 2277152,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticSeparatorMonomials",
+        "source_sha256": "26b2311cacdcbb74db3bfbd9ba1c9f16b22879a722603890952cf575058a15c2",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 19.054,
+        "peak_group_rss_KiB": 2328648,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticSeparatorValue",
+        "source_sha256": "8f045f0f494cc12c8c32587907f7123b41110d13d38e044571bdb01fa2be70d3",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 2.018,
+        "peak_group_rss_KiB": 2257968,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticSeparatorAnnihilation",
+        "source_sha256": "809f7542ea6a4020726cd050f9d756ba6687721e5e1458198d1586232ba9bbc0",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 12.846,
+        "peak_group_rss_KiB": 2351436,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticSeparator",
+        "source_sha256": "1ce0efd8be48d55b7cbfd41d85708a145ffcc99b18f2b6d50b97cb53ac555b18",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 1.921,
+        "peak_group_rss_KiB": 2246792,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticOperatorCoefficients",
+        "source_sha256": "9e8ff88b60a3529d50b0b253ca58d416adbc8b934b28d07e0e0a094c159fdd57",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 17.414,
+        "peak_group_rss_KiB": 2607184,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticOperatorDescent",
+        "source_sha256": "10add2657a7a4968207ef3a5e2970352ce4702b071cfc4b685301ddcd9bc67ef",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 2.836,
+        "peak_group_rss_KiB": 2284104,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticPolynomial",
+        "source_sha256": "19ea87e0d9b5474e8572173240c79cba201c10af88357eaf50eeba2b7b82e173",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 7.161,
+        "peak_group_rss_KiB": 2400648,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "QuarticOperatorOrder",
+        "source_sha256": "b3f5ea1df047df3700b835352361c16668ba748629017dfc956f187b1935e703",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 2.621,
+        "peak_group_rss_KiB": 2274372,
+        "rss_limit_KiB": 3145728,
+        "time_limit_seconds": 30
+      },
+      {
+        "module": "NakaiConcrete",
+        "source_sha256": "43cca9b1d8f8667462906b96b8e76d4cec3d37568c00053976fdc202300f259b",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 2.522,
+        "peak_group_rss_KiB": 2263776,
+        "rss_limit_KiB": 3932160,
+        "time_limit_seconds": 60
+      },
+      {
+        "module": "NakaiExpected",
+        "source_sha256": "ee29a87a18cfb1372791005718187022029dee822c76e5bbaf061c8f664e327e",
+        "exit_code": 0,
+        "status": "finished",
+        "seconds": 3.805,
+        "peak_group_rss_KiB": 2271320,
+        "rss_limit_KiB": 3932160,
+        "time_limit_seconds": 60
+      }
+    ]
+  }
+}

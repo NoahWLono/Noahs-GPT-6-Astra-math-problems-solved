@@ -1,0 +1,8 @@
+lean/QuarticDeterminant.lean:49:77: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.sum_univ_four, C_factored, monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.h_monomials' depends on axioms: [propext, Classical.choice, Quot.sound]

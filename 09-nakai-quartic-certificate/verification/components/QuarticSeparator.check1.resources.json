@@ -1,0 +1,19 @@
+{
+  "command": [
+    "<LEAN_BINARY>",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/QuarticSeparator.olean",
+    "lean/QuarticSeparator.lean"
+  ],
+  "source_sha256": "1ce0efd8be48d55b7cbfd41d85708a145ffcc99b18f2b6d50b97cb53ac555b18",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 1.912,
+  "peak_group_rss_KiB": 2252668,
+  "rss_limit_KiB": 3145728,
+  "time_limit_seconds": 30
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-12",
+  "pdf": "paper/nakai-quartic-certificate.pdf",
+  "pdf_sha256": "f13cbac0aa4b1e61a00986ed06b4bbf5fa4760e3e79a132af6c9a22ef8310195",
+  "source": "paper/nakai-quartic-certificate.tex",
+  "source_sha256": "a62b68dfd5c2a356b1d03dc1c6e845709cef01c0091b191f989647ae4d62d757",
+  "pages": 6,
+  "pdflatex_passes": 2,
+  "rendering": "Poppler pdftoppm, 90 dpi",
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "visual_result": "No clipping, overlap, or unreadable mathematics observed.",
+  "log_checks": {
+    "overfull_boxes": false,
+    "undefined_references": false,
+    "latex_warnings": false
+  }
+}

@@ -1,0 +1,242 @@
+BUILD NakaiFramework
+lean/NakaiFramework.lean:193:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.partial_mem_gradient`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:200:8: warning: automatically included section variable(s) unused in theorem `NakaiFramework.coeffDerivation_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:208:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.pderiv_comm`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:218:16: warning: This simp argument is unused:
+  pderiv_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵d̵e̵r̵i̵v̵_̵m̵u̵l̵,̵ ̵m̵a̵p̵_̵a̵d̵d̵,̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ pderiv_X, Pi.single_apply, hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:218:47: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [pderiv_mul, map_add, pderiv_X, P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:239:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'NakaiFramework.quotient_separator_of_certificates' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticDefinitions
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticCoefficientDefinitions
+lean/QuarticCoefficientDefinitions.lean:52:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:62:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:72:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:82:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD QuarticCofactors
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+lean/QuarticCofactors.lean:28:19: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [H₀, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵D]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.C00_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C01_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C02_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C03_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C10_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C11_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C12_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C13_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C20_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C21_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C22_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C23_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C30_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C31_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C32_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C33_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticDeterminant
+lean/QuarticDeterminant.lean:49:77: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.sum_univ_four, C_factored, monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.h_monomials' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticSeparatorAnnihilation
+lean/QuarticSeparatorAnnihilation.lean:13:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:13:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticSeparatorMonomials
+'NakaiQuartic.separator_monomial_34' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticSeparatorValue
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticSeparator
+'NakaiQuartic.h_not_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticOperatorCoefficients
+'NakaiQuartic.B_mul_G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_F_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticOperatorDescent
+lean/QuarticOperatorDescent.lean:32:61: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [G_formula, Fin.sum_univ_four, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.F_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticPolynomial
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_G0_not_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD QuarticOperatorOrder
+lean/QuarticOperatorOrder.lean:18:46: warning: This simp argument is unused:
+  LinearMap.sum_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [QP_apply, LinearMap.add_apply, L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵Module.End.mul_apply, mulEnd_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲Derivation.coeFn_coe, Fin.sum_univ_four]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_orderLE2' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD NakaiConcrete
+'NakaiQuartic.quartic_full_operator_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD NakaiExpected
+'NakaiExpected.expected_full_operator_separation' depends on axioms: [propext, Classical.choice, Quot.sound]

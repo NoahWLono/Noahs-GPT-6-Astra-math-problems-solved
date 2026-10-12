@@ -1,0 +1,19 @@
+{
+  "command": [
+    "<LEAN_BINARY>",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/QuarticPolynomial.olean",
+    "lean/QuarticPolynomial.lean"
+  ],
+  "source_sha256": "19ea87e0d9b5474e8572173240c79cba201c10af88357eaf50eeba2b7b82e173",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 9.553,
+  "peak_group_rss_KiB": 2415564,
+  "rss_limit_KiB": 3145728,
+  "time_limit_seconds": 30
+}

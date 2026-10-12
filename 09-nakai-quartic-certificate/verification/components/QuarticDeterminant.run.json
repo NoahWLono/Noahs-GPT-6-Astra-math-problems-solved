@@ -1,0 +1,12 @@
+{
+  "module": "QuarticDeterminant",
+  "exit_code": 0,
+  "elapsed_seconds": 4.451,
+  "max_rss_kib": 2304516,
+  "timeout_seconds": 30,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "d76dd9f31c9b315fd4b805056dbcb5f4a73344accffb1dac1fe84433d2f26ca4",
+  "object_sha256": "4e3e30c8267ca3fcdd91befef39b0342519a37a32f8adeff86b1c588dae0cdff"
+}

@@ -1,0 +1,1 @@
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]

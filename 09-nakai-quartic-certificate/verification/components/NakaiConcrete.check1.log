@@ -1,0 +1,1 @@
+'NakaiQuartic.quartic_full_operator_separation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,9 @@
+lean/QuarticOperatorDescent.lean:32:61: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [G_formula, Fin.sum_univ_four, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.F_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]

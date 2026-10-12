@@ -1,0 +1,307 @@
+Lean (version 4.32.2, x86_64-unknown-linux-gnu, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)
+Mathlib revision: 905b95818eb32af7874a58b427f50c1711a5e96c
+All fifteen local modules are rebuilt; upstream dependency caches are reused.
+
+BUILD NakaiFramework
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/NakaiFramework.olean", "lean/NakaiFramework.lean"], "source_sha256": "fb6827e6ddd17d055cd648e48b753ff4c381851076019d42b9d00f995772876f", "exit_code": 0, "status": "finished", "seconds": 8.469, "peak_group_rss_KiB": 2186740, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/NakaiFramework.lean:193:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.partial_mem_gradient`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:200:8: warning: automatically included section variable(s) unused in theorem `NakaiFramework.coeffDerivation_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:208:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.pderiv_comm`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:218:16: warning: This simp argument is unused:
+  pderiv_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵d̵e̵r̵i̵v̵_̵m̵u̵l̵,̵ ̵m̵a̵p̵_̵a̵d̵d̵,̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ pderiv_X, Pi.single_apply, hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:218:47: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [pderiv_mul, map_add, pderiv_X, P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:239:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'NakaiFramework.quotient_separator_of_certificates' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS NakaiFramework
+
+BUILD QuarticDefinitions
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticDefinitions.olean", "lean/QuarticDefinitions.lean"], "source_sha256": "569365540f93a655811389d7f2bcae9b25e94b3626739e27a16039eee6d11767", "exit_code": 0, "status": "finished", "seconds": 8.575, "peak_group_rss_KiB": 2268972, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticDefinitions
+
+BUILD QuarticCofactors
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticCofactors.olean", "lean/QuarticCofactors.lean"], "source_sha256": "551d4a135f2bc7a3e0005d72a5de539f078a2c105123e6baa08d127663fa7388", "exit_code": 0, "status": "finished", "seconds": 11.283, "peak_group_rss_KiB": 2298836, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+lean/QuarticCofactors.lean:28:19: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [H₀, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵D]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.C00_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C01_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C02_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C03_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C10_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C11_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C12_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C13_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C20_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C21_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C22_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C23_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C30_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C31_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C32_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C33_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticCofactors
+
+BUILD QuarticCoefficientDefinitions
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticCoefficientDefinitions.olean", "lean/QuarticCoefficientDefinitions.lean"], "source_sha256": "aeac5440923d6967c79eed2ee6cb3b1073f2f56ae4a149cd08d708499a74d179", "exit_code": 0, "status": "finished", "seconds": 2.426, "peak_group_rss_KiB": 2245288, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/QuarticCoefficientDefinitions.lean:52:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:62:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:72:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:82:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+PASS QuarticCoefficientDefinitions
+
+BUILD QuarticDeterminant
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticDeterminant.olean", "lean/QuarticDeterminant.lean"], "source_sha256": "d76dd9f31c9b315fd4b805056dbcb5f4a73344accffb1dac1fe84433d2f26ca4", "exit_code": 0, "status": "finished", "seconds": 4.116, "peak_group_rss_KiB": 2277152, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/QuarticDeterminant.lean:49:77: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.sum_univ_four, C_factored, monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.h_monomials' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticDeterminant
+
+BUILD QuarticSeparatorMonomials
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticSeparatorMonomials.olean", "lean/QuarticSeparatorMonomials.lean"], "source_sha256": "26b2311cacdcbb74db3bfbd9ba1c9f16b22879a722603890952cf575058a15c2", "exit_code": 0, "status": "finished", "seconds": 19.054, "peak_group_rss_KiB": 2328648, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.separator_monomial_34' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticSeparatorMonomials
+
+BUILD QuarticSeparatorValue
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticSeparatorValue.olean", "lean/QuarticSeparatorValue.lean"], "source_sha256": "8f045f0f494cc12c8c32587907f7123b41110d13d38e044571bdb01fa2be70d3", "exit_code": 0, "status": "finished", "seconds": 2.018, "peak_group_rss_KiB": 2257968, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticSeparatorValue
+
+BUILD QuarticSeparatorAnnihilation
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticSeparatorAnnihilation.olean", "lean/QuarticSeparatorAnnihilation.lean"], "source_sha256": "809f7542ea6a4020726cd050f9d756ba6687721e5e1458198d1586232ba9bbc0", "exit_code": 0, "status": "finished", "seconds": 12.846, "peak_group_rss_KiB": 2351436, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/QuarticSeparatorAnnihilation.lean:13:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:13:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticSeparatorAnnihilation
+
+BUILD QuarticSeparator
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticSeparator.olean", "lean/QuarticSeparator.lean"], "source_sha256": "1ce0efd8be48d55b7cbfd41d85708a145ffcc99b18f2b6d50b97cb53ac555b18", "exit_code": 0, "status": "finished", "seconds": 1.921, "peak_group_rss_KiB": 2246792, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.h_not_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticSeparator
+
+BUILD QuarticOperatorCoefficients
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticOperatorCoefficients.olean", "lean/QuarticOperatorCoefficients.lean"], "source_sha256": "9e8ff88b60a3529d50b0b253ca58d416adbc8b934b28d07e0e0a094c159fdd57", "exit_code": 0, "status": "finished", "seconds": 17.414, "peak_group_rss_KiB": 2607184, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.B_mul_G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_F_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticOperatorCoefficients
+
+BUILD QuarticOperatorDescent
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticOperatorDescent.olean", "lean/QuarticOperatorDescent.lean"], "source_sha256": "10add2657a7a4968207ef3a5e2970352ce4702b071cfc4b685301ddcd9bc67ef", "exit_code": 0, "status": "finished", "seconds": 2.836, "peak_group_rss_KiB": 2284104, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/QuarticOperatorDescent.lean:32:61: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [G_formula, Fin.sum_univ_four, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.F_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticOperatorDescent
+
+BUILD QuarticPolynomial
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticPolynomial.olean", "lean/QuarticPolynomial.lean"], "source_sha256": "19ea87e0d9b5474e8572173240c79cba201c10af88357eaf50eeba2b7b82e173", "exit_code": 0, "status": "finished", "seconds": 7.161, "peak_group_rss_KiB": 2400648, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.separator_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_F_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.QP_G0_not_mem_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticPolynomial
+
+BUILD QuarticOperatorOrder
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/QuarticOperatorOrder.olean", "lean/QuarticOperatorOrder.lean"], "source_sha256": "b3f5ea1df047df3700b835352361c16668ba748629017dfc956f187b1935e703", "exit_code": 0, "status": "finished", "seconds": 2.621, "peak_group_rss_KiB": 2274372, "rss_limit_KiB": 3145728, "time_limit_seconds": 30}
+lean/QuarticOperatorOrder.lean:18:46: warning: This simp argument is unused:
+  LinearMap.sum_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [QP_apply, LinearMap.add_apply, L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵Module.End.mul_apply, mulEnd_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲Derivation.coeFn_coe, Fin.sum_univ_four]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_orderLE2' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS QuarticOperatorOrder
+
+BUILD NakaiConcrete
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/NakaiConcrete.olean", "lean/NakaiConcrete.lean"], "source_sha256": "43cca9b1d8f8667462906b96b8e76d4cec3d37568c00053976fdc202300f259b", "exit_code": 0, "status": "finished", "seconds": 2.522, "peak_group_rss_KiB": 2263776, "rss_limit_KiB": 3932160, "time_limit_seconds": 60}
+'NakaiQuartic.quartic_full_operator_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS NakaiConcrete
+
+BUILD NakaiExpected
+{"command": ["<LEAN_BINARY>", "-j1", "-M3072", "-R", "<SOURCE_DIR>", "-o", "<OUTPUT>/NakaiExpected.olean", "lean/NakaiExpected.lean"], "source_sha256": "ee29a87a18cfb1372791005718187022029dee822c76e5bbaf061c8f664e327e", "exit_code": 0, "status": "finished", "seconds": 3.805, "peak_group_rss_KiB": 2271320, "rss_limit_KiB": 3932160, "time_limit_seconds": 60}
+'NakaiExpected.expected_full_operator_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS NakaiExpected
+
+PASS all 15 local modules

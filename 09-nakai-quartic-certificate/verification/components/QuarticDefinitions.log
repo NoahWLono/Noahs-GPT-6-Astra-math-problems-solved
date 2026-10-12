@@ -1,0 +1,5 @@
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.G_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.H_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_formula' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,9 @@
+lean/QuarticOperatorOrder.lean:18:46: warning: This simp argument is unused:
+  LinearMap.sum_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [QP_apply, LinearMap.add_apply, L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵Module.End.mul_apply, mulEnd_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲Derivation.coeFn_coe, Fin.sum_univ_four]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.QP_orderLE2' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,10 @@
+{
+  "module": "QuarticSeparatorAnnihilation",
+  "exit_code": 0,
+  "elapsed_seconds": 15.791,
+  "max_rss_kib": 2354272,
+  "timeout_seconds": 30,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true
+}

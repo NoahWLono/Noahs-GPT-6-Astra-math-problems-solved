@@ -1,0 +1,89 @@
+lean/QuarticSeparatorAnnihilation.lean:13:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:13:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:20:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:27:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:6: warning: This simp argument is unused:
+  coeff_add
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_a̵d̵d̵,̵ ̵c̵o̵e̵f̵f̵_̵smul, coeff_monomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticSeparatorAnnihilation.lean:34:17: warning: This simp argument is unused:
+  coeff_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [add_mul, smul_mul_assoc, map_add, map_smul, separator,
+  ̵  ̵ ̵ ̵ ̵ ̵LinearMap.add_apply,
+  ̲  ̲ ̲ ̲ ̲ ̲LinearMap.smul_apply, lcoeff_apply,
+  ̵  ̵ ̵ ̵ ̵ ̵coeff_add, coeff_s̵mu̵l̵,̵ ̵c̵oe̵f̵f̵_̵m̵o̵nomial_mul', exp4_sub, exp4_le,
+  ̲  ̲ ̲ ̲ ̲ ̲smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.separator_G_mul' depends on axioms: [propext, Classical.choice, Quot.sound]

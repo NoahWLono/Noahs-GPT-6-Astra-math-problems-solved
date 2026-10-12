@@ -1,0 +1,28 @@
+lean/QuarticCoefficientDefinitions.lean:52:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:62:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:72:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/QuarticCoefficientDefinitions.lean:82:46: warning: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [monomial_exp4, Algebra.smul_def, map_n̵a̵t̵C̵a̵s̵t̵,̵ ̵m̵a̵p̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

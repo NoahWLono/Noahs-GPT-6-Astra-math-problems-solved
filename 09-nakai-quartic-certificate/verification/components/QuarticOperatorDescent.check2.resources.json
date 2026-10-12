@@ -1,0 +1,19 @@
+{
+  "command": [
+    "<LEAN_BINARY>",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/QuarticOperatorDescent.olean",
+    "lean/QuarticOperatorDescent.lean"
+  ],
+  "source_sha256": "10add2657a7a4968207ef3a5e2970352ce4702b071cfc4b685301ddcd9bc67ef",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 2.716,
+  "peak_group_rss_KiB": 2281064,
+  "rss_limit_KiB": 3145728,
+  "time_limit_seconds": 30
+}

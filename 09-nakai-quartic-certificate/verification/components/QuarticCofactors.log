@@ -1,0 +1,30 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+lean/QuarticCofactors.lean:28:19: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [H₀, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵D]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NakaiQuartic.C00_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C01_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C02_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C03_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C10_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C11_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C12_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C13_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C20_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C21_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C22_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C23_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C30_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C31_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C32_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C33_factored' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NakaiQuartic.C_factored' depends on axioms: [propext, Classical.choice, Quot.sound]

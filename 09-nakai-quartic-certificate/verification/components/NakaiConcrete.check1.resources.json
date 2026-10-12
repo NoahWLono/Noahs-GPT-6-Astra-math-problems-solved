@@ -1,0 +1,19 @@
+{
+  "command": [
+    "<LEAN_BINARY>",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/NakaiConcrete.olean",
+    "lean/NakaiConcrete.lean"
+  ],
+  "source_sha256": "43cca9b1d8f8667462906b96b8e76d4cec3d37568c00053976fdc202300f259b",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 2.356,
+  "peak_group_rss_KiB": 2264496,
+  "rss_limit_KiB": 3932160,
+  "time_limit_seconds": 60
+}

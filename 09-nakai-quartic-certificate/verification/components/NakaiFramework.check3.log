@@ -1,0 +1,38 @@
+lean/NakaiFramework.lean:193:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.partial_mem_gradient`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:200:8: warning: automatically included section variable(s) unused in theorem `NakaiFramework.coeffDerivation_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:208:0: warning: automatically included section variable(s) unused in theorem `NakaiFramework.pderiv_comm`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/NakaiFramework.lean:218:16: warning: This simp argument is unused:
+  pderiv_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵d̵e̵r̵i̵v̵_̵m̵u̵l̵,̵ ̵m̵a̵p̵_̵a̵d̵d̵,̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ pderiv_X, Pi.single_apply, hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:218:47: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [pderiv_mul, map_add, pderiv_X, P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵hi, hj, hij, Ne.symm hij, hp, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/NakaiFramework.lean:239:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'NakaiFramework.quotient_separator_of_certificates' depends on axioms: [propext, Classical.choice, Quot.sound]

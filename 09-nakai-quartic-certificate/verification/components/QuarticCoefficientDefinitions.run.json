@@ -1,0 +1,10 @@
+{
+  "module": "QuarticCoefficientDefinitions",
+  "exit_code": 0,
+  "elapsed_seconds": 3.364,
+  "max_rss_kib": 2255480,
+  "timeout_seconds": 30,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true
+}

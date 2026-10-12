@@ -1,0 +1,19 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M3072",
+    "-R",
+    "<SOURCE_DIR>",
+    "-o",
+    "<OUTPUT>/NakaiFramework.olean",
+    "lean/NakaiFramework.lean"
+  ],
+  "source_sha256": "fb6827e6ddd17d055cd648e48b753ff4c381851076019d42b9d00f995772876f",
+  "exit_code": 0,
+  "status": "finished",
+  "seconds": 11.094,
+  "peak_group_rss_KiB": 3005268
+}
