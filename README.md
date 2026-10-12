@@ -24,17 +24,21 @@ Current research-only WIP (seven active targets; status updated 12 October 2026)
 
 - **koalaIRS12 soundness benchmark at better.codes:** a profile-interval counting bound has been independently checked, but the full global soundness benchmark remains open. No eligible improved benchmark score is established.
 - **Total coloring conjecture:** a paper-level argument gives the exact repair distance for a constructed family. Lean verification and novelty review remain pending; the full Δ+2 conjecture for finite simple graphs remains unresolved here.
-- **[Four exponentials conjecture](https://www.dpmms.cam.ac.uk/~pv270/diophantine.pdf):** activated from queue item 15. Initial investigation; no verified result is established.
 - **[Irrationality of Euler’s constant](https://arxiv.org/abs/1303.1856):** activated from queue item 16. Initial investigation; no verified result is established.
-- **[Base-ten normality of pi](https://www.tandfonline.com/doi/abs/10.4169/amer.math.monthly.121.03.191):** activated from queue item 17. Initial investigation; no verified result is established.
 - **[Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5):** activated from queue item 18. Initial investigation; no verified result is established.
-- **[Uniformity of rational points on curves of fixed genus](https://link.springer.com/article/10.1007/s40993-026-00783-6):** activated from queue item 19. Initial investigation; no verified result is established.
+- **[Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1):** activated from queue item 20. Initial investigation; no verified result is established.
+- **[Nakai conjecture](https://arxiv.org/abs/2604.24508):** activated from queue item 21. Initial investigation; no verified result is established.
+- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187):** activated from queue item 22. Initial investigation; no verified result is established.
 
-These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published. The five newly activated targets retain their saved queue order; source review and assessment of feasible scoped approaches are part of the initial investigation.
+These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published. The four retained targets (koalaIRS12, total coloring, Euler’s constant and Markov-number uniqueness) will prioritize genuinely novel results where feasible, with prior-art review before any novelty claim. The three newly activated targets retain their saved queue order; source review and assessment of feasible scoped approaches are part of the initial investigation.
 
 ### Shelved research
 
 Paused on 12 October 2026 pending a materially stronger route:
+
+- **Four exponentials conjecture:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
+- **Base-ten normality of pi:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
+- **Uniformity of rational points on curves of fixed genus:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
 
 - **Pillai’s full fixed-gap conjecture:** the completed scoped shifted-binomial irreducibility theorem and composite-inner-exponent addendum remain unchanged in [folder 07](07-scoped-binomial-irreducibility/README.md). Those results do not settle the full conjecture, which remains unresolved here; historical novelty of the scoped results is unestablished.
 - **List edge-coloring conjecture:** the current investigation does not establish equality of the list edge-chromatic and edge-chromatic numbers for all finite loopless multigraphs. No completed solution is claimed.
@@ -51,15 +55,8 @@ The following targets are waiting, in the order listed. Their inclusion does not
 <details>
 <summary>View the research queue</summary>
 
-
-**Number theory**
-
-20. [Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1)
-
 **Algebra, geometry and topology**
 
-21. [Nakai conjecture](https://arxiv.org/abs/2604.24508)
-22. [Bounded negativity conjecture](https://arxiv.org/abs/2408.15187)
 23. [Zariski cancellation for complex affine three-space](https://arxiv.org/abs/2208.14736)
 24. [Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md)
 25. [Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712)
