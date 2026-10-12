@@ -22,17 +22,27 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 Current research-only WIP (seven active targets; status updated 12 October 2026):
 
-- **koalaIRS12 soundness benchmark at better.codes:** principal-factor and support-model dimension checks are in place, but the required owner-intersection bound is still missing. No improved benchmark score or eligible strengthened theorem is established.
-- **Pillai’s fixed-gap conjecture:** the scoped shifted-binomial irreducibility theorem and its composite-inner-exponent corollary are completed and formally checked in [folder 07](07-scoped-binomial-irreducibility/README.md). Historical novelty is unestablished. The full fixed-gap conjecture remains unresolved; the published scoped results do not settle it.
+- **koalaIRS12 soundness benchmark at better.codes:** a profile-interval counting bound has been independently checked, but the full global soundness benchmark remains open. No eligible improved benchmark score is established.
+- **Total coloring conjecture:** a paper-level argument gives the exact repair distance for a constructed family. Lean verification and novelty review remain pending; the full Δ+2 conjecture for finite simple graphs remains unresolved here.
+- **[Four exponentials conjecture](https://www.dpmms.cam.ac.uk/~pv270/diophantine.pdf):** activated from queue item 15. Initial investigation; no verified result is established.
+- **[Irrationality of Euler’s constant](https://arxiv.org/abs/1303.1856):** activated from queue item 16. Initial investigation; no verified result is established.
+- **[Base-ten normality of pi](https://www.tandfonline.com/doi/abs/10.4169/amer.math.monthly.121.03.191):** activated from queue item 17. Initial investigation; no verified result is established.
+- **[Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5):** activated from queue item 18. Initial investigation; no verified result is established.
+- **[Uniformity of rational points on curves of fixed genus](https://link.springer.com/article/10.1007/s40993-026-00783-6):** activated from queue item 19. Initial investigation; no verified result is established.
+
+These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published. The five newly activated targets retain their saved queue order; source review and assessment of feasible scoped approaches are part of the initial investigation.
+
+### Shelved research
+
+Paused on 12 October 2026 pending a materially stronger route:
+
+- **Pillai’s full fixed-gap conjecture:** the completed scoped shifted-binomial irreducibility theorem and composite-inner-exponent addendum remain unchanged in [folder 07](07-scoped-binomial-irreducibility/README.md). Those results do not settle the full conjecture, which remains unresolved here; historical novelty of the scoped results is unestablished.
+- **List edge-coloring conjecture:** the current investigation does not establish equality of the list edge-chromatic and edge-chromatic numbers for all finite loopless multigraphs. No completed solution is claimed.
 - **Kummer–Vandiver conjecture:** tested height and transfer approaches do not establish the required plus-class saturation. The conjecture remains unresolved here.
 - **Inverse Galois problem over the rationals:** an explicit Sz(8) dessin has been verified, but numerical Belyi reconstruction is not yet exact. No new realization over the rationals is established.
-- **Uniform boundedness of number-field abelian-variety torsion:** newly activated from queue item 14, replacing the completed elliptic-curve recurrence project. Initial primary-source review has started. The target is a bound on the size of A(K)'s torsion subgroup depending only on the fixed abelian-variety dimension g and number-field degree d; no new bound is established.
-- **Total coloring conjecture:** newly activated from queue item 66. Initial research is starting on the Δ+2 bound for finite simple graphs; no verified result is established.
-- **List edge-coloring conjecture:** newly activated from queue item 67. Initial research is starting on equality of the list edge-chromatic and edge-chromatic numbers for finite loopless multigraphs; no verified result is established.
+- **Uniform boundedness of number-field abelian-variety torsion:** no new torsion bound depending only on the abelian-variety dimension g and number-field degree d is established.
 
-These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
-
-Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture; Gauss circle error-term conjecture; Dirichlet divisor error-term conjecture.
+Previously shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture; Gauss circle error-term conjecture; Dirichlet divisor error-term conjecture.
 
 ### Queued research
 
@@ -44,11 +54,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Number theory**
 
-15. [Four exponentials conjecture](https://www.dpmms.cam.ac.uk/~pv270/diophantine.pdf)
-16. [Irrationality of Euler’s constant](https://arxiv.org/abs/1303.1856)
-17. [Base-ten normality of pi](https://www.tandfonline.com/doi/abs/10.4169/amer.math.monthly.121.03.191)
-18. [Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5)
-19. [Uniformity of rational points on curves of fixed genus](https://link.springer.com/article/10.1007/s40993-026-00783-6)
 20. [Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1)
 
 **Algebra, geometry and topology**
