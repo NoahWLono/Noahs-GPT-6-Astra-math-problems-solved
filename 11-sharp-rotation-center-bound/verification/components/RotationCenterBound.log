@@ -1,0 +1,2 @@
+'RotationCenterBound.center_near_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCenterBound.composite_rotation_center_near_hull' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'RotationSharpness.center_twoSteps_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.twoSteps_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]

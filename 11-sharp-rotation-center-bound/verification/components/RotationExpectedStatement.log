@@ -1,0 +1,2 @@
+'RotationExpectedStatement.literal_composite_center_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]

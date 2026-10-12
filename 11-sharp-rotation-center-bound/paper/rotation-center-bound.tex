@@ -1,0 +1,189 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\dist}{\operatorname{dist}}
+\title{A Sharp Bound for Centers of Composite Planar Rotations}
+\author{Research audit}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An exact elementary counterexample shows that the center of a composition of
+positive planar rotations need not belong to the convex hull of the individual
+centers, even when their angle sum is at most $\pi$. We prove the sharp
+bound $(D/2)\tan(\Theta/4)$ for the distance of the composite center from that
+convex hull. The upper bound and sharpness are fully checked in Lean 4.32.2
+with mathlib v4.32.2. Originality remains unestablished. An unfolding application
+still needs a quantitative separation margin; this result neither resolves
+D\"urer's conjecture nor disproves a prismatoid unfolding theorem.
+\end{abstract}
+
+\section{Source and scope}
+Proposition 9 of O'Rourke's \emph{Prismatoid Band-Unfolding Revisited},
+arXiv:2603.09813v3, states exact convex-hull containment for a composite
+rotation center when the total angle is at most $\pi$. Its Lemma 8 uses this
+ingredient for chain separation. The inspected HTML and PDF page 14 agree on
+the unrestricted wording. The latest listed version is dated 18 September
+2026; no later correction was located in the bounded search. The author's
+separate hosted copy could not be retrieved reliably.
+
+The author's earlier 2017 addendum explicitly distinguishes a small-angle
+weighted-center approximation from the true center, which can lie outside
+the hull. The exact rotation formulas themselves are classical; see, for
+example, Needham's \emph{Visual Complex Analysis}, pp.~20--21. A failed
+ingredient does not refute the later main theorem: a valid chain-specific
+replacement may still prove the needed conclusion. This observation concerns only the stated
+planar-rotation ingredient.\footnote{Sources:
+\url{https://arxiv.org/abs/2603.09813v3} and
+\url{https://arxiv.org/abs/1709.02433}.}
+
+\section{Exact counterexamples}
+Use positive angles counterclockwise, and write
+\[
+ R_{c,\theta}(z)=e^{\ii\theta}z+(1-e^{\ii\theta})c.
+\]
+Take $c_1=(0,0)$, $c_2=(1,0)$ and both angles $\pi/2$. Then
+\[
+ R_{c_1,\pi/2}(x,y)=(-y,x),\qquad
+ R_{c_2,\pi/2}(u,v)=(1-v,u-1),
+\]
+and hence
+\[
+ F(x,y)=R_{c_2,\pi/2}R_{c_1,\pi/2}(x,y)=(1-x,-1-y).
+\]
+The equations $F(x,y)=(x,y)$ force $(x,y)=(1/2,-1/2)$. Every rotation
+fixes its center. Thus $F$ cannot be a rotation about any point of the segment
+$[c_1,c_2]$. Both input angles are positive and their sum is exactly $\pi$.
+Reversing composition order or reversing both angle signs reflects the center
+to $(1/2,1/2)$, still outside the segment.
+
+The endpoint $\pi$ is not essential. Choose a first-quadrant angle $\theta$
+with $\cos\theta=3/5$ and $\sin\theta=4/5$. Then $2\theta<\pi$, and the
+same two-center composition has unique center $(1/2,-1/4)$. More generally,
+two equal angles $0<\theta<\pi$ give
+\[
+ c=\frac{c_1+c_2}{2}
+   -\frac12\tan(\theta/2)\,\ii(c_2-c_1).
+\]
+Thus exact hull containment fails even at arbitrarily small positive angles.
+
+\paragraph{Formal verification boundary.}
+The accompanying \texttt{RotationAudit.lean} defines ordinary real-plane
+rotations and proves the quarter-turn formula, angle conditions, unique fixed
+point, and impossibility of any rotation representation with center on the
+segment. It also proves the algebraic fixed-point statement for the rational
+matrix example. The reproducible build result is recorded in the separate check
+log. The rational
+example's strict angle interpretation is not currently part of that Lean
+certificate. The quarter-turn certificate successfully elaborated with pinned
+Lean 4.32.2 and mathlib v4.32.2; its axiom audit reports only
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+No polyhedral unfolding has been formalized.
+
+\section{The sharp diameter estimate}
+\begin{theorem}[Sharp diameter estimate]
+Let $m\ge1$ be finite, let $c_1,\dots,c_m\in\mathbb C$, let $\omega_j\ge0$
+be angles in radians, and suppose
+$0<\Theta=\sum_j\omega_j\le\pi$. Set
+\[
+ F=R_{c_m,\omega_m}\circ\cdots\circ R_{c_1,\omega_1},\quad
+ C=\conv\{c_1,\dots,c_m\},\quad D=\max_{j,k}|c_j-c_k|.
+\]
+The unique center $c$ of $F$ satisfies
+\[
+ \dist(c,C)\le\frac D2\tan(\Theta/4).
+\]
+For each $\Theta\in(0,\pi]$, two equal-angle rotations about the endpoints
+of a segment attain equality.
+\end{theorem}
+
+\begin{proof}
+Let $t_0=0$, $t_j=\sum_{k\le j}\omega_k$, and
+$s_j=\Theta/2-t_j$. Direct composition gives
+\[
+ c=\sum_{j=1}^m\lambda_jc_j,\qquad
+ \lambda_j=\frac{e^{\ii(\Theta-t_j)}(1-e^{\ii\omega_j})}
+                     {1-e^{\ii\Theta}}.
+\]
+The denominator is nonzero. With $\lambda_j=p_j+\ii q_j$,
+\begin{align*}
+ p_j&=\frac{\sin s_{j-1}-\sin s_j}{2\sin(\Theta/2)},\\
+ q_j&=\frac{\cos s_j-\cos s_{j-1}}{2\sin(\Theta/2)}.
+\end{align*}
+Since $s_j$ decreases within $[-\pi/2,\pi/2]$, every $p_j\ge0$.
+Telescoping yields $\sum p_j=1$ and $\sum q_j=0$. Therefore
+$w=\sum p_jc_j$ lies in $C$.
+
+The sequence $\cos s_j$ increases and then decreases, including the possible
+single step that straddles zero. Its total positive increment is its maximum
+minus its initial value. Thus, with $Q=\sum_j\max(q_j,0)$,
+\[
+ Q\le\frac{1-\cos(\Theta/2)}{2\sin(\Theta/2)}
+     =\frac12\tan(\Theta/4).
+\]
+If $Q=0$, then $c=w$. Otherwise the positive and negative coefficients define
+two convex combinations $u,v\in C$ such that
+$\sum q_jc_j=Q(u-v)$. Any two convex combinations of a set of diameter $D$
+are at distance at most $D$, by applying the triangle inequality to the
+double convex combination of their differences. Consequently
+\[
+ |c-w|=\left|\ii\sum q_jc_j\right|
+       =Q|u-v|\le QD\le\frac D2\tan(\Theta/4).
+\]
+This proves the estimate. For equality, take $c_1=0$, $c_2=D$ and
+$\omega_1=\omega_2=\Theta/2$. The center is
+$D/2-\ii(D/2)\tan(\Theta/4)$, whose distance from $[0,D]$ is the claimed
+bound.
+\end{proof}
+
+\paragraph{A usable margin condition.}
+If a unit vector $a$ satisfies $a\cdot c_j\le b-\delta$ for all $j$, then
+$a\cdot c<b$ whenever $\delta>(D/2)\tan(\Theta/4)$. Apply the estimate
+to the displayed convex combination $w$. An unfolding application must still
+prove this margin from its actual chain geometry.
+
+\section{Formal theorem and verification scope}
+The main theorem in \texttt{RotationCenterBound.lean}
+uses a finite list of actual rotations. It
+assumes nonnegative individual angles, $0<\Theta\le\pi$, $D\ge0$, and
+pairwise center distances at most $D$. It proves that the composite is a
+rotation with a unique fixed point $c$, and constructs a hull point $w$ with
+$|c-w|\le(D/2)\tan(\Theta/4)$. No coefficient estimate or trigonometric
+claim remains as a hypothesis. Choosing the maximum pairwise distance gives
+the theorem above.
+
+\texttt{RotationSharpness.lean} proves the matching lower bound for every
+point in the two-center hull and existence of an attaining hull point, for
+every permitted $\Theta$ and $D\ge0$. The endpoint distance is certified as
+exactly $D$. The semantic fixture \texttt{RotationExpectedStatement.lean}
+rewrites the same composite using the literal map
+$e^{\ii\theta}(z-c)+c$ and the ordinary list sum of angles.
+
+The six-module closure uses only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The accompanying
+source manifest and bounded replay script pin the checked sources and
+compiler assumptions. The formal proof bounds the positive cosine variation
+by a clipped monotone potential, avoiding an unformalized unimodality claim.
+The preceding half-plane consequence is a mathematical corollary, not an
+additional Lean declaration in this package.
+
+\section{Priority and remaining questions}
+The proof has also passed a separate mathematical audit. Bounded primary-source
+searches did not locate this exact sharp diameter theorem; that does not
+establish novelty. The 2017 addendum discusses asymptotic approximation, but
+this note does not endorse its printed quantitative formula. No novelty is
+claimed for the classical composition formula or elementary counterexample.
+
+D\"urer's general question remains the existence of a successful spanning-tree
+cut using actual edges in the original metric of every convex three-polytope.
+The present estimate supplies no chain-specific separation margin. An
+overlapping tree, an affine deformation, or the correction of a subsidiary
+lemma does not decide the general question.
+\end{document}

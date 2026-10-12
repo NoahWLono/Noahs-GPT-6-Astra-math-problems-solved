@@ -1,0 +1,54 @@
+== RotationComposition ==
+lean/RotationComposition.lean:49:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'RotationComposition.applyRotations_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationComposition.weights_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationComposition.applyRotations_as_rotation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationComposition.composite_fixed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== ComplexWeightGeometry ==
+'ComplexWeightGeometry.signed_sum_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexWeightGeometry.complex_sum_near_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexWeightGeometry.complex_sum_near_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== RotationCoefficients ==
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+lean/RotationCoefficients.lean:32:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+lean/RotationCoefficients.lean:37:16: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'RotationCoefficients.coefficient_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCoefficients.coeff_im_positive_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCoefficients.half_angle_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCoefficients.weighted_product_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCoefficients.weighted_re_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCoefficients.weighted_im_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== RotationCenterBound ==
+'RotationCenterBound.center_near_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationCenterBound.composite_rotation_center_near_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== RotationSharpness ==
+'RotationSharpness.center_twoSteps_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.twoSteps_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== RotationExpectedStatement ==
+'RotationExpectedStatement.literal_composite_center_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationSharpness.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== RotationAudit ==
+lean/RotationAudit.lean:35:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'RotationAudit.no_rotation_with_segment_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RotationAudit.rationalComposition_fixed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+

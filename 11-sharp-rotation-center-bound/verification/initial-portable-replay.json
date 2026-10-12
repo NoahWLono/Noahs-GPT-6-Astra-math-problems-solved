@@ -1,0 +1,72 @@
+[
+  {
+    "module": "RotationComposition",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "0aadeb5537b5ff5c281ca7a742a43b3e10c2d5fd6d192317b62fd2e210a1d75e",
+    "seconds": 4.031,
+    "peak_group_rss_KiB": 2509288,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "ComplexWeightGeometry",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "bc945f2810dc84b84608daa1dcc29d0812cf82fdec5dd321a0d5466fabf342c6",
+    "seconds": 11.375,
+    "peak_group_rss_KiB": 2506304,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "RotationCoefficients",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "309f2a6fec43d408d070b0cd460942925febdf8ba4a4c22b08bcab5b332cd01c",
+    "seconds": 7.915,
+    "peak_group_rss_KiB": 2534720,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "RotationCenterBound",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "4d51abc04fa3390078dba4217bd140dad9f141539fecb4a8a19bb94bbb26e1bb",
+    "seconds": 3.232,
+    "peak_group_rss_KiB": 2557096,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "RotationSharpness",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "485a18ae5104f1812c6a1f14f55ad0967b8dd599b6c5bf1e1745dc9ae40d586d",
+    "seconds": 4.235,
+    "peak_group_rss_KiB": 2557260,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "RotationExpectedStatement",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "e17e6b72ec255b2a786b079d2497233066e30c8130a0f6904657bee79c3ea47d",
+    "seconds": 2.316,
+    "peak_group_rss_KiB": 2547360,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  },
+  {
+    "module": "RotationAudit",
+    "exit_code": 0,
+    "status": "finished",
+    "source_sha256": "e27c80fd311c9e1948dafb079e4f8d197933d3afee7fdb62c81706ae1acd47c2",
+    "seconds": 5.657,
+    "peak_group_rss_KiB": 2531212,
+    "time_limit_seconds": 30,
+    "rss_limit_KiB": 3145728
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "file": "components/RotationComposition.log",
+    "original_sha256": "9ada43cc4be82d2021449b527418c5a6dd43a259123ee9849a987481cd21921b",
+    "published_sha256": "90c7749deb0d511a26df017be63836297e48381a5c1c6f50dd2c344b3ecd32a3",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/ComplexWeightGeometry.log",
+    "original_sha256": "57533e62228865d5ab5305102c8dcbc27f4bb99f62a973cbd8eb19085218301e",
+    "published_sha256": "57533e62228865d5ab5305102c8dcbc27f4bb99f62a973cbd8eb19085218301e",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/RotationCoefficients.log",
+    "original_sha256": "fe070b00635883c4e44b69cca893d77ce835de1eb75d5cd9c945984411264287",
+    "published_sha256": "4844c0590cb4b804ba95b67076361dca7515adfb7d2be19190e504c367a9d94d",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/RotationCenterBound.log",
+    "original_sha256": "e54753c8504f15e5ac990d50c5166afdd5b1bb5de6482befc96bc1c345db406e",
+    "published_sha256": "e54753c8504f15e5ac990d50c5166afdd5b1bb5de6482befc96bc1c345db406e",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/RotationSharpness.log",
+    "original_sha256": "dc7511cb94cb5e44996c3f66ce0bef49a2f3e6e67e863648b8c8b96b02170148",
+    "published_sha256": "dc7511cb94cb5e44996c3f66ce0bef49a2f3e6e67e863648b8c8b96b02170148",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/RotationExpectedStatement.log",
+    "original_sha256": "cfc4818bc7a4afbb0070754d7da7918226b4ce12abd792f8cf9c62e3d1cfc79e",
+    "published_sha256": "cfc4818bc7a4afbb0070754d7da7918226b4ce12abd792f8cf9c62e3d1cfc79e",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "components/RotationAudit.log",
+    "original_sha256": "d87c38915db8da23c97837aac542e8e46dcdcbef87f0e3aaf71e71f109ae04d8",
+    "published_sha256": "4cdff9989840572afddcca835f106d8d4d6a7ebe2eeb68c9c0dcb2961f4d0414",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "independent-rebuild.log",
+    "original_sha256": "2375c392edc34e69338f6815e960439be8d5c8af6a186b61fdd5cd83f66e149d",
+    "published_sha256": "0c290d15fe4e69e5bfb2251710ef8b61c115fccb2df85d1de6ebad38cd4a230d",
+    "normalization": "Only local project diagnostic path prefixes replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationComposition",
+    "original_sha256": "cee55625a02deb5b5587a9e6d9598b2924a623ff2649573818335f087173492d",
+    "published_sha256": "90c7749deb0d511a26df017be63836297e48381a5c1c6f50dd2c344b3ecd32a3",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::ComplexWeightGeometry",
+    "original_sha256": "57533e62228865d5ab5305102c8dcbc27f4bb99f62a973cbd8eb19085218301e",
+    "published_sha256": "57533e62228865d5ab5305102c8dcbc27f4bb99f62a973cbd8eb19085218301e",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationCoefficients",
+    "original_sha256": "1b2d8569e8755c0f19bb95948f70c4b5f4539f6d96b81b6cfb89713faed593c5",
+    "published_sha256": "4844c0590cb4b804ba95b67076361dca7515adfb7d2be19190e504c367a9d94d",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationCenterBound",
+    "original_sha256": "e54753c8504f15e5ac990d50c5166afdd5b1bb5de6482befc96bc1c345db406e",
+    "published_sha256": "e54753c8504f15e5ac990d50c5166afdd5b1bb5de6482befc96bc1c345db406e",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationSharpness",
+    "original_sha256": "dc7511cb94cb5e44996c3f66ce0bef49a2f3e6e67e863648b8c8b96b02170148",
+    "published_sha256": "dc7511cb94cb5e44996c3f66ce0bef49a2f3e6e67e863648b8c8b96b02170148",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationExpectedStatement",
+    "original_sha256": "cfc4818bc7a4afbb0070754d7da7918226b4ce12abd792f8cf9c62e3d1cfc79e",
+    "published_sha256": "cfc4818bc7a4afbb0070754d7da7918226b4ce12abd792f8cf9c62e3d1cfc79e",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  },
+  {
+    "file": "publication-rebuild.log::RotationAudit",
+    "original_sha256": "e303493e29cff496763fcf19a070251f6e0fabf3966ceb34e121abe4d9274f54",
+    "published_sha256": "4cdff9989840572afddcca835f106d8d4d6a7ebe2eeb68c9c0dcb2961f4d0414",
+    "normalization": "Only local publication diagnostic prefix replaced by lean/."
+  }
+]
