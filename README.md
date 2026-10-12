@@ -28,11 +28,17 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-One selected research target (status updated 12 October 2026). The previous seven active directions have been retired to the shelved section below, with their results and checkpoints retained.
+Three selected finite research targets (status updated 12 October 2026). The previous seven active directions have been retired to the shelved section below, with their results and checkpoints retained.
 
 - **[Perfect one-factorization of K64](https://arxiv.org/pdf/2607.09459v1#page=1) (finite open case associated with queue item 75): bounded feasibility pilot starting; no result yet.** The goal is a complete partition of the 2,016 edges of the complete graph on 64 vertices into exactly 63 perfect matchings, each containing 32 edges, such that every one of the 1,953 unordered pairs of distinct matchings has a union that is a single Hamiltonian cycle through all 64 vertices. The July 2026 primary-source paper linked here lists 64 as the smallest open order.
 
-The selected problem is the entire finite K64 case. Completion requires a solution to that full statement and a Lean-verified proof, together with prior-art review; supporting lemmas, partial factorizations and favorable search scores do not count as completion. No construction, completed proof or novelty claim is established. The universal Kotzig conjecture remains unresolved and waiting in queue item 75.
+- **[Exact minimum local 1-identifying code in Q7](https://arxiv.org/html/2302.13351v3): witness checks and bounded-pilot preparation started; no exact optimum established here.** The published bounds are **21–28** (Table 1). A valid code must dominate all 128 vertices and give different closed radius-one code-neighborhood sets to every adjacent pair of vertices, as specified in Definition 1.3.
+
+- **[Exact minimum ordinary locating-dominating code in Q6](https://fi.episciences.org/13881/pdf#page=8): witness checks and bounded-pilot preparation started; no exact optimum established here.** The published bounds are **16–18** (Table 1). A valid code must dominate all 64 vertices and give different closed radius-one code-neighborhood sets to every distinct pair of vertices outside the code. This is the ordinary locating-dominating problem, distinct from the completed **local 1-identifying Q6 minimum of 14** in [folder 05](05-local-identifying-q6/README.md).
+
+The two coding problems remain apparently unresolved in the checked literature; historical novelty is not certified. These are adjacent, explicitly specified finite targets selected directly alongside K64. The remaining queue and its order are unchanged.
+
+Completion requires solving each entire stated finite problem and verifying it in Lean. For either coding target, an exact optimum k requires both an actual valid k-word code and an unrestricted lower bound proving that every valid code has at least k words, with both parts checked in Lean. Bounds restricted to linear codes, symmetric families or other search subclasses are insufficient. For K64, all matching, edge-partition and Hamiltonian-cycle conditions must be proved. Supporting lemmas, improved partial bounds, partial factorizations and favorable search scores do not count as completion. No completed solution or novelty claim is established for these targets. The universal Kotzig conjecture remains unresolved and waiting in queue item 75.
 
 The stricter selection process prioritizes precise open problems with a plausible route to a complete result. Only completed, checked proofs will be added to the collection; experimental artifacts and research-only proof sources are not published. Prior-art review remains separate from proof verification and is required before any novelty claim.
 
