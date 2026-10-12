@@ -18,19 +18,19 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Current research-only WIP (seven active targets; status updated 11 October 2026):
+Current research-only WIP (seven active targets; status updated 12 October 2026):
 
 - **koalaIRS12 soundness benchmark at better.codes:** principal-factor and support-model dimension checks are in place, but the required owner-intersection bound is still missing. No improved benchmark score or eligible strengthened theorem is established.
 - **Pillai’s fixed-gap conjecture:** a scoped shifted-binomial irreducibility paper argument has passed internal review; Lean verification and novelty review are pending. This does not resolve the full fixed-gap conjecture.
-- **Gauss circle error-term conjecture:** cancellation approaches remain blocked; no improved error bound has been established.
-- **Dirichlet divisor error-term conjecture:** a deterministic moment-transfer gap remains; no improved error bound has been established.
 - **Kummer–Vandiver conjecture:** tested height and transfer approaches do not establish the required plus-class saturation. The conjecture remains unresolved here.
 - **Inverse Galois problem over the rationals:** an explicit Sz(8) dessin has been verified, but numerical Belyi reconstruction is not yet exact. No new realization over the rationals is established.
 - **Uniform boundedness of number-field abelian-variety torsion:** newly activated from queue item 14, replacing the completed elliptic-curve recurrence project. Initial primary-source review has started. The target is a bound on the size of A(K)'s torsion subgroup depending only on the fixed abelian-variety dimension g and number-field degree d; no new bound is established.
+- **Total coloring conjecture:** newly activated from queue item 66. Initial research is starting on the Δ+2 bound for finite simple graphs; no verified result is established.
+- **List edge-coloring conjecture:** newly activated from queue item 67. Initial research is starting on equality of the list edge-chromatic and edge-chromatic numbers for finite loopless multigraphs; no verified result is established.
 
 These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published.
 
-Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture.
+Shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture; Gauss circle error-term conjecture; Dirichlet divisor error-term conjecture.
 
 ### Queued research
 
@@ -102,8 +102,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 63. [Tutte's five-flow conjecture](https://arxiv.org/abs/2602.21526)
 64. [Berge–Fulkerson conjecture](https://arxiv.org/abs/2501.05348)
 65. [Caccetta–Häggkvist conjecture](https://doi.org/10.1016/j.disc.2025.114868)
-66. [Total coloring conjecture](https://arxiv.org/abs/2609.19503)
-67. [List edge-coloring conjecture](https://arxiv.org/abs/2608.22895)
 68. [Ryser's odd-order Latin transversal conjecture](https://arxiv.org/abs/2310.19779)
 69. [Missing Moore graph of degree 57](https://arxiv.org/abs/2610.04815)
 70. [Tuza's triangle packing–covering conjecture](https://arxiv.org/abs/2609.13831)
