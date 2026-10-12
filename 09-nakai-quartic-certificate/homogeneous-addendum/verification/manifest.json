@@ -1,0 +1,184 @@
+{
+  "scope": "Full explicit order-two/unrestricted-derivation-algebra separation for ordinary homogeneous polynomials of degree >=2 in >=3 variables over any characteristic-zero field, with finite-dimensional gradient quotient. Hessian nonmembership proved internally. No weighted or general nonhomogeneous claim; novelty unestablished.",
+  "date": "2026-10-12",
+  "lean": "4.32.2",
+  "lean_commit": "f3b06c705e6c85f5314019d5d3baab0fec5b580c",
+  "mathlib_commit": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "modules": [
+    {
+      "module": "NakaiFramework",
+      "source_sha256": "fb6827e6ddd17d055cd648e48b753ff4c381851076019d42b9d00f995772876f",
+      "evidence_tag": "check3",
+      "exit_code": 0,
+      "seconds": 11.094,
+      "peak_group_rss_KiB": 3005268
+    },
+    {
+      "module": "NakaiJacobi",
+      "source_sha256": "1b14564efd6d307d61403dbc2285c8ce9c0f0254ef51f21e415c76b66c1b4294",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 3.166,
+      "peak_group_rss_KiB": 2231164
+    },
+    {
+      "module": "NakaiHomogeneousDefinitions",
+      "source_sha256": "12e28d77ff6a5f3c72eaa65d80d9b269af38fb233aba98f2cabd6b39c50a8d5f",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 3.021,
+      "peak_group_rss_KiB": 2275476
+    },
+    {
+      "module": "NakaiHomogeneousEuler",
+      "source_sha256": "8c5d123d9405c45ce20116c054822ae6ba229306da31f42fe472111e1ddb6bfd",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 4.069,
+      "peak_group_rss_KiB": 2347412
+    },
+    {
+      "module": "NakaiHomogeneousDescent",
+      "source_sha256": "e09c24e96cd2d576560616bce5587dc07f293036a94b33787b6cd02f5a17361b",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 5.11,
+      "peak_group_rss_KiB": 2350352
+    },
+    {
+      "module": "NakaiHomogeneousEscape",
+      "source_sha256": "99cf0502c8a23b9368dfac0a0586b512b81ed0316259c4e41f6fc6aa4e7e80fc",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 3.423,
+      "peak_group_rss_KiB": 2354912
+    },
+    {
+      "module": "NakaiHomogeneousConditional",
+      "source_sha256": "fb6760f19617929a5d1abfb5b935c168fa43867fdbb234b07ff51ca1ad523ffd",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 4.92,
+      "peak_group_rss_KiB": 2355184
+    },
+    {
+      "module": "NakaiVariableSyzygy",
+      "source_sha256": "a433d314881896d22c054bb428bb7fe0cb1adcf74b51d17b71bf18cf194ee6d6",
+      "evidence_tag": "check3",
+      "exit_code": 0,
+      "seconds": 3.336,
+      "peak_group_rss_KiB": 2286380
+    },
+    {
+      "module": "NakaiDeterminantRow",
+      "source_sha256": "90b02abf45d5d1b42d55a228465c677f41c78c93843c8c2ac4e214b58386a879",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 2.213,
+      "peak_group_rss_KiB": 2243384
+    },
+    {
+      "module": "NakaiHomogeneousDeterminant",
+      "source_sha256": "3e3481c6e50fa25e62415654880fde9afbcd4c432113f2a152b32d90416eaf5d",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 5.475,
+      "peak_group_rss_KiB": 2349572
+    },
+    {
+      "module": "NakaiPurePowers",
+      "source_sha256": "c42508ccc77033e89a1e33f051dca81ce414da4f74250f2562ac346017c12c0e",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 3.466,
+      "peak_group_rss_KiB": 2359728
+    },
+    {
+      "module": "NakaiHomogeneousCoefficients",
+      "source_sha256": "a818f437c6e902f70c86248cb84f20eadac0883e5f2cd7c8adc09b9486669d02",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 2.613,
+      "peak_group_rss_KiB": 2264848
+    },
+    {
+      "module": "NakaiFiniteQuotient",
+      "source_sha256": "cbf377cbbbfdfa19358b79bfa57e83b4cd971a7c1aea99ac1d267fc58357690c",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 2.366,
+      "peak_group_rss_KiB": 2446148
+    },
+    {
+      "module": "NakaiHessianFinite",
+      "source_sha256": "3b51ec5b1fa19cbb650e187f6baf0b3a565de744b4a44ad4d573cf34a89c29d1",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 2.523,
+      "peak_group_rss_KiB": 2451924
+    },
+    {
+      "module": "NakaiHomogeneousFinite",
+      "source_sha256": "8790f29e3112b84d52191f5cd8978cec01343a4e05c19e82fe53a39611b196b5",
+      "evidence_tag": "check1",
+      "exit_code": 0,
+      "seconds": 2.416,
+      "peak_group_rss_KiB": 2446724
+    },
+    {
+      "module": "NakaiHomogeneousFiniteExpected",
+      "source_sha256": "aae9401eed5d530a7d3f632c7f334aae3cc2c19f2e12a72e21f7da7984905d52",
+      "evidence_tag": "check2",
+      "exit_code": 0,
+      "seconds": 6.262,
+      "peak_group_rss_KiB": 2461808
+    }
+  ],
+  "upstream_compiled_unchanged": {
+    "module": "Mathlib.RingTheory.MvPolynomial.EulerIdentity",
+    "sha256": "8ae1e0acd1006c5b1c24bb8b6b2c5599195e1fb19596aa24830388f3ace11622"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "independent_fresh_replay": {
+    "kind": "Independent fresh-output replay of the frozen 16-project-module closure plus one unchanged pinned upstream source",
+    "date": "2026-10-12",
+    "module_count": 17,
+    "all_exit_codes": 0,
+    "standard_axioms_only": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "expanded_specification_inspected": true,
+    "hessian_nonmembership_is_proved_not_assumed": true,
+    "sum_module_seconds": 53.913,
+    "maximum_group_rss_KiB": 2472172,
+    "source_checksum_file_sha256": "851ec79eb17d48cae86ee4449e4823888dbc6cb761f379dd40ad50f44ed32c1e",
+    "original_log_sha256": "e5af8b3e9cc9bdcc0ee632678d93e5191458f2dd60458ec26377218c9c622a8e",
+    "normalized_log_sha256": "fd46a97b007cf5fe24a55af814be844d7a2aa071037402520db488ff2f904e28",
+    "normalization": "Only machine-specific path prefixes in the replay transcript are replaced by documented placeholders. Proof source bytes, theorem statements, hashes, exit codes, axiom reports, and resource measurements are unchanged."
+  },
+  "final_theorem": "NakaiHomogeneousFiniteExpected.expected_finite_gradient_full_operator_separation",
+  "final_source_sha256": "aae9401eed5d530a7d3f632c7f334aae3cc2c19f2e12a72e21f7da7984905d52",
+  "portable_publication_replay": {
+    "kind": "Fresh-output replay of the exact portable publication script and unchanged mathematical sources",
+    "date": "2026-10-12",
+    "project_modules": 16,
+    "unchanged_upstream_modules": 1,
+    "all_exit_codes": 0,
+    "sum_module_seconds": 59.606,
+    "maximum_group_rss_KiB": 2461808,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "original_log_sha256": "5eaea2cee30856eda62f1a2ada74f4c3adbc1d808344943a6cdadf7ecd0de0b9",
+    "normalized_log_sha256": "92dfa06d0dde82ae51a5e76b4ee59636416bda61da0c925d8ed90d8d09739b8b",
+    "normalization": "Only documented machine-specific path prefixes changed; proof sources and compiler outcomes unchanged."
+  }
+}

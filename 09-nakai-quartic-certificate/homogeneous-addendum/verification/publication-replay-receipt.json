@@ -1,0 +1,17 @@
+{
+  "kind": "Fresh-output replay of the exact portable publication script and unchanged mathematical sources",
+  "date": "2026-10-12",
+  "project_modules": 16,
+  "unchanged_upstream_modules": 1,
+  "all_exit_codes": 0,
+  "sum_module_seconds": 59.606,
+  "maximum_group_rss_KiB": 2461808,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "original_log_sha256": "5eaea2cee30856eda62f1a2ada74f4c3adbc1d808344943a6cdadf7ecd0de0b9",
+  "normalized_log_sha256": "92dfa06d0dde82ae51a5e76b4ee59636416bda61da0c925d8ed90d8d09739b8b",
+  "normalization": "Only documented machine-specific path prefixes changed; proof sources and compiler outcomes unchanged."
+}

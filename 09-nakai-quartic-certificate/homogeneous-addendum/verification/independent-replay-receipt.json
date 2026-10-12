@@ -1,0 +1,19 @@
+{
+  "kind": "Independent fresh-output replay of the frozen 16-project-module closure plus one unchanged pinned upstream source",
+  "date": "2026-10-12",
+  "module_count": 17,
+  "all_exit_codes": 0,
+  "standard_axioms_only": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "expanded_specification_inspected": true,
+  "hessian_nonmembership_is_proved_not_assumed": true,
+  "sum_module_seconds": 53.913,
+  "maximum_group_rss_KiB": 2472172,
+  "source_checksum_file_sha256": "851ec79eb17d48cae86ee4449e4823888dbc6cb761f379dd40ad50f44ed32c1e",
+  "original_log_sha256": "e5af8b3e9cc9bdcc0ee632678d93e5191458f2dd60458ec26377218c9c622a8e",
+  "normalized_log_sha256": "fd46a97b007cf5fe24a55af814be844d7a2aa071037402520db488ff2f904e28",
+  "normalization": "Only machine-specific path prefixes in the replay transcript are replaced by documented placeholders. Proof source bytes, theorem statements, hashes, exit codes, axiom reports, and resource measurements are unchanged."
+}
