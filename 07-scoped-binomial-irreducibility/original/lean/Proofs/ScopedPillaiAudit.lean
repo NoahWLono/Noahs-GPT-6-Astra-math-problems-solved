@@ -1,0 +1,133 @@
+import ScopedPillaiIrreducibility
+set_option pp.proofs false
+set_option pp.universes false
+
+#print PillaiRationalIntersection.prime_not_dvd_den_of_padic_lift
+#print axioms PillaiRationalIntersection.prime_not_dvd_den_of_padic_lift
+
+#print PillaiRationalIntersection.exists_integer_of_denominator_support
+#print axioms PillaiRationalIntersection.exists_integer_of_denominator_support
+
+#print PillaiValuationNormalization.exists_integer_unit_factor
+#print axioms PillaiValuationNormalization.exists_integer_unit_factor
+
+#print PillaiValuationNormalization.valuation_pos_of_prime_dvd
+#print axioms PillaiValuationNormalization.valuation_pos_of_prime_dvd
+
+#print PillaiValuationNormalization.normalized_parameter_data
+#print axioms PillaiValuationNormalization.normalized_parameter_data
+
+#print PillaiGlobalCoefficients.parameter_ne_zero
+#print axioms PillaiGlobalCoefficients.parameter_ne_zero
+
+#print PillaiGlobalCoefficients.exists_parameter_prime
+#print axioms PillaiGlobalCoefficients.exists_parameter_prime
+
+#print PillaiGlobalCoefficients.rational_binomial_irreducible_of_valuation_bounds
+#print axioms PillaiGlobalCoefficients.rational_binomial_irreducible_of_valuation_bounds
+
+#print PillaiGlobalCoefficients.integer_polynomial_of_coefficients
+#print axioms PillaiGlobalCoefficients.integer_polynomial_of_coefficients
+
+#print PillaiGlobalCoefficients.denominator_bounds_of_power_equation
+#print axioms PillaiGlobalCoefficients.denominator_bounds_of_power_equation
+
+#print PillaiGlobalCoefficients.exponent_prime_not_dvd_parameter
+#print axioms PillaiGlobalCoefficients.exponent_prime_not_dvd_parameter
+
+#print PillaiGlobalCoefficients.parameter_prime_coefficients_of_valuation_bounds
+#print axioms PillaiGlobalCoefficients.parameter_prime_coefficients_of_valuation_bounds
+
+#print PillaiGlobalCoefficients.scalar_ne_zero_of_power_equation
+#print axioms PillaiGlobalCoefficients.scalar_ne_zero_of_power_equation
+
+#print PillaiGlobalCoefficients.support_prime_not_dvd_coefficient_denominator
+#print axioms PillaiGlobalCoefficients.support_prime_not_dvd_coefficient_denominator
+
+#print PillaiGlobalCoefficients.integer_coefficients_of_power_equation
+#print axioms PillaiGlobalCoefficients.integer_coefficients_of_power_equation
+
+#print PillaiGlobalCoefficients.integer_polynomial_of_power_equation
+#print axioms PillaiGlobalCoefficients.integer_polynomial_of_power_equation
+
+#print PillaiSignedRealExclusion.irreducible_pure_binomial_neg
+#print axioms PillaiSignedRealExclusion.irreducible_pure_binomial_neg
+
+#print PillaiSignedRealExclusion.irreducible_pure_binomial_abs
+#print axioms PillaiSignedRealExclusion.irreducible_pure_binomial_abs
+
+#print PillaiSignedRealExclusion.exists_abs_sign
+#print axioms PillaiSignedRealExclusion.exists_abs_sign
+
+#print PillaiSignedRealExclusion.aeval_map_intCast_rat
+#print axioms PillaiSignedRealExclusion.aeval_map_intCast_rat
+
+#print PillaiSignedRealExclusion.aeval_int_eq_fin_sum
+#print axioms PillaiSignedRealExclusion.aeval_int_eq_fin_sum
+
+#print PillaiSignedRealExclusion.aeval_int_signed_eq_fin_sum
+#print axioms PillaiSignedRealExclusion.aeval_int_signed_eq_fin_sum
+
+#print PillaiSignedRealExclusion.integral_power_order_exclusion_nonzero_A_fin
+#print axioms PillaiSignedRealExclusion.integral_power_order_exclusion_nonzero_A_fin
+
+#print PillaiSignedRealExclusion.signed_integer_polynomial_affine_exclusion
+#print axioms PillaiSignedRealExclusion.signed_integer_polynomial_affine_exclusion
+
+#print PillaiSignedRealExclusion.signed_mapped_integer_polynomial_affine_exclusion
+#print axioms PillaiSignedRealExclusion.signed_mapped_integer_polynomial_affine_exclusion
+
+#print PillaiCapelliBridge.ReducedAffineExclusion
+#print axioms PillaiCapelliBridge.ReducedAffineExclusion
+
+#print PillaiCapelliBridge.outer_sign_identity
+#print axioms PillaiCapelliBridge.outer_sign_identity
+
+#print PillaiCapelliBridge.outer_irreducible
+#print axioms PillaiCapelliBridge.outer_irreducible
+
+#print PillaiCapelliBridge.outer_root_isIntegral
+#print axioms PillaiCapelliBridge.outer_root_isIntegral
+
+#print PillaiCapelliBridge.outer_root_finrank
+#print axioms PillaiCapelliBridge.outer_root_finrank
+
+#print PillaiCapelliBridge.algebraMap_neg_generator
+#print axioms PillaiCapelliBridge.algebraMap_neg_generator
+
+#print PillaiCapelliBridge.neg_generator_power
+#print axioms PillaiCapelliBridge.neg_generator_power
+
+#print PillaiCapelliBridge.neg_generator_minpoly
+#print axioms PillaiCapelliBridge.neg_generator_minpoly
+
+#print PillaiCapelliBridge.exists_reduced_neg_generator_representation
+#print axioms PillaiCapelliBridge.exists_reduced_neg_generator_representation
+
+#print PillaiCapelliBridge.composition_identity
+#print axioms PillaiCapelliBridge.composition_identity
+
+#print PillaiCapelliBridge.composition_natDegree
+#print axioms PillaiCapelliBridge.composition_natDegree
+
+#print PillaiCapelliBridge.irreducible_composition_of_reduced_affine_exclusion
+#print axioms PillaiCapelliBridge.irreducible_composition_of_reduced_affine_exclusion
+
+#print PillaiCapelliBridge.scoped_prime_parities
+#print axioms PillaiCapelliBridge.scoped_prime_parities
+
+#print PillaiCapelliBridge.scoped_irreducible_of_reduced_affine_exclusion
+#print axioms PillaiCapelliBridge.scoped_irreducible_of_reduced_affine_exclusion
+
+#print PillaiScoped.reduced_affine_power_equation_exclusion
+#print axioms PillaiScoped.reduced_affine_power_equation_exclusion
+
+#print PillaiScoped.irreducible_composition_of_prime_valuation_bounds
+#print axioms PillaiScoped.irreducible_composition_of_prime_valuation_bounds
+
+-- Read-only import-footprint metadata.
+run_cmd do
+  let env ← Lean.getEnv
+  Lean.logInfo m!"IMPORT_TRUST_LEVEL {env.header.trustLevel}"
+  for imported in env.header.modules do
+    Lean.logInfo m!"IMPORTED_MODULE {imported.module} HAS_DATA {imported.hasData}"

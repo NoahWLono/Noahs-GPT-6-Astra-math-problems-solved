@@ -1,0 +1,197 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,enumitem}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Composite inner exponents in shifted binomial compositions},pdfauthor={AI-assisted mathematical research},pdfsubject={Immediate corollary; independent full-closure replay passed; originality unestablished}}
+\setlength{\parskip}{0.25em}
+\setlength{\parindent}{1.2em}
+\setlist{nosep}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\lean}[1]{{\small\urlstyle{tt}\nolinkurl{#1}}}
+\newcommand{\hashpair}[2]{{\small\texttt{#1}\ \texttt{#2}}}
+\title{Composite inner exponents in shifted binomial compositions}
+\author{Mathematical research addendum prepared with AI assistance\\[0.3em]\small Project series: Noah's GPT-6 Astra math problems}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The affine-power exclusion in the accompanying prime-inner-exponent paper
+immediately extends its irreducibility conclusion to every inner exponent
+whose prime divisors exceed the outer prime. Repeated prime factors are
+allowed. This addendum records the short root-field argument, the exact Lean
+endpoint, and the verification boundary of the new source. No originality
+claim is made, and the full fixed-gap Pillai conjecture remains unresolved.
+\end{abstract}
+
+\section{Statement and scope}
+For a nonzero integer $k$ and a rational prime $\ell$, let $v_\ell(k)$
+denote the exponent of $\ell$ in $|k|$.
+
+\begin{corollary}\label{cor:main}
+Let $p\ge5$ be prime, and let $m>1$ be a natural number such that
+\[
+ q\mid m,\quad q\text{ prime}\quad\Longrightarrow\quad q>p.
+\]
+Let $k,A\in\Z$ satisfy
+\[
+ |k|>1,\qquad v_\ell(k)<p\quad\text{for every prime }\ell\mid k.
+\]
+Then $(X^m-A)^p+k$ is irreducible over $\Q$.
+\end{corollary}
+
+Both $k$ and $A$ may have either sign, and $A=0$ is permitted.
+There is no assumption $\gcd(m,k)=1$ and no squarefree condition on $m$.
+In particular, primes dividing $m$ or the outer prime $p$ may divide $k$,
+subject only to the displayed valuation bounds. For example, with $p=5$
+and $m=49$, the polynomial $(X^{49}-A)^5+7$ is irreducible for every
+integer $A$.
+
+The extension is an immediate corollary of the previously established
+arithmetic exclusion and a standard binomial criterion. It does not add a
+new coefficient-integrality hypothesis or an assumed affine-exclusion
+callback to the final statement. The inherited arithmetic argument is in
+\emph{Irreducibility of a family of shifted binomial compositions}; the
+original sealed source bundle is identified in Section~\ref{sec:record}.
+
+\section{Proof in the actual root field}
+\begin{proof}
+Since $2\le p$, the condition on prime divisors implies $2\nmid m$.
+Thus $m$ is odd. The prime $p\ge5$ is also odd.
+
+The valuation hypotheses imply that $k$ is not a $p$th power in $\Q$:
+any prime divisor $\ell$ of $k$ has $0<v_\ell(k)<p$, whereas a rational
+$p$th power has valuation divisible by $p$. The prime-binomial criterion
+therefore makes $T^p-k$ irreducible over $\Q$. As $p$ is odd, changing the
+sign of the variable also proves that
+\[
+                         f(T)=T^p+k
+\]
+is irreducible.
+
+Let $\alpha$ be a root of $f$, and work in its actual simple root field
+$K=\Q(\alpha)$. Put $\theta=-\alpha$. Then $\theta^p=k$,
+$K=\Q(\theta)$ and $[K:\Q]=p$. Consequently every $\beta\in K$ admits a
+reduced representation
+\[
+             \beta=G(\theta),\qquad G\in\Q[T],\qquad \deg G<p.
+\]
+For each prime $q\mid m$ we have $q>p$. Applying the inherited checked
+affine-power exclusion to this representation gives
+\begin{equation}\label{eq:no-power}
+                \beta^q\ne A-\theta=A+\alpha
+                \qquad\text{for every }\beta\in K.
+\end{equation}
+This is the same signed arithmetic endpoint used by the original paper;
+its hypotheses are precisely the prime and valuation assumptions above.
+
+The standard odd-binomial irreducibility criterion says that, for odd
+$m$, the conditions \eqref{eq:no-power} for every prime divisor $q$ of $m$
+imply the irreducibility of
+\[
+                       X^m-(A+\alpha)\quad\text{over }K.
+\]
+It applies to arbitrary odd $m$, including those with repeated prime
+factors. With $g(X)=X^m-A$, this binomial is exactly $g(X)-\alpha$.
+The monic composition criterion now gives the irreducibility over $\Q$ of
+\[
+                     f(g(X))=(X^m-A)^p+k,
+\]
+as required.
+\end{proof}
+
+\section{Exact theorem to Lean map}
+The newly compiled module is \lean{CompositeInnerPillai}. Its exact root is
+\begin{center}
+\lean{PillaiScoped.irreducible_composition_of_inner_prime_factors_gt}.
+\end{center}
+The parameters $p,m,q,\ell$ have type $\mathbb N$, while $k,A$ have type
+$\mathbb Z$. The root concludes literal polynomial irreducibility in
+$\Q[X]$. Its valuation premise is
+\[
+ \forall\ell\in\mathbb N,\quad\ell\text{ prime}\Longrightarrow
+ (\ell:\Z)\mid k\Longrightarrow\operatorname{padicValInt}(\ell,k)<p.
+\]
+Since $|k|>1$, the convention for the valuation of zero is irrelevant.
+There are no further mathematical premises.
+
+\begingroup\raggedright
+\begin{enumerate}[leftmargin=*,itemsep=0.35em]
+\item \textbf{Outer binomial irreducibility.}
+\lean{PillaiGlobalCoefficients.rational_binomial_irreducible_of_valuation_bounds},
+followed by \lean{PillaiCapelliBridge.outer_irreducible}.
+\item \textbf{Reduced coordinates in $K$ and the sign.}
+\lean{PillaiCapelliBridge.exists_reduced_neg_generator_representation}
+and \lean{PillaiCapelliBridge.neg_generator_power}.
+\item \textbf{Exclusion for every prime $q\mid m$.}
+\lean{PillaiScoped.reduced_affine_power_equation_exclusion}.
+\item \textbf{Odd inner binomial and composition.}
+\lean{X_pow_sub_C_irreducible_of_odd}, then
+\lean{Polynomial.irreducible_comp} and
+\lean{PillaiCapelliBridge.composition_identity}.
+\end{enumerate}
+\endgroup
+
+\section{Verification and reproducibility record}\label{sec:record}
+\paragraph{Current verification boundary.}
+The new root compiled with Lean 4.32.2. The recorded audit checks the root,
+the affine-power exclusion, the reduced-representation theorem, the
+valuation-based binomial theorem, and the odd-binomial criterion. All five
+reported exactly the standard axioms \lean{propext},
+\lean{Classical.choice} and \lean{Quot.sound}.
+An independent AI-assisted semantic rereview of the final compiled source
+and printed endpoint passed. This is not external expert peer review.
+
+\textbf{Independent full-closure checking of this new root passed.}
+The production theorem type and referenced definitions matched a separately
+authored, reviewed requested-type specification. Its complete serialized closure
+passed replay in the patched official Lean 4.34.1 kernel and independent
+nanoda 0.4.19 checking, with 45,387 declarations. The 295,701,911-byte
+production export contains exactly the three standard axioms and no
+\lean{sorryAx}. All 26 mandatory primitive definitions and the types of
+every permitted axiom present matched a separately generated trusted
+official Lean 4.32.2 baseline.
+
+All 4,527 expected imported-object hashes matched. This is a
+source-completed expected inventory, not a fresh runtime module enumeration.
+The checks used a non-isolated validation adapter; they are not sandboxed
+comparator certification or external expert peer review. The separate
+unproved specification supplied only the requested type and was excluded
+from the production proof and its imports. Compact records, including the
+full production-export and result-file hashes, accompany this addendum.
+
+\paragraph{Pinned source identities.}
+The extension source is \lean{CompositeInnerPillai.lean}, with SHA256
+shown below as two consecutive blocks:
+\begin{center}
+\hashpair{4cf000fcd76a37ee0b77b269db503ca4}{9b7b429c190be5f527e6bb009f8bd6f2}
+\end{center}
+The upstream odd-binomial criterion is in
+\lean{Mathlib.FieldTheory.KummerExtension}, at Mathlib revision
+\begin{center}\small\texttt{905b95818eb32af7874a58b427f50c1711a5e96c}.\end{center}
+The inherited prerequisite is the separate sealed archive
+\lean{scoped-irreducibility-20261012-final.zip}, whose SHA256 is
+\begin{center}
+\hashpair{926619654aace3d34b6fc7f8fba3c014e}{bdfb1844e00573b1e2569a1d29b7822}.
+\end{center}
+
+The small companion source package contains this addendum's editable
+LaTeX and PDF build script, the exact extension and audit sources, the
+unchanged pinned upstream source with its license notices, and compact
+build, audit and semantic-review evidence. The original archive supplies
+the inherited local proof sources. The addendum package is not a standalone
+Lean dependency distribution. It includes no prebuilt proof objects,
+admitted type-comparison fixture, or serialized checker export.
+
+\paragraph{Authorship and research status.}
+This document was prepared with AI assistance. The user-selected project
+series label ``Noah's GPT-6 Astra math problems'' is not a certification
+of the identity or version of the model used. This addendum asserts no
+novelty or priority. Formal verification of the stated scoped result,
+originality, and the full fixed-gap Pillai conjecture are distinct questions;
+the full conjecture remains unresolved.
+\end{document}

@@ -1,0 +1,798 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,enumitem,longtable,booktabs}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Irreducibility of a family of shifted binomial compositions},pdfauthor={AI-assisted mathematical research},pdfsubject={Scoped irreducibility theorem and formal verification; originality unestablished}}
+\setlength{\parskip}{0.25em}
+\setlength{\parindent}{1.2em}
+\setlist{nosep}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\N}{\operatorname{N}}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\lean}[1]{{\small\urlstyle{tt}\nolinkurl{#1}}}
+\title{Irreducibility of a family of shifted binomial compositions}
+\author{Mathematical research draft prepared with AI assistance\\[0.3em]\small Project series: Noah's GPT-6 Astra math problems}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $5\le p<q$ be primes and let $\kappa\in\Z$ satisfy $|\kappa|>1$ and
+$v_\ell(\kappa)<p$ at every prime divisor $\ell$ of $\kappa$.
+We give an argument that $(X^q-A)^p+\kappa$ is irreducible over $\Q$ for every
+$A\in\Z$. The argument first descends a hypothetical affine power root from
+the full ring of integers to the pure power order. A small-height
+Fourier and congruence argument, and a large-height second Fourier mode
+estimate with an integral resultant, then exclude that root.
+The statement permits primes $p$ or $q$ dividing $\kappa$ and permits all
+signs of $A$ and $\kappa$.
+An accompanying Lean development and its verification boundary are described
+explicitly. Originality has not been established. This result does not prove
+the fixed-gap Pillai conjecture.
+\end{abstract}
+
+\section{Statement and scope}
+
+For a nonzero integer $a$ and a rational prime $\ell$, $v_\ell(a)$ denotes
+the exponent of $\ell$ in $|a|$. All irreducibility statements in this paper
+refer to polynomials over $\Q$, unless another field is specified.
+
+\begin{theorem}\label{thm:main}
+Let $p,q$ be primes with $5\le p<q$. Let $\kappa,A\in\Z$ satisfy
+\begin{equation}\label{eq:hyp}
+ |\kappa|>1,\qquad
+ v_\ell(\kappa)<p\quad\text{for every prime }\ell\mid\kappa.
+\end{equation}
+Then
+\[
+                 (X^q-A)^p+\kappa
+\]
+is irreducible over $\Q$.
+\end{theorem}
+
+In particular, the parameter is $p$th-power-free in the literal integer
+sense. No assumption $p\nmid\kappa$ or $q\nmid\kappa$ occurs. The constant
+$A$ is an arbitrary integer, including zero. No perfect-power condition on
+$A^p-\kappa$ is assumed.
+
+The proof has two main parts. Section~\ref{sec:order} proves a rigidity
+theorem for integer coefficients in an irreducible pure power order. Section
+\ref{sec:local} proves that the coefficients of a hypothetical root in the
+pure field are indeed integers under \eqref{eq:hyp}. Section
+\ref{sec:assembly} supplies the signs and the composition argument.
+All orders used below are distinguished from full rings of integers.
+
+\paragraph{Research status.}
+The argument is a scoped auxiliary result arising from an investigation of
+Pillai's conjecture. Its originality remains unestablished after the bounded
+literature comparison in Section~\ref{sec:prior}. Earlier exploratory
+arguments involving discriminant indices, phase clusters and successive
+$q$-adic congruences are unnecessary for this proof. They are not used as
+unproved bridges. The formal-verification status in Section~\ref{sec:verification}
+must be read separately from both originality and the full Pillai problem.
+
+\section{Rigidity in an integral pure power order}\label{sec:order}
+
+\begin{theorem}\label{thm:order}
+Let $n\ge5$ be an integer, let $k>1$ be an integer, and suppose that
+$T^n-k$ is irreducible over $\Q$. Let $\rho>0$ satisfy $\rho^n=k$.
+If $q>n$ is prime, $A>0$ is an integer and $s\in\{1,-1\}$, then there is no
+$\gamma\in\Z[\rho]$ satisfying
+\begin{equation}\label{eq:orderpower}
+                         \gamma^q=A-s\rho.
+\end{equation}
+\end{theorem}
+
+Here $n$ need not be prime, and $q$ is allowed to divide $k$. Membership in
+$\Z[\rho]$, rather than only integrality in $\Q(\rho)$, is a hypothesis.
+We prove the theorem by two exhaustive height cases.
+
+Write
+\[
+ G(T)=\sum_{j=0}^{n-1}c_jT^j\in\Z[T],\qquad \gamma=G(\rho),
+\]
+and let $\zeta=\exp(2\pi i/n)$. Irreducibility and monic polynomial division
+show that $T^n-k$ divides $G(T)^q-A+sT$ in $\Z[T]$. Thus, with indices
+understood modulo $n$,
+\begin{equation}\label{eq:conjugates}
+ \gamma_i=G(\rho\zeta^i),\qquad
+ \gamma_i^q=A-s\rho\zeta^i,\qquad
+ |\gamma_i|\le R:=(A+\rho)^{1/q}.
+\end{equation}
+The use of all these conjugate equations is justified by divisibility,
+not assumed independently.
+
+\subsection{The small-height case}
+
+First suppose $q\mid k$. Reducing the divisibility modulo $q$ and then
+modulo $T^n$, Frobenius gives
+\[
+ G(T)^q\equiv c_0\pmod{q,T^n},
+\]
+because $jq\ge q>n$ for $j\ge1$. This contradicts the nonzero coefficient
+$-s$ of $T$ in $A-sT$. Consequently we may assume $q\nmid k$.
+
+Suppose now that
+\begin{equation}\label{eq:small}
+                            R<q\rho.
+\end{equation}
+Finite Fourier inversion in \eqref{eq:conjugates} yields
+\[
+ c_j\rho^j=\frac1n\sum_{i=0}^{n-1}\gamma_i\zeta^{-ij},\qquad
+ |c_j|\le R/\rho^j.
+\]
+Since $\rho>1$, every $j\ge1$ has $|c_j|<q$.
+In $\F_q[T]/(T^n-k)$ the same power equation becomes
+\begin{equation}\label{eq:frob}
+ \sum_{j=0}^{n-1}\overline{c_j}\,
+ \overline{k}^{\lfloor jq/n\rfloor}T^{jq\bmod n}=\overline A-\overline sT.
+\end{equation}
+Here $\gcd(q,n)=1$ and $\overline k\ne0$. The residues $jq\bmod n$ are
+therefore a permutation, and all nonconstant coefficients except possibly
+$c_{j_0}$ vanish modulo $q$, where $j_0q\equiv1\pmod n$ and $1\le j_0<n$.
+Their absolute-value bounds make them zero as integers. It follows that
+\[
+                  G(T)=a+bT^{j_0},\qquad \gcd(j_0,n)=1.
+\]
+The following elementary geometric lemma excludes this possibility.
+
+\begin{lemma}\label{lem:circle}
+Let $n\ge5$, $\gcd(j,n)=1$, $\rho,A>0$, $s\in\{1,-1\}$,
+$a,b\in\R$, and let $m>1$ be an integer. The simultaneous identities
+\[
+ |a+b\rho^j\zeta^{ij}|^{2m}=|A-s\rho\zeta^i|^2
+ \quad(0\le i<n)
+\]
+are impossible.
+\end{lemma}
+\begin{proof}
+Put $S=\{\cos(2\pi i/n):0\le i<n\}$. It has maximum $1$ and at least
+three distinct elements. The permutation $i\mapsto ij$ of $\Z/n\Z$ makes the cosine values
+$\cos(2\pi ij/n)$ range over $S$, with the value at $i=0$ still equal to $1$.
+Define on $[-1,1]$
+\[
+ f(x)=(a^2+b^2\rho^{2j}+2ab\rho^j x)^m,
+ \qquad h(x)=A^2+\rho^2-2sA\rho x.
+\]
+The asserted equations imply $f(S)=h(S)$ and $f(1)=h(1)$.
+If $ab=0$, the first function is constant and the second is not, which is
+impossible. Otherwise the base of $f$ is nonnegative throughout $[-1,1]$,
+as its minimum is $(|a|-|b|\rho^j)^2$. Hence $f$ is strictly monotone and
+strictly convex, including when that minimum is zero at an endpoint.
+The affine function $h$ is strictly monotone.
+
+Their monotonic orientations must agree: if opposite, their common value
+at the maximum argument $1$ would be both the minimum and maximum of the
+same nontrivial image set. Sorting the two equal image sets then gives
+$f(x)=h(x)$ at every $x\in S$. At three ordered elements of $S$ this
+contradicts strict convexity of $f$ and affinity of $h$.
+\end{proof}
+
+Applying Lemma~\ref{lem:circle} to \eqref{eq:conjugates} proves the
+small-height exclusion. No assertion $j_0=1$ or order-discriminant equality
+is required.
+
+\subsection{An integral second Fourier coefficient}
+
+For the complementary height range we use a slightly more general integer
+$m>n$. Assume \eqref{eq:conjugates} with $q$ replaced by $m$, where
+$A>0$ may now be rational. Define the integer polynomial
+\begin{equation}\label{eq:autocorr}
+ H(T)=\sum_{\substack{0\le j,t<n\\j-t\equiv2\ (\mathrm{mod}\ n)}}
+                      c_jc_tT^{j+t},\qquad
+ \beta_h=H(\rho\zeta^h).
+\end{equation}
+Finite orthogonality gives the exact identities
+\begin{align}
+ \beta_h&=\frac1n\sum_{i=0}^{n-1}
+                    \gamma_{h+i}\gamma_{h-i}\zeta^{-2i},\label{eq:twist}\\
+ \beta_0&=\frac1n\sum_{i=0}^{n-1}|\gamma_i|^2\zeta^{-2i}.
+                                                        \label{eq:mode}
+\end{align}
+The second uses real coefficients, so $\gamma_{-i}=\overline{\gamma_i}$.
+The first and $|\gamma_i|\le R$ imply
+\begin{equation}\label{eq:allbounds}
+                              |\beta_h|\le R^2
+                  \quad\text{for every }h.
+\end{equation}
+In particular, the small Fourier quantity is an algebraic integer in a
+field of degree $n$, not in a growing field of independently chosen radicals.
+
+\begin{lemma}\label{lem:taylor}
+Let $n\ge5$, $m>n$, $a=1/m$, $s\in\{1,-1\}$ and $0<u<1/1000$.
+Put $x_i=\cos(2\pi i/n)$. Then
+\[
+ 0<\left|\frac1n\sum_{i=0}^{n-1}
+             (1-2sx_i u+u^2)^a\zeta^{-2i}\right|<a u^2.
+\]
+\end{lemma}
+\begin{proof}
+For $x\in[-1,1]$, write $h(v)=1-2sxv+v^2$ and $g(v)=h(v)^a$.
+On $0\le v\le1/4$,
+\[
+ h(v)\ge(1-v)^2\ge9/16>1/2,
+ \quad |h'(v)|\le5/2<3,\quad h''(v)=2.
+\]
+Since $0<a\le1/6$, we have $h^{a-3}\le8$, $h^{a-2}\le4$,
+$|(a-1)(a-2)|\le2$ and $|a-1|\le1$. The identity
+\[
+ g'''=a(a-1)(a-2)h^{a-3}(h')^3
+                         +3a(a-1)h^{a-2}h'h''
+\]
+therefore gives $|g'''|\le504a$. Taylor's theorem implies, uniformly in $x$,
+\[
+ g(u)=1-2asxu+[a+2a(a-1)x^2]u^2+e_x,
+                      \qquad |e_x|\le84a u^3.
+\]
+Explicitly, $x_i=(\zeta^i+\zeta^{-i})/2$ and
+$x_i^2=(\zeta^{2i}+2+\zeta^{-2i})/4$. Multiplication by $\zeta^{-2i}$
+and summation leave only the constant term $1/4$ in the last expression:
+none of $1,2,3,4$ is a nonzero multiple of $n\ge5$. The mode-two
+coefficients of $1,x_i,x_i^2$ are therefore $0,0,1/4$. Thus the expression in the lemma
+is
+\[
+               \frac{a(a-1)}2u^2+E,\qquad |E|\le84a u^3<a u^2/6.
+\]
+The leading term is negative and has absolute value between $a u^2/3$
+and $a u^2/2$. These bounds prove both strict inequalities.
+\end{proof}
+
+\subsection{The large-height case}
+
+Suppose
+\begin{equation}\label{eq:large}
+                        A+\rho\ge(m\rho)^m,
+                  \qquad m>n\ge5.
+\end{equation}
+Set $R=(A+\rho)^{1/m}$ and $u=\rho/A$.
+Since $\rho>1$ and $m\ge6$,
+\[
+                 0<u<\frac1{m^m-1}<\frac1{1000}.
+\]
+The actual absolute-value equations, without selecting any complex root
+branches, give
+\[
+ |\gamma_i|^2=A^{2/m}(1-2sx_i u+u^2)^{1/m}.
+\]
+Lemma~\ref{lem:taylor} and \eqref{eq:mode} consequently imply
+\begin{equation}\label{eq:onebound}
+                0<|\beta_0|<\frac{\rho^2 R^2}{mA^2}.
+\end{equation}
+Because $T^n-k$ is irreducible and $H(\rho)=\beta_0\ne0$, the two integer
+polynomials $T^n-k$ and $H$ have a nonzero integer resultant. The first is
+monic with distinct roots $\rho\zeta^i$, so
+\begin{equation}\label{eq:resultant}
+           0\ne\Res(T^n-k,H)=\prod_{i=0}^{n-1}\beta_i\in\Z.
+\end{equation}
+On the other hand, $R\ge m\rho>1$ and
+$R^m\ge(m\rho)^m>2\rho$, whence $A=R^m-\rho>R^m/2$.
+Using \eqref{eq:allbounds}, \eqref{eq:onebound} and $n\le m-1$ gives
+\begin{align*}
+ \left|\prod_i\beta_i\right|
+ &<\frac{\rho^2R^{2n}}{mA^2}
+ <\frac{4\rho^2R^{2n}}{mR^{2m}}
+ \le\frac{4\rho^2}{mR^2}
+ \le\frac4{m^3}<1.
+\end{align*}
+This contradicts \eqref{eq:resultant}. Taking $m=q$ covers exactly the
+complement of \eqref{eq:small}, and proves Theorem~\ref{thm:order}.
+
+\section{Descent from the pure field to the power order}\label{sec:local}
+
+\begin{proposition}\label{prop:descent}
+Let $p,q$ be primes with $3\le p<q$, and let $\kappa,A\in\Z$ satisfy
+\eqref{eq:hyp}. Let $\theta^p=\kappa$ and $K=\Q(\theta)$.
+If $\gamma\in K$ satisfies $\gamma^q=A-\theta$, then
+\[
+                   A\ne0,\qquad \gamma\in\Z[\theta].
+\]
+\end{proposition}
+
+We prove all the local inputs and then intersect rational coefficient
+conditions. The proof applies to signed $\kappa$ and $A$.
+
+\subsection{Normalization and degree}
+
+Choose a prime $\ell\mid\kappa$, and write
+\[
+       \kappa=\ell^r U,\qquad 0<r<p,\qquad U\in\Z,\quad\ell\nmid U.
+\]
+These are conclusions from the exact valuation, not additional hypotheses.
+Choose integers $1\le a<p$, $b\ge0$ such that $ar=bp+1$. In any
+$\ell$-adic field containing a root $t^p=\kappa$, put $\pi=t^a/\ell^b$.
+Then
+\begin{equation}\label{eq:normalization}
+             \pi^p=\ell U^a,\qquad \pi^r=tU^b,
+                         \qquad t=U^{-b}\pi^r.
+\end{equation}
+The polynomial $T^p-\ell U^a$ is Eisenstein over $D=\Z_\ell$.
+It follows that $\Q_\ell(t)=\Q_\ell(\pi)$ has degree $p$, so
+$T^p-\kappa$ is irreducible locally and hence over $\Q$.
+The full integral closure of $D$ in this field is
+\begin{equation}\label{eq:closure}
+                              S=D[\pi].
+\end{equation}
+Here is the local valuation argument for this standard Eisenstein fact.
+Normalize the extended $\ell$-adic valuation by $v(\ell)=1$.
+For a root $\pi$ of any degree-$d$ monic Eisenstein polynomial over
+$\Z_\ell$, its defining equation forces $v(\pi)=1/d$.
+Indeed integrality gives $v(\pi)\ge0$; value zero would make the leading
+term uniquely smallest, while a positive value different from $1/d$ would
+make either the leading or constant term uniquely smallest. Both are
+impossible in a vanishing sum.
+For $z=\sum_{j=0}^{d-1}b_j\pi^j$ with $b_j\in\Q_\ell$, its nonzero
+summands have valuations $v(b_j)+j/d$, distinct modulo $\Z$. Thus
+$v(z)=\min_j(v(b_j)+j/d)$. An integral $z$ has $v(z)\ge0$, which forces
+$v(b_j)\ge0$ for every $j$, because these coefficient valuations are
+integers and $j<d$. Hence $z\in\Z_\ell[\pi]$. The reverse inclusion
+follows from integrality of $\pi$. This proves \eqref{eq:closure} and
+also justifies the other Eisenstein closure applications below.
+No tameness assumption occurs, including when $\ell=p$.
+
+The element $\gamma$ is an algebraic integer: it satisfies the monic
+integer polynomial $(X^q-A)^p+\kappa$. Write its unique reduced expansion
+\begin{equation}\label{eq:coords}
+                   \gamma=\sum_{j=0}^{p-1}c_j\theta^j,
+                              \qquad c_j\in\Q.
+\end{equation}
+Set $G(T)=\sum_{j=0}^{p-1}c_jT^j\in\Q[T]$.
+Every equation in this expansion propagates to any root of $T^p-\kappa$
+over a characteristic-zero field, by divisibility by that irreducible
+polynomial. At the local root $t$, its value $x=\sum c_jt^j$ is integral
+over $D$, because $x^q=A-t$ and $t$ is integral. Hence $x\in S$ by
+\eqref{eq:closure}.
+
+\subsection{Primes dividing the parameter}
+
+Retain $\ell,r,U,D,S$ above. Write $c=U^{-b}\in D^\times$, so
+$t=c\pi^r$. The actual reduction of the Eisenstein power basis is
+\[
+            S/\ell S\simeq\F_\ell[T]/(T^p),\qquad\pi\longmapsto T.
+\]
+If $\ell\mid A$, the constant coefficient of the reduction of
+$x^q=A-c\pi^r$ forces the constant coefficient of $\overline x$ to vanish.
+Thus $\overline x\in(T)$ and $\overline x^q=0$, since $q>p$.
+But $-\overline cT^r\ne0$ for $0<r<p$, a contradiction. We have proved
+\begin{equation}\label{eq:unitA}
+                              \ell\nmid A.
+\end{equation}
+In particular, any such parameter prime proves $A\ne0$.
+
+If $\ell=q$, Frobenius gives an even stronger contradiction: every $q$th
+power in $\F_q[T]/(T^p)$ is constant, whereas
+$\overline A-\overline cT^r$ is not. Consequently a hypothetical affine
+power equation automatically forces $q\nmid\kappa$.
+This exclusion is why Theorem~\ref{thm:main} need not assume it.
+
+Suppose $\ell\ne q$, and put $R=D[t]\subset S$, $J=\pi S$.
+The map $S\to\F_\ell$ taking the constant coefficient modulo $\ell$ has
+kernel $J$. Indeed $\ell=\pi^p U^{-a}$; a constant coefficient divisible
+by $\ell$ is therefore divisible by $\pi$ in $S$, as are all other terms.
+By \eqref{eq:unitA}, the residue of $x$ is nonzero. Choose
+$a_0\in D^\times$ with that residue. Then $x-a_0\in J$ and
+$q a_0^{q-1}\in D^\times\subset R^\times$.
+
+A finite conductor inclusion suffices:
+\begin{equation}\label{eq:conductor}
+                    J^N\subset R,\qquad N=(p-1)(r-1).
+\end{equation}
+To see it explicitly, every integer $m\ge N$ is $ir+jp$ with $i,j\ge0$.
+Choose $0\le i<p$ so that $ir\equiv m\pmod p$; then
+$m-ir\ge N-(p-1)r=-(p-1)>-p$, so the multiple $m-ir$ of $p$ is nonnegative.
+Equations \eqref{eq:normalization} imply $\pi^{ir+jp}\in R$.
+Since $1,\pi,\ldots,\pi^{p-1}$ span $S$ over $D$, this proves
+\eqref{eq:conductor}. When $r=1$, it says $S=R$ directly.
+
+\begin{lemma}[Finite Newton descent]\label{lem:newton}
+Let $R$ be a subring of a commutative ring $S$, let $J$ be an ideal of $S$,
+and suppose $J^N\subset R$ for an integer $N\ge1$.
+Let $f\in R[T]$, $f(x)=0$ for $x\in S$, and $x-a_0\in J$ with $a_0\in R$.
+If $f'(a_0)$ is a unit of $R$, then $x\in R$.
+\end{lemma}
+\begin{proof}
+Keep $d=f'(a_0)^{-1}\in R$ fixed and define
+$a_{m+1}=a_m-df(a_m)$. All $a_m$ lie in $R$.
+Inductively, $e_m=x-a_m\in J^{m+1}$.
+Polynomial Taylor expansion gives
+$f(a_m)=-f'(a_m)e_m+e_m^2z_m$ for some $z_m\in S$.
+Also $f'(a_m)-f'(a_0)\in J$ because $a_m-a_0\in J$.
+Hence
+$e_{m+1}=(1-df'(a_m))e_m+d e_m^2z_m\in J^{m+2}$.
+After $N-1$ iterations, $x-a_{N-1}\in J^N\subset R$, proving the claim.
+This argument neither assumes completeness nor asserts the existence of a
+new root.
+\end{proof}
+
+For $r=1$ we already have $x\in S=R$. For $r>1$, $N\ge1$; apply
+the lemma to $f(T)=T^q-(A-t)$, with the data above, to obtain $x\in R$.
+Since $t$ has degree $p$ over $\Q_\ell$, reduction modulo its monic
+polynomial and uniqueness of the reduced expansion imply
+\begin{equation}\label{eq:paramcoords}
+                              c_j\in\Z_\ell\quad(0\le j<p).
+\end{equation}
+This includes the case $\ell=p$ when $p\mid\kappa$.
+
+\subsection{The prime exponent when it is a parameter unit}
+
+It remains to treat the prime $p$ if $p\nmid\kappa$.
+We first justify the elementary local dichotomy used here. Choose an
+integer $a\equiv\kappa\pmod p$, a $p$-adic unit. If
+$p^2\nmid a^p-\kappa$, then the constant coefficient has valuation one,
+so $(T+a)^p-\kappa$ is Eisenstein. Otherwise $p^2\mid a^p-\kappa$,
+a case that includes $a^p-\kappa=0$. For odd $p$,
+\[
+ (a+pu)^p\equiv a^p+p^2 a^{p-1}u\pmod{p^3}.
+\]
+Choose $u\pmod p$ to make the right side congruent to $\kappa$ modulo $p^3$.
+At $a+pu$, the polynomial $T^p-\kappa$ has value divisible by $p^3$ and
+its derivative has valuation exactly one. Strong Hensel lifting therefore
+produces $b\in\Z_p^\times$ with $b^p=\kappa$.
+These alternatives exhaust the cases, since $a^p\equiv\kappa\pmod p$.
+
+In the Eisenstein alternative, let $\lambda$ be a root of
+$(T+a)^p-\kappa$ over $\Q_p$. Its integral closure is
+$\Z_p[\lambda]=\Z_p[a+\lambda]$. The propagated equation and integrality
+put $G(a+\lambda)$ in this order. The degree-$p$ basis then gives
+$c_j\in\Z_p$.
+
+In the split alternative choose $b$ as above and let $\zeta_p$ be a
+primitive $p$th root of unity. The shifted cyclotomic polynomial
+$\Phi_p(T+1)$ is Eisenstein, so $\Q_p(\zeta_p)$ has degree $p-1$ and
+integral closure $\Z_p[\zeta_p]$. Propagation and integrality give
+\[
+  x=G(b)\in\Z_p,\qquad y=G(b\zeta_p)\in\Z_p[\zeta_p],
+  \qquad x^q=A-b,\quad y^q=A-b\zeta_p.
+\]
+In the common residue field $\F_p$, $\overline x^q=\overline y^q$.
+Because $q>p$ is prime, $\gcd(q,p-1)=1$, and the $q$th-power map is injective
+on all of $\F_p$, including zero. Thus $\overline x=\overline y$.
+
+Write $y=Q(b\zeta_p)$ with $Q\in\Z_p[T]$, $\deg Q<p-1$; this is possible
+because $b$ is a unit. Then $x-Q(b)=pd$ for some $d\in\Z_p$, and
+\[
+                         P(T)=Q(T)+d\Phi_p(T/b)
+\]
+is an integral polynomial of degree less than $p$ with $P(b)=x$ and
+$P(b\zeta_p)=y$. The polynomial $G-P$ has degree less than $p$ and vanishes
+at $b\zeta_p$. Its minimal polynomial is a nonzero scalar multiple of
+$\Phi_p(T/b)$ of degree $p-1$, so $G-P=e\Phi_p(T/b)$ for some $e\in\Q_p$.
+Evaluating at $b$ gives $ep=0$, hence $G=P$. Therefore every $c_j$ is
+$p$-integral in this alternative too.
+
+\subsection{Trace bounds and the rational intersection}
+
+For $K=\Q(\theta)$ the pure power basis gives
+\[
+ \Tr_{K/\Q}(\theta^m)=
+ \begin{cases}0,&p\nmid m,\\p\kappa^{m/p},&p\mid m.\end{cases}
+\]
+The element $\gamma$ and all $\gamma\theta^{p-j}$ are integral. In
+\eqref{eq:coords}, it follows that
+\[
+      \Tr(\gamma)=pc_0\in\Z,
+ \qquad \Tr(\gamma\theta^{p-j})=p\kappa c_j\in\Z\quad(1\le j<p).
+\]
+Thus the reduced denominator of $c_0$ divides $p$, and that of each other
+$c_j$ divides $p\kappa$. Every possible denominator prime has already been
+excluded: parameter primes by \eqref{eq:paramcoords}, and $p$ by that same
+argument when $p\mid\kappa$, or by the dichotomy when $p\nmid\kappa$.
+A rational number belonging to $\Z_\ell$ has reduced denominator prime to
+$\ell$. Therefore all the denominators equal one and
+$\gamma\in\Z[\theta]$. Together with \eqref{eq:unitA}, this proves
+Proposition~\ref{prop:descent}.
+
+\section{All signs and the composition argument}\label{sec:assembly}
+
+Suppose that $\gamma\in\Q(\theta)$ satisfies $\gamma^q=A-\theta$ under
+Theorem~\ref{thm:main}'s hypotheses. Proposition~\ref{prop:descent} gives
+$A\ne0$ and an integer polynomial representing $\gamma$ in $\theta$.
+Put $k=|\kappa|$, $\rho=k^{1/p}>0$ and $s=\operatorname{sign}(\kappa)$.
+The binomial $T^p-k$ is irreducible: it is $T^p-\kappa$ when $\kappa>0$,
+and an odd sign substitution of that polynomial when $\kappa<0$.
+The equation propagates to $\theta=s\rho$; absorbing $s^j$ into each
+integer coefficient gives an element $\delta\in\Z[\rho]$ with
+\[
+                             \delta^q=A-s\rho.
+\]
+If $A>0$, Theorem~\ref{thm:order} contradicts this. If $A<0$, oddness of
+$q$ gives $(-\delta)^q=(-A)-(-s)\rho$, again contradicting that theorem.
+Thus no affine root exists in the degree-$p$ pure field for any $A\in\Z$.
+
+For completeness, apply Capelli's composition criterion to
+\[
+                 f(Y)=Y^p+\kappa,\qquad g(X)=X^q-A.
+\]
+The polynomial $f$ is irreducible by odd sign substitution from
+$Y^p-\kappa$. Let $\alpha$ be a root, and put $\theta=-\alpha$.
+Then $\theta^p=\kappa$ and $\Q(\alpha)=\Q(\theta)$.
+Over this actual simple field,
+\[
+                       g(X)-\alpha=X^q-(A-\theta).
+\]
+For an odd prime $q$ in characteristic zero, the prime-binomial criterion
+states that $X^q-a$ is irreducible if and only if $a$ is not a $q$th power
+in the field. To recall its short proof for $a\ne0$, a proper monic factor
+of degree $0<d<q$ has roots among $\beta\zeta_q^i$, where $\beta^q=a$.
+The product $u$ of those roots belongs to the base field, and $u^q=a^d$.
+Choose integers $e,h$ with $ed+hq=1$. Then $(u^e a^h)^q=a$, as required.
+The converse follows from a linear factor, and $a=0$ is immediate.
+The affine exclusion above applies to every element of the actual simple
+field: its degree-$p$ power basis supplies a rational polynomial
+representative of degree less than $p$. Hence $g(X)-\alpha$ is irreducible.
+
+One can see the needed direction of Capelli directly by taking a root
+$\beta$ of $g(X)-\alpha$. Since $\alpha=g(\beta)$, the tower law gives
+$[\Q(\beta):\Q]=[\Q(\beta):\Q(\alpha)]p=qp$.
+The monic polynomial $f(g(X))$ of degree $pq$ has root $\beta$, and so is
+its minimal polynomial. This proves Theorem~\ref{thm:main}.
+
+\section{Relation to the fixed gap problem}
+
+The norm implication is one-way. A $q$th root of $A-\theta$ in
+$\Q(\theta)$ would give a $q$th-power rational norm, but a $q$th-power norm
+does not imply the element has a root in that field. For example,
+\[
+              3^5-2^7=115=5\cdot23,
+       \qquad 5^5-3^7=938=2\cdot7\cdot67.
+\]
+Both parameters satisfy the theorem's valuation hypotheses, including the
+respective cases $p\mid\kappa$ and $q\mid\kappa$. The theorem therefore
+asserts irreducibility of the corresponding degree-$35$ compositions,
+while these perfect-power gaps genuinely exist.
+
+The full fixed-gap Pillai conjecture asks for finitely many distinct
+perfect-power value pairs at each fixed positive gap. Its moving-exponent
+tail may occupy a nonzero Kummer class: a $q$th root of $A-\theta$ then lies
+in a genuine extension of $\Q(\theta)$. The proof here excludes the zero
+class only. In particular, neither a finite-height search nor the absence
+of an affine root inside the pure field proves fixed-gap finiteness.
+
+The integer resultant in Section~\ref{sec:order} depends crucially on
+all conjugates coming from one integer polynomial in the same pure root.
+For a radical lying in an extension, this representation is absent.
+Neither the present theorem nor its formal verification supplies a
+uniform exclusion or height bound for that remaining branch.
+
+\section{Comparison with prior literature}\label{sec:prior}
+
+Capelli's composition and prime-binomial criteria are standard;
+Guersenzvaig~\cite{Guersenzvaig} gives a modern primary account.
+The DVR Eisenstein closure theorem, Hensel lifting, traces and resultants
+are likewise standard tools. The finite conductor proof and the elementary
+Fourier estimates above are supplied explicitly rather than inferred from
+general assertions about orders.
+
+Harrington and Jones~\cite{HJ} study monogenic binomial compositions of
+this general shape. The complete article was not accessible in the present
+review, so it remains an explicit priority for a knowledgeable referee.
+The accessible preprint of Jakhar, Kalwaniya and Yadav~\cite{JKY} assumes
+the composition irreducible in its main index characterization. The newer
+Choudhary, Pisolkar and Yadav preprint~\cite{CPY} likewise states
+irreducibility as an assumption for its monogeneity criterion. Those
+assumptions do not by themselves supply Theorem~\ref{thm:main}.
+Ga\'al's related article~\cite{Gaal} concerns a degree-six family according
+to its published abstract; the entire PDF was not used in this comparison.
+
+Banerjee~\cite{Banerjee} gives variations on Capelli's theorem. Only a
+publisher first-page preview was readable in this review. Its necessary
+condition for reducibility of $f(X^q)$ is a divisibility congruence modulo
+$q^2$. That quoted condition alone does not cover the present theorem.
+For instance $p=5,q=7,A=49$ and
+\[
+           \kappa=49^5-2^7=282475121=23\cdot2953\cdot4159
+\]
+satisfy the valuation hypotheses and have a perfect-power norm. For
+$f(Y)=(Y-A)^p+\kappa$, the condition
+$f(Y)\mid f(Y^q)\pmod{q^2}$ holds. Indeed, more generally, if $q^2\mid A$
+and $\kappa=A^p-B^q$, then $f(Y)\equiv Y^p-B^q\pmod{q^2}$, and the
+remainder of $f(Y^q)$ is $B^{q^2}-B^q\equiv0\pmod{q^2}$.
+This compares the displayed necessary condition only, not every result in
+the unreviewed article.
+
+An older composition reference, Butler's 1957 paper~\cite{Butler}, also
+remains a full-text access gap. The bounded search found no theorem verified
+to cover exactly all the quantifiers here, but absence of such a search
+hit is not evidence sufficient to establish originality. No priority,
+publication or new-result claim is made. The proof and its formal statement
+are suitable for further specialist review independently of that question.
+
+\section{Formal theorem mapping and verification}\label{sec:verification}
+
+The development uses Lean 4.32.2 and mathlib commit
+\begin{center}\small\texttt{905b95818eb32af7874a58b427f50c1711a5e96c}.\end{center}
+The checked final root is
+\begin{center}\small
+\lean{PillaiScoped.}\allowbreak
+\lean{irreducible_composition_of_prime_valuation_bounds}.
+\end{center}
+Its statement is literal polynomial irreducibility over $\Q$ under only
+prime $p,q$, $5\le p<q$, $\kappa,A\in\Z$, $1<|\kappa|$ and
+\[
+ \forall\ell\in\mathbb N,\quad
+ \ell\text{ prime}\ \Longrightarrow\ \ell\mid\kappa\
+ \Longrightarrow\ \operatorname{padicValInt}(\ell,\kappa)<p.
+\]
+Because $1<|\kappa|$, Lean's convention for the valuation at zero is
+irrelevant. There is no assumed irreducibility, local-field degree,
+coefficient integrality, affine-exclusion callback or perfect-power gap
+in this final statement.
+
+\subsection{Declaration map}
+
+The following map identifies the main checked components. The final status
+is documented by the versioned whole-closure verification record accompanying
+this file, separately from compilation of individual helper lemmas.
+\begingroup\raggedright
+\paragraph{Integral power order theorem}\mbox{}\par\noindent
+Module \lean{IntegralPowerOrder}.\par\noindent Root:
+\lean{PillaiIntegralPowerOrder.integral_power_order_exclusion_fin}.
+It includes actual conjugate propagation, Frobenius coefficient reduction,
+finite-circle convexity, Taylor nonvanishing, the resultant and the product
+bound in Theorem~\ref{thm:order}.
+\paragraph{Trace denominators}\mbox{}\par\noindent
+Module \lean{TraceDenominators}.\par\noindent Root:
+\lean{PillaiTrace.irreducible_denominator_dvd}.
+It constructs the simple field and trace calculation rather than assuming
+that the ambient field is generated by the root.
+\paragraph{The unit parameter prime}\mbox{}\par\noindent
+Module \lean{PadicCoefficientLift}.\par\noindent Root:
+\lean{PillaiLocalCoefficients.padic_coefficients_of_power_equation}.
+Its actual Eisenstein and split cyclotomic cases supply Section~\ref{sec:local}'s
+$p\nmid\kappa$ branch.
+\paragraph{Parameter primes and the ramified exponent}\mbox{}\par\noindent
+Module \lean{ConcreteParameterCoefficients}.\par\noindent Roots:
+\lean{PillaiLocalCoefficients.}\allowbreak
+\lean{parameter_prime_coefficients_of_normalized_power_equation}
+and
+\lean{PillaiLocalCoefficients.}\allowbreak
+\lean{no_normalized_power_equation_at_exponent_parameter}.
+These construct the actual auxiliary field, full integral closure,
+conductor descent and coefficient recovery. The first allows $\ell=p$;
+the second has no degree bound on its rational polynomial.
+\paragraph{Global arithmetic}\mbox{}\par\noindent
+Modules \lean{IntegerValuationNormalization},
+\lean{RationalLocalIntersection}, \lean{GlobalCoefficientAssembly}.\par\noindent Root:
+\lean{PillaiGlobalCoefficients.integer_polynomial_of_power_equation}.
+It derives $A\ne0$ and a literal reduced polynomial over $\Z$ from the
+natural valuation hypotheses.
+\paragraph{Signs and final composition}\mbox{}\par\noindent
+Modules \lean{SignedRealExclusion}, \lean{CapelliPureFieldBridge},
+\lean{ScopedPillaiIrreducibility}. The generic Capelli helper has an
+explicit affine-exclusion input; the final root proves and discharges
+that input through the actual global arithmetic and real exclusion.
+\par\endgroup
+
+\clearpage\subsection{Verification status}
+
+At 04:05 UTC on 12 October 2026 the final scoped theorem and all 41 final-assembly
+declarations passed a fresh sequential clean build and recursive
+standard-axiom audit, with zero warnings. The frozen snapshot is dated
+04:07 UTC. Its source manifest hash and final source hash are recorded in
+the companion reproducibility file. The final clean peak process-group
+RSS was 3,283,768 KiB. An earlier internal M3200 memory exception was
+preserved; the successful final union used the separately authorized
+M3500 cap and produced no new dependency builds.
+At 04:14 UTC the final production theorem type and referenced definitions
+matched a separately authored, reviewed specification of the requested
+formula. Its complete serialized dependency closure passed the official
+Lean 4.34.1 kernel and independent nanoda 0.4.19 checking, with 45,192
+declarations and all 4,523 imported-object hashes matched.
+The production closure SHA256 is
+\begin{center}\small\nolinkurl{e708c9c22e754d2af9b542fd151819c37fa5c00bb169f4acc4c934e573d10652}.\end{center}
+The sealed result JSON SHA256 is
+\begin{center}\small\nolinkurl{18e6daf439c640cf8a26767339d145df0960793e70da7afcc25c3cd4e372effe}.\end{center}
+Both hashes were independently recomputed when this manuscript was updated.
+
+Earlier component closures also passed the same two checkers. The final
+closure above contains every dependency needed for the stated theorem.
+Each V2 check compares 26 mandatory primitive definitions and every present
+permitted axiom type against an independently exported official-version
+baseline. The permitted standard axioms are \lean{propext},
+\lean{Classical.choice} and \lean{Quot.sound}; no \lean{sorryAx},
+custom axiom or unproved mathematical bridge is accepted.
+
+This is serialized full-closure replay in a patched official kernel plus
+an independent checker, with a separate requested-type and
+referenced-definition comparison. It used a non-isolated validation
+adapter; it is not sandboxed comparator certification or external peer review.
+The comparison's unproved type-specification fixture supplied only the
+requested type, never a production proof. Its placeholder proof and
+\lean{sorryAx} are excluded from all production imports and the proof-source
+package. The exported production axioms are exactly the three standard ones.
+Human reading of the exported theorem type is a separate semantic check.
+An independent AI-assisted paper/source review found no mathematical gap;
+that is not represented as external expert peer review.
+Formal verification does not certify originality or prove Pillai's conjecture.
+
+\subsection{Reproducibility}
+
+The accompanying source package retains all 51 local production modules
+and the declaration-audit module, selected by actual imported-object
+provenance rather than filename recency. It includes source and object
+hashes, a closed dependency order, build scripts, pinned toolchain and
+mathlib metadata, imported-object inventory, printed statements, recursive
+axiom audits, clean-build logs and compact checker records. The separate
+admitted type-comparison fixture is excluded from the proof sources.
+
+On 12 October 2026, from 04:28:57 to 04:33:09 UTC, all 52 packaged local
+sources were compiled sequentially into a new empty object tree. No old
+local proof object was present on the dependency search path; only pinned
+upstream caches were reused. Every newly generated local object was
+byte-identical to its historically validated counterpart. All 4,523
+imported-object hashes matched, all 41 declaration audits used only the
+three standard axioms, and there were no warnings or changed source bytes.
+The sampled peak process-group RSS was 3,310,132 KiB. The documented memory
+profile uses M3200 for helpers, M3300 for \lean{ActualPadicSplit}, and
+M3500 for the final union/audit, with independent RSS, available-memory and
+disk guards. The first M3200-only attempt and its memory-limit failure
+are retained. The clean-build result SHA256 is
+\begin{center}\small\nolinkurl{a804f775a3404703cc2924af65d9c3ce5ef35d83d826684252df691b8789103f}.\end{center}
+
+At 04:35 UTC a new export from those freshly built objects was compared
+with the previously validated production closure. All 294,553,707 bytes
+were identical, with the same SHA256 and all imported-object hashes
+rechecked. Thus the packaged-source rebuild is tied to the existing
+requested-type comparison, full patched-kernel replay and independent
+nanoda result; no inference from source resemblance alone is needed.
+
+Lean's package-path lookup selects the first root containing a package
+directory and does not fall back module by module. Consequently a partial
+\lean{Mathlib} override directory must be merged with the remaining pinned
+cache artifacts, rather than merely listed before another cache root.
+The package's sequential source builder rejects dependency roots exposing
+old local proof objects. Its pinned fresh-network installation recipe is
+provided but has not been tested in a separate environment; the successful
+clean-local reproduction used the recorded upstream caches.
+
+For stronger replay, export the final root and its complete closure with
+the authenticated original-version exporter, compare the primitive
+baseline and imported hashes, and run the recorded official 4.34.1 and
+nanoda configurations. PDF generation supplies presentation assurance only.
+
+\begin{thebibliography}{99}
+\bibitem{Guersenzvaig}
+N. Guersenzvaig, \emph{Elementary criteria for irreducibility of $f(X^n)$},
+2013, \url{https://arxiv.org/abs/1303.5333}.
+\bibitem{HJ}
+J. Harrington and L. Jones, \emph{Monogenic binomial compositions},
+Taiwanese J. Math. 24 (2020), 1073--1090.
+\url{https://doi.org/10.11650/tjm/200201}.
+\bibitem{JKY}
+A. Jakhar, R. Kalwaniya and P. Yadav,
+\emph{A study of monogenity of binomial composition},
+Acta Arith. 221 (2025), 387--395;
+preprint \url{https://arxiv.org/abs/2402.10131}.
+\url{https://doi.org/10.4064/aa250406-17-6}.
+\bibitem{CPY}
+A. Choudhary, S. Pisolkar and P. Yadav,
+\emph{Power integral bases in polynomial compositions}, 2026,
+\url{https://arxiv.org/abs/2606.09739}.
+\bibitem{Gaal}
+I. Ga\'al, \emph{On the monogenity of certain binomial compositions},
+JP J. Algebra Number Theory Appl. 57 (2022), 1--16.
+\url{https://doi.org/10.17654/0972555522026}.
+\bibitem{Banerjee}
+P. Banerjee, \emph{Variations on a theorem of Capelli},
+Int. J. Number Theory 20 (2024), 893--913.
+\url{https://doi.org/10.1142/S1793042124500465}.
+\bibitem{Butler}
+M. C. R. Butler, \emph{Reducibility criteria for polynomials of two general classes},
+Proc. London Math. Soc. s3-7 (1957), 63--74.
+\url{https://doi.org/10.1112/plms/s3-7.1.63}.
+The complete article remains an explicit full-text access gap in the
+present literature review.
+\end{thebibliography}
+\end{document}

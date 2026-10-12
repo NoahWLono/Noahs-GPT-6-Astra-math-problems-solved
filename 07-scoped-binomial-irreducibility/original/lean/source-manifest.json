@@ -1,0 +1,624 @@
+{
+  "dependency_order": [
+    "EisensteinIntegralClosure",
+    "MonicEisensteinClosure",
+    "NormalizedParameterField",
+    "ReducedAdjoinCoordinates",
+    "AlgebraicPowerPropagation",
+    "GenericBinomialResidue",
+    "GenericBinomialAffine",
+    "GenericBinomialConductor",
+    "FiniteNewtonDescent",
+    "GenericBinomialNewton",
+    "GenericBinomialRamified",
+    "GenericBinomialDescent",
+    "ConcreteParameterCoefficients",
+    "ReducedEisensteinCoordinates",
+    "IntegralTranslateLift",
+    "LocalCoefficientNonsplit",
+    "PadicCyclotomicEisenstein",
+    "PolynomialFiberProduct",
+    "GeometricFiberProduct",
+    "PadicCyclotomicOrder",
+    "CanonicalPadicCyclotomic",
+    "ScaledSplitImage",
+    "PadicSplitImage",
+    "ActualPadicSplit",
+    "LocalCoefficientSplit",
+    "FiniteHenselCongruence",
+    "PadicUnitDichotomy",
+    "PadicCoefficientLift",
+    "PurePowerTrace",
+    "TraceDenominators",
+    "RationalLocalIntersection",
+    "IntegerValuationNormalization",
+    "GlobalCoefficientAssembly",
+    "FiniteFourier",
+    "FiniteTaylor",
+    "PillaiPowerBasis",
+    "TaylorFourier",
+    "HeightBounds",
+    "IntegralResultant",
+    "ConjugateEquation",
+    "PowerSamples",
+    "CoefficientBounds",
+    "FrobeniusReduction",
+    "IntegralSparsity",
+    "FiniteOrderRigidity",
+    "SparseCircle",
+    "LargeHeightExclusion",
+    "IntegralPowerOrder",
+    "SignedRealExclusion",
+    "CapelliPureFieldBridge",
+    "ScopedPillaiIrreducibility",
+    "ScopedPillaiAudit"
+  ],
+  "modules": [
+    {
+      "module": "EisensteinIntegralClosure",
+      "path": "Proofs/EisensteinIntegralClosure.lean",
+      "source_sha256": "99bee05ee3aabbcf9fab51c50be81b32c30ee52f0a6dc9208fb4456a5fd941b1",
+      "imported_object_sha256": "955d860aa4b8cb938ea577bf4f24b2c93218f798f63bc7420f831298a9fc76f9",
+      "imports": [
+        "Mathlib.RingTheory.Polynomial.Eisenstein.IsIntegral",
+        "Mathlib.RingTheory.DiscreteValuationRing.Basic",
+        "Mathlib.RingTheory.Localization.Integer"
+      ]
+    },
+    {
+      "module": "MonicEisensteinClosure",
+      "path": "Proofs/MonicEisensteinClosure.lean",
+      "source_sha256": "e0d9033045b94d0ff4cc0ab1fb19627724d946ac13156f45210ee87e59d85fce",
+      "imported_object_sha256": "75007bd747b26e0a88dea2784c5997a562df867e0c9a166d684a87b3114361ea",
+      "imports": [
+        "EisensteinIntegralClosure",
+        "Mathlib.RingTheory.Polynomial.Eisenstein.Basic"
+      ]
+    },
+    {
+      "module": "NormalizedParameterField",
+      "path": "Proofs/NormalizedParameterField.lean",
+      "source_sha256": "c54f3630d5f82f6e29457b79b6d8f2e4ceebc0c379e41c6db0971f837f70d840",
+      "imported_object_sha256": "483bf122fe8bfdf07924242a8597688217c237622c2931af9da279c4d6ca5b63",
+      "imports": [
+        "MonicEisensteinClosure",
+        "Mathlib.Data.Int.GCD",
+        "Mathlib.NumberTheory.Padics.PadicIntegers",
+        "Mathlib.RingTheory.AdjoinRoot",
+        "Mathlib.RingTheory.Polynomial.Tower",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "ReducedAdjoinCoordinates",
+      "path": "Proofs/ReducedAdjoinCoordinates.lean",
+      "source_sha256": "696bfa3805cabb62f1b213e9e00f585a9c9e6e2d4f9aa1c987533e2d567826e9",
+      "imported_object_sha256": "8049fe04bb7ab408082457cc2c69fcf050bbc47042fd396e88aa15e3c593c1e8",
+      "imports": [
+        "Mathlib.Algebra.Polynomial.RingDivision",
+        "Mathlib.RingTheory.Adjoin.Polynomial.Basic",
+        "Mathlib.RingTheory.Polynomial.Tower",
+        "Mathlib.FieldTheory.Minpoly.Field"
+      ]
+    },
+    {
+      "module": "AlgebraicPowerPropagation",
+      "path": "Proofs/AlgebraicPowerPropagation.lean",
+      "source_sha256": "802fe110eb3290e40e92d7bf9fb7efe4ab77d386118bbb7705324d4c662b74db",
+      "imported_object_sha256": "eedbb4ba6fc09619ed0ab85d37f165702586c45b950d081c6dfea272407134e3",
+      "imports": [
+        "Mathlib.FieldTheory.Minpoly.Field",
+        "Mathlib.RingTheory.IntegralClosure.Algebra.Basic"
+      ]
+    },
+    {
+      "module": "GenericBinomialResidue",
+      "path": "Proofs/GenericBinomialResidue.lean",
+      "source_sha256": "640bb9873b4e50c59e67a9454cf88bdcacbec63c79015160c30d83a5488fb0cc",
+      "imported_object_sha256": "ee43e55b34f808ffb67cc6d56e12f29a21e665260e7b8b237162033862d8c729",
+      "imports": [
+        "Mathlib.RingTheory.AdjoinRoot",
+        "Mathlib.Algebra.Polynomial.Eval.Coeff",
+        "Mathlib.Algebra.Divisibility.Units"
+      ]
+    },
+    {
+      "module": "GenericBinomialAffine",
+      "path": "Proofs/GenericBinomialAffine.lean",
+      "source_sha256": "13051bed1a9c28c31e3de1d98f62572d9edbfa75c0122a40ab8b7c0ecd1e6e51",
+      "imported_object_sha256": "2d0d846528f5fc7f33471396866d1441641fd0d527b338941cc5194555a3a90a",
+      "imports": [
+        "GenericBinomialResidue",
+        "Mathlib.RingTheory.LocalRing.MaximalIdeal.Basic"
+      ]
+    },
+    {
+      "module": "GenericBinomialConductor",
+      "path": "Proofs/GenericBinomialConductor.lean",
+      "source_sha256": "6664fb6f9c96ac884e091f36f26f85cec37ca72eb658898ff3fdbf92e3ef8653",
+      "imported_object_sha256": "4256e08dec262f762400798da5032e6979bf7c031c4671c625679ccfb7039f41",
+      "imports": [
+        "Mathlib.RingTheory.AdjoinRoot",
+        "Mathlib.RingTheory.Ideal.Operations",
+        "Mathlib.Algebra.Order.Ring.Int"
+      ]
+    },
+    {
+      "module": "FiniteNewtonDescent",
+      "path": "Proofs/FiniteNewtonDescent.lean",
+      "source_sha256": "3664acfee4cd7b1cad25768dc95978a650d373f03b029c35aa9c8859f0776e44",
+      "imported_object_sha256": "a4d8b67ea4a7c26d190b30c06f5fb228206098172e7691fc3a4fcfd3af175bd3",
+      "imports": [
+        "Mathlib.Algebra.Polynomial.Taylor",
+        "Mathlib.Algebra.Polynomial.Identities",
+        "Mathlib.RingTheory.Ideal.Operations",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    {
+      "module": "GenericBinomialNewton",
+      "path": "Proofs/GenericBinomialNewton.lean",
+      "source_sha256": "ed5627e1f7ba1440ab21b67f15036b10afb1f81353623d382246cdffd36adba6",
+      "imported_object_sha256": "a9cd1b1f6951737d9f69de111147f6f06d6563a653b9b3b7425b8a5273a20f59",
+      "imports": [
+        "GenericBinomialConductor",
+        "GenericBinomialResidue",
+        "FiniteNewtonDescent"
+      ]
+    },
+    {
+      "module": "GenericBinomialRamified",
+      "path": "Proofs/GenericBinomialRamified.lean",
+      "source_sha256": "9627cf505577a5024eeba5e757d2bb1f48c1980b7a8ead6895718421c1403d13",
+      "imported_object_sha256": "382e70d8bfc64b46325a6196b976537162ea15d02d68355c9a6a2808862a1932",
+      "imports": [
+        "GenericBinomialResidue",
+        "Mathlib.Algebra.CharP.Lemmas"
+      ]
+    },
+    {
+      "module": "GenericBinomialDescent",
+      "path": "Proofs/GenericBinomialDescent.lean",
+      "source_sha256": "5e0a7cdb39b3592ccfa2c82a332bc9877f36d6a98e48349380c3eafe6efacd93",
+      "imported_object_sha256": "ffb441111c715445caf262cead61b3ddb3f83bffdb6349480079ffc5a5464ab8",
+      "imports": [
+        "GenericBinomialAffine",
+        "GenericBinomialNewton",
+        "GenericBinomialRamified",
+        "Mathlib.RingTheory.DiscreteValuationRing.Basic"
+      ]
+    },
+    {
+      "module": "ConcreteParameterCoefficients",
+      "path": "Proofs/ConcreteParameterCoefficients.lean",
+      "source_sha256": "abae920bd7bf4c6e540b7d7c6e4b715d97393360e0092e942b04ba3a4df0009c",
+      "imported_object_sha256": "ff3f4ddd56ffb6e8c176014119d07f0ad2c40cfc438e684163ba0b23f0754cbb",
+      "imports": [
+        "NormalizedParameterField",
+        "ReducedAdjoinCoordinates",
+        "AlgebraicPowerPropagation",
+        "GenericBinomialDescent"
+      ]
+    },
+    {
+      "module": "ReducedEisensteinCoordinates",
+      "path": "Proofs/ReducedEisensteinCoordinates.lean",
+      "source_sha256": "ef5c5d16aa3f166e028e0633cca7eecda608a27b332a4622c321c05e7f67e706",
+      "imported_object_sha256": "4763d760bbd4809f0fa5495030d0d23383e100a8ece0024e0425475292cccdfb",
+      "imports": [
+        "MonicEisensteinClosure",
+        "Mathlib.Algebra.Polynomial.RingDivision",
+        "Mathlib.RingTheory.Adjoin.Polynomial.Basic"
+      ]
+    },
+    {
+      "module": "IntegralTranslateLift",
+      "path": "Proofs/IntegralTranslateLift.lean",
+      "source_sha256": "db4bde1bfbf4c1c80cd6be96d924f951a264fadfb465ed738cca6cdc66fe9f04",
+      "imported_object_sha256": "4cee530613eb5ba8794baa2793f7d02dbc339f5e678c458f2dc393567c8cc8e7",
+      "imports": [
+        "Mathlib.Algebra.Polynomial.Degree.Lemmas",
+        "Mathlib.Algebra.Algebra.Basic"
+      ]
+    },
+    {
+      "module": "LocalCoefficientNonsplit",
+      "path": "Proofs/LocalCoefficientNonsplit.lean",
+      "source_sha256": "48c3ac73c04acdf5822bfb22d91b7e35ac20fefe4ac6cad56f5d0b7a03e7637f",
+      "imported_object_sha256": "9be646ad55116577a22a870899c9144c0c9adaf772d49ea3fa8b0ed0d9583979",
+      "imports": [
+        "AlgebraicPowerPropagation",
+        "ReducedEisensteinCoordinates",
+        "IntegralTranslateLift",
+        "Mathlib.NumberTheory.Padics.PadicIntegers",
+        "Mathlib.RingTheory.AdjoinRoot",
+        "Mathlib.RingTheory.Polynomial.Tower"
+      ]
+    },
+    {
+      "module": "PadicCyclotomicEisenstein",
+      "path": "Proofs/PadicCyclotomicEisenstein.lean",
+      "source_sha256": "c2639ad449149bbc0190d9d6a18bd7c89b4d468631789c1caa3d6d9c7373e0f6",
+      "imported_object_sha256": "ad1072cf02ba27d4be46e2aa3f457644b3f38c608beeb12846b2e86cd51eec4b",
+      "imports": [
+        "MonicEisensteinClosure",
+        "Mathlib.NumberTheory.Padics.PadicIntegers"
+      ]
+    },
+    {
+      "module": "PolynomialFiberProduct",
+      "path": "Proofs/PolynomialFiberProduct.lean",
+      "source_sha256": "1d4898ea1d6ec73febbb49e82ba551f27426e179df80efdf1e67760cdf98c1c6",
+      "imported_object_sha256": "7f7393d192992bf6329e84f66fabc83e73212f0787df2065f187452b20ba6b9c",
+      "imports": [
+        "Mathlib.RingTheory.AdjoinRoot",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    {
+      "module": "GeometricFiberProduct",
+      "path": "Proofs/GeometricFiberProduct.lean",
+      "source_sha256": "c4c018a4075011e23d95a2e70f125f41832475d77bc7103ddafca1b7bb063430",
+      "imported_object_sha256": "4694dfcfbe0c8983f14834b39220f0f4518fb93494d78b9ccc287a6e9dcdf99f",
+      "imports": [
+        "PolynomialFiberProduct",
+        "Mathlib.Algebra.Ring.GeomSum",
+        "Mathlib.FieldTheory.Finite.Basic"
+      ]
+    },
+    {
+      "module": "PadicCyclotomicOrder",
+      "path": "Proofs/PadicCyclotomicOrder.lean",
+      "source_sha256": "d6a17233f79257cce8d903c1628b3232d3dfdc119b876b91c18e399b2bf30172",
+      "imported_object_sha256": "d79b1956e593ae78053202d063b9bf0262deacad3223cc3e5ba7e150f0ee4b1d",
+      "imports": [
+        "PadicCyclotomicEisenstein",
+        "GeometricFiberProduct"
+      ]
+    },
+    {
+      "module": "CanonicalPadicCyclotomic",
+      "path": "Proofs/CanonicalPadicCyclotomic.lean",
+      "source_sha256": "7ec70c1c1f0952f119a7b88cfabc9efa9e6f5a88752211aafeb1b28824c9f0df",
+      "imported_object_sha256": "3e5a4bf261e1215118740c8001c04f09bbad142170485b2221329306af9b89e9",
+      "imports": [
+        "PadicCyclotomicOrder"
+      ]
+    },
+    {
+      "module": "ScaledSplitImage",
+      "path": "Proofs/ScaledSplitImage.lean",
+      "source_sha256": "232df6c7b1ad768e5d04b97e68fffa97f71e7f75a0b99e1c146d9aa36deb3ac9",
+      "imported_object_sha256": "6b2d1113b4c7fd2c32c69c521c37b9cbe291d3bcf78b7cf0cbd7c9b41a39a1ae",
+      "imports": [
+        "GeometricFiberProduct"
+      ]
+    },
+    {
+      "module": "PadicSplitImage",
+      "path": "Proofs/PadicSplitImage.lean",
+      "source_sha256": "9a6c43d06021ca9a9b07d30df65749b4aedf2998be86cd9d4468fa5513336b9a",
+      "imported_object_sha256": "0945c708af5a4e14a76bea878a31e271b8cb61bd1d0ebed79284e18c148ddcc5",
+      "imports": [
+        "ScaledSplitImage",
+        "Mathlib.NumberTheory.Padics.RingHoms"
+      ]
+    },
+    {
+      "module": "ActualPadicSplit",
+      "path": "Proofs/ActualPadicSplit.lean",
+      "source_sha256": "2ccd4f3c73b0275dad3f7a470639ce2fa54746ed427c4346d277daa57f76c17e",
+      "imported_object_sha256": "4b54dd830271844727b1d994a6b379471c8f2f2c17dd8b022a3263942b1e991e",
+      "imports": [
+        "CanonicalPadicCyclotomic",
+        "PadicSplitImage"
+      ]
+    },
+    {
+      "module": "LocalCoefficientSplit",
+      "path": "Proofs/LocalCoefficientSplit.lean",
+      "source_sha256": "bee961f84e223a34db0b0c0a8bf2399412bb9f15e3fa341d33631ef26b620373",
+      "imported_object_sha256": "5f77c092d555440a9d4d972b802bbc5b6099ff01fe089aa49bff3c9f4dd88995",
+      "imports": [
+        "AlgebraicPowerPropagation",
+        "ActualPadicSplit",
+        "Mathlib.RingTheory.Polynomial.Tower"
+      ]
+    },
+    {
+      "module": "FiniteHenselCongruence",
+      "path": "Proofs/FiniteHenselCongruence.lean",
+      "source_sha256": "46060b769234ec566bdc380808e1f8265fe86962bf99e31a6b0805eb1de3affc",
+      "imported_object_sha256": "3e6309310d2fe36e896629e191be6f5faeb8d52ee8df22ab8c5e115e0695e550",
+      "imports": [
+        "Mathlib.FieldTheory.Finite.Basic",
+        "Mathlib.Data.Nat.Choose.Dvd",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith"
+      ]
+    },
+    {
+      "module": "PadicUnitDichotomy",
+      "path": "Proofs/PadicUnitDichotomy.lean",
+      "source_sha256": "1dd2b5e2506f59ac4d1aafbe594defc277f9743077335c2311e6c17d2749a838",
+      "imported_object_sha256": "9e5fe279dc1930118ce2df5f1e655b8bbd9e1cf64f21f5d209f4b251bfb1e934",
+      "imports": [
+        "FiniteHenselCongruence",
+        "Mathlib.NumberTheory.Padics.Hensel",
+        "Mathlib.RingTheory.Polynomial.Eisenstein.Basic"
+      ]
+    },
+    {
+      "module": "PadicCoefficientLift",
+      "path": "Proofs/PadicCoefficientLift.lean",
+      "source_sha256": "7cf4b8b0fe88066b820174ae6762b298c52a81dd51f9abf54877be01ca191ec5",
+      "imported_object_sha256": "5bf4a2c3bbd4905d2f0940d022a8a6d66e129c3c604029f32e36e3066c4bea7f",
+      "imports": [
+        "LocalCoefficientNonsplit",
+        "LocalCoefficientSplit",
+        "PadicUnitDichotomy"
+      ]
+    },
+    {
+      "module": "PurePowerTrace",
+      "path": "Proofs/PurePowerTrace.lean",
+      "source_sha256": "c24ccb5ea69684c0dd33abfb6e6c3a716a6d58e9f0028b13acfcd31443370c5a",
+      "imported_object_sha256": "7330dd3e4d1a4cf02c2b8265fc29226179ee44eeb4a100ce134d5731c4815d3c",
+      "imports": [
+        "Mathlib.RingTheory.Trace.Basic",
+        "Mathlib.Algebra.GCDMonoid.IntegrallyClosed",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Data.Nat.ModEq"
+      ]
+    },
+    {
+      "module": "TraceDenominators",
+      "path": "Proofs/TraceDenominators.lean",
+      "source_sha256": "4062527ce7136579705e1f9e6e7622e644dedfdb99f486315cec792832e95d59",
+      "imported_object_sha256": "33a0b2107c50a5f750d3fe283bbf8c91b555ad6c65a3d94b02563ed0c40cd921",
+      "imports": [
+        "PurePowerTrace",
+        "Mathlib.FieldTheory.IntermediateField.Adjoin.Basic",
+        "Mathlib.Data.Rat.Lemmas"
+      ]
+    },
+    {
+      "module": "RationalLocalIntersection",
+      "path": "Proofs/RationalLocalIntersection.lean",
+      "source_sha256": "1e738ed0fb990feb68fcb8da4d785155b7043029f2601876a8de62416825d7f8",
+      "imported_object_sha256": "8de395b38669ab47399aa9c41d3f750309a2cb147fcc8d4d2be915e3ff91d1fc",
+      "imports": [
+        "Mathlib.NumberTheory.Padics.PadicIntegers",
+        "Mathlib.Data.Nat.Prime.Basic"
+      ]
+    },
+    {
+      "module": "IntegerValuationNormalization",
+      "path": "Proofs/IntegerValuationNormalization.lean",
+      "source_sha256": "74a690ece2a0e70680600bf5c0eb8e033189777b7a2beb6345d6ba97b2d5ef7e",
+      "imported_object_sha256": "4dde643db649699ba78cba0c40888fde4f0f9a87c672e2530f3d9623778579c4",
+      "imports": [
+        "Mathlib.NumberTheory.Padics.PadicVal.Basic"
+      ]
+    },
+    {
+      "module": "GlobalCoefficientAssembly",
+      "path": "Proofs/GlobalCoefficientAssembly.lean",
+      "source_sha256": "270979bf998f4edd55e3cd576cdf64862ada5cf6a7911fc7d7219743658508c5",
+      "imported_object_sha256": "6e025e6e27efc3d7e8966d7dcbf5dc138b715ebb44ffca34b8214af9de8cdf88",
+      "imports": [
+        "ConcreteParameterCoefficients",
+        "PadicCoefficientLift",
+        "TraceDenominators",
+        "RationalLocalIntersection",
+        "IntegerValuationNormalization",
+        "Mathlib.Algebra.Polynomial.OfFn",
+        "Mathlib.Data.Nat.Prime.Int"
+      ]
+    },
+    {
+      "module": "FiniteFourier",
+      "path": "Proofs/FiniteFourier.lean",
+      "source_sha256": "bdba267985dfe930d647a8720cf4755b4327e40c9c70e3fccc70572d0c66197b",
+      "imported_object_sha256": "89fe659b2115d972831a2a1fb7e54b1a1cda2616818b580196c56b2d23462648",
+      "imports": [
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Algebra.Group.AddChar",
+        "Mathlib.Data.ZMod.Basic",
+        "Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    {
+      "module": "FiniteTaylor",
+      "path": "Proofs/FiniteTaylor.lean",
+      "source_sha256": "45d0ec232b91265e4e9c5688836c171b080c6f9424f6f8239a77b0db3e56f6c0",
+      "imported_object_sha256": "dc7e126cfb304e934ecc68f038efaa05cefa00926bc5b6422c744451b53b6fc2",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.Analysis.Calculus.LocalExtr.Rolle",
+        "FiniteFourier",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    {
+      "module": "PillaiPowerBasis",
+      "path": "Proofs/PillaiPowerBasis.lean",
+      "source_sha256": "b55815cc73148e91fcbccb780baafd1c5d3d01ebfaf186a30c998af0fa720fb0",
+      "imported_object_sha256": "53d0eca3444622cb92b93741a703ec14c7f5d1e4a86607bc9eb08a08532e795b",
+      "imports": [
+        "FiniteFourier"
+      ]
+    },
+    {
+      "module": "TaylorFourier",
+      "path": "Proofs/TaylorFourier.lean",
+      "source_sha256": "717316e885279e9883e3a1abafa865bab4c88bb4e00e0650184d59644d34dafa",
+      "imported_object_sha256": "87e90d51fb50ce6ed68b2d6d622951d19496b9e0e8bfded61c4695fe0e68ab0a",
+      "imports": [
+        "FiniteTaylor",
+        "PillaiPowerBasis"
+      ]
+    },
+    {
+      "module": "HeightBounds",
+      "path": "Proofs/HeightBounds.lean",
+      "source_sha256": "b8771ccd2c912f9dfe1647255a713a44f6f21a7393e476cb79f03167b0c58158",
+      "imported_object_sha256": "e237ba147b44532008329141e6fc65b7df8d4b6e38dd51eba502cb42e13f81f7",
+      "imports": [
+        "TaylorFourier"
+      ]
+    },
+    {
+      "module": "IntegralResultant",
+      "path": "Proofs/IntegralResultant.lean",
+      "source_sha256": "bf4bb45580a4faf9de6264991c9e931d86269b0c69aad560911e08fc0e89c10f",
+      "imported_object_sha256": "5d77d14ae2bf61a28b5c43f0ecf1234087f303c98dc86ff5c873a489971db187",
+      "imports": [
+        "PillaiPowerBasis",
+        "Mathlib.RingTheory.Polynomial.Resultant.Basic",
+        "Mathlib.FieldTheory.Minpoly.Field"
+      ]
+    },
+    {
+      "module": "ConjugateEquation",
+      "path": "Proofs/ConjugateEquation.lean",
+      "source_sha256": "33b63e5140b02b64df5d4dc9abfc4a77eb68811bd9b37641acc5740b62341eb9",
+      "imported_object_sha256": "3ce4370c15879c69eaf83c4d8d6dbfe4b8ed667dd7a909431806dc433ed3928b",
+      "imports": [
+        "IntegralResultant"
+      ]
+    },
+    {
+      "module": "PowerSamples",
+      "path": "Proofs/PowerSamples.lean",
+      "source_sha256": "43d609ad714e8442f870226bacc0bb9c5dc41a7a6a81542e830fd6bd91ab11fb",
+      "imported_object_sha256": "67905a93e692a76d723cebd4614b68d9995cd9107ce960a55d13dcad18d8318f",
+      "imports": [
+        "HeightBounds",
+        "ConjugateEquation"
+      ]
+    },
+    {
+      "module": "CoefficientBounds",
+      "path": "Proofs/CoefficientBounds.lean",
+      "source_sha256": "da2acb6d25de4ea7499c28ac726b6dae898698e81dfb0befe18537bb903bce21",
+      "imported_object_sha256": "7b045fc12eb31b47dbf3cfbafa34c93ac447469836aaf7337f99df7e2aa83ea8",
+      "imports": [
+        "PowerSamples"
+      ]
+    },
+    {
+      "module": "FrobeniusReduction",
+      "path": "Proofs/FrobeniusReduction.lean",
+      "source_sha256": "03ea91207d210c85aecc651325bef3b33a621006f7fb8cb8d609afed2b5b3ebb",
+      "imported_object_sha256": "d34da115b82d0ea31b1872e5dad595ff1430f189610c0303515a90471abbe4b2",
+      "imports": [
+        "ConjugateEquation",
+        "Mathlib.FieldTheory.Finite.Basic"
+      ]
+    },
+    {
+      "module": "IntegralSparsity",
+      "path": "Proofs/IntegralSparsity.lean",
+      "source_sha256": "15234531b801cbcbac26118f05118a5eea85d6477766133e6537664810677415",
+      "imported_object_sha256": "3210d2d0fc6c735da4b3bb0766489a78396f336496202851d878c7ad36c7fc07",
+      "imports": [
+        "CoefficientBounds",
+        "FrobeniusReduction"
+      ]
+    },
+    {
+      "module": "FiniteOrderRigidity",
+      "path": "Proofs/FiniteOrderRigidity.lean",
+      "source_sha256": "01e7fa4bbbe97b268f1566df64eaefb28641c74367866318bdaa618b411bb0f1",
+      "imported_object_sha256": "afc9f3cc24a2c297ab6fcbd7a346ed827a0b9ec9e875b11758b0de0c50c40d9c",
+      "imports": [
+        "Mathlib.Order.Hom.Set",
+        "Mathlib.Data.Fintype.Order",
+        "Mathlib.Analysis.Convex.SpecificFunctions.Basic"
+      ]
+    },
+    {
+      "module": "SparseCircle",
+      "path": "Proofs/SparseCircle.lean",
+      "source_sha256": "ee22e55846edc543ef873c7538440b5fe578f92d1a09edb5a8cfdb69345d1d6b",
+      "imported_object_sha256": "7016fbc9a654b971aacb64ad0ae6a8740bc9b6ccdf3fea41ff09194a171736a9",
+      "imports": [
+        "FiniteOrderRigidity",
+        "PowerSamples"
+      ]
+    },
+    {
+      "module": "LargeHeightExclusion",
+      "path": "Proofs/LargeHeightExclusion.lean",
+      "source_sha256": "fb787196cfbc388263c6abe0eca87dc325e1a7f6b5a632f3e0888a9ad77d7fa7",
+      "imported_object_sha256": "c0779c351dd64a4c5a035c1ae33e8ca1a76df667107bc8f0608eaa816c74ad34",
+      "imports": [
+        "PowerSamples",
+        "Mathlib.RingTheory.RootsOfUnity.Complex"
+      ]
+    },
+    {
+      "module": "IntegralPowerOrder",
+      "path": "Proofs/IntegralPowerOrder.lean",
+      "source_sha256": "b33f0400c21720595a8937922d9569b5d26d2fa4e5345019f2fb82848ec3ef4f",
+      "imported_object_sha256": "0f18adcb7fbc81ed149a8e4881b0bc0b62d8552673aecb42e927b23aa27c1d63",
+      "imports": [
+        "IntegralSparsity",
+        "SparseCircle",
+        "LargeHeightExclusion"
+      ]
+    },
+    {
+      "module": "SignedRealExclusion",
+      "path": "Proofs/SignedRealExclusion.lean",
+      "source_sha256": "b2853b6055578ec6d6caa8f4535f6fb2e2a51a436a3017e18a5f31c8ed7ffa06",
+      "imported_object_sha256": "9fba275b55b67b9765de8c74027d71190e7db0991dd0707ca678a2cbf56b94a1",
+      "imports": [
+        "IntegralPowerOrder",
+        "AlgebraicPowerPropagation",
+        "Mathlib.Algebra.Group.Irreducible.Lemmas",
+        "Mathlib.Algebra.Polynomial.AlgebraMap",
+        "Mathlib.Algebra.Ring.Parity",
+        "Mathlib.Algebra.Ring.Units",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.Nat.Prime.Basic"
+      ]
+    },
+    {
+      "module": "CapelliPureFieldBridge",
+      "path": "Proofs/CapelliPureFieldBridge.lean",
+      "source_sha256": "79a7a7c91e1652d224a1baf57b069e7400597d66dbd9cc08c16a7311e59ff92d",
+      "imported_object_sha256": "d82d8f0922a4fdd39833db3d732a5ccb9d4eb9aebab008a76ffed5aa8b9c2769",
+      "imports": [
+        "Mathlib.FieldTheory.IntermediateField.Adjoin.Basic",
+        "Mathlib.FieldTheory.KummerPolynomial",
+        "Mathlib.Algebra.Ring.Parity",
+        "Mathlib.Data.Nat.Prime.Basic"
+      ]
+    },
+    {
+      "module": "ScopedPillaiIrreducibility",
+      "path": "Proofs/ScopedPillaiIrreducibility.lean",
+      "source_sha256": "538e0f758693923e55a9cc90c014a296a93a08d17e9420f33e7ffcd9460585bb",
+      "imported_object_sha256": "3cd8243416601fd3355d68285a71c52a7f86d2837981a3db28acda049eb1966a",
+      "imports": [
+        "GlobalCoefficientAssembly",
+        "SignedRealExclusion",
+        "CapelliPureFieldBridge"
+      ]
+    },
+    {
+      "module": "ScopedPillaiAudit",
+      "path": "Proofs/ScopedPillaiAudit.lean",
+      "source_sha256": "1cdb1de7d3ff6ed93f3ef4bce42f593fef36b0a1e07698a6bbc0a1cceffc2aa1",
+      "imported_object_sha256": "9fe071d7a9e04f9a309c3fa3438d29608a7e98d2d5ddd45e1a02d7d5ed6051fb",
+      "imports": [
+        "ScopedPillaiIrreducibility"
+      ]
+    }
+  ]
+}

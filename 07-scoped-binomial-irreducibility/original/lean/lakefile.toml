@@ -1,0 +1,67 @@
+name = "scopedPillai"
+version = "0.1.0"
+defaultTargets = ["ScopedPillai"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "905b95818eb32af7874a58b427f50c1711a5e96c"
+
+[[lean_lib]]
+name = "ScopedPillai"
+srcDir = "Proofs"
+roots = [
+  "EisensteinIntegralClosure",
+  "MonicEisensteinClosure",
+  "NormalizedParameterField",
+  "ReducedAdjoinCoordinates",
+  "AlgebraicPowerPropagation",
+  "GenericBinomialResidue",
+  "GenericBinomialAffine",
+  "GenericBinomialConductor",
+  "FiniteNewtonDescent",
+  "GenericBinomialNewton",
+  "GenericBinomialRamified",
+  "GenericBinomialDescent",
+  "ConcreteParameterCoefficients",
+  "ReducedEisensteinCoordinates",
+  "IntegralTranslateLift",
+  "LocalCoefficientNonsplit",
+  "PadicCyclotomicEisenstein",
+  "PolynomialFiberProduct",
+  "GeometricFiberProduct",
+  "PadicCyclotomicOrder",
+  "CanonicalPadicCyclotomic",
+  "ScaledSplitImage",
+  "PadicSplitImage",
+  "ActualPadicSplit",
+  "LocalCoefficientSplit",
+  "FiniteHenselCongruence",
+  "PadicUnitDichotomy",
+  "PadicCoefficientLift",
+  "PurePowerTrace",
+  "TraceDenominators",
+  "RationalLocalIntersection",
+  "IntegerValuationNormalization",
+  "GlobalCoefficientAssembly",
+  "FiniteFourier",
+  "FiniteTaylor",
+  "PillaiPowerBasis",
+  "TaylorFourier",
+  "HeightBounds",
+  "IntegralResultant",
+  "ConjugateEquation",
+  "PowerSamples",
+  "CoefficientBounds",
+  "FrobeniusReduction",
+  "IntegralSparsity",
+  "FiniteOrderRigidity",
+  "SparseCircle",
+  "LargeHeightExclusion",
+  "IntegralPowerOrder",
+  "SignedRealExclusion",
+  "CapelliPureFieldBridge",
+  "ScopedPillaiIrreducibility",
+  "ScopedPillaiAudit",
+]
