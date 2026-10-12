@@ -28,21 +28,27 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Seven selected research targets (status updated 12 October 2026). The active roster distinguishes current proof work from checked checkpoints and newly opened investigations; it does not imply that seven proof or verification jobs are running.
+One selected research target (status updated 12 October 2026). The previous seven active directions have been retired to the shelved section below, with their results and checkpoints retained.
 
-- **[Nakai conjecture](https://arxiv.org/abs/2604.24508): checked ordinary-homogeneous theorem; broader investigation active.** The Hessian nonmembership bridge and full unrestricted-word operator separation are now formalized for ordinary homogeneous polynomials of degree at least two in at least three variables over any characteristic-zero field with finite-dimensional gradient quotient. The reviewed [addendum in folder 09](09-nakai-quartic-certificate/homogeneous-addendum/README.md) records the exact theorem and independent rebuild. The fixed-quartic certificate remains unchanged. Weighted and general nonhomogeneous cases are outside this completed formal scope; historical novelty is unestablished, and the unrestricted conjecture remains unresolved here.
-- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187): checked algebraic checkpoint; analytic bridge pending.** The algebraic proof component has been checked. The analytic bridge needed for the intended result remains open; no full bounded-negativity solution is established.
-- **[Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md): newly activated from queue item 24.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712): newly activated from queue item 25.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Dürer edge-unfolding conjecture](https://arxiv.org/abs/2607.09606): checked planar rotation-center theorem; unfolding geometry pending.** The sharp distance bound and examples attaining it are fully formalized in [folder 11](11-sharp-rotation-center-bound/README.md). The theorem concerns actual finite planar rotation maps; a chain-specific separation margin and a successful actual-edge unfolding are not established. Historical novelty remains unestablished, and the general edge-unfolding conjecture remains unresolved here.
-- **[Square peg problem](https://arxiv.org/abs/2203.02613): newly activated from queue item 27.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Chern second-gap conjecture for minimal hypersurfaces](https://arxiv.org/abs/2610.05276): newly activated from queue item 28.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Perfect one-factorization of K64](https://arxiv.org/pdf/2607.09459v1#page=1) (finite open case associated with queue item 75): bounded feasibility pilot starting; no result yet.** The goal is a complete partition of the 2,016 edges of the complete graph on 64 vertices into exactly 63 perfect matchings, each containing 32 edges, such that every one of the 1,953 unordered pairs of distinct matchings has a union that is a single Hamiltonian cycle through all 64 vertices. The July 2026 primary-source paper linked here lists 64 as the smallest open order.
 
-The five newly activated targets follow the saved queue order. Only completed, checked proofs will be added to the collection; experimental artifacts and research-only proof sources are not published. Prior-art review remains separate from proof verification and is required before any novelty claim.
+The selected problem is the entire finite K64 case. Completion requires a solution to that full statement and a Lean-verified proof, together with prior-art review; supporting lemmas, partial factorizations and favorable search scores do not count as completion. No construction, completed proof or novelty claim is established. The universal Kotzig conjecture remains unresolved and waiting in queue item 75.
+
+The stricter selection process prioritizes precise open problems with a plausible route to a complete result. Only completed, checked proofs will be added to the collection; experimental artifacts and research-only proof sources are not published. Prior-art review remains separate from proof verification and is required before any novelty claim.
 
 Completed scoped papers [08 (Euler scaling)](08-euler-critical-limit/README.md), [09 (the mixed-quartic and homogeneous Nakai certificates)](09-nakai-quartic-certificate/README.md), [10 (polynomial-cylinder transitivity)](10-polynomial-cylinder-transitivity/README.md), and [11 (the sharp rotation-center bound)](11-sharp-rotation-center-bound/README.md) remain in the results collection above with their existing scope and novelty limitations. This research rotation does not change those completed papers or settle their broader conjectures.
 
 ### Shelved research
+
+Retired from the active roster on 12 October 2026 after publication of folder 11, with their completed results and research checkpoints retained:
+
+- **[Nakai conjecture](https://arxiv.org/abs/2604.24508): checked ordinary-homogeneous theorem; broader investigation retired.** The Hessian nonmembership bridge and full unrestricted-word operator separation are now formalized for ordinary homogeneous polynomials of degree at least two in at least three variables over any characteristic-zero field with finite-dimensional gradient quotient. The reviewed [addendum in folder 09](09-nakai-quartic-certificate/homogeneous-addendum/README.md) records the exact theorem and independent rebuild. The fixed-quartic certificate remains unchanged. Weighted and general nonhomogeneous cases are outside this completed formal scope; historical novelty is unestablished, and the unrestricted conjecture remains unresolved here.
+- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187): checked algebraic checkpoint; analytic bridge pending.** The algebraic proof component has been checked. The analytic bridge needed for the intended result remains open; no full bounded-negativity solution is established.
+- **[Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md): shelved; former queue item 24.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712): shelved; former queue item 25.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Dürer edge-unfolding conjecture](https://arxiv.org/abs/2607.09606): checked planar rotation-center theorem; unfolding geometry pending.** The sharp distance bound and examples attaining it are fully formalized in [folder 11](11-sharp-rotation-center-bound/README.md). The theorem concerns actual finite planar rotation maps; a chain-specific separation margin and a successful actual-edge unfolding are not established. Historical novelty remains unestablished, and the general edge-unfolding conjecture remains unresolved here.
+- **[Square peg problem](https://arxiv.org/abs/2203.02613): shelved; former queue item 27.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Chern second-gap conjecture for minimal hypersurfaces](https://arxiv.org/abs/2610.05276): shelved; former queue item 28.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
 
 Rotated out of the active roster on 12 October 2026, with their checkpoints retained:
 
@@ -125,7 +131,7 @@ The following targets are waiting, in the order listed. Their inclusion does not
 72. [The one-third–two-thirds conjecture for finite posets](https://arxiv.org/abs/2609.30888)
 73. [Vizing's domination-product conjecture](https://arxiv.org/abs/2607.01109)
 74. [Reed's omega–delta–chi conjecture](https://arxiv.org/abs/2502.10147)
-75. [Kotzig's perfect one-factorization conjecture](https://arxiv.org/abs/2607.09459)
+75. [Kotzig's perfect one-factorization conjecture](https://arxiv.org/abs/2607.09459) — The finite K64 case is active above; the universal conjecture remains waiting.
 76. [Stanley's chromatic-symmetric-function conjecture for trees](https://arxiv.org/abs/2608.18179)
 77. [Conway's planar thrackle conjecture](https://arxiv.org/abs/2506.11808)
 78. [Bermond–Thomassen conjecture](https://arxiv.org/abs/2608.12948)
