@@ -1,0 +1,3 @@
+'EulerScalingAnalytic.criticalLimitOne_lt_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.tendsto_approximant_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.not_tendsto_approximant_pow_two_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]

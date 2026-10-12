@@ -1,0 +1,68 @@
+Lean (version 4.32.2, x86_64-unknown-linux-gnu, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)
+Mathlib revision: 905b95818eb32af7874a58b427f50c1711a5e96c
+All twelve local modules are rebuilt from source. Upstream caches are reused.
+
+BUILD EndpointWeights
+'EulerScalingAnalytic.weight_endpoint_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.endpoint_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS EndpointWeights
+
+BUILD ParameterDecay
+EulerScaling.scaling_log_identity (n p : ℕ) (hn : 1 ≤ n) : Real.log (↑n ^ 3 / 2 ^ p) = 3 * Real.log ↑n - ↑p * Real.log 2
+EulerScaling.parameter_quotient_identity (n p : ℕ) (hn : 1 ≤ n) :
+  ↑p / ↑n = (3 * (Real.log ↑n / ↑n) - Real.log (↑n ^ 3 / 2 ^ p) / ↑n) / Real.log 2
+EulerScaling.tendsto_parameter_div_scale_zero (n p : ℕ → ℕ) (hn_pos : ∀ (ℓ : ℕ), 1 ≤ n ℓ) (hn : Tendsto n atTop atTop)
+  (lambda0 : ℝ) (hlambda0 : 0 < lambda0) (hlambda : Tendsto (fun ℓ => ↑(n ℓ) ^ 3 / 2 ^ p ℓ) atTop (𝓝 lambda0)) :
+  Tendsto (fun ℓ => ↑(p ℓ) / ↑(n ℓ)) atTop (𝓝 0)
+'EulerScaling.scaling_log_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScaling.parameter_quotient_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScaling.tendsto_parameter_div_scale_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS ParameterDecay
+
+BUILD BesselSeries
+'EulerScalingAnalytic.summable_besselTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS BesselSeries
+
+BUILD FactorLimit
+'EulerScalingAnalytic.endpointFactor_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.tendsto_endpointFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS FactorLimit
+
+BUILD DenominatorLimit
+'EulerScalingAnalytic.tendsto_normalizedDenominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS DenominatorLimit
+
+BUILD HarmonicGap
+'EulerScalingAnalytic.harmonic_gap_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.harmonic_gap_double_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS HarmonicGap
+
+BUILD WeightedSeries
+'EulerScalingAnalytic.summable_secondMoment_besselTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.summable_harmonic_besselTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.tendsto_harmonic_endpoint_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS WeightedSeries
+
+BUILD BaselineLimit
+'EulerScalingAnalytic.tendsto_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS BaselineLimit
+
+BUILD CorrectionLimit
+'EulerScalingAnalytic.tendsto_weightedCorrection_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS CorrectionLimit
+
+BUILD CriticalLimit
+'EulerScalingAnalytic.tendsto_approximant_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS CriticalLimit
+
+BUILD ExpectedSpec
+'critical_expected_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS ExpectedSpec
+
+BUILD ConcreteBias
+'EulerScalingAnalytic.criticalLimitOne_lt_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.tendsto_approximant_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EulerScalingAnalytic.not_tendsto_approximant_pow_two_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS ConcreteBias
+
+PASS all 12 local modules

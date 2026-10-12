@@ -1,0 +1,5 @@
+mathlib tag: v4.32.2
+mathlib commit: 905b95818eb32af7874a58b427f50c1711a5e96c
+lean version: v4.32.2
+lean commit: f3b06c705e6c85f5314019d5d3baab0fec5b580c
+mathlib manifest SHA256: 015c7e00ead0f05f2a72b32d9bdef782d4689d05a6297f0ceb0ab5d196c164bd
