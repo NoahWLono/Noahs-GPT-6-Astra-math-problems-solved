@@ -26,19 +26,29 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Current research-only WIP (seven active targets; status updated 12 October 2026):
+Seven selected research targets (status updated 12 October 2026). The active roster distinguishes current proof work from checked checkpoints and newly opened investigations; it does not imply that seven proof or verification jobs are running.
 
-- **koalaIRS12 soundness benchmark at better.codes:** a profile-interval counting bound has been independently checked, but the full global soundness benchmark remains open. No eligible improved benchmark score is established.
-- **Total coloring conjecture:** a paper-level argument gives the exact repair distance for a constructed family. Lean verification and novelty review remain pending; the full Δ+2 conjecture for finite simple graphs remains unresolved here.
-- **[Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5):** activated from queue item 18. Initial investigation; no verified result is established.
-- **[Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1):** activated from queue item 20. Initial investigation; no verified result is established.
-- **[Nakai conjecture](https://arxiv.org/abs/2604.24508):** the completed fixed-quartic full-operator separation certificate is published in [folder 09](09-nakai-quartic-certificate/README.md). The broader ordinary-homogeneous theorem is written-only, and historical novelty is unestablished. The unrestricted conjecture remains open here.
-- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187):** activated from queue item 22. Initial investigation; no verified result is established.
-- **[Zariski cancellation for complex affine three-space](https://arxiv.org/abs/2208.14736):** the completed arbitrary-polynomial cylinder transitivity theorem is published in [folder 10](10-polynomial-cylinder-transitivity/README.md). It proves a thirteen-move pointwise bound, not cancellation; historical novelty remains provisional. The three-dimensional cancellation question remains an active research target and is unresolved here.
+- **[Nakai conjecture](https://arxiv.org/abs/2604.24508): active proof work.** The conditional ordinary-homogeneous argument has been checked, and work is extending it by formalizing the missing Hessian/socle bridge. That bridge is still pending. The completed fixed-quartic full-operator separation certificate remains published in [folder 09](09-nakai-quartic-certificate/README.md); the broader homogeneous theorem is not yet fully formalized. Historical novelty is unestablished, and the unrestricted conjecture remains unresolved here.
+- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187): checked algebraic checkpoint; analytic bridge pending.** The algebraic proof component has been checked. The analytic bridge needed for the intended result remains open; no full bounded-negativity solution is established.
+- **[Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md): newly activated from queue item 24.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712): newly activated from queue item 25.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Dürer edge-unfolding conjecture](https://arxiv.org/abs/2607.09606): newly activated from queue item 26.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Square peg problem](https://arxiv.org/abs/2203.02613): newly activated from queue item 27.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
+- **[Chern second-gap conjecture for minimal hypersurfaces](https://arxiv.org/abs/2610.05276): newly activated from queue item 28.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
 
-These are research directions, not completed solutions. Only completed, checked proofs will be added to the collection; experimental artifacts are not published. The three retained targets (koalaIRS12, total coloring and Markov-number uniqueness) will prioritize genuinely novel results where feasible, with prior-art review before any novelty claim. The newly activated targets retain their saved queue order; source review and assessment of feasible scoped approaches are part of the initial investigation.
+The five newly activated targets follow the saved queue order. Only completed, checked proofs will be added to the collection; experimental artifacts and research-only proof sources are not published. Prior-art review remains separate from proof verification and is required before any novelty claim.
+
+Completed scoped papers [08 (Euler scaling)](08-euler-critical-limit/README.md), [09 (the fixed-quartic Nakai certificate)](09-nakai-quartic-certificate/README.md), and [10 (polynomial-cylinder transitivity)](10-polynomial-cylinder-transitivity/README.md) remain in the results collection above with their existing scope and novelty limitations. This research rotation does not change those completed papers or settle their broader conjectures.
 
 ### Shelved research
+
+Rotated out of the active roster on 12 October 2026, with their checkpoints retained:
+
+- **[Zariski cancellation for complex affine three-space](https://arxiv.org/abs/2208.14736):** the completed arbitrary-polynomial cylinder transitivity theorem is published in [folder 10](10-polynomial-cylinder-transitivity/README.md), with a thirteen-move pointwise bound. No new cancellation proof attempt is running. Affine-space cancellation remains unresolved, and historical novelty of the scoped result remains provisional.
+- **[Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5):** supporting results have been checked. The larger verification effort is paused pending resource-feasibility assessment; the full uniqueness conjecture remains unresolved here.
+- **[Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1):** a candidate argument is recorded, but the main formal proof remains pending. No completed solution is claimed.
+- **Total coloring conjecture:** a paper-level argument gives the exact repair distance for a constructed family. Lean verification and novelty review remain pending; the full Δ+2 conjecture for finite simple graphs remains unresolved here.
+- **koalaIRS12 soundness benchmark at better.codes:** a profile-interval counting bound has been independently checked. Global improvement remains blocked by auxiliary cases; no eligible improved benchmark score is established.
 
 Paused on 12 October 2026 pending a materially stronger route:
 
@@ -63,11 +73,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Algebra, geometry and topology**
 
-24. [Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md)
-25. [Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712)
-26. [Dürer edge-unfolding conjecture](https://arxiv.org/abs/2607.09606)
-27. [Square peg problem](https://arxiv.org/abs/2203.02613)
-28. [Chern second-gap conjecture for minimal hypersurfaces](https://arxiv.org/abs/2610.05276)
 29. [Borsuk's problem in four dimensions](https://arxiv.org/abs/2605.19068)
 30. [Five-dimensional kissing number](https://doi.org/10.1007/s00454-026-00841-x)
 31. [Finitely presented groups of intermediate growth](https://jep.centre-mersenne.org/item/10.5802/jep.295.pdf)
