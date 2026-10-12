@@ -1,0 +1,20 @@
+lean/ZariskiDifference.lean:49:41: warning: This simp argument is unused:
+  Nat.cast_one
+
+Hint: Omit it from the simp argument list.
+  simp only [coeff_derivative, zero_add, N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵n̵e̵,̵ ̵mul_one,
+  ̵  ̵ ̵ ̵derivative_add, derivative_X, derivative_C,
+  ̲  ̲ ̲ ̲add_zero, one_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/ZariskiDifference.lean:49:55: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  simp only [coeff_derivative, zero_add, Nat.cast_one, m̵u̵l̵_̵o̵n̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵derivative_add, derivative_X, derivative_C,
+  ̲  ̲ ̲ ̲add_zero, one_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ZariskiCylinder.difference_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZariskiCylinder.divided_eval_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

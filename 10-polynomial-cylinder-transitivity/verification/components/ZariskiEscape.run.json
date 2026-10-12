@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiEscape",
+  "exit_code": 0,
+  "elapsed_seconds": 2.761,
+  "max_rss_kib": 1287652,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "2079a3d047e3c20f154386c3a35d07ec7167e08ce39f11697822c8bdfa6c00bf",
+  "object_sha256": "25e57808b758e04ab8b33a13c6a66309ec5409fe9a5f3dcf362f6909a57a4683"
+}

@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiActions",
+  "exit_code": 0,
+  "elapsed_seconds": 2.855,
+  "max_rss_kib": 1271164,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "486354b409286665c44c251229be5e6e82b86eb45ab1c16b9bf91aab074b2228",
+  "object_sha256": "816afe8a91f76de44418f11a2163d99bfb3ca8fbc62daf2881dbb102fd0dbf44"
+}

@@ -1,0 +1,393 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{enumitem,needspace}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={Four additive group actions on a family of affine cylinders},pdfsubject={Explicit polynomial additive actions and a thirteen-move transitivity bound}}
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\LARGE\@title\par}\vskip1.1em
+    {\large\@date\par}
+  \end{center}\vskip0.7em}
+\makeatother
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\newcommand{\A}{\mathbb A}
+\newcommand{\Ga}{\mathbb G_a}
+\newcommand{\C}{\mathbb C}
+\newcommand{\SAut}{\operatorname{SAut}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\dd}{\mathcal H}
+\newcommand{\Y}{\mathcal Y_P}
+\newcommand{\X}{\mathcal X_P}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Four additive group actions on a family of affine cylinders}
+\author{}
+\date{October 12, 2026}
+\begin{document}
+\maketitle
+\vspace{-0.4em}
+\begin{abstract}
+For every nonconstant polynomial $P\in\C[t]$, we give four explicit polynomial additive-group actions on the cylinder over
+\[
+\mathcal X_P=\{x^2y+z^2+x+P(t)=0\}\subset\A^4_{\C}.
+\]
+Their generated group is transitive. More precisely, any two points can be connected by at most thirteen evaluations of the four actions, independently of $\deg P$. The construction extends Poloni's four-action theorem for the Russell cubic, corresponding to $P(t)=t^3$, using polynomial divided differences and an orbit argument that also handles critical values of $P$. Flexibility and infinite transitivity of the special automorphism group then follow from the established theorem of Arzhantsev, Flenner, Kaliman, Kutzschebauch, and Zaidenberg. The proof works over every algebraically closed field of characteristic zero. The result concerns automorphism orbits on cylinders; it does not resolve affine-space cancellation.
+\end{abstract}
+
+\section{Statement and relation to prior work}
+
+Let $k$ be an algebraically closed field of characteristic zero, and let $P\in k[t]$ be nonconstant. All points and action parameters below are $k$-valued. Write
+\[
+\X=V(x^2y+z^2+x+P(t))\subset\A^4_k.
+\]
+The polynomial automorphism
+\begin{equation}\label{eq:theta}
+\Theta(x,y,z,t,u)=(x,y+u^2,z-xu,t,u)
+\end{equation}
+identifies $\X\times\A^1$ with the hypersurface
+\begin{equation}\label{eq:adapted}
+\Y=V(F)\subset\A^5_k,\qquad
+F=x^2y+2xzu+z^2+x+P(t).
+\end{equation}
+Indeed, substitution in $F$ cancels the terms involving $u$; the inverse of $\Theta$ is $(x,y,z,t,u)\mapsto(x,y-u^2,z+xu,t,u)$.
+
+Poloni proves the four-action transitivity theorem for $P(t)=t^3$ in \cite[Theorem~1.4]{Poloni}. The adapted embedding, the auxiliary polynomials used below, and the cubic infinitesimal generator come directly from that construction. The contribution here is the arbitrary-nonconstant-$P$ extension, a global polynomial formula for the fourth action, and the displayed quantitative orbit bound. A primary-literature search completed on October 12, 2026 found no statement of this full extension; that search is not a certification of mathematical novelty. No claim of priority is made.
+
+\Needspace{15\baselineskip}
+\begin{theorem}\label{thm:main}
+There are four explicit polynomial $\Ga$-actions $\tau,Z,T,E$ on $\A^5_k$ preserving $F$ such that the subgroup
+\[
+G_P=\langle\tau_s,Z_s,T_s,E_s\mid s\in k\rangle\subset\Aut(\A^5_k)
+\]
+acts transitively on $\Y$. A move means applying one of these four maps for one scalar parameter. Then:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.2em,itemsep=0.15em]
+\item two points with the same nonzero $x$-coordinate can be connected in at most three moves;
+\item two points with nonzero $x$-coordinates can be connected in at most seven moves;
+\item every point can be moved into $\{x\ne0\}$ in at most three moves;
+\item any two points of $\Y$ can be connected in at most thirteen moves.
+\end{enumerate}
+The four actions on $\X\times\A^1$ are obtained by conjugating by $\Theta$.
+\end{theorem}
+
+
+
+\paragraph{Verification status.}
+The companion Lean formalization checks the four coordinate maps as multivariate polynomials, their addition laws and preservation identities, and the at-most-thirteen-move pointwise transitivity theorem for the original cylinder. The exact scope and checked endpoints are recorded in Section~\ref{sec:formal}. Smoothness, irreducibility, the algebraic-geometric interpretation, and the flexibility and infinite-transitivity corollary remain ordinary mathematical deductions, with the last two using \cite{AFKKZ}.
+
+\section{Polynomial divided differences}
+
+All apparently divided expressions in the action formulas will mean a polynomial, including at points where the displayed denominator vanishes. For
+\[
+P(t)=\sum_{j=0}^{d}p_jt^j,
+\]
+define
+\begin{equation}\label{eq:hpoly}
+\dd_P(t,q,s)
+=s\sum_{j=1}^{d}p_j\sum_{i=0}^{j-1}(t+qs)^{j-1-i}t^i
+\quad\in k[t,q,s].
+\end{equation}
+The notation is independent of the choice of $d\ge\deg P$, since extra coefficients vanish.
+
+\begin{lemma}\label{lem:divided}
+The following are polynomial identities:
+\begin{align}
+q\dd_P(t,q,s)&=P(t+qs)-P(t),\label{eq:difference}\\
+\dd_P(t,0,s)&=sP'(t),\label{eq:zeroq}\\
+\dd_P(t,q,0)&=0,\label{eq:zeros}\\
+\dd_P(t,q,s+r)&=\dd_P(t,q,s)+\dd_P(t+qs,q,r).\label{eq:cocycle}
+\end{align}
+If $q_0\ne0$ is a scalar, then $s\mapsto\dd_P(t_0,q_0,s)$ is a nonconstant polynomial and is surjective on $k$.
+\end{lemma}
+
+\begin{proof}
+Equation~\eqref{eq:difference} is the difference-of-powers identity, applied term by term. Specializing $q=0$ in \eqref{eq:hpoly} gives \eqref{eq:zeroq}; setting $s=0$ gives \eqref{eq:zeros}. To obtain \eqref{eq:cocycle}, multiply both sides by the indeterminate $q$, apply \eqref{eq:difference}, and telescope:
+\[
+P(t+q(s+r))-P(t)
+=\bigl(P(t+qs)-P(t)\bigr)
+ +\bigl(P(t+qs+qr)-P(t+qs)\bigr).
+\]
+Cancel $q$ in the polynomial domain $k[t,q,s,r]$. Thus the cocycle identity remains valid after every specialization, including $q=0$.
+
+If $d=\deg P\ge1$, the coefficient of $s^d$ in $\dd_P(t_0,q_0,s)$ is $p_dq_0^{d-1}\ne0$. Its degree is therefore $d$. Every nonconstant polynomial over an algebraically closed field takes every value, proving the last assertion.
+\end{proof}
+
+\section{The four polynomial actions}\label{sec:actions}
+
+Put
+\begin{equation}\label{eq:acm}
+a=1+xy+2zu,\qquad c=zy-2au,\qquad m=zy+2au.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:relations}
+F=ax+z^2+P(t),\qquad m+c=2zy.
+\end{equation}
+The first three actions are
+\begin{align}
+\tau_s(x,y,z,t,u)
+ &=\bigl(x,\ y+2su+s^2,\ z-sx,\ t,\ u+s\bigr),\label{eq:tau}\\
+Z_s(x,y,z,t,u)
+ &=\bigl(x,\ y-2s(z+xu)-s^2x^2,\ z+sx^2,\ t,\ u\bigr),\label{eq:z}\\
+T_s(x,y,z,t,u)
+ &=\bigl(x,\ y-\dd_P(t,x^2,s),\ z,\ t+sx^2,\ u\bigr).\label{eq:t}
+\end{align}
+For the fourth action, set $q=2ac$ and $h=\dd_P(t,q,s)$, evaluated at the input point, and define
+\begin{equation}\label{eq:e}
+E_s(x,y,z,t,u)
+=\bigl(x+2mh-4ay^2h^2,\ y,\ z-2ayh,\ t+qs,\ u-y^2h\bigr).
+\end{equation}
+Every coordinate is a polynomial in the five input coordinates and $s$. In particular, no localization or case-by-case division is used in these definitions.
+
+\begin{proposition}\label{prop:standard}
+Each of $\tau,Z,T$ is a polynomial $\Ga$-action on $\A^5_k$, fixes $x$, and preserves $F$.
+\end{proposition}
+
+\begin{proof}
+Conjugating $\tau$ by \eqref{eq:theta} identifies it with translation in the cylinder coordinate $u$, so it has the asserted properties. For $Z$, the variables $x,t,u$ remain fixed; its successive shifts of $z$ add. The successive changes of $y$ are
+\[
+-2s(z+xu)-s^2x^2-2r(z+sx^2+xu)-r^2x^2
+=-2(s+r)(z+xu)-(s+r)^2x^2.
+\]
+Hence $Z_rZ_s=Z_{s+r}$. The change of $x^2y$ under $Z_s$ cancels the change of $z^2+2xzu$, so $F$ is fixed.
+
+For $T$, the variables $x,z,u$ stay fixed. The addition law follows from \eqref{eq:cocycle} with $q=x^2$. Equation~\eqref{eq:difference} says that the change of $x^2y$ is the negative of the change of $P(t)$, proving preservation of $F$. All three maps at parameter zero are the identity. Their inverses are the same maps with the negative parameter.
+\end{proof}
+
+\begin{proposition}\label{prop:fourth}
+The maps $E_s$ form a polynomial $\Ga$-action on $\A^5_k$ preserving $F$. Under $E_s$, the polynomials $a,c,y$, and consequently $q=2ac$, are fixed, while
+\begin{equation}\label{eq:mchange}
+m\circ E_s=m-4ay^2h.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write $(x',y',z',t',u')=E_s(x,y,z,t,u)$, and place a prime on each polynomial evaluated there. Direct substitution gives
+\begin{align*}
+a'
+&=1+(x+2mh-4ay^2h^2)y
+       +2(z-2ayh)(u-y^2h)\\
+&=a+2y(m-zy-2au)h=a.
+\end{align*}
+It follows that
+\[
+c'=(z-2ayh)y-2a(u-y^2h)=c,
+\]
+and the corresponding sum gives \eqref{eq:mchange}. Since $q'=q$ and $y'=y$, all the stated invariants are fixed. Using \eqref{eq:difference} and \eqref{eq:relations},
+\begin{align*}
+F'-F
+&=a(2mh-4ay^2h^2)
+ +(z-2ayh)^2-z^2+P(t+qs)-P(t)\\
+&=\bigl(2am-4azy+q\bigr)h\\
+&=2a(m-2zy+c)h=0.
+\end{align*}
+Thus $F$ is preserved as a polynomial on the ambient affine space.
+
+To verify the addition law, put
+\[
+h_1=\dd_P(t,q,s),\qquad h_2=\dd_P(t+qs,q,r).
+\]
+Equation~\eqref{eq:cocycle} gives $h_1+h_2=\dd_P(t,q,s+r)$. Because $a,c,y,q$ are invariant, the changes in $z$ and $u$ add in the required form, and the change in $t$ is $q(s+r)$. For $x$, use \eqref{eq:mchange}:
+\begin{align*}
+x''
+&=x+2mh_1-4ay^2h_1^2
+   +2(m-4ay^2h_1)h_2-4ay^2h_2^2\\
+&=x+2m(h_1+h_2)-4ay^2(h_1+h_2)^2.
+\end{align*}
+This is the $x$-coordinate of $E_{s+r}$. Hence $E_rE_s=E_{s+r}$ everywhere, including on $\{q=0\}$. Finally, $E_0$ is the identity by \eqref{eq:zeros}, and $E_{-s}$ is the inverse of $E_s$.
+\end{proof}
+
+\begin{remark}\label{rem:generator}
+The infinitesimal generator of the fourth action is
+\[
+D_P=2mP'(t)\frac{\partial}{\partial x}
+     -2ayP'(t)\frac{\partial}{\partial z}
+     +2ac\frac{\partial}{\partial t}
+     -y^2P'(t)\frac{\partial}{\partial u}.
+\]
+Its local nilpotence follows from the polynomial additive-group action just proved. For $P(t)=t^3$, this is twice Poloni's derivation $E$ in \cite{Poloni}. The factor of two avoids fractional coefficients. The closed action formula, rather than a formal exponential series, is the basis of the proof here.
+\end{remark}
+
+\section{A uniform bound for point transitivity}\label{sec:transitivity}
+
+\subsection{Motion within a nonzero fibre}
+
+\begin{lemma}\label{lem:fibre}
+If $p,r\in\Y$ have the same $x$-coordinate $\xi\ne0$, a composition of at most three maps from $\tau,Z,T$ sends $p$ to $r$.
+\end{lemma}
+
+\begin{proof}
+Write $p=(\xi,y,z,t,u)$ and $r=(\xi,Y,Z_0,T_0,U)$. First apply $\tau_{U-u}$. This sets the $u$-coordinate to $U$ and changes the $z$-coordinate to
+\[
+z_1=z-\xi(U-u).
+\]
+Next apply $Z_{(Z_0-z_1)/\xi^2}$ to set $z=Z_0$ without changing $u$ or $t$. Finally apply $T_{(T_0-t)/\xi^2}$ to set $t=T_0$ without changing $z$ or $u$. The output and $r$ now have the same $x,z,t,u$ coordinates and both satisfy $F=0$. Since the coefficient of $y$ in $F$ is $\xi^2\ne0$, their $y$-coordinates agree as well.
+\end{proof}
+
+\subsection{A line joining all nonzero fibres}
+
+\begin{lemma}\label{lem:bridge}
+There are scalars $t_0,z_0\in k$ with $z_0P'(t_0)\ne0$ such that
+\begin{equation}\label{eq:bridge}
+b_\xi=\left(\xi,-1,z_0,t_0,\frac{\xi-1}{2z_0}\right)\in\Y
+\qquad(\xi\in k)
+\end{equation}
+and
+\begin{equation}\label{eq:bridgeshift}
+E_s(b_\xi)=b_{\xi-2z_0P'(t_0)s}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since $P$ is nonconstant and $\operatorname{char}k=0$, both $P$ and $P'$ are nonzero polynomials. Their product has only finitely many roots. Choose $t_0$ with $P(t_0)P'(t_0)\ne0$, and choose a square root $z_0$ of $-P(t_0)$. Then $z_0\ne0$. At $b_\xi$ one has
+\[
+a=1-\xi+2z_0\frac{\xi-1}{2z_0}=0,
+\qquad c=m=-z_0.
+\]
+It follows that $F(b_\xi)=z_0^2+P(t_0)=0$. Since $q=0$, equation~\eqref{eq:zeroq} gives $h=sP'(t_0)$. Formula~\eqref{eq:e} therefore changes $x$ to $\xi-2z_0P'(t_0)s$ and $u$ to $(\xi-1)/(2z_0)-sP'(t_0)$, with the other coordinates fixed. These are exactly the coordinates in \eqref{eq:bridgeshift}.
+\end{proof}
+
+\begin{corollary}\label{cor:seven}
+Any two points of $\Y\cap\{x\ne0\}$ can be connected in at most seven moves.
+\end{corollary}
+
+\begin{proof}
+For points with $x$-coordinates $\xi$ and $\eta$, use Lemma~\ref{lem:fibre} to reach $b_\xi$ in at most three moves. Apply $E_s$ with
+\[
+s=\frac{\xi-\eta}{2z_0P'(t_0)}
+\]
+to reach $b_\eta$. Three further moves within the $\eta$-fibre reach the target. The count is $3+1+3=7$.
+\end{proof}
+
+\subsection{Escaping the zero fibre}
+
+The next argument is useful when $P'$ vanishes at the $t$-coordinate of a boundary point. It avoids requiring a nonzero derivative at that point.
+
+\begin{lemma}\label{lem:escape}
+Suppose $p\in\Y$ has $x=0$ and $a(p)c(p)\ne0$. Then $E_s(p)$ has nonzero $x$-coordinate for some $s\in k$.
+\end{lemma}
+
+\begin{proof}
+All quantities in this proof are evaluated at $p$. Since $q=2ac\ne0$, Lemma~\ref{lem:divided} implies that $s\mapsto h(s)=\dd_P(t,q,s)$ takes every value of $k$. The output $x$-coordinate is
+\[
+R(h)=2mh-4ay^2h^2.
+\]
+At least one of $R(1)$ and $R(2)$ is nonzero. Otherwise,
+\[
+2m-4ay^2=0,\qquad 4m-16ay^2=0.
+\]
+Subtracting twice the first equation from the second gives $8ay^2=0$. As $a\ne0$ and the characteristic is zero, this forces $y=0$, and the first equation then gives $m=0$. But $m+c=2zy$ implies $c=0$, a contradiction. Choose $h_0\in\{1,2\}$ with $R(h_0)\ne0$, and use surjectivity to choose $s$ with $h(s)=h_0$.
+\end{proof}
+
+\Needspace{7\baselineskip}
+\begin{proposition}\label{prop:boundary}
+Every point in $\Y\cap\{x=0\}$ reaches $\{x\ne0\}$ in at most three moves.
+\end{proposition}
+
+\begin{proof}
+Let $p=(0,y,z,t,u)$. There are two cases.
+
+If $z\ne0$, apply $\tau_{-u}$ to set $u=0$; at $x=0$ this leaves $z$ and $t$ unchanged. Let the new $y$-coordinate be $y_1$. Next apply
+\[
+Z_{(y_1-1)/(2z)}.
+\]
+Because $x=0$, this leaves $z,t,u$ fixed and sets $y=1$. At the resulting point, $a=1$ and $c=m=z\ne0$. Lemma~\ref{lem:escape} now provides one $E$-move to $\{x\ne0\}$.
+
+If $z=0$, apply $\tau_{1-u}$ to set $u=1$. The coordinates $x=z=0$ remain zero, and the resulting values are
+\[
+a=1,\qquad c=-2,\qquad m=2,
+\]
+regardless of the new $y$-coordinate. Again Lemma~\ref{lem:escape} provides an $E$-move out of the zero fibre. This case uses at most two moves.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Propositions~\ref{prop:standard} and \ref{prop:fourth} establish the four polynomial actions and their preservation properties. Lemma~\ref{lem:fibre}, Corollary~\ref{cor:seven}, and Proposition~\ref{prop:boundary} give parts \textup{(i)--(iii)}. For arbitrary $p,r\in\Y$, choose words $A,B$ of at most three moves such that $A(p)$ and $B(r)$ have nonzero $x$-coordinates. A word $C$ of at most seven moves sends $A(p)$ to $B(r)$. Then $B^{-1}CA$ sends $p$ to $r$ and has at most $3+7+3=13$ moves, since each inverse is an evaluation of the same action at the negative parameter. Conjugation by $\Theta$ proves the corresponding statement on the original cylinder.
+\end{proof}
+
+\section{Geometric consequences and scope}\label{sec:geometry}
+
+\begin{corollary}\label{cor:flexible}
+The cylinder $\X\times\A^1$ is a smooth irreducible flexible affine variety of dimension four. Its special automorphism group acts infinitely transitively.
+\end{corollary}
+
+\begin{proof}
+Let $f=x^2y+z^2+x+P(t)$. If $x\ne0$, then $\partial f/\partial y=x^2\ne0$; if $x=0$, then $\partial f/\partial x=2xy+1=1$. The hypersurface $\X$ is therefore smooth. As a polynomial in $y$ over the unique factorization domain $k[x,z,t]$, the polynomial $f$ is primitive: the coefficient $x^2$ has no nonunit common factor with $z^2+x+P(t)$. It is irreducible over $k(x,z,t)$ because it has degree one in $y$. Gauss's lemma makes it irreducible in $k[x,y,z,t]$, hence its principal ideal is prime. Thus $\X$ is irreducible of dimension three, and its cylinder is smooth and irreducible of dimension four.
+
+By Theorem~\ref{thm:main}, a subgroup generated by additive-group actions is transitive on the cylinder. Hence $\SAut(\X\times\A^1)$ is transitive on its entire smooth locus. The equivalence of transitivity, flexibility, and infinite transitivity in \cite[Theorem~0.1]{AFKKZ} gives the conclusion.
+\end{proof}
+
+Here flexibility means that the tangent space at each smooth point is spanned by tangent vectors to orbits of algebraic $\Ga$-actions. Infinite transitivity means transitivity on ordered tuples of pairwise distinct points of every finite length. The latter assertion is about the full special automorphism group. The thirteen-move bound is only a bound for pairs of individual points under the four displayed actions; no uniform tuple bound is asserted.
+
+\begin{remark}[Constant polynomials]
+The nonconstancy hypothesis is essential for this particular four-action proof. If $P$ is constant, then $\dd_P=0$, and all four displayed actions fix $x$. Their generated group cannot be transitive on the entire cylinder, since every nonzero $x$-fibre is nonempty. This does not decide flexibility of the cylinder in the constant case by other actions.
+\end{remark}
+
+\begin{remark}[The linear case]
+If $\deg P=1$, solving the defining equation for $t$ already gives $\X\simeq\A^3_k$. The theorem includes this elementary case. Its statement imposes no assumptions on multiplicities of roots, critical points, or critical values of a polynomial of higher degree.
+\end{remark}
+
+\begin{remark}[Cancellation]
+The construction proves neither an isomorphism $\X\times\A^1\simeq\A^4$ nor a classification of $\X$. Transitivity, flexibility, and a trivial Makar--Limanov obstruction do not supply such an isomorphism. In particular, the result does not settle the three-dimensional affine-space cancellation problem and makes no claim about the status of cancellation in other dimensions.
+\end{remark}
+
+\section{Formal verification boundary}\label{sec:formal}
+
+The companion development contains eleven Lean modules. Its checked algebraic and pointwise content is as follows.
+\begin{enumerate}[label=\arabic*.,leftmargin=2em,itemsep=0.25em]
+\item The polynomial divided-difference identities, including specialization at $q=0$ and the cocycle law.
+\item The exact four coordinate maps, represented by multivariate polynomials in the five coordinates and the action parameter, their identity and addition laws, preservation of $F$, and inverse reachability.
+\item The three-move nonzero-fibre theorem, escape from the zero fibre in at most three moves, the bridge between nonzero fibres, and full pointwise transitivity in at most thirteen moves over an algebraically closed characteristic-zero field.
+\item The mutually inverse original and adapted coordinate maps, the identity relating their defining equations, and the thirteen-move statement on the original cylinder over $\C$.
+\end{enumerate}
+
+The principal concrete endpoint in \texttt{ZariskiMain.lean} is
+\[
+\texttt{ZariskiCylinder.complex\_original\_transitive\_thirteen}.
+\]
+It quantifies over an actual polynomial $P\in\C[t]$, assumes only the polynomial hypothesis $\texttt{P.natDegree}\ne0$, and accepts arbitrary points $p,q\in\C^5$ satisfying
+\[
+x^2y+z^2+x+P(t)=0.
+\]
+Its conclusion is $\texttt{OriginalReaches}\ P\ 13\ p\ q$. The underlying relation $\texttt{Reaches}$ is generated solely by evaluations of the four displayed maps, together with reflexivity and padding of the move budget. Thus the conclusion is a word of \emph{at most} thirteen permitted moves, not reachability by an unspecified map. The relation $\texttt{OriginalReaches}$ uses the checked change of coordinates $\Theta$; equivalently, its moves are the conjugated actions on the original cylinder.
+
+In the same namespace, \texttt{transitive\_thirteen} establishes the adapted-coordinate statement over any algebraically closed characteristic-zero field. The theorem \texttt{four\_polynomial\_actions} certifies polynomiality of all four parameterized maps over $\C$, including on $q=0$. An additional specification in \texttt{ZariskiExpected.lean} is proved as
+\[
+\texttt{ZariskiCylinder.Expected.checked\_main}.
+\]
+It bundles the four polynomiality predicates, four addition laws, four preservation identities, and the full thirteen-move conclusion with the original equation written explicitly. The definitions do not assume polynomial surjectivity or the existence of a bridge as extra hypotheses on the final theorem; those are discharged from nonconstancy and algebraic closedness.
+
+The eleven proof modules passed a clean rebuild. The development uses Lean~4.32.2 and Mathlib revision
+\[
+\texttt{905b95818eb32af7874a58b427f50c1711a5e96c}.
+\]
+The complex algebraic-closure instance is obtained by importing the official Mathlib proof of the fundamental theorem of algebra directly. The audited endpoint dependencies contain only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The development contains no \texttt{sorry}, \texttt{native\_decide}, or custom axioms.
+
+\paragraph{What remains outside the formalization.}
+The interpretation of the checked polynomial data as morphisms and algebraic-group actions on affine varieties, the smoothness and irreducibility arguments, tangent-space flexibility, and the application of \cite{AFKKZ} have not been formalized in this development. Consequently the formal result is the precise algebraic and pointwise statement above, not a Lean certification of Corollary~\ref{cor:flexible} or of any cancellation assertion.
+
+\begin{thebibliography}{9}
+\bibitem{AFKKZ}
+I. Arzhantsev, H. Flenner, S. Kaliman, F. Kutzschebauch, and M. Zaidenberg,
+\emph{Flexible varieties and automorphism groups},
+Duke Mathematical Journal \textbf{162} (2013), no.~4, 767--823.
+\href{https://doi.org/10.1215/00127094-2080132}{doi:10.1215/00127094-2080132}.
+\href{https://arxiv.org/abs/1011.5375}{arXiv:1011.5375}.
+
+\bibitem{Poloni}
+P.-M. Poloni,
+\emph{The cylinder over the Russell cubic threefold is flexible},
+preprint, September 12, 2026.
+\href{https://arxiv.org/abs/2609.14090v1}{arXiv:2609.14090v1}.
+\end{thebibliography}
+
+\end{document}

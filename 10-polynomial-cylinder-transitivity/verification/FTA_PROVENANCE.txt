@@ -1,0 +1,16 @@
+Fundamental theorem of algebra provenance
+
+The released ZariskiComplexClosure.lean directly imports
+Mathlib.Analysis.Complex.Polynomial.Basic and uses inferInstance for
+IsAlgClosed Complex. There is no copied or adapted FTA proof in the
+released project sources.
+
+The imported source is byte-identical to the file at official Mathlib
+commit 905b95818eb32af7874a58b427f50c1711a5e96c.
+Source SHA-256: b25204055c56065bb0824ea67381f93b82cb322beca97819698545f7d84aa51e
+
+The Mathlib tracked working tree was clean at final packaging. Cached
+objects came from the official pinned Mathlib dependency cache. The final
+project build and independent clean rebuild both use the direct official
+import. The axiom report for complexIsAlgClosed is propext,
+Classical.choice and Quot.sound.

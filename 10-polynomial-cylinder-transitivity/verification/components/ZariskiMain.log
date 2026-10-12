@@ -1,0 +1,3 @@
+'ZariskiCylinder.complex_transitive_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZariskiCylinder.complex_original_transitive_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZariskiCylinder.four_polynomial_actions' depends on axioms: [propext, Classical.choice, Quot.sound]

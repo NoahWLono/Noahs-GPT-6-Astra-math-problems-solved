@@ -1,0 +1,8 @@
+lean/ZariskiPolynomiality.lean:48:16: warning: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵a̵p̵_̵o̵f̵N̵a̵t̵,̵ ̵p̵o̵i̵n̵t̵M̵a̵p̵,̵[̲p̲o̲i̲n̲t̲M̲a̲p̲,̲ tStep]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ZariskiCylinder.polynomial_extra' depends on axioms: [propext, Classical.choice, Quot.sound]

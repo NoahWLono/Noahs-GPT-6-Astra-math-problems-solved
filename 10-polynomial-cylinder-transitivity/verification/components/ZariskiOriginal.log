@@ -1,0 +1,19 @@
+lean/ZariskiOriginal.lean:19:8: warning: automatically included section variable(s) unused in theorem `ZariskiCylinder.unadapt_adapt`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/ZariskiOriginal.lean:21:8: warning: automatically included section variable(s) unused in theorem `ZariskiCylinder.adapt_unadapt`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/ZariskiOriginal.lean:24:0: warning: automatically included section variable(s) unused in theorem `ZariskiCylinder.equation_adapt`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'ZariskiCylinder.original_transitive_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]

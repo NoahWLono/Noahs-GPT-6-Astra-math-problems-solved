@@ -1,0 +1,16 @@
+{
+  "all_identical": true,
+  "comparison": {
+    "ZariskiMain.lean": true,
+    "ZariskiPolynomiality.lean": true,
+    "ZariskiBasic.lean": true,
+    "ZariskiOriginal.lean": true,
+    "ZariskiExpected.lean": true,
+    "ZariskiActions.lean": true,
+    "ZariskiComplexClosure.lean": true,
+    "ZariskiFibres.lean": true,
+    "ZariskiTransitivity.lean": true,
+    "ZariskiDifference.lean": true,
+    "ZariskiEscape.lean": true
+  }
+}

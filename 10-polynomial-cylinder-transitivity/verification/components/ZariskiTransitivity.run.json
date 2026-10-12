@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiTransitivity",
+  "exit_code": 0,
+  "elapsed_seconds": 3.477,
+  "max_rss_kib": 1683112,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "76834395a81add53b5a814eb78f670d285050551029092a73a696b31ab3793f4",
+  "object_sha256": "76e39f3119e88f3897d2634d80c869b0d55ea7315f1f0af9b01f166f1890b139"
+}

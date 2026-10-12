@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-12T19:03:40.828450+00:00",
+  "pages": 8,
+  "render_dpi": 115,
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "latex_warnings": [],
+  "status": "Pass",
+  "lean_compilation_performed_during_manuscript_work": false,
+  "lean_scope": "Polynomial coordinate maps, action identities, preservation, original/adapted coordinate transport, and full at-most-13-move original-cylinder pointwise transitivity; geometric corollary remains handwritten/external",
+  "lean_status_evidence": "Clean rebuild of eleven frozen modules reported by proof verification; endpoint axiom logs inspected read-only",
+  "files": {
+    "paper/polynomial-cylinder-transitivity.pdf": {
+      "bytes": 334163,
+      "sha256": "9ae16928e99e5e5a8a0714b413aa9afac9045eac2b55144a1806a6b5a9e3f620"
+    },
+    "paper/polynomial-cylinder-transitivity.tex": {
+      "bytes": 22457,
+      "sha256": "10ec66ceb228762c6a8c6be49df891a202abaf46d10c72a07a4865901724b521"
+    }
+  },
+  "packaging_note": "PDF and LaTeX bytes are unchanged. Public filenames and portable build-script paths were curated separately."
+}

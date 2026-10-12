@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiComplexClosure",
+  "exit_code": 0,
+  "elapsed_seconds": 2.645,
+  "max_rss_kib": 2201116,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "f8994811e09f360f28e27e14ede8b03bc574ef9da5a891213ad571b76b24aa8f",
+  "object_sha256": "83e868573edaadfd027f62f9ba261c1b6bba2bf9c1d85fb732fd319a352bf3cc"
+}

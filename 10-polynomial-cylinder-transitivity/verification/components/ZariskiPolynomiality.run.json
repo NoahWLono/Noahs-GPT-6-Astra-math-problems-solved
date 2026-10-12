@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiPolynomiality",
+  "exit_code": 0,
+  "elapsed_seconds": 7.302,
+  "max_rss_kib": 1350848,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "a7fa435580978baa34af46a8c22cff14f29b19e3ef93deedcc1c144fdb663653",
+  "object_sha256": "11fe2ab22bb2528dea1de88734da675d23e2d40af75428bf34f3e3ef901fe404"
+}

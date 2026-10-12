@@ -1,0 +1,12 @@
+{
+  "module": "ZariskiFibres",
+  "exit_code": 0,
+  "elapsed_seconds": 2.644,
+  "max_rss_kib": 1274460,
+  "timeout_seconds": 60,
+  "memory_limit_mib": 3072,
+  "threads": 1,
+  "object_exists": true,
+  "source_sha256": "54add420ad7d9e869a5afe891150aef60a1fb9de5af3fae7de0e578debdfa67e",
+  "object_sha256": "48d5dd06cb47714419f19a3baf339c91822dc01cc7cee6c9dd844c415df98f5d"
+}

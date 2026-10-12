@@ -1,0 +1,56 @@
+{
+  "purpose": "Portable research-draft packaging; unchanged proof and manuscript content.",
+  "preserved_byte_identical": [
+    "all 11 Lean sources",
+    "LaTeX manuscript",
+    "rendered PDF"
+  ],
+  "original_records_retained_privately": true,
+  "log_normalizations": [
+    {
+      "file": "build/ZariskiDifference.log",
+      "operation": "Replace absolute compiler diagnostic source prefix with lean/; no other log content changed.",
+      "original_sha256": "8a4b8b247af041ea254229731cce2727079045671398e979ea61b1bf46d54e20",
+      "normalized_sha256": "0877da437ffe7d12f3a51fd5ce95735dd6b3cc15c58f89780243c7884a1835f0"
+    },
+    {
+      "file": "build/ZariskiEscape.log",
+      "operation": "Replace absolute compiler diagnostic source prefix with lean/; no other log content changed.",
+      "original_sha256": "d1a26aa7174169894160b7dcae0e82b7ace0404b0956aecac742bff1159f36fc",
+      "normalized_sha256": "509667449bf5b0af5771835adfc1e911f946e914da8bc95a5fa11fdffe282827"
+    },
+    {
+      "file": "build/ZariskiOriginal.log",
+      "operation": "Replace absolute compiler diagnostic source prefix with lean/; no other log content changed.",
+      "original_sha256": "7efc71d72ddf315ee7e52506225bb47a7f84671eb2d1bce133a0107885fdbd0f",
+      "normalized_sha256": "f6956178f986b308a36f52f7545f5ee1dc8df6c6b79874c3a3e18129b4afbb68"
+    },
+    {
+      "file": "build/ZariskiPolynomiality.log",
+      "operation": "Replace absolute compiler diagnostic source prefix with lean/; no other log content changed.",
+      "original_sha256": "dc9b93d44511bbe207fc1c3bed140107a75ab4866b6542d885b68331af52b1eb",
+      "normalized_sha256": "b085f1625e1fee612af00517230da919d9c28cbeb4b049fc42c87ee66f67fa24"
+    },
+    {
+      "file": "verification/independent-rebuild.log",
+      "operation": "Replace absolute compiler diagnostic source prefix with lean/; no other log content changed.",
+      "original_sha256": "c2fe01fef8c7b531e653c09af5ebc6c2f3fda9ad9df6c3991602ba1effd60331",
+      "normalized_sha256": "024d39172ea24a5575038ba9cb3283baf1769d67c6c72df260bd8542e140dc41"
+    }
+  ],
+  "script_changes": [
+    "Use Lean and Lake from PATH; require explicit MATHLIB_ROOT instead of an installation-specific absolute path.",
+    "Preserve Lean -j1 -M3072, timeout 60 seconds, and the original 11-module order.",
+    "Replace environment-specific TeX cache workaround with a standard two-pass pdflatex build."
+  ],
+  "verification_of_portable_scripts": "All 11 unchanged Lean modules passed a fresh-output replay using the exact publication scripts.",
+  "pdf_metadata_review": "Author field is blank. Title and subject describe the mathematics; Creator and Producer identify standard LaTeX/pdfTeX software. No account identifiers or machine paths were found. PDF bytes preserved.",
+  "excluded": [
+    "compiled proof objects",
+    "research scratch notes",
+    "checkpoint sources",
+    "absolute machine paths",
+    "Library or account identity metadata"
+  ],
+  "layout": "Public layout uses paper/, lean/, verification/ and reviews/. Historical component log normalization records refer to their original relative layout."
+}
