@@ -14,7 +14,7 @@ Current evidence distinctions:
 
 - Initial coherent final composition: passed, original predicate and standard named axioms reported.
 - Complete independent source closure: passed, including all 3,046 modules and 162 required named theorem audits; see INDEPENDENT_VERIFICATION.md.
-- Public portable verifier: static checks and a 12-module compiler smoke test passed; full run not performed.
+- Public portable verifier: complete fresh 3,046-module replay passed, with zero custom-object reuse and all 162 required named theorem audits in 137 modules checked; see PUBLIC_VERIFICATION.md.
 - Independent direct witness check: passed for all vertices and all adjacent pairs.
 
 These statements must be updated only from completed, reviewed receipts. No success should be inferred from a running process or a partial build.

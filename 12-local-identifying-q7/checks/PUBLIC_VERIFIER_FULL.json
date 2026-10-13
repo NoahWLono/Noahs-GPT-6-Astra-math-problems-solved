@@ -1,0 +1,70 @@
+{
+  "status": "full frozen public verifier passed",
+  "execution": "Unchanged verify.py executed via runpy from a fresh transport-only package copy. An external subprocess.run supervisor preserves commands/results and enforces resource bounds; public script and proof bytes are unchanged.",
+  "package_inventory_sha256": "43e9844d626e83649d693c1a6f64009c8154753b1e3feac9f3a1324ccb591610",
+  "verify_py_sha256": "d80cc7007297dc29fff891e0ed9f21001403d66c5cf65d81faa5cac27011fe53",
+  "unpack_sources_py_sha256": "db9336d85dfb1cb387b09eec2df0ff6d28862ae9683cb3ad80e574ee3dbc33f9",
+  "source_manifest_sha256": "6b61c89b9562a808e02347d17151ba827abdcb7e27f35143f8b94eb56ec4cff3",
+  "JSON_manifest_sha256": "54f921916b15456686255776d1b9ffaca428e6d5a316c64ec5a1b795d8baf613",
+  "build_order_sha256": "2a242860d4a8706c65cca28f5dd0f97851505781320a1290f090fb289e430979",
+  "axiom_requirements_sha256": "0b8dc9c8fd6768a099c1b2613528b439865c55105ced4f72816a236a16f7db42",
+  "lean_version": "Lean (version 4.32.2, x86_64-unknown-linux-gnu, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)",
+  "mathlib_revision": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "custom_modules_freshly_compiled": 3046,
+  "quoted_JSON_files_verified": 1444,
+  "custom_objects_reused": 0,
+  "compiler_threads": 1,
+  "checked_sidecars": 12184,
+  "checked_sidecars_manifest_sha256": "d968febfad21f9fd4270ae7c15609ed8e7b5bc3978eb59cbe41d456345616f0e",
+  "public_RESULT_sha256": "fec2124b44d0c260b373abfcf3e128de69ed90db16eaf4be07240cf5d9cb63ee",
+  "external_terminal_STATE_sha256": "fa6dc761e24eaba84a88f9fce434ca43c05f186985571cbb34bddfb014fb22f2",
+  "final_theorem": "ExactCubeCodes.localIdentifying_Q7_optimum24",
+  "explicit_original_predicate_type_and_private_body_audit_module": "Q7Mod.Integration.ExactQ7Audit",
+  "final_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "child_CPU_seconds_including_prior_harness_probe": 9571.173315000007,
+  "current_run_child_CPU_seconds": 9571.064417,
+  "parent_bookkeeping_CPU_seconds_separate": 853.657001288,
+  "wall_seconds_current_run": 9703.032115886002,
+  "maximum_process_tree_RSS_bytes": 1459834880,
+  "maximum_ru_maxrss_bytes": 1459834880,
+  "minimum_free_disk_bytes_at_receipts": 5100122112,
+  "free_disk_bytes_after_final_audit": 5095866368,
+  "resource_limits": {
+    "aggregate_child_CPU_seconds": 10000,
+    "per_process_CPU_seconds": 120,
+    "per_process_wall_seconds": 180,
+    "RSS_bytes": 2147483648,
+    "per_process_output_bytes": 67108864,
+    "free_disk_floor_bytes": 4294967296
+  },
+  "proof_compilation_failures": 0,
+  "prior_harness_issue": {
+    "description": "Initial supervisor receipt handling failed on env=None after version probe, before any custom module compiled; prior snapshot/log/state and supervisor version retained. Narrow external supervisor-only correction; no public verifier/proof edits.",
+    "child_CPU_seconds": 0.108898,
+    "parent_bookkeeping_CPU_seconds": 2.049589358
+  },
+  "publication_package_files_unchanged": true,
+  "required_named_audit_modules": 137,
+  "required_named_audit_count": 162,
+  "observed_printed_axiom_audit_entries": 2672,
+  "modules_with_observed_printed_axiom_audits": 2036,
+  "audit_count_explanation": "The 162 required named audits in 137 designated modules are a mandatory subset. The public RESULT records all 2672 observed printed audit entries across 2036 modules; all observed axiom sets are standard.",
+  "supersedes_receipt_sha256": "028da8af472bbfc6db580d67c10b347d9962db89153e465ecd592676c7c35e68",
+  "independent_post_run_audit_sha256": "add93a7a5faad3f3b025dad3158fe6fd0f4312b0f5cb74dc87e1bf72f08481d5",
+  "original_sanitized_launch_receipt_sha256": "514069e2cc8df3b06232f0d42ad2ddcbfb4f8adbdfae66d5c34e23d8bb06601a",
+  "public_result_file": "checks/PUBLIC_VERIFIER_RESULT.json",
+  "final_logs": {
+    "Q7Mod.Integration.ExactQ7": {
+      "sha256": "cc606fcb4438a485ba5bf19efa6ff9fe5c1e3b1c39c926b667384338217e2b98",
+      "text": "'ExactCubeCodes.localIdentifying_Q7_optimum24' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "Q7Mod.Integration.ExactQ7Audit": {
+      "sha256": "339e42655c67d882b73301e5a05daa558b38c461e71eb768681529ed48b16ead",
+      "text": "ExactCubeCodes.LocalIdentifying {d : Nat} (C : ExactCubeCodes.Code d) : Prop\nExactCubeCodes.localIdentifying_Q7_optimum24 :\n  (\u2203 C, ExactCubeCodes.LocalIdentifying C \u2227 ExactCubeCodes.cardinality C = 24) \u2227\n    \u2200 (C : ExactCubeCodes.Code 7), ExactCubeCodes.LocalIdentifying C \u2192 24 \u2264 ExactCubeCodes.cardinality C\n'ExactCubeCodes.localIdentifying_Q7_optimum24' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    }
+  }
+}

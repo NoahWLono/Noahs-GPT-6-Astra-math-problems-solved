@@ -1,15 +1,16 @@
 {
-  "portable_public_verifier_end_to_end": "not run",
+  "portable_public_verifier_end_to_end": "passed, unchanged public driver; all 3046 modules freshly compiled with zero custom-object reuse; 137 named-audit modules and 162 required theorem audits",
   "semantic_scope_audit": "passed (source/interface review; no compiler run)",
   "prior_art_review": "bounded primary-source review completed; priority unconfirmed",
   "publication": "release candidate; published location is determined by repository commit",
   "static_public_input_check": "passed",
-  "paper": "13-page research draft source included; independent-completion status updated; visual/typesetting QA passed; priority unconfirmed",
+  "paper": "13-page research draft source and PDF included; full-public-replay status updated; visual/typesetting QA and repeated-build identity passed; priority unconfirmed",
   "source_archive_roundtrip": "passed, all 4490 exact hashes verified in fresh temporary directory",
   "transport_fail_closed_tests": "passed (corrupt source, corrupt part, traversal, symlink, unexpected and missing tar members)",
   "portable_public_verifier_smoke": "passed, 12 freshly compiled modules, 13.388368 child CPU seconds; final theorem not tested",
   "initial_original_predicate_kernel_check": "passed",
   "initial_receipt_sha256": "253948a38ed9506de28d2ed164fdd74f35152d7dd1adbd555fba0d311e2cf271",
   "full_independent_source_rebuild": "passed, all3046 modules/16 stages and137 named-audit modules/162 required theorem audits",
-  "independent_receipt": "checks/INDEPENDENT_VERIFICATION.json"
+  "independent_receipt": "checks/INDEPENDENT_VERIFICATION.json",
+  "public_verifier_receipt": "checks/PUBLIC_VERIFIER_FULL.json"
 }

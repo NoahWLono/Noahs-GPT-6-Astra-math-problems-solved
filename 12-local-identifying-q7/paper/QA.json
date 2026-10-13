@@ -1,7 +1,7 @@
 {
-  "status": "research draft; kernel checked; independent project-source rebuild completed; priority unconfirmed",
+  "status": "research draft; kernel checked; independent source rebuild and full public replay completed; priority unconfirmed",
   "pages": 13,
-  "visual_review": "All 13 final pages inspected after independent-rebuild completion update; no clipping, missing glyphs, overlap, or overfull boxes.",
+  "visual_review": "All 13 final pages inspected after full-public-replay completion update; no clipping, missing glyphs, overlap, or overfull boxes.",
   "latex_warnings": false,
   "repeated_final_build_pdf_identical": true,
   "public_actions": false,
@@ -9,8 +9,8 @@
   "source_manifest_sha256": "b7aa2cd42ae8f05b025467712f0d4c0b3380f99eb2944ae3dbbbf92ad44e740a",
   "files": {
     "q7-local-identifying-draft.tex": {
-      "sha256": "8a276d0a5cfc5f8f98c05b56d767cfc4fecddf2e4b442284263257ae76e60e4a",
-      "bytes": 42023
+      "sha256": "aad33daca1e7cedb197526be679be35123e3338d9577442f273fff4b5b8ec1cc",
+      "bytes": 42445
     },
     "q7-local-identifying-draft.bib": {
       "sha256": "9e5cb21d84d5142f8a1b9cdcd8f413391a702e4aa2ade01928fcc6bc83448d20",
@@ -29,8 +29,8 @@
       "bytes": 217
     },
     "q7-local-identifying-draft.pdf": {
-      "sha256": "59ab3433ff106280767addd1141e3eea066e2adbce9a53cbb2f3584a67633597",
-      "bytes": 389671
+      "sha256": "b16421b9c530d4434e7646c87d9977890542f12cb9242155a66cfd2f1e8528cb",
+      "bytes": 390175
     }
   },
   "public_source_paths_verified_against_manifest": true,
@@ -44,8 +44,10 @@
     "fresh_after_continuation": 1815,
     "initial_build_custom_objects_reused": 0
   },
-  "portable_public_verifier": "12-module smoke passed; full end-to-end execution not run",
+  "portable_public_verifier": "passed, all 3046 custom modules freshly compiled; zero custom-object reuse; 137 mandatory named-audit modules and 162 required theorem audits",
   "manuscript_process_invoked_lean": false,
   "rendered_pdf_included": true,
-  "rendered_pdf_sha256": "59ab3433ff106280767addd1141e3eea066e2adbce9a53cbb2f3584a67633597"
+  "rendered_pdf_sha256": "b16421b9c530d4434e7646c87d9977890542f12cb9242155a66cfd2f1e8528cb",
+  "public_verifier_result_sha256": "fec2124b44d0c260b373abfcf3e128de69ed90db16eaf4be07240cf5d9cb63ee",
+  "public_verifier_receipt_sha256": "82fc1aca26896d50b4424aa9341211e73fa45e9f8643ea28a412b7de4cdd66b8"
 }

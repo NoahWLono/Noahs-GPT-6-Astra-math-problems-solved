@@ -28,6 +28,6 @@ The original C5 aggregate receipt pins source/object identities and stored axiom
 
 ## Public verifier distinction
 
-The separately supplied portable `verify.py` has passed exact-input/transport tests and an actual **12-module** compiler smoke test. Its complete 3,046-module workflow has **not** been executed. The completed independent rebuild used a separate reviewed orchestration workflow over the same frozen sources. Readers can use the public full verifier to reproduce the complete custom closure freshly, without either documented object reuse.
+The completed independent rebuild described above used a separate reviewed orchestration workflow over the frozen sources, with the documented independent-object reuse. A subsequent replay of the unchanged public `verify.py` freshly compiled all **3,046** custom modules with **zero custom-object reuse** and passed the final original-predicate type and named axiom audits. See [public replay evidence](PUBLIC_VERIFICATION.md). The original independent, transport and smoke receipts remain unchanged historical records of their respective checks; their full-verifier status fields describe the evidence available when they were recorded.
 
 Historical priority remains unconfirmed. See PRIOR_ART.md and TRUST.md for the separate literature and computing-base limits.
