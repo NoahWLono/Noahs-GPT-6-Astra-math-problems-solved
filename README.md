@@ -30,7 +30,19 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Research checkpoints updated 13 October 2026. The exact local 1-identifying Q7 minimum is now completed in [folder 12](12-local-identifying-q7/README.md). The remaining investigations are paused at the checkpoints below; no new waiting target is promoted. The shelved directions and waiting-list order are unchanged.
+Research lineup updated 13 October 2026. The following targets have entered active investigation in their existing queue order. Initial work checks the precise statement, current literature and claimed resolutions before attempting new mathematics. No completed result or Lean proof is claimed for these entries.
+
+- **32 — [Cabling conjecture](https://link.springer.com/article/10.1007/s40590-025-00722-y): investigation started.** Determine whether every reducible Dehn surgery on a nontrivial knot in the three-sphere is a cable surgery at the cabling-annulus slope. The current investigation checks known classes and the remaining unrestricted case.
+- **33 — [Jones polynomial unknot detection](https://epubs.siam.org/doi/10.1137/25M1806703): investigation started.** Determine whether a knot with normalized Jones polynomial equal to one must be the unknot. Recent claimed resolutions are being assessed; their correctness is not assumed. This is distinct from Khovanov homology detecting the unknot.
+- **34 — [Additivity of knot crossing number](https://doi.org/10.1080/10586458.2025.2542174): investigation started.** Determine whether c(K # L) = c(K) + c(L) for arbitrary knots, using their minimal crossing numbers. Recent claimed resolutions are being assessed; diagram-level and restricted-knot results do not settle this target.
+- **35 — [Kashaev–Murakami–Murakami volume conjecture](https://arxiv.org/abs/1002.0126): investigation started.** Establish the predicted asymptotic relation between the appropriately normalized colored Jones evaluations at roots of unity and knot-complement volume. The precise hyperbolic and simplicial-volume formulations and known cases are being checked before selecting a proof route.
+- **36 — [Kaplansky's sixth conjecture](https://arxiv.org/abs/1409.2545): investigation started.** For a finite-dimensional semisimple Hopf algebra over an algebraically closed field of characteristic zero, determine whether the dimension of every simple module divides the algebra's dimension. Known special classes and remaining gaps are being checked.
+
+Completion requires a genuinely new result solving the full stated target, a checked Lean proof, and a reviewed mathematical paper. Supporting lemmas, restricted cases and preliminary approaches are not counted as completion. Prior-art review and proof verification remain separate requirements. Only completed, checked proof packages are published; experimental research files remain unpublished. The independent full-closure verification of the completed Q7 result in folder 12 is unchanged.
+
+### Shelved research
+
+Rotated out of active research on 13 October 2026, with private checkpoints preserved and no full solution claimed:
 
 - **[Perfect one-factorization of K64](https://arxiv.org/pdf/2607.09459v1#page=1) (finite open case associated with queue item 75): restricted obstruction established computationally; investigation paused.** The goal is a complete partition of the 2,016 edges of the complete graph on 64 vertices into exactly 63 perfect matchings, each containing 32 edges, such that every one of the 1,953 unordered pairs of distinct matchings has a union that is a single Hamiltonian cycle through all 64 vertices. The checkpoint excludes a restricted family, but supplies neither a complete factorization nor an unrestricted nonexistence proof; it is not Lean-certified. The July 2026 primary-source paper linked here lists 64 as the smallest open order.
 
@@ -39,16 +51,6 @@ Research checkpoints updated 13 October 2026. The exact local 1-identifying Q7 m
 - **[Five-dimensional kissing number](https://doi.org/10.1007/s00454-026-00841-x) (former queue item 30): partial analytic reductions recorded; investigation paused.** Determine the exact maximum number of nonoverlapping unit spheres that can simultaneously touch a central unit sphere in R5. Cohn and Rajagopal's July 2026 paper, Section 2, records **40 <= tau(5) <= 44**. Supporting inequalities remain incomplete, and the unrestricted upper-bound argument is still missing. No improved bound or full Lean proof is established; a complete result requires an attaining configuration and a matching unrestricted upper bound.
 
 - **[Finitely presented groups of intermediate growth](https://jep.centre-mersenne.org/item/10.5802/jep.295.pdf) (former queue item 31): construction routes screened; investigation paused.** Determine whether a finitely presented group can have subexponential but nonpolynomial growth. Babenko and Sabourau's 2025 paper explicitly records this as open on pp. 486 and 501. The checkpoint rules out specified construction routes, but produces neither a qualifying finite presentation nor a general nonexistence theorem. No full Lean proof or novelty claim is made; the unrestricted existence question remains unresolved.
-
-Ordinary locating-dominating Q6 remains retired following the prior-art correction recorded below. No additional entries have moved out of the waiting list, which still starts at item 32.
-
-Completion requires solving each entire stated problem and verifying it in Lean. For K64, all matching, edge-partition and Hamiltonian-cycle conditions must be proved. Supporting lemmas, restricted obstructions, improved partial bounds, partial factorizations and favorable search scores do not count as completion. None of the remaining full targets is solved here. The universal Kotzig conjecture remains unresolved and waiting in queue item 75.
-
-The stricter selection process prioritizes precise open problems with a plausible route to a complete result. Only completed, checked proofs will be added to the collection; experimental artifacts and research-only proof sources are not published. Prior-art review remains separate from proof verification and is required before any novelty claim.
-
-Completed scoped papers [08 (Euler scaling)](08-euler-critical-limit/README.md), [09 (the mixed-quartic and homogeneous Nakai certificates)](09-nakai-quartic-certificate/README.md), [10 (polynomial-cylinder transitivity)](10-polynomial-cylinder-transitivity/README.md), and [11 (the sharp rotation-center bound)](11-sharp-rotation-center-bound/README.md) remain in the results collection above with their existing scope and novelty limitations. This research rotation does not change those completed papers or settle their broader conjectures.
-
-### Shelved research
 
 **Prior-art correction, 12 October 2026: ordinary locating-dominating Q6 has known optimum 16 and is retired as a novelty target.** Charon, Hudry and Lobstein's 2022 paper [*Codes in the q-ary Lee Hypercube*, Table 2, p. 183](https://wseas.com/journals/mathematics/2022/a485106-009%282022%29.pdf#page=11) reports a 16-word radius-one locating-dominating code for the Lee graph with q = 4 and n = 3; the [authors' construction file](https://perso.telecom-paristech.fr/hudry/codesLD/3_1_4) is available. Its Definition 2, p. 173, uses the same ordinary locating-dominating condition. Applying the Gray map 0 → 00, 1 → 01, 2 → 11, 3 → 10 in each coordinate gives an isomorphism from that graph, C4 × C4 × C4, to Q6, preserving the code condition. Combined with the [published lower bound of 16](https://fi.episciences.org/13881/pdf#page=8), this gives exact minimum 16. The earlier 16–18 entry relied on an out-of-date upper bound in the 2024 binary table. This is known prior art, and no new paper or new completion is claimed. It remains distinct from the completed **local 1-identifying Q6 minimum of 14** in [folder 05](05-local-identifying-q6/README.md).
 
@@ -93,11 +95,6 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Algebra, geometry and topology**
 
-32. [Cabling conjecture](https://link.springer.com/article/10.1007/s40590-025-00722-y)
-33. [Jones polynomial unknot-detection problem](https://epubs.siam.org/doi/10.1137/25M1806703)
-34. [Additivity of knot crossing number](https://doi.org/10.1080/10586458.2025.2542174)
-35. [Kashaev–Murakami–Murakami volume conjecture](https://arxiv.org/abs/1002.0126)
-36. [Kaplansky's sixth conjecture](https://arxiv.org/abs/1409.2545)
 37. [Prime-degree cyclicity problem for division algebras](https://arxiv.org/abs/2409.07240)
 38. [Berge conjecture for lens-space surgeries](https://arxiv.org/abs/2609.39260)
 39. [Foulkes' conjecture](https://www.imsc.res.in/~combinatorics/ICC2026/)
@@ -140,7 +137,7 @@ The following targets are waiting, in the order listed. Their inclusion does not
 72. [The one-third–two-thirds conjecture for finite posets](https://arxiv.org/abs/2609.30888)
 73. [Vizing's domination-product conjecture](https://arxiv.org/abs/2607.01109)
 74. [Reed's omega–delta–chi conjecture](https://arxiv.org/abs/2502.10147)
-75. [Kotzig's perfect one-factorization conjecture](https://arxiv.org/abs/2607.09459) — The finite K64 case is active above; the universal conjecture remains waiting.
+75. [Kotzig's perfect one-factorization conjecture](https://arxiv.org/abs/2607.09459) — The finite K64 investigation is shelved above; the universal conjecture remains waiting.
 76. [Stanley's chromatic-symmetric-function conjecture for trees](https://arxiv.org/abs/2608.18179)
 77. [Conway's planar thrackle conjecture](https://arxiv.org/abs/2506.11808)
 78. [Bermond–Thomassen conjecture](https://arxiv.org/abs/2608.12948)
