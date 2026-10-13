@@ -1,6 +1,6 @@
 # Noah's GPT-6 Astra math problems solved
 
-A growing collection of mathematical research, formal proofs, papers, and reproducible artifacts. Each problem's materials live together in its numbered folder, with its own verification record.
+A collection of mathematical research, formal proofs, papers, and reproducible artifacts. Each problem's materials live together in its numbered folder, with its own verification record.
 
 ## Results and verification
 
@@ -30,17 +30,22 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Research lineup updated 13 October 2026. The following targets have entered active investigation in their existing queue order. Work begins with precise statements, current primary literature and known barriers. No completed result or Lean proof is claimed for these entries.
+Research lineup updated 13 October 2026. **Only item 37 remains active, and it is the final research project in this series.** Every other active investigation and the entire waiting queue have been cleared at the owner's request. No replacement target will be selected automatically.
 
-- **37 — [Prime-degree cyclicity for division algebras](https://arxiv.org/abs/2409.07240): investigation started.** Determine whether every central division algebra of prime degree has a cyclic Galois maximal subfield. Known low-degree cases, field assumptions and descent obstructions are being checked; a merely separable maximal subfield is insufficient.
-- **38 — [Berge conjecture for lens-space surgeries](https://arxiv.org/abs/2609.39260): investigation started.** Classify knots in the three-sphere and integral surgery slopes producing lens spaces by the doubly primitive/Berge construction. Classification of the resulting lens spaces or matching Floer data does not by itself classify the knots.
-- **39 — [Foulkes' conjecture](https://www.imsc.res.in/~combinatorics/ICC2026/): investigation started.** For positive integers a <= b, prove Schur positivity of h_b[h_a] - h_a[h_b]. Known cases and recent manuscripts are being checked separately from their exact formal-verification scope; stronger canonical-map claims are not assumed.
-- **40 — [Essential dimension of S8 over C](https://www.numdam.org/articles/10.5802/crmath.577/): investigation started.** Determine the exact ordinary essential dimension of the symmetric group S8 over the complex numbers. This concerns compressions of generic torsors, rather than resolvent degree or prime-local essential dimension.
-- **41 — [Mazur rotation problem](https://arxiv.org/abs/2012.08344): investigation started.** Determine whether every separable real Banach space whose surjective linear isometries act transitively on its unit sphere must be a Hilbert space. Almost-transitive norms and nonseparable examples require separate treatment.
+- **37 — [Prime-degree cyclicity for division algebras](https://arxiv.org/abs/2409.07240): scoped-family investigation in progress.** The current work is attempting to finish and verify a restricted-family result if feasible. Verification remains in progress, and historical novelty is unconfirmed. No completed new result, full checked proof package, or resolution of the general prime-degree cyclicity problem is claimed. A restricted-family result would not establish that every central division algebra of prime degree has a cyclic Galois maximal subfield.
 
-Completion requires a genuinely new result solving the full stated target, a checked Lean proof, and a reviewed mathematical paper. Supporting lemmas, restricted cases and preliminary approaches are not counted as completion. Prior-art review and proof verification remain separate requirements. Only completed, checked proof packages are published; experimental research files remain unpublished. The completed Q7 result in folder 12 is unchanged. The waiting list now resumes at item 42.
+Any eventual result must state its exact scope, verification evidence and prior-art limitations. Only a completed, checked proof package and reviewed paper may be published. If this investigation cannot be completed, it will close with that limitation recorded rather than being replaced by another problem. Previously published results remain unchanged.
 
 ### Shelved research
+
+These entries are retained only as historical checkpoints. They are not active or waiting for automatic resumption.
+
+Cleared from active research on 13 October 2026 at the owner's request, without claiming completed solutions:
+
+- **38 — Berge conjecture for lens-space surgeries:** investigation closed; prior work preserved.
+- **39 — Foulkes' conjecture:** investigation closed; prior work preserved.
+- **40 — Essential dimension of S8 over C:** investigation closed; prior work preserved.
+- **41 — Mazur rotation problem:** investigation closed; prior work preserved.
 
 Rotated out of active research later on 13 October 2026, with private checkpoints preserved and no full solution claimed:
 
@@ -94,91 +99,11 @@ Paused on 12 October 2026 pending a materially stronger route:
 
 Previously shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture; Gauss circle error-term conjecture; Dirichlet divisor error-term conjecture.
 
-### Queued research
+### Research queue cleared
 
-The following targets are waiting, in the order listed. Their inclusion does not imply a proof, a feasible completion time, or a claim of novelty. Source and open-status screening was performed on 11 October 2026.
+**The waiting queue is empty.** All remaining entries in the former 100-problem list, including every waiting entry from item 42 onward, were removed from the queue on 13 October 2026 at the owner's request. This includes the universal perfect one-factorization conjecture formerly listed as item 75. No shelved or waiting target will replace item 37, and no further research project is scheduled after it.
 
-<details>
-<summary>View the research queue</summary>
-
-**Algebra, geometry and topology**
-
-
-**Analysis, dynamics, probability and mathematical physics**
-
-42. [Furstenberg ×2×3 measure-rigidity conjecture](https://arxiv.org/abs/2410.22701)
-43. [Mandelbrot local-connectivity conjecture](https://arxiv.org/abs/2512.24171)
-44. [Exact Landau constant](https://arxiv.org/abs/2609.23236)
-45. [Pólya's Dirichlet eigenvalue conjecture](https://doi.org/10.1112/jlms.70425)
-46. [Bochner–Riesz conjecture in the remaining dimensions](https://arxiv.org/html/2610.06181v1)
-47. [Erdős similarity conjecture](https://arxiv.org/abs/2604.01493)
-48. [Pointwise convergence of triple ergodic averages](https://arxiv.org/abs/2603.18974)
-49. [Global regularity of inviscid SQG](https://arxiv.org/abs/2608.16641)
-50. [Large-data inhomogeneous Coulomb Landau regularity](https://arxiv.org/abs/2608.18407)
-51. [Nonradial soliton resolution for the energy-critical wave equation](https://doi.org/10.3934/dcds.2026115)
-52. [Exact Bloch constant](https://arxiv.org/abs/2608.17660)
-53. [Planar first-passage-percolation fluctuation exponent](https://arxiv.org/abs/1511.03262)
-54. [Planar self-avoiding walk converges to SLE8/3](https://arxiv.org/abs/math/0204277)
-55. [Non-Gaussian scaling limit of critical three-dimensional Ising](https://arxiv.org/abs/2112.04248)
-56. [Positive-temperature spin-glass order in three-dimensional Edwards–Anderson](https://arxiv.org/abs/2301.04112)
-57. [Quantum unique ergodicity on negatively curved surfaces](https://arxiv.org/abs/2606.12098)
-58. [Engliš–Zhang Fefferman–Szegő conjecture](https://arxiv.org/html/2605.25455v1)
-59. [Large-data classical hard-sphere Boltzmann existence](https://arxiv.org/html/2608.18407v1)
-
-**Combinatorics and optimization**
-
-60. [Metric TSP four-thirds integrality-gap conjecture](https://arxiv.org/abs/2603.12995)
-61. [Strongly polynomial linear programming](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.STACS.2025.2)
-62. [Polynomial Hirsch conjecture](https://arxiv.org/abs/2607.11628)
-63. [Tutte's five-flow conjecture](https://arxiv.org/abs/2602.21526)
-64. [Berge–Fulkerson conjecture](https://arxiv.org/abs/2501.05348)
-65. [Caccetta–Häggkvist conjecture](https://doi.org/10.1016/j.disc.2025.114868)
-68. [Ryser's odd-order Latin transversal conjecture](https://arxiv.org/abs/2310.19779)
-69. [Missing Moore graph of degree 57](https://arxiv.org/abs/2610.04815)
-70. [Tuza's triangle packing–covering conjecture](https://arxiv.org/abs/2609.13831)
-71. [Gallai's path-decomposition conjecture](https://ir.cwi.nl/pub/36262/36262.pdf)
-72. [The one-third–two-thirds conjecture for finite posets](https://arxiv.org/abs/2609.30888)
-73. [Vizing's domination-product conjecture](https://arxiv.org/abs/2607.01109)
-74. [Reed's omega–delta–chi conjecture](https://arxiv.org/abs/2502.10147)
-75. [Kotzig's perfect one-factorization conjecture](https://arxiv.org/abs/2607.09459) — The finite K64 investigation is shelved above; the universal conjecture remains waiting.
-76. [Stanley's chromatic-symmetric-function conjecture for trees](https://arxiv.org/abs/2608.18179)
-77. [Conway's planar thrackle conjecture](https://arxiv.org/abs/2506.11808)
-78. [Bermond–Thomassen conjecture](https://arxiv.org/abs/2608.12948)
-79. [Albertson's crossing-number conjecture](https://arxiv.org/abs/2609.01682)
-80. [Thomassen's Hamiltonian line-graph conjecture](https://doi.org/10.1002/jgt.70113)
-
-**Cryptography**
-
-81. [Public-key encryption from one-way functions](https://eprint.iacr.org/2018/555)
-82. [Exponential share-size lower bounds for general perfect secret sharing](https://eprint.iacr.org/2025/518)
-83. [Circular security from full homomorphic composability](https://cic.iacr.org/p/2/1/1/pdf)
-84. [Two-group-element pairing-based SNARGs](https://doi.org/10.1007/978-3-662-49896-5_11)
-85. [Public-coin near-circuit-size black-box zero knowledge](https://eccc.weizmann.ac.il/report/2025/162/revision/1/download/)
-
-**Computer science**
-
-86. [Fourier entropy-influence conjecture](https://link.springer.com/article/10.1007/s00493-024-00133-z)
-87. [Aanderaa-Karp-Rosenberg evasiveness conjecture](https://arxiv.org/abs/1306.0110)
-88. [Distribution-free efficient PAC learning of DNF](https://raw.githubusercontent.com/mlresearch/v291/main/assets/heidari25a/heidari25a.pdf)
-89. [Deterministic linear-time minimum spanning trees](https://people.csail.mit.edu/dmoshkov/papers/mst/high-girth.pdf)
-90. [Skolem problem over the integers](https://arxiv.org/abs/2607.15510)
-91. [Generalized star height one problem](https://doi.org/10.1016/0890-5401(92)90063-L)
-92. [Linear-size universal point sets for planar graphs](https://arxiv.org/abs/2609.10916)
-93. [Aaronson-Ambainis influential variable conjecture](https://arxiv.org/abs/2609.35327)
-94. [NP-completeness of the Minimum Circuit Size Problem](https://eccc.weizmann.ac.il/report/2026/091/download/)
-
-**Logic and foundations**
-
-95. [Vaught's conjecture](https://arxiv.org/abs/2508.06854)
-96. [Kolmogorov-Loveland versus Martin-Lof randomness](https://arxiv.org/abs/2403.19817)
-97. [Stable fields conjecture](https://arxiv.org/abs/2009.02319)
-98. [Cherlin-Zilber algebraicity conjecture](https://ivv5hpp.uni-muenster.de/u/tent/ICM.pdf)
-99. [Pseudofiniteness of the triangle-free Henson graph](https://sites.math.rutgers.edu/~cherlin/Paper/census.pdf)
-100. [Weiss's Borel hyperfiniteness question](https://arxiv.org/abs/1308.5853)
-
-</details>
-
-
+The former queue remains available in the repository's commit history. Clearing the queue does not remove published numbered papers, proofs, verification records or preserved historical work, and it does not claim that any cleared problem has been solved.
 
 “GPT-6 Astra” is the owner's project label. It does not attest to runtime model identity, affiliation, or peer review. The repository title does not mean that every listed research direction is solved.
 

@@ -2,6 +2,14 @@
 
 These notes record the collection's preservation and publication rules. Repository changes require the owner's authorization.
 
+## Current research queue status — 13 October 2026
+
+At the owner's request, item 37, the scoped-family prime-degree cyclicity investigation, is the only remaining active research project and the last project in this series. Its verification remains in progress and historical novelty is unconfirmed; this update publishes no unfinished proof and claims no solution of the unrestricted problem.
+
+Items 38 (Berge), 39 (Foulkes), 40 (essential dimension of S8 over C) and 41 (Mazur rotation) are cleared from active research. All remaining waiting entries in the former 100-problem list are cleared as well. The waiting queue is empty. No automatic replacement or subsequent research target is authorized by the former queue. Earlier references below to active rosters, preserved queues or rotations describe their historical publication events, not the current research plan.
+
+All twelve published numbered folders, their papers and proof assets, and repository history are preserved unchanged. Existing historical checkpoints remain historical; private research materials are not published or deleted by this update. Only the root README, this publication log and their root checksum entries are updated.
+
 ## Layout
 
 Each mathematical problem is grouped in its own numbered folder. The quadratic/APN materials are in `01-quadratic-apn/`. The new proof's 136-module dependency closure plus endpoint-inspection module is independent of the archived package. The LaTeX/PDF and verification records belong alongside that proof.
