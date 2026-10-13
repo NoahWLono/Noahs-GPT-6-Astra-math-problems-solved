@@ -1,0 +1,10 @@
+{
+  "lean_toolchain": "leanprover/lean4:v4.32.2",
+  "mathlib_revision": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "mathlib_manifest_sha256": "015c7e00ead0f05f2a72b32d9bdef782d4689d05a6297f0ceb0ab5d196c164bd",
+  "archive_sha256": "e24f4949b55bec86558c1c79e67d9a854c2344d96827593a781872461d940f3b",
+  "archive_bytes": 8308558,
+  "source_count": 763,
+  "source_bytes": 81210652,
+  "source_manifest_sha256": "4e61ffa5622ae64508003caf9beb58305380866167dca5bd3294a7f97e9678d6"
+}

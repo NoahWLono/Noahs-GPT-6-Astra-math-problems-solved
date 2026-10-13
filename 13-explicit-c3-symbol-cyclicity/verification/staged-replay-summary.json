@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "actual_final_theorem": "PrimeFiveFamily.symbolFamily_cyclicity",
+  "final_module": "FinalAssembly",
+  "final_audit_module": "FinalAudit",
+  "fresh_N5_module_count": 418,
+  "fresh_final_support_and_family_modules": [
+    "FrozenCentralOutput75",
+    "FinalAssembly",
+    "FinalAudit"
+  ],
+  "fresh_N5_audit_module": "Audit",
+  "reused_fresh_N4_module_count": 212,
+  "reused_fresh_structural_module_count": 31,
+  "reused_original_earlier_module_count": 99,
+  "earlier_modules_also_separately_source_rebuilt": [
+    "modern.Algebra",
+    "modern.Numerator"
+  ],
+  "source_and_object_hash_verification_passed": true,
+  "original_N5_object_reuse": false,
+  "original_lean_loader_fallback": false,
+  "final_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "literal_alignment_axioms": [],
+  "fifth_power_hypothesis_in_final_theorem": false,
+  "aggregate_actual_child_cpu_seconds": 3348.363222,
+  "N5_and_audit_actual_child_cpu_seconds": 3338.768295000003,
+  "final_three_actual_child_cpu_seconds": 9.594927,
+  "failed_invocations": 0,
+  "retries": 0,
+  "maximum_invocation_cpu_seconds": 19.342289000000022,
+  "maximum_wall_seconds": 19.403519150990178,
+  "maximum_peak_tree_RSS_bytes": 1555820544,
+  "scope_note": "Fresh N5 and final family replay, using independently rebuilt N4/structural modules and 99 explicitly hashed earlier original project objects. This is not a zero-project-reuse or clean end-to-end rebuild.",
+  "raw_import_receipt_fresh_flag_semantics": "The inherited raw fresh flag means module name starts with modern.N5, not whether this object was rebuilt in this batch. FinalAssembly therefore appears fresh:false in run_422_inputs even though run_421 compiled it freshly. Raw receipts preserved.",
+  "final_assembly_freshness_reconciliation": {
+    "compiled_in_receipt": "run_421_status.json",
+    "imported_in_receipt": "run_422_inputs.json",
+    "all_four_output_hashes_match_imports": true,
+    "all_four_outputs_regular_not_symlinks": true
+  },
+  "final_audit_log": "staged-final-audit.txt",
+  "source_receipt_sha256": "17f4174edf1fce87b2e8d6591311533686abe9ab874722263dfe7b6e748f8064",
+  "normalization": "Selected mathematical, verification and resource facts from the terminal receipt; machine-local storage details omitted. Exact statement log unchanged."
+}

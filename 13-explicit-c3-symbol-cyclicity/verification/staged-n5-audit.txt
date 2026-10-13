@@ -1,0 +1,13 @@
+'PrimeCyclicity.N5Modern.processed69_eq_numerator' does not depend on any axioms
+'PrimeCyclicity.N5Modern.numerator_fifth' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PrimeCyclicity.N5Modern.numerator_fifth : ∀ {k : Type u_1} {D : Type u_2} [inst : CommRing k] [inst_1 : DivisionRing D]
+  [inst_2 : Algebra k D] (q : k) (Q U V : Dˣ),
+  ↑Q = (algebraMap k D) q →
+    Q ^ 5 = 1 →
+      q ^ 4 = -(1 + q + q ^ 2 + q ^ 3) →
+        q ^ 5 = 1 →
+          U * V = Q * V * U →
+            Commute Q U →
+              Commute Q V →
+                PrimeCyclicity.evalLaurent q U V PrimeCyclicity.numerator ^ 5 =
+                  PrimeCyclicity.evalLaurent q U V PrimeCyclicity.N5Modern.acc69

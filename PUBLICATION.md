@@ -2,13 +2,11 @@
 
 These notes record the collection's preservation and publication rules. Repository changes require the owner's authorization.
 
-## Current research queue status — 13 October 2026
+## Research series concluded — 13 October 2026
 
-At the owner's request, item 37, the scoped-family prime-degree cyclicity investigation, is the only remaining active research project and the last project in this series. Its verification remains in progress and historical novelty is unconfirmed; this update publishes no unfinished proof and claims no solution of the unrestricted problem.
+This research series has concluded due to computational budget constraints. The owner authorized paper 13 as the final addition, removal of current work-in-progress and shelved-project lists from the README, and preservation of the twelve earlier published packages and existing commit history. No further mathematical research project is scheduled. Historical research-status statements later in this log describe past publication events, not a current queue.
 
-Items 38 (Berge), 39 (Foulkes), 40 (essential dimension of S8 over C) and 41 (Mazur rotation) are cleared from active research. All remaining waiting entries in the former 100-problem list are cleared as well. The waiting queue is empty. No automatic replacement or subsequent research target is authorized by the former queue. Earlier references below to active rosters, preserved queues or rotations describe their historical publication events, not the current research plan.
-
-All twelve published numbered folders, their papers and proof assets, and repository history are preserved unchanged. Existing historical checkpoints remain historical; private research materials are not published or deleted by this update. Only the root README, this publication log and their root checksum entries are updated.
+This closes the research series without changing the GitHub repository's archive setting. Previous README versions and research rosters remain in commit history. No project-wide license or CI configuration is added.
 
 ## Layout
 
@@ -112,3 +110,12 @@ The public portable verifier is a distinct reproduction route. After its static 
 All 3,046 custom Lean sources and 1,444 compiler-quoted JSON inputs are included as exact, manifest-hashed bytes in the numbered `transport/source.tar.gz.part*` archive parts. These parts are transport packaging, not omitted proof data or compiled proof objects. The public verifier reconstructs and hashes the combined archive, safely extracts only the 4,490 listed regular files, checks the dependency order and freshly compiles the custom closure into a new output directory. Per-part and archive hashes, source/data manifests, build order, readable entry sources, verification records, and the matching paper PDF/LaTeX are included. The certificate inputs are checked by Lean; no external SAT solver answer or Python witness output is added as a logical axiom.
 
 The bounded prior-art comparison records the strongest located published interval 21–28 and the exact condition being compared. It does not establish absolute historical priority. Q7 moves from ongoing research to the completed-results collection. The other active entries receive concise checkpoint statuses only; their experimental details and research-only sources are not included. No waiting target is promoted. All earlier numbered-result paragraphs, shelved directions and waiting-list entries are preserved. Any authorized publication must retain the then-current remote history and regenerate the root checksum manifest. No CI configuration, project-wide license, dependency checkout, compiled proof object, credential or private research note is added.
+
+
+## Explicit C3 symbol-descent cyclicity
+
+`13-explicit-c3-symbol-cyclicity/` contains the scoped characteristic-zero relative-family theorem `PrimeFiveFamily.symbolFamily_cyclicity`, with no additional fifth-power premise. Its explicit invariant generates a degree-five cyclic Galois maximal subfield of the actual fixed algebra. Historical novelty is unestablished; unrestricted degree-five and prime-degree cyclicity are not resolved.
+
+The package includes the paper PDF/LaTeX, full coefficient tables and bibliography, exact source-only archive of all 763 reachable Lean modules, readable final theorem and hypotheses, pinned Lean 4.32.2 and Mathlib dependency lock, a sequential fresh-output verifier, source hashes, and precise verification and prior-art boundaries. The initial and final staged-replay axiom audits list only `propext`, `Classical.choice`, and `Quot.sound`. The staged replay passed all 422 invocations: 418 fresh N5 modules, a separate N5 audit, and three fresh support/final/audit modules. It reused 212 independently rebuilt N4 modules, 31 independently rebuilt structural modules, and 99 original earlier objects (97 without a separate independent source rebuild). Exact hashes, receipts and provenance are included. This is not a zero-reuse all-source rebuild; the new public verifier has not completed an end-to-end replay. These boundaries are recorded in `VERIFICATION.md`. No private research notes, compiled proof objects, dependency checkout, credentials, machine-specific execution paths, invented license or authorship are included.
+
+The existing twelve numbered packages remain unchanged. Publication must extend the then-current remote main commit, preserve history, and refresh the root checksum manifest. The current work-in-progress and shelved-project sections are removed from the README as requested. The repository itself is not archived.

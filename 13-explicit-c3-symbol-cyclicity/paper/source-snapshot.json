@@ -1,0 +1,9 @@
+{
+  "source_archive_sha256": "e24f4949b55bec86558c1c79e67d9a854c2344d96827593a781872461d940f3b",
+  "source_manifest": "../lean/SOURCE_SHA256SUMS",
+  "source_count": 763,
+  "final_statement": "PrimeFiveFamily.symbolFamily_cyclicity",
+  "status": "initial final check and staged N5/final-family replay passed; 99 original earlier objects reused; public-wrapper end-to-end replay untested",
+  "verification_summary": "../verification/staged-replay-summary.json",
+  "replay_inventory": "../verification/staged-source-inventory.json"
+}

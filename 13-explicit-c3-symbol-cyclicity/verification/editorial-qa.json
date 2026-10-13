@@ -1,0 +1,29 @@
+{
+  "date_utc": "2026-10-13",
+  "scope": "final publication-status and provenance wording after terminal staged replay; mathematics and Lean sources unchanged",
+  "pdf_sha256": "ffcecfdee6afa1086095dde44457475365cccffd5d173a8076b3bc2fcf66ad42",
+  "tex_sha256": "4273fa3940abe6951fbf08d4ba498175a468d7f325d9795c76001998ebf7597d",
+  "pages": 18,
+  "build_passes": [
+    {
+      "engine": "pdflatex",
+      "exit_code": 0
+    },
+    {
+      "engine": "bibtex",
+      "exit_code": 0
+    },
+    {
+      "engine": "pdflatex",
+      "exit_code": 0
+    },
+    {
+      "engine": "pdflatex",
+      "exit_code": 0
+    }
+  ],
+  "latex_warnings": [],
+  "visual_review": "All 18 final rendered pages inspected; final status/provenance paragraphs separately inspected on pages 1, 14 and 18. No clipping, overlap or layout defects observed.",
+  "independent_n5_and_final_replay": "passed with exact original-earlier-object reuse disclosure",
+  "public_wrapper_full_replay": "not_run"
+}

@@ -1,0 +1,19 @@
+{
+  "date_utc": "2026-10-13",
+  "status": "release_candidate_final_replay_passed_not_published",
+  "source_archive_sha256": "e24f4949b55bec86558c1c79e67d9a854c2344d96827593a781872461d940f3b",
+  "source_count": 763,
+  "source_bytes": 81210652,
+  "archive_safety_and_source_hashes": "passed",
+  "build_order_and_import_manifest": "passed",
+  "readable_source_identity": "passed",
+  "python_syntax_and_cli": "passed",
+  "supplementary_exact_arithmetic": "passed",
+  "final_audit_parser_against_initial_output": "passed",
+  "source_and_text_machine_path_scan": "passed",
+  "dependency_version_and_git_pin_checks": "passed",
+  "dependency_object_preflight": "blocked: KummerExtension and PrimitiveRoots absent from standard Mathlib object root; public recipe requires building pinned upstream dependencies",
+  "public_wrapper_full_replay": "not_run",
+  "independent_n5_and_final_assembly_replay": "passed with disclosed original earlier object reuse",
+  "paper_status": "Final 18-page PDF rebuilt and visually checked after terminal replay; no LaTeX warnings"
+}

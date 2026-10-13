@@ -28,87 +28,17 @@ A collection of mathematical research, formal proofs, papers, and reproducible a
 
 - [12 — The minimum local identifying code in the binary 7-cube](12-local-identifying-q7/README.md): **Completed and independently verified in Lean: M^L(7) = 24.** An explicit 24-word code attains the minimum, and the unrestricted lower bound applies to every original `ExactCubeCodes.Code 7` satisfying `LocalIdentifying`, without a linearity, symmetry or search-family assumption. All 3,046 custom proof modules were independently checked; the final theorem's axiom audit lists only `propext`, `Classical.choice`, and `Quot.sound`. Saved certificates are checked by Lean rather than accepted as external solver answers. This improves the strongest located published bounds of 21–28; the [bounded prior-art comparison](12-local-identifying-q7/PRIOR_ART.md) makes no absolute-priority claim. Read the [mathematical paper](12-local-identifying-q7/paper/q7-local-identifying-draft.pdf), [formal specification](12-local-identifying-q7/SPEC.md), and [verification record](12-local-identifying-q7/VERIFICATION.md). The unchanged public verifier also completed a fresh replay of all 3,046 modules with zero custom-object reuse; its required named axiom audits and original-predicate type check passed. See the [full public replay record](12-local-identifying-q7/PUBLIC_VERIFICATION.md).
 
-## Ongoing research
+- [13 — An explicit invariant for a degree five symbol descent family](13-explicit-c3-symbol-cyclicity/README.md): **Completed scoped theorem, checked in Lean with staged replay; historical novelty unestablished.** For the explicit characteristic-zero semilinear symbol-division family, a displayed invariant generates a degree-five cyclic Galois maximal subfield of the fixed algebra. The final theorem has no additional fifth-power hypothesis and its final axiom audit contains only `propext`, `Classical.choice`, and `Quot.sound`. The [complete 763-source proof package and verification record](13-explicit-c3-symbol-cyclicity/VERIFICATION.md) record the successful staged N5/final-family replay, the 99 original earlier objects reused, and the untested end-to-end public-wrapper boundary. Read the [mathematical paper](13-explicit-c3-symbol-cyclicity/paper/scoped-c3-cyclicity.pdf) and [exact hypotheses](13-explicit-c3-symbol-cyclicity/SCOPE.md). **Unrestricted degree-five and prime-degree cyclicity remain unresolved by this work.**
 
-Research lineup updated 13 October 2026. **Only item 37 remains active, and it is the final research project in this series.** Every other active investigation and the entire waiting queue have been cleared at the owner's request. No replacement target will be selected automatically.
+## Research series concluded
 
-- **37 — [Prime-degree cyclicity for division algebras](https://arxiv.org/abs/2409.07240): scoped-family investigation in progress.** The current work is attempting to finish and verify a restricted-family result if feasible. Verification remains in progress, and historical novelty is unconfirmed. No completed new result, full checked proof package, or resolution of the general prime-degree cyclicity problem is claimed. A restricted-family result would not establish that every central division algebra of prime degree has a cyclic Galois maximal subfield.
-
-Any eventual result must state its exact scope, verification evidence and prior-art limitations. Only a completed, checked proof package and reviewed paper may be published. If this investigation cannot be completed, it will close with that limitation recorded rather than being replaced by another problem. Previously published results remain unchanged.
-
-### Shelved research
-
-These entries are retained only as historical checkpoints. They are not active or waiting for automatic resumption.
-
-Cleared from active research on 13 October 2026 at the owner's request, without claiming completed solutions:
-
-- **38 — Berge conjecture for lens-space surgeries:** investigation closed; prior work preserved.
-- **39 — Foulkes' conjecture:** investigation closed; prior work preserved.
-- **40 — Essential dimension of S8 over C:** investigation closed; prior work preserved.
-- **41 — Mazur rotation problem:** investigation closed; prior work preserved.
-
-Rotated out of active research later on 13 October 2026, with private checkpoints preserved and no full solution claimed:
-
-- **32 — Cabling conjecture:** correction-term profile constraints and independent Floer/Alexander tests leave surviving algebraic cases; actual knot realization and homology-sphere summands remain unresolved. No new complete proof.
-- **33 — Jones polynomial unknot detection:** the tested propagation route did not yield a proof. Supporting algebra checks do not formalize knot topology or solve unknot detection.
-- **34 — Additivity of knot crossing number:** a proposed crossing-bound refinement needs an unproved global interface/gluing lemma. No improved constant or full additivity theorem established.
-- **35 — Volume conjecture:** an exact spectral regularity lemma for a published pretzel-knot descendant recurrence was checked, but the connection to Jones-color asymptotics and noncancellation remains missing. No volume-conjecture proof or novelty claim.
-- **36 — Kaplansky's sixth conjecture:** tested integrality routes either recover known equivalent conditions or encounter an invalid spectrum-transfer inference. No new Hopf-algebra coverage or full theorem established.
-
-Rotated out of active research on 13 October 2026, with private checkpoints preserved and no full solution claimed:
-
-- **[Perfect one-factorization of K64](https://arxiv.org/pdf/2607.09459v1#page=1) (finite open case associated with queue item 75): restricted obstruction established computationally; investigation paused.** The goal is a complete partition of the 2,016 edges of the complete graph on 64 vertices into exactly 63 perfect matchings, each containing 32 edges, such that every one of the 1,953 unordered pairs of distinct matchings has a union that is a single Hamiltonian cycle through all 64 vertices. The checkpoint excludes a restricted family, but supplies neither a complete factorization nor an unrestricted nonexistence proof; it is not Lean-certified. The July 2026 primary-source paper linked here lists 64 as the smallest open order.
-
-- **[Borsuk's problem in four dimensions](https://arxiv.org/html/2605.19068v1) (former queue item 29): candidate-screening and supporting checks completed; investigation paused.** Determine whether every bounded subset of R4 with positive diameter can be partitioned into five subsets of strictly smaller diameter. The checked May 2026 source gives **5 <= b(4) <= 8**, with the upper bound in Theorem 2. No five-part construction, counterexample, improved bound or full Lean proof is established; the unrestricted problem remains unresolved.
-
-- **[Five-dimensional kissing number](https://doi.org/10.1007/s00454-026-00841-x) (former queue item 30): partial analytic reductions recorded; investigation paused.** Determine the exact maximum number of nonoverlapping unit spheres that can simultaneously touch a central unit sphere in R5. Cohn and Rajagopal's July 2026 paper, Section 2, records **40 <= tau(5) <= 44**. Supporting inequalities remain incomplete, and the unrestricted upper-bound argument is still missing. No improved bound or full Lean proof is established; a complete result requires an attaining configuration and a matching unrestricted upper bound.
-
-- **[Finitely presented groups of intermediate growth](https://jep.centre-mersenne.org/item/10.5802/jep.295.pdf) (former queue item 31): construction routes screened; investigation paused.** Determine whether a finitely presented group can have subexponential but nonpolynomial growth. Babenko and Sabourau's 2025 paper explicitly records this as open on pp. 486 and 501. The checkpoint rules out specified construction routes, but produces neither a qualifying finite presentation nor a general nonexistence theorem. No full Lean proof or novelty claim is made; the unrestricted existence question remains unresolved.
-
-**Prior-art correction, 12 October 2026: ordinary locating-dominating Q6 has known optimum 16 and is retired as a novelty target.** Charon, Hudry and Lobstein's 2022 paper [*Codes in the q-ary Lee Hypercube*, Table 2, p. 183](https://wseas.com/journals/mathematics/2022/a485106-009%282022%29.pdf#page=11) reports a 16-word radius-one locating-dominating code for the Lee graph with q = 4 and n = 3; the [authors' construction file](https://perso.telecom-paristech.fr/hudry/codesLD/3_1_4) is available. Its Definition 2, p. 173, uses the same ordinary locating-dominating condition. Applying the Gray map 0 → 00, 1 → 01, 2 → 11, 3 → 10 in each coordinate gives an isomorphism from that graph, C4 × C4 × C4, to Q6, preserving the code condition. Combined with the [published lower bound of 16](https://fi.episciences.org/13881/pdf#page=8), this gives exact minimum 16. The earlier 16–18 entry relied on an out-of-date upper bound in the 2024 binary table. This is known prior art, and no new paper or new completion is claimed. It remains distinct from the completed **local 1-identifying Q6 minimum of 14** in [folder 05](05-local-identifying-q6/README.md).
-
-Retired from the active roster on 12 October 2026 after publication of folder 11, with their completed results and research checkpoints retained:
-
-- **[Nakai conjecture](https://arxiv.org/abs/2604.24508): checked ordinary-homogeneous theorem; broader investigation retired.** The Hessian nonmembership bridge and full unrestricted-word operator separation are now formalized for ordinary homogeneous polynomials of degree at least two in at least three variables over any characteristic-zero field with finite-dimensional gradient quotient. The reviewed [addendum in folder 09](09-nakai-quartic-certificate/homogeneous-addendum/README.md) records the exact theorem and independent rebuild. The fixed-quartic certificate remains unchanged. Weighted and general nonhomogeneous cases are outside this completed formal scope; historical novelty is unestablished, and the unrestricted conjecture remains unresolved here.
-- **[Bounded negativity conjecture](https://arxiv.org/abs/2408.15187): checked algebraic checkpoint; analytic bridge pending.** The algebraic proof component has been checked. The analytic bridge needed for the intended result remains open; no full bounded-negativity solution is established.
-- **[Andrews–Curtis conjecture](https://github.com/SAIRcompetition/Andrews-Curtis/blob/main/competition/rules/overview.md): shelved; former queue item 24.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Hadwiger–Boltyanski illumination conjecture](https://arxiv.org/abs/2507.08712): shelved; former queue item 25.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Dürer edge-unfolding conjecture](https://arxiv.org/abs/2607.09606): checked planar rotation-center theorem; unfolding geometry pending.** The sharp distance bound and examples attaining it are fully formalized in [folder 11](11-sharp-rotation-center-bound/README.md). The theorem concerns actual finite planar rotation maps; a chain-specific separation margin and a successful actual-edge unfolding are not established. Historical novelty remains unestablished, and the general edge-unfolding conjecture remains unresolved here.
-- **[Square peg problem](https://arxiv.org/abs/2203.02613): shelved; former queue item 27.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-- **[Chern second-gap conjecture for minimal hypersurfaces](https://arxiv.org/abs/2610.05276): shelved; former queue item 28.** Initial source review and assessment of feasible scoped approaches; no verified result is established.
-
-Rotated out of the active roster on 12 October 2026, with their checkpoints retained:
-
-- **[Zariski cancellation for complex affine three-space](https://arxiv.org/abs/2208.14736):** the completed arbitrary-polynomial cylinder transitivity theorem is published in [folder 10](10-polynomial-cylinder-transitivity/README.md), with a thirteen-move pointwise bound. No new cancellation proof attempt is running. Affine-space cancellation remains unresolved, and historical novelty of the scoped result remains provisional.
-- **[Markov-number uniqueness conjecture](https://link.springer.com/article/10.1007/s11139-026-01468-5):** supporting results have been checked. The larger verification effort is paused pending resource-feasibility assessment; the full uniqueness conjecture remains unresolved here.
-- **[Serre’s uniformity conjecture for elliptic curves over Q](https://arxiv.org/html/2602.20964v1):** a candidate argument is recorded, but the main formal proof remains pending. No completed solution is claimed.
-- **Total coloring conjecture:** a paper-level argument gives the exact repair distance for a constructed family. Lean verification and novelty review remain pending; the full Δ+2 conjecture for finite simple graphs remains unresolved here.
-- **koalaIRS12 soundness benchmark at better.codes:** a profile-interval counting bound has been independently checked. Global improvement remains blocked by auxiliary cases; no eligible improved benchmark score is established.
-
-Paused on 12 October 2026 pending a materially stronger route:
-
-- **Four exponentials conjecture:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
-- **Base-ten normality of pi:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
-- **Uniformity of rational points on curves of fixed genus:** paused by the project owner. No completed solution is claimed; the conjecture remains unresolved here.
-
-- **Pillai’s full fixed-gap conjecture:** the completed scoped shifted-binomial irreducibility theorem and composite-inner-exponent addendum remain unchanged in [folder 07](07-scoped-binomial-irreducibility/README.md). Those results do not settle the full conjecture, which remains unresolved here; historical novelty of the scoped results is unestablished.
-- **List edge-coloring conjecture:** the current investigation does not establish equality of the list edge-chromatic and edge-chromatic numbers for all finite loopless multigraphs. No completed solution is claimed.
-- **Kummer–Vandiver conjecture:** tested height and transfer approaches do not establish the required plus-class saturation. The conjecture remains unresolved here.
-- **Inverse Galois problem over the rationals:** an explicit Sz(8) dessin has been verified, but numerical Belyi reconstruction is not yet exact. No new realization over the rationals is established.
-- **Uniform boundedness of number-field abelian-variety torsion:** no new torsion bound depending only on the abelian-variety dimension g and number-field degree d is established.
-
-Previously shelved: the exact covering number C(13,6,4); Lehmer’s Mahler-measure gap problem; Lehmer’s totient problem; Carmichael’s totient conjecture; Erdős–Moser equation conjecture; Brocard–Ramanujan factorial-square problem; Beal’s conjecture; Littlewood’s simultaneous-approximation conjecture; Zaremba’s explicit bound-5 conjecture; Gauss circle error-term conjecture; Dirichlet divisor error-term conjecture.
-
-### Research queue cleared
-
-**The waiting queue is empty.** All remaining entries in the former 100-problem list, including every waiting entry from item 42 onward, were removed from the queue on 13 October 2026 at the owner's request. This includes the universal perfect one-factorization conjecture formerly listed as item 75. No shelved or waiting target will replace item 37, and no further research project is scheduled after it.
-
-The former queue remains available in the repository's commit history. Clearing the queue does not remove published numbered papers, proofs, verification records or preserved historical work, and it does not claim that any cleared problem has been solved.
+This research series has concluded due to computational budget constraints. The thirteen published papers and their proof and verification materials remain available below their numbered folders. No further mathematical research project is scheduled in this series.
 
 “GPT-6 Astra” is the owner's project label. It does not attest to runtime model identity, affiliation, or peer review. The repository title does not mean that every listed research direction is solved.
 
 ## Reproducibility and preservation
 
 Each problem folder contains its proof and verification sources, source hashes, reproduction instructions, paper assets, and verification records. The Lean projects additionally include their proof dependency closures and pinned Lean/mathlib configurations. Each entry identifies its verification method and trust boundary. See [publication notes](PUBLICATION.md). No compiled proof objects, dependency checkout, credentials, or build cache is distributed. No CI or project-wide license has been added. Existing third-party license notices remain with the archived assets.
+
 
 

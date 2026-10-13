@@ -1,0 +1,239 @@
+structure PrimeFiveFamily.SymbolFamily.{u_1, u_2} (K : Type u_1) (A : Type u_2) [Field.{u_1} K] [CharZero.{u_1} K]
+  [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] : Type (max u_1 u_2)
+number of parameters: 6
+fields:
+  PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} : K
+  PrimeFiveFamily.SymbolFamily.q_primitive.{u_1,
+    u_2} : IsPrimitiveRoot.{u_1} (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} self) 5
+  PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} : Units.{u_2} A
+  PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} : Units.{u_2} A
+  PrimeFiveFamily.SymbolFamily.quantum.{u_1,
+    u_2} : Eq.{u_2 + 1}
+      (HMul.hMul.{u_2, u_2, u_2} ↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self)
+        ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self))
+      (HSMul.hSMul.{u_1, u_2, u_2} (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} self)
+        (HMul.hMul.{u_2, u_2, u_2} ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self)
+          ↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self)))
+  PrimeFiveFamily.SymbolFamily.x.{u_1, u_2} : K
+  PrimeFiveFamily.SymbolFamily.y.{u_1, u_2} : K
+  PrimeFiveFamily.SymbolFamily.fifth_U.{u_1,
+    u_2} : Eq.{u_2 + 1} (HPow.hPow.{u_2, 0, u_2} (↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self)) 5)
+      ((algebraMap.{u_1, u_2} K A) (PrimeFiveFamily.SymbolFamily.x.{u_1, u_2} self))
+  PrimeFiveFamily.SymbolFamily.fifth_V.{u_1,
+    u_2} : Eq.{u_2 + 1} (HPow.hPow.{u_2, 0, u_2} (↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self)) 5)
+      ((algebraMap.{u_1, u_2} K A) (PrimeFiveFamily.SymbolFamily.y.{u_1, u_2} self))
+  PrimeFiveFamily.SymbolFamily.basis.{u_1, u_2} : Module.Basis.{0, u_1, u_2} (Prod.{0, 0} (Fin 5) (Fin 5)) K A
+  PrimeFiveFamily.SymbolFamily.basis_apply.{u_1,
+    u_2} : ∀ (ij : Prod.{0, 0} (Fin 5) (Fin 5)),
+      Eq.{u_2 + 1} ((PrimeFiveFamily.SymbolFamily.basis.{u_1, u_2} self) ij)
+        (HMul.hMul.{u_2, u_2, u_2} (HPow.hPow.{u_2, 0, u_2} ↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self) ↑ij.1)
+          (HPow.hPow.{u_2, 0, u_2} ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self) ↑ij.2))
+  PrimeFiveFamily.SymbolFamily.center.{u_1,
+    u_2} : ∀ (a : A),
+      (∀ (z : A), Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} a z) (HMul.hMul.{u_2, u_2, u_2} z a)) ↔
+        ∃ c, Eq.{u_2 + 1} ((algebraMap.{u_1, u_2} K A) c) a
+  PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} : RingEquiv.{u_2, u_2} A A
+  PrimeFiveFamily.SymbolFamily.tau.{u_1, u_2} : RingEquiv.{u_1, u_1} K K
+  PrimeFiveFamily.SymbolFamily.semilinear.{u_1,
+    u_2} : ∀ (c : K) (a : A),
+      Eq.{u_2 + 1} ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self) (HSMul.hSMul.{u_1, u_2, u_2} c a))
+        (HSMul.hSMul.{u_1, u_2, u_2} ((PrimeFiveFamily.SymbolFamily.tau.{u_1, u_2} self) c)
+          ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self) a))
+  PrimeFiveFamily.SymbolFamily.sigma_cube.{u_1,
+    u_2} : ∀ (a : A),
+      Eq.{u_2 + 1}
+        ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self)
+          ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self)
+            ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self) a)))
+        a
+  PrimeFiveFamily.SymbolFamily.sigma_U.{u_1,
+    u_2} : Eq.{u_2 + 1}
+      ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self) ↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self))
+      ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self)
+  PrimeFiveFamily.SymbolFamily.sigma_V.{u_1,
+    u_2} : Eq.{u_2 + 1}
+      ((PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} self) ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self))
+      (Inv.inv.{u_2}
+        (HMul.hMul.{u_2, u_2, u_2} ↑(PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} self)
+          ↑(PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} self)))
+  PrimeFiveFamily.SymbolFamily.tau_q.{u_1,
+    u_2} : Eq.{u_1 + 1}
+      ((PrimeFiveFamily.SymbolFamily.tau.{u_1, u_2} self) (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} self))
+      (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} self)
+constructor:
+  PrimeFiveFamily.SymbolFamily.mk.{u_1, u_2} {K : Type u_1} {A : Type u_2} [Field.{u_1} K] [CharZero.{u_1} K]
+    [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] (q : K) (q_primitive : IsPrimitiveRoot.{u_1} q 5)
+    (U V : Units.{u_2} A)
+    (quantum :
+      Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} ↑U ↑V) (HSMul.hSMul.{u_1, u_2, u_2} q (HMul.hMul.{u_2, u_2, u_2} ↑V ↑U)))
+    (x y : K) (fifth_U : Eq.{u_2 + 1} (HPow.hPow.{u_2, 0, u_2} (↑U) 5) ((algebraMap.{u_1, u_2} K A) x))
+    (fifth_V : Eq.{u_2 + 1} (HPow.hPow.{u_2, 0, u_2} (↑V) 5) ((algebraMap.{u_1, u_2} K A) y))
+    (basis : Module.Basis.{0, u_1, u_2} (Prod.{0, 0} (Fin 5) (Fin 5)) K A)
+    (basis_apply :
+      ∀ (ij : Prod.{0, 0} (Fin 5) (Fin 5)),
+        Eq.{u_2 + 1} (basis ij)
+          (HMul.hMul.{u_2, u_2, u_2} (HPow.hPow.{u_2, 0, u_2} ↑U ↑ij.1) (HPow.hPow.{u_2, 0, u_2} ↑V ↑ij.2)))
+    (center :
+      ∀ (a : A),
+        (∀ (z : A), Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} a z) (HMul.hMul.{u_2, u_2, u_2} z a)) ↔
+          ∃ c, Eq.{u_2 + 1} ((algebraMap.{u_1, u_2} K A) c) a)
+    (sigma : RingEquiv.{u_2, u_2} A A) (tau : RingEquiv.{u_1, u_1} K K)
+    (semilinear :
+      ∀ (c : K) (a : A),
+        Eq.{u_2 + 1} (sigma (HSMul.hSMul.{u_1, u_2, u_2} c a)) (HSMul.hSMul.{u_1, u_2, u_2} (tau c) (sigma a)))
+    (sigma_cube : ∀ (a : A), Eq.{u_2 + 1} (sigma (sigma (sigma a))) a) (sigma_U : Eq.{u_2 + 1} (sigma ↑U) ↑V)
+    (sigma_V : Eq.{u_2 + 1} (sigma ↑V) (Inv.inv.{u_2} (HMul.hMul.{u_2, u_2, u_2} ↑U ↑V)))
+    (tau_q : Eq.{u_1 + 1} (tau q) q) : PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A
+@[reducible, expose] def PrimeFiveFamily.FixedScalars.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : CharZero.{u_1} K] →
+        [inst_2 : DivisionRing.{u_2} A] →
+          [inst_3 : Algebra.{u_1, u_2} K A] → PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A → Type u_1 :=
+fun {K} {A} [Field.{u_1} K] [CharZero.{u_1} K] [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] s =>
+  ↥(C3BasisDescent.fixedField.{u_1} (PrimeFiveFamily.SymbolFamily.tau.{u_1, u_2} s))
+@[reducible, expose] def PrimeFiveFamily.FixedAlgebra.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : CharZero.{u_1} K] →
+        [inst_2 : DivisionRing.{u_2} A] →
+          [inst_3 : Algebra.{u_1, u_2} K A] → PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A → Type u_2 :=
+fun {K} {A} [Field.{u_1} K] [CharZero.{u_1} K] [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] s =>
+  ↥(C3BasisDescent.fixedAlgebra.{u_1, u_2} (PrimeFiveFamily.SymbolFamily.sigma.{u_1, u_2} s)
+      (PrimeFiveFamily.SymbolFamily.tau.{u_1, u_2} s) ⋯)
+@[expose] def C3BasisDescent.fixedField.{u_1} : {K : Type u_1} →
+  [inst : Field.{u_1} K] → RingEquiv.{u_1, u_1} K K → Subfield.{u_1} K :=
+fun {K} [Field.{u_1} K] τ => RingHom.eqLocusField.{u_1, u_1} (RingEquiv.toRingHom.{u_1, u_1} τ) (RingHom.id.{u_1} K)
+@[expose] def C3BasisDescent.fixedAlgebra.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : Ring.{u_2} A] →
+        [inst_2 : Algebra.{u_1, u_2} K A] →
+          (σ : RingEquiv.{u_2, u_2} A A) →
+            (τ : RingEquiv.{u_1, u_1} K K) →
+              (∀ (c : K) (a : A),
+                  Eq.{u_2 + 1} (σ (HSMul.hSMul.{u_1, u_2, u_2} c a)) (HSMul.hSMul.{u_1, u_2, u_2} (τ c) (σ a))) →
+                Subalgebra.{u_1, u_2} (↥(C3BasisDescent.fixedField.{u_1} τ)) A :=
+fun {K} {A} [Field.{u_1} K] [Ring.{u_2} A] [Algebra.{u_1, u_2} K A] σ τ hsemi =>
+  Subalgebra.mk.{u_1, u_2}
+    (Subsemiring.mk.{u_2} (Submonoid.mk.{u_2} (Subsemigroup.mk.{u_2} (setOf.{u_2} fun a => Eq.{u_2 + 1} (σ a) a) ⋯) ⋯) ⋯
+      ⋯)
+    ⋯
+@[expose] def PrimeFiveFamily.frozenNumerator.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : CharZero.{u_1} K] →
+        [inst_2 : DivisionRing.{u_2} A] →
+          [inst_3 : Algebra.{u_1, u_2} K A] → PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A → A :=
+fun {K} {A} [Field.{u_1} K] [CharZero.{u_1} K] [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] s =>
+  PrimeCyclicity.evalLaurent.{u_2, u_1} (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} s)
+    (PrimeFiveFamily.SymbolFamily.U.{u_1, u_2} s) (PrimeFiveFamily.SymbolFamily.V.{u_1, u_2} s) PrimeCyclicity.numerator
+@[expose] def PrimeFiveFamily.fixedNumerator.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : CharZero.{u_1} K] →
+        [inst_2 : DivisionRing.{u_2} A] →
+          [inst_3 : Algebra.{u_1, u_2} K A] →
+            (s : PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A) → PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s :=
+fun {K} {A} [Field.{u_1} K] [CharZero.{u_1} K] [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] s =>
+  Subtype.mk.{u_2 + 1} (PrimeFiveFamily.frozenNumerator.{u_1, u_2} s) ⋯
+@[expose] def PrimeFiveFamily.fifthScalar.{u_1, u_2} : {K : Type u_1} →
+  {A : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : CharZero.{u_1} K] →
+        [inst_2 : DivisionRing.{u_2} A] →
+          [inst_3 : Algebra.{u_1, u_2} K A] → PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A → K :=
+fun {K} {A} [Field.{u_1} K] [CharZero.{u_1} K] [DivisionRing.{u_2} A] [Algebra.{u_1, u_2} K A] s =>
+  ConcreteCoordinateBridge.centralCoefficient.{u_1} (PrimeFiveFamily.SymbolFamily.q.{u_1, u_2} s)
+    (PrimeFiveFamily.SymbolFamily.x.{u_1, u_2} s) (PrimeFiveFamily.SymbolFamily.y.{u_1, u_2} s)
+    FrozenCentralOutput75.candidateOutput75
+@[reducible, expose] def PrimeCyclicityEndpoint.Generated.{u_1, u_2} : (F : Type u_1) →
+  (D : Type u_2) →
+    [inst : Field.{u_1} F] →
+      [inst_1 : DivisionRing.{u_2} D] → [inst_2 : Algebra.{u_1, u_2} F D] → D → Subalgebra.{u_1, u_2} F D :=
+fun F D [Field.{u_1} F] [DivisionRing.{u_2} D] [Algebra.{u_1, u_2} F D] r => F[r]
+PrimeFiveFamily.fifthOutput_eq_candidate : Eq.{1} PrimeCyclicity.N5Modern.acc69 FrozenCentralOutput75.candidateOutput75
+@PrimeFiveFamily.frozenNumerator_fifth.{u_1,
+    u_2} : ∀ {K : Type u_1} {A : Type u_2} [inst : Field.{u_1} K] [inst_1 : CharZero.{u_1} K]
+  [inst_2 : DivisionRing.{u_2} A] [inst_3 : Algebra.{u_1, u_2} K A] (s : PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A),
+  Eq.{u_2 + 1} (HPow.hPow.{u_2, 0, u_2} (PrimeFiveFamily.frozenNumerator.{u_1, u_2} s) 5)
+    ((algebraMap.{u_1, u_2} K A) (PrimeFiveFamily.fifthScalar.{u_1, u_2} s))
+@PrimeFiveFamily.symbolFamily_cyclicity.{u_1,
+    u_2} : ∀ {K : Type u_1} {A : Type u_2} [inst : Field.{u_1} K] [inst_1 : CharZero.{u_1} K]
+  [inst_2 : DivisionRing.{u_2} A] [inst_3 : Algebra.{u_1, u_2} K A] (s : PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A),
+  Eq.{1}
+      (Module.finrank.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+        ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s)))
+      5 ∧
+    IsGalois.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+        ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s)) ∧
+      IsCyclic.{u_2}
+          (AlgEquiv.{u_1, u_2, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))
+            ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))) ∧
+        ∀
+          (M :
+            Subalgebra.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+              (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s)),
+          LE.le.{u_2}
+              (PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))
+              M →
+            (∀ (x : PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s),
+                Membership.mem.{u_2, u_2} M x →
+                  ∀ (y : PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s),
+                    Membership.mem.{u_2, u_2} M y →
+                      Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} x y) (HMul.hMul.{u_2, u_2, u_2} y x)) →
+              Eq.{u_2 + 1} M
+                (PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                  (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))
+theorem PrimeFiveFamily.symbolFamily_cyclicity.{u_1, u_2} : ∀ {K : Type u_1} {A : Type u_2} [inst : Field.{u_1} K]
+  [inst_1 : CharZero.{u_1} K] [inst_2 : DivisionRing.{u_2} A] [inst_3 : Algebra.{u_1, u_2} K A]
+  (s : PrimeFiveFamily.SymbolFamily.{u_1, u_2} K A),
+  Eq.{1}
+      (Module.finrank.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+        ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s)))
+      5 ∧
+    IsGalois.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+        ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s)) ∧
+      IsCyclic.{u_2}
+          (AlgEquiv.{u_1, u_2, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+            ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))
+            ↥(PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))) ∧
+        ∀
+          (M :
+            Subalgebra.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+              (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s)),
+          LE.le.{u_2}
+              (PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s))
+              M →
+            (∀ (x : PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s),
+                Membership.mem.{u_2, u_2} M x →
+                  ∀ (y : PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s),
+                    Membership.mem.{u_2, u_2} M y →
+                      Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} x y) (HMul.hMul.{u_2, u_2, u_2} y x)) →
+              Eq.{u_2 + 1} M
+                (PrimeCyclicityEndpoint.Generated.{u_1, u_2} (PrimeFiveFamily.FixedScalars.{u_1, u_2} s)
+                  (PrimeFiveFamily.FixedAlgebra.{u_1, u_2} s) (PrimeFiveFamily.fixedNumerator.{u_1, u_2} s)) :=
+<not imported>
+'PrimeFiveFamily.fifthOutput_eq_candidate' does not depend on any axioms
+'PrimeFiveFamily.fifthScalar' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'PrimeFiveFamily.frozenNumerator_fifth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'PrimeFiveFamily.symbolFamily_cyclicity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'PrimeCyclicity.N5Modern.numerator_fifth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'FrozenCentralOutput75.candidateOutput75_support' depends on axioms: [propext]
+'ConcreteCoordinateBridge.evalLaurent_scalar_of_support' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'PrimeFiveFamily.supporting_cyclicity_of_fifthPower_identity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

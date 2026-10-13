@@ -1,0 +1,36 @@
+{
+  "external_exact_arithmetic_replay": "passed",
+  "compact_equality": true,
+  "sigma_invariance": true,
+  "two_coordinate_rows": true,
+  "complete_fifth_power_map_equality": true,
+  "powers": [
+    {
+      "power": 1,
+      "support": 69,
+      "central_support": 0
+    },
+    {
+      "power": 2,
+      "support": 237,
+      "central_support": 0
+    },
+    {
+      "power": 3,
+      "support": 552,
+      "central_support": 0
+    },
+    {
+      "power": 4,
+      "support": 969,
+      "central_support": 0
+    },
+    {
+      "power": 5,
+      "support": 75,
+      "central_support": 75
+    }
+  ],
+  "cpu_seconds": 0.6208260290000001,
+  "formal_status": "This Python replay is supplementary and does not replace Lean kernel verification."
+}
