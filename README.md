@@ -30,17 +30,25 @@ A growing collection of mathematical research, formal proofs, papers, and reprod
 
 ## Ongoing research
 
-Research lineup updated 13 October 2026. The following targets have entered active investigation in their existing queue order. Initial work checks the precise statement, current literature and claimed resolutions before attempting new mathematics. No completed result or Lean proof is claimed for these entries.
+Research lineup updated 13 October 2026. The following targets have entered active investigation in their existing queue order. Work begins with precise statements, current primary literature and known barriers. No completed result or Lean proof is claimed for these entries.
 
-- **32 — [Cabling conjecture](https://link.springer.com/article/10.1007/s40590-025-00722-y): investigation started.** Determine whether every reducible Dehn surgery on a nontrivial knot in the three-sphere is a cable surgery at the cabling-annulus slope. The current investigation checks known classes and the remaining unrestricted case.
-- **33 — [Jones polynomial unknot detection](https://epubs.siam.org/doi/10.1137/25M1806703): investigation started.** Determine whether a knot with normalized Jones polynomial equal to one must be the unknot. Recent claimed resolutions are being assessed; their correctness is not assumed. This is distinct from Khovanov homology detecting the unknot.
-- **34 — [Additivity of knot crossing number](https://doi.org/10.1080/10586458.2025.2542174): investigation started.** Determine whether c(K # L) = c(K) + c(L) for arbitrary knots, using their minimal crossing numbers. Recent claimed resolutions are being assessed; diagram-level and restricted-knot results do not settle this target.
-- **35 — [Kashaev–Murakami–Murakami volume conjecture](https://arxiv.org/abs/1002.0126): investigation started.** Establish the predicted asymptotic relation between the appropriately normalized colored Jones evaluations at roots of unity and knot-complement volume. The precise hyperbolic and simplicial-volume formulations and known cases are being checked before selecting a proof route.
-- **36 — [Kaplansky's sixth conjecture](https://arxiv.org/abs/1409.2545): investigation started.** For a finite-dimensional semisimple Hopf algebra over an algebraically closed field of characteristic zero, determine whether the dimension of every simple module divides the algebra's dimension. Known special classes and remaining gaps are being checked.
+- **37 — [Prime-degree cyclicity for division algebras](https://arxiv.org/abs/2409.07240): investigation started.** Determine whether every central division algebra of prime degree has a cyclic Galois maximal subfield. Known low-degree cases, field assumptions and descent obstructions are being checked; a merely separable maximal subfield is insufficient.
+- **38 — [Berge conjecture for lens-space surgeries](https://arxiv.org/abs/2609.39260): investigation started.** Classify knots in the three-sphere and integral surgery slopes producing lens spaces by the doubly primitive/Berge construction. Classification of the resulting lens spaces or matching Floer data does not by itself classify the knots.
+- **39 — [Foulkes' conjecture](https://www.imsc.res.in/~combinatorics/ICC2026/): investigation started.** For positive integers a <= b, prove Schur positivity of h_b[h_a] - h_a[h_b]. Known cases and recent manuscripts are being checked separately from their exact formal-verification scope; stronger canonical-map claims are not assumed.
+- **40 — [Essential dimension of S8 over C](https://www.numdam.org/articles/10.5802/crmath.577/): investigation started.** Determine the exact ordinary essential dimension of the symmetric group S8 over the complex numbers. This concerns compressions of generic torsors, rather than resolvent degree or prime-local essential dimension.
+- **41 — [Mazur rotation problem](https://arxiv.org/abs/2012.08344): investigation started.** Determine whether every separable real Banach space whose surjective linear isometries act transitively on its unit sphere must be a Hilbert space. Almost-transitive norms and nonseparable examples require separate treatment.
 
-Completion requires a genuinely new result solving the full stated target, a checked Lean proof, and a reviewed mathematical paper. Supporting lemmas, restricted cases and preliminary approaches are not counted as completion. Prior-art review and proof verification remain separate requirements. Only completed, checked proof packages are published; experimental research files remain unpublished. The independent full-closure verification of the completed Q7 result in folder 12 is unchanged.
+Completion requires a genuinely new result solving the full stated target, a checked Lean proof, and a reviewed mathematical paper. Supporting lemmas, restricted cases and preliminary approaches are not counted as completion. Prior-art review and proof verification remain separate requirements. Only completed, checked proof packages are published; experimental research files remain unpublished. The completed Q7 result in folder 12 is unchanged. The waiting list now resumes at item 42.
 
 ### Shelved research
+
+Rotated out of active research later on 13 October 2026, with private checkpoints preserved and no full solution claimed:
+
+- **32 — Cabling conjecture:** correction-term profile constraints and independent Floer/Alexander tests leave surviving algebraic cases; actual knot realization and homology-sphere summands remain unresolved. No new complete proof.
+- **33 — Jones polynomial unknot detection:** the tested propagation route did not yield a proof. Supporting algebra checks do not formalize knot topology or solve unknot detection.
+- **34 — Additivity of knot crossing number:** a proposed crossing-bound refinement needs an unproved global interface/gluing lemma. No improved constant or full additivity theorem established.
+- **35 — Volume conjecture:** an exact spectral regularity lemma for a published pretzel-knot descendant recurrence was checked, but the connection to Jones-color asymptotics and noncancellation remains missing. No volume-conjecture proof or novelty claim.
+- **36 — Kaplansky's sixth conjecture:** tested integrality routes either recover known equivalent conditions or encounter an invalid spectrum-transfer inference. No new Hopf-algebra coverage or full theorem established.
 
 Rotated out of active research on 13 October 2026, with private checkpoints preserved and no full solution claimed:
 
@@ -95,14 +103,9 @@ The following targets are waiting, in the order listed. Their inclusion does not
 
 **Algebra, geometry and topology**
 
-37. [Prime-degree cyclicity problem for division algebras](https://arxiv.org/abs/2409.07240)
-38. [Berge conjecture for lens-space surgeries](https://arxiv.org/abs/2609.39260)
-39. [Foulkes' conjecture](https://www.imsc.res.in/~combinatorics/ICC2026/)
-40. [Essential dimension of S₈ over C](https://www.numdam.org/articles/10.5802/crmath.577/)
 
 **Analysis, dynamics, probability and mathematical physics**
 
-41. [Mazur rotation problem](https://arxiv.org/abs/2012.08344)
 42. [Furstenberg ×2×3 measure-rigidity conjecture](https://arxiv.org/abs/2410.22701)
 43. [Mandelbrot local-connectivity conjecture](https://arxiv.org/abs/2512.24171)
 44. [Exact Landau constant](https://arxiv.org/abs/2609.23236)
