@@ -1,0 +1,53 @@
+{
+  "returncode": 0,
+  "stop_reason": null,
+  "wait4_child_cpu_seconds": 13.388368,
+  "sampled_cpu_seconds": 13.35,
+  "peak_tree_RSS_bytes": 1038303232,
+  "ru_maxrss_bytes": 1031081984,
+  "wall_seconds": 13.571017312999174,
+  "limits": {
+    "total_cpu_seconds": 120,
+    "conservative_cpu_stop": 115,
+    "per_process_cpu_seconds": 60,
+    "per_process_wall_seconds": 120,
+    "whole_CLI_wall_seconds": 120,
+    "rss_bytes": 2147483648,
+    "output_bytes": 67108864,
+    "free_disk_floor_bytes": 4294967296
+  },
+  "full_verifier_run": false,
+  "verifier_sha256": "d80cc7007297dc29fff891e0ed9f21001403d66c5cf65d81faa5cac27011fe53",
+  "compiler_invoked": true,
+  "final_theorem_verified": false,
+  "compiled_subset": [
+    "Q7Mod.Canonical.IsolateSurgery",
+    "Q7Mod.Canonical.KernelRUP",
+    "Q7Mod.Canonical.KernelRUPStd",
+    "Q7Mod.Canonical.BergeEightEncoding",
+    "Q7Mod.Canonical.BergeEightNormalization",
+    "BergeMod.Kernel",
+    "BergeMod.K1.InputData0000",
+    "BergeMod.K1.InputData",
+    "BergeMod.Replay",
+    "BergeMod.K1.InputFacts0000",
+    "BergeMod.K1.Inputs",
+    "BergeMod.K1.Replay0000"
+  ],
+  "platform": "x86_64 Linux",
+  "tested_coverage": [
+    "fresh source archive restoration tested separately",
+    "all 4490 exact input hashes and topological order checked",
+    "official Lean4.32.2 and pinned Mathlib/dependency checkout validation",
+    "empty custom object directory; no reused custom objects",
+    "Mathlib-dependent module compilation",
+    "relative quoted JSON loading and kernel RUP replay",
+    "named standard-axiom parsing"
+  ],
+  "not_tested": [
+    "all3046 modules through public verifier",
+    "final exact theorem through public verifier",
+    "fresh network dependency installation",
+    "other operating systems"
+  ]
+}

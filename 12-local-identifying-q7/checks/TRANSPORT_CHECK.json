@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "source_files_reconstructed_and_sha256_verified": 4490,
+  "lean_files": 3046,
+  "quoted_json_files": 1444,
+  "fresh_temporary_directory": true,
+  "witness_check": "passed",
+  "corrupt_source_rejected": true,
+  "corrupt_part_rejected_before_extraction": true,
+  "compiler_invoked": false,
+  "portable_full_compile": "not run",
+  "archive_sha256": "81e05042c1c045e97774dbbeb2a515ba7f391dee03b82497e2046e3a7f888c60",
+  "unsafe_tar_tests": {
+    "traversal": "rejected",
+    "symlink": "rejected",
+    "unexpected": "rejected",
+    "missing": "rejected"
+  }
+}

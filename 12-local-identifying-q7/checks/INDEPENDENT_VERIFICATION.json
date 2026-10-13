@@ -1,0 +1,2469 @@
+{
+  "status": "passed: complete independent source closure and final original-predicate theorem",
+  "state_sha256": "a65b5c72f26ad7cabda0dc375896aee3783b3cc3ec4bb20bce59e1279dd5082b",
+  "source_manifest_sha256": "b7aa2cd42ae8f05b025467712f0d4c0b3380f99eb2944ae3dbbbf92ad44e740a",
+  "json_manifest_sha256": "f5f455c63acd7f9f2e1a21edb88c0c6cb08a896a32018271e8504b8beb6b375b",
+  "axiom_requirements_sha256": "0b8dc9c8fd6768a099c1b2613528b439865c55105ced4f72816a236a16f7db42",
+  "staged_build_plan_sha256": "aac3271c28c7babd5ec5f5634e9352da239264b971c445937873e6d4e4c15244",
+  "modules": 3046,
+  "quoted_json_files": 1444,
+  "object_files_verified": 12184,
+  "completed_stages": 16,
+  "expected_named_audit_modules": 137,
+  "expected_theorem_audits": 162,
+  "all_expected_named_audits_present": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "final_theorem": "ExactCubeCodes.localIdentifying_Q7_optimum24",
+  "final_statement": "(\u2203 C : ExactCubeCodes.Code 7, ExactCubeCodes.LocalIdentifying C \u2227 ExactCubeCodes.cardinality C = 24) \u2227 (\u2200 C : ExactCubeCodes.Code 7, ExactCubeCodes.LocalIdentifying C \u2192 24 \u2264 ExactCubeCodes.cardinality C)",
+  "final_exact_type_ascription_checked": true,
+  "final_defining_body_and_import_audits_checked": true,
+  "final_logs": {
+    "Q7Mod.Integration.ExactQ7": "'ExactCubeCodes.localIdentifying_Q7_optimum24' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "Q7Mod.Integration.ExactQ7Audit": "ExactCubeCodes.LocalIdentifying {d : Nat} (C : ExactCubeCodes.Code d) : Prop\nExactCubeCodes.localIdentifying_Q7_optimum24 :\n  (\u2203 C, ExactCubeCodes.LocalIdentifying C \u2227 ExactCubeCodes.cardinality C = 24) \u2227\n    \u2200 (C : ExactCubeCodes.Code 7), ExactCubeCodes.LocalIdentifying C \u2192 24 \u2264 ExactCubeCodes.cardinality C\n'ExactCubeCodes.localIdentifying_Q7_optimum24' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "provenance": {
+    "same_independent_build_continuation": 497,
+    "later_fresh_independent_compilations": 1815,
+    "previous_fresh_independent_C5_build": 734
+  },
+  "continued_run_child_CPU_seconds": 6503.80744,
+  "prior_independent_C5_child_CPU_seconds": 2262.154862,
+  "total_distinct_independent_child_CPU_seconds": 8765.962302,
+  "prior_C5_state_sha256": "618673e1164eb2800f2eebbe71d916b3ff6b5dca922958c05e526eadf40aeb57",
+  "module_audit_sha256": "d56e9a300ee3c88d689ab3ad960db4695dd42b631d2a358ca8ac5ccdb80d3b45",
+  "runner_terminal_status": "paused-at-stage-boundary (all 16 stages completed; no active process)",
+  "public_verifier_full_workflow": "not run",
+  "public_verifier_smoke": "passed on 12-module subset",
+  "audit_method": "Read-only rehash of exact frozen sources/data, current and original independent objects, pinned receipts/logs, direct prerequisite identity, and named axiom logs. C5 per-module logs were read and frozen by hash now; earlier C5 aggregate receipt pins source/object identities and stored axiom records. No compilation in this audit.",
+  "named_audits": [
+    {
+      "module": "Q7Mod.Canonical.Q7TotalDominationBound",
+      "source_sha256": "1b6019c87dfceea9f6a5d395720e6160c9fc03cdff262e92469ae0863c25111b",
+      "expected_theorems": [
+        "Q7ParityTransfer.totalDomination_at_least_24",
+        "Q7ParityTransfer.localIdentifying_at_least_24_of_repair"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7ParityTransfer.totalDomination_at_least_24",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7ParityTransfer.localIdentifying_at_least_24_of_repair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "8685c87e800828e33879240d4cbfac7c56e9576de5f8686d4f9e883149438a9e"
+    },
+    {
+      "module": "Q7Mod.Canonical.Q7C7EightNumerical",
+      "source_sha256": "7c2656578882af2d38bce7a13287fc1d7dfc1398c8c7f112a0fdd8fa5889a958",
+      "expected_theorems": [
+        "Q7C7Eight.contains_isolate_C7_lower_bound",
+        "Q7C7Eight.eight_complete_isolate_C7_lower_bound",
+        "Q7C7Eight.external_eight_complete_isolate_C7_lower_bound"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7C7Eight.contains_isolate_C7_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7C7Eight.eight_complete_isolate_C7_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7C7Eight.external_eight_complete_isolate_C7_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "091fd7afaf2b36388ce1bb7afdd0c137f52fb6d6106926625b3987e02dbc0980"
+    },
+    {
+      "module": "Q7Mod.Canonical.C5CNFTransfer",
+      "source_sha256": "fa03eb1d73eadfa66dea1c0f2dbf7d1f1ea56389053801d7ddcdff047e854177",
+      "expected_theorems": [
+        "Q7C5CNFTransfer.induced_isolate_C5_extension_exists",
+        "Q7C5CNFTransfer.induced_isolate_C5_std_extension_exists",
+        "Q7C5CNFTransfer.induced_isolate_C5_lower_bound_of_signed_unsat",
+        "Q7C5CNFTransfer.induced_isolate_C5_lower_bound_of_std_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7C5CNFTransfer.induced_isolate_C5_extension_exists",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7C5CNFTransfer.induced_isolate_C5_std_extension_exists",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7C5CNFTransfer.induced_isolate_C5_lower_bound_of_signed_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7C5CNFTransfer.induced_isolate_C5_lower_bound_of_std_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "65ec35cbb509d80a4e7b7043f0a03e8b5957b364919a8a5c41ff107b8be38127"
+    },
+    {
+      "module": "Q7Mod.Canonical.GlobalAssemblyAudit",
+      "source_sha256": "63653bfb05778cbd5af140806a328618167a59307d3e33abb80cbd37fc418d4b",
+      "expected_theorems": [
+        "Q7GlobalAssembly.familyGraph_berge",
+        "Q7GlobalAssembly.clique_center_of_no_tetra",
+        "Q7GlobalAssembly.repair_of_independent_cliqueCover",
+        "Q7GlobalAssembly.small_family_repair_of_no_cycles",
+        "ParityRepairAssembly.localIdentifying_lower_bound_of_side_repair_exists",
+        "Q7GlobalAssembly.localIdentifying_at_least_24_conditional"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7GlobalAssembly.familyGraph_berge",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7GlobalAssembly.clique_center_of_no_tetra",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7GlobalAssembly.repair_of_independent_cliqueCover",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7GlobalAssembly.small_family_repair_of_no_cycles",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "ParityRepairAssembly.localIdentifying_lower_bound_of_side_repair_exists",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "Q7GlobalAssembly.localIdentifying_at_least_24_conditional",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "b307cb1e91f4fb91ee8f2f743f2a44d7e5a11708af6eb3662f48a08183e6e42a"
+    },
+    {
+      "module": "Q7Mod.Canonical.GlobalTetrahedronAdapter",
+      "source_sha256": "eb354063d438bc0e3790df65928f23cf59fe890d71f306d1847f2ddc1318d04b",
+      "expected_theorems": [
+        "Q7GlobalAssembly.full_tetrahedron_repair"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7GlobalAssembly.full_tetrahedron_repair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "2d78a4a00927c6431f8a9c10af930fe88e67f694c10c730f13d9f3d2ff2f9898"
+    },
+    {
+      "module": "Q7Mod.Canonical.LocalQ7W24Fast",
+      "source_sha256": "e1519fc709cfc8f6f0219acc8a2d955e487d3e48702d224371e41d10636206d7",
+      "expected_theorems": [
+        "ExactCubeCodes.exists_local_ID_Q7_size24"
+      ],
+      "audits": [
+        {
+          "theorem": "ExactCubeCodes.exists_local_ID_Q7_size24",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "bb06f2ac28a0b1084f16de8b0af23645b63a47abf68d7998cd5c8b72c6c2cbf2"
+    },
+    {
+      "module": "Q7Mod.Canonical.Audit",
+      "source_sha256": "4527bb597c506c6456a71634b6e1010dc6bd82f2309bfa1a2c691161ff5bb077",
+      "expected_theorems": [
+        "TetrahedronRepair.canonical_size_eight_repair",
+        "TetrahedronRepair.tetrahedron_size_eight_repair",
+        "TetrahedronRepair.tetrahedron_size_eight_opposite_repair"
+      ],
+      "audits": [
+        {
+          "theorem": "TetrahedronRepair.canonical_size_eight_repair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "TetrahedronRepair.tetrahedron_size_eight_repair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "TetrahedronRepair.tetrahedron_size_eight_opposite_repair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "75503d67995fb550bccef4b0d87c5da744c297d5859485e987b6ee10ec490592"
+    },
+    {
+      "module": "C5Mod.Full.Final",
+      "source_sha256": "d7ce4c788fc0bdd5fabc4582c9b15f0694856a1d600e77bd0f0aca22fcdc0c57",
+      "expected_theorems": [
+        "C5Mod.Full.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Full.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "4d333d3b9592e84d73bc072175ece2b35aaeaa71d9fcef7f23496bf79b25c990"
+    },
+    {
+      "module": "C5Mod.Full.Consumer",
+      "source_sha256": "c3ef4c28fa8fcb275242670a4095d7968d2216d3ee389e748e441d390980cb4b",
+      "expected_theorems": [
+        "C5Mod.Full.Consumer.imported_result"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Full.Consumer.imported_result",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "6136c6a66b26b7f3bd5ed8ddeedd6e613c5953b85eb536638809ce727a8ae466"
+    },
+    {
+      "module": "C5Mod.Canonical.FormulaEquality",
+      "source_sha256": "c50a647f9a85f732f98191d2f39a290af60bf7708924057238a8d0e358720e49",
+      "expected_theorems": [
+        "C5Mod.Canonical.input_exact"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Canonical.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "e3d93025663bf97e09fc069ba079bcadbe59494b5b3979ccf349fb06463f417c"
+    },
+    {
+      "module": "C5Mod.Canonical.Semantics",
+      "source_sha256": "daf52932868b932e991e237ec7632c5f8148fdbda354e93fb0f3ab702df56ca8",
+      "expected_theorems": [
+        "C5Mod.Canonical.Semantics.cnfSat_iff",
+        "C5Mod.Canonical.Semantics.transfer_unsat_exact"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Canonical.Semantics.cnfSat_iff",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "C5Mod.Canonical.Semantics.transfer_unsat_exact",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "1606a7ecd30450d0d79506a9d8f07f2f119090e656f4dd4867af49db7a087945"
+    },
+    {
+      "module": "C5Mod.Canonical.ExactUnsat",
+      "source_sha256": "0a98cb9923b93a3084676bbe38487576964966052ecbe078a29a3011fa38d023",
+      "expected_theorems": [
+        "C5Mod.Canonical.exact_c5_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Canonical.exact_c5_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "bd58ad1b832d6f479c29f1ff090c88044ea4e904bffaeaf1bf36f6d469728ddd"
+    },
+    {
+      "module": "C5Mod.Canonical.Consumer",
+      "source_sha256": "73e452e54e88c281b2c1d0836a9a94e09488629e338ea9e67accb97ee09f634e",
+      "expected_theorems": [
+        "C5Mod.Canonical.Consumer.imported_exact",
+        "C5Mod.Canonical.input_exact"
+      ],
+      "audits": [
+        {
+          "theorem": "C5Mod.Canonical.Consumer.imported_exact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "C5Mod.Canonical.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "5eb788fb2e1ed1fd57adc77b33f5fb8d79449c3ca6e19453aaaa98c39dda237e"
+    },
+    {
+      "module": "Q7Mod.Canonical.BergeEightFiniteColoring",
+      "source_sha256": "4f64f8cacbffdc77b483a851475a5aad118b5405bf5b3f44525377ceaf3fbfe0",
+      "expected_theorems": [
+        "BergeEight.eightVertexColoring_of_coreUnsat",
+        "BergeEight.cliqueCover_at_independenceNumber_of_coreUnsat",
+        "BergeEight.small_graph_cliqueCover_of_coreUnsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeEight.eightVertexColoring_of_coreUnsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.cliqueCover_at_independenceNumber_of_coreUnsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.small_graph_cliqueCover_of_coreUnsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "2bf9931ec7797e70ba39e1952a7513e2117b2b2b1db5a3db56e7add0e950a378"
+    },
+    {
+      "module": "BergeMod.K1.Final",
+      "source_sha256": "8933f8e5351a7b6fa6af336f0188c00dd5dbdc2010de8f53bfc5b2d2c5c604b2",
+      "expected_theorems": [
+        "BergeMod.K1.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K1.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "56e286d6b889edabbd1d3930941d9c0cb4b8b15e78d397ff6596b554d3bc5fb4"
+    },
+    {
+      "module": "BergeMod.K4.Final",
+      "source_sha256": "04633e86afa12d3572fed6fee9d559f2f4f84d9e73d397e65f930773fa758013",
+      "expected_theorems": [
+        "BergeMod.K4.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K4.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "d4f43cf2088cb8ebb2845096484bf91d2d932a8ef07a0bf84326ce30199313d4"
+    },
+    {
+      "module": "BergeMod.K5.Final",
+      "source_sha256": "f0f2c10f348f97a9d5371b8e6162a6c779b28532ef3bc7524deeac0b7a483d68",
+      "expected_theorems": [
+        "BergeMod.K5.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K5.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "467c38829c18a7bc3e927f965d1dc0f1acccfcc92abcca15a9ec6f6c77a18e73"
+    },
+    {
+      "module": "BergeMod.K6.Final",
+      "source_sha256": "b03c3d90bcfb93a508addf1a9b9bb7133fbc79fe795056354338c8e4533d6253",
+      "expected_theorems": [
+        "BergeMod.K6.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K6.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "3e28e8f51eca61c45b4b51ca9a86c52ddb06e22b2362524e1172a04b760b72aa"
+    },
+    {
+      "module": "BergeMod.K7.Final",
+      "source_sha256": "ed4562190672300b482066926fa4adf4840a12ab7fc9c626684d98b79532cb7a",
+      "expected_theorems": [
+        "BergeMod.K7.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K7.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "ae908bcfe035868c7ddccb43951e834bf030868e627615f1bcfef437a3c06da7"
+    },
+    {
+      "module": "BergeMod.K1.Consumer",
+      "source_sha256": "d3483d707647703e5ba02f7e05440abdb9a3467fbc90cebdf866aa98ba52bed7",
+      "expected_theorems": [
+        "BergeMod.K1.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K1.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "b55b97b13741201f31da042588f384e4ecaeaff6524b0ce6dc09b9d0fefe021b"
+    },
+    {
+      "module": "BergeMod.K4.Consumer",
+      "source_sha256": "9e496a882712319b1e9a155a3b202ada13c9b226159a955c81645a269bd9b082",
+      "expected_theorems": [
+        "BergeMod.K4.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K4.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "a1d292130da7f734b6e000bb5c39f99f06dcd3b3c75470775637c9ff5bb40098"
+    },
+    {
+      "module": "BergeMod.K5.Consumer",
+      "source_sha256": "43c72f7fb2d85c915fb5f55d960ae5ab01c72c3988fa0545731ab3640adc0594",
+      "expected_theorems": [
+        "BergeMod.K5.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K5.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "be4454ab469a43084976797fca384d17e0ed1c2dddf41f19bb152942b639358f"
+    },
+    {
+      "module": "BergeMod.K6.Consumer",
+      "source_sha256": "726a0a93bf166604e33a5285985b8258905f3946e748b157dbbaf3c620f262e1",
+      "expected_theorems": [
+        "BergeMod.K6.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K6.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "65f794309e590ab9d3d0d86bb8f6deb87bf68ec37ec51c7ed1e2757336ad75f3"
+    },
+    {
+      "module": "BergeMod.K7.Consumer",
+      "source_sha256": "d46be0e579137459a5e41dd67b96338818d633db1dc735220592b02fbbb086af",
+      "expected_theorems": [
+        "BergeMod.K7.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K7.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "5f79b801dc03ad0d589902b762d5bb3c4f21bf637d595f258b766220a978055c"
+    },
+    {
+      "module": "BergeMod.K2.Final",
+      "source_sha256": "ac9a01faea35fb0f9150f52c90e888287a329710a3e8dc95325bfbb87c69bcaf",
+      "expected_theorems": [
+        "BergeMod.K2.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K2.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "304257d59e6af4903f0115d6e6adf4245e1c6f4e01eb1f61d6e3151f1a7d4649"
+    },
+    {
+      "module": "BergeMod.K2.Consumer",
+      "source_sha256": "18d7e5646e1842beab991bc0bb3db0358a2221c9e36f988500c33cff05262d9a",
+      "expected_theorems": [
+        "BergeMod.K2.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K2.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "6db15c528ad0f5f259e7cea2a141be7634fae41a650efe1fba8adebafb743bff"
+    },
+    {
+      "module": "BergeMod.K3.Final",
+      "source_sha256": "b8abed17b9805d81e332df7895e05e64c0acd19463f1fc7cdf5a6956b11700ac",
+      "expected_theorems": [
+        "BergeMod.K3.unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K3.unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "60eb2aa920bc361371b4106d62ffdc5fec34ff1d37a7a05e96e412c41128f44d"
+    },
+    {
+      "module": "BergeMod.K3.Consumer",
+      "source_sha256": "bb94cdcfdd30d709890e7a08e44f59a8e3a0bbb1a84f48179281c91292884f26",
+      "expected_theorems": [
+        "BergeMod.K3.Consumer.imported_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.K3.Consumer.imported_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "501af9f93d9fc500263604349dc439bf87d38d6400b55076d2da83c3f45d9702"
+    },
+    {
+      "module": "BergeMod.Canonical.Semantics",
+      "source_sha256": "d8b6b78e47264e3d074f0acca887468fb10f7a3eb1531a4ba25c307f90c1b388",
+      "expected_theorems": [
+        "BergeEight.RUPModuleBridge.cnfSat_iff",
+        "BergeEight.RUPModuleBridge.transfer_unsat_exact"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeEight.RUPModuleBridge.cnfSat_iff",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeEight.RUPModuleBridge.transfer_unsat_exact",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "05fc6ef4b2264155fbd7b42936e0622da1bda0fc6744794ba6c1cb452aa80a20"
+    },
+    {
+      "module": "BergeMod.Canonical.K1ExactBlock0000",
+      "source_sha256": "83e5ac893269802308f7b5b61c42616c626b048c35d02e1637c72c6a9f657062",
+      "expected_theorems": [
+        "BergeMod.Canonical.K1.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K1.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "e793e8169958356f2b5774f7a48c4b0c3bfffd3faa758ea7209bec466237cdb8"
+    },
+    {
+      "module": "BergeMod.Canonical.K1",
+      "source_sha256": "b1039e1edd74fedf145226295559731266890f310740812e314fe7f61ed3afa7",
+      "expected_theorems": [
+        "BergeMod.Canonical.K1.input_exact",
+        "BergeMod.Canonical.K1.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K1.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K1.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "552b824432f763662b7f63b8c8db801a5433f83420ece869fbd5bb34e1611171"
+    },
+    {
+      "module": "BergeMod.Canonical.K1Consumer",
+      "source_sha256": "9e4b6999a3deef446e4f44ef7c9fc52a6666d3eb2d09b3233bd9b121afc4bd73",
+      "expected_theorems": [
+        "BergeMod.Canonical.K1Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K1Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "516b51dfab5b3b89e857c0aa70adf0cc519a8143635840b63cfc149078c3782f"
+    },
+    {
+      "module": "BergeMod.Canonical.K7ExactBlock0000",
+      "source_sha256": "ffd92ee67ef0ff4e0cccb2fe93d8f3583a96962025d7c8048f32d698b7d89f77",
+      "expected_theorems": [
+        "BergeMod.Canonical.K7.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K7.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "3718863769fd24aee4a6e0d88010eb3af3fb369a9af85cea1f093b8eccc74f2b"
+    },
+    {
+      "module": "BergeMod.Canonical.K7",
+      "source_sha256": "47e3976d63c231148a4506c493e0dc2e1d7c89fd0418242f689c05387573feed",
+      "expected_theorems": [
+        "BergeMod.Canonical.K7.input_exact",
+        "BergeMod.Canonical.K7.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K7.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K7.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "811691650de1dc19287b39c027c9389cc438467284c9a262d58415f60ffe2900"
+    },
+    {
+      "module": "BergeMod.Canonical.K7Consumer",
+      "source_sha256": "cd261d0daac118690432741bd9cff1428e4dcde11a4c7ed81f791719004c6d99",
+      "expected_theorems": [
+        "BergeMod.Canonical.K7Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K7Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "0a203c10b4bb066b3c36adb8ab1ba388cf243d4751ffd6d091b0afc99275cf49"
+    },
+    {
+      "module": "BergeMod.Canonical.K6ExactBlock0000",
+      "source_sha256": "0c3eab84e80c70b1a076eb5754e54cc3cc64291a61d47a6d335db7d94049aaa2",
+      "expected_theorems": [
+        "BergeMod.Canonical.K6.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K6.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "1ea596ff64e8d118d33566abb9a7c9f28c5d659d7998e81ab2a77e98e5aff283"
+    },
+    {
+      "module": "BergeMod.Canonical.K6",
+      "source_sha256": "1f299a88293f4b8aa7da153ff9858fcf60c16b7013a2915dd3cb56ec103ab72d",
+      "expected_theorems": [
+        "BergeMod.Canonical.K6.input_exact",
+        "BergeMod.Canonical.K6.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K6.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K6.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "8631169856d88e47b7fa4cdad03f56dbddd3a1cac22840d61596b13ee28ad69b"
+    },
+    {
+      "module": "BergeMod.Canonical.K6Consumer",
+      "source_sha256": "b29d793ffda3c1cbdb9bef4b3e82bd6f2ca74388ff1aa04328f88e778e90c171",
+      "expected_theorems": [
+        "BergeMod.Canonical.K6Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K6Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "5378903f8624e44209a9bf099c8a70e6677d6d6124bb1423ca14f248f90c561a"
+    },
+    {
+      "module": "BergeMod.Canonical.K5ExactBlock0000",
+      "source_sha256": "bb6eea14cd4f087e0091fb924c191bba447d418dc13c32a312a3ac1a748fd30a",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "c98ce8235d6a918771663c141b19d3a467ac6ef384a6e5cb5e83c7870e949928"
+    },
+    {
+      "module": "BergeMod.Canonical.K5ExactBlock0001",
+      "source_sha256": "2642de213357360ef9be7db69811783576deb2fa6860cf1a4e68d8bbefca2524",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5.block_exact0001"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5.block_exact0001",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "7a61586fba904a744616a360c1ecc2aecb1513705488c5e90b27fe5f2dacbb65"
+    },
+    {
+      "module": "BergeMod.Canonical.K5ExactBlock0002",
+      "source_sha256": "68d24eebe28a4c1302f04bcd16f857a202690ddc7230c82b1dae6e41f331434b",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5.block_exact0002"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5.block_exact0002",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "97d72046f68f0012a934f4be3dea291f430db08144cbd71072b7c0def07bf434"
+    },
+    {
+      "module": "BergeMod.Canonical.K5ExactBlock0003",
+      "source_sha256": "1a041e04da8e9fc6342cf9a5b9ecdbe3dd62e0dd1f38f990f6e030092414af3f",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5.block_exact0003"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5.block_exact0003",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "eef1036b518b00344cf93c82d9f7c5837fb27bc8a71509f2bd7d2192f13bebe6"
+    },
+    {
+      "module": "BergeMod.Canonical.K5",
+      "source_sha256": "4e9ab64ee2935b346b1250fcea40fea1e05db778ad9d3d2030c5dabd02fbf0fe",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5.input_exact",
+        "BergeMod.Canonical.K5.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K5.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "313653869ed56b6fa45c93a5109d948f8c2701164ae5244d65b55682688fa54b"
+    },
+    {
+      "module": "BergeMod.Canonical.K5Consumer",
+      "source_sha256": "1a71f780371d102b52067aa9a14bb43360ce6ddd972a092664cce7268e3e61f1",
+      "expected_theorems": [
+        "BergeMod.Canonical.K5Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K5Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "eb0bc00022fe8b95214f2360776cd90724dce7d0558fb9141e91c4012d2eeb32"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0000",
+      "source_sha256": "2a5f0be91f75d19d1161fdd52ed348e8c13a51816a313ed0b62ab9b11a6d3be6",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "4be6df6c7922fd33611b38e4f2a2b601202d1ad7ee35ef43d100a630c5482a24"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0001",
+      "source_sha256": "7bcff682f22b0833df6bed87b64ca362bf709b0cd4809ef5fda3e9051e287a45",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0001"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0001",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "ff70d6e849013dd91ff5774f766894eaaf5ce4050fc7e1e283f4ecc2b9c1c510"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0002",
+      "source_sha256": "39dea14130abe42b1ef92117e1b0779ca614bb21191d1a34747162ad46e443a0",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0002"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0002",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "d2153f59f909fb6ff588d2b61ceb474f32ea75f5d156c2176fab805393f6c446"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0003",
+      "source_sha256": "c4d5e488d6650549b8d4ac771065c34ff8abdd53dea580592a2649af52cb821e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0003"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0003",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "95ce926882f7d5948840630ab08663255d6bacab8273a458ee4849d9defa8f3c"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0004",
+      "source_sha256": "4ce852186bc1b2d1af29da1fca063badecba62d9c33034fbfbd8ff3734c4b877",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0004"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0004",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "8ef0d72ca38dc163d5847fed6d928d138cf75eb585683bc2e97a1aef9a78b9cf"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0005",
+      "source_sha256": "736f31c084bdd90a65fe6aa809902135147287feb9774c62da93c04c48fdee1d",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0005"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0005",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "35e3e4ce7a65b787362723fd89ac094ebb5b505ba71291ba317cf0852af821ab"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0006",
+      "source_sha256": "e2cdc24989034834b00059f28ca65c40659e716c1c7b13d592b5b58b7b5b61ee",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0006"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0006",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "4fd11e71eefab3dc76dcdce992d1c442bd15495262687978b9132e02da87ea5b"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0007",
+      "source_sha256": "0413d67ab5187f9dadcfd385fa26e9f7a04639525f8120b6251330fe6445018d",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0007"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0007",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "17523eb86a3048f450c5dfa96eabfafe32c86aa7b5d911fa0840e94a7c42ec37"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0008",
+      "source_sha256": "aef21f958125e219c58ca897a9c51cf01eb13f2dd4fe9f0d0de77f8905e99775",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0008"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0008",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "e74c3ec411c9ec79b5bea7dff6f3e2aa68711aead68b025f2a3946165743d956"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0009",
+      "source_sha256": "6aae2e87c29d90d27154142afb2781a0d820bc0d0cb6c7f319dd297d9399f2f1",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0009"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0009",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "516c3cc73d1dea033b8459e5a9891775d53ddccf969d4d7433c4115aab2fbb87"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0010",
+      "source_sha256": "b9bc4e0231157551c368c0a9a6e976dae3ee4c9a714b43b91d1b6d0d7c2f3de6",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0010"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0010",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "8cf6e5405ad49d12559819a02a6d4e68d5b27b0f377c344fa9d34612a2a680a0"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0011",
+      "source_sha256": "778dd2beda522228ee828fe33261d012801c6b87d19d72c86fba1eb4d112524c",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0011"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0011",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "744fc6e68f18671e5295df57d6b7df42b74467ff7daad856d3a753647d7737a7"
+    },
+    {
+      "module": "BergeMod.Canonical.K4ExactBlock0012",
+      "source_sha256": "202ab6f1e5d321e252d57d4bec57a376a06afa6548bb05c8dfaf276a20612d03",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.block_exact0012"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.block_exact0012",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "57ed2a0c6f5924c70e731b7db88e3e5661450cf35bf335e4c199645400c59317"
+    },
+    {
+      "module": "BergeMod.Canonical.K4",
+      "source_sha256": "e17b64f334e181791d60bd268ad81c34d3b5d25bc60d9cc22eaba2b6f877eec8",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4.input_exact",
+        "BergeMod.Canonical.K4.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K4.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "0593bc026767fab9aea837d3385041a49850b0bae4cffbbeafbf24803e016c97"
+    },
+    {
+      "module": "BergeMod.Canonical.K4Consumer",
+      "source_sha256": "92c1dd6a7aff60d87172d91d5a1774826eed602c2e09787fb83f38c9b6723a67",
+      "expected_theorems": [
+        "BergeMod.Canonical.K4Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K4Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "e346e61b62579e76b6d03d9b0ad0bb8dd4cfcd50f5fac2e3693dcac560089e08"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0000",
+      "source_sha256": "d56d8c48464e0c4103305c5c424571c3234b531e5e49ba7a98630630f3ae8130",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "3eb5fd57ce63c0b08f4d34440f105095efd7bdbe8d6fe4eca4872d1973369e09"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0001",
+      "source_sha256": "d8ecf80c479d8374be0bd7b2323ac2068c83917838e4eba3b78f46e67167b6f1",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0001"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0001",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "2f7865b91cc496d3da00bca036a8ad8cb066c1999910a79e3622f9d5232edcd8"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0002",
+      "source_sha256": "2f918152ec2bee974a0383fc0edca7afe722fd245fe35de335ac9b3bab2081e9",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0002"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0002",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "6749b15df331fdce0689975fa9dfff911aee49eac2c236275b3b7ceab9b8154c"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0003",
+      "source_sha256": "43906ce6dfe02aefddeed9509d180a53edbd413ceba462e3361693794619a586",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0003"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0003",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "59ce712b1183b6919062599a01f087affe94dd0e285ebb7be0dfa0407337c094"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0004",
+      "source_sha256": "455474c3cf4fb87dd68b4ec747a0b41c8b60aef974b0adb63f35099fa76b4d8e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0004"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0004",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "29663a0b04cdda671ab35b6c5eb7cec78b8b72dc3035b0600d4bea07fc676e8b"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0005",
+      "source_sha256": "6e23d71312a1de51559d74bb9378d16f4b4bbd9a250f2313d90c3a118fa94976",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0005"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0005",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "8cc3f7fe7b525f2d61b84dcceb927a788ece1efd198d23b639445d037516fd87"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0006",
+      "source_sha256": "27e7f7866bd48f491c32f51f2db66c1a1da940ed52827deefbd8dd91f8c5d16d",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0006"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0006",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "f619e4109e839a147e4a547667a93328d05ec0887f6995c32dbd814ef852e752"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0007",
+      "source_sha256": "75a0892fda0b3a6adaccdf45f3fb77d2f5a099c51193e08e2627945a0e146bfa",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0007"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0007",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "da1a22a8a940a54f54480d134ebafb418cba223a4ba4c480a3b139f82178945e"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0008",
+      "source_sha256": "72c3f7da6ca8df84faaece6244bc4a5fb380d7746a6e36f06b8d590f94b768f4",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0008"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0008",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "92505a8f374eeb381e66a1f743b4e95068782cfa56487784739e44c06fd4de97"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0009",
+      "source_sha256": "e270ebb17e52df2f129623762adfaf56882e6d56fb691d556d6bf871f8e14e43",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0009"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0009",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "35c6905637cb1e277f16021ddfef711909efc70b79262e3927cfc29cfb645345"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0010",
+      "source_sha256": "516a321874bb96d29eb00fef08b2a7651d9d342884971047893ac6828c4732b4",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0010"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0010",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "f19027dcf394b9935b6f27934294eb39d63873a40246cd534f8910ec19dc90c5"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0011",
+      "source_sha256": "95e89f5faf53b97b570b1d4240d2f377e40b16163e73814dd50bd4128159c98a",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0011"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0011",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "1e4b907a28b1aa55f93731db991a9f12fcdb8d8588fb9fa4457d4411ed40fa1c"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0012",
+      "source_sha256": "ca25d7fdbc2a983226b29612a5acaf245607b42c2c7dc5859420cd0cc7790205",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0012"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0012",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "e217404bf76759a92b25a01587fb72512007a0ee2723c70fabd40498afd209c7"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0013",
+      "source_sha256": "4c7c18a7a72a8d703078e921504d6e6330a56f938a54ce07679b211bd04b724f",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0013"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0013",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "0a9f6cf878dd141da16dfd7d9016208a5732b01c14c7990ae3609b0ab1732348"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0014",
+      "source_sha256": "e96865093f3b50e6611edd163641ec9e7095d8af4846f58d1e95f5773576e93c",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0014"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0014",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "58598abddbd4ef8ff2f555df5c50dbd9d869f824ecd148e34cded6d4fc299c09"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0015",
+      "source_sha256": "6be99d47bd6497f8a6ea8fe7cccd366df5d2103d1f8d0463358458f506217564",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0015"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0015",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "dcb1581037b9f3bb2268bb95bc426e5632fffe32466311d9f17a8afe1e86703a"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0016",
+      "source_sha256": "7ee465afe0c45695476fcca201df6ec476f8ca82fee41805ce0af7cf28cc968e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0016"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0016",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "a0682e52cad274050bbb035bbd12eaff801b6eeee53b5fb6b99d83e0072715cb"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0017",
+      "source_sha256": "d37381316fa70ccc934c2513088df8d00c7327d23b1392c09ddb5d90c2e9409e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0017"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0017",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "7dc3fdbdfe73197498f00c96344358dae08810cbb5c83862df3833f23697f9ca"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0018",
+      "source_sha256": "158da83b4a7e27680eb17756ec160e1106cac0e12f5ba90a7ce98b4e92e1e22f",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0018"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0018",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "bc13a106199f473a8d19f0557cbf9bdefd727713783e156688f5662afaa0fe47"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0019",
+      "source_sha256": "8c5c0b527b3122a445126951276fdd63c8a100d4e8592914a2286f634fcef626",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0019"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0019",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "b266eb5370e3f3ae5d054f97435ed7be691218121a9fb675198ae6189f5847ad"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0020",
+      "source_sha256": "3e0c05d18e0f43be58dbf311947d7ad68ea104fbd2a9c19051034872c6f5c077",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0020"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0020",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "3869af9549f9c8c9b4d9b19ae538736794be4d8aa182b34be8eb67b204f3a48a"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0021",
+      "source_sha256": "dfc4464cbfc7047d06022685b87c0f1b3ed603ac64b573cfb803dba913390ac0",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0021"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0021",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "97a92b58783babdc53fa142c6732f4bb1814df9521de829d523306fbd4e0b2a5"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0022",
+      "source_sha256": "a1d2c5fddd662ecf279f6e1585445ceb34067bb0e1d877c4132fd10db5b50d38",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0022"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0022",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "e51f420af0f3ce8344aecb3fdaf72568474d93db40959dda21a30202613ed68d"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0023",
+      "source_sha256": "bb02504a96c2eb02516e5c639a787f584c4db6f144b9d96695d7d175c35c6321",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0023"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0023",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "42764e5e985c941821b565678173071bf82e549038ba7ed24f637bf503c9dcca"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0024",
+      "source_sha256": "ddaf9c00b45a2825ed83e580ce5cec699e0af0bbdb288f9a5dfb2ca811e9c52b",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0024"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0024",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "8f338944053ed7bc816ebb53b9d3a8f3df7315d363b47d3c4988fb7955958dc5"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0025",
+      "source_sha256": "502144e83abd8d7c34344f6272dcbd701ce11a6dfc897ab9883f2d828e5b736c",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0025"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0025",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "521027b7247095eb271397897d0c6412fbd586602ee32ee7789888042f2cd526"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0026",
+      "source_sha256": "3e18915b4c479b39bcad7bad6658aa15361298a31c95848618564e52596bc964",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0026"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0026",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "01b935f2bdc4fcd13bd98affef9c1540be0582eb2889ca54c534ced57a3e912e"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0027",
+      "source_sha256": "8974a3b09b7f1a5c00e72e7817d13e8a5ee24d6c91d2c16e22c5fe09e274234a",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0027"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0027",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "d640be31c5dadc043473f1c188c39967a062d460fb310a5ee595ce9dd691e7f8"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0028",
+      "source_sha256": "8fe4d611b2115f5bfc5481261068e232b04b2814a3dcba2dcc2ae6d757a4ffd8",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0028"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0028",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "757082639c54223918d289567703f983183e820efd8a2410c3484f80eae2f3b4"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0029",
+      "source_sha256": "60f25e097b4b45563890fcd9baf000271c8cd50d3ab0149fdb5d07d1036ea885",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0029"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0029",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "a8c23d3e76dc753083579cb1e044d2281e6e9f4be4dec130ca2010839b100ad2"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0030",
+      "source_sha256": "c682cf4a0e494ca34b81bc0e17d107772b04be953d7d84476402cade72ab87ad",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0030"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0030",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "55c579b5907527cfb920165401ab109e7cd3d440638f95f8664572092d27b6ab"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0031",
+      "source_sha256": "d42198529cd83cdadcfacb1cd729f6b15124cfb8fe71ed0abe18e2cad3cc0910",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0031"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0031",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "df8fe52aa265c1d3650560125825fd52b851d34f9d292442a12300cba4386728"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0032",
+      "source_sha256": "06f5d567d6739b0f9f6317ea7076fdcd0aaef64b49fc973b67edb287a7aabab7",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0032"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0032",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "42d8ea1b35760b5d98b2fd3b3ee4ba17f6036b8d3d2dd574139989357309608e"
+    },
+    {
+      "module": "BergeMod.Canonical.K2ExactBlock0033",
+      "source_sha256": "bb229c03e02b9aefcc0ac6f2795096c78d20776d454ac005ec1a534ea9177f8c",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.block_exact0033"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.block_exact0033",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "81d3b8a514496b98cefdca8a92debfbd063fa8b97c1d0d7e6aee8e4fc5fc9292"
+    },
+    {
+      "module": "BergeMod.Canonical.K2",
+      "source_sha256": "8d56fa34475b3d36fffe2c326c04713975bbd4ded98531ec2e0dc45612cc90d9",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2.input_exact",
+        "BergeMod.Canonical.K2.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K2.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "690826372295ec99afc326df793de8caeacf4ff7cb80ebd40dfe2c284a7b4ed2"
+    },
+    {
+      "module": "BergeMod.Canonical.K2Consumer",
+      "source_sha256": "0cf9f9c47b03d68743e69d5af744b214ea36f81d630b43925b4b9ce435fda204",
+      "expected_theorems": [
+        "BergeMod.Canonical.K2Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K2Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "ad49b43b58b23b236ca2cde2644241c636f8b9dd162fd4f921cf9ac1f8739820"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0000",
+      "source_sha256": "dbc282f944e6c44fbccee72e8bb85a48ae8a8175ef93265168a8995c8133a0f0",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0000"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0000",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "277f4b0e6f6e3a6a277a274437552b157de91fb81c8267b914f95bca608583e8"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0001",
+      "source_sha256": "3ad4e4062af8e07fd5910ea48f516f08ba6e61360fed336b8fbbaade43783261",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0001"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0001",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "0944fb391703dea7bca2109d5f2f076ad99054e350ffbb5248cb6c124f64eed0"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0002",
+      "source_sha256": "98592159882fe4c738cd3a8f7f188017aaf15d283f8e7c5178784cdfdd5c4247",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0002"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0002",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "857dea90173d2f5fba384b74ebcd1fe8278225d5401a49d05d65a6ab32296c2c"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0003",
+      "source_sha256": "acc543525e580f57457a6153313e4d98d6f259b1004e870297b6a4d1f1a67a4d",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0003"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0003",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "1cf7e437ac49f6c194779f6da3b4a04b28d0f7f4b0d61eea38b52f60ba3a912c"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0004",
+      "source_sha256": "1d47f46db16ce3803c5b998d97438838f2b48e8f0fd760397b15f128d86f1611",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0004"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0004",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "57e2a5c7b0aa8c13262cb5409376916989dc27080dc31e13e5464ffce822fedc"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0005",
+      "source_sha256": "f85c6b6ba4e0f2e1a1e77e65c22cd42e5a0f74ddf5af860b81fb35fe21b073fb",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0005"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0005",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "1b7df4becc4079ed1eb55e4cdc078764140e0a88dcb4d7e18498928c505d3664"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0006",
+      "source_sha256": "a24d489daeb9f52b05b4152a0f06a3c89a04efdbe5cb2e97a90a4d341e9c3bf8",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0006"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0006",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "56b617e50a5267bcfa648d839423d22d7b404f06cb6d9bbcfa4f2d9d1f7b5a7a"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0007",
+      "source_sha256": "e60e99eeec5e9d6998523f655115731773383ffd79aad65177304371f5c536bf",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0007"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0007",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "c901c7ad2241eef42f3b9211cdb665ace262f700a3d66da10c40c0d6f19434c8"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0008",
+      "source_sha256": "b6cb240e07e81a80609b43e8e477fd2cac196986a85676d056cb6b7bc79a42e7",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0008"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0008",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "6b5d489b272ea8f3da84a4fe4a103a573433fa165e89767d90c131283ef77b3f"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0009",
+      "source_sha256": "11ac43b014e8abbe8322872968df22be4b7025719ed51a7672fd73c071805d11",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0009"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0009",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "a7136d0606df4e28a0115f8b9cb24da8750c1540106967fea686b7305deadaf8"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0010",
+      "source_sha256": "9f5108d8f2e3f6b5b4c81e4bbdf614ad5a65b72453a2f7aac642ddbc93dc4498",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0010"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0010",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "a224decfcb7d09e444d84c5f4e37e2a73470ab54e8618d8d5b845afa7297db78"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0011",
+      "source_sha256": "fe3e2c3a4758ce4c1a1587ba1aa92815556ef5e17ab9a5a47f281359c2a27c27",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0011"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0011",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "124e03371f96a8bf958189eb0a07a4c0e0916057b88a49cde701fc22614ccb13"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0012",
+      "source_sha256": "6db694be3c8311ed5675cf25dd6df784de4bd09c5303d07aa7e6c67fe368e96e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0012"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0012",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "df49c9c91f0036a1338499a4d0ea65a4989c0995f1fae979e0f8721707271b82"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0013",
+      "source_sha256": "ea52e059b41147bc7239de3bd9402bddbc3374b791b01004d79b5f2c2a17b44b",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0013"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0013",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "57dd33201b3ecd06e4709f3d324299c997c8e7c558150dda0164728cb5c84007"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0014",
+      "source_sha256": "a9bfa1edb529eeb348a671ded0a69ee0cfae0c51537134ac85cd7a2fbcdc3753",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0014"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0014",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "b84802361a8302b5ef2c8c9d6c4696a4fdc8db926966960d33580c3b830e0bce"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0015",
+      "source_sha256": "c15ba80c501a41adf3cfcbceabf2b8c4a95afc6069caf31bcf634bd0affd9dbb",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0015"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0015",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "0149024ca60a0ae3c9dc68fb7375d6958788a9551ec6a24ff448e443a07a786a"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0016",
+      "source_sha256": "afdf0ae622b3e7a01b3d840f85f0d4b57f59e5ff37cc542dc969480972465b6f",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0016"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0016",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "b69b95ecdd687bd47b378236e3915369690271c9521e8bed5609d7e3904cc282"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0017",
+      "source_sha256": "6b2cba7216c12f6db678b012d850f17dae41623532f7eaebff1c43b76e9f5186",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0017"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0017",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "9b76613df76c767a31b5f62bed88cc89d95d6b42110e6a98ca414de7f0e615d6"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0018",
+      "source_sha256": "6a40b8f686900b0d229e43e54b6d810e1783c60e19f7c1d1ea118203e681dcde",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0018"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0018",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "56296b43cde337b426c1c6773ee106edab7d5a55d87e4f483b4a85a82cf4d64b"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0019",
+      "source_sha256": "c26bf72c59c084f69a516502b7902d3c91b889fbb7080355642e7c0e3233bfce",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0019"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0019",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "1d2ffaf200c8cb38138d37745da2b04f9cce56b1c9acd0cbc72b370c99d8fdbb"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0020",
+      "source_sha256": "559ef4c985f1b87c2fab182d2d5b47826651af1138b373b88f89ffaa45e4ebfb",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0020"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0020",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "ec7c6d09f7b45a2e8cfc2af1ce4390ca73f1dfae8f7658bb48c45d0d51b82512"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0021",
+      "source_sha256": "2708f3dfde2053b884b0326c9dab457f290b39b349834b42786eadff63dc5c6e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0021"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0021",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "94383e4e13433eb93e5ea80f8ce93319a705211a37b2911b113d28b561dd461e"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0022",
+      "source_sha256": "a9287ac9556d16069155e7c4cea7268d0ff5f643850ea564931b11d18b86f908",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0022"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0022",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "9828b61e8092f427b686790c77433c8b77b6f18868abfc917aa9a9a172d14f8e"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0023",
+      "source_sha256": "5b9ff4b2a81f7c2d79ced850df5ed8f9ee00c7fcaa91657cea6badde7cccedee",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0023"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0023",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "f81d375c2ee4fe62523cc64dd9406feef05f7df942411ac1ddb25506025ed453"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0024",
+      "source_sha256": "757350d31598b5fa80522463edec9fd853b74ef3bca3d2756647c72a4ff81e36",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0024"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0024",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "6c0d1186041de4a26500af6754b6715ed949738c1185cb439f82f9742451c0c1"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0025",
+      "source_sha256": "b185243466b3730a9e2808f11f922f7b5fef00d1a5b19413c1165057b1db99cf",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0025"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0025",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "d2d9581467ba1b648e07e9dacf92495c54cf427286ce5fccb85b7227e23257e5"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0026",
+      "source_sha256": "1c0f2b0a417ec60b37acffc1944e2fe7fbc25bc2ba62813d8734ea046e41619c",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0026"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0026",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "b579b4ec529ad2c8b2ada0db27b70b1a192768b55e781fb67003524fc0e73345"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0027",
+      "source_sha256": "625eb089b4b0527829a15cc550954998857fa0053ce889bff363648e86afd409",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0027"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0027",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "log_sha256": "68528ba7e8de0792edacbc3fe0a825b6acb7859db1d74c1cfd3367605c8311a6"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0028",
+      "source_sha256": "d746cefef8b51433eb0b5e54ed9c237829b41d023f363b9139665280fc4a112e",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0028"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0028",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "ea15d4a8d38a23dee5929ad6d225ad7c5f93012b8183152112dada829feac973"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0029",
+      "source_sha256": "f1aa20ec28f1a94ec2ddbe040870661ec736acb7799ee78a71cddd74a8b32abb",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0029"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0029",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "9bba7088a65f5a015a0d7a8090b3639593d68c09fbfccf8cd21a666281c1b768"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0030",
+      "source_sha256": "a1cbc912d066a9cc01c7bc5278abdc2497abd927a393520760c24c6fe91964f1",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0030"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0030",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "35a61ab61db8993e5d8b4336aaab729a164233a08f547cb94ce8df8f895da58f"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0031",
+      "source_sha256": "609cbc6f4a5f21a140a1bd812470699f7696ba3ad0f50d7104ee74fbb87b90c6",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0031"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0031",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "359ae9fc9efa9d4dd51827150eb72690975c2612f930d9598a7352364d05cea5"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0032",
+      "source_sha256": "bbc847b61658ddca8651a5a1e03a929e35afa4fe900f9ec76ed78267af875e50",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0032"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0032",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "9349d9dd3aea9bec6d57f8c50924e2e0ea17fb8393ea6143436d612862618261"
+    },
+    {
+      "module": "BergeMod.Canonical.K3ExactBlock0033",
+      "source_sha256": "8e41aaba6b0b51ae642e00448c0bbd6167fa84265c4ee281251915f327b14baa",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.block_exact0033"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.block_exact0033",
+          "axioms": []
+        }
+      ],
+      "log_sha256": "af50a92e635f7256b1dc5dec9a42379d11c86f3f765074f620cef149dd325f4c"
+    },
+    {
+      "module": "BergeMod.Canonical.K3",
+      "source_sha256": "8de89883c876b27faa913e22e52ba0dc3c940217adbc8584bb4dfeea2d47feaa",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3.input_exact",
+        "BergeMod.Canonical.K3.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3.input_exact",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "theorem": "BergeMod.Canonical.K3.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "c6e6b33b16a3ed46e4f0c82fe98bde691cb700a7a7d5e6efabc807634235437d"
+    },
+    {
+      "module": "BergeMod.Canonical.K3Consumer",
+      "source_sha256": "361da0c7ed39272c8b82c267489a25c89e92ff2b0f5d4b661c5fa5b6c89d9d3a",
+      "expected_theorems": [
+        "BergeMod.Canonical.K3Consumer.canonical_unsat"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.K3Consumer.canonical_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "7d9c62ab165b468688aceec648a6771ce26c207b55041fbb17dd2b5eb246a072"
+    },
+    {
+      "module": "BergeMod.Canonical.CoreFamily",
+      "source_sha256": "654c87de4c2088bca4b08da8814118160ba69846a7fc9e3e1aa50d76bfb23c8e",
+      "expected_theorems": [
+        "BergeMod.Canonical.core_unsat_family"
+      ],
+      "audits": [
+        {
+          "theorem": "BergeMod.Canonical.core_unsat_family",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "3071604c08b296522cfc4b1d77d0f5d48df88f1d4c6748b90857adee49de0e40"
+    },
+    {
+      "module": "Q7Mod.Integration.FiniteBergeCover",
+      "source_sha256": "67508a7245de2676416199f9ba6dcecaead63a29edd8bfde79ce54e88978a701",
+      "expected_theorems": [
+        "Q7GlobalAssembly.finite_berge8_perfect_cover"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7GlobalAssembly.finite_berge8_perfect_cover",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "70849648edb1033e7842102fc814dbbc3fdfe04fc5260c33f959504c823912cb"
+    },
+    {
+      "module": "Q7Mod.Integration.FiniteBergeCoverConsumer",
+      "source_sha256": "d5dddddc90f1d95fc5e8ea4d24b29e76f76781e517ac073b9a605e2de17fe85d",
+      "expected_theorems": [
+        "Q7GlobalAssembly.FiniteCoverConsumer.checked"
+      ],
+      "audits": [
+        {
+          "theorem": "Q7GlobalAssembly.FiniteCoverConsumer.checked",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "aa1fdff7c840365f317c862c4fa0400c559f0df0c6994443af854e3eb0028f54"
+    },
+    {
+      "module": "Q7Mod.Integration.Q7ConditionalOptimum",
+      "source_sha256": "b01147ac651bdb7738df40cc3e37586329ac5c673eff891939834544c7e6fb2e",
+      "expected_theorems": [
+        "ExactCubeCodes.localIdentifying_Q7_optimum24_of_finite_cover"
+      ],
+      "audits": [
+        {
+          "theorem": "ExactCubeCodes.localIdentifying_Q7_optimum24_of_finite_cover",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "f6047e2916a5dcaeb5a9a461ff346eb16315d9b48374f6311149288e03d482a2"
+    },
+    {
+      "module": "Q7Mod.Integration.ExactQ7",
+      "source_sha256": "06b3c4b49d155ee53da5d14f1726321ddd95a0f2308ba8707bf5a711b3ccf310",
+      "expected_theorems": [
+        "ExactCubeCodes.localIdentifying_Q7_optimum24"
+      ],
+      "audits": [
+        {
+          "theorem": "ExactCubeCodes.localIdentifying_Q7_optimum24",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "cc606fcb4438a485ba5bf19efa6ff9fe5c1e3b1c39c926b667384338217e2b98"
+    },
+    {
+      "module": "Q7Mod.Integration.ExactQ7Audit",
+      "source_sha256": "72a64c86e0b5bf450e5a47b36175efc20bf3ffc69adb1750e644c0ee06325529",
+      "expected_theorems": [
+        "ExactCubeCodes.localIdentifying_Q7_optimum24"
+      ],
+      "audits": [
+        {
+          "theorem": "ExactCubeCodes.localIdentifying_Q7_optimum24",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log_sha256": "339e42655c67d882b73301e5a05daa558b38c461e71eb768681529ed48b16ead"
+    }
+  ],
+  "initial_build_custom_objects_reused": 0,
+  "continuation_state_sha256": "ebc15701f1c5cb5553d1360db2d9cda9efcb2d09a0c87000b6d7a42002f24e39",
+  "continuation_identity_audit_sha256": "4299509efd5096cf639a18cd4d49e351236aa4047679935b804b64b856534103",
+  "prior_C5_clean_phase_verified": true,
+  "prior_C5_pinned_runner_guards": "Clean phase requires an initially object-free custom source root; each module refuses a pre-existing output; custom LEAN_PATH contains only that independent root.",
+  "prior_C5_runner_sha256": {
+    "run_checkpointed.py": "749e1f348ad17651f9810c340d1aa7b4e69f6815ae7561495a56cdd9e954d29d",
+    "run_calibration.py": "2ecd92d9426587ae8013c3041fb742ecfa44b4f845e9149292a77cdfad8d1b23"
+  }
+}

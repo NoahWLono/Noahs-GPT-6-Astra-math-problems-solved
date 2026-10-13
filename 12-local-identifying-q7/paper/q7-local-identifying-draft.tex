@@ -1,0 +1,439 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+cmextra.map}
+\pdfmapfile{+symbols.map}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Local identification in the seven dimensional cube}
+\fancyhead[R]{\small Research draft}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Q}{Q}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\LI}{\operatorname{LI}}
+\newcommand{\iso}{\operatorname{Iso}}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\newcommand{\src}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\F}{\mathsf{F}_{8}}
+\newcommand{\bits}{\{0,1\}}
+\title{Isolate repair and local identification\protect\\in the seven dimensional cube}
+\author{Exact Hypercube Codes Project\thanks{AI-assisted research and manuscript preparation. No institutional affiliation or individual authorship is asserted in this draft.}}
+\date{Research draft, 13 October 2026\\\small Kernel checked; independent source rebuild completed}
+\begin{document}
+\maketitle
+\begin{abstract}
+A local identifying code dominates a graph by closed neighborhoods and gives different identifying sets to every adjacent pair, including pairs whose endpoints belong to the code. We give an explicit, checked 24-word construction in the seven dimensional binary cube. For the matching lower bound, we develop a reduction through selected isolates: a weighted incidence inequality bounds their number by eight in any hypothetical code of size at most 23, and suitable repairs turn the original code into a total-dominating set without increasing its size. The numerical contradiction is supplied by the checked covering lower bound 12 in the six dimensional cube. The repair analysis separates noncentered tetrahedra from clique-center families and excludes induced five-cycles, seven-cycles, and seven-antiholes. We describe the exact finite-graph interface and the semantic obligations linking finite CNFs to cube codes. The finite-cover interface, exact signed-list adapters, and final original-predicate composition have now passed kernel checks. The resulting theorem states $M^L(7)=24$. The independent project-source rebuild has also completed. This document remains a research draft. No novelty-priority claim is made.
+\end{abstract}
+
+\section{The parameter and the status of the result}
+The vertex set of the binary cube $\Q_d$ is $\bits^d$, with two vertices adjacent when their Hamming distance is one. Write $N(v)$ and $N[v]$ for the open and closed neighborhoods. A code is simply a set $C\subseteq\bits^d$, and its identifying set at $v$ is
+\[
+ I_C(v)=N[v]\cap C.
+\]
+\begin{definition}
+A code $C$ is \emph{local identifying} if
+\begin{align}
+ &I_C(v)\ne\varnothing &&\text{for every }v,\label{eq:dom}\\
+ &I_C(u)\ne I_C(v) &&\text{for every edge }uv.\label{eq:sep}
+\end{align}
+Let $M^L(d)$ be the minimum cardinality of such a code in $\Q_d$.
+\end{definition}
+There is no restriction $u,v\notin C$ in \eqref{eq:sep}. This distinction is essential throughout the argument. In particular, we are not studying local locating-domination, which has a different endpoint convention, or ordinary identification, which separates all distinct vertices.
+
+Herva, Laihonen and Lehtil\"a~\cite{herva2024} use this predicate in Definition 1.3 and report $21\le M^L(7)\le28$ in Table 1. The present construction gives $M^L(7)\le24$. A bounded primary-source literature review did not locate an earlier exact determination at 24; that negative search does not establish priority. The numerical covering dependency for $\Q_6$ is treated here as a reproduced dependency, not as a new covering result.
+
+\paragraph{Precise reading of this draft.}
+Statements labeled as checked components are supported by the project sources and saved verification records identified in Appendix~\ref{app:map}. The final theorem is
+\[
+ M^L(7)=24.
+\]
+The final public-import audit checks both an original-predicate size-24 witness and the universal original-predicate lower bound. It retains no finite-cover, cycle-refutation, repair, or lower-bound premise. The exact finite-cover statement in Theorem~\ref{hyp:F} was the last combinatorial interface to be discharged; its semantic descriptors, seven refutations, and signed-list adapters have now been composed. The final coherent nine-module composition passed the named axiom and privacy audits. An independent rebuild now covers the complete 3,046-module project closure through the same original-predicate consumer. Its reuse of previously independently built modules is documented in Section~10; no custom proof objects from the initial build were accepted as independent evidence. The ordinary proofs below explain the mathematical reduction and the finite lemmas on which it rests.
+
+\section{A 24-word construction}
+Encode $x=(x_0,\ldots,x_6)$ by $\sum_{j=0}^6 2^j x_j$. Consider
+\begin{equation}\label{eq:witness}
+\begin{split}
+ C_{24}=\{&0,1,2,28,29,30,43,44,51,52,59,60,\\
+          &64,71,72,79,80,87,101,102,103,121,122,123\}.
+\end{split}
+\end{equation}
+\begin{proposition}[Checked witness]\label{prop:witness}
+$C_{24}$ is a local identifying code in $\Q_7$, and $\card{C_{24}}=24$.
+\end{proposition}
+\begin{proof}
+The formal proof verifies all 128 closed-neighborhood domination conditions and every adjacent-pair separation condition. The exact bridge used for the latter is
+\begin{equation}\label{eq:symmetric}
+ I_C(u)\ne I_C(v)\quad\Longleftrightarrow\quad
+ C\cap\bigl(N[u]\mathbin{\triangle}N[v]\bigr)\ne\varnothing.
+\end{equation}
+Indeed, the symmetric difference of the two traces is precisely the intersection on the right. The list in \eqref{eq:witness} has distinct entries in $[0,127]$, so its cardinality is 24. The resulting existence theorem is \src{ExactCubeCodes.exists_local_ID_Q7_size24}; the semantic bridge is in \src{CubeSemantics.lean}.
+\end{proof}
+For an easily reproducible secondary check, the trace-size histogram is
+\[
+ \#\{v:\card{I_{C_{24}}(v)}=1\}=80,\qquad
+ \#\{v:\card{I_{C_{24}}(v)}=2\}=40,\qquad
+ \#\{v:\card{I_{C_{24}}(v)}=4\}=8.
+\]
+The smallest adjacent symmetric-difference size is one. There are no selected isolates in this construction. The 448 undirected edges comprise 300 with neither endpoint selected, 128 with one selected endpoint, and 20 with both endpoints selected. These secondary calculations are useful diagnostics; they do not replace the checked theorem. A short independent enumeration script accompanies the draft.
+
+\section{Selected isolates and a weighted incidence inequality}
+For a code $C$ in a simple graph, let
+\[
+ S=\iso(C)=\{c\in C:N(c)\cap C=\varnothing\},\quad i=\card S,\quad k=\card C.
+\]
+A \emph{selected $K_2$ component} means an edge $uv$ with $u,v\in C$ such that $u$ and $v$ have no other neighbors in $C$.
+
+\begin{lemma}[Triangle-free characterization]\label{lem:characterization}
+In a triangle-free graph, a code is local identifying if and only if it dominates, has no selected $K_2$ component, and satisfies
+\begin{equation}\label{eq:isoneighbor}
+ s\in S,\quad v\in N(s)\quad\Longrightarrow\quad\card{N(v)\cap C}\ge2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For an edge $uv$ in a triangle-free graph, $N[u]\cap N[v]=\{u,v\}$. Consequently, an equal nonempty pair of traces must be one of $\{u\}$, $\{v\}$, or $\{u,v\}$. Equality with $\{u,v\}$ is exactly a selected $K_2$ component. Equality with $\{u\}$ says that $u$ is a selected isolate and that $u$ is the only selected neighbor of $v$; the case $\{v\}$ is symmetric. Conversely, each of those configurations gives an equal pair of traces. Domination excludes equality of two empty traces.
+\end{proof}
+
+\begin{theorem}[Checked isolate inequality]\label{thm:share}
+Every local identifying code in $\Q_7$ satisfies
+\begin{equation}\label{eq:share}
+ 384+6i\le19k.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Set $t(v)=\card{I_C(v)}$ and introduce integer weights
+\[
+ w(0)=0,\quad w(1)=6,\quad w(2)=3,\quad w(t)=2\quad(t\ge3).
+\]
+For $c\in C$, put $s(c)=\sum_{v\in N[c]}w(t(v))$. Since domination gives $t(v)\ge1$, we have $t(v)w(t(v))\ge6$. Double counting incidences yields
+\begin{equation}\label{eq:double}
+ \sum_{c\in C}s(c)=\sum_{v\in\bits^7}t(v)w(t(v))\ge6\cdot128=768.
+\end{equation}
+We claim $s(c)\le26$ for $c\in S$ and $s(c)\le38$ otherwise.
+
+If $c\in S$, its own trace has size one and each of its seven neighbors has trace size at least two by \eqref{eq:isoneighbor}. At least one such trace has size at least three. To see this, suppose that all seven have size two. Counting selected incidences over $N(c)$ gives 14. The codeword $c$ contributes seven, and each other codeword contributes either zero or two: selected neighbors of $c$ are absent, and distinct nonadjacent cube vertices have either zero or two common neighbors. This would express 14 as seven plus an even number. Thus
+\[
+ s(c)\le6+6\cdot3+2=26.
+\]
+
+Now let $c\in C\setminus S$ and choose a selected neighbor $u$. Start with the trivial bound $8\cdot6=48$. If $c$ has a second selected neighbor $w$, its trace has size at least three, while the traces of $u,w$ have size at least two. The savings at these three different vertices are at least $4,3,3$, respectively, giving $s(c)\le38$.
+
+Otherwise $u$ is the only selected neighbor of $c$. The selected $K_2$ prohibition gives a selected neighbor $w\ne c$ of $u$. Complete the two-edge cube path $c,u,w$ to a square with fourth vertex $z\ne u$. The traces at $c,u,z$ have sizes at least $2,3,2$, respectively. The savings are now $3,4,3$, again giving 38. Combining these estimates with \eqref{eq:double} gives
+\[
+ 768\le38(k-i)+26i=38k-12i,
+\]
+which is \eqref{eq:share}.
+\end{proof}
+\begin{corollary}\label{cor:8}
+$k\ge21$. If $k\le23$, then $i\le8$. More specifically, $k=21$ implies $i\le2$, and $k=22$ implies $i\le5$.
+\end{corollary}
+\begin{proof}
+These are integer consequences of \eqref{eq:share}: $19\cdot20<384$; at $k=23$, $6i\le53$; at $k=21,22$, $6i\le15,34$, respectively.
+\end{proof}
+The bound concerns \emph{all} selected isolates. It bounds either parity subfamily as a consequence, without a separate assumption on how isolates split between the two sides.
+
+\section{Repair and the total-domination contradiction}
+\begin{definition}\label{def:repair}
+For $S\subseteq\bits^7$, a repair is a pair $(R,T)$ such that
+\begin{align}
+ &R\subseteq S,\label{eq:Rsubset}\\
+ &\card{N(v)\cap S}\ge2\ \Longrightarrow\ N(v)\cap R\ne\varnothing
+       &&\text{for every }v,\label{eq:hit}\\
+ &N(s)\cap T\ne\varnothing&&\text{for every }s\in S,\label{eq:cover}\\
+ &\card R+\card T\le\card S.\label{eq:budget}
+\end{align}
+The formal predicates for \eqref{eq:hit} and \eqref{eq:cover} are
+\src{HitsMultiple} and \src{OpenCovers}, respectively.
+\end{definition}
+The hitting condition is deliberately stronger than merely dominating $S$. A vertex outside $S$ may lose all its selected neighbors when $S$ is removed, so the repair must preserve one of its original neighbors when there are at least two.
+
+\begin{lemma}[Checked surgery]\label{lem:surgery}
+Let $C$ be local identifying in a triangle-free graph, and let $S\subseteq\iso(C)$. Suppose $(R,T)$ satisfies \eqref{eq:Rsubset}--\eqref{eq:cover}. Then
+\[
+ D=(C\setminus S)\cup R\cup T
+\]
+open-dominates every vertex except possibly the original selected isolates outside $S$. If $S=\iso(C)$ and \eqref{eq:budget} holds, $D$ is total dominating and $\card D\le\card C$.
+\end{lemma}
+\begin{proof}
+Every point of $S$ has a neighbor in $T$. A vertex with a neighbor in $C\setminus S$ is already covered. Consider another vertex $v$, which is neither in $S$ nor an original isolate outside $S$. If $v\in C$, it has a selected neighbor because it is not isolated; that neighbor cannot be in $S$, since a point of $S$ has no selected neighbor. This reduces to the preceding case. If $v\notin C$, domination gives a selected neighbor. When none lies in $C\setminus S$, all lie in $S$. Choose one, say $s$; condition \eqref{eq:isoneighbor} gives at least two selected neighbors of $v$, hence at least two in $S$. Equation~\eqref{eq:hit} supplies a retained neighbor in $R$. Finally,
+\[
+ \card D\le\card{C\setminus S}+\card R+\card T
+ \le\card C-\card S+\card S=\card C.
+\]
+\end{proof}
+
+Let $p(x)=\sum_j x_j\pmod2$, and write $S_b=\{s\in\iso(C):p(s)=b\}$ for $b\in\{0,1\}$. If $(R_b,T_b)$ repairs $S_b$, set $R=R_0\cup R_1$ and $T=T_0\cup T_1$. All neighbors of a cube vertex have the same parity. Thus a neighborhood meeting $S_0\cup S_1$ at least twice meets one $S_b$ at least twice; the union $R$ satisfies \eqref{eq:hit}. The union $T$ covers all isolates and
+\[
+ \card R+\card T\le\sum_b(\card{R_b}+\card{T_b})
+ \le\card{S_0}+\card{S_1}=\card{\iso(C)}.
+\]
+Both repairs are computed from the \emph{original} code. No assertion that an intermediate repaired code remains local identifying is required.
+
+\begin{proposition}[Checked numerical dependency]\label{prop:total}
+Every total-dominating set of $\Q_7$ has at least 24 vertices.
+\end{proposition}
+\begin{proof}
+For $x\in\bits^6$, put $\pi(x)=\sum_{j=0}^5x_j\pmod2$. The maps
+\[
+ f_b(x)=(x,b\mathbin{\oplus}\pi(x)),\qquad b\in\{0,1\},
+\]
+identify $\bits^6$ with the two parity classes of $\Q_7$. Directly,
+\[
+ f_0(x)\sim f_1(y)\quad\Longleftrightarrow\quad\dist(x,y)\le1.
+\]
+Indeed, $x=y$ changes only the last coordinate; distance one changes one of the first six coordinates and leaves the last coordinates equal; larger distances cannot give an edge. For a total-dominating $D$, each set $f_b^{-1}(D)$ therefore dominates $\Q_6$. The checked covering dependency $\gamma(\Q_6)\ge12$ applies to both, so $\card D\ge12+12=24$.
+\end{proof}
+The $\Q_6$ dependency is derived from a complete profile classification and twenty exact refutations. Its corrected source-data bundle includes 157 replay JSON payloads. An older incomplete archive is not sufficient for this claim.
+
+\section{Clique centers and the finite-cover interface}
+For a same-parity family $S$, define the graph $H(S)$ with vertex set $S$ by
+\[
+ xy\in E(H(S))\quad\Longleftrightarrow\quad\dist(x,y)=2.
+\]
+A \emph{noncentered tetrahedron} is a set of four distinct pairwise-distance-two vertices with no common open cube neighbor.
+
+\begin{lemma}[Common centers]\label{lem:centers}
+If $H(S)$ contains no noncentered tetrahedron, every nonempty clique of $H(S)$ has a common open neighbor in the cube.
+\end{lemma}
+\begin{proof}
+A singleton has any of its seven neighbors as center. A pair at distance two has two common neighbors. For three distinct pairwise-distance-two vertices, translate one to zero. The other two have weight two and share exactly one coordinate, so they have the form $e_a+e_b$ and $e_a+e_c$. Their unique common open neighbor with zero is $e_a$. For a larger clique, fix such a triple. Each further vertex, together with the triple, forms a four-clique. The absence of a noncentered tetrahedron gives a center for those four points, which must be the unique center of the fixed triple. Thus that center works for the entire clique.
+\end{proof}
+Here and below, an induced $C_r$ has exactly the edges of a cycle of length $r$ on its specified vertices. An induced $\overline{C_7}$ is a seven-antihole.
+
+\begin{theorem}[Checked finite-cover interface]\label{hyp:F}
+For every $0\le n\le8$ and every simple graph $G$ on $\{0,\ldots,n-1\}$ containing no induced $C_5$, $C_7$, or $\overline{C_7}$, there exist an integer $k\ge0$, an injective independent tuple $a:\{0,\ldots,k-1\}\to V(G)$, and a map
+\[
+ q:V(G)\longrightarrow\{0,\ldots,k-1\}
+\]
+such that distinct vertices with the same $q$-value are adjacent. Denote this assertion by $\F$.
+\end{theorem}
+This is exactly \src{Q7GlobalAssembly.FiniteBerge8PerfectCover}: a total partition into $k$ clique fibers, accompanied by an independent $k$-tuple. Empty fibers are permitted. For the empty graph, $k=0$ and both maps have empty domain. The interface assumes neither a code lower bound nor the existence of a cube repair.
+
+\begin{lemma}[Clique-cover repair]\label{lem:cliquerepair}
+If $S$ has at most eight points, is same-parity, and $H(S)$ contains neither one of the three forbidden induced configurations nor a noncentered tetrahedron, then $S$ has a repair.
+\end{lemma}
+\begin{proof}
+Apply $\F$ to a bijective labeling of $S$. Let $I\subseteq S$ be the independent set of size $k$, and put $R=S\setminus I$. Two distinct points of a cube neighborhood are at distance two, so they are adjacent in $H(S)$. Hence a neighborhood containing at least two points of $S$ cannot have all those points in $I$; this proves \eqref{eq:hit}.
+
+For each nonempty clique fiber of $q$, select a cube center by Lemma~\ref{lem:centers}, and let $T$ be the set of selected centers. Then $T$ open-covers $S$, and $\card T\le k$, even when some centers coincide. Thus $\card R+\card T\le(\card S-k)+k$. When $S$ is empty take $R=T=\varnothing$.
+\end{proof}
+The independent tuple and clique partition play different roles. The tuple pays for deleted points; the partition pays for added centers. A bound on either one alone does not provide the required repair certificate.
+
+\section{The tetrahedral repair branch}
+\begin{theorem}[Checked full tetrahedron repair]\label{thm:tetra}
+Every same-parity family $S\subseteq\bits^7$ of cardinality at most eight containing a noncentered tetrahedron has a repair. The added set $T$ can be chosen in the opposite parity class. No domination or local-identification premise is required.
+\end{theorem}
+The exact formal statement is \src{TetrahedronRepair.tetrahedron_size_eight_opposite_repair}. It includes arbitrary placements of the tetrahedron and all possible outside points, rather than only a canonical attached example.
+
+\paragraph{Normalization.}
+XOR translation and coordinate permutation preserve adjacency, distance, cardinalities, hitting, and open-covering. Translate one tetrahedral point to zero. The other three correspond to pairwise-intersecting two-element coordinate sets. Three distinct pairwise-intersecting two-sets either share one coordinate or are the three edges of a triangle. The common-coordinate case gives a cube center and is excluded. After permuting coordinates, the tetrahedron is
+\[
+ B=\{0,3,5,6\}=\{0,e_0+e_1,e_0+e_2,e_1+e_2\}.
+\]
+The \emph{entire} set $S$ is transported, not just the four chosen points. It becomes an even family $B\cup U$ with at most four outside points. The inverse isometry later transports both repair witnesses back.
+
+\paragraph{Protected removals.}
+Independence in $H(S)$ is sufficient for safe removal, but is not necessary. A list $I\subseteq S$ can be deleted whenever every neighborhood meeting $S$ at least twice still meets $S\setminus I$. For the tetrahedron alone, deleting $0,3$ is protected by $5,6$; the only common neighbors of $0,3$ are $1,2$, and these are adjacent to $5,6$, respectively. The two centers $1,2$ cover $B$. This gives a two-for-two repair that an independent-set argument cannot provide for a four-clique.
+
+The finite geometric argument is organized by the following exact budget predicates:
+\begin{align*}
+ \mathcal R_j(S)&:\ \exists R\subseteq S\text{ satisfying \eqref{eq:hit} with }
+                          \card R+j\le\card S,\\
+ \mathcal C_j(S)&:\ \exists T\text{ satisfying \eqref{eq:cover} with }\card T\le j.
+\end{align*}
+Matching $\mathcal R_j$ and $\mathcal C_j$ immediately gives a repair. Every extension containing $B$ has $\mathcal R_2$; every proper even extension has $\mathcal R_3$. For four outside points, the proof classifies an outside point by its zero, one, or three distance-two attachments to $B$. Three-attachment points are called high in the source; the others are low. Sorting the four Boolean high/low indicators gives five cases.
+
+For a family with four outside points which is not all-high, the checked first threshold is
+\[
+ \mathcal C_3(S)\quad\text{or}\quad\mathcal R_4(S).
+\]
+For an attached extension, if $\mathcal C_4(S)$ holds, this dichotomy pairs either $\mathcal C_3$ with the existing $\mathcal R_3$, or $\mathcal R_4$ with $\mathcal C_4$. If $\mathcal C_4(S)$ fails, the second threshold gives $\mathcal R_5(S)$ and the attachment cover lemma gives $\mathcal C_5(S)$. Thus every attached non-all-high case has matching budgets. The all-high branch is handled directly. The precise finite case witnesses are in the threshold and attachment modules listed in Appendix~\ref{app:map}. Disconnected outside pieces use the at-most-four-point repair and disconnected composition. Such composition is valid because a cube neighborhood meeting both pieces would create a distance-two edge between them. Consequently, the hitting obligations do not acquire a new mixed case.
+
+Finally, support enumeration obtains a distinct list $U$ of length at most four from every Boolean support containing $B$, preserving exact support equality and cardinality. The list repair, support enumeration, and inverse isometry give Theorem~\ref{thm:tetra}. This paragraph is a roadmap to the checked finite geometric proof; it does not substitute an unlisted threshold for that proof.
+
+\section{Excluding induced odd obstructions}
+\subsection{Seven-antiholes}
+\begin{theorem}[Checked dimension-independent obstruction]\label{thm:anti}
+The distance-two graph of a binary cube, in any dimension, contains no induced seven-antihole.
+\end{theorem}
+\begin{proof}
+Suppose $v_0,\ldots,v_6$ induce one, with indices cyclic. Nonconsecutive pairs have Hamming distance two. Each consecutive pair has a common neighbor in the complement of the abstract cycle, giving a two-step distance-two path. Its distance is therefore even and at most four. It is neither zero (the points are distinct) nor two (the pair is a nonedge), so it is four. The distance matrix is forced:
+\[
+ D_{ij}=\begin{cases}0&i=j,\\4&i,j\text{ consecutive},\\2&\text{otherwise}.
+ \end{cases}
+\]
+Let $z=(0,1,2,1,-1,-2,-1)$; then $\sum_i z_i=0$. Hamming distance has the following elementary negative-type property. For a single Boolean coordinate, let $A$ be the indices with bit one. Its contribution to $\sum_{i,j}z_i z_jD_{ij}$ is
+\[
+ 2\Bigl(\sum_{i\in A}z_i\Bigr)\Bigl(\sum_{j\notin A}z_j\Bigr)
+ =-2\Bigl(\sum_{i\in A}z_i\Bigr)^2\le0.
+\]
+Summing over coordinates gives a nonpositive result. But substituting the forced matrix gives $z^{\mathsf T}Dz=4>0$, a contradiction. The Lean proof checks the equivalent 64 single-coordinate cases and sums them by induction on dimension.
+\end{proof}
+
+\subsection{Seven-cycles among original isolates}
+\begin{theorem}[Checked containing-cycle bound]\label{thm:c7}
+If the distance-two graph on one parity class of the original selected isolates of a local identifying code $C\subseteq\bits^7$ contains an induced $C_7$, then $\card C\ge24$.
+\end{theorem}
+The word ``contains'' matters. The seven cycle vertices need not exhaust all isolates or all isolates of their parity. Under the contrary assumption $\card C\le23$, Corollary~\ref{cor:8} leaves at most one further isolate in the entire code. The complete same-parity family is therefore the cycle itself or an eight-point extension.
+
+The checked extension analysis uses the attachment set $A\subseteq V(C_7)$ of the eighth point. If $D$ counts cube centers with at least two neighbors in that eight-point family, its exact geometry gives
+\[
+ D+2e(C_7[A])=14+2\card A.
+\]
+For $D\le18$, incidence and parity-volume estimates force at least 15 codewords on one side and nine on the other. For $D>18$, the checked abstract-cycle patterns give four independent deletions and a four-center cover. The seven-point case and any remaining opposite-parity isolate are handled by the corresponding structural composition and Proposition~\ref{prop:total}. The exported theorem is \src{Q7C7Eight.contains_isolate_C7_lower_bound}; a theorem requiring the cycle to be the complete isolate family would not suffice here. The detailed extension counts are formal components, rather than additional hypotheses of the final reduction.
+
+\subsection{Five-cycles and the exact frozen formula}
+\begin{theorem}[Checked exact-CNF exclusion]\label{thm:c5}
+If the original selected isolates contain an induced distance-two $C_5$, then a local identifying code $C\subseteq\bits^7$ has $\card C\ge24$.
+\end{theorem}
+The semantic reduction normalizes the five cycle vertices to
+\[
+ (0,3,15,29,20)
+\]
+by an affine cube isometry. All 128 code membership bits, the local identifying predicate, isolation, and code cardinality are transported by that same isometry. A code of size at most 23 would then extend to a satisfying assignment of a fixed CNF with 808 variables and 4,059 clauses. Its refutation has 59,998 checked additions.
+
+The exact input has SHA-256
+\begin{center}\small\src{bc31e8cdf84ed4fd3f4e36d45b50a67834141fdbc866f87635e2c509ae08e4dd}.\end{center}
+This digest identifies the recorded DIMACS artifact; the logical bridge is an in-Lean equality and a satisfaction-translation theorem, not a hash comparison. In the current component verification, \src{C5Mod.Canonical.exact_c5_unsat} composes that equality with the complete refutation and produces the original \src{ExactC5Unsat} proposition. A separate independent replay checked 734 C5 modules. These checks close the C5-specific integration boundary. The full independent verification explicitly reuses those 734 independently built C5 modules and rechecks their exact integration with the remaining closure.
+
+\section{What the finite certificates establish}
+\subsection{The direction of the semantic implication}
+For each SAT-assisted argument, the required implication is
+\begin{equation}\label{eq:semantic}
+ \text{original mathematical counterexample}
+ \quad\Longrightarrow\quad
+ \exists A\;\operatorname{Sat}(A,F_{\rm exact}).
+\end{equation}
+It is combined with $\forall A\;\neg\operatorname{Sat}(A,F_{\rm exact})$. It is unnecessary to reconstruct an original counterexample from every auxiliary assignment. However, the formula on both sides must be exactly the same ordered clause list, with the same variable indices, literal signs, and literal evaluation convention.
+
+For local identification, the primary variables are $x_v=[v\in C]$. The domination clauses have the form
+\[
+ \bigvee_{c\in N[v]}x_c,
+\]
+and the separation clauses have the form
+\[
+ \bigvee_{c\in N[u]\mathbin{\triangle}N[v]}x_c\qquad(uv\in E(\Q_7)).
+\]
+These clauses are enforced for all edges, including selected endpoints. Isolation units and the cardinality bound use the normalized original code. Auxiliary counting variables are assigned from actual interval counts; their clauses are then proved satisfied. Neither an omitted endpoint case nor an unproved totalizer convention can be repaired by a longer UNSAT proof.
+
+\subsection{Refutation checking}
+A reverse-unit-propagation (RUP) addition is justified by assuming the negation of the new clause and deriving a conflict by unit propagation from the current clauses. Each accepted addition preserves satisfiability; deriving the empty clause proves unsatisfiability. The project proves the checker sound for arbitrary Boolean assignments and evaluates the concrete certificate inside Lean's proof-producing pipeline. The external solver is a certificate producer, not an additional logical axiom.
+
+The $\Q_6$ proof first classifies every putative dominating code of size at most 11 into its exact profile branch. There are twenty refuted profile CNFs. Actual membership bits and interval counts supply \eqref{eq:semantic} in that branch. The branch classification and the finite input quotations are both part of the proof dependency, as are the 157 replay data payloads.
+
+\subsection{The seven finite graph branches}
+The finite graph route applies to the complement of a graph requiring a clique partition. In the complement, an independent $k$-set becomes a clique of size $k$ and a $k$-coloring becomes a partition of the original graph into $k$ cliques. The graph property excluding $C_5,C_7,\overline{C_7}$ is complement-stable: $C_5$ is self-complementary, and $C_7$ and its complement exchange roles.
+
+The transport handles graphs smaller than eight by padding and handles chosen-clique normalization by a bijection. One extracts an actual maximum independent set; this supplies the integer $k$ and the independent tuple, rather than assuming an optimal cardinality from a solver's output. The extreme empty and trivial cases are dealt with directly. The nontrivial normalized branches are indexed $k=1,\ldots,7$ and have seven exact input CNFs. The semantic encoding of a forbidden non-colorable counterexample and the finite refutations are distinct parts of the argument.
+
+All 386 modules in the finite semantic descriptor closure and all seven exact RUP refutations, including the larger $k=2,3$ branches, passed their designated component checks. The exact signed-list adapters now identify each refuted input with its semantic branch formula. The checked common family theorem \src{BergeMod.Canonical.core_unsat_family} collects the seven branches, and the graph transport yields \src{Q7GlobalAssembly.finite_berge8_perfect_cover}. This discharges Theorem~\ref{hyp:F}; it is no longer an assumed graph input. The named endpoints have passed their standard-axiom and public-interface audits. No general perfect graph theorem is invoked as an unverified substitute.
+
+\section{The exact-value theorem}
+\begin{theorem}[Kernel-checked main result]\label{thm:main}
+For local identification with all adjacent endpoint types included,
+\[
+ M^L(7)=24.
+\]
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:witness} gives the upper bound. For the lower bound, suppose $C$ is local identifying and $\card C\le23$. By Corollary~\ref{cor:8}, its complete isolate set has at most eight points. For each parity $b$, consider its original isolate family $S_b$.
+
+The graph $H(S_b)$ contains no induced $C_5$ by Theorem~\ref{thm:c5}, no induced $C_7$ by Theorem~\ref{thm:c7}, and no seven-antihole by Theorem~\ref{thm:anti}. If it contains a noncentered tetrahedron, Theorem~\ref{thm:tetra} supplies a repair. Otherwise Lemma~\ref{lem:cliquerepair}, using the checked finite-cover theorem, supplies a repair. This includes an empty parity family.
+
+Unite the two repairs against the original code as in Section~4. Lemma~\ref{lem:surgery} gives a total-dominating set $D$ with $\card D\le\card C\le23$, contradicting Proposition~\ref{prop:total}. Therefore every local identifying code has at least 24 points.
+\end{proof}
+
+\paragraph{Formal assembly boundary.}
+The legacy reduction \src{localIdentifying_at_least_24_conditional} accepts three propositions: \src{ExactC5Unsat}, \src{FiniteBerge8PerfectCover}, and \src{FullTetrahedronRepair}. Each now has a checked exact adapter. The final declaration
+\begin{center}\src{ExactCubeCodes.localIdentifying_Q7_optimum24}\end{center}
+conjoins existence of $C$ of type \src{Code 7} with \src{LocalIdentifying C} and cardinality 24, and the universal lower bound for every $C$ of type \src{Code 7} satisfying that original predicate. The independent public consumer \src{ExactQ7Audit.lean} explicitly ascribes precisely this type, preventing a renamed or weakened interface from passing unnoticed. A coherent nine-module final composition passed, using 22.332575 CPU seconds in its saved run. Its axiom audit reports exactly \src{propext}, \src{Classical.choice}, and \src{Quot.sound}. The modern module system hides the checked proof body from public consumers; that presentation boundary is verified separately from proof construction and is not a user-supplied assumption.
+
+\section{Trust boundary and reproducibility}
+The intended checker boundary permits only the usual Lean axioms \src{propext}, \src{Classical.choice}, and \src{Quot.sound}. A theorem reporting a subset of these, including no axioms, is acceptable. A theorem with a remaining ordinary hypothesis is still conditional even if its axiom audit is clean. Conversely, absence of a custom axiom is not by itself evidence that the imported theorem proves the original predicate.
+
+The source fixes \src{leanprover/lean4:v4.32.2}. Arithmetic lemmas, cube geometry, Boolean-to-propositional bridges, finite case checks, and replay soundness must all occur in the checked closure. Any Mathlib use in maximum-independent-set extraction must be pinned to the recorded source snapshot. No claim is made that binary artifacts alone constitute a reproducible proof. External solvers, Python preparation scripts, source generators, and SHA-256 manifests organize the evidence, but their correctness is not silently included as an extra premise: the relevant generated objects and semantic correspondences must be checked by Lean.
+
+The independent verification completed all 16 stages and accepted all 3,046 project modules through \src{ExactQ7Audit}. The build reused 497 modules from its own earlier independent revision and 734 C5 modules from a separate fresh independent replay; it freshly compiled the remaining 1,815 modules after continuation. It used zero custom proof objects from the initial build. Thus the claim is an independently rebuilt project closure with explicit independent-seed reuse, rather than 3,046 freshly compiled modules in one uninterrupted process. The continued run charged 6,503.807440 child CPU seconds; the earlier C5 replay charged 2,262.154862 seconds separately. Pinned compiler and external-library artifacts remain part of the stated dependency boundary.
+
+The original state records all stages complete even though its generic status label remains ``paused-at-stage-boundary''. Acceptance follows the complete stage list, source/object/receipt checks, final consumer type, and successful named axiom audits. The sanitized verification record is \src{checks/INDEPENDENT_VERIFICATION.json}. The newly packaged portable verifier has passed a 12-module smoke check, but its complete end-to-end execution has not been run; this is separate from the completed independent research build.
+
+The manuscript has been prepared with AI assistance and should be reviewed as a research draft. Its exact-value theorem is a finite combinatorial statement with a specified formal verification boundary. It makes no deployment-security claim, and neither formal component checks nor a bounded literature search establish novelty priority.
+
+\appendix
+\section{Source and theorem map}\label{app:map}
+Paths below are relative to the root of the accompanying portable proof bundle, after unpacking its source archive as described in \src{VERIFICATION.md}. The authoritative public index is \src{manifests/SOURCE_MANIFEST.json}; paths in that manifest are relative to \src{source/}. Original research manifests and receipts are retained as provenance identities, not as paths that a reader must reconstruct.
+
+\begin{description}
+\item[Original predicate and witness.]
+\src{source/Q7Mod/Canonical/CubeSemantics.lean}: \src{LocalIdentifying}, \src{signatures_differ_iff}, and \src{local_iff_constraints}.
+\src{source/Q7Mod/Canonical/LocalQ7W24Fast.lean}: \src{ExactCubeCodes.exists_local_ID_Q7_size24}.
+
+\item[Characterization and surgery.]
+\src{source/Q7Mod/Canonical/IsolateSurgery.lean}: \src{Graph.localIdentifying_iff}, \src{Graph.surgery_open_dominates_except}, and \src{Graph.surgery_totalDominating}.
+Finite cardinalities: \src{source/Q7Mod/Canonical/SurgeryCardinality.lean}.
+
+\item[Share bound.]
+\src{source/Q7Mod/Canonical/Q7IsolateCount.lean}: \src{actual_isolate_count_bound}, \src{small_code_has_at_most_eight_isolates}, \src{isolated_has_large_neighbor}, and \src{nonisolated_share_le}.
+
+\item[Covering and parity transfer.]
+\src{source/Q7Mod/Canonical/Q6CoverLowerBound.lean}: \src{Q6CoverAssembly.covering_lower_bound}.
+\src{source/Q7Mod/Canonical/Q7TotalDominationBound.lean}: \src{Q7ParityTransfer.totalDomination_at_least_24}.
+All quoted data required by the migrated proof are indexed in \src{manifests/JSON_MANIFEST.json}; this includes the corrected Q6 inputs.
+
+\item[Tetrahedral repair.]
+\src{source/Q7Mod/Canonical/FullTetrahedronRepair.lean}: \src{tetrahedron_size_eight_repair} and \src{tetrahedron_size_eight_opposite_repair}.
+The neighboring \src{GlobalTetrahedronAdapter.lean} provides \src{Q7GlobalAssembly.full_tetrahedron_repair}.
+Core finite steps include \src{RemovalBudgets.lean}, \src{FourOutsideThreshold.lean}, \src{FiveRemovalThreshold.lean}, \src{FourOutsideRepair.lean}, \src{CanonicalListRepair.lean}, and \src{CanonicalSizeEightRepair.lean}, all under \src{source/Q7Mod/Canonical/}.
+Normalization and transport are in \src{Q7TetrahedronNormalization.lean} and \src{Q7RepairIsometry.lean} in that same directory.
+
+\item[Seven-antihole and seven-cycle.]
+\src{source/Q7Mod/Canonical/HalvedCubeAntihole.lean}: \src{no_induced_seven_antihole}.
+\src{source/Q7Mod/Canonical/Q7C7EightNumerical.lean}: \src{contains_isolate_C7_lower_bound}.
+
+\item[Five-cycle semantic transfer and exact integration.]
+\src{source/Q7Mod/Canonical/C5CNFTransfer.lean}: \src{induced_isolate_C5_extension_exists}.
+\src{source/C5Mod/Canonical/ExactUnsat.lean}: \src{C5Mod.Canonical.exact_c5_unsat}, importing the exact formula equality and satisfaction bridge.
+The full replay theorem \src{C5Mod.Full.unsat} is in \src{source/C5Mod/Full/Final.lean}.
+
+\item[Finite graph semantics and exact adapters.]
+\src{source/Q7Mod/Canonical/BergeEightFamily.lean} collects the finite semantic branches.
+\src{source/BergeMod/Canonical/CoreFamily.lean} supplies the exact seven-branch refutation family.
+\src{source/Q7Mod/Canonical/CubeFamilyLabeling.lean} defines \src{FiniteBerge8PerfectCover}, and the neighboring \src{BergePerfectCoverAdapter.lean} provides coloring-to-cover transport.
+\src{source/Q7Mod/Integration/FiniteBergeCover.lean} discharges that interface.
+
+\item[Global assembly and public consumer.]
+\src{source/Q7Mod/Canonical/CubeCliqueRepair.lean}, \src{ParityRepairAssembly.lean}, and \src{Q7GlobalAssembly.lean} contain the repair and conditional reduction. The last two filenames denote neighbors of the first.
+The no-premise theorem is in \src{source/Q7Mod/Integration/ExactQ7.lean}, and the fully type-ascribed public consumer is \src{source/Q7Mod/Integration/ExactQ7Audit.lean}.
+\end{description}
+
+\section{Reproduction and release checklist}\label{app:reproduce}
+The accompanying \src{build-paper.sh} builds this manuscript using pdfLaTeX and BibTeX, without invoking Lean. The accompanying \src{check-witness.py} independently tests the 128 vertices and 448 undirected edges. Its output is a secondary arithmetic check, not a replacement for the formal witness theorem.
+
+The public reproduction entrypoints are \src{VERIFICATION.md}, \src{verify.py}, and, for archived source distribution, \src{unpack_sources.py}. Public path-independent manifest projections are in \src{manifests/SOURCE_MANIFEST.json} and \src{manifests/JSON_MANIFEST.json}; \src{manifests/PROVENANCE.json} records the original frozen identities. The original manifest and receipt hashes below are provenance only: those original path-bearing files are not needed as build entrypoints. The public manifest projections have their own bytes and therefore their own hashes.
+
+The following records identify the source closure and completed checks. The portable public driver and the independent research build are distinguished explicitly.
+\begin{enumerate}
+\item The public source snapshot is indexed by \src{manifests/SOURCE_MANIFEST.json}. Its original frozen research manifest has SHA-256 \src{b7aa2cd42ae8f05b025467712f0d4c0b3380f99eb2944ae3dbbbf92ad44e740a}. The build inventory contains 3,046 modules and 1,444 JSON data files. The toolchain is \src{leanprover/lean4:v4.32.2}. This is a source identity, not a completed independent-build receipt.
+\item All exact certificate inputs, concrete replay data, and source manifests. For Q6, include the corrected 157-payload collection; for C5, include the exact CNF identified in Section~7.3; for Berge-eight, include all seven branch formulas and their checked signed-list identifications.
+\item A public-import consumer whose theorem is stated on the original \src{ExactCubeCodes.LocalIdentifying} predicate, with no C5, finite-cover, tetrahedron, profile-UNSAT, or final-lower-bound hypotheses. The checked declaration is \src{ExactCubeCodes.localIdentifying_Q7_optimum24}. The original complete composition receipt is identified by SHA-256 \src{253948a38ed9506de28d2ed164fdd74f35152d7dd1adbd555fba0d311e2cf271}.
+\item An axiom audit of that consumer and the named integration endpoints. The allowed set is the standard three axioms stated in Section~10. The final composition audit has passed with exactly those three axioms. The independent project-source rebuild reproduced this audit successfully.
+\item The completed independent project-closure verification is described in \src{checks/INDEPENDENT_VERIFICATION.json}. The original frozen state has SHA-256 \src{a65b5c72f26ad7cabda0dc375896aee3783b3cc3ec4bb20bce59e1279dd5082b}; this is a provenance identity, not the hash of the sanitized public record. All 3,046 modules and all 16 stages are accepted, with the independent reuse described in Section~10. The portable public driver has been smoke-tested, not fully rerun.
+\end{enumerate}
+A successful PDF build verifies typesetting only. A successful witness script verifies its finite assertions only. A module manifest verifies file identity only. None should be reported as the final original-predicate proof.
+
+\bibliographystyle{plain}
+\bibliography{q7-local-identifying-draft}
+\end{document}

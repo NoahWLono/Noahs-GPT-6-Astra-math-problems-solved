@@ -1,0 +1,5 @@
+PASS: size 24; 128 domination checks; 448 adjacent-pair checks, all endpoint types
+Trace histogram: {1: 80, 2: 40, 4: 8}
+Minimum separation size: 1
+Selected isolates: []
+Edge endpoint classes: {0: 300, 1: 128, 2: 20}

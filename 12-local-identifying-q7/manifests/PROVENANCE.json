@@ -1,0 +1,12 @@
+{
+  "description": "Public path-independent manifests are projections of frozen research manifests; source and quoted-data bytes are unchanged. Original development manifests are referenced by hash only.",
+  "frozen_manifest_sha256": {
+    "SOURCE_MANIFEST.json": "b7aa2cd42ae8f05b025467712f0d4c0b3380f99eb2944ae3dbbbf92ad44e740a",
+    "JSON_MANIFEST.json": "f5f455c63acd7f9f2e1a21edb88c0c6cb08a896a32018271e8504b8beb6b375b",
+    "BUILD_PLAN.json": "b73d9cd02cebc3a1336dcfa56745ff60e1e96adc80e7e53759cdc5fa584ed050",
+    "AXIOM_REQUIREMENTS.json": "0b8dc9c8fd6768a099c1b2613528b439865c55105ced4f72816a236a16f7db42"
+  },
+  "initial_final_receipt_sha256": "253948a38ed9506de28d2ed164fdd74f35152d7dd1adbd555fba0d311e2cf271",
+  "independent_final_state_sha256": "a65b5c72f26ad7cabda0dc375896aee3783b3cc3ec4bb20bce59e1279dd5082b",
+  "independent_public_receipt_sha256": "a45643552bca4020ce6a5cace29f554b6f09705ff3a7c21deba06771901f8ae6"
+}

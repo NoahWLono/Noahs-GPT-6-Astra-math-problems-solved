@@ -1,0 +1,168 @@
+{
+  "status": "fixed smoke subset freshly compiled; final theorem NOT verified",
+  "lean_version": "Lean (version 4.32.2, x86_64-unknown-linux-gnu, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)",
+  "mathlib_revision": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "full_closure_module_count": 3046,
+  "compiled_subset_count": 12,
+  "modules": [
+    {
+      "module": "Q7Mod.Canonical.IsolateSurgery",
+      "source_sha256": "ed4e487b3f7affa3e121bb42bea80196f889695bb7b1bc8f17b514dd20984175",
+      "olean_sha256": "51a4be3e90da76260a7966df208d8a5e19d9420d5d905c99f222d0736ee49d50",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "Q7Mod.Canonical.KernelRUP",
+      "source_sha256": "febcc156e5ebe06c53734286c63e1e0ce6aa687ff6c1b18e28903e8356906195",
+      "olean_sha256": "50155e6f93a30c4b9ff2005f0428376b22118e5b13f2c5629059124b696c5a34",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "Q7Mod.Canonical.KernelRUPStd",
+      "source_sha256": "65fb3d51fec2c5a5894a03909520ed7eb683d248190af57289f2fb4c2232ce6e",
+      "olean_sha256": "e5887c8f1915107ec62215c07298f2dd794d728748c0e526b13b13e9fccf1bf0",
+      "log_sha256": "ee27ef1a5fae52be14250aa00f88122deb3e12c0fc7b914478f2d5ddb1a7739b",
+      "axiom_audits": [
+        {
+          "theorem": "KernelRUP.cnfSat_iff_decode_eval",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "KernelRUP.decode_unsat_of_not_cnfSat",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Q7Mod.Canonical.BergeEightEncoding",
+      "source_sha256": "168391c2b6483dc28d00845e7c0393feb3bdfd5697a5de8460c1500b026f5e1e",
+      "olean_sha256": "70640fda38dbc1212f44e7931f58889ce34a3e3abdd1da9726951f65d0af1b65",
+      "log_sha256": "26edde26d7f6c39cc0d63a3b94d4044dd5718981617155bc9b91872e3f68bb8c",
+      "axiom_audits": [
+        {
+          "theorem": "BergeEight.descriptor_sat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.exact_cnf_sat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.colorable_of_unsat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "Q7Mod.Canonical.BergeEightNormalization",
+      "source_sha256": "3a69068523e68a844a512ea2544e89b077108c7210a573fe168b09ab2a24dac8",
+      "olean_sha256": "53e2d55cf101a0560e07023af142b932443a3cf44c51c82b9a6114a5a057eedd",
+      "log_sha256": "862c6dac3e6cfcc8f36bc60fe2d5c8063a114f061a365df7cb74fb65203e543f",
+      "axiom_audits": [
+        {
+          "theorem": "BergeEight.normalize_chosen_clique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.counterexample_satisfies_normalized_core",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "BergeEight.colorable_from_exact_core",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "BergeMod.Kernel",
+      "source_sha256": "b446dbc90bbc52da4a64bb9621cb3b1f33f76ad6aa055f1aac9eae27c0c9d8ac",
+      "olean_sha256": "b37de054341d578256f11a2ca3c10bed41969c0fd3b17e54798e4acfa9ec202e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.K1.InputData0000",
+      "source_sha256": "7669d5f6d02a0c85a32144bcac76a9abe354470ce373c3e4c3464b468e2f569b",
+      "olean_sha256": "e1502475d6b966f8e327c013d7cdcc22441ec9dd24ae98d83cdd3cb10f71c754",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.K1.InputData",
+      "source_sha256": "2a9427040bd95aa9c1d7676b47e64487f9bb559deb83e53502b1896656bb853d",
+      "olean_sha256": "53e4e44eb5817bedc61738ae23f99806ac3db99dc973925cb8891f54c3fc97b6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.Replay",
+      "source_sha256": "e0b6f43c941dfe0d7f4107ac078ea8a1de60ca1401fae595a1e96c6742d32932",
+      "olean_sha256": "7913eda31ae320c7125b0196d973b35b3b4f09a983492570267abbfb92b4076b",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.K1.InputFacts0000",
+      "source_sha256": "75b2b4e43d159d7a9ce0e17921c2eb793e28e109474074379daca6774806c070",
+      "olean_sha256": "765de6f84ddfce00cdf8e088b8bf847e24416ceafa5ddfac47f8ec6295bcb630",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.K1.Inputs",
+      "source_sha256": "a6585eae77c38721439d0b93ce2b93c6f414161e48ee8d013fb00fe8d1024b9c",
+      "olean_sha256": "b2ae782a6dda45d4855e7bb48ceeed3d268be4189224cbd7e28706a7475ea22d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axiom_audits": []
+    },
+    {
+      "module": "BergeMod.K1.Replay0000",
+      "source_sha256": "f45176d9fd721aaacfcf6373bb0e4bd6747baf28ee7d0f9d4d74743e12ce2de8",
+      "olean_sha256": "e8218b837069cb8fa7792953020ab324f2731f8b61a82b68a09c501965031727",
+      "log_sha256": "3807e6b1fa96dac434eda719d11f04f33c1f600ebe0cd98c59f2e4355ef32aca",
+      "axiom_audits": [
+        {
+          "theorem": "BergeMod.K1.c30",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "final_theorem_verified": false
+}

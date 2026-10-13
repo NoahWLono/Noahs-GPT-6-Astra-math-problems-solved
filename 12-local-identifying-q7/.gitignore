@@ -1,0 +1,8 @@
+.verify/
+.deps/
+__pycache__/
+*.pyc
+source/
+.source-unpack-*/
+paper/output/
+paper/qa/

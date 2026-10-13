@@ -1,0 +1,51 @@
+{
+  "status": "research draft; kernel checked; independent project-source rebuild completed; priority unconfirmed",
+  "pages": 13,
+  "visual_review": "All 13 final pages inspected after independent-rebuild completion update; no clipping, missing glyphs, overlap, or overfull boxes.",
+  "latex_warnings": false,
+  "repeated_final_build_pdf_identical": true,
+  "public_actions": false,
+  "proof_receipt_sha256": "253948a38ed9506de28d2ed164fdd74f35152d7dd1adbd555fba0d311e2cf271",
+  "source_manifest_sha256": "b7aa2cd42ae8f05b025467712f0d4c0b3380f99eb2944ae3dbbbf92ad44e740a",
+  "files": {
+    "q7-local-identifying-draft.tex": {
+      "sha256": "8a276d0a5cfc5f8f98c05b56d767cfc4fecddf2e4b442284263257ae76e60e4a",
+      "bytes": 42023
+    },
+    "q7-local-identifying-draft.bib": {
+      "sha256": "9e5cb21d84d5142f8a1b9cdcd8f413391a702e4aa2ade01928fcc6bc83448d20",
+      "bytes": 407
+    },
+    "build-paper.sh": {
+      "sha256": "f0d963d681b0afbee265fd63a076a0232d10b1d444f6c300706650a9bfa809f5",
+      "bytes": 1585
+    },
+    "check-witness.py": {
+      "sha256": "a41fbf7fa4986902e91fb6bbeaf78e31b1899435700364c88cab443e134b60ed",
+      "bytes": 1061
+    },
+    "witness-check.txt": {
+      "sha256": "a807794f3ebf5a83e48981aa46c287cbed2a4eaccb76a906ca96d0583d549b83",
+      "bytes": 217
+    },
+    "q7-local-identifying-draft.pdf": {
+      "sha256": "59ab3433ff106280767addd1141e3eea066e2adbce9a53cbb2f3584a67633597",
+      "bytes": 389671
+    }
+  },
+  "public_source_paths_verified_against_manifest": true,
+  "portability_refresh": "Appendix uses portable source/ paths and manifests/ projections; original receipt/manifest hashes are provenance only.",
+  "independent_rebuild_original_state_sha256": "a65b5c72f26ad7cabda0dc375896aee3783b3cc3ec4bb20bce59e1279dd5082b",
+  "independent_rebuild_scope": {
+    "modules": 3046,
+    "stages": 16,
+    "prior_independent_C5": 734,
+    "same_build_continuation": 497,
+    "fresh_after_continuation": 1815,
+    "initial_build_custom_objects_reused": 0
+  },
+  "portable_public_verifier": "12-module smoke passed; full end-to-end execution not run",
+  "manuscript_process_invoked_lean": false,
+  "rendered_pdf_included": true,
+  "rendered_pdf_sha256": "59ab3433ff106280767addd1141e3eea066e2adbce9a53cbb2f3584a67633597"
+}

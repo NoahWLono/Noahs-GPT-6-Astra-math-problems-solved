@@ -1,0 +1,73 @@
+{
+  "format": "concatenated-gzip-tar-v1",
+  "archive_bytes": 12848307,
+  "archive_sha256": "81e05042c1c045e97774dbbeb2a515ba7f391dee03b82497e2046e3a7f888c60",
+  "description": "All parts concatenate to the complete source archive. They are transport packaging only; all 3046 Lean sources and 1444 quoted JSON inputs are included.",
+  "parts": [
+    {
+      "path": "transport/source.tar.gz.part000",
+      "bytes": 1048576,
+      "sha256": "11a352c678254bd856e7d1c183701e3471834e1191159d03504523df351d4d02"
+    },
+    {
+      "path": "transport/source.tar.gz.part001",
+      "bytes": 1048576,
+      "sha256": "c28664b528c3b07e4709d8b9ef672b418524ab103e3707b7889b7c0d949134af"
+    },
+    {
+      "path": "transport/source.tar.gz.part002",
+      "bytes": 1048576,
+      "sha256": "fbaabfd9908a5a836005566bdeb39451281645b69a700ae817bec0d0c32ee8df"
+    },
+    {
+      "path": "transport/source.tar.gz.part003",
+      "bytes": 1048576,
+      "sha256": "922d51a268f2e1272a6ec77398dd81272fb85ec9f8a50d96349f2b93ab8de03d"
+    },
+    {
+      "path": "transport/source.tar.gz.part004",
+      "bytes": 1048576,
+      "sha256": "147b1e4392fa23c99b199890bcd6c4f9b281b0b5ea330000b9e50c76b1b69cab"
+    },
+    {
+      "path": "transport/source.tar.gz.part005",
+      "bytes": 1048576,
+      "sha256": "3c15fd2edbb6d5a7b31188e09aa334ca6b6c703656c5f7c7ae529f04d2e76bf9"
+    },
+    {
+      "path": "transport/source.tar.gz.part006",
+      "bytes": 1048576,
+      "sha256": "a8291abad40c325a11cca46bed64f57f59fea53b28d0260346705d084b8f914a"
+    },
+    {
+      "path": "transport/source.tar.gz.part007",
+      "bytes": 1048576,
+      "sha256": "356a549ac876973c90e251ebc8561e4f2978286a9e9eef1d0dae961d01078822"
+    },
+    {
+      "path": "transport/source.tar.gz.part008",
+      "bytes": 1048576,
+      "sha256": "b36a49069c027910daa4c3165cda1b57ea3e98aeab25a2d234a1f36411c7ef55"
+    },
+    {
+      "path": "transport/source.tar.gz.part009",
+      "bytes": 1048576,
+      "sha256": "549822f523d4104c3f7b78a8a95690ba4d65ba0103db3d4750f5b13a2fefcd04"
+    },
+    {
+      "path": "transport/source.tar.gz.part010",
+      "bytes": 1048576,
+      "sha256": "74f4e91ac2ea607702161bce6a14cadf716c178a16fa511dd9e68694c326cf4e"
+    },
+    {
+      "path": "transport/source.tar.gz.part011",
+      "bytes": 1048576,
+      "sha256": "a97707d127631ad2bca09826510eb03a8ca62a2bbb5af682cc972f487b090297"
+    },
+    {
+      "path": "transport/source.tar.gz.part012",
+      "bytes": 265395,
+      "sha256": "69afb7287e5c743c2570a2082e316f2031704d83f79394fde182dff972300cdb"
+    }
+  ]
+}
